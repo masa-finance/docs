@@ -1,4 +1,5 @@
-[@masa-finance/masa-sdk](../README.md) / [Exports](../modules.md) / MasaArgs
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / MasaArgs
 
 # Interface: MasaArgs
 
@@ -21,7 +22,7 @@
 
 #### Defined in
 
-[src/interface/masa.ts:6](https://github.com/masa-finance/masa-sdk/blob/1a83a00/src/interface/masa.ts#L6)
+[src/interface/masa.ts:6](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/interface/masa.ts#L6)
 
 ___
 
@@ -40,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/interface/masa.ts:9](https://github.com/masa-finance/masa-sdk/blob/1a83a00/src/interface/masa.ts#L9)
+[src/interface/masa.ts:9](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/interface/masa.ts#L9)
 
 ___
 
@@ -50,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/interface/masa.ts:4](https://github.com/masa-finance/masa-sdk/blob/1a83a00/src/interface/masa.ts#L4)
+[src/interface/masa.ts:4](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/interface/masa.ts#L4)
 
 ___
 
@@ -60,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/interface/masa.ts:7](https://github.com/masa-finance/masa-sdk/blob/1a83a00/src/interface/masa.ts#L7)
+[src/interface/masa.ts:7](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/interface/masa.ts#L7)
 
 ___
 
@@ -70,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/interface/masa.ts:8](https://github.com/masa-finance/masa-sdk/blob/1a83a00/src/interface/masa.ts#L8)
+[src/interface/masa.ts:8](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/interface/masa.ts#L8)
 
 ___
 
@@ -80,4 +81,4 @@ ___
 
 #### Defined in
 
-[src/interface/masa.ts:5](https://github.com/masa-finance/masa-sdk/blob/1a83a00/src/interface/masa.ts#L5)
+[src/interface/masa.ts:5](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/interface/masa.ts#L5)

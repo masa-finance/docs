@@ -1,13 +1,12 @@
-@masa-finance/masa-sdk / [Exports](modules.md)
-
 # Masa SDK
+ / [Exports](modules.md)
 
 ## Installation
 
-Yarn  
+yarn  
 `yarn add @masa-finance/masa-sdk --save`
 
-NPM  
+nom
 `npm i @masa-finance/masa-sdk --save`
 
 ### Usage
