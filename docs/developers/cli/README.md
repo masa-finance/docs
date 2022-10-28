@@ -22,22 +22,22 @@ Commands:
   account                                 Shows information about your account
   identity                                Identity commands
   identity info                           Shows info about all Identities
-  identity create soulname duration   Creates a masa identity with soul name
+  identity create <soulname> <duration>   Creates a masa identity with soul name
   identity show [options]                 Shows detail about your masa identity
   identity burn                           Burns your masa identity
   soul-name                               Soul Name Commands
   soul-name info                          Shows info about all Soul Names
   soul-name list [options]                Lists your soul names
-  soul-name create soulname duration  Creates a new soul name
-  soul-name burn soulname               Burns soul name that you own
+  soul-name create <soulname> <duration>  Creates a new soul name
+  soul-name burn <soulname>               Burns soul name that you own
   credit-report                           Credit Report Commands
   credit-report info                      Shows info about all Credit Reports
   credit-report list [options]            Lists your Credit Reports
   credit-report create                    Creates a Credit Report
-  credit-report burn Credit Report ID   Burns a Credit Report 
+  credit-report burn <Credit Report ID>   Burns a Credit Report 
   settings                                Set config settings
-  settings set key value              Changes setting key to value>
-  settings preset environment           Changes setting environment presets
+  settings set <key> <value>              Changes setting <key> to <value>
+  settings preset <environment>           Changes setting <environment> presets
   help [command]                          display help for command
 ```
 
@@ -64,7 +64,7 @@ RPC Endpoint: https://rpc.ankr.com/eth_goerli
 Masa Endpoint: https://dev.middleware.masa.finance/
 ```
 
-### Yarn
+### yarn
 
 `yarn global add @masa-finance/masa-cli`
 
@@ -90,126 +90,126 @@ Masa Endpoint: https://dev.middleware.masa.finance/
 
 ## Commands
 
-## `masa login `
+### `masa login `
 
 Login to the masa infrastructure
 
-## `masa logout `
+### `masa logout `
 
 Logout from the masa infrastructure
 
-## `masa account `
+### `masa account `
 
 Shows information about your account
 
-## `masa identity `
+### `masa identity `
 
 Identity commands
 
-### `masa identity info `
+#### `masa identity info `
 
 Shows info about all Identities
 
-### `masa identity create soulname duration>`
+#### `masa identity create <soulname> <duration>`
 
 Creates a masa identity with soul name
 
-- `<soulname soulname to register`
-- `<duration period of registration`
+- `<soulname> soulname to register`
+- `<duration> period of registration`
 
-### `masa identity show `
+#### `masa identity show `
 
 Shows detail about your masa identity
 
 Options:
 
-- `-a, --address [address]`
+- `-a, --address <address>`
   Address override
 
-### `masa identity burn `
+#### `masa identity burn `
 
 Burns your masa identity
 
-## `masa soul-name `
+### `masa soul-name `
 
 Soul Name Commands
 
-### `masa soul-name info `
+#### `masa soul-name info `
 
 Shows info about all Soul Names
 
-### `masa soul-name list `
+#### `masa soul-name list `
 
 Lists your soul names
 
 Options:
 
-- `-a, --address [address]`
+- `-a, --address <address>`
   Address override
 
-### `masa soul-name create soulname\ duration`
+#### `masa soul-name create <soulname> <duration>`
 
 Creates a new soul name
 
-- `<soulname soulname to register`
-- `<duration period of registration`
+- `<soulname> soulname to register`
+- `<duration> period of registration`
 
-### `masa soul-name burn soulname>`
+#### `masa soul-name burn <soulname>`
 
 Burns soul name that you own
 
-- `<soulname soulname to burn`
+- `<soulname> soulname to burn`
 
-## `masa credit-report `
+### `masa credit-report `
 
 Credit Report Commands
 
-### `masa credit-report info `
+#### `masa credit-report info `
 
 Shows info about all Credit Reports
 
-### `masa credit-report list `
+#### `masa credit-report list `
 
 Lists your Credit Reports
 
 Options:
 
-- `-a, --address [address]`
+- `-a, --address <address>`
   Address override
 
-### `masa credit-report create `
+#### `masa credit-report create `
 
 Creates a Credit Report
 
-### `masa credit-report burn Credit Report ID>`
+#### `masa credit-report burn <Credit Report ID>`
 
 Burns a Credit Report
 
-- `<Credit Report ID ID of the Credit Report to burn`
+- `<Credit Report ID> ID of the Credit Report to burn`
 
-## `masa settings `
+### `masa settings `
 
 Set config settings
 
-### `masa settings set key value>`
+#### `masa settings set <key> <value>`
 
-Changes setting key to value>
+Changes setting &lt;key&gt; to &lt;value&gt;
 
-- `<key key to set`
-- `<value value to set to key`
+- `<key> key to set`
+- `<value> value to set to key`
 
-### `masa settings preset environment>`
+#### `masa settings preset <environment>`
 
-Changes setting environment presets
+Changes setting &lt;environment&gt; presets
 
-- `<environment The environment to use as preset`
+- `<environment> The environment to use as preset`
 
 ## Configuration
 
 All the below fields can be set with:
 
 ```bash
-$ masa settings set key value>
+$ masa settings set <key> <value>
 ```
 
 | Key                | Type      | Description                                                                           | Default Value                             |
