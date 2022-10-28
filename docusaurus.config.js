@@ -57,7 +57,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "intro",
+            docId: "introduction",
             position: "left",
             label: "Docs",
           },
@@ -75,8 +75,8 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/intro",
+                label: "Introduction",
+                to: "docs/introduction",
               },
             ],
           },
@@ -85,15 +85,15 @@ const config = {
             items: [
               {
                 label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                href: "https://stackoverflow.com/questions/tagged/masa-finance",
               },
               {
                 label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                href: "https://discord.gg/HyHGaKhaKs",
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                href: "https://twitter.com/getmasafi",
               },
             ],
           },
@@ -102,12 +102,12 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/masa-finance",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Masa Finance.`,
       },
       prism: {
         theme: lightCodeTheme,
