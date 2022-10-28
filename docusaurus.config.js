@@ -9,7 +9,7 @@ const config = {
   title: "Masa Finance",
   tagline: "Developer Documentation",
   url: "https://masa.finance",
-  baseUrl: "/docs/",
+  baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
