@@ -43,7 +43,7 @@ export const masa = new Masa({ wallet });
 
 ### Interface
 
-For a detailed interface description see [Masa](docs/classes/Masa.md)
+For a detailed interface description see [Masa](classes/Masa)
 
 ### Config
 
