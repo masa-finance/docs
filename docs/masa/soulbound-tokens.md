@@ -11,8 +11,7 @@ transaction layer — all through a simple CLI and SDK.
 
 Leveraging Masa Soulbound Identity, you can build a range of use cases:
 
-Claim a .soul name (ENS domain name for Soulbound Identity)
-
+- Claim a .soul name (ENS domain name for Soulbound Identity)
 - Web3 Credit Score
 - Soulbound Token Single Sign-On
 - Soulbound Airdrops
