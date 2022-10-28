@@ -1,4 +1,4 @@
-# Masa CLI test
+# Masa CLI
 
 ```bash
 $ masa --help
