@@ -57,7 +57,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "introduction",
+            docId: "masa/introduction",
             position: "left",
             label: "Docs",
           },
@@ -76,7 +76,7 @@ const config = {
             items: [
               {
                 label: "Introduction",
-                to: "docs/introduction",
+                to: "docs/masa/introduction",
               },
             ],
           },

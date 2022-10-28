@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Introduction
 
 Masa is the world's first Soulbound Token (SBT) Identity Protocol. Masa uses SBTs to represent users' attributes in web3

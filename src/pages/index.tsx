@@ -9,7 +9,7 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <Link to="docs/introduction">
+    <Link to="docs/masa/introduction">
       <img src={useBaseUrl("/img/banner.png")} />;
     </Link>
   );
