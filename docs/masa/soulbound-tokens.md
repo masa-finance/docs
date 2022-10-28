@@ -11,16 +11,17 @@ transaction layer — all through a simple CLI and SDK.
 
 Leveraging Masa Soulbound Identity, you can build a range of use cases:
 
-Claim a .soul name (ENS domain name for Soulbound Identity)  
-Web3 Credit Score  
-Soulbound Token Single Sign-On  
-Soulbound Airdrops  
-One-Click NFT Whitelist Registration  
-Web3 KYC and ID Verification  
-Proof-of-Participation  
-Web3 Reputation  
-GameFi  
-Proof-of-identity for DAO governance voting
+Claim a .soul name (ENS domain name for Soulbound Identity)
+
+- Web3 Credit Score
+- Soulbound Token Single Sign-On
+- Soulbound Airdrops
+- One-Click NFT Whitelist Registration
+- Web3 KYC and ID Verification
+- Proof-of-Participation
+- Web3 Reputation
+- GameFi
+- Proof-of-identity for DAO governance voting
 
 …or any other project you are working on which can benefit from using SBTs!
 
@@ -33,4 +34,4 @@ more. Get on the list to get invited to Masa’s incentivized devnet and be the 
 > Register for the Masa Devnet [here](https://get.masa.finance/developers/)
 
 In the meantime, you can download the CLI and start interacting with the Masa protocol -
-read [the guide here](https://developers.masa.finance/docs/masa-cli).
+read [the guide here](http://localhost:3000/docs/developers/cli/).
