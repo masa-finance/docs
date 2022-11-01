@@ -6,7 +6,7 @@
 yarn  
 `yarn add @masa-finance/masa-sdk --save`
 
-nom
+npm  
 `npm i @masa-finance/masa-sdk --save`
 
 ### Usage

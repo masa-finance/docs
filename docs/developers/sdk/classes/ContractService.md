@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[src/contracts/contractService.ts:11](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/contracts/contractService.ts#L11)
+[src/contracts/contractService.ts:11](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L11)
 
 ## Properties
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[src/contracts/contractService.ts:11](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/contracts/contractService.ts#L11)
+[src/contracts/contractService.ts:11](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L11)
 
 ## Methods
 
@@ -75,7 +75,7 @@
 
 #### Defined in
 
-[src/contracts/contractService.ts:132](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/contracts/contractService.ts#L132)
+[src/contracts/contractService.ts:132](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L132)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/contracts/contractService.ts:13](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/contracts/contractService.ts#L13)
+[src/contracts/contractService.ts:13](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L13)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[src/contracts/contractService.ts:31](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/contracts/contractService.ts#L31)
+[src/contracts/contractService.ts:31](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L31)
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 #### Defined in
 
-[src/contracts/contractService.ts:43](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/contracts/contractService.ts#L43)
+[src/contracts/contractService.ts:43](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L43)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 #### Defined in
 
-[src/contracts/contractService.ts:173](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/contracts/contractService.ts#L173)
+[src/contracts/contractService.ts:173](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L173)
 
 ___
 
@@ -180,7 +180,7 @@ ___
 
 #### Defined in
 
-[src/contracts/contractService.ts:51](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/contracts/contractService.ts#L51)
+[src/contracts/contractService.ts:51](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L51)
 
 ___
 
@@ -205,7 +205,7 @@ ___
 
 #### Defined in
 
-[src/contracts/contractService.ts:61](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/contracts/contractService.ts#L61)
+[src/contracts/contractService.ts:61](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L61)
 
 ___
 
@@ -230,4 +230,4 @@ ___
 
 #### Defined in
 
-[src/contracts/contractService.ts:95](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/contracts/contractService.ts#L95)
+[src/contracts/contractService.ts:95](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L95)

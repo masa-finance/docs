@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[src/interface/masa.ts:18](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/interface/masa.ts#L18)
+[src/interface/masa.ts:18](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/interface/masa.ts#L18)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[src/interface/masa.ts:19](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/interface/masa.ts#L19)
+[src/interface/masa.ts:19](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/interface/masa.ts#L19)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[src/interface/masa.ts:20](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/interface/masa.ts#L20)
+[src/interface/masa.ts:20](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/interface/masa.ts#L20)
 
 ___
 
@@ -50,4 +50,4 @@ ___
 
 #### Defined in
 
-[src/interface/masa.ts:21](https://github.com/masa-finance/masa-sdk/blob/dc0fbaf/src/interface/masa.ts#L21)
+[src/interface/masa.ts:21](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/interface/masa.ts#L21)
