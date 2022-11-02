@@ -36,19 +36,11 @@
 | :------ | :------ |
 | `masa` | [`Masa`](Masa.md) |
 
-#### Defined in
-
-[src/contracts/contractService.ts:11](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L11)
-
 ## Properties
 
 ### masa
 
 • `Private` **masa**: [`Masa`](Masa.md)
-
-#### Defined in
-
-[src/contracts/contractService.ts:11](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L11)
 
 ## Methods
 
@@ -73,10 +65,6 @@
 
 `Promise`<`undefined` \| `ContractReceipt`\>
 
-#### Defined in
-
-[src/contracts/contractService.ts:132](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L132)
-
 ___
 
 ### getPaymentAddress
@@ -92,10 +80,6 @@ ___
 #### Returns
 
 `string`
-
-#### Defined in
-
-[src/contracts/contractService.ts:13](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L13)
 
 ___
 
@@ -114,10 +98,6 @@ ___
 
 `Promise`<`string`[]\>
 
-#### Defined in
-
-[src/contracts/contractService.ts:31](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L31)
-
 ___
 
 ### isAvailable
@@ -134,10 +114,6 @@ ___
 #### Returns
 
 `Promise`<`boolean`\>
-
-#### Defined in
-
-[src/contracts/contractService.ts:43](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L43)
 
 ___
 
@@ -157,10 +133,6 @@ ___
 
 `Promise`<[`BigNumber`, `BigNumber`, `BigNumber`] & { `priceInETH`: `BigNumber` ; `priceInStableCoin`: `BigNumber` ; `priceInUtilityToken`: `BigNumber`  }\>
 
-#### Defined in
-
-[src/contracts/contractService.ts:173](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L173)
-
 ___
 
 ### purchaseIdentity
@@ -177,10 +149,6 @@ ___
 #### Returns
 
 `Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-[src/contracts/contractService.ts:51](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L51)
 
 ___
 
@@ -203,10 +171,6 @@ ___
 
 `Promise`<`ContractTransaction`\>
 
-#### Defined in
-
-[src/contracts/contractService.ts:61](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L61)
-
 ___
 
 ### purchaseName
@@ -227,7 +191,3 @@ ___
 #### Returns
 
 `Promise`<`ContractTransaction`\>
-
-#### Defined in
-
-[src/contracts/contractService.ts:95](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L95)

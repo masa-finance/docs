@@ -16,16 +16,8 @@
 
 • `Optional` **network**: `string`
 
-#### Defined in
-
-[src/contracts/loadIdentityContracts.ts:14](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/loadIdentityContracts.ts#L14)
-
 ___
 
 ### provider
 
 • `Optional` **provider**: `Provider`
-
-#### Defined in
-
-[src/contracts/loadIdentityContracts.ts:13](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/loadIdentityContracts.ts#L13)

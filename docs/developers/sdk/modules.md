@@ -43,19 +43,11 @@
 
 Ƭ **PaymentMethod**: ``"eth"`` \| ``"weth"`` \| ``"stable"`` \| ``"utility"``
 
-#### Defined in
-
-[src/contracts/contractService.ts:8](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contractService.ts#L8)
-
 ## Variables
 
 ### addresses
 
 • `Const` **addresses**: [`Addresses`](interfaces/Addresses.md)
-
-#### Defined in
-
-[src/contracts/addresses.ts:16](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/addresses.ts#L16)
 
 ## Functions
 
@@ -76,10 +68,6 @@
 #### Returns
 
 `default`
-
-#### Defined in
-
-[src/utils/clients/arweave.ts:3](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/utils/clients/arweave.ts#L3)
 
 ___
 
@@ -103,10 +91,6 @@ ___
 | `loadIdentityContracts` | () => `Promise`<[`IIdentityContracts`](interfaces/IIdentityContracts.md)\> |
 | `service` | [`ContractService`](classes/ContractService.md) |
 
-#### Defined in
-
-[src/contracts/contracts.ts:6](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/contracts.ts#L6)
-
 ___
 
 ### loadIdentityContracts
@@ -122,7 +106,3 @@ ___
 #### Returns
 
 `Promise`<[`IIdentityContracts`](interfaces/IIdentityContracts.md)\>
-
-#### Defined in
-
-[src/contracts/loadIdentityContracts.ts:17](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/contracts/loadIdentityContracts.ts#L17)

@@ -38,29 +38,17 @@
 | `__namedParameters.apiUrl` | `string` |
 | `__namedParameters.cookie?` | `string` |
 
-#### Defined in
-
-[src/utils/clients/middleware.ts:14](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/utils/clients/middleware.ts#L14)
-
 ## Properties
 
 ### cookie
 
 • `Optional` **cookie**: `string`
 
-#### Defined in
-
-[src/utils/clients/middleware.ts:12](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/utils/clients/middleware.ts#L12)
-
 ___
 
 ### middlewareClient
 
 • `Private` **middlewareClient**: `AxiosInstance`
-
-#### Defined in
-
-[src/utils/clients/middleware.ts:11](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/utils/clients/middleware.ts#L11)
 
 ## Methods
 
@@ -80,10 +68,6 @@ ___
 
 `Promise`<`any`\>
 
-#### Defined in
-
-[src/utils/clients/middleware.ts:122](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/utils/clients/middleware.ts#L122)
-
 ___
 
 ### creditScoreMint
@@ -101,10 +85,6 @@ ___
 
 `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>
 
-#### Defined in
-
-[src/utils/clients/middleware.ts:153](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/utils/clients/middleware.ts#L153)
-
 ___
 
 ### getChallenge
@@ -114,10 +94,6 @@ ___
 #### Returns
 
 `Promise`<`any`\>
-
-#### Defined in
-
-[src/utils/clients/middleware.ts:100](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/utils/clients/middleware.ts#L100)
 
 ___
 
@@ -135,10 +111,6 @@ ___
 
 `Promise`<`undefined` \| [`ICreditReport`](../interfaces/ICreditReport.md) \| [`IIdentity`](../interfaces/IIdentity.md)\>
 
-#### Defined in
-
-[src/utils/clients/middleware.ts:42](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/utils/clients/middleware.ts#L42)
-
 ___
 
 ### sessionCheck
@@ -149,10 +121,6 @@ ___
 
 `Promise`<`any`\>
 
-#### Defined in
-
-[src/utils/clients/middleware.ts:24](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/utils/clients/middleware.ts#L24)
-
 ___
 
 ### sessionLogout
@@ -162,10 +130,6 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| { `status`: `string`  }\>
-
-#### Defined in
-
-[src/utils/clients/middleware.ts:194](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/utils/clients/middleware.ts#L194)
 
 ___
 
@@ -182,7 +146,3 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| { `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default`  }\>
-
-#### Defined in
-
-[src/utils/clients/middleware.ts:57](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/utils/clients/middleware.ts#L57)

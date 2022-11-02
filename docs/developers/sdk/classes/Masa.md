@@ -35,10 +35,6 @@
 | :------ | :------ |
 | `__namedParameters` | [`MasaArgs`](../interfaces/MasaArgs.md) |
 
-#### Defined in
-
-[src/masa.ts:16](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/masa.ts#L16)
-
 ## Properties
 
 ### account
@@ -51,19 +47,11 @@
 | :------ | :------ |
 | `getBalances` | (`address`: `string`) => `Promise`<`undefined` \| { `ethBalance`: `BigNumber` ; `masaBalance`: `BigNumber` ; `usdcBalance`: `BigNumber` ; `wethBalance`: `BigNumber`  }\> |
 
-#### Defined in
-
-[src/masa.ts:50](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/masa.ts#L50)
-
 ___
 
 ### arweaveClient
 
 • `Readonly` **arweaveClient**: `default`
-
-#### Defined in
-
-[src/masa.ts:14](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/masa.ts#L14)
 
 ___
 
@@ -71,19 +59,11 @@ ___
 
 • `Readonly` **client**: [`MasaClient`](MasaClient.md)
 
-#### Defined in
-
-[src/masa.ts:13](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/masa.ts#L13)
-
 ___
 
 ### config
 
 • **config**: [`MasaConfig`](../interfaces/MasaConfig.md)
-
-#### Defined in
-
-[src/masa.ts:44](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/masa.ts#L44)
 
 ___
 
@@ -98,10 +78,6 @@ ___
 | `addresses` | [`Addresses`](../interfaces/Addresses.md) |
 | `loadIdentityContracts` | () => `Promise`<[`IIdentityContracts`](../interfaces/IIdentityContracts.md)\> |
 | `service` | [`ContractService`](ContractService.md) |
-
-#### Defined in
-
-[src/masa.ts:51](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/masa.ts#L51)
 
 ___
 
@@ -119,10 +95,6 @@ ___
 | `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata`: [`ICreditReport`](../interfaces/ICreditReport.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `mint` | (`address`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
 
-#### Defined in
-
-[src/masa.ts:49](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/masa.ts#L49)
-
 ___
 
 ### identity
@@ -138,10 +110,6 @@ ___
 | `load` | (`address?`: `string`) => `Promise`<`undefined` \| `BigNumber`\> |
 | `show` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata?`: [`IIdentity`](../interfaces/IIdentity.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }\> |
 
-#### Defined in
-
-[src/masa.ts:47](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/masa.ts#L47)
-
 ___
 
 ### metadata
@@ -154,10 +122,6 @@ ___
 | :------ | :------ |
 | `retrieve` | (`url`: `string`) => `Promise`<`undefined` \| [`ICreditReport`](../interfaces/ICreditReport.md) \| [`IIdentity`](../interfaces/IIdentity.md)\> |
 | `store` | (`soulName`: `string`) => `Promise`<`undefined` \| { `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default`  }\> |
-
-#### Defined in
-
-[src/masa.ts:52](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/masa.ts#L52)
 
 ___
 
@@ -174,10 +138,6 @@ ___
 | `logout` | () => `Promise`<`undefined` \| { `status`: `string`  }\> |
 | `sessionLogout` | () => `Promise`<`undefined` \| { `status`: `string`  }\> |
 
-#### Defined in
-
-[src/masa.ts:46](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/masa.ts#L46)
-
 ___
 
 ### soulNames
@@ -190,12 +150,9 @@ ___
 | :------ | :------ |
 | `burn` | (`soulName`: `string`) => `Promise`<`void`\> |
 | `create` | (`soulName`: `string`, `duration`: `number`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `Promise`<`void`\> |
-| `list` | (`address?`: `string`) => `Promise`<`void`\> |
+| `getRegistrationPrice` | (`soulName`: `string`, `duration`: `number`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `Promise`<`string` \| `BigNumber`\> |
+| `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `index`: `string` = nameIndex; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `tokenDetails`: [`string`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }[]\> |
 | `loadSoulNamesByIdentityId` | (`identityId`: `BigNumber`) => `Promise`<{ `index`: `string` = nameIndex; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `tokenDetails`: [`string`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }[]\> |
-
-#### Defined in
-
-[src/masa.ts:48](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/masa.ts#L48)
 
 ___
 
@@ -208,7 +165,3 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `version` | () => { `contractsVersion`: `string` ; `sdkVersion`: `string`  } |
-
-#### Defined in
-
-[src/masa.ts:56](https://github.com/masa-finance/masa-sdk/blob/4b42f69/src/masa.ts#L56)
