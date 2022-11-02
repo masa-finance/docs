@@ -33,4 +33,4 @@ more. Get on the list to get invited to Masa’s incentivized devnet and be the 
 > Register for the Masa Devnet [here](https://get.masa.finance/developers/)
 
 In the meantime, you can download the CLI and start interacting with the Masa protocol -
-read [the guide here](https://docs.masa.finance/docs/developers/cli/).
+read [the guide here](https://developers.masa.finance/docs/developers/cli/).
