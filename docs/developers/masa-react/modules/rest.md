@@ -1,5 +1,5 @@
 [# Masa React
-](../README.md) / [Exports](../modules.md) / rest
+ - v0.10.1](../README.md) / [Exports](../modules.md) / rest
 
 # Namespace: rest
 

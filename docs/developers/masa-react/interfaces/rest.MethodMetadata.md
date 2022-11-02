@@ -1,5 +1,5 @@
 [# Masa React
-](../README.md) / [Exports](../modules.md) / [rest](../modules/rest.md) / MethodMetadata
+ - v0.10.1](../README.md) / [Exports](../modules.md) / [rest](../modules/rest.md) / MethodMetadata
 
 # Interface: MethodMetadata
 

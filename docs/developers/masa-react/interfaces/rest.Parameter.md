@@ -1,5 +1,5 @@
 [# Masa React
-](../README.md) / [Exports](../modules.md) / [rest](../modules/rest.md) / Parameter
+ - v0.10.1](../README.md) / [Exports](../modules.md) / [rest](../modules/rest.md) / Parameter
 
 # Interface: Parameter
 

@@ -1,5 +1,5 @@
 [# Masa React
-](../README.md) / [Exports](../modules.md) / [rest](rest.md) / syncPlaid
+ - v0.10.1](../README.md) / [Exports](../modules.md) / [rest](rest.md) / syncPlaid
 
 # Namespace: syncPlaid
 
