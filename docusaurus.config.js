@@ -51,7 +51,7 @@ const config = {
       navbar: {
         title: "Masa Finance",
         logo: {
-          alt: "My Site Logo",
+          alt: "Masa Finance",
           src: "img/logo.svg",
         },
         items: [
