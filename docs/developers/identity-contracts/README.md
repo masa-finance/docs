@@ -6,6 +6,22 @@
 
 ---
 
+<!-- TOC -->
+
+* [Masa Identity Contracts](#masa-identity-contracts)
+    * [Contract Deployments](#contract-deployments)
+        * [Goerli test network](#goerli-test-network)
+            * [Configuration](#configuration)
+    * [Roles](#roles)
+    * [Interface](#interface)
+    * [Deployment](#deployment)
+        * [Preparations](#preparations)
+        * [Deploy](#deploy)
+    * [Installation and usage](#installation-and-usage)
+    * [Generation of a new release](#generation-of-a-new-release)
+
+<!-- TOC -->
+
 ## Contract Deployments
 
 ### Goerli test network
