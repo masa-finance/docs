@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.2.0](../README.md) / [Exports](../modules.md) / MasaClient
+ - v0.1.9](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -23,7 +23,6 @@
 - [sessionCheck](MasaClient.md#sessioncheck)
 - [sessionLogout](MasaClient.md#sessionlogout)
 - [storeMetadata](MasaClient.md#storemetadata)
-- [twofaMint](MasaClient.md#twofamint)
 
 ## Constructors
 
@@ -100,7 +99,7 @@ ___
 
 ### getMetadata
 
-▸ **getMetadata**(`uri`): `Promise`<`undefined` \| [`ICreditReport`](../interfaces/ICreditReport.md) \| [`IIdentity`](../interfaces/IIdentity.md) \| [`I2fa`](../interfaces/I2fa.md)\>
+▸ **getMetadata**(`uri`): `Promise`<`undefined` \| [`ICreditReport`](../interfaces/ICreditReport.md) \| [`IIdentity`](../interfaces/IIdentity.md)\>
 
 #### Parameters
 
@@ -110,7 +109,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`ICreditReport`](../interfaces/ICreditReport.md) \| [`IIdentity`](../interfaces/IIdentity.md) \| [`I2fa`](../interfaces/I2fa.md)\>
+`Promise`<`undefined` \| [`ICreditReport`](../interfaces/ICreditReport.md) \| [`IIdentity`](../interfaces/IIdentity.md)\>
 
 ___
 
@@ -147,20 +146,3 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| { `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default`  }\>
-
-___
-
-### twofaMint
-
-▸ **twofaMint**(`address`, `signature`): `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `signature` | `string` |
-
-#### Returns
-
-`Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>

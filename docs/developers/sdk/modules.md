@@ -1,8 +1,8 @@
 [# Masa SDK
- - v0.2.0](README.md) / Exports
+ - v0.1.9](README.md) / Exports
 
 # # Masa SDK
- - v0.2.0
+ - v0.1.9
 
 ## Table of contents
 
@@ -16,7 +16,6 @@
 
 - [Addresses](interfaces/Addresses.md)
 - [Attribute](interfaces/Attribute.md)
-- [I2fa](interfaces/I2fa.md)
 - [ICreditReport](interfaces/ICreditReport.md)
 - [IIdentity](interfaces/IIdentity.md)
 - [IIdentityContracts](interfaces/IIdentityContracts.md)
