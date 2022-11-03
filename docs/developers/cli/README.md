@@ -6,6 +6,40 @@
 
 ---
 
+<!-- TOC -->
+* [Masa CLI](#masa-cli)
+  * [Overview](#overview)
+  * [Usage / Installation](#usage--installation)
+    * [npm](#npm)
+    * [yarn](#yarn)
+    * [npx](#npx)
+  * [Commands](#commands)
+    * [`masa login`](#masa-login)
+    * [`masa logout`](#masa-logout)
+    * [`masa account`](#masa-account)
+    * [`masa identity`](#masa-identity)
+      * [`masa identity info`](#masa-identity-info)
+      * [`masa identity create <soulname> <duration>`](#masa-identity-create-soulname-duration)
+      * [`masa identity show`](#masa-identity-show)
+      * [`masa identity burn`](#masa-identity-burn)
+    * [`masa soul-name`](#masa-soul-name)
+      * [`masa soul-name info`](#masa-soul-name-info)
+      * [`masa soul-name list`](#masa-soul-name-list)
+      * [`masa soul-name create <soulname> <duration>`](#masa-soul-name-create-soulname-duration)
+      * [`masa soul-name burn <soulname>`](#masa-soul-name-burn-soulname)
+    * [`masa credit-report`](#masa-credit-report)
+      * [`masa credit-report info`](#masa-credit-report-info)
+      * [`masa credit-report list`](#masa-credit-report-list)
+      * [`masa credit-report create`](#masa-credit-report-create)
+      * [`masa credit-report burn <Credit Report ID>`](#masa-credit-report-burn-credit-report-id)
+    * [`masa settings`](#masa-settings)
+      * [`masa settings set <key> <value>`](#masa-settings-set-key-value)
+      * [`masa settings preset <environment>`](#masa-settings-preset-environment)
+  * [Configuration](#configuration)
+<!-- TOC -->
+
+## Overview
+
 ```bash
 $ masa --help
   __  __                            ____   _       ___ 
@@ -96,23 +130,23 @@ Masa Endpoint: https://dev.middleware.masa.finance/
 
 ## Commands
 
-### `masa login `
+### `masa login`
 
 Login to the masa infrastructure
 
-### `masa logout `
+### `masa logout`
 
 Logout from the masa infrastructure
 
-### `masa account `
+### `masa account`
 
 Shows information about your account
 
-### `masa identity `
+### `masa identity`
 
 Identity commands
 
-#### `masa identity info `
+#### `masa identity info`
 
 Shows info about all Identities
 
@@ -123,7 +157,7 @@ Creates a masa identity with soul name
 - `<soulname> soulname to register`
 - `<duration> period of registration`
 
-#### `masa identity show `
+#### `masa identity show`
 
 Shows detail about your masa identity
 
@@ -132,19 +166,19 @@ Options:
 - `-a, --address <address>`
   Address override
 
-#### `masa identity burn `
+#### `masa identity burn`
 
 Burns your masa identity
 
-### `masa soul-name `
+### `masa soul-name`
 
 Soul Name Commands
 
-#### `masa soul-name info `
+#### `masa soul-name info`
 
 Shows info about all Soul Names
 
-#### `masa soul-name list `
+#### `masa soul-name list`
 
 Lists your soul names
 
@@ -166,15 +200,15 @@ Burns soul name that you own
 
 - `<soulname> soulname to burn`
 
-### `masa credit-report `
+### `masa credit-report`
 
 Credit Report Commands
 
-#### `masa credit-report info `
+#### `masa credit-report info`
 
 Shows info about all Credit Reports
 
-#### `masa credit-report list `
+#### `masa credit-report list`
 
 Lists your Credit Reports
 
@@ -183,7 +217,7 @@ Options:
 - `-a, --address <address>`
   Address override
 
-#### `masa credit-report create `
+#### `masa credit-report create`
 
 Creates a Credit Report
 
@@ -193,7 +227,7 @@ Burns a Credit Report
 
 - `<Credit Report ID> ID of the Credit Report to burn`
 
-### `masa settings `
+### `masa settings`
 
 Set config settings
 
