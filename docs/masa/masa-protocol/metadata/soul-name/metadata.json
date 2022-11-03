@@ -1,0 +1,16 @@
+{
+  "description": "This is a soul name!",
+  "external_url": "https://beta.claimyoursoul.masa.finance",
+  "image": "ar://Nu1mU0PNxrOfjA4IQcWXYlyQqqm1vPa7QbQMrK1aUJc",
+  "name": "test.soul",
+  "attributes": [
+    {
+      "trait_type": "Character Set",
+      "value": "Letters"
+    },
+    {
+      "trait_type": "Category",
+      "value": "10k Club"
+    }
+  ]
+}
