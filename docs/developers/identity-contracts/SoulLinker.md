@@ -235,7 +235,7 @@ function transferOwnership(address newOwner) external nonpayable
 ### validateLinkData
 
 ```solidity
-function validateLinkData(address reader, uint256 identityId, address token, uint256 tokenId, uint256 expirationDate, bytes signature) external view returns (bool)
+function validateLinkData(uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, uint256 expirationDate, bytes signature) external view returns (bool)
 ```
 
 Validates the signature of the given read link request
@@ -246,8 +246,8 @@ Validates the signature of the given read link request
 
 | Name | Type | Description |
 |---|---|---|
-| reader | address | Address of the reader |
-| identityId | uint256 | Id of the identity |
+| readerIdentityId | uint256 | Id of the identity of the reader |
+| ownerIdentityId | uint256 | Id of the identity of the owner of the SBT |
 | token | address | Address of the SBT contract |
 | tokenId | uint256 | Id of the token |
 | expirationDate | uint256 | Expiration date of the signature |
