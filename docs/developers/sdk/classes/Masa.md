@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.1.9](../README.md) / [Exports](../modules.md) / Masa
+ - v0.2.0](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -21,6 +21,7 @@
 - [metadata](Masa.md#metadata)
 - [session](Masa.md#session)
 - [soulNames](Masa.md#soulnames)
+- [twofa](Masa.md#twofa)
 - [utils](Masa.md#utils)
 
 ## Constructors
@@ -120,7 +121,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `retrieve` | (`url`: `string`) => `Promise`<`undefined` \| [`ICreditReport`](../interfaces/ICreditReport.md) \| [`IIdentity`](../interfaces/IIdentity.md)\> |
+| `retrieve` | (`url`: `string`) => `Promise`<`undefined` \| [`ICreditReport`](../interfaces/ICreditReport.md) \| [`IIdentity`](../interfaces/IIdentity.md) \| [`I2fa`](../interfaces/I2fa.md)\> |
 | `store` | (`soulName`: `string`) => `Promise`<`undefined` \| { `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default`  }\> |
 
 ___
@@ -153,6 +154,22 @@ ___
 | `getRegistrationPrice` | (`soulName`: `string`, `duration`: `number`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `Promise`<`string` \| `BigNumber`\> |
 | `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `index`: `string` = nameIndex; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `tokenDetails`: [`string`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }[]\> |
 | `loadSoulNamesByIdentityId` | (`identityId`: `BigNumber`) => `Promise`<{ `index`: `string` = nameIndex; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `tokenDetails`: [`string`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }[]\> |
+
+___
+
+### twofa
+
+• **twofa**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `burn` | (`twofaId`: `number`) => `Promise`<`boolean`\> |
+| `create` | () => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
+| `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata`: [`I2fa`](../interfaces/I2fa.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
+| `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata`: [`I2fa`](../interfaces/I2fa.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
+| `mint` | (`address`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
 
 ___
 

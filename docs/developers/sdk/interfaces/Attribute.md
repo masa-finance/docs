@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.1.9](../README.md) / [Exports](../modules.md) / Attribute
+ - v0.2.0](../README.md) / [Exports](../modules.md) / Attribute
 
 # Interface: Attribute
 
