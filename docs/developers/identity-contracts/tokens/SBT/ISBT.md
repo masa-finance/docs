@@ -1,4 +1,4 @@
-# ISoulboundIdentity
+# ISBT
 
 
 
@@ -31,70 +31,6 @@ Count all SBTs assigned to an owner
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | The number of SBTs owned by `_owner`, possibly zero |
-
-### getSoulName
-
-```solidity
-function getSoulName() external view returns (contract ISoulName)
-```
-
-
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | contract ISoulName | undefined |
-
-### mint
-
-```solidity
-function mint(address to) external nonpayable returns (uint256)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| to | address | undefined |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
-
-### mintIdentityWithName
-
-```solidity
-function mintIdentityWithName(address to, string name, uint256 yearsPeriod, string _tokenURI) external payable returns (uint256)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| to | address | undefined |
-| name | string | undefined |
-| yearsPeriod | uint256 | undefined |
-| _tokenURI | string | undefined |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
 
 ### ownerOf
 
@@ -140,28 +76,6 @@ function supportsInterface(bytes4 interfaceId) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
-### tokenOfOwner
-
-```solidity
-function tokenOfOwner(address owner) external view returns (uint256)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| owner | address | undefined |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
-
 
 
 ## Events
@@ -174,7 +88,7 @@ event Burn(address indexed _owner, uint256 indexed _tokenId)
 
 
 
-
+*This emits when an SBT is burned  This event emits when SBTs are destroyed*
 
 #### Parameters
 
@@ -191,7 +105,7 @@ event Mint(address indexed _owner, uint256 indexed _tokenId)
 
 
 
-
+*This emits when an SBT is newly minted.  This event emits when SBTs are created*
 
 #### Parameters
 

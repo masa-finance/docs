@@ -1,12 +1,12 @@
-# SBT
+# MasaNFT
 
 *Masa Finance*
 
-> SBT
+> MasaNFT
 
-Soulbound token. Non-fungible token that is not transferable.
+Non-fungible token is a token that is not fungible.
 
-*Implementation of https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763 Soulbound token.*
+*Implementation of https://eips.ethereum.org/EIPS/eip-721[ERC721] Non-Fungible Token Standard, that inherits from {ERC721Enumerable}, {Ownable}, {AccessControl} and {ERC721Burnable}.*
 
 ## Methods
 
@@ -206,28 +206,6 @@ function isApprovedForAll(address owner, address operator) external view returns
 |---|---|---|
 | _0 | bool | undefined |
 
-### mint
-
-```solidity
-function mint(address to) external nonpayable returns (uint256)
-```
-
-Mints a new NFT
-
-*The caller must have the MINTER role*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| to | address | The address to mint the NFT to |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | The NFT ID of the newly minted NFT |
-
 ### name
 
 ```solidity
@@ -332,39 +310,39 @@ function revokeRole(bytes32 role, address account) external nonpayable
 ### safeTransferFrom
 
 ```solidity
-function safeTransferFrom(address, address, uint256) external pure
+function safeTransferFrom(address from, address to, uint256 tokenId) external nonpayable
 ```
 
-Transfers the ownership of an NFT from one address to another address
 
-*This will raise an exception because the token is not transferable.*
+
+*See {IERC721-safeTransferFrom}.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | address | undefined |
-| _1 | address | undefined |
-| _2 | uint256 | undefined |
+| from | address | undefined |
+| to | address | undefined |
+| tokenId | uint256 | undefined |
 
 ### safeTransferFrom
 
 ```solidity
-function safeTransferFrom(address, address, uint256, bytes) external pure
+function safeTransferFrom(address from, address to, uint256 tokenId, bytes data) external nonpayable
 ```
 
-Transfer ownership of the token to another address safely
 
-*This will raise an exception because the token is not transferable.*
+
+*See {IERC721-safeTransferFrom}.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | address | undefined |
-| _1 | address | undefined |
-| _2 | uint256 | undefined |
-| _3 | bytes | undefined |
+| from | address | undefined |
+| to | address | undefined |
+| tokenId | uint256 | undefined |
+| data | bytes | undefined |
 
 ### setApprovalForAll
 
@@ -509,20 +487,20 @@ function totalSupply() external view returns (uint256)
 ### transferFrom
 
 ```solidity
-function transferFrom(address, address, uint256) external pure
+function transferFrom(address from, address to, uint256 tokenId) external nonpayable
 ```
 
-Transfer ownership of an NFT -- THE CALLER IS RESPONSIBLE  TO CONFIRM THAT `_to` IS CAPABLE OF RECEIVING NFTS OR ELSE  THEY MAY BE PERMANENTLY LOST
 
-*This will raise an exception because the token is not transferable.*
+
+*See {IERC721-transferFrom}.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | address | undefined |
-| _1 | address | undefined |
-| _2 | uint256 | undefined |
+| from | address | undefined |
+| to | address | undefined |
+| tokenId | uint256 | undefined |
 
 ### transferOwnership
 

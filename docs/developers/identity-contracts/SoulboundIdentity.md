@@ -44,23 +44,6 @@ function MINTER_ROLE() external view returns (bytes32)
 |---|---|---|
 | _0 | bytes32 | undefined |
 
-### approve
-
-```solidity
-function approve(address to, uint256 tokenId) external nonpayable
-```
-
-
-
-*See {IERC721-approve}.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| to | address | undefined |
-| tokenId | uint256 | undefined |
-
 ### balanceOf
 
 ```solidity
@@ -69,7 +52,7 @@ function balanceOf(address owner) external view returns (uint256)
 
 
 
-*See {IERC721-balanceOf}.*
+*See {ISBT-balanceOf}.*
 
 #### Parameters
 
@@ -91,35 +74,13 @@ function burn(uint256 tokenId) external nonpayable
 
 
 
-*Burns `tokenId`. See {ERC721-_burn}. Requirements: - The caller must own `tokenId` or be an approved operator.*
+*Burns `tokenId`. See {SBT-_burn}. Requirements: - The caller must own `tokenId` or be an approved operator.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
 | tokenId | uint256 | undefined |
-
-### getApproved
-
-```solidity
-function getApproved(uint256 tokenId) external view returns (address)
-```
-
-
-
-*See {IERC721-getApproved}.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| tokenId | uint256 | undefined |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
 
 ### getExtension
 
@@ -287,29 +248,6 @@ function hasRole(bytes32 role, address account) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
-### isApprovedForAll
-
-```solidity
-function isApprovedForAll(address owner, address operator) external view returns (bool)
-```
-
-
-
-*See {IERC721-isApprovedForAll}.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| owner | address | undefined |
-| operator | address | undefined |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | bool | undefined |
-
 ### isAvailable
 
 ```solidity
@@ -387,7 +325,7 @@ function name() external view returns (string)
 
 
 
-*See {IERC721Metadata-name}.*
+*See {ISBTMetadata-name}.*
 
 
 #### Returns
@@ -502,60 +440,6 @@ function revokeRole(bytes32 role, address account) external nonpayable
 | role | bytes32 | undefined |
 | account | address | undefined |
 
-### safeTransferFrom
-
-```solidity
-function safeTransferFrom(address, address, uint256) external pure
-```
-
-Transfers the ownership of an NFT from one address to another address
-
-*This will raise an exception because the token is not transferable.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
-| _1 | address | undefined |
-| _2 | uint256 | undefined |
-
-### safeTransferFrom
-
-```solidity
-function safeTransferFrom(address, address, uint256, bytes) external pure
-```
-
-Transfer ownership of the token to another address safely
-
-*This will raise an exception because the token is not transferable.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
-| _1 | address | undefined |
-| _2 | uint256 | undefined |
-| _3 | bytes | undefined |
-
-### setApprovalForAll
-
-```solidity
-function setApprovalForAll(address operator, bool approved) external nonpayable
-```
-
-
-
-*See {IERC721-setApprovalForAll}.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| operator | address | undefined |
-| approved | bool | undefined |
-
 ### setSoulName
 
 ```solidity
@@ -619,7 +503,7 @@ function symbol() external view returns (string)
 
 
 
-*See {IERC721Metadata-symbol}.*
+*See {ISBTMetadata-symbol}.*
 
 
 #### Returns
@@ -636,7 +520,7 @@ function tokenByIndex(uint256 index) external view returns (uint256)
 
 
 
-*See {IERC721Enumerable-tokenByIndex}.*
+*See {ISBTEnumerable-tokenByIndex}.*
 
 #### Parameters
 
@@ -680,7 +564,7 @@ function tokenOfOwnerByIndex(address owner, uint256 index) external view returns
 
 
 
-*See {IERC721Enumerable-tokenOfOwnerByIndex}.*
+*See {ISBTEnumerable-tokenOfOwnerByIndex}.*
 
 #### Parameters
 
@@ -769,7 +653,7 @@ function totalSupply() external view returns (uint256)
 
 
 
-*See {IERC721Enumerable-totalSupply}.*
+*See {ISBTEnumerable-totalSupply}.*
 
 
 #### Returns
@@ -777,24 +661,6 @@ function totalSupply() external view returns (uint256)
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | undefined |
-
-### transferFrom
-
-```solidity
-function transferFrom(address, address, uint256) external pure
-```
-
-Transfer ownership of an NFT -- THE CALLER IS RESPONSIBLE  TO CONFIRM THAT `_to` IS CAPABLE OF RECEIVING NFTS OR ELSE  THEY MAY BE PERMANENTLY LOST
-
-*This will raise an exception because the token is not transferable.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
-| _1 | address | undefined |
-| _2 | uint256 | undefined |
 
 ### transferOwnership
 
@@ -816,10 +682,10 @@ function transferOwnership(address newOwner) external nonpayable
 
 ## Events
 
-### Approval
+### Burn
 
 ```solidity
-event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId)
+event Burn(address indexed _owner, uint256 indexed _tokenId)
 ```
 
 
@@ -830,14 +696,13 @@ event Approval(address indexed owner, address indexed approved, uint256 indexed 
 
 | Name | Type | Description |
 |---|---|---|
-| owner `indexed` | address | undefined |
-| approved `indexed` | address | undefined |
-| tokenId `indexed` | uint256 | undefined |
+| _owner `indexed` | address | undefined |
+| _tokenId `indexed` | uint256 | undefined |
 
-### ApprovalForAll
+### Mint
 
 ```solidity
-event ApprovalForAll(address indexed owner, address indexed operator, bool approved)
+event Mint(address indexed _owner, uint256 indexed _tokenId)
 ```
 
 
@@ -848,9 +713,8 @@ event ApprovalForAll(address indexed owner, address indexed operator, bool appro
 
 | Name | Type | Description |
 |---|---|---|
-| owner `indexed` | address | undefined |
-| operator `indexed` | address | undefined |
-| approved  | bool | undefined |
+| _owner `indexed` | address | undefined |
+| _tokenId `indexed` | uint256 | undefined |
 
 ### OwnershipTransferred
 
@@ -922,24 +786,6 @@ event RoleRevoked(bytes32 indexed role, address indexed account, address indexed
 | role `indexed` | bytes32 | undefined |
 | account `indexed` | address | undefined |
 | sender `indexed` | address | undefined |
-
-### Transfer
-
-```solidity
-event Transfer(address indexed from, address indexed to, uint256 indexed tokenId)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| from `indexed` | address | undefined |
-| to `indexed` | address | undefined |
-| tokenId `indexed` | uint256 | undefined |
 
 
 

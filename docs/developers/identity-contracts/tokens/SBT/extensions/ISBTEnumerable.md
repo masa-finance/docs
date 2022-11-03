@@ -1,8 +1,8 @@
-# ISoulboundIdentity
+# ISBTEnumerable
 
 
 
-
+> SBT Soulbound Token Standard, optional enumeration extension
 
 
 
@@ -31,70 +31,6 @@ Count all SBTs assigned to an owner
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | The number of SBTs owned by `_owner`, possibly zero |
-
-### getSoulName
-
-```solidity
-function getSoulName() external view returns (contract ISoulName)
-```
-
-
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | contract ISoulName | undefined |
-
-### mint
-
-```solidity
-function mint(address to) external nonpayable returns (uint256)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| to | address | undefined |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
-
-### mintIdentityWithName
-
-```solidity
-function mintIdentityWithName(address to, string name, uint256 yearsPeriod, string _tokenURI) external payable returns (uint256)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| to | address | undefined |
-| name | string | undefined |
-| yearsPeriod | uint256 | undefined |
-| _tokenURI | string | undefined |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
 
 ### ownerOf
 
@@ -140,21 +76,61 @@ function supportsInterface(bytes4 interfaceId) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
-### tokenOfOwner
+### tokenByIndex
 
 ```solidity
-function tokenOfOwner(address owner) external view returns (uint256)
+function tokenByIndex(uint256 index) external view returns (uint256)
 ```
 
 
 
+*Returns a token ID at a given `index` of all the tokens stored by the contract. Use along with {totalSupply} to enumerate all tokens.*
 
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| index | uint256 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### tokenOfOwnerByIndex
+
+```solidity
+function tokenOfOwnerByIndex(address owner, uint256 index) external view returns (uint256)
+```
+
+
+
+*Returns a token ID owned by `owner` at a given `index` of its token list. Use along with {balanceOf} to enumerate all of ``owner``&#39;s tokens.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
 | owner | address | undefined |
+| index | uint256 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### totalSupply
+
+```solidity
+function totalSupply() external view returns (uint256)
+```
+
+
+
+*Returns the total amount of tokens stored by the contract.*
+
 
 #### Returns
 
