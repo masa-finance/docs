@@ -7,35 +7,42 @@
 ---
 
 <!-- TOC -->
+
 * [Masa CLI](#masa-cli)
-  * [Overview](#overview)
-  * [Usage / Installation](#usage--installation)
-    * [npm](#npm)
-    * [yarn](#yarn)
-    * [npx](#npx)
-  * [Commands](#commands)
-    * [`masa login`](#masa-login)
-    * [`masa logout`](#masa-logout)
-    * [`masa account`](#masa-account)
-    * [`masa identity`](#masa-identity)
-      * [`masa identity info`](#masa-identity-info)
-      * [`masa identity create <soulname> <duration>`](#masa-identity-create-soulname-duration)
-      * [`masa identity show`](#masa-identity-show)
-      * [`masa identity burn`](#masa-identity-burn)
-    * [`masa soul-name`](#masa-soul-name)
-      * [`masa soul-name info`](#masa-soul-name-info)
-      * [`masa soul-name list`](#masa-soul-name-list)
-      * [`masa soul-name create <soulname> <duration>`](#masa-soul-name-create-soulname-duration)
-      * [`masa soul-name burn <soulname>`](#masa-soul-name-burn-soulname)
-    * [`masa credit-report`](#masa-credit-report)
-      * [`masa credit-report info`](#masa-credit-report-info)
-      * [`masa credit-report list`](#masa-credit-report-list)
-      * [`masa credit-report create`](#masa-credit-report-create)
-      * [`masa credit-report burn <Credit Report ID>`](#masa-credit-report-burn-credit-report-id)
-    * [`masa settings`](#masa-settings)
-      * [`masa settings set <key> <value>`](#masa-settings-set-key-value)
-      * [`masa settings preset <environment>`](#masa-settings-preset-environment)
-  * [Configuration](#configuration)
+    * [Overview](#overview)
+    * [Usage / Installation](#usage--installation)
+        * [npm](#npm)
+        * [yarn](#yarn)
+        * [npx](#npx)
+    * [Commands](#commands)
+        * [`masa login`](#masa-login)
+        * [`masa logout`](#masa-logout)
+        * [`masa account`](#masa-account)
+        * [`masa identity`](#masa-identity)
+            * [`masa identity info`](#masa-identity-info)
+            * [`masa identity create <soulname> <duration>`](#masa-identity-create-soulname-duration)
+            * [`masa identity show`](#masa-identity-show)
+            * [`masa identity burn`](#masa-identity-burn)
+        * [`masa soul-name`](#masa-soul-name)
+            * [`masa soul-name info`](#masa-soul-name-info)
+            * [`masa soul-name list`](#masa-soul-name-list)
+            * [`masa soul-name create <soulname> <duration>`](#masa-soul-name-create-soulname-duration)
+            * [`masa soul-name burn <soulname>`](#masa-soul-name-burn-soulname)
+        * [`masa credit-report`](#masa-credit-report)
+            * [`masa credit-report info`](#masa-credit-report-info)
+            * [`masa credit-report list`](#masa-credit-report-list)
+            * [`masa credit-report create`](#masa-credit-report-create)
+            * [`masa credit-report burn <credit-report-id>`](#masa-credit-report-burn-credit-report-id)
+        * [`masa 2fa`](#masa-2fa)
+            * [`masa 2fa info`](#masa-2fa-info)
+            * [`masa 2fa list`](#masa-2fa-list)
+            * [`masa 2fa create`](#masa-2fa-create)
+            * [`masa 2fa burn <2fa-id>`](#masa-2fa-burn-2fa-id)
+        * [`masa settings`](#masa-settings)
+            * [`masa settings set <key> <value>`](#masa-settings-set-key-value)
+            * [`masa settings preset <environment>`](#masa-settings-preset-environment)
+    * [Configuration](#configuration)
+
 <!-- TOC -->
 
 ## Overview
@@ -74,7 +81,12 @@ Commands:
   credit-report info                      Shows info about all Credit Reports
   credit-report list [options]            Lists your Credit Reports
   credit-report create                    Creates a Credit Report
-  credit-report burn <Credit Report ID>   Burns a Credit Report 
+  credit-report burn <credit-report-id>   Burns a Credit Report
+  2fa                                     2fa Commands
+  2fa info                                Shows info about all 2fas
+  2fa list [options]                      Lists your 2fas
+  2fa create                              Creates a 2fa Token
+  2fa burn <2fa-id>                       Burns a 2fa
   settings                                Set config settings
   settings set <key> <value>              Changes setting <key> to <value>
   settings preset <environment>           Changes setting <environment> presets
@@ -221,11 +233,38 @@ Options:
 
 Creates a Credit Report
 
-#### `masa credit-report burn <Credit Report ID>`
+#### `masa credit-report burn <credit-report-id>`
 
 Burns a Credit Report
 
-- `<Credit Report ID> ID of the Credit Report to burn`
+- `<credit-report-id> ID of the Credit Report to burn`
+
+### `masa 2fa`
+
+2fa Commands
+
+#### `masa 2fa info`
+
+Shows info about all 2fas
+
+#### `masa 2fa list`
+
+Lists your 2fas
+
+Options:
+
+- `-a, --address <address>`
+  Address override
+
+#### `masa 2fa create`
+
+Creates a 2fa Token
+
+#### `masa 2fa burn <2fa-id>`
+
+Burns a 2fa
+
+- `<2fa-id> ID of the 2fa to burn`
 
 ### `masa settings`
 
