@@ -53,6 +53,7 @@ The base url for the Metadata url that is beeing generated from the contract
 - [Abstract Non-Fungible Token Definition](docs/tokens/NFT.md)
 - [Soulbound Identity Definition](docs/SoulboundIdentity.md)
 - [Soulbound Credit Report Definition](docs/SoulboundCreditReport.md)
+- [Soulbound 2FA Definition](docs/Soulbound2FA.md)
 - [Soul Name Definition](docs/SoulName.md)
 - [Soul Linker Definition](docs/SoulLinker.md)
 - [Soul Store Definition](docs/SoulStore.md)
