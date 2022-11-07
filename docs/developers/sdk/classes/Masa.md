@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.2.3](../README.md) / [Exports](../modules.md) / Masa
+ - v0.2.6](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -167,10 +167,10 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `burn` | (`twofaId`: `number`) => `Promise`<`boolean`\> |
-| `create` | () => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
+| `create` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
 | `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata`: [`I2fa`](../interfaces/I2fa.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata`: [`I2fa`](../interfaces/I2fa.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
-| `mint` | (`address`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
+| `mint` | (`address`: `string`, `phoneNumber`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
 
 ___
 
