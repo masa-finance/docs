@@ -121,7 +121,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `retrieve` | (`url`: `string`) => `Promise`<`undefined` \| [`ICreditReport`](../interfaces/ICreditReport.md) \| [`IIdentity`](../interfaces/IIdentity.md) \| [`I2fa`](../interfaces/I2fa.md)\> |
+| `retrieve` | (`url`: `string`) => `Promise`<`undefined` \| [`ICreditReport`](../interfaces/ICreditReport.md) \| [`IIdentity`](../interfaces/IIdentity.md) \| [`I2FA`](../interfaces/I2FA.md)\> |
 | `store` | (`soulName`: `string`) => `Promise`<`undefined` \| { `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default`  }\> |
 
 ___
@@ -167,10 +167,11 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `burn` | (`twofaId`: `number`) => `Promise`<`boolean`\> |
-| `create` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
-| `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata`: [`I2fa`](../interfaces/I2fa.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
-| `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata`: [`I2fa`](../interfaces/I2fa.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
-| `mint` | (`address`: `string`, `phoneNumber`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
+| `create` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
+| `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\> |
+| `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
+| `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
+| `mint` | (`address`: `string`, `phoneNumber`: `string`, `code`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
 
 ___
 

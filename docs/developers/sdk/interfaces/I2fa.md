@@ -1,22 +1,22 @@
 [# Masa SDK
- - v0.2.6](../README.md) / [Exports](../modules.md) / I2fa
+ - v0.2.6](../README.md) / [Exports](../modules.md) / I2FA
 
-# Interface: I2fa
+# Interface: I2FA
 
 ## Table of contents
 
 ### Properties
 
-- [description](I2fa.md#description)
-- [image](I2fa.md#image)
-- [name](I2fa.md#name)
-- [properties](I2fa.md#properties)
+- [description](I2FA.md#description)
+- [image](I2FA.md#image)
+- [name](I2FA.md#name)
+- [properties](I2FA.md#properties)
 
 ## Properties
 
 ### description
 
-• **description**: ``"A decentralized 2fa"``
+• **description**: ``"A decentralized 2FA"``
 
 ___
 

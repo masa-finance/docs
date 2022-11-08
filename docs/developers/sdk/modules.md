@@ -16,7 +16,7 @@
 
 - [Addresses](interfaces/Addresses.md)
 - [Attribute](interfaces/Attribute.md)
-- [I2fa](interfaces/I2fa.md)
+- [I2FA](interfaces/I2FA.md)
 - [ICreditReport](interfaces/ICreditReport.md)
 - [IIdentity](interfaces/IIdentity.md)
 - [IIdentityContracts](interfaces/IIdentityContracts.md)
