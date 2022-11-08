@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.3.0](../README.md) / [Exports](../modules.md) / MasaClient
+ - v0.3.3](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -169,7 +169,7 @@ ___
 
 ### twoFAMint
 
-▸ **twoFAMint**(`address`, `phoneNumber`, `code`, `signature`): `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>
+▸ **twoFAMint**(`address`, `phoneNumber`, `code`, `signature`): `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>
 
 #### Parameters
 
@@ -182,4 +182,4 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>
+`Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>

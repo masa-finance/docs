@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.3.0](../README.md) / [Exports](../modules.md) / Masa
+ - v0.3.3](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -167,11 +167,11 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `burn` | (`twofaId`: `number`) => `Promise`<`boolean`\> |
-| `create` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
+| `create` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
 | `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\> |
 | `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
-| `mint` | (`address`: `string`, `phoneNumber`: `string`, `code`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
+| `mint` | (`address`: `string`, `phoneNumber`: `string`, `code`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
 
 ___
 

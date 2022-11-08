@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.3.0](../README.md) / [Exports](../modules.md) / ContractService
+ - v0.3.3](../README.md) / [Exports](../modules.md) / ContractService
 
 # Class: ContractService
 
