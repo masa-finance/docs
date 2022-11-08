@@ -83,10 +83,10 @@ Commands:
   credit-report create                    Creates a Credit Report
   credit-report burn <credit-report-id>   Burns a Credit Report
   2fa                                     2fa Commands
-  2fa info                                Shows info about all 2fas
-  2fa list [options]                      Lists your 2fas
-  2fa create                              Creates a 2fa Token
-  2fa burn <2fa-id>                       Burns a 2fa
+  2fa info                                Shows info about all 2FAs
+  2fa list [options]                      Lists your 2FAs
+  2fa create <phone-number>               Creates a 2FA Token
+  2fa burn <2fa-id>                       Burns a 2FA
   settings                                Set config settings
   settings set <key> <value>              Changes setting <key> to <value>
   settings preset <environment>           Changes setting <environment> presets
@@ -241,30 +241,32 @@ Burns a Credit Report
 
 ### `masa 2fa`
 
-2fa Commands
+2FA Commands
 
 #### `masa 2fa info`
 
-Shows info about all 2fas
+Shows info about all 2FAs
 
 #### `masa 2fa list`
 
-Lists your 2fas
+Lists your 2FAs
 
 Options:
 
 - `-a, --address <address>`
   Address override
 
-#### `masa 2fa create`
+#### `masa 2fa create <phone-number>`
 
-Creates a 2fa Token
+Creates a 2FA Token
+
+- `<phone-number> The phone number to verify`
 
 #### `masa 2fa burn <2fa-id>`
 
-Burns a 2fa
+Burns a 2FA
 
-- `<2fa-id> ID of the 2fa to burn`
+- `<2fa-id> ID of the 2FA to burn`
 
 ### `masa settings`
 
