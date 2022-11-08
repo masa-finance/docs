@@ -1,5 +1,5 @@
 [# Masa React
- - v0.11.0](../README.md) / [Exports](../modules.md) / [rest](rest.md) / syncVezgo
+ - v0.13.0](../README.md) / [Exports](../modules.md) / [rest](rest.md) / syncVezgo
 
 # Namespace: syncVezgo
 
