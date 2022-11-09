@@ -21,6 +21,7 @@
         * [`masa identity`](#masa-identity)
             * [`masa identity info`](#masa-identity-info)
             * [`masa identity create <soulname> <duration>`](#masa-identity-create-soulname-duration)
+            * [`masa identity register`](#masa-identity-register)
             * [`masa identity show`](#masa-identity-show)
             * [`masa identity burn`](#masa-identity-burn)
         * [`masa soul-name`](#masa-soul-name)
@@ -36,7 +37,7 @@
         * [`masa 2fa`](#masa-2fa)
             * [`masa 2fa info`](#masa-2fa-info)
             * [`masa 2fa list`](#masa-2fa-list)
-            * [`masa 2fa create`](#masa-2fa-create)
+            * [`masa 2fa create <phone-number>`](#masa-2fa-create-phone-number)
             * [`masa 2fa burn <2fa-id>`](#masa-2fa-burn-2fa-id)
         * [`masa settings`](#masa-settings)
             * [`masa settings set <key> <value>`](#masa-settings-set-key-value)
@@ -70,6 +71,7 @@ Commands:
   identity                                Identity commands
   identity info                           Shows info about all Identities
   identity create <soulname> <duration>   Creates a masa identity with soul name
+  identity register                       Creates a masa identity without soul name
   identity show [options]                 Shows detail about your masa identity
   identity burn                           Burns your masa identity
   soul-name                               Soul Name Commands
@@ -168,6 +170,10 @@ Creates a masa identity with soul name
 
 - `<soulname> soulname to register`
 - `<duration> period of registration`
+
+#### `masa identity register`
+
+Creates a masa identity without soul name
 
 #### `masa identity show`
 
