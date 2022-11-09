@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.3.10](../README.md) / [Exports](../modules.md) / I2FA
+ - v0.3.11](../README.md) / [Exports](../modules.md) / I2FA
 
 # Interface: I2FA
 
