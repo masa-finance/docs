@@ -1,8 +1,8 @@
 [# Masa React
- - v0.13.0](README.md) / Exports
+ - v0.14.6](README.md) / Exports
 
 # # Masa React
- - v0.13.0
+ - v0.14.6
 
 ## Table of contents
 
@@ -17,10 +17,12 @@
 ### Functions
 
 - [AccessTokenProvider](modules.md#accesstokenprovider)
+- [MasaProvider](modules.md#masaprovider)
 - [MasaToolsProvider](modules.md#masatoolsprovider)
 - [MasaToolsWrapper](modules.md#masatoolswrapper)
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
 - [useContractCall](modules.md#usecontractcall)
+- [useMasa](modules.md#usemasa)
 - [useMasaTools](modules.md#usemasatools)
 
 ## Variables
@@ -40,6 +42,22 @@
 | Name | Type |
 | :------ | :------ |
 | `__namedParameters` | `AccessTokenProps` |
+
+#### Returns
+
+`Element`
+
+___
+
+### MasaProvider
+
+▸ **MasaProvider**(`__namedParameters`): `Element`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `__namedParameters` | `any` |
 
 #### Returns
 
@@ -116,6 +134,16 @@ ___
 | `error` | `any` |
 | `getData` | () => `any` |
 | `loading` | `boolean` |
+
+___
+
+### useMasa
+
+▸ **useMasa**(): `MasaShape`
+
+#### Returns
+
+`MasaShape`
 
 ___
 
