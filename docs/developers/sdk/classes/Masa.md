@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.3.11](../README.md) / [Exports](../modules.md) / Masa
+ - v0.4.0](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -107,7 +107,8 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `burn` | () => `Promise`<`boolean`\> |
-| `create` | (`soulName`: `string`, `duration`: `number`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `Promise`<`boolean`\> |
+| `create` | () => `Promise`<`boolean`\> |
+| `createWithSoulName` | (`soulName`: `string`, `duration`: `number`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `Promise`<`boolean`\> |
 | `load` | (`address?`: `string`) => `Promise`<`undefined` \| `BigNumber`\> |
 | `show` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata?`: [`IIdentity`](../interfaces/IIdentity.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }\> |
 

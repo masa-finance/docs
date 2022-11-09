@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.3.11](../README.md) / [Exports](../modules.md) / ICreditReport
+ - v0.4.0](../README.md) / [Exports](../modules.md) / ICreditReport
 
 # Interface: ICreditReport
 
