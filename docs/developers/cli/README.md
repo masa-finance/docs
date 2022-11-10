@@ -29,11 +29,11 @@
             * [`masa soul-name list`](#masa-soul-name-list)
             * [`masa soul-name create <soulname> <duration>`](#masa-soul-name-create-soulname-duration)
             * [`masa soul-name burn <soulname>`](#masa-soul-name-burn-soulname)
-        * [`masa credit-report`](#masa-credit-report)
-            * [`masa credit-report info`](#masa-credit-report-info)
-            * [`masa credit-report list`](#masa-credit-report-list)
-            * [`masa credit-report create`](#masa-credit-report-create)
-            * [`masa credit-report burn <credit-report-id>`](#masa-credit-report-burn-credit-report-id)
+        * [`masa credit-score`](#masa-credit-score)
+            * [`masa credit-score info`](#masa-credit-score-info)
+            * [`masa credit-score list`](#masa-credit-score-list)
+            * [`masa credit-score create`](#masa-credit-score-create)
+            * [`masa credit-score burn <credit-score-id>`](#masa-credit-score-burn-credit-score-id)
         * [`masa 2fa`](#masa-2fa)
             * [`masa 2fa info`](#masa-2fa-info)
             * [`masa 2fa list`](#masa-2fa-list)
@@ -79,11 +79,11 @@ Commands:
   soul-name list [options]                Lists your soul names
   soul-name create <soulname> <duration>  Creates a new soul name
   soul-name burn <soulname>               Burns soul name that you own
-  credit-report                           Credit Report Commands
-  credit-report info                      Shows info about all Credit Reports
-  credit-report list [options]            Lists your Credit Reports
-  credit-report create                    Creates a Credit Report
-  credit-report burn <credit-report-id>   Burns a Credit Report
+  credit-score                            Credit Score Commands
+  credit-score info                       Shows info about all Credit Scores
+  credit-score list [options]             Lists your Credit Scores
+  credit-score create                     Creates a Credit Score
+  credit-score burn <credit-score-id>     Burns a Credit Score
   2fa                                     2fa Commands
   2fa info                                Shows info about all 2FAs
   2fa list [options]                      Lists your 2FAs
@@ -218,32 +218,32 @@ Burns soul name that you own
 
 - `<soulname> soulname to burn`
 
-### `masa credit-report`
+### `masa credit-score`
 
-Credit Report Commands
+Credit Score Commands
 
-#### `masa credit-report info`
+#### `masa credit-score info`
 
-Shows info about all Credit Reports
+Shows info about all Credit Scores
 
-#### `masa credit-report list`
+#### `masa credit-score list`
 
-Lists your Credit Reports
+Lists your Credit Scores
 
 Options:
 
 - `-a, --address <address>`
   Address override
 
-#### `masa credit-report create`
+#### `masa credit-score create`
 
-Creates a Credit Report
+Creates a Credit Score
 
-#### `masa credit-report burn <credit-report-id>`
+#### `masa credit-score burn <credit-score-id>`
 
-Burns a Credit Report
+Burns a Credit Score
 
-- `<credit-report-id> ID of the Credit Report to burn`
+- `<credit-score-id> ID of the Credit Score to burn`
 
 ### `masa 2fa`
 
