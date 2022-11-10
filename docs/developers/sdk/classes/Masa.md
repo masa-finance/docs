@@ -91,7 +91,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `burn` | (`creditReportId`: `number`) => `Promise`<`boolean`\> |
-| `create` | () => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
+| `create` | () => `Promise`<[`CreateCreditScoreResult`](../interfaces/CreateCreditScoreResult.md)\> |
 | `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `mint` | (`address`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |

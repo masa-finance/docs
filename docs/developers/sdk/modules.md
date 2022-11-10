@@ -17,6 +17,7 @@
 - [Addresses](interfaces/Addresses.md)
 - [Attribute](interfaces/Attribute.md)
 - [Create2FAResult](interfaces/Create2FAResult.md)
+- [CreateCreditScoreResult](interfaces/CreateCreditScoreResult.md)
 - [I2FA](interfaces/I2FA.md)
 - [ICreditScore](interfaces/ICreditScore.md)
 - [IIdentity](interfaces/IIdentity.md)
