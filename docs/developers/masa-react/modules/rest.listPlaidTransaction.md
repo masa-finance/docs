@@ -1,5 +1,5 @@
 [# Masa React
- - v0.14.6](../README.md) / [Exports](../modules.md) / [rest](rest.md) / listPlaidTransaction
+ - v0.14.7](../README.md) / [Exports](../modules.md) / [rest](rest.md) / listPlaidTransaction
 
 # Namespace: listPlaidTransaction
 
