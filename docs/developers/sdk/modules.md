@@ -1,8 +1,8 @@
 [# Masa SDK
- - v0.4.0](README.md) / Exports
+ - v0.4.1](README.md) / Exports
 
 # # Masa SDK
- - v0.4.0
+ - v0.4.1
 
 ## Table of contents
 

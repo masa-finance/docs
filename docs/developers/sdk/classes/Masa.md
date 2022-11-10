@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.4.0](../README.md) / [Exports](../modules.md) / Masa
+ - v0.4.1](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -168,7 +168,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `burn` | (`twofaId`: `number`) => `Promise`<`boolean`\> |
-| `create` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
+| `create` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`Create2FAResult`\> |
 | `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\> |
 | `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
