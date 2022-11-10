@@ -21,7 +21,7 @@
 - [metadata](Masa.md#metadata)
 - [session](Masa.md#session)
 - [soulNames](Masa.md#soulnames)
-- [twofa](Masa.md#twofa)
+- [twoFA](Masa.md#twofa)
 - [utils](Masa.md#utils)
 
 ## Constructors
@@ -92,8 +92,8 @@ ___
 | :------ | :------ |
 | `burn` | (`creditReportId`: `number`) => `Promise`<`boolean`\> |
 | `create` | () => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
-| `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata`: [`ICreditReport`](../interfaces/ICreditReport.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
-| `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata`: [`ICreditReport`](../interfaces/ICreditReport.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
+| `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
+| `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `mint` | (`address`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
 
 ___
@@ -122,7 +122,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `retrieve` | (`url`: `string`) => `Promise`<`undefined` \| [`ICreditReport`](../interfaces/ICreditReport.md) \| [`IIdentity`](../interfaces/IIdentity.md) \| [`I2FA`](../interfaces/I2FA.md)\> |
+| `retrieve` | (`url`: `string`) => `Promise`<`undefined` \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IIdentity`](../interfaces/IIdentity.md) \| [`I2FA`](../interfaces/I2FA.md)\> |
 | `store` | (`soulName`: `string`) => `Promise`<`undefined` \| { `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default`  }\> |
 
 ___
@@ -159,16 +159,16 @@ ___
 
 ___
 
-### twofa
+### twoFA
 
-• **twofa**: `Object`
+• **twoFA**: `Object`
 
 #### Type declaration
 
 | Name | Type |
 | :------ | :------ |
 | `burn` | (`twofaId`: `number`) => `Promise`<`boolean`\> |
-| `create` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`Create2FAResult`\> |
+| `create` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<[`Create2FAResult`](../interfaces/Create2FAResult.md)\> |
 | `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\> |
 | `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |

@@ -101,7 +101,7 @@ ___
 
 ### getMetadata
 
-▸ **getMetadata**(`uri`): `Promise`<`undefined` \| [`ICreditReport`](../interfaces/ICreditReport.md) \| [`IIdentity`](../interfaces/IIdentity.md) \| [`I2FA`](../interfaces/I2FA.md)\>
+▸ **getMetadata**(`uri`): `Promise`<`undefined` \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IIdentity`](../interfaces/IIdentity.md) \| [`I2FA`](../interfaces/I2FA.md)\>
 
 #### Parameters
 
@@ -111,7 +111,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`ICreditReport`](../interfaces/ICreditReport.md) \| [`IIdentity`](../interfaces/IIdentity.md) \| [`I2FA`](../interfaces/I2FA.md)\>
+`Promise`<`undefined` \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IIdentity`](../interfaces/IIdentity.md) \| [`I2FA`](../interfaces/I2FA.md)\>
 
 ___
 

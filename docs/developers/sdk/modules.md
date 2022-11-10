@@ -16,8 +16,9 @@
 
 - [Addresses](interfaces/Addresses.md)
 - [Attribute](interfaces/Attribute.md)
+- [Create2FAResult](interfaces/Create2FAResult.md)
 - [I2FA](interfaces/I2FA.md)
-- [ICreditReport](interfaces/ICreditReport.md)
+- [ICreditScore](interfaces/ICreditScore.md)
 - [IIdentity](interfaces/IIdentity.md)
 - [IIdentityContracts](interfaces/IIdentityContracts.md)
 - [ISoulName](interfaces/ISoulName.md)
@@ -27,11 +28,14 @@
 
 ### Type Aliases
 
+- [Environment](modules.md#environment)
 - [PaymentMethod](modules.md#paymentmethod)
 
 ### Variables
 
+- [Templates](modules.md#templates)
 - [addresses](modules.md#addresses)
+- [environments](modules.md#environments)
 
 ### Functions
 
@@ -41,15 +45,41 @@
 
 ## Type Aliases
 
+### Environment
+
+Ƭ **Environment**: { `name`: `string` ; `wallet?`: `ethers.Signer` \| `ethers.Wallet`  } & [`MasaArgs`](interfaces/MasaArgs.md)
+
+___
+
 ### PaymentMethod
 
 Ƭ **PaymentMethod**: ``"eth"`` \| ``"weth"`` \| ``"stable"`` \| ``"utility"``
 
 ## Variables
 
+### Templates
+
+• `Const` **Templates**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `creditScoreTemplate` | (`identityId`: `string`, `address`: `string`) => `string` |
+| `loginTemplate` | (`challenge`: `string`, `expires`: `string`) => `string` |
+| `twoFATemplate` | (`identityId`: `string`, `phoneNumber`: `string`, `code`: `string`) => `string` |
+
+___
+
 ### addresses
 
 • `Const` **addresses**: [`Addresses`](interfaces/Addresses.md)
+
+___
+
+### environments
+
+• `Const` **environments**: [`Environment`](modules.md#environment)[]
 
 ## Functions
 
