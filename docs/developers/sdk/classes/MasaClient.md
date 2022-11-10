@@ -25,7 +25,6 @@
 - [storeMetadata](MasaClient.md#storemetadata)
 - [twoFAGenerate](MasaClient.md#twofagenerate)
 - [twoFAMint](MasaClient.md#twofamint)
-- [twoFAVerify](MasaClient.md#twofaverify)
 
 ## Constructors
 
@@ -184,20 +183,3 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>
-
-___
-
-### twoFAVerify
-
-▸ **twoFAVerify**(`phoneNumber`, `code`): `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `phoneNumber` | `string` |
-| `code` | `string` |
-
-#### Returns
-
-`Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
