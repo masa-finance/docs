@@ -30,6 +30,7 @@
             * [`masa soul-name create <soulname> <duration>`](#masa-soul-name-create-soulname-duration)
             * [`masa soul-name burn <soulname>`](#masa-soul-name-burn-soulname)
             * [`masa soul-name send <soulname> <receiver>`](#masa-soul-name-send-soulname-receiver)
+            * [`masa soul-name show <soulname>`](#masa-soul-name-show-soulname)
         * [`masa credit-score`](#masa-credit-score)
             * [`masa credit-score info`](#masa-credit-score-info)
             * [`masa credit-score list`](#masa-credit-score-list)
@@ -81,6 +82,7 @@ Commands:
   soul-name create <soulname> <duration>  Creates a new soul name
   soul-name burn <soulname>               Burns soul name that you own
   soul-name send <soulname> <receiver>    Sends a soul name to that you own to a receiver
+  soul-name show <soulname>               Shows info about a Soul Name
   credit-score                            Credit Score Commands
   credit-score info                       Shows info about all Credit Scores
   credit-score list [options]             Lists your Credit Scores
@@ -226,6 +228,12 @@ Sends a soul name to that you own to a receiver
 
 - `<soulname> Soul Name to send`
 - `<receiver> Receiver to receive the Soul Name`
+
+#### `masa soul-name show <soulname>`
+
+Shows info about a Soul Name
+
+- `<soulname> Soul Name to send`
 
 ### `masa credit-score`
 
