@@ -1,5 +1,5 @@
 [# Masa React
- - v0.14.7](../README.md) / [Exports](../modules.md) / [rest](rest.md) / listVezgoTransactions
+ - v0.14.9](../README.md) / [Exports](../modules.md) / [rest](rest.md) / listVezgoTransactions
 
 # Namespace: listVezgoTransactions
 
