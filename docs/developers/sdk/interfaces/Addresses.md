@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.4.3](../README.md) / [Exports](../modules.md) / Addresses
+ - v0.4.4](../README.md) / [Exports](../modules.md) / Addresses
 
 # Interface: Addresses
 
