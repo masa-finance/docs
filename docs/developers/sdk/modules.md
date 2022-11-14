@@ -1,16 +1,16 @@
 [# Masa SDK
- - v0.4.4](README.md) / Exports
+ - v0.5.0](README.md) / Exports
 
 # # Masa SDK
- - v0.4.4
+ - v0.5.0
 
 ## Table of contents
 
 ### Classes
 
-- [ContractService](classes/ContractService.md)
 - [Masa](classes/Masa.md)
 - [MasaClient](classes/MasaClient.md)
+- [MasaContracts](classes/MasaContracts.md)
 
 ### Interfaces
 
@@ -41,7 +41,6 @@
 ### Functions
 
 - [arweave](modules.md#arweave)
-- [contracts](modules.md#contracts)
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
 
 ## Type Aliases
@@ -104,31 +103,9 @@ ___
 
 ___
 
-### contracts
-
-▸ **contracts**(`masa`): `Object`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `addresses` | [`Addresses`](interfaces/Addresses.md) |
-| `loadIdentityContracts` | () => `Promise`<[`IIdentityContracts`](interfaces/IIdentityContracts.md)\> |
-| `service` | [`ContractService`](classes/ContractService.md) |
-
-___
-
 ### loadIdentityContracts
 
-▸ **loadIdentityContracts**(`__namedParameters`): `Promise`<[`IIdentityContracts`](interfaces/IIdentityContracts.md)\>
+▸ **loadIdentityContracts**(`__namedParameters`): [`IIdentityContracts`](interfaces/IIdentityContracts.md)
 
 #### Parameters
 
@@ -138,4 +115,4 @@ ___
 
 #### Returns
 
-`Promise`<[`IIdentityContracts`](interfaces/IIdentityContracts.md)\>
+[`IIdentityContracts`](interfaces/IIdentityContracts.md)

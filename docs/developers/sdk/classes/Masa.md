@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.4.4](../README.md) / [Exports](../modules.md) / Masa
+ - v0.5.0](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -12,7 +12,7 @@
 ### Properties
 
 - [account](Masa.md#account)
-- [arweaveClient](Masa.md#arweaveclient)
+- [arweave](Masa.md#arweave)
 - [client](Masa.md#client)
 - [config](Masa.md#config)
 - [contracts](Masa.md#contracts)
@@ -46,13 +46,13 @@
 
 | Name | Type |
 | :------ | :------ |
-| `getBalances` | (`address`: `string`) => `Promise`<`undefined` \| { `ethBalance`: `BigNumber` ; `masaBalance`: `BigNumber` ; `usdcBalance`: `BigNumber` ; `wethBalance`: `BigNumber`  }\> |
+| `getBalances` | (`address`: `string`) => `Promise`<`undefined` \| { `ethBalance`: `BigNumber` ; `identityBalance`: `BigNumber` ; `masaBalance`: `BigNumber` ; `soulNameBalance`: `BigNumber` ; `soulbound2FABalance`: `BigNumber` ; `soulboundCreditScoreBalance`: `BigNumber` ; `usdcBalance`: `BigNumber` ; `wethBalance`: `BigNumber`  }\> |
 
 ___
 
-### arweaveClient
+### arweave
 
-• `Readonly` **arweaveClient**: `default`
+• `Readonly` **arweave**: `default`
 
 ___
 
@@ -64,21 +64,13 @@ ___
 
 ### config
 
-• **config**: [`MasaConfig`](../interfaces/MasaConfig.md)
+• `Readonly` **config**: [`MasaConfig`](../interfaces/MasaConfig.md)
 
 ___
 
 ### contracts
 
-• **contracts**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `addresses` | [`Addresses`](../interfaces/Addresses.md) |
-| `loadIdentityContracts` | () => `Promise`<[`IIdentityContracts`](../interfaces/IIdentityContracts.md)\> |
-| `service` | [`ContractService`](ContractService.md) |
+• `Readonly` **contracts**: [`MasaContracts`](MasaContracts.md)
 
 ___
 
@@ -154,9 +146,9 @@ ___
 | `burn` | (`soulName`: `string`) => `Promise`<`void`\> |
 | `create` | (`soulName`: `string`, `duration`: `number`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `Promise`<`void`\> |
 | `getRegistrationPrice` | (`soulName`: `string`, `duration`: `number`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `Promise`<`string` \| `BigNumber`\> |
-| `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `tokenDetails`: [`string`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }[]\> |
+| `list` | (`address?`: `string`) => `Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }[]\> |
 | `loadSoulNameByName` | (`soulName`: `string`) => `Promise`<{ `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }\> |
-| `loadSoulNamesByIdentityId` | (`identityId`: `BigNumber`) => `Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `tokenDetails`: [`string`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }[]\> |
+| `loadSoulNamesByIdentityId` | (`identityId`: `BigNumber`) => `Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }[]\> |
 | `send` | (`soulName`: `string`, `receiver`: `string`) => `Promise`<`void`\> |
 
 ___
@@ -172,7 +164,7 @@ ___
 | `burn` | (`twofaId`: `number`) => `Promise`<`boolean`\> |
 | `create` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<[`Create2FAResult`](../interfaces/Create2FAResult.md)\> |
 | `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\> |
-| `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
+| `list` | (`address?`: `string`) => `Promise`<{ `metadata`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `mint` | (`address`: `string`, `phoneNumber`: `string`, `code`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
 

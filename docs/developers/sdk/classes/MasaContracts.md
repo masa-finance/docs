@@ -1,58 +1,64 @@
 [# Masa SDK
- - v0.4.4](../README.md) / [Exports](../modules.md) / ContractService
+ - v0.5.0](../README.md) / [Exports](../modules.md) / MasaContracts
 
-# Class: ContractService
+# Class: MasaContracts
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](ContractService.md#constructor)
+- [constructor](MasaContracts.md#constructor)
 
 ### Properties
 
-- [masa](ContractService.md#masa)
+- [identity](MasaContracts.md#identity)
+- [masaConfig](MasaContracts.md#masaconfig)
 
 ### Methods
 
-- [checkOrGiveAllowance](ContractService.md#checkorgiveallowance)
-- [getPaymentAddress](ContractService.md#getpaymentaddress)
-- [getSoulNames](ContractService.md#getsoulnames)
-- [isAvailable](ContractService.md#isavailable)
-- [price](ContractService.md#price)
-- [purchaseIdentity](ContractService.md#purchaseidentity)
-- [purchaseIdentityAndName](ContractService.md#purchaseidentityandname)
-- [purchaseName](ContractService.md#purchasename)
+- [checkOrGiveAllowance](MasaContracts.md#checkorgiveallowance)
+- [getPaymentAddress](MasaContracts.md#getpaymentaddress)
+- [getSoulNames](MasaContracts.md#getsoulnames)
+- [isAvailable](MasaContracts.md#isavailable)
+- [price](MasaContracts.md#price)
+- [purchaseIdentity](MasaContracts.md#purchaseidentity)
+- [purchaseIdentityAndName](MasaContracts.md#purchaseidentityandname)
+- [purchaseName](MasaContracts.md#purchasename)
 
 ## Constructors
 
 ### constructor
 
-• **new ContractService**(`masa`)
+• **new MasaContracts**(`masaConfig`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](Masa.md) |
+| `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) |
 
 ## Properties
 
-### masa
+### identity
 
-• `Private` **masa**: [`Masa`](Masa.md)
+• **identity**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
+
+___
+
+### masaConfig
+
+• `Private` **masaConfig**: [`MasaConfig`](../interfaces/MasaConfig.md)
 
 ## Methods
 
 ### checkOrGiveAllowance
 
-▸ `Private` **checkOrGiveAllowance**(`identityContracts`, `paymentAddress`, `signer`, `paymentMethod`, `prices`): `Promise`<`undefined` \| `ContractReceipt`\>
+▸ `Private` **checkOrGiveAllowance**(`paymentAddress`, `signer`, `paymentMethod`, `prices`): `Promise`<`undefined` \| `ContractReceipt`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `identityContracts` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) |
 | `paymentAddress` | `string` |
 | `signer` | `Signer` |
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
@@ -85,13 +91,12 @@ ___
 
 ### getSoulNames
 
-▸ **getSoulNames**(`identityContracts`, `address`): `Promise`<`string`[]\>
+▸ **getSoulNames**(`address`): `Promise`<`string`[]\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `identityContracts` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) |
 | `address` | `string` |
 
 #### Returns
@@ -102,13 +107,12 @@ ___
 
 ### isAvailable
 
-▸ **isAvailable**(`identityContracts`, `name`): `Promise`<`boolean`\>
+▸ **isAvailable**(`name`): `Promise`<`boolean`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `identityContracts` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) |
 | `name` | `string` |
 
 #### Returns
@@ -119,13 +123,12 @@ ___
 
 ### price
 
-▸ **price**(`identityContracts`, `name`, `duration?`): `Promise`<[`BigNumber`, `BigNumber`, `BigNumber`] & { `priceInETH`: `BigNumber` ; `priceInStableCoin`: `BigNumber` ; `priceInUtilityToken`: `BigNumber`  }\>
+▸ **price**(`name`, `duration?`): `Promise`<[`BigNumber`, `BigNumber`, `BigNumber`] & { `priceInETH`: `BigNumber` ; `priceInStableCoin`: `BigNumber` ; `priceInUtilityToken`: `BigNumber`  }\>
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `identityContracts` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) | `undefined` |
 | `name` | `string` | `undefined` |
 | `duration` | `number` | `1` |
 
@@ -137,13 +140,12 @@ ___
 
 ### purchaseIdentity
 
-▸ **purchaseIdentity**(`identityContracts`, `signer`): `Promise`<`ContractTransaction`\>
+▸ **purchaseIdentity**(`signer`): `Promise`<`ContractTransaction`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `identityContracts` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) |
 | `signer` | `Signer` |
 
 #### Returns
@@ -154,13 +156,12 @@ ___
 
 ### purchaseIdentityAndName
 
-▸ **purchaseIdentityAndName**(`identityContracts`, `signer`, `name`, `paymentMethod`, `duration?`, `metadataURL`): `Promise`<`ContractTransaction`\>
+▸ **purchaseIdentityAndName**(`signer`, `name`, `paymentMethod`, `duration?`, `metadataURL`): `Promise`<`ContractTransaction`\>
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `identityContracts` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) | `undefined` |
 | `signer` | `Signer` | `undefined` |
 | `name` | `string` | `undefined` |
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
@@ -175,13 +176,12 @@ ___
 
 ### purchaseName
 
-▸ **purchaseName**(`identityContracts`, `signer`, `name`, `paymentMethod`, `duration?`, `metadataURL`): `Promise`<`ContractTransaction`\>
+▸ **purchaseName**(`signer`, `name`, `paymentMethod`, `duration?`, `metadataURL`): `Promise`<`ContractTransaction`\>
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `identityContracts` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) | `undefined` |
 | `signer` | `Signer` | `undefined` |
 | `name` | `string` | `undefined` |
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
