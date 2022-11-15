@@ -10,12 +10,20 @@
 <!-- TOC -->
 
 * [Setup](#setup)
+* [Getting Started with masa-react](#getting-started-with-masa-react)
+    * [Setup](#setup)
+        * [Styles](#styles)
+    * [Usage ( inside MasaProvider )](#usage--inside-masaprovider-)
+        * [Example for useMasa ( Connect users wallet )](#example-for-usemasa--connect-users-wallet-)
+        * [Example for masa object ( Wallet is already connected here )](#example-for-masa-object--wallet-is-already-connected-here-)
+        * [For some contracts you will need some pre requisites ( Scopes )](#for-some-contracts-you-will-need-some-pre-requisites--scopes-)
+        * [Current useMasa shape](#current-usemasa-shape)
 
 <!-- TOC -->
 
 ## Setup
 
-```
+```bash
 git clone https://github.com/masa-finance/masa-react.git
 
 yarn 
@@ -31,18 +39,17 @@ First install `masa-react` in your project
 
 Then import and add a provider
 
-```
-
-import { MasaProvider } from "@masa-finance/masa-react";
-
-...
+```typescript jsx
+import {
+  MasaProvider
+} from "@masa-finance/masa-react";
 
 function App() {
   return (
     <MasaProvider>
-        ...
+      ...
     </MasaProvider>
-    );
+  );
 }
 
 ```
@@ -58,68 +65,72 @@ Import `useMasa` to have access to the `masa` object, this will let you connect 
 
 ### Example for useMasa ( Connect users wallet )
 
-```
-import { useMasa } from "@masa-finance/masa-react";
-
-...
+```typescript jsx
+import {
+  useMasa
+} from "@masa-finance/masa-react";
 
 const { connect } = useMasa();
 
 const connectionCallback = () => {
-    history.push('/dashboard');
+  history.push('/dashboard');
 }
 
 const connectionHandler = useCallback(() => {
-    connect(options)
+  connect(options)
 }, [connect, options]);
 
-...
-
-<Button onClick={connectionHandler}>Connect with Masa</Button>
+<Button
+  onClick={connectionHandler}>
+  Connect with Masa
+</Button>
 
 ```
 
 ### Example for masa object ( Wallet is already connected here )
 
-```
-import { useMasa } from "@masa-finance/masa-react";
-
-...
+```typescript jsx
+import {
+  useMasa
+} from "@masa-finance/masa-react";
 
 const { masa } = useMasa();
 
-const askForCreditReports = useCallback(() => {
-    const creditReports = await masa?.creditScore.list();
-    console.log({creditReports})
+const askForCreditReports = useCallback(async () => {
+  const creditReports = await masa?.creditScore.list();
+  console.log({ creditReports })
 }, [masa]);
 
-...
-
-<Button onClick={askForCreditReports}>Show credit reports</Button>
+<Button
+  onClick={askForCreditReports}>
+  Show credit reports
+</Button>
 
 ```
 
 ### For some contracts you will need some pre requisites ( Scopes )
-You can specify which scopes you want, here goes an example of requesting the connected user to have an identity
-```
 
+You can specify which scopes you want, here goes an example of requesting the connected user to have an identity
+
+```typescript jsx
 const options = {
-    scope: ['identity'];
+  scope: ['identity']
 }
 
 const connectionHandler = useCallback(() => {
-    connect(options)
+  connect(options)
 }, [connect, options]);
 
-...
-
-<Button onClick={connectionHandler}>Connect with Masa</Button>
-
+<Button
+  onClick={connectionHandler}>
+  Connect with Masa
+</Button>
 ```
 
 ### Current useMasa shape
 
-```
+```typescript jsx
+interface MasaShape {
   setProvider?: (provider: any) => void;
   provider?: any;
   isModalOpen?: boolean;
@@ -138,4 +149,5 @@ const connectionHandler = useCallback(() => {
   closeModal?: Function;
   scope?: string[];
   company?: string;
+}
 ```
