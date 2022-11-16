@@ -1,22 +1,22 @@
 [# Masa SDK
- - v0.5.2](../README.md) / [Exports](../modules.md) / Create2FAResult
+ - v0.5.2](../README.md) / [Exports](../modules.md) / CreateSoulNameResult
 
-# Interface: Create2FAResult
+# Interface: CreateSoulNameResult
 
 ## Hierarchy
 
 - [`BaseResult`](BaseResult.md)
 
-  ↳ **`Create2FAResult`**
+  ↳ **`CreateSoulNameResult`**
 
 ## Table of contents
 
 ### Properties
 
-- [message](Create2FAResult.md#message)
-- [status](Create2FAResult.md#status)
-- [success](Create2FAResult.md#success)
-- [tokenId](Create2FAResult.md#tokenid)
+- [message](CreateSoulNameResult.md#message)
+- [soulName](CreateSoulNameResult.md#soulname)
+- [success](CreateSoulNameResult.md#success)
+- [tokenId](CreateSoulNameResult.md#tokenid)
 
 ## Properties
 
@@ -30,9 +30,9 @@
 
 ___
 
-### status
+### soulName
 
-• `Optional` **status**: `string`
+• `Optional` **soulName**: `string`
 
 ___
 

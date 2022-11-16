@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.5.1](../README.md) / [Exports](../modules.md) / ICreditScore
+ - v0.5.2](../README.md) / [Exports](../modules.md) / ICreditScore
 
 # Interface: ICreditScore
 
@@ -42,6 +42,7 @@ ___
 | :------ | :------ |
 | `account?` | `string` |
 | `decile?` | `string` |
+| `identityId?` | `string` |
 | `lastUpdated?` | `string` |
 | `model_version?` | `string` |
 | `tokenId` | `string` |

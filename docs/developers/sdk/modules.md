@@ -1,8 +1,8 @@
 [# Masa SDK
- - v0.5.1](README.md) / Exports
+ - v0.5.2](README.md) / Exports
 
 # # Masa SDK
- - v0.5.1
+ - v0.5.2
 
 ## Table of contents
 
@@ -16,8 +16,9 @@
 
 - [Addresses](interfaces/Addresses.md)
 - [Attribute](interfaces/Attribute.md)
+- [BaseResult](interfaces/BaseResult.md)
 - [Create2FAResult](interfaces/Create2FAResult.md)
-- [CreateCreditScoreResult](interfaces/CreateCreditScoreResult.md)
+- [CreateSoulNameResult](interfaces/CreateSoulNameResult.md)
 - [I2FA](interfaces/I2FA.md)
 - [ICreditScore](interfaces/ICreditScore.md)
 - [IIdentity](interfaces/IIdentity.md)
@@ -29,6 +30,7 @@
 
 ### Type Aliases
 
+- [CreateCreditScoreResult](modules.md#createcreditscoreresult)
 - [Environment](modules.md#environment)
 - [PaymentMethod](modules.md#paymentmethod)
 
@@ -44,6 +46,12 @@
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
 
 ## Type Aliases
+
+### CreateCreditScoreResult
+
+Ƭ **CreateCreditScoreResult**: [`BaseResult`](interfaces/BaseResult.md)
+
+___
 
 ### Environment
 

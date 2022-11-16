@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.5.1](../README.md) / [Exports](../modules.md) / I2FA
+ - v0.5.2](../README.md) / [Exports](../modules.md) / I2FA
 
 # Interface: I2FA
 
@@ -41,4 +41,5 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `account?` | `string` |
+| `identityId?` | `string` |
 | `tokenId` | `string` |

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.5.1](../README.md) / [Exports](../modules.md) / Masa
+ - v0.5.2](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -83,7 +83,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `burn` | (`creditReportId`: `number`) => `Promise`<`boolean`\> |
-| `create` | () => `Promise`<[`CreateCreditScoreResult`](../interfaces/CreateCreditScoreResult.md)\> |
+| `create` | () => `Promise`<[`BaseResult`](../interfaces/BaseResult.md)\> |
 | `list` | (`address?`: `string`) => `Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `mint` | (`address`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
@@ -144,7 +144,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `burn` | (`soulName`: `string`) => `Promise`<`void`\> |
-| `create` | (`soulName`: `string`, `duration`: `number`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `Promise`<`void`\> |
+| `create` | (`soulName`: `string`, `duration`: `number`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `Promise`<[`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\> |
 | `getRegistrationPrice` | (`soulName`: `string`, `duration`: `number`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `Promise`<`string` \| `BigNumber`\> |
 | `list` | (`address?`: `string`) => `Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }[]\> |
 | `loadSoulNameByName` | (`soulName`: `string`) => `Promise`<{ `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }\> |
