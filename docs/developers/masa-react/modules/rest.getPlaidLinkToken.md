@@ -1,5 +1,5 @@
 [# Masa React
- - v0.15.8](../README.md) / [Exports](../modules.md) / [rest](rest.md) / getPlaidLinkToken
+ - v0.15.9](../README.md) / [Exports](../modules.md) / [rest](rest.md) / getPlaidLinkToken
 
 # Namespace: getPlaidLinkToken
 
