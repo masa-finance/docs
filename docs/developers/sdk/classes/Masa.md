@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.5.0](../README.md) / [Exports](../modules.md) / Masa
+ - v0.5.1](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -84,8 +84,8 @@ ___
 | :------ | :------ |
 | `burn` | (`creditReportId`: `number`) => `Promise`<`boolean`\> |
 | `create` | () => `Promise`<[`CreateCreditScoreResult`](../interfaces/CreateCreditScoreResult.md)\> |
-| `list` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
-| `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
+| `list` | (`address?`: `string`) => `Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
+| `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `mint` | (`address`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
 
 ___
@@ -161,11 +161,11 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `burn` | (`twofaId`: `number`) => `Promise`<`boolean`\> |
+| `burn` | (`twoFAId`: `number`) => `Promise`<`boolean`\> |
 | `create` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<[`Create2FAResult`](../interfaces/Create2FAResult.md)\> |
 | `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\> |
-| `list` | (`address?`: `string`) => `Promise`<{ `metadata`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
-| `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
+| `list` | (`address?`: `string`) => `Promise`<{ `metadata?`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
+| `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata?`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `mint` | (`address`: `string`, `phoneNumber`: `string`, `code`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
 
 ___
