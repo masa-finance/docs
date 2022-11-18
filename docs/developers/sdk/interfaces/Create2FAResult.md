@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.5.2](../README.md) / [Exports](../modules.md) / Create2FAResult
+ - v0.5.3](../README.md) / [Exports](../modules.md) / Create2FAResult
 
 # Interface: Create2FAResult
 

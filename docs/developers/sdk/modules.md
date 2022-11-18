@@ -1,8 +1,8 @@
 [# Masa SDK
- - v0.5.2](README.md) / Exports
+ - v0.5.3](README.md) / Exports
 
 # # Masa SDK
- - v0.5.2
+ - v0.5.3
 
 ## Table of contents
 
@@ -23,6 +23,7 @@
 - [ICreditScore](interfaces/ICreditScore.md)
 - [IIdentity](interfaces/IIdentity.md)
 - [IIdentityContracts](interfaces/IIdentityContracts.md)
+- [ISession](interfaces/ISession.md)
 - [ISoulName](interfaces/ISoulName.md)
 - [LoadContractArgs](interfaces/LoadContractArgs.md)
 - [MasaArgs](interfaces/MasaArgs.md)

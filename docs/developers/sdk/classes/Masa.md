@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.5.2](../README.md) / [Exports](../modules.md) / Masa
+ - v0.5.3](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -128,7 +128,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `checkLogin` | () => `Promise`<`boolean`\> |
-| `getSession` | () => `Promise`<`any`\> |
+| `getSession` | () => `Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\> |
 | `login` | () => `Promise`<`undefined` \| { `address`: `string` ; `cookie`: `string` ; `userId`: `string` \| `BigNumber`  }\> |
 | `logout` | () => `Promise`<`undefined` \| { `status`: `string`  }\> |
 | `sessionLogout` | () => `Promise`<`undefined` \| { `status`: `string`  }\> |
