@@ -27,6 +27,8 @@ const config = {
     locales: ["en"],
   },
 
+  plugins: ["docusaurus-node-polyfills"],
+
   presets: [
     [
       "classic",
