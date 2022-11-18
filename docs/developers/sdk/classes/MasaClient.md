@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.5.2](../README.md) / [Exports](../modules.md) / MasaClient
+ - v0.5.3](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -117,11 +117,11 @@ ___
 
 ### sessionCheck
 
-▸ **sessionCheck**(): `Promise`<`any`\>
+▸ **sessionCheck**(): `Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\>
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\>
 
 ___
 
