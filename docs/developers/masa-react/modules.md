@@ -1,8 +1,8 @@
 [# Masa React
- - v0.16.3](README.md) / Exports
+ - v0.16.6](README.md) / Exports
 
 # # Masa React
- - v0.16.3
+ - v0.16.6
 
 ## Table of contents
 
@@ -57,7 +57,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `any` |
+| `__namedParameters` | `MasaContextProviderProps` |
 
 #### Returns
 
