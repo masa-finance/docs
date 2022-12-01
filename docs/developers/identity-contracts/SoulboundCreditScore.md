@@ -1,12 +1,12 @@
-# SoulboundCreditReport
+# SoulboundCreditScore
 
 *Masa Finance*
 
-> Soulbound Credit Report
+> Soulbound Credit Score
 
-Soulbound token that represents a credit report.
+Soulbound token that represents a credit score.
 
-*Soulbound credit report, that inherits from the SBT contract.*
+*Soulbound credit score, that inherits from the SBT contract.*
 
 ## Methods
 
