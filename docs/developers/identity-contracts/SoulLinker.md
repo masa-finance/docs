@@ -675,7 +675,7 @@ Validates the permission of the given read link request and returns the data tha
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | string | `true` if the signature is valid, `false` otherwise |
+| _0 | string | Data that the reader can read |
 
 ### wrappedNativeToken
 
