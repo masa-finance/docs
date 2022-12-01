@@ -158,13 +158,13 @@ Mints a new SBT
 
 | Name | Type | Description |
 |---|---|---|
-| to | address | The address to mint the NFT to |
+| to | address | The address to mint the SBT to |
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256 | The NFT ID of the newly minted NFT |
+| _0 | uint256 | The SBT ID of the newly minted SBT |
 
 ### name
 
@@ -359,19 +359,19 @@ function tokenURI(uint256 tokenId) external view returns (string)
 
 A distinct Uniform Resource Identifier (URI) for a given asset.
 
-*Throws if `_tokenId` is not a valid NFT. URIs are defined in RFC  3986. The URI may point to a JSON file that conforms to the &quot;ERC721  Metadata JSON Schema&quot;.*
+*Throws if `_tokenId` is not a valid SBT. URIs are defined in RFC  3986. The URI may point to a JSON file that conforms to the &quot;ERC721  Metadata JSON Schema&quot;.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| tokenId | uint256 | NFT to get the URI of |
+| tokenId | uint256 | SBT to get the URI of |
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | string | URI of the NFT |
+| _0 | string | URI of the SBT |
 
 ### totalSupply
 
