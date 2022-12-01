@@ -1,12 +1,12 @@
-# SoulboundCreditReport
+# MasaSBTChild
 
 *Masa Finance*
 
-> Soulbound Credit Report
+> MasaSBTChild
 
-Soulbound token that represents a credit report.
+Soulbound token. Non-fungible token that is not transferable. Adds a link to a SoulboundIdentity SC to let minting using the identityId
 
-*Soulbound credit report, that inherits from the SBT contract.*
+*Implementation of https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763 Soulbound token.*
 
 ## Methods
 
@@ -81,6 +81,28 @@ function burn(uint256 tokenId) external nonpayable
 | Name | Type | Description |
 |---|---|---|
 | tokenId | uint256 | undefined |
+
+### getIdentityId
+
+```solidity
+function getIdentityId(uint256 tokenId) external view returns (uint256)
+```
+
+Returns the identityId owned by the given token
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId | uint256 | Id of the token |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | Id of the identity |
 
 ### getRoleAdmin
 
@@ -158,13 +180,35 @@ Mints a new SBT
 
 | Name | Type | Description |
 |---|---|---|
-| to | address | The address to mint the NFT to |
+| to | address | The address to mint the SBT to |
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256 | The NFT ID of the newly minted NFT |
+| _0 | uint256 | The SBT ID of the newly minted SBT |
+
+### mint
+
+```solidity
+function mint(uint256 identityId) external nonpayable returns (uint256)
+```
+
+Mints a new SBT
+
+*The caller must have the MINTER role*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| identityId | uint256 | TokenId of the identity to mint the NFT to |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | The NFT ID of the newly minted SBT |
 
 ### name
 
@@ -267,6 +311,39 @@ function revokeRole(bytes32 role, address account) external nonpayable
 | role | bytes32 | undefined |
 | account | address | undefined |
 
+### setSoulboundIdentity
+
+```solidity
+function setSoulboundIdentity(contract ISoulboundIdentity _soulboundIdentity) external nonpayable
+```
+
+Sets the SoulboundIdentity contract address linked to this SBT
+
+*The caller must be the owner to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _soulboundIdentity | contract ISoulboundIdentity | Address of the SoulboundIdentity contract |
+
+### soulboundIdentity
+
+```solidity
+function soulboundIdentity() external view returns (contract ISoulboundIdentity)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | contract ISoulboundIdentity | undefined |
+
 ### supportsInterface
 
 ```solidity
@@ -359,19 +436,19 @@ function tokenURI(uint256 tokenId) external view returns (string)
 
 A distinct Uniform Resource Identifier (URI) for a given asset.
 
-*Throws if `_tokenId` is not a valid NFT. URIs are defined in RFC  3986. The URI may point to a JSON file that conforms to the &quot;ERC721  Metadata JSON Schema&quot;.*
+*Throws if `_tokenId` is not a valid SBT. URIs are defined in RFC  3986. The URI may point to a JSON file that conforms to the &quot;ERC721  Metadata JSON Schema&quot;.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| tokenId | uint256 | NFT to get the URI of |
+| tokenId | uint256 | SBT to get the URI of |
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | string | URI of the NFT |
+| _0 | string | URI of the SBT |
 
 ### totalSupply
 

@@ -164,7 +164,7 @@ Mints a new Soulbound Identity and Name purchasing it
 ### purchaseName
 
 ```solidity
-function purchaseName(address paymentMethod, string name, uint256 yearsPeriod, string _tokenURI) external payable returns (uint256)
+function purchaseName(address paymentMethod, string name, uint256 yearsPeriod, string _tokenURI, address to) external payable returns (uint256)
 ```
 
 Mints a new Soul Name purchasing it
@@ -179,6 +179,7 @@ Mints a new Soul Name purchasing it
 | name | string | Name of the new soul name |
 | yearsPeriod | uint256 | Years of validity of the name |
 | _tokenURI | string | URI of the NFT |
+| to | address | Address of the new owner of the soul name |
 
 #### Returns
 

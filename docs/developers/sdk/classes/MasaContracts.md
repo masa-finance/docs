@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.5.3](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v0.5.4](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -107,13 +107,13 @@ ___
 
 ### isAvailable
 
-▸ **isAvailable**(`name`): `Promise`<`boolean`\>
+▸ **isAvailable**(`soulName`): `Promise`<`boolean`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `name` | `string` |
+| `soulName` | `string` |
 
 #### Returns
 

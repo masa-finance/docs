@@ -74,7 +74,7 @@ function getSoulNames(address owner) external view returns (string[] sbtNames)
 ### getTokenData
 
 ```solidity
-function getTokenData(string name) external view returns (string sbtName, uint256 identityId, uint256 tokenId, uint256 expirationDate, bool active)
+function getTokenData(string name) external view returns (string sbtName, bool linked, uint256 identityId, uint256 tokenId, uint256 expirationDate, bool active)
 ```
 
 
@@ -92,6 +92,7 @@ function getTokenData(string name) external view returns (string sbtName, uint25
 | Name | Type | Description |
 |---|---|---|
 | sbtName | string | undefined |
+| linked | bool | undefined |
 | identityId | uint256 | undefined |
 | tokenId | uint256 | undefined |
 | expirationDate | uint256 | undefined |
@@ -144,7 +145,7 @@ function isAvailable(string name) external view returns (bool available)
 ### mint
 
 ```solidity
-function mint(address to, string name, uint256 identityId, uint256 yearsPeriod, string _tokenURI) external nonpayable returns (uint256)
+function mint(address to, string name, uint256 yearsPeriod, string _tokenURI) external nonpayable returns (uint256)
 ```
 
 
@@ -157,7 +158,6 @@ function mint(address to, string name, uint256 identityId, uint256 yearsPeriod, 
 |---|---|---|
 | to | address | undefined |
 | name | string | undefined |
-| identityId | uint256 | undefined |
 | yearsPeriod | uint256 | undefined |
 | _tokenURI | string | undefined |
 
