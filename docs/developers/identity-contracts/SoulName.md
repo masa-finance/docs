@@ -241,7 +241,7 @@ Returns all the active soul names of an account
 ### getTokenData
 
 ```solidity
-function getTokenData(string name) external view returns (string sbtName, uint256 identityId, uint256 tokenId, uint256 expirationDate, bool active)
+function getTokenData(string name) external view returns (string sbtName, bool linked, uint256 identityId, uint256 tokenId, uint256 expirationDate, bool active)
 ```
 
 Returns the information of a soul name
@@ -259,6 +259,7 @@ Returns the information of a soul name
 | Name | Type | Description |
 |---|---|---|
 | sbtName | string | Soul name, in upper/lower case and extension |
+| linked | bool | `true` if the soul name is linked, `false` otherwise |
 | identityId | uint256 | Identity id of the soul name |
 | tokenId | uint256 | SoulName id of the soul name |
 | expirationDate | uint256 | Expiration date of the soul name |
@@ -374,7 +375,7 @@ Checks if a soul name is available
 ### mint
 
 ```solidity
-function mint(address to, string name, uint256 identityId, uint256 yearsPeriod, string _tokenURI) external nonpayable returns (uint256)
+function mint(address to, string name, uint256 yearsPeriod, string _tokenURI) external nonpayable returns (uint256)
 ```
 
 Mints a new soul name
@@ -387,7 +388,6 @@ Mints a new soul name
 |---|---|---|
 | to | address | Address of the owner of the new soul name |
 | name | string | Name of the new soul name |
-| identityId | uint256 | TokenId of the soulbound identity that will be pointed from this soul name |
 | yearsPeriod | uint256 | Years of validity of the name |
 | _tokenURI | string | URI of the NFT |
 
@@ -721,7 +721,7 @@ function tokenByIndex(uint256 index) external view returns (uint256)
 ### tokenData
 
 ```solidity
-function tokenData(uint256) external view returns (string name, uint256 identityId, uint256 expirationDate)
+function tokenData(uint256) external view returns (string name, uint256 expirationDate)
 ```
 
 
@@ -739,7 +739,6 @@ function tokenData(uint256) external view returns (string name, uint256 identity
 | Name | Type | Description |
 |---|---|---|
 | name | string | undefined |
-| identityId | uint256 | undefined |
 | expirationDate | uint256 | undefined |
 
 ### tokenOfOwnerByIndex
@@ -860,23 +859,6 @@ function transferOwnership(address newOwner) external nonpayable
 |---|---|---|
 | newOwner | address | undefined |
 
-### updateIdentityId
-
-```solidity
-function updateIdentityId(uint256 tokenId, uint256 identityId) external nonpayable
-```
-
-Update the identity id pointed from a soul name
-
-*The caller must be the owner or an approved address of the soul name.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| tokenId | uint256 | TokenId of the soul name |
-| identityId | uint256 | New TokenId of the soulbound identity that will be pointed from this soul name |
-
 
 
 ## Events
@@ -916,24 +898,6 @@ event ApprovalForAll(address indexed owner, address indexed operator, bool appro
 | owner `indexed` | address | undefined |
 | operator `indexed` | address | undefined |
 | approved  | bool | undefined |
-
-### IdentityIdUpdated
-
-```solidity
-event IdentityIdUpdated(uint256 tokenId, uint256 oldIdentityId, uint256 identityId)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| tokenId  | uint256 | undefined |
-| oldIdentityId  | uint256 | undefined |
-| identityId  | uint256 | undefined |
 
 ### OwnershipTransferred
 
