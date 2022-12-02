@@ -10,34 +10,26 @@ Soul Store, that can mint new Soulbound Identities and Soul Name NFTs, paying a 
 
 ## Methods
 
-### _getSwapAmounts
+### addErc20Token
 
 ```solidity
-function _getSwapAmounts(uint256 mintingPrice) external view returns (uint256 priceInStableCoin, uint256 priceInETH, uint256 priceInUtilityToken)
+function addErc20Token(address _erc20token) external nonpayable
 ```
 
-Returns the price of minting
+Adds a new ERC20 token as a valid payment method
 
-*Returns all current pricing and amount informations for a purchase*
+*The caller must have the owner to call this function*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| mintingPrice | uint256 | undefined |
+| _erc20token | address | New ERC20 token to add |
 
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| priceInStableCoin | uint256 | Current price in stable coin |
-| priceInETH | uint256 | Current pric in native token (ETH) |
-| priceInUtilityToken | uint256 | Current price in utility token ($MASA) |
-
-### estimateSwapAmount
+### erc20token
 
 ```solidity
-function estimateSwapAmount(address _fromToken, address _toToken, uint256 _amountOut) external view returns (uint256)
+function erc20token(address) external view returns (bool)
 ```
 
 
@@ -48,15 +40,35 @@ function estimateSwapAmount(address _fromToken, address _toToken, uint256 _amoun
 
 | Name | Type | Description |
 |---|---|---|
-| _fromToken | address | undefined |
-| _toToken | address | undefined |
-| _amountOut | uint256 | undefined |
+| _0 | address | undefined |
 
 #### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
+### erc20tokens
+
+```solidity
+function erc20tokens(uint256) external view returns (address)
+```
+
+
+
+
+
+#### Parameters
 
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
 
 ### getNameRegistrationPricePerYear
 
@@ -79,6 +91,50 @@ Returns the price of register a name per year in stable coin for an specific len
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | Price in stable coin for that name length |
+
+### getPaymentMethods
+
+```solidity
+function getPaymentMethods() external view returns (address _nativeToken, address _stableCoin, address _utilityToken, address[] _erc20tokens)
+```
+
+Returns all available payment methods
+
+*Returns the address of all available payment methods*
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _nativeToken | address | Address of the native token (ETH) |
+| _stableCoin | address | Address of the stable coin (USDC) |
+| _utilityToken | address | Address of the utility token ($MASA) |
+| _erc20tokens | address[] | Array of all ERC20 tokens |
+
+### getPriceForMintingName
+
+```solidity
+function getPriceForMintingName(address paymentMethod, string name, uint256 yearsPeriod) external view returns (uint256)
+```
+
+Returns the price of the name minting
+
+*Returns current pricing for name minting for a given name length and years period*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
+| name | string | Name of the new soul name |
+| yearsPeriod | uint256 | Years of validity of the name |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | Current price of the name minting in the given payment method |
 
 ### nameRegistrationPricePerYear
 
@@ -187,30 +243,21 @@ Mints a new Soul Name purchasing it
 |---|---|---|
 | _0 | uint256 | TokenId of the new sou name |
 
-### purchaseNameInfo
+### removeErc20Token
 
 ```solidity
-function purchaseNameInfo(string name, uint256 yearsPeriod) external view returns (uint256 priceInStableCoin, uint256 priceInETH, uint256 priceInUtilityToken)
+function removeErc20Token(address _erc20token) external nonpayable
 ```
 
-Returns the price of the name minting
+Removes an ERC20 token as a valid payment method
 
-*Returns all current pricing and amount informations for a purchase*
+*The caller must have the owner to call this function*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| name | string | Name of the new soul name |
-| yearsPeriod | uint256 | Years of validity of the name |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| priceInStableCoin | uint256 | Current price of the name minting in stable coin |
-| priceInETH | uint256 | Current price of the name minting in native token (ETH) |
-| priceInUtilityToken | uint256 | Current price of the name minting in utility token ($MASA) |
+| _erc20token | address | ERC20 token to remove |
 
 ### renounceOwnership
 
