@@ -5,7 +5,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import { MasaProvider } from "@masa-finance/masa-react";
-import MasaLogin from "@site/src/components/masa-login/masa-login";
+import MasaLogin from "../components/masa-login/masa-login";
 
 function HomepageHeader() {
   return (
