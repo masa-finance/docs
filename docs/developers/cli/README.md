@@ -82,6 +82,7 @@ Commands:
   soul-name burn <soulname>               Burns soul name that you own
   soul-name send <soulname> <receiver>    Sends a soul name to that you own to a receiver
   soul-name show <soulname>               Shows info about a Soul Name
+  soul-name verify <soulname>             Verifies a Soul Name
   credit-score                            Credit Score Commands
   credit-score info                       Shows info about all Credit Scores
   credit-score list [options]             Lists your Credit Scores
