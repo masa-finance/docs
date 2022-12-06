@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.5.4](../README.md) / [Exports](../modules.md) / MasaClient
+ - v0.6.0](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -11,8 +11,12 @@
 
 ### Properties
 
+- [\_cookie](MasaClient.md#_cookie)
+- [\_middlewareClient](MasaClient.md#_middlewareclient)
+
+### Accessors
+
 - [cookie](MasaClient.md#cookie)
-- [middlewareClient](MasaClient.md#middlewareclient)
 
 ### Methods
 
@@ -42,15 +46,25 @@
 
 ## Properties
 
-### cookie
+### \_cookie
 
-• `Optional` **cookie**: `string`
+• `Private` `Optional` **\_cookie**: `string`
 
 ___
 
-### middlewareClient
+### \_middlewareClient
 
-• `Private` **middlewareClient**: `AxiosInstance`
+• `Private` **\_middlewareClient**: `AxiosInstance`
+
+## Accessors
+
+### cookie
+
+• `get` **cookie**(): `undefined` \| `string`
+
+#### Returns
+
+`undefined` \| `string`
 
 ## Methods
 

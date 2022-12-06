@@ -1,8 +1,8 @@
 [# Masa SDK
- - v0.5.4](README.md) / Exports
+ - v0.6.0](README.md) / Exports
 
 # # Masa SDK
- - v0.5.4
+ - v0.6.0
 
 ## Table of contents
 
@@ -45,6 +45,8 @@
 
 - [arweave](modules.md#arweave)
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
+- [recoverAddress](modules.md#recoveraddress)
+- [signMessage](modules.md#signmessage)
 
 ## Type Aliases
 
@@ -125,3 +127,39 @@ ___
 #### Returns
 
 [`IIdentityContracts`](interfaces/IIdentityContracts.md)
+
+___
+
+### recoverAddress
+
+▸ **recoverAddress**(`msg`, `signature`, `doHash?`): `undefined` \| `string`
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `msg` | `any` | `undefined` |
+| `signature` | `string` | `undefined` |
+| `doHash` | `boolean` | `false` |
+
+#### Returns
+
+`undefined` \| `string`
+
+___
+
+### signMessage
+
+▸ **signMessage**(`msg`, `wallet`, `doHash?`): `Promise`<`undefined` \| `string`\>
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `msg` | `any` | `undefined` |
+| `wallet` | `Signer` \| `Wallet` | `undefined` |
+| `doHash` | `boolean` | `false` |
+
+#### Returns
+
+`Promise`<`undefined` \| `string`\>
