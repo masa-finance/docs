@@ -7,45 +7,44 @@
 ---
 
 <!-- TOC -->
-
 * [Masa CLI](#masa-cli)
-    * [Overview](#overview)
-    * [Usage / Installation](#usage--installation)
-        * [npm](#npm)
-        * [yarn](#yarn)
-        * [npx](#npx)
-    * [Commands](#commands)
-        * [`masa login`](#masa-login)
-        * [`masa logout`](#masa-logout)
-        * [`masa account`](#masa-account)
-        * [`masa identity`](#masa-identity)
-            * [`masa identity info`](#masa-identity-info)
-            * [`masa identity create <soulname> <duration>`](#masa-identity-create-soulname-duration)
-            * [`masa identity register`](#masa-identity-register)
-            * [`masa identity show`](#masa-identity-show)
-            * [`masa identity burn`](#masa-identity-burn)
-        * [`masa soul-name`](#masa-soul-name)
-            * [`masa soul-name info`](#masa-soul-name-info)
-            * [`masa soul-name list`](#masa-soul-name-list)
-            * [`masa soul-name create <soulname> <duration>`](#masa-soul-name-create-soulname-duration)
-            * [`masa soul-name burn <soulname>`](#masa-soul-name-burn-soulname)
-            * [`masa soul-name send <soulname> <receiver>`](#masa-soul-name-send-soulname-receiver)
-            * [`masa soul-name show <soulname>`](#masa-soul-name-show-soulname)
-        * [`masa credit-score`](#masa-credit-score)
-            * [`masa credit-score info`](#masa-credit-score-info)
-            * [`masa credit-score list`](#masa-credit-score-list)
-            * [`masa credit-score create`](#masa-credit-score-create)
-            * [`masa credit-score burn <credit-score-id>`](#masa-credit-score-burn-credit-score-id)
-        * [`masa 2fa`](#masa-2fa)
-            * [`masa 2fa info`](#masa-2fa-info)
-            * [`masa 2fa list`](#masa-2fa-list)
-            * [`masa 2fa create <phone-number>`](#masa-2fa-create-phone-number)
-            * [`masa 2fa burn <2fa-id>`](#masa-2fa-burn-2fa-id)
-        * [`masa settings`](#masa-settings)
-            * [`masa settings set <key> <value>`](#masa-settings-set-key-value)
-            * [`masa settings preset <environment>`](#masa-settings-preset-environment)
-    * [Configuration](#configuration)
-
+  * [Overview](#overview)
+  * [Usage / Installation](#usage--installation)
+    * [npm](#npm)
+    * [yarn](#yarn)
+    * [npx](#npx)
+  * [Commands](#commands)
+    * [`masa login`](#masa-login)
+    * [`masa logout`](#masa-logout)
+    * [`masa account`](#masa-account)
+    * [`masa identity`](#masa-identity)
+      * [`masa identity info`](#masa-identity-info)
+      * [`masa identity create <soulname> <duration>`](#masa-identity-create-soulname-duration)
+      * [`masa identity register`](#masa-identity-register)
+      * [`masa identity show`](#masa-identity-show)
+      * [`masa identity burn`](#masa-identity-burn)
+    * [`masa soul-name`](#masa-soul-name)
+      * [`masa soul-name info`](#masa-soul-name-info)
+      * [`masa soul-name list`](#masa-soul-name-list)
+      * [`masa soul-name create <soulname> <duration>`](#masa-soul-name-create-soulname-duration)
+      * [`masa soul-name burn <soulname>`](#masa-soul-name-burn-soulname)
+      * [`masa soul-name send <soulname> <receiver>`](#masa-soul-name-send-soulname-receiver)
+      * [`masa soul-name show <soulname>`](#masa-soul-name-show-soulname)
+      * [`masa soul-name verify <soulname>`](#masa-soul-name-verify-soulname)
+    * [`masa credit-score`](#masa-credit-score)
+      * [`masa credit-score info`](#masa-credit-score-info)
+      * [`masa credit-score list`](#masa-credit-score-list)
+      * [`masa credit-score create`](#masa-credit-score-create)
+      * [`masa credit-score burn <credit-score-id>`](#masa-credit-score-burn-credit-score-id)
+    * [`masa 2fa`](#masa-2fa)
+      * [`masa 2fa info`](#masa-2fa-info)
+      * [`masa 2fa list`](#masa-2fa-list)
+      * [`masa 2fa create <phone-number>`](#masa-2fa-create-phone-number)
+      * [`masa 2fa burn <2fa-id>`](#masa-2fa-burn-2fa-id)
+    * [`masa settings`](#masa-settings)
+      * [`masa settings set <key> <value>`](#masa-settings-set-key-value)
+      * [`masa settings preset <environment>`](#masa-settings-preset-environment)
+  * [Configuration](#configuration)
 <!-- TOC -->
 
 ## Overview
@@ -233,7 +232,13 @@ Sends a soul name to that you own to a receiver
 
 Shows info about a Soul Name
 
-- `<soulname> Soul Name to send`
+- `<soulname> Soul Name to show`
+
+#### `masa soul-name verify <soulname>`
+
+Verifies a Soul Name
+
+- `<soulname> Soul Name to verify`
 
 ### `masa credit-score`
 
@@ -316,15 +321,15 @@ All the below fields can be set with:
 $ masa settings set <key> <value>
 ```
 
-| Key                | Type      | Description                                                                           | Default Value                             |
-|--------------------|-----------|---------------------------------------------------------------------------------------|-------------------------------------------|
-| cookie             | `string`  | Stores cookie value. Don't set this manually unless you know what you do!             |                                           |
-| api-url            | `string`  | The API Endpoint of the Masa Infrastructure for `dev`, `test`, `beta` and production. | "https://dev.middleware.masa.finance/"    | 
-| environment        | `string`  | The environment to use `dev`, `test`, `beta`, `production`.                           | "dev"                                     |
-| rpc-url            | `string`  | The RPC Endpoint to reach the Blockchain.                                             | "https://rpc.ankr.com/eth_goerli"         |
-| network            | `string`  | The network name ie. "goerli".                                                        | "goerli"                                  |
-| private-key        | `string`  | Your private key of the account to use in the cli.                                    | `ethers.Wallet.createRandom().privateKey` |
-| arweave-host       | `string`  | The arweave host to use for loading metadata.                                         | "arweave.net"                             |
-| arweave-port       | `number`  | The arweave port to use for loading metadata.                                         | 443                                       |
-| arweave-protocol   | `string`  | The arweave protocol to use for loading metadata.                                     | "https"                                   |
-| arweave-logging    | `boolean` | Turn arweave logging on or off.                                                       | false                                     |
+| Key              | Type      | Description                                                                           | Default Value                             |
+|------------------|-----------|---------------------------------------------------------------------------------------|-------------------------------------------|
+| cookie           | `string`  | Stores cookie value. Don't set this manually unless you know what you do!             |                                           |
+| api-url          | `string`  | The API Endpoint of the Masa Infrastructure for `dev`, `test`, `beta` and production. | "https://dev.middleware.masa.finance/"    | 
+| environment      | `string`  | The environment to use `dev`, `test`, `beta`, `production`.                           | "dev"                                     |
+| rpc-url          | `string`  | The RPC Endpoint to reach the Blockchain.                                             | "https://rpc.ankr.com/eth_goerli"         |
+| network          | `string`  | The network name ie. "goerli".                                                        | "goerli"                                  |
+| private-key      | `string`  | Your private key of the account to use in the cli.                                    | `ethers.Wallet.createRandom().privateKey` |
+| arweave-host     | `string`  | The arweave host to use for loading metadata.                                         | "arweave.net"                             |
+| arweave-port     | `number`  | The arweave port to use for loading metadata.                                         | 443                                       |
+| arweave-protocol | `string`  | The arweave protocol to use for loading metadata.                                     | "https"                                   |
+| arweave-logging  | `boolean` | Turn arweave logging on or off.                                                       | false                                     |
