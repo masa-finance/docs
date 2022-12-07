@@ -1,8 +1,8 @@
 [# Masa SDK
- - v0.6.1](README.md) / Exports
+ - v0.6.4](README.md) / Exports
 
 # # Masa SDK
- - v0.6.1
+ - v0.6.4
 
 ## Table of contents
 
@@ -76,7 +76,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `creditScoreTemplate` | (`identityId`: `string`, `address`: `string`) => `string` |
+| `creditScoreTemplate` | (`value`: `string`, `lastUpdated`: `string`, `wallet`: `string`) => `string` |
 | `loginTemplate` | (`challenge`: `string`, `expires`: `string`) => `string` |
 | `twoFATemplate` | (`identityId`: `string`, `phoneNumber`: `string`, `code`: `string`) => `string` |
 
