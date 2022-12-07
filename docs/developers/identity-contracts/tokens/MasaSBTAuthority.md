@@ -1,10 +1,10 @@
-# MasaSBTChild
+# MasaSBTAuthority
 
 *Masa Finance*
 
-> MasaSBTChild
+> MasaSBT
 
-Soulbound token. Non-fungible token that is not transferable. Adds a link to a SoulboundIdentity SC to let minting using the identityId
+Soulbound token. Non-fungible token that is not transferable.
 
 *Implementation of https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763 Soulbound token.*
 
@@ -82,28 +82,6 @@ function burn(uint256 tokenId) external nonpayable
 |---|---|---|
 | tokenId | uint256 | undefined |
 
-### getIdentityId
-
-```solidity
-function getIdentityId(uint256 tokenId) external view returns (uint256)
-```
-
-Returns the identityId owned by the given token
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| tokenId | uint256 | Id of the token |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | Id of the identity |
-
 ### getRoleAdmin
 
 ```solidity
@@ -166,50 +144,6 @@ function hasRole(bytes32 role, address account) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
-### mint
-
-```solidity
-function mint(address to) external nonpayable returns (uint256)
-```
-
-Mints a new SBT
-
-*The caller must have the MINTER role*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| to | address | The address to mint the SBT to |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | The SBT ID of the newly minted SBT |
-
-### mint
-
-```solidity
-function mint(uint256 identityId) external nonpayable returns (uint256)
-```
-
-Mints a new SBT
-
-*The caller must have the MINTER role*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| identityId | uint256 | TokenId of the identity to mint the NFT to |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | The NFT ID of the newly minted SBT |
-
 ### name
 
 ```solidity
@@ -226,23 +160,6 @@ function name() external view returns (string)
 | Name | Type | Description |
 |---|---|---|
 | _0 | string | undefined |
-
-### owner
-
-```solidity
-function owner() external view returns (address)
-```
-
-
-
-*Returns the address of the current owner.*
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
 
 ### ownerOf
 
@@ -265,17 +182,6 @@ function ownerOf(uint256 tokenId) external view returns (address)
 | Name | Type | Description |
 |---|---|---|
 | _0 | address | undefined |
-
-### renounceOwnership
-
-```solidity
-function renounceOwnership() external nonpayable
-```
-
-
-
-*Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.*
-
 
 ### renounceRole
 
@@ -310,39 +216,6 @@ function revokeRole(bytes32 role, address account) external nonpayable
 |---|---|---|
 | role | bytes32 | undefined |
 | account | address | undefined |
-
-### setSoulboundIdentity
-
-```solidity
-function setSoulboundIdentity(contract ISoulboundIdentity _soulboundIdentity) external nonpayable
-```
-
-Sets the SoulboundIdentity contract address linked to this SBT
-
-*The caller must be the owner to call this function*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _soulboundIdentity | contract ISoulboundIdentity | Address of the SoulboundIdentity contract |
-
-### soulboundIdentity
-
-```solidity
-function soulboundIdentity() external view returns (contract ISoulboundIdentity)
-```
-
-
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | contract ISoulboundIdentity | undefined |
 
 ### supportsInterface
 
@@ -467,22 +340,6 @@ function totalSupply() external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
-### transferOwnership
-
-```solidity
-function transferOwnership(address newOwner) external nonpayable
-```
-
-
-
-*Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| newOwner | address | undefined |
-
 
 
 ## Events
@@ -520,23 +377,6 @@ event Mint(address indexed _owner, uint256 indexed _tokenId)
 |---|---|---|
 | _owner `indexed` | address | undefined |
 | _tokenId `indexed` | uint256 | undefined |
-
-### OwnershipTransferred
-
-```solidity
-event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| previousOwner `indexed` | address | undefined |
-| newOwner `indexed` | address | undefined |
 
 ### RoleAdminChanged
 

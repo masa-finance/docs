@@ -27,22 +27,59 @@ function DEFAULT_ADMIN_ROLE() external view returns (bytes32)
 |---|---|---|
 | _0 | bytes32 | undefined |
 
-### MINTER_ROLE
+### addAuthority
 
 ```solidity
-function MINTER_ROLE() external view returns (bytes32)
+function addAuthority(address _authority) external nonpayable
+```
+
+Adds a new authority to the list of authorities
+
+*The caller must have the admin to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _authority | address | New authority to add |
+
+### addErc20Token
+
+```solidity
+function addErc20Token(address _erc20token) external nonpayable
+```
+
+Adds a new ERC20 token as a valid payment method
+
+*The caller must have the owner to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _erc20token | address | New ERC20 token to add |
+
+### authorities
+
+```solidity
+function authorities(address) external view returns (bool)
 ```
 
 
 
 
 
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | bytes32 | undefined |
+| _0 | bool | undefined |
 
 ### balanceOf
 
@@ -82,6 +119,67 @@ function burn(uint256 tokenId) external nonpayable
 |---|---|---|
 | tokenId | uint256 | undefined |
 
+### erc20token
+
+```solidity
+function erc20token(address) external view returns (bool)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
+### erc20tokens
+
+```solidity
+function erc20tokens(uint256) external view returns (address)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
+### getErc20Tokens
+
+```solidity
+function getErc20Tokens() external view returns (address[])
+```
+
+Returns all available ERC 20 tokens
+
+*Returns the address of all available ERC 20 tokens*
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address[] | Array of all enabled ERC20 tokens |
+
 ### getIdentityId
 
 ```solidity
@@ -103,6 +201,28 @@ Returns the identityId owned by the given token
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | Id of the identity |
+
+### getMintingPrice
+
+```solidity
+function getMintingPrice(address paymentMethod) external view returns (uint256)
+```
+
+Returns the price for minting
+
+*Returns current pricing for minting*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | Current price for minting in the given payment method |
 
 ### getRoleAdmin
 
@@ -166,10 +286,27 @@ function hasRole(bytes32 role, address account) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
+### masaToken
+
+```solidity
+function masaToken() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
 ### mint
 
 ```solidity
-function mint(address to) external nonpayable returns (uint256)
+function mint(address paymentMethod, uint256 identityId, address authorityAddress, uint256 signatureDate, bytes signature) external payable returns (uint256)
 ```
 
 Mints a new SBT
@@ -180,7 +317,37 @@ Mints a new SBT
 
 | Name | Type | Description |
 |---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
+| identityId | uint256 | TokenId of the identity to mint the NFT to |
+| authorityAddress | address | undefined |
+| signatureDate | uint256 | undefined |
+| signature | bytes | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | The NFT ID of the newly minted SBT |
+
+### mint
+
+```solidity
+function mint(address paymentMethod, address to, address authorityAddress, uint256 signatureDate, bytes signature) external payable returns (uint256)
+```
+
+Mints a new SBT
+
+*The caller must have the MINTER role*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
 | to | address | The address to mint the SBT to |
+| authorityAddress | address | undefined |
+| signatureDate | uint256 | undefined |
+| signature | bytes | undefined |
 
 #### Returns
 
@@ -188,27 +355,22 @@ Mints a new SBT
 |---|---|---|
 | _0 | uint256 | The SBT ID of the newly minted SBT |
 
-### mint
+### mintingPrice
 
 ```solidity
-function mint(uint256 identityId) external nonpayable returns (uint256)
+function mintingPrice() external view returns (uint256)
 ```
 
-Mints a new SBT
 
-*The caller must have the MINTER role*
 
-#### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| identityId | uint256 | TokenId of the identity to mint the NFT to |
+
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256 | The NFT ID of the newly minted SBT |
+| _0 | uint256 | undefined |
 
 ### name
 
@@ -266,6 +428,22 @@ function ownerOf(uint256 tokenId) external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
+### removeErc20Token
+
+```solidity
+function removeErc20Token(address _erc20token) external nonpayable
+```
+
+Removes an ERC20 token as a valid payment method
+
+*The caller must have the owner to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _erc20token | address | ERC20 token to remove |
+
 ### renounceOwnership
 
 ```solidity
@@ -294,6 +472,23 @@ function renounceRole(bytes32 role, address account) external nonpayable
 | role | bytes32 | undefined |
 | account | address | undefined |
 
+### reserveWallet
+
+```solidity
+function reserveWallet() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
 ### revokeRole
 
 ```solidity
@@ -311,6 +506,54 @@ function revokeRole(bytes32 role, address account) external nonpayable
 | role | bytes32 | undefined |
 | account | address | undefined |
 
+### setMasaToken
+
+```solidity
+function setMasaToken(address _masaToken) external nonpayable
+```
+
+Sets the utility token to pay the fee in ($MASA)
+
+*The caller must have the owner to call this function It can be set to address(0) to disable paying in $MASA*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _masaToken | address | New utility token to pay the fee in |
+
+### setMintingPrice
+
+```solidity
+function setMintingPrice(uint256 _mintingPrice) external nonpayable
+```
+
+Sets the price of minting in stable coin
+
+*The caller must have the admin to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _mintingPrice | uint256 | New price of minting in stable coin |
+
+### setReserveWallet
+
+```solidity
+function setReserveWallet(address _reserveWallet) external nonpayable
+```
+
+Set the reserve wallet
+
+*Let change the reserve walled. It can be triggered by an authorized account.*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _reserveWallet | address | New reserve wallet |
+
 ### setSoulboundIdentity
 
 ```solidity
@@ -319,13 +562,61 @@ function setSoulboundIdentity(contract ISoulboundIdentity _soulboundIdentity) ex
 
 Sets the SoulboundIdentity contract address linked to this SBT
 
-*The caller must be the owner to call this function*
+*The caller must be the admin to call this function*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
 | _soulboundIdentity | contract ISoulboundIdentity | Address of the SoulboundIdentity contract |
+
+### setStableCoin
+
+```solidity
+function setStableCoin(address _stableCoin) external nonpayable
+```
+
+Sets the stable coin to pay the fee in (USDC)
+
+*The caller must have the owner to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _stableCoin | address | New stable coin to pay the fee in |
+
+### setSwapRouter
+
+```solidity
+function setSwapRouter(address _swapRouter) external nonpayable
+```
+
+Sets the swap router address
+
+*The caller must have the owner to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _swapRouter | address | New swap router address |
+
+### setWrappedNativeToken
+
+```solidity
+function setWrappedNativeToken(address _wrappedNativeToken) external nonpayable
+```
+
+Sets the wrapped native token address
+
+*The caller must have the owner to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _wrappedNativeToken | address | New wrapped native token address |
 
 ### soulboundIdentity
 
@@ -343,6 +634,23 @@ function soulboundIdentity() external view returns (contract ISoulboundIdentity)
 | Name | Type | Description |
 |---|---|---|
 | _0 | contract ISoulboundIdentity | undefined |
+
+### stableCoin
+
+```solidity
+function stableCoin() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
 
 ### supportsInterface
 
@@ -365,6 +673,23 @@ Query if a contract implements an interface
 | Name | Type | Description |
 |---|---|---|
 | _0 | bool | `true` if the contract implements `interfaceId` and  `interfaceId` is not 0xffffffff, `false` otherwise |
+
+### swapRouter
+
+```solidity
+function swapRouter() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
 
 ### symbol
 
@@ -483,6 +808,23 @@ function transferOwnership(address newOwner) external nonpayable
 |---|---|---|
 | newOwner | address | undefined |
 
+### wrappedNativeToken
+
+```solidity
+function wrappedNativeToken() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
 
 
 ## Events
@@ -591,6 +933,27 @@ event RoleRevoked(bytes32 indexed role, address indexed account, address indexed
 | role `indexed` | bytes32 | undefined |
 | account `indexed` | address | undefined |
 | sender `indexed` | address | undefined |
+
+### Soulbound2FAMinted
+
+```solidity
+event Soulbound2FAMinted(uint256 tokenId, uint256 identityId, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintingPrice)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId  | uint256 | undefined |
+| identityId  | uint256 | undefined |
+| authorityAddress  | address | undefined |
+| signatureDate  | uint256 | undefined |
+| paymentMethod  | address | undefined |
+| mintingPrice  | uint256 | undefined |
 
 
 

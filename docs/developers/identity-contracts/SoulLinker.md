@@ -143,6 +143,23 @@ function erc20tokens(uint256) external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
+### getErc20Tokens
+
+```solidity
+function getErc20Tokens() external view returns (address[])
+```
+
+Returns all available ERC 20 tokens
+
+*Returns the address of all available ERC 20 tokens*
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address[] | Array of all enabled ERC20 tokens |
+
 ### getIdentityId
 
 ```solidity
@@ -165,26 +182,6 @@ Returns the identityId owned by the given token
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | Id of the identity |
-
-### getPaymentMethods
-
-```solidity
-function getPaymentMethods() external view returns (address _nativeToken, address _stableCoin, address _utilityToken, address[] _erc20tokens)
-```
-
-Returns all available payment methods
-
-*Returns the address of all available payment methods*
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _nativeToken | address | Address of the native token (ETH) |
-| _stableCoin | address | Address of the stable coin (USDC) |
-| _utilityToken | address | Address of the utility token ($MASA) |
-| _erc20tokens | address[] | Array of all ERC20 tokens |
 
 ### getPermissionInfo
 
@@ -238,7 +235,7 @@ Returns the list of permission signature dates for a given SBT token and reader
 ### getPriceForAddPermission
 
 ```solidity
-function getPriceForAddPermission() external view returns (uint256 priceInUtilityToken)
+function getPriceForAddPermission() external view returns (uint256 priceInMasaToken)
 ```
 
 Returns the price for storing a permission
@@ -250,7 +247,7 @@ Returns the price for storing a permission
 
 | Name | Type | Description |
 |---|---|---|
-| priceInUtilityToken | uint256 | Current price of storing a permission in utility token ($MASA) |
+| priceInMasaToken | uint256 | Current price of storing a permission in utility token ($MASA) |
 
 ### getSBTLinks
 
@@ -335,6 +332,23 @@ function linkedSBTs(uint256) external view returns (address)
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
+### masaToken
+
+```solidity
+function masaToken() external view returns (address)
+```
+
+
+
+
+
 
 #### Returns
 
@@ -471,6 +485,22 @@ Sets the price of store permission in $MASA
 |---|---|---|
 | _addPermissionPriceMASA | uint256 | New price of the store permission in $MASA |
 
+### setMasaToken
+
+```solidity
+function setMasaToken(address _masaToken) external nonpayable
+```
+
+Sets the utility token to pay the fee in ($MASA)
+
+*The caller must have the owner to call this function It can be set to address(0) to disable paying in $MASA*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _masaToken | address | New utility token to pay the fee in |
+
 ### setReserveWallet
 
 ```solidity
@@ -534,22 +564,6 @@ Sets the swap router address
 | Name | Type | Description |
 |---|---|---|
 | _swapRouter | address | New swap router address |
-
-### setUtilityToken
-
-```solidity
-function setUtilityToken(address _utilityToken) external nonpayable
-```
-
-Sets the utility token to pay the fee in ($MASA)
-
-*The caller must have the owner to call this function*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _utilityToken | address | New utility token to pay the fee in |
 
 ### setWrappedNativeToken
 
@@ -633,23 +647,6 @@ function transferOwnership(address newOwner) external nonpayable
 | Name | Type | Description |
 |---|---|---|
 | newOwner | address | undefined |
-
-### utilityToken
-
-```solidity
-function utilityToken() external view returns (address)
-```
-
-
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
 
 ### validatePermission
 

@@ -285,7 +285,7 @@ Mints a new soulbound identity
 
 | Name | Type | Description |
 |---|---|---|
-| to | address | Address of the owner of the new identity |
+| to | address | Address of the admin of the new identity |
 
 #### Returns
 
@@ -307,7 +307,7 @@ Mints a new soulbound identity with a SoulName associated to it
 
 | Name | Type | Description |
 |---|---|---|
-| to | address | Address of the owner of the new identity |
+| to | address | Address of the admin of the new identity |
 | name | string | Name of the new identity |
 | yearsPeriod | uint256 | Years of validity of the name |
 | _tokenURI | string | URI of the NFT |
@@ -334,23 +334,6 @@ function name() external view returns (string)
 | Name | Type | Description |
 |---|---|---|
 | _0 | string | undefined |
-
-### owner
-
-```solidity
-function owner() external view returns (address)
-```
-
-
-
-*Returns the address of the current owner.*
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
 
 ### ownerOf
 
@@ -396,17 +379,6 @@ Returns the owner address of a soul name
 |---|---|---|
 | _0 | address | Address of the owner of the identity |
 
-### renounceOwnership
-
-```solidity
-function renounceOwnership() external nonpayable
-```
-
-
-
-*Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.*
-
-
 ### renounceRole
 
 ```solidity
@@ -449,7 +421,7 @@ function setSoulName(contract ISoulName _soulName) external nonpayable
 
 Sets the SoulName contract address linked to this identity
 
-*The caller must have the owner to call this function*
+*The caller must have the admin to call this function*
 
 #### Parameters
 
@@ -663,22 +635,6 @@ function totalSupply() external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
-### transferOwnership
-
-```solidity
-function transferOwnership(address newOwner) external nonpayable
-```
-
-
-
-*Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| newOwner | address | undefined |
-
 
 
 ## Events
@@ -716,23 +672,6 @@ event Mint(address indexed _owner, uint256 indexed _tokenId)
 |---|---|---|
 | _owner `indexed` | address | undefined |
 | _tokenId `indexed` | uint256 | undefined |
-
-### OwnershipTransferred
-
-```solidity
-event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| previousOwner `indexed` | address | undefined |
-| newOwner `indexed` | address | undefined |
 
 ### RoleAdminChanged
 
