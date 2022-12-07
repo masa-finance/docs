@@ -32,7 +32,7 @@ field.
 
 #### Configuration
 
-- `Owner`: [`0x3c8D9f130970358b7E8cbc1DbD0a1EbA6EBE368F`](https://alfajores-blockscout.celo-testnet.org/address/0x3c8D9f130970358b7E8cbc1DbD0a1EbA6EBE368F/transactions)
+- `Owner`: [`0x3c8D9f130970358b7E8cbc1DbD0a1EbA6EBE368F`](https://goerli.etherscan.io/address/0x3c8D9f130970358b7E8cbc1DbD0a1EbA6EBE368F)
 
 The `owner` is allowed to mint SBTs.
 
