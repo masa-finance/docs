@@ -45,7 +45,7 @@ Adds an SBT to the list of linked SBTs
 ### addPermission
 
 ```solidity
-function addPermission(uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, string data, uint256 signatureDate, uint256 expirationDate, bytes signature) external nonpayable
+function addPermission(address paymentMethod, uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, string data, uint256 signatureDate, uint256 expirationDate, bytes signature) external nonpayable
 ```
 
 Stores the permission, validating the signature of the given read link request
@@ -56,6 +56,7 @@ Stores the permission, validating the signature of the given read link request
 
 | Name | Type | Description |
 |---|---|---|
+| paymentMethod | address | undefined |
 | readerIdentityId | uint256 | Id of the identity of the reader |
 | ownerIdentityId | uint256 | Id of the identity of the owner of the SBT |
 | token | address | Address of the SBT contract |
@@ -235,19 +236,25 @@ Returns the list of permission signature dates for a given SBT token and reader
 ### getPriceForAddPermission
 
 ```solidity
-function getPriceForAddPermission() external view returns (uint256 priceInMasaToken)
+function getPriceForAddPermission(address paymentMethod) external view returns (uint256 price, address paymentMethodUsed)
 ```
 
 Returns the price for storing a permission
 
 *Returns the current pricing for storing a permission*
 
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| priceInMasaToken | uint256 | Current price of storing a permission in utility token ($MASA) |
+| price | uint256 | Current price of storing a permission |
+| paymentMethodUsed | address | Address of the token used to pay |
 
 ### getSBTLinks
 
