@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.6.0](../README.md) / [Exports](../modules.md) / Masa
+ - v0.6.1](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -151,7 +151,7 @@ ___
 | `loadSoulNameByTokenId` | (`tokenId`: `string` \| `BigNumber`) => `Promise`<{ `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }\> |
 | `loadSoulNamesByIdentityId` | (`identityId`: `BigNumber`) => `Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }[]\> |
 | `send` | (`soulName`: `string`, `receiver`: `string`) => `Promise`<`void`\> |
-| `verify` | (`soulName`: `string`) => `Promise`<{ `imageHashMatch`: `boolean` = false; `imageSignatureMatch`: `boolean` = false; `metadataSignatureMatch`: `boolean` = false; `nameMatch`: `boolean` = false }\> |
+| `verify` | (`soulName`: `string`) => `Promise`<{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\> |
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.6.0](../README.md) / [Exports](../modules.md) / ISoulName
+ - v0.6.1](../README.md) / [Exports](../modules.md) / ISoulName
 
 # Interface: ISoulName
 
