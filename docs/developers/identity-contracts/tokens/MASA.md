@@ -141,17 +141,6 @@ function increaseAllowance(address spender, uint256 addedValue) external nonpaya
 |---|---|---|
 | _0 | bool | undefined |
 
-### mint
-
-```solidity
-function mint() external nonpayable
-```
-
-
-
-
-
-
 ### name
 
 ```solidity

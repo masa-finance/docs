@@ -373,6 +373,34 @@ function owner() external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
+### pause
+
+```solidity
+function pause() external nonpayable
+```
+
+Pauses the smart contract
+
+*The caller must have the owner to call this function*
+
+
+### paused
+
+```solidity
+function paused() external view returns (bool)
+```
+
+
+
+*Returns true if the contract is paused, and false otherwise.*
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
 ### removeErc20Token
 
 ```solidity
@@ -648,6 +676,17 @@ function transferOwnership(address newOwner) external nonpayable
 |---|---|---|
 | newOwner | address | undefined |
 
+### unpause
+
+```solidity
+function unpause() external nonpayable
+```
+
+Unpauses the smart contract
+
+*The caller must have the owner to call this function*
+
+
 ### validatePermission
 
 ```solidity
@@ -712,6 +751,22 @@ event OwnershipTransferred(address indexed previousOwner, address indexed newOwn
 | previousOwner `indexed` | address | undefined |
 | newOwner `indexed` | address | undefined |
 
+### Paused
+
+```solidity
+event Paused(address account)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| account  | address | undefined |
+
 ### PermissionAdded
 
 ```solidity
@@ -753,6 +808,22 @@ event PermissionRevoked(uint256 readerIdentityId, uint256 ownerIdentityId, addre
 | token  | address | undefined |
 | tokenId  | uint256 | undefined |
 | signatureDate  | uint256 | undefined |
+
+### Unpaused
+
+```solidity
+event Unpaused(address account)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| account  | address | undefined |
 
 
 
