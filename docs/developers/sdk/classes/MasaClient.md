@@ -21,6 +21,7 @@
 ### Methods
 
 - [checkSignature](MasaClient.md#checksignature)
+- [createCreditScore](MasaClient.md#createcreditscore)
 - [creditScoreMint](MasaClient.md#creditscoremint)
 - [getChallenge](MasaClient.md#getchallenge)
 - [getMetadata](MasaClient.md#getmetadata)
@@ -83,6 +84,22 @@ ___
 #### Returns
 
 `Promise`<`any`\>
+
+___
+
+### createCreditScore
+
+▸ **createCreditScore**(`address`): `Promise`<`undefined` \| { `creditScore`: `any` ; `signature`: `string`  } \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `address` | `string` |
+
+#### Returns
+
+`Promise`<`undefined` \| { `creditScore`: `any` ; `signature`: `string`  } \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
 
 ___
 

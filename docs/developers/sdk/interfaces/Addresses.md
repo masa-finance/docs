@@ -5,4 +5,4 @@
 
 ## Indexable
 
-▪ [index: `string`]: { `MASA`: `string` ; `SoulLinkerAddress`: `string` ; `SoulNameAddress`: `string` ; `SoulStoreAddress`: `string` ; `Soulbound2FAAddress`: `string` ; `SoulboundCreditReportAddress`: `string` ; `SoulboundIdentityAddress`: `string` ; `USDC`: `string` ; `WETH`: `string`  }
+▪ [index: `string`]: { `MASA`: `string` ; `SoulLinkerAddress`: `string` ; `SoulNameAddress`: `string` ; `SoulStoreAddress`: `string` ; `Soulbound2FAAddress`: `string` ; `SoulboundCreditScoreAddress`: `string` ; `SoulboundIdentityAddress`: `string` ; `USDC`: `string` ; `WETH`: `string`  }

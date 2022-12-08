@@ -20,6 +20,7 @@
 - [getPaymentAddress](MasaContracts.md#getpaymentaddress)
 - [getSoulNames](MasaContracts.md#getsoulnames)
 - [isAvailable](MasaContracts.md#isavailable)
+- [mintCreditScore](MasaContracts.md#mintcreditscore)
 - [price](MasaContracts.md#price)
 - [purchaseIdentity](MasaContracts.md#purchaseidentity)
 - [purchaseIdentityAndName](MasaContracts.md#purchaseidentityandname)
@@ -53,7 +54,7 @@ ___
 
 ### checkOrGiveAllowance
 
-▸ `Private` **checkOrGiveAllowance**(`paymentAddress`, `signer`, `paymentMethod`, `prices`): `Promise`<`undefined` \| `ContractReceipt`\>
+▸ `Private` **checkOrGiveAllowance**(`paymentAddress`, `signer`, `paymentMethod`, `price`): `Promise`<`undefined` \| `ContractReceipt`\>
 
 #### Parameters
 
@@ -62,10 +63,7 @@ ___
 | `paymentAddress` | `string` |
 | `signer` | `Signer` |
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-| `prices` | `Object` |
-| `prices.priceInETH` | `BigNumber` |
-| `prices.priceInStableCoin` | `BigNumber` |
-| `prices.priceInUtilityToken` | `BigNumber` |
+| `price` | `BigNumber` |
 
 #### Returns
 
@@ -121,20 +119,41 @@ ___
 
 ___
 
+### mintCreditScore
+
+▸ **mintCreditScore**(`signer`, `paymentMethod`, `date`, `wallet`, `signature`): `Promise`<`ContractTransaction`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `signer` | `Signer` |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
+| `date` | `string` |
+| `wallet` | `string` |
+| `signature` | `string` |
+
+#### Returns
+
+`Promise`<`ContractTransaction`\>
+
+___
+
 ### price
 
-▸ **price**(`name`, `duration?`): `Promise`<[`BigNumber`, `BigNumber`, `BigNumber`] & { `priceInETH`: `BigNumber` ; `priceInStableCoin`: `BigNumber` ; `priceInUtilityToken`: `BigNumber`  }\>
+▸ **price**(`name`, `paymentMethod`, `duration?`): `Promise`<`BigNumber`\>
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `name` | `string` | `undefined` |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
 | `duration` | `number` | `1` |
 
 #### Returns
 
-`Promise`<[`BigNumber`, `BigNumber`, `BigNumber`] & { `priceInETH`: `BigNumber` ; `priceInStableCoin`: `BigNumber` ; `priceInUtilityToken`: `BigNumber`  }\>
+`Promise`<`BigNumber`\>
 
 ___
 

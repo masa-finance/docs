@@ -11,7 +11,7 @@
 - [SoulNameContract](IIdentityContracts.md#soulnamecontract)
 - [SoulStoreContract](IIdentityContracts.md#soulstorecontract)
 - [Soulbound2FA](IIdentityContracts.md#soulbound2fa)
-- [SoulboundCreditReportContract](IIdentityContracts.md#soulboundcreditreportcontract)
+- [SoulboundCreditScoreContract](IIdentityContracts.md#soulboundcreditscorecontract)
 - [SoulboundIdentityContract](IIdentityContracts.md#soulboundidentitycontract)
 
 ## Properties
@@ -40,9 +40,9 @@ ___
 
 ___
 
-### SoulboundCreditReportContract
+### SoulboundCreditScoreContract
 
-• **SoulboundCreditReportContract**: `SoulboundCreditReport`
+• **SoulboundCreditScoreContract**: `SoulboundCreditScore`
 
 ___
 
