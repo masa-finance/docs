@@ -1,5 +1,5 @@
 [# Masa React
- - v0.16.8](../README.md) / [Exports](../modules.md) / [rest](rest.md) / auth
+ - v0.17.0](../README.md) / [Exports](../modules.md) / [rest](rest.md) / auth
 
 # Namespace: auth
 
