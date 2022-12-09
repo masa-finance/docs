@@ -6,7 +6,7 @@
 
 Soul Store, that can mint new Soulbound Identities and Soul Name NFTs, paying a fee
 
-*From this smart contract we can mint new Soulbound Identities and Soul Name NFTs. This minting can be done paying a fee in ETH, USDC or $MASA*
+*From this smart contract we can mint new Soulbound Identities and Soul Name NFTs. This minting can be done paying a fee in ETH, USDC or MASA*
 
 ## Methods
 
@@ -242,7 +242,7 @@ function purchaseIdentityAndName(address paymentMethod, string name, uint256 yea
 
 Mints a new Soulbound Identity and Name purchasing it
 
-*This function allows the purchase of a soulbound identity and name using stable coin (USDC), native token (ETH) or utility token ($MASA)*
+*This function allows the purchase of a soulbound identity and name using stable coin (USDC), native token (ETH) or utility token (MASA)*
 
 #### Parameters
 
@@ -267,7 +267,7 @@ function purchaseName(address paymentMethod, string name, uint256 yearsPeriod, s
 
 Mints a new Soul Name purchasing it
 
-*This function allows the purchase of a soul name using stable coin (USDC), native token (ETH) or utility token ($MASA)*
+*This function allows the purchase of a soul name using stable coin (USDC), native token (ETH) or utility token (MASA)*
 
 #### Parameters
 
@@ -335,9 +335,9 @@ function reserveWallet() external view returns (address)
 function setMasaToken(address _masaToken) external nonpayable
 ```
 
-Sets the utility token to pay the fee in ($MASA)
+Sets the utility token to pay the fee in (MASA)
 
-*The caller must have the owner to call this function It can be set to address(0) to disable paying in $MASA*
+*The caller must have the owner to call this function It can be set to address(0) to disable paying in MASA*
 
 #### Parameters
 

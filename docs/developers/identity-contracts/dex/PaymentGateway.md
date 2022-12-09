@@ -171,9 +171,9 @@ function reserveWallet() external view returns (address)
 function setMasaToken(address _masaToken) external nonpayable
 ```
 
-Sets the utility token to pay the fee in ($MASA)
+Sets the utility token to pay the fee in (MASA)
 
-*The caller must have the owner to call this function It can be set to address(0) to disable paying in $MASA*
+*The caller must have the owner to call this function It can be set to address(0) to disable paying in MASA*
 
 #### Parameters
 

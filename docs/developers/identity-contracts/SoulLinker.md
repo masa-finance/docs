@@ -510,7 +510,7 @@ Sets the price of store permission in stable coin
 function setAddPermissionPriceMASA(uint256 _addPermissionPriceMASA) external nonpayable
 ```
 
-Sets the price of store permission in $MASA
+Sets the price of store permission in MASA
 
 *The caller must have the owner to call this function*
 
@@ -518,7 +518,7 @@ Sets the price of store permission in $MASA
 
 | Name | Type | Description |
 |---|---|---|
-| _addPermissionPriceMASA | uint256 | New price of the store permission in $MASA |
+| _addPermissionPriceMASA | uint256 | New price of the store permission in MASA |
 
 ### setMasaToken
 
@@ -526,9 +526,9 @@ Sets the price of store permission in $MASA
 function setMasaToken(address _masaToken) external nonpayable
 ```
 
-Sets the utility token to pay the fee in ($MASA)
+Sets the utility token to pay the fee in (MASA)
 
-*The caller must have the owner to call this function It can be set to address(0) to disable paying in $MASA*
+*The caller must have the owner to call this function It can be set to address(0) to disable paying in MASA*
 
 #### Parameters
 
