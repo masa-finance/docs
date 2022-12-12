@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.6.5](../README.md) / [Exports](../modules.md) / MasaClient
+ - v0.7.3](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -30,6 +30,7 @@
 - [storeMetadata](MasaClient.md#storemetadata)
 - [twoFAGenerate](MasaClient.md#twofagenerate)
 - [twoFAMint](MasaClient.md#twofamint)
+- [updateCreditScore](MasaClient.md#updatecreditscore)
 
 ## Constructors
 
@@ -89,7 +90,7 @@ ___
 
 ### createCreditScore
 
-▸ **createCreditScore**(`address`): `Promise`<`undefined` \| { `creditScore`: `any` ; `signature`: `string`  } \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
+▸ **createCreditScore**(`address`): `Promise`<`undefined` \| { `creditScore?`: `any` ; `message`: `string` ; `signature?`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
 
 #### Parameters
 
@@ -99,13 +100,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `creditScore`: `any` ; `signature`: `string`  } \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
+`Promise`<`undefined` \| { `creditScore?`: `any` ; `message`: `string` ; `signature?`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
 
 ___
 
 ### creditScoreMint
 
-▸ **creditScoreMint**(`address`, `signature`): `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>
+▸ **creditScoreMint**(`address`, `signature`): `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -116,7 +117,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>
+`Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
@@ -184,7 +185,7 @@ ___
 
 ### twoFAGenerate
 
-▸ **twoFAGenerate**(`phoneNumber`): `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
+▸ **twoFAGenerate**(`phoneNumber`): `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `status`: `string`  }\>
 
 #### Parameters
 
@@ -194,13 +195,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
+`Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `status`: `string`  }\>
 
 ___
 
 ### twoFAMint
 
-▸ **twoFAMint**(`address`, `phoneNumber`, `code`, `signature`): `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>
+▸ **twoFAMint**(`address`, `phoneNumber`, `code`, `signature`): `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `status`: `string`  }\>
 
 #### Parameters
 
@@ -213,4 +214,20 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>
+`Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `status`: `string`  }\>
+
+___
+
+### updateCreditScore
+
+▸ **updateCreditScore**(`transactionHash`): `Promise`<`undefined` \| { `creditScore?`: `any` ; `message`: `string` ; `signature?`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `transactionHash` | `string` |
+
+#### Returns
+
+`Promise`<`undefined` \| { `creditScore?`: `any` ; `message`: `string` ; `signature?`: `string` ; `status`: `string` ; `success`: `boolean`  }\>

@@ -1,8 +1,8 @@
 [# Masa SDK
- - v0.6.5](README.md) / Exports
+ - v0.7.3](README.md) / Exports
 
 # # Masa SDK
- - v0.6.5
+ - v0.7.3
 
 ## Table of contents
 
@@ -47,6 +47,7 @@
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
 - [recoverAddress](modules.md#recoveraddress)
 - [signMessage](modules.md#signmessage)
+- [signTypedData](modules.md#signtypeddata)
 
 ## Type Aliases
 
@@ -163,3 +164,22 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| `string`\>
+
+___
+
+### signTypedData
+
+▸ **signTypedData**(`contract`, `wallet`, `types`, `value`): `Promise`<{ `domain`: { `chainId`: `number` ; `name`: `string` = "SoulboundCreditScore"; `verifyingContract`: `string` = contract.address; `version`: `string` = "1.0.0" } ; `signature`: `string`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `contract` | `Contract` |
+| `wallet` | `Wallet` |
+| `types` | `Record`<`string`, `TypedDataField`[]\> |
+| `value` | `Record`<`string`, `any`\> |
+
+#### Returns
+
+`Promise`<{ `domain`: { `chainId`: `number` ; `name`: `string` = "SoulboundCreditScore"; `verifyingContract`: `string` = contract.address; `version`: `string` = "1.0.0" } ; `signature`: `string`  }\>

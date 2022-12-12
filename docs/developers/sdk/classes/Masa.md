@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.6.5](../README.md) / [Exports](../modules.md) / Masa
+ - v0.7.3](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -82,11 +82,11 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `burn` | (`creditReportId`: `number`) => `Promise`<`boolean`\> |
-| `create` | () => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md)\> |
+| `burn` | (`creditScoreId`: `number`) => `Promise`<`boolean`\> |
+| `create` | (`mock?`: `boolean`) => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md)\> |
 | `list` | (`address?`: `string`) => `Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
-| `mint` | (`address`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
+| `mint` | (`address`: `string`, `signature`: `string`) => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md)\> |
 
 ___
 
@@ -165,10 +165,10 @@ ___
 | :------ | :------ |
 | `burn` | (`twoFAId`: `number`) => `Promise`<`boolean`\> |
 | `create` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<[`Create2FAResult`](../interfaces/Create2FAResult.md)\> |
-| `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\> |
+| `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `status`: `string`  }\> |
 | `list` | (`address?`: `string`) => `Promise`<{ `metadata?`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata?`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
-| `mint` | (`address`: `string`, `phoneNumber`: `string`, `code`: `string`, `signature`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\> |
+| `mint` | (`address`: `string`, `phoneNumber`: `string`, `code`: `string`, `signature`: `string`) => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `status`: `string`  }\> |
 
 ___
 

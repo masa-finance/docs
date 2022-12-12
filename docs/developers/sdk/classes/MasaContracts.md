@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.6.5](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v0.7.3](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -129,7 +129,7 @@ ___
 | :------ | :------ |
 | `signer` | `Signer` |
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-| `date` | `string` |
+| `date` | `number` |
 | `wallet` | `string` |
 | `signature` | `string` |
 
