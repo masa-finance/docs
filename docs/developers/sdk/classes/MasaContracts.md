@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.7.3](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v0.7.7](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -18,10 +18,10 @@
 
 - [checkOrGiveAllowance](MasaContracts.md#checkorgiveallowance)
 - [getPaymentAddress](MasaContracts.md#getpaymentaddress)
+- [getPaymentInformation](MasaContracts.md#getpaymentinformation)
 - [getSoulNames](MasaContracts.md#getsoulnames)
 - [isAvailable](MasaContracts.md#isavailable)
 - [mintCreditScore](MasaContracts.md#mintcreditscore)
-- [price](MasaContracts.md#price)
 - [purchaseIdentity](MasaContracts.md#purchaseidentity)
 - [purchaseIdentityAndName](MasaContracts.md#purchaseidentityandname)
 - [purchaseName](MasaContracts.md#purchasename)
@@ -73,7 +73,7 @@ ___
 
 ### getPaymentAddress
 
-▸ **getPaymentAddress**(`paymentMethod`): `string`
+▸ `Private` **getPaymentAddress**(`paymentMethod`): `string`
 
 #### Parameters
 
@@ -84,6 +84,25 @@ ___
 #### Returns
 
 `string`
+
+___
+
+### getPaymentInformation
+
+▸ **getPaymentInformation**(`name`, `paymentMethod`, `duration?`, `signer`): `Promise`<{ `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `name` | `string` | `undefined` |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
+| `duration` | `number` | `1` |
+| `signer` | `Signer` | `undefined` |
+
+#### Returns
+
+`Promise`<{ `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
 
 ___
 
@@ -136,24 +155,6 @@ ___
 #### Returns
 
 `Promise`<`ContractTransaction`\>
-
-___
-
-### price
-
-▸ **price**(`name`, `paymentMethod`, `duration?`): `Promise`<`BigNumber`\>
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `name` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `duration` | `number` | `1` |
-
-#### Returns
-
-`Promise`<`BigNumber`\>
 
 ___
 
