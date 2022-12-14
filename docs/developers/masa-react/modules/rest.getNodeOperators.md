@@ -1,5 +1,5 @@
 [# Masa React
- - v0.17.0](../README.md) / [Exports](../modules.md) / [rest](rest.md) / getNodeOperators
+ - v0.17.11](../README.md) / [Exports](../modules.md) / [rest](rest.md) / getNodeOperators
 
 # Namespace: getNodeOperators
 
