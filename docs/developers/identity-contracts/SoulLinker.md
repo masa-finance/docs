@@ -10,22 +10,6 @@ Soul linker smart contract that let add links to a Soulbound token.
 
 ## Methods
 
-### addErc20Token
-
-```solidity
-function addErc20Token(address _erc20token) external nonpayable
-```
-
-Adds a new ERC20 token as a valid payment method
-
-*The caller must have the owner to call this function*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _erc20token | address | New ERC20 token to add |
-
 ### addLinkedSBT
 
 ```solidity
@@ -45,7 +29,7 @@ Adds an SBT to the list of linked SBTs
 ### addPermission
 
 ```solidity
-function addPermission(address paymentMethod, uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, string data, uint256 signatureDate, uint256 expirationDate, bytes signature) external nonpayable
+function addPermission(address paymentMethod, uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, string data, uint256 signatureDate, uint256 expirationDate, bytes signature) external payable
 ```
 
 Stores the permission, validating the signature of the given read link request
@@ -100,10 +84,42 @@ function addPermissionPriceMASA() external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
-### erc20token
+### disablePaymentMethod
 
 ```solidity
-function erc20token(address) external view returns (bool)
+function disablePaymentMethod(address _paymentMethod) external nonpayable
+```
+
+Removes a token as a valid payment method
+
+*The caller must have the owner to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _paymentMethod | address | Token to remove |
+
+### enablePaymentMethod
+
+```solidity
+function enablePaymentMethod(address _paymentMethod) external nonpayable
+```
+
+Adds a new token as a valid payment method
+
+*The caller must have the owner to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _paymentMethod | address | New token to add |
+
+### enabledPaymentMethod
+
+```solidity
+function enabledPaymentMethod(address) external view returns (bool)
 ```
 
 
@@ -122,10 +138,10 @@ function erc20token(address) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
-### erc20tokens
+### enabledPaymentMethods
 
 ```solidity
-function erc20tokens(uint256) external view returns (address)
+function enabledPaymentMethods(uint256) external view returns (address)
 ```
 
 
@@ -144,22 +160,22 @@ function erc20tokens(uint256) external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
-### getErc20Tokens
+### getEnabledPaymentMethods
 
 ```solidity
-function getErc20Tokens() external view returns (address[])
+function getEnabledPaymentMethods() external view returns (address[])
 ```
 
-Returns all available ERC 20 tokens
+Returns all available payment methods
 
-*Returns the address of all available ERC 20 tokens*
+*Returns the address of all available payment methods*
 
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | address[] | Array of all enabled ERC20 tokens |
+| _0 | address[] | Array of all enabled payment methods |
 
 ### getIdentityId
 
@@ -407,22 +423,6 @@ function paused() external view returns (bool)
 | Name | Type | Description |
 |---|---|---|
 | _0 | bool | undefined |
-
-### removeErc20Token
-
-```solidity
-function removeErc20Token(address _erc20token) external nonpayable
-```
-
-Removes an ERC20 token as a valid payment method
-
-*The caller must have the owner to call this function*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _erc20token | address | ERC20 token to remove |
 
 ### removeLinkedSBT
 

@@ -10,13 +10,13 @@ Smart contract to call a Dex AMM smart contract to pay to a reserve wallet recip
 
 ## Methods
 
-### addErc20Token
+### disablePaymentMethod
 
 ```solidity
-function addErc20Token(address _erc20token) external nonpayable
+function disablePaymentMethod(address _paymentMethod) external nonpayable
 ```
 
-Adds a new ERC20 token as a valid payment method
+Removes a token as a valid payment method
 
 *The caller must have the owner to call this function*
 
@@ -24,12 +24,28 @@ Adds a new ERC20 token as a valid payment method
 
 | Name | Type | Description |
 |---|---|---|
-| _erc20token | address | New ERC20 token to add |
+| _paymentMethod | address | Token to remove |
 
-### erc20token
+### enablePaymentMethod
 
 ```solidity
-function erc20token(address) external view returns (bool)
+function enablePaymentMethod(address _paymentMethod) external nonpayable
+```
+
+Adds a new token as a valid payment method
+
+*The caller must have the owner to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _paymentMethod | address | New token to add |
+
+### enabledPaymentMethod
+
+```solidity
+function enabledPaymentMethod(address) external view returns (bool)
 ```
 
 
@@ -48,10 +64,10 @@ function erc20token(address) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
-### erc20tokens
+### enabledPaymentMethods
 
 ```solidity
-function erc20tokens(uint256) external view returns (address)
+function enabledPaymentMethods(uint256) external view returns (address)
 ```
 
 
@@ -70,22 +86,22 @@ function erc20tokens(uint256) external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
-### getErc20Tokens
+### getEnabledPaymentMethods
 
 ```solidity
-function getErc20Tokens() external view returns (address[])
+function getEnabledPaymentMethods() external view returns (address[])
 ```
 
-Returns all available ERC 20 tokens
+Returns all available payment methods
 
-*Returns the address of all available ERC 20 tokens*
+*Returns the address of all available payment methods*
 
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | address[] | Array of all enabled ERC20 tokens |
+| _0 | address[] | Array of all enabled payment methods |
 
 ### masaToken
 
@@ -120,22 +136,6 @@ function owner() external view returns (address)
 | Name | Type | Description |
 |---|---|---|
 | _0 | address | undefined |
-
-### removeErc20Token
-
-```solidity
-function removeErc20Token(address _erc20token) external nonpayable
-```
-
-Removes an ERC20 token as a valid payment method
-
-*The caller must have the owner to call this function*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _erc20token | address | ERC20 token to remove |
 
 ### renounceOwnership
 
