@@ -65,6 +65,28 @@ function burn(uint256 tokenId) external nonpayable
 |---|---|---|
 | tokenId | uint256 | undefined |
 
+### exists
+
+```solidity
+function exists(uint256 tokenId) external view returns (bool)
+```
+
+Returns true if the token exists
+
+*Returns true if the token has been minted*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId | uint256 | Token to check |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | True if the token exists |
+
 ### getRoleAdmin
 
 ```solidity
