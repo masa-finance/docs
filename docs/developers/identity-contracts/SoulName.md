@@ -1030,3 +1030,189 @@ event YearsPeriodRenewed(uint256 tokenId, uint256 yearsPeriod, uint256 newExpira
 
 
 
+## Errors
+
+### AddressDoesNotHaveIdentity
+
+```solidity
+error AddressDoesNotHaveIdentity(address to)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| to | address | undefined |
+
+### CallerNotOwner
+
+```solidity
+error CallerNotOwner(address caller)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| caller | address | undefined |
+
+### InvalidTokenURI
+
+```solidity
+error InvalidTokenURI(string tokenURI)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenURI | string | undefined |
+
+### NameAlreadyExists
+
+```solidity
+error NameAlreadyExists(string name)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| name | string | undefined |
+
+### NameNotFound
+
+```solidity
+error NameNotFound(string name)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| name | string | undefined |
+
+### NameRegisteredByOtherAccount
+
+```solidity
+error NameRegisteredByOtherAccount(string name, uint256 tokenId)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| name | string | undefined |
+| tokenId | uint256 | undefined |
+
+### SameValue
+
+```solidity
+error SameValue()
+```
+
+
+
+
+
+
+### TokenNotFound
+
+```solidity
+error TokenNotFound(uint256 tokenId)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId | uint256 | undefined |
+
+### URIAlreadyExists
+
+```solidity
+error URIAlreadyExists(string tokenURI)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenURI | string | undefined |
+
+### ZeroAddress
+
+```solidity
+error ZeroAddress()
+```
+
+
+
+
+
+
+### ZeroLengthName
+
+```solidity
+error ZeroLengthName(string name)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| name | string | undefined |
+
+### ZeroYearsPeriod
+
+```solidity
+error ZeroYearsPeriod(uint256 yearsPeriod)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| yearsPeriod | uint256 | undefined |
+
+

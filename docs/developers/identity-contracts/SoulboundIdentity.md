@@ -751,3 +751,55 @@ event RoleRevoked(bytes32 indexed role, address indexed account, address indexed
 
 
 
+## Errors
+
+### IdentityAlreadyCreated
+
+```solidity
+error IdentityAlreadyCreated(address to)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| to | address | undefined |
+
+### SameValue
+
+```solidity
+error SameValue()
+```
+
+
+
+
+
+
+### SoulNameContractNotSet
+
+```solidity
+error SoulNameContractNotSet()
+```
+
+
+
+
+
+
+### ZeroAddress
+
+```solidity
+error ZeroAddress()
+```
+
+
+
+
+
+
+
