@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.7.7](../README.md) / [Exports](../modules.md) / Masa
+ - v0.7.10](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -83,7 +83,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `burn` | (`creditScoreId`: `number`) => `Promise`<`boolean`\> |
-| `create` | (`mock?`: `boolean`) => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md)\> |
+| `create` | () => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md)\> |
 | `list` | (`address?`: `string`) => `Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
 | `mint` | (`address`: `string`, `signature`: `string`) => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md)\> |
@@ -151,6 +151,7 @@ ___
 | `loadSoulNameByTokenId` | (`tokenId`: `string` \| `BigNumber`) => `Promise`<{ `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }\> |
 | `loadSoulNamesByIdentityId` | (`identityId`: `BigNumber`) => `Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }[]\> |
 | `send` | (`soulName`: `string`, `receiver`: `string`) => `Promise`<`void`\> |
+| `validate` | (`soulName`: `string`) => { `isValid`: `boolean` ; `message?`: `string`  } |
 | `verify` | (`soulName`: `string`) => `Promise`<{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\> |
 
 ___

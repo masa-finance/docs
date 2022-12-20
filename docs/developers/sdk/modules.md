@@ -1,8 +1,8 @@
 [# Masa SDK
- - v0.7.7](README.md) / Exports
+ - v0.7.10](README.md) / Exports
 
 # # Masa SDK
- - v0.7.7
+ - v0.7.10
 
 ## Table of contents
 
@@ -44,6 +44,7 @@
 ### Functions
 
 - [arweave](modules.md#arweave)
+- [generateSignatureDomain](modules.md#generatesignaturedomain)
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
 - [recoverAddress](modules.md#recoveraddress)
 - [signMessage](modules.md#signmessage)
@@ -77,7 +78,6 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `creditScoreTemplate` | (`value`: `string`, `lastUpdated`: `string`, `wallet`: `string`) => `string` |
 | `loginTemplate` | (`challenge`: `string`, `expires`: `string`) => `string` |
 | `twoFATemplate` | (`identityId`: `string`, `phoneNumber`: `string`, `code`: `string`) => `string` |
 
@@ -112,6 +112,24 @@ ___
 #### Returns
 
 `default`
+
+___
+
+### generateSignatureDomain
+
+▸ **generateSignatureDomain**(`wallet`, `name`, `verifyingContract`): `Promise`<{ `chainId`: `number` ; `name`: `string` ; `verifyingContract`: `string` ; `version`: `string` = "1.0.0" }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `wallet` | `Wallet` |
+| `name` | `string` |
+| `verifyingContract` | `string` |
+
+#### Returns
+
+`Promise`<{ `chainId`: `number` ; `name`: `string` ; `verifyingContract`: `string` ; `version`: `string` = "1.0.0" }\>
 
 ___
 
@@ -169,7 +187,7 @@ ___
 
 ### signTypedData
 
-▸ **signTypedData**(`contract`, `wallet`, `types`, `value`): `Promise`<{ `domain`: { `chainId`: `number` ; `name`: `string` = "SoulboundCreditScore"; `verifyingContract`: `string` = contract.address; `version`: `string` = "1.0.0" } ; `signature`: `string`  }\>
+▸ **signTypedData**(`contract`, `wallet`, `name`, `types`, `value`): `Promise`<{ `domain`: { `chainId`: `number` ; `name`: `string` ; `verifyingContract`: `string` ; `version`: `string` = "1.0.0" } ; `signature`: `string`  }\>
 
 #### Parameters
 
@@ -177,9 +195,10 @@ ___
 | :------ | :------ |
 | `contract` | `Contract` |
 | `wallet` | `Wallet` |
+| `name` | `string` |
 | `types` | `Record`<`string`, `TypedDataField`[]\> |
 | `value` | `Record`<`string`, `any`\> |
 
 #### Returns
 
-`Promise`<{ `domain`: { `chainId`: `number` ; `name`: `string` = "SoulboundCreditScore"; `verifyingContract`: `string` = contract.address; `version`: `string` = "1.0.0" } ; `signature`: `string`  }\>
+`Promise`<{ `domain`: { `chainId`: `number` ; `name`: `string` ; `verifyingContract`: `string` ; `version`: `string` = "1.0.0" } ; `signature`: `string`  }\>

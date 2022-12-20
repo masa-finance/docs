@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.7.7](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v0.7.10](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -140,16 +140,17 @@ ___
 
 ### mintCreditScore
 
-▸ **mintCreditScore**(`signer`, `paymentMethod`, `date`, `wallet`, `signature`): `Promise`<`ContractTransaction`\>
+▸ **mintCreditScore**(`wallet`, `paymentMethod`, `identityId`, `authorityAddress`, `signatureDate`, `signature`): `Promise`<`ContractTransaction`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `signer` | `Signer` |
+| `wallet` | `Wallet` |
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-| `date` | `number` |
-| `wallet` | `string` |
+| `identityId` | `BigNumber` |
+| `authorityAddress` | `string` |
+| `signatureDate` | `number` |
 | `signature` | `string` |
 
 #### Returns

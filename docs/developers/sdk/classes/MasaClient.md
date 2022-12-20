@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.7.7](../README.md) / [Exports](../modules.md) / MasaClient
+ - v0.7.10](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -90,17 +90,11 @@ ___
 
 ### createCreditScore
 
-▸ **createCreditScore**(`address`): `Promise`<`undefined` \| { `creditScore?`: `any` ; `message`: `string` ; `signature?`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
+▸ **createCreditScore**(): `Promise`<`undefined` \| { `authorityAddress?`: `string` ; `message`: `string` ; `signature?`: `string` ; `signatureDate?`: `number` ; `status`: `string` ; `success`: `boolean`  }\>
 
 #### Returns
 
-`Promise`<`undefined` \| { `creditScore?`: `any` ; `message`: `string` ; `signature?`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
+`Promise`<`undefined` \| { `authorityAddress?`: `string` ; `message`: `string` ; `signature?`: `string` ; `signatureDate?`: `number` ; `status`: `string` ; `success`: `boolean`  }\>
 
 ___
 
