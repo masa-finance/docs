@@ -1,5 +1,5 @@
 [# Masa React
- - v0.17.11](../README.md) / [Exports](../modules.md) / [rest](rest.md) / listPlaidAccounts
+ - v0.17.12](../README.md) / [Exports](../modules.md) / [rest](rest.md) / listPlaidAccounts
 
 # Namespace: listPlaidAccounts
 
