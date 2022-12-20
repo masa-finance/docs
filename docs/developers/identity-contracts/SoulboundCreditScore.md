@@ -43,6 +43,40 @@ Adds a new authority to the list of authorities
 |---|---|---|
 | _authority | address | New authority to add |
 
+### addLinkPrice
+
+```solidity
+function addLinkPrice() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### addLinkPriceMASA
+
+```solidity
+function addLinkPriceMASA() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
 ### authorities
 
 ```solidity
@@ -240,10 +274,10 @@ Returns the identityId owned by the given token
 |---|---|---|
 | _0 | uint256 | Id of the identity |
 
-### getMintingPrice
+### getMintPrice
 
 ```solidity
-function getMintingPrice(address paymentMethod) external view returns (uint256)
+function getMintPrice(address paymentMethod) external view returns (uint256)
 ```
 
 Returns the price for minting
@@ -393,10 +427,27 @@ Mints a new SBT
 |---|---|---|
 | _0 | uint256 | The SBT ID of the newly minted SBT |
 
-### mintingPrice
+### mintPrice
 
 ```solidity
-function mintingPrice() external view returns (uint256)
+function mintPrice() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### mintPriceMASA
+
+```solidity
+function mintPriceMASA() external view returns (uint256)
 ```
 
 
@@ -466,6 +517,40 @@ function ownerOf(uint256 tokenId) external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
+### readDataPrice
+
+```solidity
+function readDataPrice() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### readDataPriceMASA
+
+```solidity
+function readDataPriceMASA() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
 ### renounceOwnership
 
 ```solidity
@@ -528,6 +613,38 @@ function revokeRole(bytes32 role, address account) external nonpayable
 | role | bytes32 | undefined |
 | account | address | undefined |
 
+### setAddLinkPrice
+
+```solidity
+function setAddLinkPrice(uint256 _addLinkPrice) external nonpayable
+```
+
+Sets the price for adding the link in SoulLinker in stable coin
+
+*The caller must have the admin to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _addLinkPrice | uint256 | New price for adding the link in SoulLinker in stable coin |
+
+### setAddLinkPriceMASA
+
+```solidity
+function setAddLinkPriceMASA(uint256 _addLinkPriceMASA) external nonpayable
+```
+
+Sets the price for adding the link in SoulLinker in MASA
+
+*The caller must have the admin to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _addLinkPriceMASA | uint256 | New price for adding the link in SoulLinker in MASA |
+
 ### setMasaToken
 
 ```solidity
@@ -544,10 +661,10 @@ Sets the utility token to pay the fee in (MASA)
 |---|---|---|
 | _masaToken | address | New utility token to pay the fee in |
 
-### setMintingPrice
+### setMintPrice
 
 ```solidity
-function setMintingPrice(uint256 _mintingPrice) external nonpayable
+function setMintPrice(uint256 _mintPrice) external nonpayable
 ```
 
 Sets the price of minting in stable coin
@@ -558,7 +675,55 @@ Sets the price of minting in stable coin
 
 | Name | Type | Description |
 |---|---|---|
-| _mintingPrice | uint256 | New price of minting in stable coin |
+| _mintPrice | uint256 | New price of minting in stable coin |
+
+### setMintPriceMASA
+
+```solidity
+function setMintPriceMASA(uint256 _mintPriceMASA) external nonpayable
+```
+
+Sets the price of minting in MASA
+
+*The caller must have the admin to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _mintPriceMASA | uint256 | New price of minting in MASA |
+
+### setReadDataPrice
+
+```solidity
+function setReadDataPrice(uint256 _readDataPrice) external nonpayable
+```
+
+Sets the price for reading data in SoulLinker in stable coin
+
+*The caller must have the admin to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _readDataPrice | uint256 | New price for reading data in SoulLinker in stable coin |
+
+### setReadDataPriceMASA
+
+```solidity
+function setReadDataPriceMASA(uint256 _readDataPriceMASA) external nonpayable
+```
+
+Sets the price for reading data in SoulLinker in MASA
+
+*The caller must have the admin to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _readDataPriceMASA | uint256 | New price for reading data in SoulLinker in MASA |
 
 ### setReserveWallet
 
@@ -959,7 +1124,7 @@ event RoleRevoked(bytes32 indexed role, address indexed account, address indexed
 ### SoulboundCreditScoreMinted
 
 ```solidity
-event SoulboundCreditScoreMinted(uint256 tokenId, uint256 identityId, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintingPrice)
+event SoulboundCreditScoreMinted(uint256 tokenId, uint256 identityId, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
 ```
 
 
@@ -975,7 +1140,7 @@ event SoulboundCreditScoreMinted(uint256 tokenId, uint256 identityId, address au
 | authorityAddress  | address | undefined |
 | signatureDate  | uint256 | undefined |
 | paymentMethod  | address | undefined |
-| mintingPrice  | uint256 | undefined |
+| mintPrice  | uint256 | undefined |
 
 
 
