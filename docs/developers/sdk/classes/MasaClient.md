@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.7.10](../README.md) / [Exports](../modules.md) / MasaClient
+ - v0.7.12](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -20,6 +20,7 @@
 
 ### Methods
 
+- [allowlistCheck](MasaClient.md#allowlistcheck)
 - [checkSignature](MasaClient.md#checksignature)
 - [createCreditScore](MasaClient.md#createcreditscore)
 - [creditScoreMint](MasaClient.md#creditscoremint)
@@ -69,6 +70,16 @@ ___
 `undefined` \| `string`
 
 ## Methods
+
+### allowlistCheck
+
+▸ **allowlistCheck**(): `Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\>
+
+#### Returns
+
+`Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\>
+
+___
 
 ### checkSignature
 

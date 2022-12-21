@@ -1,14 +1,15 @@
 [# Masa SDK
- - v0.7.10](README.md) / Exports
+ - v0.7.12](README.md) / Exports
 
 # # Masa SDK
- - v0.7.10
+ - v0.7.12
 
 ## Table of contents
 
 ### Classes
 
 - [Masa](classes/Masa.md)
+- [MasaArweave](classes/MasaArweave.md)
 - [MasaClient](classes/MasaClient.md)
 - [MasaContracts](classes/MasaContracts.md)
 
@@ -97,7 +98,7 @@ ___
 
 ### arweave
 
-▸ **arweave**(`__namedParameters`): `default`
+▸ **arweave**(`__namedParameters`): [`MasaArweave`](classes/MasaArweave.md)
 
 #### Parameters
 
@@ -111,7 +112,7 @@ ___
 
 #### Returns
 
-`default`
+[`MasaArweave`](classes/MasaArweave.md)
 
 ___
 
