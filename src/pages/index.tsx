@@ -5,12 +5,14 @@ import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
+import Hero from "../components/Hero"
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
     <Link to="docs/masa/introduction">
-      <img src={useBaseUrl("/img/banner.png")} />;
+      <Hero />
     </Link>
   );
 }
@@ -23,9 +25,6 @@ export default function Home(): JSX.Element {
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
     </Layout>
   );
 }
