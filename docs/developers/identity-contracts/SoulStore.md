@@ -236,7 +236,7 @@ function paused() external view returns (bool)
 ### purchaseIdentity
 
 ```solidity
-function purchaseIdentity() external payable returns (uint256)
+function purchaseIdentity() external nonpayable returns (uint256)
 ```
 
 Mints a new Soulbound Identity purchasing it
