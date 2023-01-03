@@ -88,10 +88,10 @@ Find the owner of an SBT
 |---|---|---|
 | _0 | address | The address of the owner of the SBT |
 
-### readDataPrice
+### queryLinkPrice
 
 ```solidity
-function readDataPrice() external view returns (uint256)
+function queryLinkPrice() external view returns (uint256)
 ```
 
 
@@ -105,10 +105,10 @@ function readDataPrice() external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
-### readDataPriceMASA
+### queryLinkPriceMASA
 
 ```solidity
-function readDataPriceMASA() external view returns (uint256)
+function queryLinkPriceMASA() external view returns (uint256)
 ```
 
 

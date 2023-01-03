@@ -758,6 +758,22 @@ error CallerNotReader(address caller)
 |---|---|---|
 | caller | address | undefined |
 
+### IdentityOwnerIsReader
+
+```solidity
+error IdentityOwnerIsReader(uint256 readerIdentityId)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| readerIdentityId | uint256 | undefined |
+
 ### IdentityOwnerNotTokenOwner
 
 ```solidity
@@ -833,6 +849,25 @@ error InvalidToken(address token)
 | Name | Type | Description |
 |---|---|---|
 | token | address | undefined |
+
+### LinkAlreadyExists
+
+```solidity
+error LinkAlreadyExists(address token, uint256 tokenId, uint256 readerIdentityId, uint256 signatureDate)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| token | address | undefined |
+| tokenId | uint256 | undefined |
+| readerIdentityId | uint256 | undefined |
+| signatureDate | uint256 | undefined |
 
 ### LinkAlreadyRevoked
 

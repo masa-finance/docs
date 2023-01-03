@@ -465,10 +465,10 @@ function ownerOf(uint256 tokenId) external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
-### readDataPrice
+### queryLinkPrice
 
 ```solidity
-function readDataPrice() external view returns (uint256)
+function queryLinkPrice() external view returns (uint256)
 ```
 
 
@@ -482,10 +482,10 @@ function readDataPrice() external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
-### readDataPriceMASA
+### queryLinkPriceMASA
 
 ```solidity
-function readDataPriceMASA() external view returns (uint256)
+function queryLinkPriceMASA() external view returns (uint256)
 ```
 
 
@@ -641,10 +641,10 @@ Sets the price of minting in MASA
 |---|---|---|
 | _mintPriceMASA | uint256 | New price of minting in MASA |
 
-### setReadDataPrice
+### setQueryLinkPrice
 
 ```solidity
-function setReadDataPrice(uint256 _readDataPrice) external nonpayable
+function setQueryLinkPrice(uint256 _queryLinkPrice) external nonpayable
 ```
 
 Sets the price for reading data in SoulLinker in stable coin
@@ -655,12 +655,12 @@ Sets the price for reading data in SoulLinker in stable coin
 
 | Name | Type | Description |
 |---|---|---|
-| _readDataPrice | uint256 | New price for reading data in SoulLinker in stable coin |
+| _queryLinkPrice | uint256 | New price for reading data in SoulLinker in stable coin |
 
-### setReadDataPriceMASA
+### setQueryLinkPriceMASA
 
 ```solidity
-function setReadDataPriceMASA(uint256 _readDataPriceMASA) external nonpayable
+function setQueryLinkPriceMASA(uint256 _queryLinkPriceMASA) external nonpayable
 ```
 
 Sets the price for reading data in SoulLinker in MASA
@@ -671,7 +671,7 @@ Sets the price for reading data in SoulLinker in MASA
 
 | Name | Type | Description |
 |---|---|---|
-| _readDataPriceMASA | uint256 | New price for reading data in SoulLinker in MASA |
+| _queryLinkPriceMASA | uint256 | New price for reading data in SoulLinker in MASA |
 
 ### setReserveWallet
 
