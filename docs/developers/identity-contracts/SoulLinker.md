@@ -244,6 +244,28 @@ Returns the price for storing a link
 |---|---|---|
 | _0 | uint256 | Current price for storing a link |
 
+### getReaderLinks
+
+```solidity
+function getReaderLinks(uint256 readerIdentityId) external view returns (struct SoulLinker.ReaderLink[])
+```
+
+Returns the list of links for a given reader identity id
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| readerIdentityId | uint256 | Id of the identity of the reader of the SBT |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | SoulLinker.ReaderLink[] | List of links for the reader |
+
 ### getSBTConnections
 
 ```solidity
@@ -388,7 +410,7 @@ function revokeLink(uint256 readerIdentityId, uint256 ownerIdentityId, address t
 
 Revokes the link
 
-*The token must be linked to this soul linker*
+*The links can be revoked, wether the token is linked or not. The caller must be the owner of the token. The owner of the token can revoke a link even if the reader has not added it yet.*
 
 #### Parameters
 
@@ -833,6 +855,22 @@ error InvalidSignature()
 
 
 
+
+### InvalidSignatureDate
+
+```solidity
+error InvalidSignatureDate(uint256 signatureDate)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| signatureDate | uint256 | undefined |
 
 ### InvalidToken
 
