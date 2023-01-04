@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.7.12](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v0.8.0](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -16,6 +16,7 @@
 
 ### Methods
 
+- [addLink](MasaContracts.md#addlink)
 - [checkOrGiveAllowance](MasaContracts.md#checkorgiveallowance)
 - [getPaymentAddress](MasaContracts.md#getpaymentaddress)
 - [getPaymentInformation](MasaContracts.md#getpaymentinformation)
@@ -25,6 +26,7 @@
 - [purchaseIdentity](MasaContracts.md#purchaseidentity)
 - [purchaseIdentityAndName](MasaContracts.md#purchaseidentityandname)
 - [purchaseName](MasaContracts.md#purchasename)
+- [queryLink](MasaContracts.md#querylink)
 
 ## Constructors
 
@@ -51,6 +53,30 @@ ___
 • `Private` **masaConfig**: [`MasaConfig`](../interfaces/MasaConfig.md)
 
 ## Methods
+
+### addLink
+
+▸ **addLink**(`signer`, `tokenAddress`, `paymentMethod`, `readerIdentityId`, `ownerIdentityId`, `tokenId`, `signatureDate`, `expirationDate`, `signature`): `Promise`<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `signer` | `Signer` |
+| `tokenAddress` | `string` |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
+| `readerIdentityId` | `BigNumber` |
+| `ownerIdentityId` | `BigNumber` |
+| `tokenId` | `BigNumber` |
+| `signatureDate` | `number` |
+| `expirationDate` | `number` |
+| `signature` | `string` |
+
+#### Returns
+
+`Promise`<`boolean`\>
+
+___
 
 ### checkOrGiveAllowance
 
@@ -212,3 +238,27 @@ ___
 #### Returns
 
 `Promise`<`ContractTransaction`\>
+
+___
+
+### queryLink
+
+▸ **queryLink**(`signer`, `tokenAddress`, `paymentMethod`, `readerIdentityId`, `ownerIdentityId`, `tokenId`, `signatureDate`, `expirationDate`, `signature`): `Promise`<`string`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `signer` | `Signer` |
+| `tokenAddress` | `string` |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
+| `readerIdentityId` | `BigNumber` |
+| `ownerIdentityId` | `BigNumber` |
+| `tokenId` | `BigNumber` |
+| `signatureDate` | `number` |
+| `expirationDate` | `number` |
+| `signature` | `string` |
+
+#### Returns
+
+`Promise`<`string`\>

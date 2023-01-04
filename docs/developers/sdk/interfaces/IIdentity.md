@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.7.12](../README.md) / [Exports](../modules.md) / IIdentity
+ - v0.8.0](../README.md) / [Exports](../modules.md) / IIdentity
 
 # Interface: IIdentity
 

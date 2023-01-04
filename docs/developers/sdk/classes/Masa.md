@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.7.12](../README.md) / [Exports](../modules.md) / Masa
+ - v0.8.0](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -40,13 +40,7 @@
 
 ### account
 
-• **account**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `getBalances` | (`address?`: `string`) => `Promise`<`undefined` \| { `ethBalance`: `BigNumber` ; `identityBalance`: `BigNumber` ; `masaBalance`: `BigNumber` ; `soulNameBalance`: `BigNumber` ; `soulbound2FABalance`: `BigNumber` ; `soulboundCreditScoreBalance`: `BigNumber` ; `usdcBalance`: `BigNumber` ; `wethBalance`: `BigNumber`  }\> |
+• `Readonly` **account**: [`MasaAccount`](MasaAccount.md)
 
 ___
 
@@ -76,33 +70,13 @@ ___
 
 ### creditScore
 
-• **creditScore**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `burn` | (`creditScoreId`: `number`) => `Promise`<`boolean`\> |
-| `create` | () => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md)\> |
-| `list` | (`address?`: `string`) => `Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
-| `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
-| `mint` | (`address`: `string`, `signature`: `string`) => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md)\> |
+• `Readonly` **creditScore**: [`MasaCreditScore`](MasaCreditScore.md)
 
 ___
 
 ### identity
 
-• **identity**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `burn` | () => `Promise`<`boolean`\> |
-| `create` | () => `Promise`<`boolean`\> |
-| `createWithSoulName` | (`soulName`: `string`, `duration`: `number`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `Promise`<`boolean`\> |
-| `load` | (`address?`: `string`) => `Promise`<`undefined` \| `BigNumber`\> |
-| `show` | (`address?`: `string`) => `Promise`<`undefined` \| { `metadata?`: [`IIdentity`](../interfaces/IIdentity.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }\> |
+• `Readonly` **identity**: [`MasaIdentity`](MasaIdentity.md)
 
 ___
 
@@ -114,63 +88,26 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `retrieve` | (`url`: `string`) => `Promise`<`undefined` \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IIdentity`](../interfaces/IIdentity.md) \| [`I2FA`](../interfaces/I2FA.md)\> |
+| `retrieve` | (`url`: `string`, `additionalHeaders?`: `Record`<`string`, `string`\>) => `Promise`<`undefined` \| [`IIdentity`](../interfaces/IIdentity.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`I2FA`](../interfaces/I2FA.md)\> |
 | `store` | (`soulName`: `string`) => `Promise`<`undefined` \| { `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default`  }\> |
 
 ___
 
 ### session
 
-• **session**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `checkAllowlist` | () => `Promise`<`boolean`\> |
-| `checkLogin` | () => `Promise`<`boolean`\> |
-| `getSession` | () => `Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\> |
-| `login` | () => `Promise`<`undefined` \| { `address`: `string` ; `cookie`: `string` ; `userId`: `string` \| `BigNumber`  }\> |
-| `logout` | () => `Promise`<`undefined` \| { `status`: `string`  }\> |
-| `sessionLogout` | () => `Promise`<`undefined` \| { `status`: `string`  }\> |
+• `Readonly` **session**: [`MasaSession`](MasaSession.md)
 
 ___
 
 ### soulNames
 
-• **soulNames**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `burn` | (`soulName`: `string`) => `Promise`<`void`\> |
-| `create` | (`soulName`: `string`, `duration`: `number`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `Promise`<[`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\> |
-| `getRegistrationPrice` | (`soulName`: `string`, `duration`: `number`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `Promise`<`BigNumber`\> |
-| `list` | (`address?`: `string`) => `Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `undefined` \| `string` ; `tokenDetails`: `undefined` \| [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `undefined` \| `string`  }[]\> |
-| `loadSoulNameByName` | (`soulName`: `string`) => `Promise`<`undefined` \| { `metadata`: [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }\> |
-| `loadSoulNameByTokenId` | (`tokenId`: `string` \| `BigNumber`) => `Promise`<`undefined` \| { `metadata`: [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }\> |
-| `loadSoulNamesByIdentityId` | (`identityId`: `BigNumber`) => `Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `undefined` \| `string` ; `tokenDetails`: `undefined` \| [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `undefined` \| `string`  }[]\> |
-| `send` | (`soulName`: `string`, `receiver`: `string`) => `Promise`<`void`\> |
-| `validate` | (`soulName`: `string`) => { `isValid`: `boolean` ; `message?`: `string`  } |
-| `verify` | (`soulName`: `string`) => `Promise`<{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\> |
+• `Readonly` **soulNames**: [`MasaSoulNames`](MasaSoulNames.md)
 
 ___
 
 ### twoFA
 
-• **twoFA**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `burn` | (`twoFAId`: `number`) => `Promise`<`boolean`\> |
-| `create` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<[`Create2FAResult`](../interfaces/Create2FAResult.md)\> |
-| `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `status`: `string`  }\> |
-| `list` | (`address?`: `string`) => `Promise`<{ `metadata?`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
-| `load` | (`identityId`: `BigNumber`) => `Promise`<{ `metadata?`: [`I2FA`](../interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> |
-| `mint` | (`address`: `string`, `phoneNumber`: `string`, `code`: `string`, `signature`: `string`) => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `status`: `string`  }\> |
+• `Readonly` **twoFA**: [`Masa2FA`](Masa2FA.md)
 
 ___
 
