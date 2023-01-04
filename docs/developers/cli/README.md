@@ -36,6 +36,14 @@
       * [`masa credit-score list`](#masa-credit-score-list)
       * [`masa credit-score create`](#masa-credit-score-create)
       * [`masa credit-score burn <credit-score-id>`](#masa-credit-score-burn-credit-score-id)
+      * [`masa credit-score load <credit-score-id>`](#masa-credit-score-load-credit-score-id)
+      * [`masa credit-score link`](#masa-credit-score-link)
+        * [`masa credit-score link create <credit-score-id> <reader-identity-id>`](#masa-credit-score-link-create-credit-score-id-reader-identity-id)
+        * [`masa credit-score link establish <passport>`](#masa-credit-score-link-establish-passport)
+        * [`masa credit-score link query <passport>`](#masa-credit-score-link-query-passport)
+        * [`masa credit-score link list <credit-score-id>`](#masa-credit-score-link-list-credit-score-id)
+        * [`masa credit-score link verify <credit-score-id>`](#masa-credit-score-link-verify-credit-score-id)
+        * [`masa credit-score link break <credit-score-id> <reader-identity-id>`](#masa-credit-score-link-break-credit-score-id-reader-identity-id)
     * [`masa 2fa`](#masa-2fa)
       * [`masa 2fa info`](#masa-2fa-info)
       * [`masa 2fa list`](#masa-2fa-list)
@@ -51,12 +59,12 @@
 
 ```bash
 $ masa --help
-  __  __                            ____   _       ___ 
+  __  __                            ____   _       ___
  |  \/  |   __ _   ___    __ _     / ___| | |     |_ _|
- | |\/| |  / _` | / __|  / _` |   | |     | |      | | 
- | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | | 
+ | |\/| |  / _` | / __|  / _` |   | |     | |      | |
+ | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | |
  |_|  |_|  \__,_| |___/  \__,_|    \____| |_____| |___|
-                                                       
+
 Usage: masa [command] [subcommand] [arguments] [options]
 
 The Masa CLI
@@ -66,37 +74,45 @@ Options:
   -h, --help      display help for command
 
 Commands:
-  login                                   Login to the masa infrastructure
-  logout                                  Logout from the masa infrastructure
-  account                                 Shows information about your account
-  identity                                Identity commands
-  identity info                           Shows info about all Identities
-  identity create <soulname> <duration>   Creates a masa identity with soul name
-  identity register                       Creates a masa identity without soul name
-  identity show [options]                 Shows detail about your masa identity
-  identity burn                           Burns your masa identity
-  soul-name                               Soul Name Commands
-  soul-name info                          Shows info about all Soul Names
-  soul-name list [options]                Lists your soul names
-  soul-name create <soulname> <duration>  Creates a new soul name
-  soul-name burn <soulname>               Burns soul name that you own
-  soul-name send <soulname> <receiver>    Sends a soul name to that you own to a receiver
-  soul-name show <soulname>               Shows info about a Soul Name
-  soul-name verify <soulname>             Verifies a Soul Name
-  credit-score                            Credit Score Commands
-  credit-score info                       Shows info about all Credit Scores
-  credit-score list [options]             Lists your Credit Scores
-  credit-score create                     Creates a Credit Score
-  credit-score burn <credit-score-id>     Burns a Credit Score
-  2fa                                     2fa Commands
-  2fa info                                Shows info about all 2FAs
-  2fa list [options]                      Lists your 2FAs
-  2fa create <phone-number>               Creates a 2FA Token
-  2fa burn <2fa-id>                       Burns a 2FA
-  settings                                Set config settings
-  settings set <key> <value>              Changes setting <key> to <value>
-  settings preset <environment>           Changes setting <environment> presets
-  help [command]                          display help for command
+  login                                                             Login to the masa infrastructure
+  logout                                                            Logout from the masa infrastructure
+  account                                                           Shows information about your account
+  identity                                                          Identity commands
+  identity info                                                     Shows info about all Identities
+  identity create <soulname> <duration>                             Creates a masa identity with soul name
+  identity register                                                 Creates a masa identity without soul name
+  identity show [options]                                           Shows detail about your masa identity
+  identity burn                                                     Burns your masa identity
+  soul-name                                                         Soul Name Commands
+  soul-name info                                                    Shows info about all Soul Names
+  soul-name list [options]                                          Lists your soul names
+  soul-name create <soulname> <duration>                            Creates a new soul name
+  soul-name burn <soulname>                                         Burns soul name that you own
+  soul-name send <soulname> <receiver>                              Sends a soul name to that you own to a receiver
+  soul-name show <soulname>                                         Shows info about a Soul Name
+  soul-name verify <soulname>                                       Verifies a Soul Name
+  credit-score                                                      Credit Score Commands
+  credit-score info                                                 Shows info about all Credit Scores
+  credit-score list [options]                                       Lists your Credit Scores
+  credit-score create                                               Creates a Credit Score
+  credit-score burn <credit-score-id>                               Burns a Credit Score
+  credit-score load <credit-score-id>                               Loads a Credit Score
+  credit-score link                                                 Credit Score Soul Linker Commands
+  credit-score link create <credit-score-id> <reader-identity-id>   Creates a Soul Linker Passport
+  credit-score link establish <passport>                            Establishes a link to a Credit Score
+  credit-score link query <passport>                                Queries a link to a Credit Score
+  credit-score link list <credit-score-id>                          Lists all soul links for a credit report id
+  credit-score link verify [options] <credit-score-id>              Verifies soul link
+  credit-score link break <credit-score-id> <reader-identity-id>    Verifies soul link
+  2fa                                                               2FA Commands
+  2fa info                                                          Shows info about all 2FAs
+  2fa list [options]                                                Lists your 2FAs
+  2fa create <phone-number>                                         Creates a 2FA Token
+  2fa burn <2fa-id>                                                 Burns a 2FA
+  settings                                                          Set config settings
+  settings set <key> <value>                                        Changes setting <key> to <value>
+  settings preset <environment>                                     Changes setting <environment> presets
+  help [command]                                                    display help for command
 ```
 
 To get help for a specific command use:
@@ -267,6 +283,57 @@ Creates a Credit Score
 Burns a Credit Score
 
 - `<credit-score-id> ID of the Credit Score to burn`
+
+#### `masa credit-score load <credit-score-id>`
+
+Loads a Credit Score
+
+- `<credit-score-id> ID of the Credit Score to load`
+
+#### `masa credit-score link`
+
+Credit Score Soul Linker Commands
+
+##### `masa credit-score link create <credit-score-id> <reader-identity-id>`
+
+Creates a Soul Linker Passport
+
+- `<credit-score-id> ID of the Credit Score to grant access`
+- `<reader-identity-id> ID of the identity that should receive access`
+
+##### `masa credit-score link establish <passport>`
+
+Establishes a link to a Credit Score
+
+- `<passport> Masa Soul Linker passport`
+
+##### `masa credit-score link query <passport>`
+
+Queries a link to a Credit Score
+
+- `<passport> Masa Soul Linker passport`
+
+##### `masa credit-score link list <credit-score-id>`
+
+Lists all soul links for a credit report id
+
+- `<credit-score-id> ID of the Credit Score to list all the links of`
+
+##### `masa credit-score link verify <credit-score-id>`
+
+Verifies soul link
+
+- `<credit-score-id> ID of the Credit Score to grant access`
+  Options:
+- `-r, --reader-identity-id <reader-identity-id>`
+  ID of the identity that should receive access
+
+##### `masa credit-score link break <credit-score-id> <reader-identity-id>`
+
+Verifies soul link
+
+- `<credit-score-id> ID of the Credit Score to grant access`
+- `<reader-identity-id> ID of the identity that should receive access`
 
 ### `masa 2fa`
 
