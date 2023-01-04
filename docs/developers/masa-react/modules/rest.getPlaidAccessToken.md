@@ -1,5 +1,5 @@
 [# Masa React
- - v0.17.13](../README.md) / [Exports](../modules.md) / [rest](rest.md) / getPlaidAccessToken
+ - v0.18.0](../README.md) / [Exports](../modules.md) / [rest](rest.md) / getPlaidAccessToken
 
 # Namespace: getPlaidAccessToken
 
