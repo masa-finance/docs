@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.8.0](../README.md) / [Exports](../modules.md) / Masa
+ - v0.9.0](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -20,7 +20,7 @@
 - [identity](Masa.md#identity)
 - [metadata](Masa.md#metadata)
 - [session](Masa.md#session)
-- [soulNames](Masa.md#soulnames)
+- [soulName](Masa.md#soulname)
 - [twoFA](Masa.md#twofa)
 - [utils](Masa.md#utils)
 
@@ -89,7 +89,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `retrieve` | (`url`: `string`, `additionalHeaders?`: `Record`<`string`, `string`\>) => `Promise`<`undefined` \| [`IIdentity`](../interfaces/IIdentity.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`I2FA`](../interfaces/I2FA.md)\> |
-| `store` | (`soulName`: `string`) => `Promise`<`undefined` \| { `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default`  }\> |
+| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default` ; `signature`: `string`  }\> |
 
 ___
 
@@ -99,9 +99,9 @@ ___
 
 ___
 
-### soulNames
+### soulName
 
-• `Readonly` **soulNames**: [`MasaSoulNames`](MasaSoulNames.md)
+• `Readonly` **soulName**: [`MasaSoulName`](MasaSoulName.md)
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.8.0](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v0.9.0](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -26,7 +26,6 @@
 - [purchaseIdentity](MasaContracts.md#purchaseidentity)
 - [purchaseIdentityAndName](MasaContracts.md#purchaseidentityandname)
 - [purchaseName](MasaContracts.md#purchasename)
-- [queryLink](MasaContracts.md#querylink)
 
 ## Constructors
 
@@ -115,16 +114,16 @@ ___
 
 ### getPaymentInformation
 
-▸ **getPaymentInformation**(`name`, `paymentMethod`, `duration?`, `signer`): `Promise`<{ `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
+▸ **getPaymentInformation**(`signer`, `paymentMethod`, `nameLength`, `duration?`): `Promise`<{ `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `name` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `duration` | `number` | `1` |
 | `signer` | `Signer` | `undefined` |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
+| `nameLength` | `number` | `undefined` |
+| `duration` | `number` | `1` |
 
 #### Returns
 
@@ -203,17 +202,20 @@ ___
 
 ### purchaseIdentityAndName
 
-▸ **purchaseIdentityAndName**(`signer`, `name`, `paymentMethod`, `duration?`, `metadataURL`): `Promise`<`ContractTransaction`\>
+▸ **purchaseIdentityAndName**(`signer`, `paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`): `Promise`<`ContractTransaction`\>
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `signer` | `Signer` | `undefined` |
-| `name` | `string` | `undefined` |
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
+| `name` | `string` | `undefined` |
+| `nameLength` | `number` | `undefined` |
 | `duration` | `number` | `1` |
 | `metadataURL` | `string` | `undefined` |
+| `authorityAddress` | `string` | `undefined` |
+| `signature` | `string` | `undefined` |
 
 #### Returns
 
@@ -223,42 +225,21 @@ ___
 
 ### purchaseName
 
-▸ **purchaseName**(`signer`, `name`, `paymentMethod`, `duration?`, `metadataURL`): `Promise`<`ContractTransaction`\>
+▸ **purchaseName**(`signer`, `paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`): `Promise`<`ContractTransaction`\>
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `signer` | `Signer` | `undefined` |
-| `name` | `string` | `undefined` |
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
+| `name` | `string` | `undefined` |
+| `nameLength` | `number` | `undefined` |
 | `duration` | `number` | `1` |
 | `metadataURL` | `string` | `undefined` |
+| `authorityAddress` | `string` | `undefined` |
+| `signature` | `string` | `undefined` |
 
 #### Returns
 
 `Promise`<`ContractTransaction`\>
-
-___
-
-### queryLink
-
-▸ **queryLink**(`signer`, `tokenAddress`, `paymentMethod`, `readerIdentityId`, `ownerIdentityId`, `tokenId`, `signatureDate`, `expirationDate`, `signature`): `Promise`<`string`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `signer` | `Signer` |
-| `tokenAddress` | `string` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-| `readerIdentityId` | `BigNumber` |
-| `ownerIdentityId` | `BigNumber` |
-| `tokenId` | `BigNumber` |
-| `signatureDate` | `number` |
-| `expirationDate` | `number` |
-| `signature` | `string` |
-
-#### Returns
-
-`Promise`<`string`\>

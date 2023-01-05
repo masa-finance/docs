@@ -1,8 +1,8 @@
 [# Masa SDK
- - v0.8.0](README.md) / Exports
+ - v0.9.0](README.md) / Exports
 
 # # Masa SDK
- - v0.8.0
+ - v0.9.0
 
 ## Table of contents
 
@@ -18,7 +18,7 @@
 - [MasaIdentity](classes/MasaIdentity.md)
 - [MasaSession](classes/MasaSession.md)
 - [MasaSoulLinker](classes/MasaSoulLinker.md)
-- [MasaSoulNames](classes/MasaSoulNames.md)
+- [MasaSoulName](classes/MasaSoulName.md)
 
 ### Interfaces
 
@@ -51,6 +51,7 @@
 
 ### Variables
 
+- [ErrorMessage](modules.md#errormessage)
 - [Templates](modules.md#templates)
 - [addresses](modules.md#addresses)
 - [environments](modules.md#environments)
@@ -66,6 +67,7 @@
 - [burnIdentityById](modules.md#burnidentitybyid)
 - [burnSoulName](modules.md#burnsoulname)
 - [burnSoulNameByName](modules.md#burnsoulnamebyname)
+- [calculateSoulNameLength](modules.md#calculatesoulnamelength)
 - [checkAllowlist](modules.md#checkallowlist)
 - [checkLogin](modules.md#checklogin)
 - [create2FA](modules.md#create2fa)
@@ -175,6 +177,18 @@ ___
 Ƭ **VerifyLinkResult**: [`BaseResult`](interfaces/BaseResult.md) & { `verified?`: `boolean`  }
 
 ## Variables
+
+### ErrorMessage
+
+• `Const` **ErrorMessage**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `NoIdentity` | (`address?`: `string`) => `string` |
+
+___
 
 ### Templates
 
@@ -353,6 +367,22 @@ ___
 #### Returns
 
 `Promise`<`void`\>
+
+___
+
+### calculateSoulNameLength
+
+▸ **calculateSoulNameLength**(`soulName`): `number`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `soulName` | `string` |
+
+#### Returns
+
+`number`
 
 ___
 
@@ -974,7 +1004,7 @@ ___
 
 ### purchaseIdentityWithSoulName
 
-▸ **purchaseIdentityWithSoulName**(`masa`, `soulName`, `duration`, `paymentMethod`): `Promise`<`void`\>
+▸ **purchaseIdentityWithSoulName**(`masa`, `soulName`, `soulNameLength`, `duration`, `paymentMethod`): `Promise`<`void`\>
 
 #### Parameters
 
@@ -982,6 +1012,7 @@ ___
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
 | `soulName` | `string` |
+| `soulNameLength` | `number` |
 | `duration` | `number` |
 | `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 
@@ -1156,6 +1187,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `isValid` | `boolean` |
+| `length` | `number` |
 | `message?` | `string` |
 
 ___

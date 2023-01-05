@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.8.0](../README.md) / [Exports](../modules.md) / MasaClient
+ - v0.9.0](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -175,17 +175,19 @@ ___
 
 ### storeMetadata
 
-▸ **storeMetadata**(`soulName`): `Promise`<`undefined` \| { `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default`  }\>
+▸ **storeMetadata**(`soulName`, `receiver`, `duration`): `Promise`<`undefined` \| { `authorityAddress`: `string` ; `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default` ; `signature`: `string`  }\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `soulName` | `string` |
+| `receiver` | `string` |
+| `duration` | `number` |
 
 #### Returns
 
-`Promise`<`undefined` \| { `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default`  }\>
+`Promise`<`undefined` \| { `authorityAddress`: `string` ; `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default` ; `signature`: `string`  }\>
 
 ___
 
