@@ -10,6 +10,44 @@ Soul Store, that can mint new Soulbound Identities and Soul Name NFTs, paying a 
 
 ## Methods
 
+### addAuthority
+
+```solidity
+function addAuthority(address _authority) external nonpayable
+```
+
+Adds a new authority to the list of authorities
+
+*The caller must have the admin to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _authority | address | New authority to add |
+
+### authorities
+
+```solidity
+function authorities(address) external view returns (bool)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
 ### disablePaymentMethod
 
 ```solidity
@@ -106,7 +144,7 @@ Returns all available payment methods
 ### getNameRegistrationPricePerYear
 
 ```solidity
-function getNameRegistrationPricePerYear(string nameLength) external view returns (uint256)
+function getNameRegistrationPricePerYear(uint256 nameLength) external view returns (uint256)
 ```
 
 Returns the price of register a name per year in stable coin for an specific length
@@ -117,7 +155,7 @@ Returns the price of register a name per year in stable coin for an specific len
 
 | Name | Type | Description |
 |---|---|---|
-| nameLength | string | Length of the name |
+| nameLength | uint256 | Length of the name |
 
 #### Returns
 
@@ -128,7 +166,7 @@ Returns the price of register a name per year in stable coin for an specific len
 ### getPriceForMintingName
 
 ```solidity
-function getPriceForMintingName(address paymentMethod, string name, uint256 yearsPeriod) external view returns (uint256)
+function getPriceForMintingName(address paymentMethod, uint256 nameLength, uint256 yearsPeriod) external view returns (uint256)
 ```
 
 Returns the price of the name minting
@@ -140,7 +178,7 @@ Returns the price of the name minting
 | Name | Type | Description |
 |---|---|---|
 | paymentMethod | address | Address of token that user want to pay |
-| name | string | Name of the new soul name |
+| nameLength | uint256 | Length of the name |
 | yearsPeriod | uint256 | Years of validity of the name |
 
 #### Returns
@@ -253,7 +291,7 @@ Mints a new Soulbound Identity purchasing it
 ### purchaseIdentityAndName
 
 ```solidity
-function purchaseIdentityAndName(address paymentMethod, string name, uint256 yearsPeriod, string _tokenURI) external payable returns (uint256)
+function purchaseIdentityAndName(address paymentMethod, string name, uint256 nameLength, uint256 yearsPeriod, string tokenURI, address authorityAddress, bytes signature) external payable returns (uint256)
 ```
 
 Mints a new Soulbound Identity and Name purchasing it
@@ -266,8 +304,11 @@ Mints a new Soulbound Identity and Name purchasing it
 |---|---|---|
 | paymentMethod | address | Address of token that user want to pay |
 | name | string | Name of the new soul name |
+| nameLength | uint256 | Length of the name |
 | yearsPeriod | uint256 | Years of validity of the name |
-| _tokenURI | string | URI of the NFT |
+| tokenURI | string | URI of the NFT |
+| authorityAddress | address | Address of the authority |
+| signature | bytes | Signature of the authority |
 
 #### Returns
 
@@ -278,7 +319,7 @@ Mints a new Soulbound Identity and Name purchasing it
 ### purchaseName
 
 ```solidity
-function purchaseName(address paymentMethod, string name, uint256 yearsPeriod, string _tokenURI, address to) external payable returns (uint256)
+function purchaseName(address paymentMethod, address to, string name, uint256 nameLength, uint256 yearsPeriod, string tokenURI, address authorityAddress, bytes signature) external payable returns (uint256)
 ```
 
 Mints a new Soul Name purchasing it
@@ -290,10 +331,13 @@ Mints a new Soul Name purchasing it
 | Name | Type | Description |
 |---|---|---|
 | paymentMethod | address | Address of token that user want to pay |
+| to | address | Address of the owner of the new soul name |
 | name | string | Name of the new soul name |
+| nameLength | uint256 | Length of the name |
 | yearsPeriod | uint256 | Years of validity of the name |
-| _tokenURI | string | URI of the NFT |
-| to | address | Address of the new owner of the soul name |
+| tokenURI | string | URI of the NFT |
+| authorityAddress | address | Address of the authority |
+| signature | bytes | Signature of the authority |
 
 #### Returns
 
@@ -692,6 +736,17 @@ error InvalidPaymentMethod(address paymentMethod)
 |---|---|---|
 | paymentMethod | address | undefined |
 
+### InvalidSignature
+
+```solidity
+error InvalidSignature()
+```
+
+
+
+
+
+
 ### InvalidToken
 
 ```solidity
@@ -723,6 +778,22 @@ error NonExistingErc20Token(address erc20token)
 | Name | Type | Description |
 |---|---|---|
 | erc20token | address | undefined |
+
+### NotAuthorized
+
+```solidity
+error NotAuthorized(address signer)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| signer | address | undefined |
 
 ### RefundFailed
 
