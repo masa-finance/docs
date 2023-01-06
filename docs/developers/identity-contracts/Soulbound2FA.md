@@ -551,6 +551,22 @@ function queryLinkPriceMASA() external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
+### removeAuthority
+
+```solidity
+function removeAuthority(address _authority) external nonpayable
+```
+
+Removes an authority from the list of authorities
+
+*The caller must have the admin to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _authority | address | Authority to remove |
+
 ### renounceOwnership
 
 ```solidity
@@ -1156,6 +1172,22 @@ error AlreadyAdded()
 
 
 
+
+### AuthorityNotExists
+
+```solidity
+error AuthorityNotExists(address authority)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| authority | address | undefined |
 
 ### CallerNotOwner
 
