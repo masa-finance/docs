@@ -1,5 +1,5 @@
 [# Masa React
- - v0.18.0](../README.md) / [Exports](../modules.md) / [rest](rest.md) / sessionLogout
+ - v0.19.0](../README.md) / [Exports](../modules.md) / [rest](rest.md) / sessionLogout
 
 # Namespace: sessionLogout
 
