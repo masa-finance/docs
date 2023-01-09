@@ -32,9 +32,9 @@ field.
 
 #### Configuration
 
-- `Owner`: [`0x3c8D9f130970358b7E8cbc1DbD0a1EbA6EBE368F`](https://goerli.etherscan.io/address/0x3c8D9f130970358b7E8cbc1DbD0a1EbA6EBE368F)
+- `Admin`: [`0xA38dd237a3A8D50537B74a4B0D4E7E8A5359386F`](https://goerli.etherscan.io/address/0xA38dd237a3A8D50537B74a4B0D4E7E8A5359386F)
 
-The `owner` is allowed to mint SBTs.
+The `admin` is allowed to set configuration variables in the smart contracts.
 
 - `BASE_URI`: https://beta.metadata.masa.finance/v1.0
 
@@ -43,7 +43,7 @@ The base url for the Metadata url that is beeing generated from the contract
 ## Roles
 
 - `deployer`: Deploys the contract, has no rights after everything has properlty handed over to other roles
-- `owner`: Delegated to the Masa Service account inside the Masa API. It has the rights to administrate the smart
+- `admin`: Delegated to the Masa Service account inside the Masa API. It has the rights to administrate the smart
   contracts
 - `minter`: Minter role. It has the rights to mint tokens to customers wallets.
 
@@ -63,9 +63,9 @@ The base url for the Metadata url that is beeing generated from the contract
 ### Preparations
 
 * Set `DEPLOYER_PRIVATE_KEY` to the deployers private key in `.env.{network}.secret`
-* Set `COINMARKETCAP_API_KEY` to the Infura API key in `.env`, if needed
+* Set `COINMARKETCAP_API_KEY` to the CoinMarketCap API key in `.env`, if needed
 * Set `INFURA_API_KEY` to the Infura API key in `.env`, if needed
-* Set `ETHERSCAN_API_KEY` to the Infura API key in `.env`, if needed
+* Set `ETHERSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
 
 ### Deploy
 
