@@ -189,7 +189,7 @@ function setReserveWallet(address _reserveWallet) external nonpayable
 
 Set the reserve wallet
 
-*Let change the reserve walled. It can be triggered by an authorized account.*
+*The caller must have the owner to call this function*
 
 #### Parameters
 
