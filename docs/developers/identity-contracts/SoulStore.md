@@ -10,6 +10,23 @@ Soul Store, that can mint new Soulbound Identities and Soul Name NFTs, paying a 
 
 ## Methods
 
+### DEFAULT_ADMIN_ROLE
+
+```solidity
+function DEFAULT_ADMIN_ROLE() external view returns (bytes32)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bytes32 | undefined |
+
 ### addAuthority
 
 ```solidity
@@ -56,7 +73,7 @@ function disablePaymentMethod(address _paymentMethod) external nonpayable
 
 Removes a token as a valid payment method
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -72,7 +89,7 @@ function enablePaymentMethod(address _paymentMethod) external nonpayable
 
 Adds a new token as a valid payment method
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -187,6 +204,68 @@ Returns the price of the name minting
 |---|---|---|
 | _0 | uint256 | Current price of the name minting in the given payment method |
 
+### getRoleAdmin
+
+```solidity
+function getRoleAdmin(bytes32 role) external view returns (bytes32)
+```
+
+
+
+*Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role&#39;s admin, use {_setRoleAdmin}.*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role | bytes32 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bytes32 | undefined |
+
+### grantRole
+
+```solidity
+function grantRole(bytes32 role, address account) external nonpayable
+```
+
+
+
+*Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``&#39;s admin role. May emit a {RoleGranted} event.*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role | bytes32 | undefined |
+| account | address | undefined |
+
+### hasRole
+
+```solidity
+function hasRole(bytes32 role, address account) external view returns (bool)
+```
+
+
+
+*Returns `true` if `account` has been granted `role`.*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role | bytes32 | undefined |
+| account | address | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
 ### masaToken
 
 ```solidity
@@ -226,23 +305,6 @@ function nameRegistrationPricePerYear(uint256) external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
-### owner
-
-```solidity
-function owner() external view returns (address)
-```
-
-
-
-*Returns the address of the current owner.*
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
-
 ### pause
 
 ```solidity
@@ -251,7 +313,7 @@ function pause() external nonpayable
 
 Pauses the smart contract
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 
 ### paused
@@ -361,16 +423,22 @@ Removes an authority from the list of authorities
 |---|---|---|
 | _authority | address | Authority to remove |
 
-### renounceOwnership
+### renounceRole
 
 ```solidity
-function renounceOwnership() external nonpayable
+function renounceRole(bytes32 role, address account) external nonpayable
 ```
 
 
 
-*Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.*
+*Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function&#39;s purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`. May emit a {RoleRevoked} event.*
 
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role | bytes32 | undefined |
+| account | address | undefined |
 
 ### reserveWallet
 
@@ -389,6 +457,23 @@ function reserveWallet() external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
+### revokeRole
+
+```solidity
+function revokeRole(bytes32 role, address account) external nonpayable
+```
+
+
+
+*Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``&#39;s admin role. May emit a {RoleRevoked} event.*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role | bytes32 | undefined |
+| account | address | undefined |
+
 ### setMasaToken
 
 ```solidity
@@ -397,7 +482,7 @@ function setMasaToken(address _masaToken) external nonpayable
 
 Sets the utility token to pay the fee in (MASA)
 
-*The caller must have the owner to call this function It can be set to address(0) to disable paying in MASA*
+*The caller must have the admin role to call this function It can be set to address(0) to disable paying in MASA*
 
 #### Parameters
 
@@ -413,7 +498,7 @@ function setNameRegistrationPricePerYear(uint256 _nameLength, uint256 _nameRegis
 
 Sets the price of the name registering per one year in stable coin
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -430,7 +515,7 @@ function setReserveWallet(address _reserveWallet) external nonpayable
 
 Set the reserve wallet
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -446,7 +531,7 @@ function setSoulboundIdentity(contract ISoulboundIdentity _soulboundIdentity) ex
 
 Sets the SoulboundIdentity contract address linked to this store
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -462,7 +547,7 @@ function setStableCoin(address _stableCoin) external nonpayable
 
 Sets the stable coin to pay the fee in (USDC)
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -478,7 +563,7 @@ function setSwapRouter(address _swapRouter) external nonpayable
 
 Sets the swap router address
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -494,7 +579,7 @@ function setWrappedNativeToken(address _wrappedNativeToken) external nonpayable
 
 Sets the wrapped native token address
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -536,6 +621,28 @@ function stableCoin() external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
+### supportsInterface
+
+```solidity
+function supportsInterface(bytes4 interfaceId) external view returns (bool)
+```
+
+
+
+*See {IERC165-supportsInterface}.*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| interfaceId | bytes4 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
 ### swapRouter
 
 ```solidity
@@ -553,22 +660,6 @@ function swapRouter() external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
-### transferOwnership
-
-```solidity
-function transferOwnership(address newOwner) external nonpayable
-```
-
-
-
-*Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| newOwner | address | undefined |
-
 ### unpause
 
 ```solidity
@@ -577,7 +668,7 @@ function unpause() external nonpayable
 
 Unpauses the smart contract
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 
 ### wrappedNativeToken
@@ -601,23 +692,6 @@ function wrappedNativeToken() external view returns (address)
 
 ## Events
 
-### OwnershipTransferred
-
-```solidity
-event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| previousOwner `indexed` | address | undefined |
-| newOwner `indexed` | address | undefined |
-
 ### Paused
 
 ```solidity
@@ -633,6 +707,60 @@ event Paused(address account)
 | Name | Type | Description |
 |---|---|---|
 | account  | address | undefined |
+
+### RoleAdminChanged
+
+```solidity
+event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role `indexed` | bytes32 | undefined |
+| previousAdminRole `indexed` | bytes32 | undefined |
+| newAdminRole `indexed` | bytes32 | undefined |
+
+### RoleGranted
+
+```solidity
+event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role `indexed` | bytes32 | undefined |
+| account `indexed` | address | undefined |
+| sender `indexed` | address | undefined |
+
+### RoleRevoked
+
+```solidity
+event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role `indexed` | bytes32 | undefined |
+| account `indexed` | address | undefined |
+| sender `indexed` | address | undefined |
 
 ### SoulNamePurchased
 

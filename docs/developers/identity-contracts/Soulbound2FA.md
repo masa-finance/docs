@@ -145,7 +145,7 @@ function disablePaymentMethod(address _paymentMethod) external nonpayable
 
 Removes a token as a valid payment method
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -161,7 +161,7 @@ function enablePaymentMethod(address _paymentMethod) external nonpayable
 
 Adds a new token as a valid payment method
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -478,23 +478,6 @@ function name() external view returns (string)
 |---|---|---|
 | _0 | string | undefined |
 
-### owner
-
-```solidity
-function owner() external view returns (address)
-```
-
-
-
-*Returns the address of the current owner.*
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
-
 ### ownerOf
 
 ```solidity
@@ -566,17 +549,6 @@ Removes an authority from the list of authorities
 | Name | Type | Description |
 |---|---|---|
 | _authority | address | Authority to remove |
-
-### renounceOwnership
-
-```solidity
-function renounceOwnership() external nonpayable
-```
-
-
-
-*Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.*
-
 
 ### renounceRole
 
@@ -669,7 +641,7 @@ function setMasaToken(address _masaToken) external nonpayable
 
 Sets the utility token to pay the fee in (MASA)
 
-*The caller must have the owner to call this function It can be set to address(0) to disable paying in MASA*
+*The caller must have the admin role to call this function It can be set to address(0) to disable paying in MASA*
 
 #### Parameters
 
@@ -749,7 +721,7 @@ function setReserveWallet(address _reserveWallet) external nonpayable
 
 Set the reserve wallet
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -781,7 +753,7 @@ function setStableCoin(address _stableCoin) external nonpayable
 
 Sets the stable coin to pay the fee in (USDC)
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -797,7 +769,7 @@ function setSwapRouter(address _swapRouter) external nonpayable
 
 Sets the swap router address
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -813,7 +785,7 @@ function setWrappedNativeToken(address _wrappedNativeToken) external nonpayable
 
 Sets the wrapped native token address
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -995,22 +967,6 @@ function totalSupply() external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
-### transferOwnership
-
-```solidity
-function transferOwnership(address newOwner) external nonpayable
-```
-
-
-
-*Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| newOwner | address | undefined |
-
 ### wrappedNativeToken
 
 ```solidity
@@ -1065,23 +1021,6 @@ event Mint(address indexed _owner, uint256 indexed _tokenId)
 |---|---|---|
 | _owner `indexed` | address | undefined |
 | _tokenId `indexed` | uint256 | undefined |
-
-### OwnershipTransferred
-
-```solidity
-event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| previousOwner `indexed` | address | undefined |
-| newOwner `indexed` | address | undefined |
 
 ### RoleAdminChanged
 
