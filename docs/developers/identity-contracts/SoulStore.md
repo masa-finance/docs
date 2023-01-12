@@ -18,7 +18,7 @@ function addAuthority(address _authority) external nonpayable
 
 Adds a new authority to the list of authorities
 
-*The caller must have the admin to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -353,7 +353,7 @@ function removeAuthority(address _authority) external nonpayable
 
 Removes an authority from the list of authorities
 
-*The caller must have the admin to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 

@@ -298,7 +298,7 @@ function setAddLinkPrice(uint256 _addLinkPrice) external nonpayable
 
 Sets the price for adding the link in SoulLinker in stable coin
 
-*The caller must have the admin to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -314,7 +314,7 @@ function setAddLinkPriceMASA(uint256 _addLinkPriceMASA) external nonpayable
 
 Sets the price for adding the link in SoulLinker in MASA
 
-*The caller must have the admin to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -330,7 +330,7 @@ function setQueryLinkPrice(uint256 _queryLinkPrice) external nonpayable
 
 Sets the price for reading data in SoulLinker in stable coin
 
-*The caller must have the admin to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -346,7 +346,7 @@ function setQueryLinkPriceMASA(uint256 _queryLinkPriceMASA) external nonpayable
 
 Sets the price for reading data in SoulLinker in MASA
 
-*The caller must have the admin to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 

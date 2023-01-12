@@ -622,7 +622,7 @@ function setContractURI(string _contractURI) external nonpayable
 
 Sets the URI of the smart contract metadata
 
-*The caller must have the admin to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -638,7 +638,7 @@ function setExtension(string _extension) external nonpayable
 
 Sets the extension of the soul name
 
-*The caller must have the admin to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -654,7 +654,7 @@ function setSoulboundIdentity(contract ISoulboundIdentity _soulboundIdentity) ex
 
 Sets the SoulboundIdentity contract address linked to this soul name
 
-*The caller must have the admin to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
