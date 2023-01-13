@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.9.1](../README.md) / [Exports](../modules.md) / MasaArgs
+ - v1.0.0](../README.md) / [Exports](../modules.md) / MasaArgs
 
 # Interface: MasaArgs
 
@@ -57,4 +57,4 @@ ___
 
 ### wallet
 
-• **wallet**: `Wallet` \| `Signer`
+• **wallet**: `Signer` \| `Wallet`

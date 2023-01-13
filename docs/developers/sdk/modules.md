@@ -1,8 +1,8 @@
 [# Masa SDK
- - v0.9.1](README.md) / Exports
+ - v1.0.0](README.md) / Exports
 
 # # Masa SDK
- - v0.9.1
+ - v1.0.0
 
 ## Table of contents
 
@@ -388,7 +388,7 @@ ___
 
 ### checkAllowlist
 
-▸ **checkAllowlist**(`masa`): `Promise`<`boolean`\>
+▸ **checkAllowlist**(`masa`): `Promise`<`any`\>
 
 #### Parameters
 
@@ -398,7 +398,7 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`<`any`\>
 
 ___
 
@@ -1102,7 +1102,7 @@ ___
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `msg` | `any` | `undefined` |
-| `wallet` | `Wallet` \| `Signer` | `undefined` |
+| `wallet` | `Signer` \| `Wallet` | `undefined` |
 | `doHash` | `boolean` | `false` |
 
 #### Returns

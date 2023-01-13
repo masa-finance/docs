@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.9.1](../README.md) / [Exports](../modules.md) / Masa
+ - v1.0.0](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -28,7 +28,7 @@
 
 ### constructor
 
-• **new Masa**(`__namedParameters?`)
+• **new Masa**(`__namedParameters`)
 
 #### Parameters
 

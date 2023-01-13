@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.9.1](../README.md) / [Exports](../modules.md) / MasaClient
+ - v1.0.0](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -73,11 +73,11 @@ ___
 
 ### allowlistCheck
 
-▸ **allowlistCheck**(): `Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\>
+▸ **allowlistCheck**(): `Promise`<`undefined` \| { `endDate`: `string` ; `isActive`: `boolean` ; `success`: `boolean` ; `wallet`: `string`  }\>
 
 #### Returns
 
-`Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\>
+`Promise`<`undefined` \| { `endDate`: `string` ; `isActive`: `boolean` ; `success`: `boolean` ; `wallet`: `string`  }\>
 
 ___
 

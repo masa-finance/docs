@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.9.1](../README.md) / [Exports](../modules.md) / MasaSession
+ - v1.0.0](../README.md) / [Exports](../modules.md) / MasaSession
 
 # Class: MasaSession
 
@@ -44,11 +44,11 @@
 
 ### checkAllowlist
 
-▸ **checkAllowlist**(): `Promise`<`boolean`\>
+▸ **checkAllowlist**(): `Promise`<`any`\>
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`<`any`\>
 
 ___
 
