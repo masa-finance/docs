@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.0.0](../README.md) / [Exports](../modules.md) / MasaArgs
+ - v1.0.2](../README.md) / [Exports](../modules.md) / MasaArgs
 
 # Interface: MasaArgs
 
@@ -45,7 +45,7 @@ ___
 
 ### environment
 
-• `Optional` **environment**: `string`
+• `Optional` **environment**: ``"dev"`` \| ``"test"`` \| ``"beta"`` \| ``"production"``
 
 ___
 

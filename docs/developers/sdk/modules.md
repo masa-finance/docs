@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.0.0](README.md) / Exports
+ - v1.0.2](README.md) / Exports
 
 # # Masa SDK
- - v1.0.0
+ - v1.0.2
 
 ## Table of contents
 
@@ -133,7 +133,7 @@ ___
 
 ### Environment
 
-Ƭ **Environment**: { `name`: `string` ; `wallet?`: `ethers.Signer` \| `ethers.Wallet`  } & [`MasaArgs`](interfaces/MasaArgs.md)
+Ƭ **Environment**: { `name`: ``"local"`` \| ``"dev"`` \| ``"test"`` \| ``"stage"`` \| ``"production"`` ; `wallet?`: `ethers.Signer` \| `ethers.Wallet`  } & [`MasaArgs`](interfaces/MasaArgs.md)
 
 ___
 

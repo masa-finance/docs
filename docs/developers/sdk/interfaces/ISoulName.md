@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.0.0](../README.md) / [Exports](../modules.md) / ISoulName
+ - v1.0.2](../README.md) / [Exports](../modules.md) / ISoulName
 
 # Interface: ISoulName
 
@@ -40,7 +40,7 @@ ___
 
 ### external\_url
 
-• **external\_url**: ``"https://beta.claimyoursoul.masa.finance"``
+• **external\_url**: ``"https://testnet.app.masa.finance"`` \| ``"https://app.masa.finance"``
 
 ___
 
