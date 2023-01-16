@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.0.2](README.md) / Exports
+ - v1.0.3](README.md) / Exports
 
 # # Masa SDK
- - v1.0.2
+ - v1.0.3
 
 ## Table of contents
 
@@ -43,6 +43,7 @@
 - [CreateCreditScoreResult](modules.md#createcreditscoreresult)
 - [CreateLinkResult](modules.md#createlinkresult)
 - [Environment](modules.md#environment)
+- [EnvironmentName](modules.md#environmentname)
 - [EstablishLinkResult](modules.md#establishlinkresult)
 - [Link](modules.md#link)
 - [ListLinksResult](modules.md#listlinksresult)
@@ -134,6 +135,12 @@ ___
 ### Environment
 
 Ƭ **Environment**: { `name`: ``"local"`` \| ``"dev"`` \| ``"test"`` \| ``"stage"`` \| ``"production"`` ; `wallet?`: `ethers.Signer` \| `ethers.Wallet`  } & [`MasaArgs`](interfaces/MasaArgs.md)
+
+___
+
+### EnvironmentName
+
+Ƭ **EnvironmentName**: ``"dev"`` \| ``"test"`` \| ``"beta"`` \| ``"production"``
 
 ___
 

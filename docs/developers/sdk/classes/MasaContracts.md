@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.0.2](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v1.0.3](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -114,7 +114,7 @@ ___
 
 ### getPaymentInformation
 
-▸ **getPaymentInformation**(`signer`, `paymentMethod`, `nameLength`, `duration?`): `Promise`<{ `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
+▸ **getPaymentInformation**(`signer`, `paymentMethod`, `nameLength`, `duration?`, `slippage?`): `Promise`<{ `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
 
 #### Parameters
 
@@ -124,6 +124,7 @@ ___
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
 | `nameLength` | `number` | `undefined` |
 | `duration` | `number` | `1` |
+| `slippage` | `undefined` \| `number` | `250` |
 
 #### Returns
 

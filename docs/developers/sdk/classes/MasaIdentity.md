@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.0.2](../README.md) / [Exports](../modules.md) / MasaIdentity
+ - v1.0.3](../README.md) / [Exports](../modules.md) / MasaIdentity
 
 # Class: MasaIdentity
 
