@@ -1,5 +1,5 @@
 [# Masa React
- - v0.20.0](../README.md) / [Exports](../modules.md) / [rest](rest.md) / postClient
+ - v0.20.1](../README.md) / [Exports](../modules.md) / [rest](rest.md) / postClient
 
 # Namespace: postClient
 
