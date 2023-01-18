@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.0.3](../README.md) / [Exports](../modules.md) / Masa2FA
+ - v1.0.4](../README.md) / [Exports](../modules.md) / Masa2FA
 
 # Class: Masa2FA
 

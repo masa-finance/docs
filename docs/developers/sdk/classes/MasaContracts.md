@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.0.3](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v1.0.4](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -55,21 +55,22 @@ ___
 
 ### addLink
 
-▸ **addLink**(`signer`, `tokenAddress`, `paymentMethod`, `readerIdentityId`, `ownerIdentityId`, `tokenId`, `signatureDate`, `expirationDate`, `signature`): `Promise`<`boolean`\>
+▸ **addLink**(`signer`, `tokenAddress`, `paymentMethod`, `readerIdentityId`, `ownerIdentityId`, `tokenId`, `signatureDate`, `expirationDate`, `signature`, `slippage?`): `Promise`<`boolean`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `signer` | `Signer` |
-| `tokenAddress` | `string` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-| `readerIdentityId` | `BigNumber` |
-| `ownerIdentityId` | `BigNumber` |
-| `tokenId` | `BigNumber` |
-| `signatureDate` | `number` |
-| `expirationDate` | `number` |
-| `signature` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `signer` | `Signer` | `undefined` |
+| `tokenAddress` | `string` | `undefined` |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
+| `readerIdentityId` | `BigNumber` | `undefined` |
+| `ownerIdentityId` | `BigNumber` | `undefined` |
+| `tokenId` | `BigNumber` | `undefined` |
+| `signatureDate` | `number` | `undefined` |
+| `expirationDate` | `number` | `undefined` |
+| `signature` | `string` | `undefined` |
+| `slippage` | `undefined` \| `number` | `250` |
 
 #### Returns
 
@@ -166,18 +167,19 @@ ___
 
 ### mintCreditScore
 
-▸ **mintCreditScore**(`wallet`, `paymentMethod`, `identityId`, `authorityAddress`, `signatureDate`, `signature`): `Promise`<`ContractTransaction`\>
+▸ **mintCreditScore**(`wallet`, `paymentMethod`, `identityId`, `authorityAddress`, `signatureDate`, `signature`, `slippage?`): `Promise`<`ContractTransaction`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `wallet` | `Wallet` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-| `identityId` | `BigNumber` |
-| `authorityAddress` | `string` |
-| `signatureDate` | `number` |
-| `signature` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `wallet` | `Wallet` | `undefined` |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
+| `identityId` | `BigNumber` | `undefined` |
+| `authorityAddress` | `string` | `undefined` |
+| `signatureDate` | `number` | `undefined` |
+| `signature` | `string` | `undefined` |
+| `slippage` | `undefined` \| `number` | `250` |
 
 #### Returns
 
