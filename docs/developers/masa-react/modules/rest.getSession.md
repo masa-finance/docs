@@ -1,5 +1,5 @@
 [# Masa React
- - v0.20.1](../README.md) / [Exports](../modules.md) / [rest](rest.md) / getSession
+ - v0.20.2](../README.md) / [Exports](../modules.md) / [rest](rest.md) / getSession
 
 # Namespace: getSession
 
