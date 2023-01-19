@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.0.4](../README.md) / [Exports](../modules.md) / MasaSession
+ - v1.1.0](../README.md) / [Exports](../modules.md) / MasaSession
 
 # Class: MasaSession
 
@@ -74,11 +74,11 @@ ___
 
 ### login
 
-▸ **login**(): `Promise`<`undefined` \| { `address`: `string` ; `cookie`: `string` ; `userId`: `string` \| `BigNumber`  }\>
+▸ **login**(): `Promise`<`undefined` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\>
 
 #### Returns
 
-`Promise`<`undefined` \| { `address`: `string` ; `cookie`: `string` ; `userId`: `string` \| `BigNumber`  }\>
+`Promise`<`undefined` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\>
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.0.4](../README.md) / [Exports](../modules.md) / MasaClient
+ - v1.1.0](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -37,15 +37,15 @@
 
 ### constructor
 
-• **new MasaClient**(`__namedParameters`)
+• **new MasaClient**(`«destructured»`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `Object` |
-| `__namedParameters.apiUrl` | `string` |
-| `__namedParameters.cookie?` | `string` |
+| `«destructured»` | `Object` |
+| › `apiUrl` | `string` |
+| › `cookie?` | `string` |
 
 ## Properties
 
@@ -128,11 +128,11 @@ ___
 
 ### getChallenge
 
-▸ **getChallenge**(): `Promise`<`any`\>
+▸ **getChallenge**(): `Promise`<`undefined` \| { `challenge`: `string` ; `cookie?`: `string` ; `expires`: `string`  }\>
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`<`undefined` \| { `challenge`: `string` ; `cookie?`: `string` ; `expires`: `string`  }\>
 
 ___
 
@@ -228,7 +228,7 @@ ___
 
 ### updateCreditScore
 
-▸ **updateCreditScore**(`transactionHash`): `Promise`<`undefined` \| { `creditScore?`: `any` ; `message`: `string` ; `signature?`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
+▸ **updateCreditScore**(`transactionHash`): `Promise`<`undefined` \| { `message`: `string` ; `signature?`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
 
 #### Parameters
 
@@ -238,4 +238,4 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `creditScore?`: `any` ; `message`: `string` ; `signature?`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
+`Promise`<`undefined` \| { `message`: `string` ; `signature?`: `string` ; `status`: `string` ; `success`: `boolean`  }\>

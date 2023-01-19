@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.0.4](../README.md) / [Exports](../modules.md) / Masa
+ - v1.1.0](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -28,13 +28,13 @@
 
 ### constructor
 
-• **new Masa**(`__namedParameters`)
+• **new Masa**(`«destructured»`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | [`MasaArgs`](../interfaces/MasaArgs.md) |
+| `«destructured»` | [`MasaArgs`](../interfaces/MasaArgs.md) |
 
 ## Properties
 

@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.0.4](README.md) / Exports
+ - v1.1.0](README.md) / Exports
 
 # # Masa SDK
- - v1.0.4
+ - v1.1.0
 
 ## Table of contents
 
@@ -37,6 +37,7 @@
 - [LoadContractArgs](interfaces/LoadContractArgs.md)
 - [MasaArgs](interfaces/MasaArgs.md)
 - [MasaConfig](interfaces/MasaConfig.md)
+- [SoulNameDetails](interfaces/SoulNameDetails.md)
 
 ### Type Aliases
 
@@ -100,6 +101,7 @@
 - [loadSoulNameByTokenId](modules.md#loadsoulnamebytokenid)
 - [loadSoulNamesByAddress](modules.md#loadsoulnamesbyaddress)
 - [loadSoulNamesByIdentityId](modules.md#loadsoulnamesbyidentityid)
+- [loadSoulNamesByName](modules.md#loadsoulnamesbyname)
 - [login](modules.md#login)
 - [logout](modules.md#logout)
 - [patchMetadataUrl](modules.md#patchmetadataurl)
@@ -224,17 +226,17 @@ ___
 
 ### arweave
 
-▸ **arweave**(`__namedParameters`): [`MasaArweave`](classes/MasaArweave.md)
+▸ **arweave**(`«destructured»`): [`MasaArweave`](classes/MasaArweave.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `Object` |
-| `__namedParameters.host` | `string` |
-| `__namedParameters.logging?` | `boolean` |
-| `__namedParameters.port` | `number` |
-| `__namedParameters.protocol` | `string` |
+| `«destructured»` | `Object` |
+| › `host` | `string` |
+| › `logging?` | `boolean` |
+| › `port` | `number` |
+| › `protocol` | `string` |
 
 #### Returns
 
@@ -709,7 +711,7 @@ ___
 
 ### listSoulNames
 
-▸ **listSoulNames**(`masa`, `address?`): `Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](interfaces/ISoulName.md) ; `owner`: `undefined` \| `string` ; `tokenDetails`: `undefined` \| [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `undefined` \| `string`  }[]\>
+▸ **listSoulNames**(`masa`, `address?`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
@@ -720,7 +722,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](interfaces/ISoulName.md) ; `owner`: `undefined` \| `string` ; `tokenDetails`: `undefined` \| [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `undefined` \| `string`  }[]\>
+`Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 ___
 
@@ -811,13 +813,13 @@ ___
 
 ### loadIdentityContracts
 
-▸ **loadIdentityContracts**(`__namedParameters`): [`IIdentityContracts`](interfaces/IIdentityContracts.md)
+▸ **loadIdentityContracts**(`«destructured»`): [`IIdentityContracts`](interfaces/IIdentityContracts.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | [`LoadContractArgs`](interfaces/LoadContractArgs.md) |
+| `«destructured»` | [`LoadContractArgs`](interfaces/LoadContractArgs.md) |
 
 #### Returns
 
@@ -862,7 +864,7 @@ ___
 
 ### loadSoulNameByName
 
-▸ **loadSoulNameByName**(`masa`, `soulName`): `Promise`<`undefined` \| { `metadata`: [`ISoulName`](interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }\>
+▸ **loadSoulNameByName**(`masa`, `soulName`): `Promise`<`undefined` \| [`SoulNameDetails`](interfaces/SoulNameDetails.md)\>
 
 #### Parameters
 
@@ -873,13 +875,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `metadata`: [`ISoulName`](interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }\>
+`Promise`<`undefined` \| [`SoulNameDetails`](interfaces/SoulNameDetails.md)\>
 
 ___
 
 ### loadSoulNameByTokenId
 
-▸ **loadSoulNameByTokenId**(`masa`, `tokenId`): `Promise`<`undefined` \| { `metadata`: [`ISoulName`](interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }\>
+▸ **loadSoulNameByTokenId**(`masa`, `tokenId`): `Promise`<`undefined` \| [`SoulNameDetails`](interfaces/SoulNameDetails.md)\>
 
 #### Parameters
 
@@ -890,13 +892,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `metadata`: [`ISoulName`](interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }\>
+`Promise`<`undefined` \| [`SoulNameDetails`](interfaces/SoulNameDetails.md)\>
 
 ___
 
 ### loadSoulNamesByAddress
 
-▸ **loadSoulNamesByAddress**(`masa`, `address`): `Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](interfaces/ISoulName.md) ; `owner`: `undefined` \| `string` ; `tokenDetails`: `undefined` \| [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `undefined` \| `string`  }[]\>
+▸ **loadSoulNamesByAddress**(`masa`, `address`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
@@ -907,13 +909,13 @@ ___
 
 #### Returns
 
-`Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](interfaces/ISoulName.md) ; `owner`: `undefined` \| `string` ; `tokenDetails`: `undefined` \| [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `undefined` \| `string`  }[]\>
+`Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 ___
 
 ### loadSoulNamesByIdentityId
 
-▸ **loadSoulNamesByIdentityId**(`masa`, `identityId`): `Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](interfaces/ISoulName.md) ; `owner`: `undefined` \| `string` ; `tokenDetails`: `undefined` \| [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `undefined` \| `string`  }[]\>
+▸ **loadSoulNamesByIdentityId**(`masa`, `identityId`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
@@ -924,13 +926,30 @@ ___
 
 #### Returns
 
-`Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](interfaces/ISoulName.md) ; `owner`: `undefined` \| `string` ; `tokenDetails`: `undefined` \| [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `undefined` \| `string`  }[]\>
+`Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+
+___
+
+### loadSoulNamesByName
+
+▸ **loadSoulNamesByName**(`masa`, `soulNames`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `soulNames` | `string`[] |
+
+#### Returns
+
+`Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 ___
 
 ### login
 
-▸ **login**(`masa`): `Promise`<`undefined` \| { `address`: `string` ; `cookie`: `string` ; `userId`: `string` \| `BigNumber`  }\>
+▸ **login**(`masa`): `Promise`<`undefined` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\>
 
 #### Parameters
 
@@ -940,7 +959,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `address`: `string` ; `cookie`: `string` ; `userId`: `string` \| `BigNumber`  }\>
+`Promise`<`undefined` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\>
 
 ___
 
@@ -979,13 +998,14 @@ ___
 
 ### printSoulName
 
-▸ **printSoulName**(`soulName`): `void`
+▸ **printSoulName**(`soulName`, `index?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `soulName` | `any` |
+| `soulName` | [`SoulNameDetails`](interfaces/SoulNameDetails.md) |
+| `index?` | `number` |
 
 #### Returns
 
@@ -1037,7 +1057,7 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `msg` | `any` | `undefined` |
+| `msg` | `string` | `undefined` |
 | `signature` | `string` | `undefined` |
 | `doHash` | `boolean` | `false` |
 
@@ -1108,7 +1128,7 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `msg` | `any` | `undefined` |
+| `msg` | `string` | `undefined` |
 | `wallet` | `Signer` \| `Wallet` | `undefined` |
 | `doHash` | `boolean` | `false` |
 

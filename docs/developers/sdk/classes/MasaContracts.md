@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.0.4](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v1.1.0](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -205,7 +205,7 @@ ___
 
 ### purchaseIdentityAndName
 
-▸ **purchaseIdentityAndName**(`signer`, `paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`): `Promise`<`ContractTransaction`\>
+▸ **purchaseIdentityAndName**(`signer`, `paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`, `debug?`): `Promise`<`ContractTransaction`\>
 
 #### Parameters
 
@@ -219,6 +219,7 @@ ___
 | `metadataURL` | `string` | `undefined` |
 | `authorityAddress` | `string` | `undefined` |
 | `signature` | `string` | `undefined` |
+| `debug` | `boolean` | `false` |
 
 #### Returns
 
@@ -228,7 +229,7 @@ ___
 
 ### purchaseName
 
-▸ **purchaseName**(`signer`, `paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`): `Promise`<`ContractTransaction`\>
+▸ **purchaseName**(`signer`, `paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`, `debug?`): `Promise`<`ContractTransaction`\>
 
 #### Parameters
 
@@ -242,6 +243,7 @@ ___
 | `metadataURL` | `string` | `undefined` |
 | `authorityAddress` | `string` | `undefined` |
 | `signature` | `string` | `undefined` |
+| `debug` | `boolean` | `false` |
 
 #### Returns
 

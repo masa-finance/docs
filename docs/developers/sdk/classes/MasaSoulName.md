@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.0.4](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v1.1.0](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
@@ -100,7 +100,7 @@ ___
 
 ### list
 
-▸ **list**(`address?`): `Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `undefined` \| `string` ; `tokenDetails`: `undefined` \| [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `undefined` \| `string`  }[]\>
+▸ **list**(`address?`): `Promise`<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
@@ -110,13 +110,13 @@ ___
 
 #### Returns
 
-`Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `undefined` \| `string` ; `tokenDetails`: `undefined` \| [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `undefined` \| `string`  }[]\>
+`Promise`<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
 
 ___
 
 ### loadSoulNameByName
 
-▸ **loadSoulNameByName**(`soulName`): `Promise`<`undefined` \| { `metadata`: [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }\>
+▸ **loadSoulNameByName**(`soulName`): `Promise`<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
 
 #### Parameters
 
@@ -126,13 +126,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `metadata`: [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }\>
+`Promise`<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
 
 ___
 
 ### loadSoulNameByTokenId
 
-▸ **loadSoulNameByTokenId**(`tokenId`): `Promise`<`undefined` \| { `metadata`: [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }\>
+▸ **loadSoulNameByTokenId**(`tokenId`): `Promise`<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
 
 #### Parameters
 
@@ -142,13 +142,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `metadata`: [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `string` ; `tokenDetails`: [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `string`  }\>
+`Promise`<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
 
 ___
 
 ### loadSoulNamesByIdentityId
 
-▸ **loadSoulNamesByIdentityId**(`identityId`): `Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `undefined` \| `string` ; `tokenDetails`: `undefined` \| [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `undefined` \| `string`  }[]\>
+▸ **loadSoulNamesByIdentityId**(`identityId`): `Promise`<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
@@ -158,7 +158,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `index`: `number` ; `metadata`: `undefined` \| [`ISoulName`](../interfaces/ISoulName.md) ; `owner`: `undefined` \| `string` ; `tokenDetails`: `undefined` \| [`string`, `boolean`, `BigNumber`, `BigNumber`, `BigNumber`, `boolean`] & { `active`: `boolean` ; `expirationDate`: `BigNumber` ; `identityId`: `BigNumber` ; `linked`: `boolean` ; `sbtName`: `string` ; `tokenId`: `BigNumber`  } ; `tokenUri`: `undefined` \| `string`  }[]\>
+`Promise`<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
 
 ___
 
