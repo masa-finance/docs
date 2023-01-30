@@ -1,20 +1,20 @@
 [# Masa SDK
- - v1.1.1](README.md) / Exports
+ - v1.2.0-alpha.1](README.md) / Exports
 
 # # Masa SDK
- - v1.1.1
+ - v1.2.0-alpha.1
 
 ## Table of contents
 
 ### Classes
 
 - [Masa](classes/Masa.md)
-- [Masa2FA](classes/Masa2FA.md)
 - [MasaAccount](classes/MasaAccount.md)
 - [MasaArweave](classes/MasaArweave.md)
 - [MasaClient](classes/MasaClient.md)
 - [MasaContracts](classes/MasaContracts.md)
 - [MasaCreditScore](classes/MasaCreditScore.md)
+- [MasaGreen](classes/MasaGreen.md)
 - [MasaIdentity](classes/MasaIdentity.md)
 - [MasaSession](classes/MasaSession.md)
 - [MasaSoulLinker](classes/MasaSoulLinker.md)
@@ -25,10 +25,10 @@
 - [Addresses](interfaces/Addresses.md)
 - [Attribute](interfaces/Attribute.md)
 - [BaseResult](interfaces/BaseResult.md)
-- [Create2FAResult](interfaces/Create2FAResult.md)
+- [CreateGreenResult](interfaces/CreateGreenResult.md)
 - [CreateSoulNameResult](interfaces/CreateSoulNameResult.md)
-- [I2FA](interfaces/I2FA.md)
 - [ICreditScore](interfaces/ICreditScore.md)
+- [IGreen](interfaces/IGreen.md)
 - [IIdentity](interfaces/IIdentity.md)
 - [IIdentityContracts](interfaces/IIdentityContracts.md)
 - [IPassport](interfaces/IPassport.md)
@@ -48,12 +48,13 @@
 - [EstablishLinkResult](modules.md#establishlinkresult)
 - [Link](modules.md#link)
 - [ListLinksResult](modules.md#listlinksresult)
+- [NetworkName](modules.md#networkname)
 - [PaymentMethod](modules.md#paymentmethod)
 - [VerifyLinkResult](modules.md#verifylinkresult)
 
 ### Variables
 
-- [ErrorMessage](modules.md#errormessage)
+- [Messages](modules.md#messages)
 - [Templates](modules.md#templates)
 - [addresses](modules.md#addresses)
 - [environments](modules.md#environments)
@@ -61,19 +62,18 @@
 ### Functions
 
 - [arweave](modules.md#arweave)
-- [burn2FA](modules.md#burn2fa)
-- [burn2FAById](modules.md#burn2fabyid)
 - [burnCreditScore](modules.md#burncreditscore)
 - [burnCreditScoreById](modules.md#burncreditscorebyid)
+- [burnGreen](modules.md#burngreen)
+- [burnGreenById](modules.md#burngreenbyid)
 - [burnIdentity](modules.md#burnidentity)
 - [burnIdentityById](modules.md#burnidentitybyid)
 - [burnSoulName](modules.md#burnsoulname)
 - [burnSoulNameByName](modules.md#burnsoulnamebyname)
 - [calculateSoulNameLength](modules.md#calculatesoulnamelength)
-- [checkAllowlist](modules.md#checkallowlist)
 - [checkLogin](modules.md#checklogin)
-- [create2FA](modules.md#create2fa)
 - [createCreditScore](modules.md#createcreditscore)
+- [createGreen](modules.md#creategreen)
 - [createIdentity](modules.md#createidentity)
 - [createIdentityWithSoulName](modules.md#createidentitywithsoulname)
 - [createLink](modules.md#createlink)
@@ -85,14 +85,14 @@
 - [getBalances](modules.md#getbalances)
 - [getRegistrationPrice](modules.md#getregistrationprice)
 - [getSession](modules.md#getsession)
-- [list2FAs](modules.md#list2fas)
 - [listCreditScores](modules.md#listcreditscores)
+- [listGreens](modules.md#listgreens)
 - [listLinks](modules.md#listlinks)
 - [listSoulNames](modules.md#listsoulnames)
-- [load2FAsByIdentityId](modules.md#load2fasbyidentityid)
 - [loadAddressFromIdentityId](modules.md#loadaddressfromidentityid)
 - [loadCreditScoreByTokenId](modules.md#loadcreditscorebytokenid)
 - [loadCreditScoresByIdentityId](modules.md#loadcreditscoresbyidentityid)
+- [loadGreensByIdentityId](modules.md#loadgreensbyidentityid)
 - [loadIdentityByAddress](modules.md#loadidentitybyaddress)
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
 - [loadIdentityDetails](modules.md#loadidentitydetails)
@@ -175,6 +175,12 @@ ___
 
 ___
 
+### NetworkName
+
+Ƭ **NetworkName**: ``"goerli"`` \| ``"mainnet"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"``
+
+___
+
 ### PaymentMethod
 
 Ƭ **PaymentMethod**: ``"eth"`` \| ``"weth"`` \| ``"stable"`` \| ``"utility"``
@@ -187,15 +193,16 @@ ___
 
 ## Variables
 
-### ErrorMessage
+### Messages
 
-• `Const` **ErrorMessage**: `Object`
+• `Const` **Messages**: `Object`
 
 #### Type declaration
 
 | Name | Type |
 | :------ | :------ |
 | `NoIdentity` | (`address?`: `string`) => `string` |
+| `WaitingToFinalize` | (`txHash`: `string`) => `string` |
 
 ___
 
@@ -244,40 +251,6 @@ ___
 
 ___
 
-### burn2FA
-
-▸ **burn2FA**(`masa`, `twoFAId`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `twoFAId` | `number` |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
-___
-
-### burn2FAById
-
-▸ **burn2FAById**(`masa`, `twoFAId`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `twoFAId` | `number` |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
-___
-
 ### burnCreditScore
 
 ▸ **burnCreditScore**(`masa`, `creditScoreId`): `Promise`<`boolean`\>
@@ -305,6 +278,40 @@ ___
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
 | `creditScoreId` | `BigNumber` |
+
+#### Returns
+
+`Promise`<`boolean`\>
+
+___
+
+### burnGreen
+
+▸ **burnGreen**(`masa`, `greenId`): `Promise`<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `greenId` | `number` |
+
+#### Returns
+
+`Promise`<`boolean`\>
+
+___
+
+### burnGreenById
+
+▸ **burnGreenById**(`masa`, `greenId`): `Promise`<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `greenId` | `number` |
 
 #### Returns
 
@@ -395,22 +402,6 @@ ___
 
 ___
 
-### checkAllowlist
-
-▸ **checkAllowlist**(`masa`): `Promise`<`any`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-
-#### Returns
-
-`Promise`<`any`\>
-
-___
-
 ### checkLogin
 
 ▸ **checkLogin**(`masa`): `Promise`<`boolean`\>
@@ -424,24 +415,6 @@ ___
 #### Returns
 
 `Promise`<`boolean`\>
-
-___
-
-### create2FA
-
-▸ **create2FA**(`masa`, `phoneNumber`, `code`): `Promise`<[`Create2FAResult`](interfaces/Create2FAResult.md)\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `phoneNumber` | `string` |
-| `code` | `string` |
-
-#### Returns
-
-`Promise`<[`Create2FAResult`](interfaces/Create2FAResult.md)\>
 
 ___
 
@@ -459,6 +432,25 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| [`BaseResult`](interfaces/BaseResult.md)\>
+
+___
+
+### createGreen
+
+▸ **createGreen**(`masa`, `phoneNumber`, `code`, `paymentMethod?`): `Promise`<[`CreateGreenResult`](interfaces/CreateGreenResult.md)\>
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
+| `phoneNumber` | `string` | `undefined` |
+| `code` | `string` | `undefined` |
+| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) | `"eth"` |
+
+#### Returns
+
+`Promise`<[`CreateGreenResult`](interfaces/CreateGreenResult.md)\>
 
 ___
 
@@ -657,23 +649,6 @@ ___
 
 ___
 
-### list2FAs
-
-▸ **list2FAs**(`masa`, `address?`): `Promise`<{ `metadata?`: [`I2FA`](interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `address?` | `string` |
-
-#### Returns
-
-`Promise`<{ `metadata?`: [`I2FA`](interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
-
-___
-
 ### listCreditScores
 
 ▸ **listCreditScores**(`masa`, `address?`): `Promise`<{ `metadata?`: [`ICreditScore`](interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
@@ -688,6 +663,23 @@ ___
 #### Returns
 
 `Promise`<{ `metadata?`: [`ICreditScore`](interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+___
+
+### listGreens
+
+▸ **listGreens**(`masa`, `address?`): `Promise`<{ `metadata?`: [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `address?` | `string` |
+
+#### Returns
+
+`Promise`<{ `metadata?`: [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 ___
 
@@ -723,23 +715,6 @@ ___
 #### Returns
 
 `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
-
-___
-
-### load2FAsByIdentityId
-
-▸ **load2FAsByIdentityId**(`masa`, `identityId`): `Promise`<{ `metadata?`: [`I2FA`](interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `identityId` | `BigNumber` |
-
-#### Returns
-
-`Promise`<{ `metadata?`: [`I2FA`](interfaces/I2FA.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 ___
 
@@ -791,6 +766,23 @@ ___
 #### Returns
 
 `Promise`<{ `metadata?`: [`ICreditScore`](interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+___
+
+### loadGreensByIdentityId
+
+▸ **loadGreensByIdentityId**(`masa`, `identityId`): `Promise`<{ `metadata?`: [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `identityId` | `BigNumber` |
+
+#### Returns
+
+`Promise`<{ `metadata?`: [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 ___
 

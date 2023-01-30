@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.1.1](../README.md) / [Exports](../modules.md) / BaseResult
+ - v1.2.0-alpha.1](../README.md) / [Exports](../modules.md) / BaseResult
 
 # Interface: BaseResult
 
@@ -7,7 +7,7 @@
 
 - **`BaseResult`**
 
-  ↳ [`Create2FAResult`](Create2FAResult.md)
+  ↳ [`CreateGreenResult`](CreateGreenResult.md)
 
   ↳ [`CreateSoulNameResult`](CreateSoulNameResult.md)
 

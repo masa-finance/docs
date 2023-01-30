@@ -1,22 +1,22 @@
 [# Masa SDK
- - v1.1.1](../README.md) / [Exports](../modules.md) / Create2FAResult
+ - v1.2.0-alpha.1](../README.md) / [Exports](../modules.md) / CreateGreenResult
 
-# Interface: Create2FAResult
+# Interface: CreateGreenResult
 
 ## Hierarchy
 
 - [`BaseResult`](BaseResult.md)
 
-  ↳ **`Create2FAResult`**
+  ↳ **`CreateGreenResult`**
 
 ## Table of contents
 
 ### Properties
 
-- [message](Create2FAResult.md#message)
-- [status](Create2FAResult.md#status)
-- [success](Create2FAResult.md#success)
-- [tokenId](Create2FAResult.md#tokenid)
+- [message](CreateGreenResult.md#message)
+- [status](CreateGreenResult.md#status)
+- [success](CreateGreenResult.md#success)
+- [tokenId](CreateGreenResult.md#tokenid)
 
 ## Properties
 

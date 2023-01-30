@@ -1,16 +1,16 @@
 [# Masa SDK
- - v1.1.1](../README.md) / [Exports](../modules.md) / I2FA
+ - v1.2.0-alpha.1](../README.md) / [Exports](../modules.md) / IGreen
 
-# Interface: I2FA
+# Interface: IGreen
 
 ## Table of contents
 
 ### Properties
 
-- [description](I2FA.md#description)
-- [image](I2FA.md#image)
-- [name](I2FA.md#name)
-- [properties](I2FA.md#properties)
+- [description](IGreen.md#description)
+- [image](IGreen.md#image)
+- [name](IGreen.md#name)
+- [properties](IGreen.md#properties)
 
 ## Properties
 
@@ -28,7 +28,7 @@ ___
 
 ### name
 
-• **name**: ``"Masa Soulbound 2FA v1.0.0"``
+• **name**: ``"Masa Soulbound Green 2FA v1.0.0"``
 
 ___
 

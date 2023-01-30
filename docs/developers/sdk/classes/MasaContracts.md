@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.1.1](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v1.2.0-alpha.1](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -11,21 +11,14 @@
 
 ### Properties
 
+- [creditScore](MasaContracts.md#creditscore)
+- [green](MasaContracts.md#green)
 - [identity](MasaContracts.md#identity)
+- [instances](MasaContracts.md#instances)
 - [masaConfig](MasaContracts.md#masaconfig)
-
-### Methods
-
-- [addLink](MasaContracts.md#addlink)
-- [checkOrGiveAllowance](MasaContracts.md#checkorgiveallowance)
-- [getPaymentAddress](MasaContracts.md#getpaymentaddress)
-- [getPaymentInformation](MasaContracts.md#getpaymentinformation)
-- [getSoulNames](MasaContracts.md#getsoulnames)
-- [isAvailable](MasaContracts.md#isavailable)
-- [mintCreditScore](MasaContracts.md#mintcreditscore)
-- [purchaseIdentity](MasaContracts.md#purchaseidentity)
-- [purchaseIdentityAndName](MasaContracts.md#purchaseidentityandname)
-- [purchaseName](MasaContracts.md#purchasename)
+- [soulLinker](MasaContracts.md#soullinker)
+- [soulName](MasaContracts.md#soulname)
+- [tools](MasaContracts.md#tools)
 
 ## Constructors
 
@@ -41,9 +34,46 @@
 
 ## Properties
 
+### creditScore
+
+• **creditScore**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `mint` | (`wallet`: `Wallet`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `identityId`: `BigNumber`, `authorityAddress`: `string`, `signatureDate`: `number`, `signature`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`ContractTransaction`\> |
+
+___
+
+### green
+
+• **green**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `mint` | (`wallet`: `Wallet`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `identityId`: `BigNumber`, `authorityAddress`: `string`, `signatureDate`: `number`, `signature`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`ContractTransaction`\> |
+
+___
+
 ### identity
 
-• **identity**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
+• **identity**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `purchase` | (`signer`: `Signer`) => `Promise`<`ContractTransaction`\> |
+| `purchaseIdentityAndName` | (`signer`: `Signer`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `nameLength`: `number`, `duration`: `number`, `metadataURL`: `string`, `authorityAddress`: `string`, `signature`: `string`, `debug`: `boolean`) => `Promise`<`ContractTransaction`\> |
+
+___
+
+### instances
+
+• **instances**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
 
 ___
 
@@ -51,200 +81,42 @@ ___
 
 • `Private` **masaConfig**: [`MasaConfig`](../interfaces/MasaConfig.md)
 
-## Methods
-
-### addLink
-
-▸ **addLink**(`signer`, `tokenAddress`, `paymentMethod`, `readerIdentityId`, `ownerIdentityId`, `tokenId`, `signatureDate`, `expirationDate`, `signature`, `slippage?`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `signer` | `Signer` | `undefined` |
-| `tokenAddress` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `readerIdentityId` | `BigNumber` | `undefined` |
-| `ownerIdentityId` | `BigNumber` | `undefined` |
-| `tokenId` | `BigNumber` | `undefined` |
-| `signatureDate` | `number` | `undefined` |
-| `expirationDate` | `number` | `undefined` |
-| `signature` | `string` | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
 ___
 
-### checkOrGiveAllowance
+### soulLinker
 
-▸ `Private` **checkOrGiveAllowance**(`paymentAddress`, `signer`, `paymentMethod`, `price`): `Promise`<`undefined` \| `ContractReceipt`\>
+• **soulLinker**: `Object`
 
-#### Parameters
+#### Type declaration
 
 | Name | Type |
 | :------ | :------ |
-| `paymentAddress` | `string` |
-| `signer` | `Signer` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-| `price` | `BigNumber` |
-
-#### Returns
-
-`Promise`<`undefined` \| `ContractReceipt`\>
+| `addLink` | (`signer`: `Signer`, `tokenAddress`: `string`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `readerIdentityId`: `BigNumber`, `ownerIdentityId`: `BigNumber`, `tokenId`: `BigNumber`, `signatureDate`: `number`, `expirationDate`: `number`, `signature`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`boolean`\> |
 
 ___
 
-### getPaymentAddress
+### soulName
 
-▸ `Private` **getPaymentAddress**(`paymentMethod`): `string`
+• **soulName**: `Object`
 
-#### Parameters
+#### Type declaration
 
 | Name | Type |
 | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-
-#### Returns
-
-`string`
-
-___
-
-### getPaymentInformation
-
-▸ **getPaymentInformation**(`signer`, `paymentMethod`, `nameLength`, `duration?`, `slippage?`): `Promise`<{ `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `signer` | `Signer` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `nameLength` | `number` | `undefined` |
-| `duration` | `number` | `1` |
-| `slippage` | `undefined` \| `number` | `250` |
-
-#### Returns
-
-`Promise`<{ `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
+| `getPrice` | (`signer`: `Signer`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `nameLength`: `number`, `duration`: `number`, `slippage`: `undefined` \| `number`) => `Promise`<{ `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> |
+| `getSoulNames` | (`address`: `string`) => `Promise`<`string`[]\> |
+| `isAvailable` | (`soulName`: `string`) => `Promise`<`boolean`\> |
+| `purchase` | (`signer`: `Signer`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `nameLength`: `number`, `duration`: `number`, `metadataURL`: `string`, `authorityAddress`: `string`, `signature`: `string`, `debug`: `boolean`) => `Promise`<`ContractTransaction`\> |
 
 ___
 
-### getSoulNames
+### tools
 
-▸ **getSoulNames**(`address`): `Promise`<`string`[]\>
+• `Private` **tools**: `Object`
 
-#### Parameters
+#### Type declaration
 
 | Name | Type |
 | :------ | :------ |
-| `address` | `string` |
-
-#### Returns
-
-`Promise`<`string`[]\>
-
-___
-
-### isAvailable
-
-▸ **isAvailable**(`soulName`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `soulName` | `string` |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
-___
-
-### mintCreditScore
-
-▸ **mintCreditScore**(`wallet`, `paymentMethod`, `identityId`, `authorityAddress`, `signatureDate`, `signature`, `slippage?`): `Promise`<`ContractTransaction`\>
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `wallet` | `Wallet` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `identityId` | `BigNumber` | `undefined` |
-| `authorityAddress` | `string` | `undefined` |
-| `signatureDate` | `number` | `undefined` |
-| `signature` | `string` | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
-
-#### Returns
-
-`Promise`<`ContractTransaction`\>
-
-___
-
-### purchaseIdentity
-
-▸ **purchaseIdentity**(`signer`): `Promise`<`ContractTransaction`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `signer` | `Signer` |
-
-#### Returns
-
-`Promise`<`ContractTransaction`\>
-
-___
-
-### purchaseIdentityAndName
-
-▸ **purchaseIdentityAndName**(`signer`, `paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`, `debug?`): `Promise`<`ContractTransaction`\>
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `signer` | `Signer` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `name` | `string` | `undefined` |
-| `nameLength` | `number` | `undefined` |
-| `duration` | `number` | `1` |
-| `metadataURL` | `string` | `undefined` |
-| `authorityAddress` | `string` | `undefined` |
-| `signature` | `string` | `undefined` |
-| `debug` | `boolean` | `false` |
-
-#### Returns
-
-`Promise`<`ContractTransaction`\>
-
-___
-
-### purchaseName
-
-▸ **purchaseName**(`signer`, `paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`, `debug?`): `Promise`<`ContractTransaction`\>
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `signer` | `Signer` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `name` | `string` | `undefined` |
-| `nameLength` | `number` | `undefined` |
-| `duration` | `number` | `1` |
-| `metadataURL` | `string` | `undefined` |
-| `authorityAddress` | `string` | `undefined` |
-| `signature` | `string` | `undefined` |
-| `debug` | `boolean` | `false` |
-
-#### Returns
-
-`Promise`<`ContractTransaction`\>
+| `checkOrGiveAllowance` | (`paymentAddress`: `string`, `signer`: `Signer`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `price`: `BigNumber`) => `Promise`<`undefined` \| `ContractReceipt`\> |
+| `getPaymentAddress` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `string` |

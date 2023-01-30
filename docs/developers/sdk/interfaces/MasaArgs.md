@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.1.1](../README.md) / [Exports](../modules.md) / MasaArgs
+ - v1.2.0-alpha.1](../README.md) / [Exports](../modules.md) / MasaArgs
 
 # Interface: MasaArgs
 
@@ -51,7 +51,7 @@ ___
 
 ### network
 
-• `Optional` **network**: `string`
+• `Optional` **network**: [`NetworkName`](../modules.md#networkname)
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.1.1](../README.md) / [Exports](../modules.md) / MasaCreditScore
+ - v1.2.0-alpha.1](../README.md) / [Exports](../modules.md) / MasaCreditScore
 
 # Class: MasaCreditScore
 
@@ -20,7 +20,6 @@
 - [create](MasaCreditScore.md#create)
 - [list](MasaCreditScore.md#list)
 - [load](MasaCreditScore.md#load)
-- [mint](MasaCreditScore.md#mint)
 
 ## Constructors
 
@@ -103,20 +102,3 @@ ___
 #### Returns
 
 `Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }\>
-
-___
-
-### mint
-
-▸ **mint**(`address`, `signature`): `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md)\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `signature` | `string` |
-
-#### Returns
-
-`Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md)\>

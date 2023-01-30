@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.1.1](../README.md) / [Exports](../modules.md) / MasaSession
+ - v1.2.0-alpha.1](../README.md) / [Exports](../modules.md) / MasaSession
 
 # Class: MasaSession
 
@@ -15,7 +15,6 @@
 
 ### Methods
 
-- [checkAllowlist](MasaSession.md#checkallowlist)
 - [checkLogin](MasaSession.md#checklogin)
 - [getSession](MasaSession.md#getsession)
 - [login](MasaSession.md#login)
@@ -41,16 +40,6 @@
 • `Private` **masa**: [`Masa`](Masa.md)
 
 ## Methods
-
-### checkAllowlist
-
-▸ **checkAllowlist**(): `Promise`<`any`\>
-
-#### Returns
-
-`Promise`<`any`\>
-
-___
 
 ### checkLogin
 
