@@ -44,11 +44,11 @@
         * [`masa credit-score link list <credit-score-id>`](#masa-credit-score-link-list-credit-score-id)
         * [`masa credit-score link verify <credit-score-id>`](#masa-credit-score-link-verify-credit-score-id)
         * [`masa credit-score link break <credit-score-id> <reader-identity-id>`](#masa-credit-score-link-break-credit-score-id-reader-identity-id)
-    * [`masa 2fa`](#masa-2fa)
-      * [`masa 2fa info`](#masa-2fa-info)
-      * [`masa 2fa list`](#masa-2fa-list)
-      * [`masa 2fa create <phone-number>`](#masa-2fa-create-phone-number)
-      * [`masa 2fa burn <2fa-id>`](#masa-2fa-burn-2fa-id)
+    * [`masa green`](#masa-green)
+      * [`masa green info`](#masa-green-info)
+      * [`masa green list`](#masa-green-list)
+      * [`masa green create <phone-number>`](#masa-green-create-phone-number)
+      * [`masa green burn <green-id>`](#masa-green-burn-green-id)
     * [`masa settings`](#masa-settings)
       * [`masa settings set <key> <value>`](#masa-settings-set-key-value)
       * [`masa settings preset <environment>`](#masa-settings-preset-environment)
@@ -104,11 +104,11 @@ Commands:
   credit-score link list <credit-score-id>                          Lists all soul links for a credit report id
   credit-score link verify [options] <credit-score-id>              Verifies soul link
   credit-score link break <credit-score-id> <reader-identity-id>    Verifies soul link
-  2fa                                                               2FA Commands
-  2fa info                                                          Shows info about all 2FAs
-  2fa list [options]                                                Lists your 2FAs
-  2fa create <phone-number>                                         Creates a 2FA Token
-  2fa burn <2fa-id>                                                 Burns a 2FA
+  green                                                             Green Commands
+  green info                                                        Shows info about Masa Green
+  green list [options]                                              Lists your Greens
+  green create <phone-number>                                       Creates a Green Token
+  green burn <green-id>                                             Burns a green
   settings                                                          Set config settings
   settings set <key> <value>                                        Changes setting <key> to <value>
   settings preset <environment>                                     Changes setting <environment> presets
@@ -321,7 +321,7 @@ Lists all soul links for a credit report id
 
 ##### `masa credit-score link verify <credit-score-id>`
 
-Verifies soul link
+Verifies a Soul Link
 
 - `<credit-score-id> ID of the Credit Score to grant access`
   Options:
@@ -330,39 +330,39 @@ Verifies soul link
 
 ##### `masa credit-score link break <credit-score-id> <reader-identity-id>`
 
-Verifies soul link
+Breaks a Soul Link
 
 - `<credit-score-id> ID of the Credit Score to grant access`
 - `<reader-identity-id> ID of the identity that should receive access`
 
-### `masa 2fa`
+### `masa green`
 
-2FA Commands
+Green Commands
 
-#### `masa 2fa info`
+#### `masa green info`
 
-Shows info about all 2FAs
+Shows info about Masa Green
 
-#### `masa 2fa list`
+#### `masa green list`
 
-Lists your 2FAs
+Lists your Greens
 
 Options:
 
 - `-a, --address <address>`
   Address override
 
-#### `masa 2fa create <phone-number>`
+#### `masa green create <phone-number>`
 
-Creates a 2FA Token
+Creates a Green Token
 
 - `<phone-number> The phone number to verify`
 
-#### `masa 2fa burn <2fa-id>`
+#### `masa green burn <green-id>`
 
-Burns a 2FA
+Burns a green
 
-- `<2fa-id> ID of the 2FA to burn`
+- `<green-id> ID of the Green to burn`
 
 ### `masa settings`
 
