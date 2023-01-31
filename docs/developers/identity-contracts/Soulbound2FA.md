@@ -391,9 +391,9 @@ Mints a new SBT
 |---|---|---|
 | paymentMethod | address | Address of token that user want to pay |
 | identityId | uint256 | TokenId of the identity to mint the NFT to |
-| authorityAddress | address | undefined |
-| signatureDate | uint256 | undefined |
-| signature | bytes | undefined |
+| authorityAddress | address | Address of the authority that signed the message |
+| signatureDate | uint256 | Date of the signature |
+| signature | bytes | Signature of the message |
 
 #### Returns
 
@@ -417,9 +417,9 @@ Mints a new SBT
 |---|---|---|
 | paymentMethod | address | Address of token that user want to pay |
 | to | address | The address to mint the SBT to |
-| authorityAddress | address | undefined |
-| signatureDate | uint256 | undefined |
-| signature | bytes | undefined |
+| authorityAddress | address | Address of the authority that signed the message |
+| signatureDate | uint256 | Date of the signature |
+| signature | bytes | Signature of the message |
 
 #### Returns
 
@@ -1076,10 +1076,31 @@ event RoleRevoked(bytes32 indexed role, address indexed account, address indexed
 | account `indexed` | address | undefined |
 | sender `indexed` | address | undefined |
 
-### Soulbound2FAMinted
+### Soulbound2FAMintedToAddress
 
 ```solidity
-event Soulbound2FAMinted(uint256 tokenId, uint256 identityId, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
+event Soulbound2FAMintedToAddress(uint256 tokenId, address to, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId  | uint256 | undefined |
+| to  | address | undefined |
+| authorityAddress  | address | undefined |
+| signatureDate  | uint256 | undefined |
+| paymentMethod  | address | undefined |
+| mintPrice  | uint256 | undefined |
+
+### Soulbound2FAMintedToIdentity
+
+```solidity
+event Soulbound2FAMintedToIdentity(uint256 tokenId, uint256 identityId, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
 ```
 
 
@@ -1234,6 +1255,17 @@ error NotAuthorized(address signer)
 | Name | Type | Description |
 |---|---|---|
 | signer | address | undefined |
+
+### NotLinkedToAnIdentitySBT
+
+```solidity
+error NotLinkedToAnIdentitySBT()
+```
+
+
+
+
+
 
 ### RefundFailed
 
