@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.2.0-alpha.3](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v1.2.0-alpha.4](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 

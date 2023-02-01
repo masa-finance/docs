@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.2.0-alpha.3](README.md) / Exports
+ - v1.2.0-alpha.4](README.md) / Exports
 
 # # Masa SDK
- - v1.2.0-alpha.3
+ - v1.2.0-alpha.4
 
 ## Table of contents
 
@@ -221,7 +221,6 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `loginTemplate` | (`challenge`: `string`, `expires`: `string`) => `string` |
-| `twoFATemplate` | (`identityId`: `string`, `phoneNumber`: `string`, `code`: `string`) => `string` |
 
 ___
 
