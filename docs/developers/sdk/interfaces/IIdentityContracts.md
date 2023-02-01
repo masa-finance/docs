@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.2.0-alpha.1](../README.md) / [Exports](../modules.md) / IIdentityContracts
+ - v1.2.0-alpha.3](../README.md) / [Exports](../modules.md) / IIdentityContracts
 
 # Interface: IIdentityContracts
 
@@ -10,8 +10,8 @@
 - [SoulLinkerContract](IIdentityContracts.md#soullinkercontract)
 - [SoulNameContract](IIdentityContracts.md#soulnamecontract)
 - [SoulStoreContract](IIdentityContracts.md#soulstorecontract)
-- [Soulbound2FAContract](IIdentityContracts.md#soulbound2facontract)
 - [SoulboundCreditScoreContract](IIdentityContracts.md#soulboundcreditscorecontract)
+- [SoulboundGreenContract](IIdentityContracts.md#soulboundgreencontract)
 - [SoulboundIdentityContract](IIdentityContracts.md#soulboundidentitycontract)
 
 ## Properties
@@ -34,15 +34,15 @@ ___
 
 ___
 
-### Soulbound2FAContract
-
-• **Soulbound2FAContract**: `Soulbound2FA`
-
-___
-
 ### SoulboundCreditScoreContract
 
 • **SoulboundCreditScoreContract**: `SoulboundCreditScore`
+
+___
+
+### SoulboundGreenContract
+
+• **SoulboundGreenContract**: `SoulboundGreen`
 
 ___
 

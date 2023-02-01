@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.2.0-alpha.1](../README.md) / [Exports](../modules.md) / Addresses
+ - v1.2.0-alpha.3](../README.md) / [Exports](../modules.md) / Addresses
 
 # Interface: Addresses
 
 ## Indexable
 
-▪ [index: `string`]: { `MASA?`: `string` ; `SoulLinkerAddress`: `string` ; `SoulNameAddress`: `string` ; `SoulStoreAddress`: `string` ; `Soulbound2FAAddress?`: `string` ; `SoulboundCreditScoreAddress`: `string` ; `SoulboundIdentityAddress`: `string` ; `USDC`: `string` ; `WETH?`: `string`  }
+▪ [index: `string`]: { `MASA?`: `string` ; `SoulLinkerAddress?`: `string` ; `SoulNameAddress?`: `string` ; `SoulStoreAddress?`: `string` ; `SoulboundCreditScoreAddress?`: `string` ; `SoulboundGreenAddress?`: `string` ; `SoulboundIdentityAddress?`: `string` ; `USDC?`: `string` ; `WETH?`: `string`  }

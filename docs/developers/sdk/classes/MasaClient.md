@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.2.0-alpha.1](../README.md) / [Exports](../modules.md) / MasaClient
+ - v1.2.0-alpha.3](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -73,7 +73,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `status`: `string`  }\> |
-| `verify` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `authorityAddress?`: `string` ; `signature?`: `string` ; `signatureDate?`: `number` ; `status`: `string`  }\> |
+| `verify` | (`phoneNumber`: `string`, `code`: `string`, `network`: `string`) => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `authorityAddress?`: `string` ; `signature?`: `string` ; `signatureDate?`: `number` ; `status`: `string`  }\> |
 
 ___
 

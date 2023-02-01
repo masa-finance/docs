@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.2.0-alpha.1](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v1.2.0-alpha.3](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -43,6 +43,9 @@
 | Name | Type |
 | :------ | :------ |
 | `mint` | (`wallet`: `Wallet`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `identityId`: `BigNumber`, `authorityAddress`: `string`, `signatureDate`: `number`, `signature`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`ContractTransaction`\> |
+| `sign` | (`wallet`: `Wallet`, `identityId`: `BigNumber`) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\> |
+| `types` | { `MintCreditScore`: { `name`: `string` = "identityId"; `type`: `string` = "uint256" }[]  } |
+| `types.MintCreditScore` | { `name`: `string` = "identityId"; `type`: `string` = "uint256" }[] |
 
 ___
 
@@ -54,7 +57,10 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `mint` | (`wallet`: `Wallet`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `identityId`: `BigNumber`, `authorityAddress`: `string`, `signatureDate`: `number`, `signature`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`ContractTransaction`\> |
+| `mint` | (`wallet`: `Wallet`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `receiver`: `string`, `authorityAddress`: `string`, `signatureDate`: `number`, `signature`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`ContractTransaction`\> |
+| `sign` | (`wallet`: `Wallet`, `receiver`: `string`) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\> |
+| `types` | { `MintGreen`: { `name`: `string` = "to"; `type`: `string` = "address" }[]  } |
+| `types.MintGreen` | { `name`: `string` = "to"; `type`: `string` = "address" }[] |
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.2.0-alpha.1](../README.md) / [Exports](../modules.md) / IGreen
+ - v1.2.0-alpha.3](../README.md) / [Exports](../modules.md) / IGreen
 
 # Interface: IGreen
 
@@ -16,19 +16,19 @@
 
 ### description
 
-• **description**: ``"A decentralized 2FA"``
+• **description**: ``"Masa Green is a decentralized authentication solution"``
 
 ___
 
 ### image
 
-• **image**: ``"https://metadata.masa.finance/v1.0/2fa/2fa.png"``
+• **image**: ``"https://metadata.masa.finance/v1.0/green/green.png"``
 
 ___
 
 ### name
 
-• **name**: ``"Masa Soulbound Green 2FA v1.0.0"``
+• **name**: ``"Masa Soulbound Green v1.0.0"``
 
 ___
 

@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.2.0-alpha.1](README.md) / Exports
+ - v1.2.0-alpha.3](README.md) / Exports
 
 # # Masa SDK
- - v1.2.0-alpha.1
+ - v1.2.0-alpha.3
 
 ## Table of contents
 
@@ -81,6 +81,7 @@
 - [createSoulName](modules.md#createsoulname)
 - [establishLink](modules.md#establishlink)
 - [establishLinkFromPassport](modules.md#establishlinkfrompassport)
+- [generateGreen](modules.md#generategreen)
 - [generateSignatureDomain](modules.md#generatesignaturedomain)
 - [getBalances](modules.md#getbalances)
 - [getRegistrationPrice](modules.md#getregistrationprice)
@@ -92,6 +93,8 @@
 - [loadAddressFromIdentityId](modules.md#loadaddressfromidentityid)
 - [loadCreditScoreByTokenId](modules.md#loadcreditscorebytokenid)
 - [loadCreditScoresByIdentityId](modules.md#loadcreditscoresbyidentityid)
+- [loadGreenIds](modules.md#loadgreenids)
+- [loadGreensByAddress](modules.md#loadgreensbyaddress)
 - [loadGreensByIdentityId](modules.md#loadgreensbyidentityid)
 - [loadIdentityByAddress](modules.md#loadidentitybyaddress)
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
@@ -104,6 +107,7 @@
 - [loadSoulNamesByName](modules.md#loadsoulnamesbyname)
 - [login](modules.md#login)
 - [logout](modules.md#logout)
+- [mintGreen](modules.md#mintgreen)
 - [patchMetadataUrl](modules.md#patchmetadataurl)
 - [printSoulName](modules.md#printsoulname)
 - [purchaseIdentity](modules.md#purchaseidentity)
@@ -117,6 +121,7 @@
 - [signTypedData](modules.md#signtypeddata)
 - [unpackSessionId](modules.md#unpacksessionid)
 - [validateSoulName](modules.md#validatesoulname)
+- [verifyGreen](modules.md#verifygreen)
 - [verifyLink](modules.md#verifylink)
 - [version](modules.md#version)
 
@@ -177,7 +182,7 @@ ___
 
 ### NetworkName
 
-Ƭ **NetworkName**: ``"goerli"`` \| ``"mainnet"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"``
+Ƭ **NetworkName**: ``"goerli"`` \| ``"mainnet"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"``
 
 ___
 
@@ -202,6 +207,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `NoIdentity` | (`address?`: `string`) => `string` |
+| `NotLoggedIn` | () => `string` |
 | `WaitingToFinalize` | (`txHash`: `string`) => `string` |
 
 ___
@@ -437,16 +443,15 @@ ___
 
 ### createGreen
 
-▸ **createGreen**(`masa`, `phoneNumber`, `code`, `paymentMethod?`): `Promise`<[`CreateGreenResult`](interfaces/CreateGreenResult.md)\>
+▸ **createGreen**(`masa`, `phoneNumber`, `code`): `Promise`<[`CreateGreenResult`](interfaces/CreateGreenResult.md)\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
-| `phoneNumber` | `string` | `undefined` |
-| `code` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) | `"eth"` |
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `phoneNumber` | `string` |
+| `code` | `string` |
 
 #### Returns
 
@@ -579,6 +584,23 @@ ___
 
 ___
 
+### generateGreen
+
+▸ **generateGreen**(`masa`, `phoneNumber`): `Promise`<`undefined` \| [`BaseResult`](interfaces/BaseResult.md) & { `status`: `string`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `phoneNumber` | `string` |
+
+#### Returns
+
+`Promise`<`undefined` \| [`BaseResult`](interfaces/BaseResult.md) & { `status`: `string`  }\>
+
+___
+
 ### generateSignatureDomain
 
 ▸ **generateSignatureDomain**(`wallet`, `name`, `verifyingContract`): `Promise`<{ `chainId`: `number` ; `name`: `string` ; `verifyingContract`: `string` ; `version`: `string` = "1.0.0" }\>
@@ -599,7 +621,7 @@ ___
 
 ### getBalances
 
-▸ **getBalances**(`masa`, `address?`): `Promise`<`undefined` \| { `ethBalance`: `BigNumber` ; `identityBalance`: `BigNumber` ; `masaBalance`: `BigNumber` ; `soulNameBalance`: `BigNumber` ; `soulbound2FABalance`: `BigNumber` ; `soulboundCreditScoreBalance`: `BigNumber` ; `usdcBalance`: `BigNumber` ; `wethBalance`: `BigNumber`  }\>
+▸ **getBalances**(`masa`, `address?`): `Promise`<`undefined` \| { `ethBalance`: `BigNumber` ; `identityBalance`: `BigNumber` ; `masaBalance`: `BigNumber` ; `soulNameBalance`: `BigNumber` ; `soulboundCreditScoreBalance`: `BigNumber` ; `soulboundGreenBalance`: `BigNumber` ; `usdcBalance`: `BigNumber` ; `wethBalance`: `BigNumber`  }\>
 
 #### Parameters
 
@@ -610,7 +632,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `ethBalance`: `BigNumber` ; `identityBalance`: `BigNumber` ; `masaBalance`: `BigNumber` ; `soulNameBalance`: `BigNumber` ; `soulbound2FABalance`: `BigNumber` ; `soulboundCreditScoreBalance`: `BigNumber` ; `usdcBalance`: `BigNumber` ; `wethBalance`: `BigNumber`  }\>
+`Promise`<`undefined` \| { `ethBalance`: `BigNumber` ; `identityBalance`: `BigNumber` ; `masaBalance`: `BigNumber` ; `soulNameBalance`: `BigNumber` ; `soulboundCreditScoreBalance`: `BigNumber` ; `soulboundGreenBalance`: `BigNumber` ; `usdcBalance`: `BigNumber` ; `wethBalance`: `BigNumber`  }\>
 
 ___
 
@@ -766,6 +788,40 @@ ___
 #### Returns
 
 `Promise`<{ `metadata?`: [`ICreditScore`](interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+___
+
+### loadGreenIds
+
+▸ **loadGreenIds**(`masa`, `greenIds`): `Promise`<{ `metadata`: `undefined` \| [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `greenIds` | `BigNumber`[] |
+
+#### Returns
+
+`Promise`<{ `metadata`: `undefined` \| [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+___
+
+### loadGreensByAddress
+
+▸ **loadGreensByAddress**(`masa`, `address`): `Promise`<{ `metadata?`: [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `address` | `string` |
+
+#### Returns
+
+`Promise`<{ `metadata?`: [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 ___
 
@@ -968,6 +1024,26 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| { `status`: `string`  }\>
+
+___
+
+### mintGreen
+
+▸ **mintGreen**(`masa`, `authorityAddress`, `signatureDate`, `signature`, `paymentMethod?`): `Promise`<`undefined` \| { `tokenId`: `BigNumber`  }\>
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
+| `authorityAddress` | `string` | `undefined` |
+| `signatureDate` | `number` | `undefined` |
+| `signature` | `string` | `undefined` |
+| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) | `"eth"` |
+
+#### Returns
+
+`Promise`<`undefined` \| { `tokenId`: `BigNumber`  }\>
 
 ___
 
@@ -1208,6 +1284,24 @@ ___
 | `isValid` | `boolean` |
 | `length` | `number` |
 | `message?` | `string` |
+
+___
+
+### verifyGreen
+
+▸ **verifyGreen**(`masa`, `phoneNumber`, `code`): `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `phoneNumber` | `string` |
+| `code` | `string` |
+
+#### Returns
+
+`Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
 
 ___
 
