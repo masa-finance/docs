@@ -1,8 +1,8 @@
 [# Masa React
- - v0.22.8](README.md) / Exports
+ - v0.23.0](README.md) / Exports
 
 # # Masa React
- - v0.22.8
+ - v0.23.0
 
 ## Table of contents
 
@@ -20,7 +20,7 @@
 
 ### addresses
 
-• `Const` **addresses**: `Addresses`
+• `Const` **addresses**: `Partial`<{ [key in NetworkName]: Addresses }\>
 
 ## Functions
 
