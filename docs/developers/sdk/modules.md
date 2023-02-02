@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.2.0-alpha.4](README.md) / Exports
+ - v1.2.0](README.md) / Exports
 
 # # Masa SDK
- - v1.2.0-alpha.4
+ - v1.2.0
 
 ## Table of contents
 
@@ -226,7 +226,7 @@ ___
 
 ### addresses
 
-• `Const` **addresses**: [`Addresses`](interfaces/Addresses.md)
+• `Const` **addresses**: `Partial`<{ [key in NetworkName]: Addresses }\>
 
 ___
 
