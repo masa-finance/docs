@@ -1,8 +1,8 @@
 [# Masa React
- - v0.23.3](README.md) / Exports
+ - v0.23.5](README.md) / Exports
 
 # # Masa React
- - v0.23.3
+ - v0.23.5
 
 ## Table of contents
 
@@ -165,7 +165,7 @@ ___
 
 ### createNewMasa
 
-▸ **createNewMasa**(`newWallet`, `env`, `arweaveConfig?`, `cookie?`): ``null`` \| `default`
+▸ **createNewMasa**(`newWallet`, `env`, `arweaveConfig?`): ``null`` \| `default`
 
 #### Parameters
 
@@ -174,7 +174,6 @@ ___
 | `newWallet` | `any` |
 | `env` | `string` |
 | `arweaveConfig?` | [`ArweaveConfig`](interfaces/ArweaveConfig.md) |
-| `cookie?` | `string` |
 
 #### Returns
 
@@ -228,44 +227,44 @@ ___
 | :------ | :------ |
 | `creditScores` | `undefined` \| { `metadata?`: `ICreditScore` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] |
 | `error` | `unknown` |
-| `handleCreateCreditScore` | () => `Promise`<`undefined` \| `boolean`\> |
+| `handleCreateCreditScore` | () => `void` |
 | `isLoading` | `boolean` |
-| `status` | ``"loading"`` \| ``"error"`` \| ``"idle"`` \| ``"success"`` |
+| `status` | `string` |
 
 ___
 
 ### useDebounce
 
-▸ **useDebounce**(`value`, `delay`): `any`
+▸ **useDebounce**(`value`, `delay`): `string` \| `number`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `value` | `any` |
-| `delay` | `any` |
+| `value` | `string` \| `number` |
+| `delay` | `number` |
 
 #### Returns
 
-`any`
+`string` \| `number`
 
 ___
 
 ### useDebounceIfValue
 
-▸ **useDebounceIfValue**(`value`, `target`, `delay`): `any`
+▸ **useDebounceIfValue**(`value`, `target`, `delay`): `string` \| `number`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `value` | `any` |
-| `target` | `any` |
-| `delay` | `any` |
+| `value` | `string` \| `number` |
+| `target` | `string` \| `number` |
+| `delay` | `number` |
 
 #### Returns
 
-`any`
+`string` \| `number`
 
 ___
 
@@ -371,10 +370,10 @@ ___
 | :------ | :------ |
 | `error` | `unknown` |
 | `isLoading` | `boolean` |
-| `loggedIn` | `undefined` \| `boolean` |
-| `login` | () => `Promise`<`void`\> |
-| `logout` | (`callback?`: () => `void`) => `Promise`<`void`\> |
-| `status` | ``"loading"`` \| ``"error"`` \| ``"idle"`` \| ``"success"`` |
+| `loggedIn?` | `boolean` |
+| `login` | () => `void` |
+| `logout` | () => `void` |
+| `status` | `string` |
 
 ___
 

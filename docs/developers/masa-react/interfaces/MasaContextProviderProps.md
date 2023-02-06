@@ -1,5 +1,5 @@
 [# Masa React
- - v0.23.3](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v0.23.5](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -18,7 +18,6 @@
 - [closeModal](MasaContextProviderProps.md#closemodal)
 - [company](MasaContextProviderProps.md#company)
 - [connect](MasaContextProviderProps.md#connect)
-- [cookie](MasaContextProviderProps.md#cookie)
 - [creditScores](MasaContextProviderProps.md#creditscores)
 - [environment](MasaContextProviderProps.md#environment)
 - [greens](MasaContextProviderProps.md#greens)
@@ -117,12 +116,6 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[connect](MasaShape.md#connect)
-
-___
-
-### cookie
-
-• `Optional` **cookie**: `string`
 
 ___
 
