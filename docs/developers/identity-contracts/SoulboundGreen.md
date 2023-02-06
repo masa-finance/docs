@@ -1,12 +1,12 @@
-# Soulbound2FA
+# SoulboundGreen
 
 *Masa Finance*
 
-> Soulbound Two-factor authentication (2FA)
+> Soulbound Two-factor authentication (Green - 2FA)
 
 Soulbound token that represents a Two-factor authentication (2FA)
 
-*Soulbound 2FA, that inherits from the SBT contract.*
+*Soulbound Green, that inherits from the SBT contract.*
 
 ## Methods
 
@@ -1076,10 +1076,10 @@ event RoleRevoked(bytes32 indexed role, address indexed account, address indexed
 | account `indexed` | address | undefined |
 | sender `indexed` | address | undefined |
 
-### Soulbound2FAMintedToAddress
+### SoulboundGreenMintedToAddress
 
 ```solidity
-event Soulbound2FAMintedToAddress(uint256 tokenId, address to, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
+event SoulboundGreenMintedToAddress(uint256 tokenId, address to, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
 ```
 
 
@@ -1097,10 +1097,10 @@ event Soulbound2FAMintedToAddress(uint256 tokenId, address to, address authority
 | paymentMethod  | address | undefined |
 | mintPrice  | uint256 | undefined |
 
-### Soulbound2FAMintedToIdentity
+### SoulboundGreenMintedToIdentity
 
 ```solidity
-event Soulbound2FAMintedToIdentity(uint256 tokenId, uint256 identityId, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
+event SoulboundGreenMintedToIdentity(uint256 tokenId, uint256 identityId, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
 ```
 
 
