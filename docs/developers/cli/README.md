@@ -70,8 +70,9 @@ Usage: masa [command] [subcommand] [arguments] [options]
 The Masa CLI
 
 Options:
-  -v, --version   output the version number
-  -h, --help      display help for command
+  -v, --version                                                     output the version number
+  --verbose                                                         output with verbose logging
+  -h, --help                                                        display help for command
 
 Commands:
   login                                                             Login to the masa infrastructure
