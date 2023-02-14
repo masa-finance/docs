@@ -1,5 +1,5 @@
 [# Masa React
- - v0.23.5](../README.md) / [Exports](../modules.md) / MasaShape
+ - v0.26.0](../README.md) / [Exports](../modules.md) / MasaShape
 
 # Interface: MasaShape
 
@@ -13,11 +13,14 @@
 
 ### Properties
 
+- [SupportedNetworks](MasaShape.md#supportednetworks)
+- [chain](MasaShape.md#chain)
 - [children](MasaShape.md#children)
 - [closeModal](MasaShape.md#closemodal)
 - [company](MasaShape.md#company)
 - [connect](MasaShape.md#connect)
 - [creditScores](MasaShape.md#creditscores)
+- [greenLoading](MasaShape.md#greenloading)
 - [greens](MasaShape.md#greens)
 - [handleCreateCreditScore](MasaShape.md#handlecreatecreditscore)
 - [handleCreateGreen](MasaShape.md#handlecreategreen)
@@ -35,15 +38,33 @@
 - [logginLoading](MasaShape.md#logginloading)
 - [masa](MasaShape.md#masa)
 - [missingProvider](MasaShape.md#missingprovider)
+- [network](MasaShape.md#network)
 - [provider](MasaShape.md#provider)
 - [scope](MasaShape.md#scope)
 - [setMissingProvider](MasaShape.md#setmissingprovider)
 - [setModalOpen](MasaShape.md#setmodalopen)
 - [setProvider](MasaShape.md#setprovider)
 - [soulnames](MasaShape.md#soulnames)
+- [switchNetwork](MasaShape.md#switchnetwork)
 - [walletAddress](MasaShape.md#walletaddress)
 
 ## Properties
+
+### SupportedNetworks
+
+• `Optional` **SupportedNetworks**: `Object`
+
+#### Index signature
+
+▪ [index: `number`]: [`Network`](Network.md)
+
+___
+
+### chain
+
+• `Optional` **chain**: ``null`` \| `Network`
+
+___
 
 ### children
 
@@ -99,6 +120,12 @@ ___
 
 ___
 
+### greenLoading
+
+• `Optional` **greenLoading**: `boolean`
+
+___
+
 ### greens
 
 • `Optional` **greens**: { `metadata?`: `IGreen` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]
@@ -121,11 +148,11 @@ ___
 
 ### handleCreateGreen
 
-• `Optional` **handleCreateGreen**: (`phoneNumber`: `string`, `code`: `string`) => `void`
+• `Optional` **handleCreateGreen**: (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`undefined` \| `VerifyGreenResult`\>
 
 #### Type declaration
 
-▸ (`phoneNumber`, `code`): `void`
+▸ (`phoneNumber`, `code`): `Promise`<`undefined` \| `VerifyGreenResult`\>
 
 ##### Parameters
 
@@ -136,17 +163,17 @@ ___
 
 ##### Returns
 
-`void`
+`Promise`<`undefined` \| `VerifyGreenResult`\>
 
 ___
 
 ### handleGenerateGreen
 
-• `Optional` **handleGenerateGreen**: (`phoneNumber`: `string`) => `void`
+• `Optional` **handleGenerateGreen**: (`phoneNumber`: `string`) => `Promise`<`undefined` \| `GenerateGreenResult`\>
 
 #### Type declaration
 
-▸ (`phoneNumber`): `void`
+▸ (`phoneNumber`): `Promise`<`undefined` \| `GenerateGreenResult`\>
 
 ##### Parameters
 
@@ -156,7 +183,7 @@ ___
 
 ##### Returns
 
-`void`
+`Promise`<`undefined` \| `GenerateGreenResult`\>
 
 ___
 
@@ -291,6 +318,12 @@ ___
 
 ___
 
+### network
+
+• `Optional` **network**: `string`
+
+___
+
 ### provider
 
 • `Optional` **provider**: ``null`` \| `Wallet` \| `Signer`
@@ -366,6 +399,26 @@ ___
 ### soulnames
 
 • `Optional` **soulnames**: ``null`` \| `SoulNameDetails`[]
+
+___
+
+### switchNetwork
+
+• `Optional` **switchNetwork**: (`chainId`: `number`) => `void`
+
+#### Type declaration
+
+▸ (`chainId`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `chainId` | `number` |
+
+##### Returns
+
+`void`
 
 ___
 

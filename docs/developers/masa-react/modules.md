@@ -1,8 +1,8 @@
 [# Masa React
- - v0.23.5](README.md) / Exports
+ - v0.26.0](README.md) / Exports
 
 # # Masa React
- - v0.23.5
+ - v0.26.0
 
 ## Table of contents
 
@@ -12,6 +12,7 @@
 - [MasaContextProviderProps](interfaces/MasaContextProviderProps.md)
 - [MasaShape](interfaces/MasaShape.md)
 - [ModalProps](interfaces/ModalProps.md)
+- [Network](interfaces/Network.md)
 - [SpinnerProps](interfaces/SpinnerProps.md)
 
 ### Type Aliases
@@ -21,7 +22,7 @@
 ### Variables
 
 - [MASA\_CONTEXT](modules.md#masa_context)
-- [addresses](modules.md#addresses)
+- [SupportedNetworks](modules.md#supportednetworks)
 - [queryClient](modules.md#queryclient)
 
 ### Functions
@@ -34,7 +35,6 @@
 - [Spinner](modules.md#spinner)
 - [createNewMasa](modules.md#createnewmasa)
 - [createRandomWallet](modules.md#createrandomwallet)
-- [loadIdentityContracts](modules.md#loadidentitycontracts)
 - [useCreditScores](modules.md#usecreditscores)
 - [useDebounce](modules.md#usedebounce)
 - [useDebounceIfValue](modules.md#usedebounceifvalue)
@@ -60,9 +60,13 @@
 
 ___
 
-### addresses
+### SupportedNetworks
 
-• `Const` **addresses**: `Partial`<{ [key in NetworkName]: Addresses }\>
+• `Const` **SupportedNetworks**: `Object`
+
+#### Index signature
+
+▪ [key: `number`]: [`Network`](interfaces/Network.md)
 
 ___
 
@@ -74,13 +78,13 @@ ___
 
 ### MasaContextProvider
 
-▸ **MasaContextProvider**(`__namedParameters`): `Element`
+▸ **MasaContextProvider**(`«destructured»`): `Element`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) |
+| `«destructured»` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) |
 
 #### Returns
 
@@ -90,14 +94,14 @@ ___
 
 ### MasaInterface
 
-▸ **MasaInterface**(`__namedParameters`): `Element`
+▸ **MasaInterface**(`«destructured»`): `Element`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `Object` |
-| `__namedParameters.disable?` | `boolean` |
+| `«destructured»` | `Object` |
+| › `disable?` | `boolean` |
 
 #### Returns
 
@@ -117,13 +121,13 @@ ___
 
 ### MasaProvider
 
-▸ **MasaProvider**(`__namedParameters`): `Element`
+▸ **MasaProvider**(`«destructured»`): `Element`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) |
+| `«destructured»` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) |
 
 #### Returns
 
@@ -133,13 +137,13 @@ ___
 
 ### ModalComponent
 
-▸ **ModalComponent**(`__namedParameters`): `Element`
+▸ **ModalComponent**(`«destructured»`): `Element`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | [`ModalProps`](interfaces/ModalProps.md) |
+| `«destructured»` | [`ModalProps`](interfaces/ModalProps.md) |
 
 #### Returns
 
@@ -149,13 +153,13 @@ ___
 
 ### Spinner
 
-▸ **Spinner**(`__namedParameters`): `Element`
+▸ **Spinner**(`«destructured»`): `Element`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | [`SpinnerProps`](interfaces/SpinnerProps.md) |
+| `«destructured»` | [`SpinnerProps`](interfaces/SpinnerProps.md) |
 
 #### Returns
 
@@ -165,19 +169,21 @@ ___
 
 ### createNewMasa
 
-▸ **createNewMasa**(`newWallet`, `env`, `arweaveConfig?`): ``null`` \| `default`
+▸ **createNewMasa**(`«destructured»`): `Promise`<``null`` \| `default`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `newWallet` | `any` |
-| `env` | `string` |
-| `arweaveConfig?` | [`ArweaveConfig`](interfaces/ArweaveConfig.md) |
+| `«destructured»` | `Object` |
+| › `arweaveConfig?` | [`ArweaveConfig`](interfaces/ArweaveConfig.md) |
+| › `environmentName` | `string` |
+| › `newWallet` | ``null`` \| `Signer` |
+| › `verbose` | `boolean` |
 
 #### Returns
 
-``null`` \| `default`
+`Promise`<``null`` \| `default`\>
 
 ___
 
@@ -188,22 +194,6 @@ ___
 #### Returns
 
 ``null`` \| `Wallet`
-
-___
-
-### loadIdentityContracts
-
-▸ **loadIdentityContracts**(`__namedParameters`): `IIdentityContracts`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `__namedParameters` | `LoadContractArgs` |
-
-#### Returns
-
-`IIdentityContracts`
 
 ___
 
@@ -270,7 +260,7 @@ ___
 
 ### useGreen
 
-▸ **useGreen**(`masa`, `walletAddress`, `identity`): `Object`
+▸ **useGreen**(`masa`, `walletAddress`): `Object`
 
 #### Parameters
 
@@ -278,7 +268,6 @@ ___
 | :------ | :------ |
 | `masa` | ``null`` \| `default` |
 | `walletAddress` | `undefined` \| `string` |
-| `identity` | `undefined` \| { `address?`: `string` ; `identityId?`: `BigNumber`  } |
 
 #### Returns
 
@@ -288,8 +277,8 @@ ___
 | :------ | :------ |
 | `error` | `unknown` |
 | `greens` | `undefined` \| { `metadata?`: `IGreen` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] |
-| `handleCreateGreen` | (`phoneNumber`: `string`, `code`: `string`) => `void` |
-| `handleGenerateGreen` | (`phoneNumber`: `string`) => `void` |
+| `handleCreateGreen` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`undefined` \| `VerifyGreenResult`\> |
+| `handleGenerateGreen` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| `GenerateGreenResult`\> |
 | `isLoading` | `boolean` |
 | `status` | `string` |
 
@@ -332,14 +321,14 @@ ___
 
 ### useMetamask
 
-▸ **useMetamask**(`__namedParameters`): `Object`
+▸ **useMetamask**(`«destructured»`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `Object` |
-| `__namedParameters.disable?` | `boolean` |
+| `«destructured»` | `Object` |
+| › `disable?` | `boolean` |
 
 #### Returns
 
@@ -419,6 +408,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
+| `chain?` | ``null`` \| `Network` |
 | `error` | `unknown` |
 | `isLoading` | `boolean` |
 | `status` | `string` |

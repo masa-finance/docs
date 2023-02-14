@@ -1,5 +1,5 @@
 [# Masa React
- - v0.23.5](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v0.26.0](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -13,13 +13,16 @@
 
 ### Properties
 
+- [SupportedNetworks](MasaContextProviderProps.md#supportednetworks)
 - [arweaveConfig](MasaContextProviderProps.md#arweaveconfig)
+- [chain](MasaContextProviderProps.md#chain)
 - [children](MasaContextProviderProps.md#children)
 - [closeModal](MasaContextProviderProps.md#closemodal)
 - [company](MasaContextProviderProps.md#company)
 - [connect](MasaContextProviderProps.md#connect)
 - [creditScores](MasaContextProviderProps.md#creditscores)
-- [environment](MasaContextProviderProps.md#environment)
+- [environmentName](MasaContextProviderProps.md#environmentname)
+- [greenLoading](MasaContextProviderProps.md#greenloading)
 - [greens](MasaContextProviderProps.md#greens)
 - [handleCreateCreditScore](MasaContextProviderProps.md#handlecreatecreditscore)
 - [handleCreateGreen](MasaContextProviderProps.md#handlecreategreen)
@@ -37,6 +40,7 @@
 - [logginLoading](MasaContextProviderProps.md#logginloading)
 - [masa](MasaContextProviderProps.md#masa)
 - [missingProvider](MasaContextProviderProps.md#missingprovider)
+- [network](MasaContextProviderProps.md#network)
 - [noWallet](MasaContextProviderProps.md#nowallet)
 - [provider](MasaContextProviderProps.md#provider)
 - [scope](MasaContextProviderProps.md#scope)
@@ -45,13 +49,39 @@
 - [setProvider](MasaContextProviderProps.md#setprovider)
 - [signer](MasaContextProviderProps.md#signer)
 - [soulnames](MasaContextProviderProps.md#soulnames)
+- [switchNetwork](MasaContextProviderProps.md#switchnetwork)
+- [verbose](MasaContextProviderProps.md#verbose)
 - [walletAddress](MasaContextProviderProps.md#walletaddress)
 
 ## Properties
 
+### SupportedNetworks
+
+• `Optional` **SupportedNetworks**: `Object`
+
+#### Index signature
+
+▪ [index: `number`]: [`Network`](Network.md)
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[SupportedNetworks](MasaShape.md#supportednetworks)
+
+___
+
 ### arweaveConfig
 
 • `Optional` **arweaveConfig**: [`ArweaveConfig`](ArweaveConfig.md)
+
+___
+
+### chain
+
+• `Optional` **chain**: ``null`` \| `Network`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[chain](MasaShape.md#chain)
 
 ___
 
@@ -129,9 +159,19 @@ ___
 
 ___
 
-### environment
+### environmentName
 
-• `Optional` **environment**: `undefined`
+• `Optional` **environmentName**: `undefined`
+
+___
+
+### greenLoading
+
+• `Optional` **greenLoading**: `boolean`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[greenLoading](MasaShape.md#greenloading)
 
 ___
 
@@ -165,11 +205,11 @@ ___
 
 ### handleCreateGreen
 
-• `Optional` **handleCreateGreen**: (`phoneNumber`: `string`, `code`: `string`) => `void`
+• `Optional` **handleCreateGreen**: (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`undefined` \| `VerifyGreenResult`\>
 
 #### Type declaration
 
-▸ (`phoneNumber`, `code`): `void`
+▸ (`phoneNumber`, `code`): `Promise`<`undefined` \| `VerifyGreenResult`\>
 
 ##### Parameters
 
@@ -180,7 +220,7 @@ ___
 
 ##### Returns
 
-`void`
+`Promise`<`undefined` \| `VerifyGreenResult`\>
 
 #### Inherited from
 
@@ -190,11 +230,11 @@ ___
 
 ### handleGenerateGreen
 
-• `Optional` **handleGenerateGreen**: (`phoneNumber`: `string`) => `void`
+• `Optional` **handleGenerateGreen**: (`phoneNumber`: `string`) => `Promise`<`undefined` \| `GenerateGreenResult`\>
 
 #### Type declaration
 
-▸ (`phoneNumber`): `void`
+▸ (`phoneNumber`): `Promise`<`undefined` \| `GenerateGreenResult`\>
 
 ##### Parameters
 
@@ -204,7 +244,7 @@ ___
 
 ##### Returns
 
-`void`
+`Promise`<`undefined` \| `GenerateGreenResult`\>
 
 #### Inherited from
 
@@ -395,6 +435,16 @@ ___
 
 ___
 
+### network
+
+• `Optional` **network**: `string`
+
+#### Overrides
+
+[MasaShape](MasaShape.md).[network](MasaShape.md#network)
+
+___
+
 ### noWallet
 
 • `Optional` **noWallet**: `boolean`
@@ -506,6 +556,36 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[soulnames](MasaShape.md#soulnames)
+
+___
+
+### switchNetwork
+
+• `Optional` **switchNetwork**: (`chainId`: `number`) => `void`
+
+#### Type declaration
+
+▸ (`chainId`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `chainId` | `number` |
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[switchNetwork](MasaShape.md#switchnetwork)
+
+___
+
+### verbose
+
+• `Optional` **verbose**: `boolean`
 
 ___
 
