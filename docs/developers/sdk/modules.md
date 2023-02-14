@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.2.1](README.md) / Exports
+ - v1.4.1](README.md) / Exports
 
 # # Masa SDK
- - v1.2.1
+ - v1.4.1
 
 ## Table of contents
 
@@ -25,8 +25,10 @@
 - [Addresses](interfaces/Addresses.md)
 - [Attribute](interfaces/Attribute.md)
 - [BaseResult](interfaces/BaseResult.md)
-- [CreateGreenResult](interfaces/CreateGreenResult.md)
 - [CreateSoulNameResult](interfaces/CreateSoulNameResult.md)
+- [GenerateCreditScoreResult](interfaces/GenerateCreditScoreResult.md)
+- [GenerateGreenResult](interfaces/GenerateGreenResult.md)
+- [GetChallengeResult](interfaces/GetChallengeResult.md)
 - [ICreditScore](interfaces/ICreditScore.md)
 - [IGreen](interfaces/IGreen.md)
 - [IIdentity](interfaces/IIdentity.md)
@@ -35,13 +37,17 @@
 - [ISession](interfaces/ISession.md)
 - [ISoulName](interfaces/ISoulName.md)
 - [LoadContractArgs](interfaces/LoadContractArgs.md)
+- [LogoutResult](interfaces/LogoutResult.md)
 - [MasaArgs](interfaces/MasaArgs.md)
 - [MasaConfig](interfaces/MasaConfig.md)
 - [SoulNameDetails](interfaces/SoulNameDetails.md)
+- [SoulNameMetadataStoreResult](interfaces/SoulNameMetadataStoreResult.md)
+- [UpdateCreditScoreResult](interfaces/UpdateCreditScoreResult.md)
+- [User](interfaces/User.md)
+- [VerifyGreenResult](interfaces/VerifyGreenResult.md)
 
 ### Type Aliases
 
-- [CreateCreditScoreResult](modules.md#createcreditscoreresult)
 - [CreateLinkResult](modules.md#createlinkresult)
 - [Environment](modules.md#environment)
 - [EnvironmentName](modules.md#environmentname)
@@ -126,12 +132,6 @@
 - [version](modules.md#version)
 
 ## Type Aliases
-
-### CreateCreditScoreResult
-
-Ƭ **CreateCreditScoreResult**: [`BaseResult`](interfaces/BaseResult.md)
-
-___
 
 ### CreateLinkResult
 
@@ -425,7 +425,7 @@ ___
 
 ### createCreditScore
 
-▸ **createCreditScore**(`masa`, `paymentMethod?`): `Promise`<`undefined` \| [`BaseResult`](interfaces/BaseResult.md)\>
+▸ **createCreditScore**(`masa`, `paymentMethod?`): `Promise`<`undefined` \| [`GenerateCreditScoreResult`](interfaces/GenerateCreditScoreResult.md)\>
 
 #### Parameters
 
@@ -436,13 +436,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`BaseResult`](interfaces/BaseResult.md)\>
+`Promise`<`undefined` \| [`GenerateCreditScoreResult`](interfaces/GenerateCreditScoreResult.md)\>
 
 ___
 
 ### createGreen
 
-▸ **createGreen**(`masa`, `phoneNumber`, `code`): `Promise`<[`CreateGreenResult`](interfaces/CreateGreenResult.md)\>
+▸ **createGreen**(`masa`, `phoneNumber`, `code`): `Promise`<[`VerifyGreenResult`](interfaces/VerifyGreenResult.md)\>
 
 #### Parameters
 
@@ -454,7 +454,7 @@ ___
 
 #### Returns
 
-`Promise`<[`CreateGreenResult`](interfaces/CreateGreenResult.md)\>
+`Promise`<[`VerifyGreenResult`](interfaces/VerifyGreenResult.md)\>
 
 ___
 
@@ -585,7 +585,7 @@ ___
 
 ### generateGreen
 
-▸ **generateGreen**(`masa`, `phoneNumber`): `Promise`<`undefined` \| [`BaseResult`](interfaces/BaseResult.md) & { `status`: `string`  }\>
+▸ **generateGreen**(`masa`, `phoneNumber`): `Promise`<`undefined` \| [`GenerateGreenResult`](interfaces/GenerateGreenResult.md)\>
 
 #### Parameters
 
@@ -596,7 +596,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`BaseResult`](interfaces/BaseResult.md) & { `status`: `string`  }\>
+`Promise`<`undefined` \| [`GenerateGreenResult`](interfaces/GenerateGreenResult.md)\>
 
 ___
 
@@ -1239,7 +1239,7 @@ ___
 | `wallet` | `Wallet` |
 | `name` | `string` |
 | `types` | `Record`<`string`, `TypedDataField`[]\> |
-| `value` | `Record`<`string`, `any`\> |
+| `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |
 
 #### Returns
 
@@ -1288,7 +1288,7 @@ ___
 
 ### verifyGreen
 
-▸ **verifyGreen**(`masa`, `phoneNumber`, `code`): `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
+▸ **verifyGreen**(`masa`, `phoneNumber`, `code`): `Promise`<`undefined` \| [`BaseResult`](interfaces/BaseResult.md) & { `authorityAddress?`: `string` ; `errorCode?`: `number` ; `signature?`: `string` ; `signatureDate?`: `number` ; `status?`: `string`  }\>
 
 #### Parameters
 
@@ -1300,7 +1300,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
+`Promise`<`undefined` \| [`BaseResult`](interfaces/BaseResult.md) & { `authorityAddress?`: `string` ; `errorCode?`: `number` ; `signature?`: `string` ; `signatureDate?`: `number` ; `status?`: `string`  }\>
 
 ___
 

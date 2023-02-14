@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.2.1](../README.md) / [Exports](../modules.md) / MasaClient
+ - v1.4.1](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -59,8 +59,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `create` | () => `Promise`<`undefined` \| { `authorityAddress?`: `string` ; `message`: `string` ; `signature?`: `string` ; `signatureDate?`: `number` ; `status`: `string` ; `success`: `boolean`  }\> |
-| `update` | (`transactionHash`: `string`) => `Promise`<`undefined` \| { `message`: `string` ; `signature?`: `string` ; `status`: `string` ; `success`: `boolean`  }\> |
+| `generate` | () => `Promise`<`undefined` \| [`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\> |
+| `update` | (`transactionHash`: `string`) => `Promise`<`undefined` \| [`UpdateCreditScoreResult`](../interfaces/UpdateCreditScoreResult.md)\> |
 
 ___
 
@@ -72,8 +72,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `status`: `string`  }\> |
-| `verify` | (`phoneNumber`: `string`, `code`: `string`, `network`: `string`) => `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `authorityAddress?`: `string` ; `signature?`: `string` ; `signatureDate?`: `number` ; `status`: `string`  }\> |
+| `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| [`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\> |
+| `verify` | (`phoneNumber`: `string`, `code`: `string`, `network`: `string`) => `Promise`<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\> |
 
 ___
 
@@ -98,9 +98,9 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `check` | () => `Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\> |
-| `checkSignature` | (`address`: `string`, `signature`: `string`, `cookie?`: `string`) => `Promise`<`any`\> |
-| `getChallenge` | () => `Promise`<`undefined` \| { `challenge`: `string` ; `cookie?`: `string` ; `expires`: `string`  }\> |
-| `logout` | () => `Promise`<`undefined` \| { `status`: `string`  }\> |
+| `checkSignature` | (`address`: `string`, `signature`: `string`, `cookie?`: `string`) => `Promise`<`undefined` \| [`User`](../interfaces/User.md)\> |
+| `getChallenge` | () => `Promise`<`undefined` \| [`GetChallengeResult`](../interfaces/GetChallengeResult.md)\> |
+| `logout` | () => `Promise`<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\> |
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default` ; `signature`: `string`  }\> |
+| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`) => `Promise`<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md)\> |
 
 ## Accessors
 

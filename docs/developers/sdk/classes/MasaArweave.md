@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.2.1](../README.md) / [Exports](../modules.md) / MasaArweave
+ - v1.4.1](../README.md) / [Exports](../modules.md) / MasaArweave
 
 # Class: MasaArweave
 
@@ -295,14 +295,14 @@ ___
 
 ### loadTransactionData
 
-▸ **loadTransactionData**(`txId`, `string?`): `Promise`<`undefined` \| `object` \| `Uint8Array`\>
+▸ **loadTransactionData**(`txId`, `isString?`): `Promise`<`undefined` \| `object` \| `Uint8Array`\>
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `txId` | `string` | `undefined` |
-| `string` | `boolean` | `true` |
+| `isString` | `boolean` | `true` |
 
 #### Returns
 
