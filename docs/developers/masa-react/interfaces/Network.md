@@ -1,5 +1,5 @@
 [# Masa React
- - v0.26.6](../README.md) / [Exports](../modules.md) / Network
+ - v0.26.27](../README.md) / [Exports](../modules.md) / Network
 
 # Interface: Network
 
@@ -11,6 +11,7 @@
 - [chainId](Network.md#chainid)
 - [chainName](Network.md#chainname)
 - [nativeCurrency](Network.md#nativecurrency)
+- [networkName](Network.md#networkname)
 - [rpcUrls](Network.md#rpcurls)
 
 ## Properties
@@ -44,6 +45,12 @@ ___
 | `decimals` | `number` |
 | `name` | `string` |
 | `symbol` | `string` |
+
+___
+
+### networkName
+
+• **networkName**: `NetworkName`
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa React
- - v0.26.6](../README.md) / [Exports](../modules.md) / MasaShape
+ - v0.26.27](../README.md) / [Exports](../modules.md) / MasaShape
 
 # Interface: MasaShape
 
@@ -14,7 +14,6 @@
 ### Properties
 
 - [SupportedNetworks](MasaShape.md#supportednetworks)
-- [chain](MasaShape.md#chain)
 - [children](MasaShape.md#children)
 - [closeModal](MasaShape.md#closemodal)
 - [company](MasaShape.md#company)
@@ -39,6 +38,7 @@
 - [masa](MasaShape.md#masa)
 - [missingProvider](MasaShape.md#missingprovider)
 - [network](MasaShape.md#network)
+- [networkName](MasaShape.md#networkname)
 - [provider](MasaShape.md#provider)
 - [scope](MasaShape.md#scope)
 - [setMissingProvider](MasaShape.md#setmissingprovider)
@@ -54,15 +54,18 @@
 
 • `Optional` **SupportedNetworks**: `Object`
 
-#### Index signature
+#### Type declaration
 
-▪ [index: `number`]: [`Network`](Network.md)
-
-___
-
-### chain
-
-• `Optional` **chain**: ``null`` \| `Network`
+| Name | Type |
+| :------ | :------ |
+| `alfajores` | [`Network`](Network.md) |
+| `bsc` | [`Network`](Network.md) |
+| `bsctest` | [`Network`](Network.md) |
+| `celo` | [`Network`](Network.md) |
+| `goerli` | [`Network`](Network.md) |
+| `mainnet` | [`Network`](Network.md) |
+| `mumbai` | [`Network`](Network.md) |
+| `polygon` | [`Network`](Network.md) |
 
 ___
 
@@ -320,7 +323,13 @@ ___
 
 ### network
 
-• `Optional` **network**: `string`
+• `Optional` **network**: ``null`` \| `Network`
+
+___
+
+### networkName
+
+• `Optional` **networkName**: `NetworkName`
 
 ___
 

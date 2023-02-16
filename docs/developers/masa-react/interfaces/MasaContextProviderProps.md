@@ -1,5 +1,5 @@
 [# Masa React
- - v0.26.6](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v0.26.27](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -15,7 +15,6 @@
 
 - [SupportedNetworks](MasaContextProviderProps.md#supportednetworks)
 - [arweaveConfig](MasaContextProviderProps.md#arweaveconfig)
-- [chain](MasaContextProviderProps.md#chain)
 - [children](MasaContextProviderProps.md#children)
 - [closeModal](MasaContextProviderProps.md#closemodal)
 - [company](MasaContextProviderProps.md#company)
@@ -41,6 +40,7 @@
 - [masa](MasaContextProviderProps.md#masa)
 - [missingProvider](MasaContextProviderProps.md#missingprovider)
 - [network](MasaContextProviderProps.md#network)
+- [networkName](MasaContextProviderProps.md#networkname)
 - [noWallet](MasaContextProviderProps.md#nowallet)
 - [provider](MasaContextProviderProps.md#provider)
 - [scope](MasaContextProviderProps.md#scope)
@@ -59,9 +59,18 @@
 
 • `Optional` **SupportedNetworks**: `Object`
 
-#### Index signature
+#### Type declaration
 
-▪ [index: `number`]: [`Network`](Network.md)
+| Name | Type |
+| :------ | :------ |
+| `alfajores` | [`Network`](Network.md) |
+| `bsc` | [`Network`](Network.md) |
+| `bsctest` | [`Network`](Network.md) |
+| `celo` | [`Network`](Network.md) |
+| `goerli` | [`Network`](Network.md) |
+| `mainnet` | [`Network`](Network.md) |
+| `mumbai` | [`Network`](Network.md) |
+| `polygon` | [`Network`](Network.md) |
 
 #### Inherited from
 
@@ -72,16 +81,6 @@ ___
 ### arweaveConfig
 
 • `Optional` **arweaveConfig**: [`ArweaveConfig`](ArweaveConfig.md)
-
-___
-
-### chain
-
-• `Optional` **chain**: ``null`` \| `Network`
-
-#### Inherited from
-
-[MasaShape](MasaShape.md).[chain](MasaShape.md#chain)
 
 ___
 
@@ -437,11 +436,21 @@ ___
 
 ### network
 
-• `Optional` **network**: `string`
+• `Optional` **network**: ``null`` \| `Network`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[network](MasaShape.md#network)
+
+___
+
+### networkName
+
+• `Optional` **networkName**: `NetworkName`
 
 #### Overrides
 
-[MasaShape](MasaShape.md).[network](MasaShape.md#network)
+[MasaShape](MasaShape.md).[networkName](MasaShape.md#networkname)
 
 ___
 

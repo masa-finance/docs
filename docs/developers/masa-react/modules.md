@@ -1,8 +1,8 @@
 [# Masa React
- - v0.26.6](README.md) / Exports
+ - v0.26.27](README.md) / Exports
 
 # # Masa React
- - v0.26.6
+ - v0.26.27
 
 ## Table of contents
 
@@ -35,6 +35,8 @@
 - [Spinner](modules.md#spinner)
 - [createNewMasa](modules.md#createnewmasa)
 - [createRandomWallet](modules.md#createrandomwallet)
+- [getNetworkNameByChainId](modules.md#getnetworknamebychainid)
+- [getWeb3Provider](modules.md#getweb3provider)
 - [useCreditScores](modules.md#usecreditscores)
 - [useDebounce](modules.md#usedebounce)
 - [useDebounceIfValue](modules.md#usedebounceifvalue)
@@ -62,11 +64,7 @@ ___
 
 ### SupportedNetworks
 
-• `Const` **SupportedNetworks**: `Object`
-
-#### Index signature
-
-▪ [key: `number`]: [`Network`](interfaces/Network.md)
+• `Const` **SupportedNetworks**: { [key in NetworkName]: Network }
 
 ___
 
@@ -178,7 +176,7 @@ ___
 | `«destructured»` | `Object` |
 | › `arweaveConfig?` | [`ArweaveConfig`](interfaces/ArweaveConfig.md) |
 | › `environmentName` | `string` |
-| › `newWallet` | ``null`` \| `Signer` |
+| › `signer` | ``null`` \| `Signer` |
 | › `verbose` | `boolean` |
 
 #### Returns
@@ -194,6 +192,32 @@ ___
 #### Returns
 
 ``null`` \| `Wallet`
+
+___
+
+### getNetworkNameByChainId
+
+▸ **getNetworkNameByChainId**(`chainId`): `NetworkName`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `chainId` | `number` |
+
+#### Returns
+
+`NetworkName`
+
+___
+
+### getWeb3Provider
+
+▸ **getWeb3Provider**(): ``null`` \| `Web3Provider`
+
+#### Returns
+
+``null`` \| `Web3Provider`
 
 ___
 
@@ -408,8 +432,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `chain?` | ``null`` \| `Network` |
 | `error` | `unknown` |
 | `isLoading` | `boolean` |
+| `network` | ``null`` \| `Network` |
 | `status` | `string` |
 | `walletAddress` | `undefined` \| `string` |
