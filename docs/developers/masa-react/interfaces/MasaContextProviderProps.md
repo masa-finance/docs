@@ -1,5 +1,5 @@
 [# Masa React
- - v0.26.27](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v0.27.0](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -67,6 +67,7 @@
 | `bsc` | [`Network`](Network.md) |
 | `bsctest` | [`Network`](Network.md) |
 | `celo` | [`Network`](Network.md) |
+| `ethereum` | [`Network`](Network.md) |
 | `goerli` | [`Network`](Network.md) |
 | `mainnet` | [`Network`](Network.md) |
 | `mumbai` | [`Network`](Network.md) |
