@@ -66,6 +66,8 @@ The base url for the Metadata url that is beeing generated from the contract
 * Set `COINMARKETCAP_API_KEY` to the CoinMarketCap API key in `.env`, if needed
 * Set `INFURA_API_KEY` to the Infura API key in `.env`, if needed
 * Set `ETHERSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
+* Set `BSCSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
+* Set `POLYGONSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
 
 ### Deploy
 
