@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.5.0](README.md) / Exports
+ - v1.5.1](README.md) / Exports
 
 # # Masa SDK
- - v1.5.0
+ - v1.5.1
 
 ## Table of contents
 
@@ -182,7 +182,7 @@ ___
 
 ### NetworkName
 
-Ƭ **NetworkName**: ``"goerli"`` \| ``"mainnet"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"``
+Ƭ **NetworkName**: ``"goerli"`` \| ``"ethereum"`` \| ``"mainnet"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"``
 
 ___
 
