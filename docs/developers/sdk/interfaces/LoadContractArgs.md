@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.4.2](../README.md) / [Exports](../modules.md) / LoadContractArgs
+ - v1.5.0](../README.md) / [Exports](../modules.md) / LoadContractArgs
 
 # Interface: LoadContractArgs
 
