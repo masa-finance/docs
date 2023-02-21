@@ -1,5 +1,5 @@
 [# Masa React
- - v0.27.0](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v0.27.1](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
