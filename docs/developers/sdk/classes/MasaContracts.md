@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.5.1](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v1.5.2](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -42,8 +42,8 @@
 
 | Name | Type |
 | :------ | :------ |
-| `mint` | (`wallet`: `Wallet`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `identityId`: `BigNumber`, `authorityAddress`: `string`, `signatureDate`: `number`, `signature`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`ContractTransaction`\> |
-| `sign` | (`wallet`: `Wallet`, `identityId`: `BigNumber`) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\> |
+| `mint` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `identityId`: `BigNumber`, `authorityAddress`: `string`, `signatureDate`: `number`, `signature`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`ContractTransaction`\> |
+| `sign` | (`identityId`: `BigNumber`) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\> |
 | `types` | { `MintCreditScore`: { `name`: `string` = "identityId"; `type`: `string` = "uint256" }[]  } |
 | `types.MintCreditScore` | { `name`: `string` = "identityId"; `type`: `string` = "uint256" }[] |
 
@@ -58,7 +58,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `getPrice` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `slippage`: `undefined` \| `number`) => `Promise`<{ `formattedMintTransactionFee`: `string` ; `formattedPrice`: `string` ; `mintTransactionEstimatedGas`: `BigNumber` ; `mintTransactionFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> |
-| `mint` | (`wallet`: `Wallet`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `receiver`: `string`, `authorityAddress`: `string`, `signatureDate`: `number`, `signature`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`ContractTransaction`\> |
+| `mint` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `receiver`: `string`, `authorityAddress`: `string`, `signatureDate`: `number`, `signature`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`ContractTransaction`\> |
 | `sign` | (`receiver`: `string`) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\> |
 | `types` | { `MintGreen`: { `name`: `string` = "to"; `type`: `string` = "address" }[]  } |
 | `types.MintGreen` | { `name`: `string` = "to"; `type`: `string` = "address" }[] |
