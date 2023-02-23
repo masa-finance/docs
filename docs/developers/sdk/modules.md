@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.5.2](README.md) / Exports
+ - v1.5.5](README.md) / Exports
 
 # # Masa SDK
- - v1.5.2
+ - v1.5.5
 
 ## Table of contents
 
@@ -141,7 +141,7 @@ ___
 
 ### Environment
 
-Ƭ **Environment**: { `name`: ``"local"`` \| ``"dev"`` \| ``"test"`` \| ``"stage"`` \| ``"production"`` ; `wallet?`: `ethers.Signer` \| `ethers.Wallet`  } & [`MasaArgs`](interfaces/MasaArgs.md)
+Ƭ **Environment**: { `name`: ``"local"`` \| ``"dev"`` \| ``"test"`` \| ``"stage"`` \| ``"production"`` ; `wallet?`: `Signer` \| `Wallet`  } & [`MasaArgs`](interfaces/MasaArgs.md)
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 ### NetworkName
 
-Ƭ **NetworkName**: ``"goerli"`` \| ``"ethereum"`` \| ``"mainnet"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"``
+Ƭ **NetworkName**: ``"goerli"`` \| ``"ethereum"`` \| ``"mainnet"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"unknown"``
 
 ___
 
@@ -514,7 +514,13 @@ ___
 
 ### createRandomWallet
 
-▸ **createRandomWallet**(): `Wallet`
+▸ **createRandomWallet**(`provider?`): `Wallet`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `provider?` | `Provider` |
 
 #### Returns
 
