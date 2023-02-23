@@ -1,8 +1,8 @@
 [# Masa React
- - v0.27.1](README.md) / Exports
+ - v0.27.7](README.md) / Exports
 
 # # Masa React
- - v0.27.1
+ - v0.27.7
 
 ## Table of contents
 
@@ -10,7 +10,6 @@
 
 - [ArweaveConfig](interfaces/ArweaveConfig.md)
 - [MasaContextProviderProps](interfaces/MasaContextProviderProps.md)
-- [MasaShape](interfaces/MasaShape.md)
 - [ModalProps](interfaces/ModalProps.md)
 - [Network](interfaces/Network.md)
 - [SpinnerProps](interfaces/SpinnerProps.md)
@@ -34,7 +33,6 @@
 - [ModalComponent](modules.md#modalcomponent)
 - [Spinner](modules.md#spinner)
 - [createNewMasa](modules.md#createnewmasa)
-- [createRandomWallet](modules.md#createrandomwallet)
 - [getNetworkNameByChainId](modules.md#getnetworknamebychainid)
 - [getWeb3Provider](modules.md#getweb3provider)
 - [useCreditScores](modules.md#usecreditscores)
@@ -44,6 +42,9 @@
 - [useIdentity](modules.md#useidentity)
 - [useMasa](modules.md#usemasa)
 - [useMetamask](modules.md#usemetamask)
+- [useModal](modules.md#usemodal)
+- [useNetwork](modules.md#usenetwork)
+- [useProvider](modules.md#useprovider)
 - [useSession](modules.md#usesession)
 - [useSoulnames](modules.md#usesoulnames)
 - [useWallet](modules.md#usewallet)
@@ -58,13 +59,13 @@
 
 ### MASA\_CONTEXT
 
-• `Const` **MASA\_CONTEXT**: `Context`<[`MasaShape`](interfaces/MasaShape.md)\>
+• `Const` **MASA\_CONTEXT**: `Context`<`MasaShape`\>
 
 ___
 
 ### SupportedNetworks
 
-• `Const` **SupportedNetworks**: { [key in NetworkName]: Network }
+• `Const` **SupportedNetworks**: `Partial`<{ [key in NetworkName]: Network }\>
 
 ___
 
@@ -185,16 +186,6 @@ ___
 
 ___
 
-### createRandomWallet
-
-▸ **createRandomWallet**(): ``null`` \| `Wallet`
-
-#### Returns
-
-``null`` \| `Wallet`
-
-___
-
 ### getNetworkNameByChainId
 
 ▸ **getNetworkNameByChainId**(`chainId`): `NetworkName`
@@ -213,11 +204,11 @@ ___
 
 ### getWeb3Provider
 
-▸ **getWeb3Provider**(): ``null`` \| `Web3Provider`
+▸ **getWeb3Provider**(): `undefined` \| `Web3Provider`
 
 #### Returns
 
-``null`` \| `Web3Provider`
+`undefined` \| `Web3Provider`
 
 ___
 
@@ -242,7 +233,8 @@ ___
 | `creditScores` | `undefined` \| { `metadata?`: `ICreditScore` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] |
 | `error` | `unknown` |
 | `handleCreateCreditScore` | () => `void` |
-| `isLoading` | `boolean` |
+| `isCreditScoresLoading` | `boolean` |
+| `reloadCreditScores` | () => `void` |
 | `status` | `string` |
 
 ___
@@ -303,7 +295,8 @@ ___
 | `greens` | `undefined` \| { `metadata?`: `IGreen` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] |
 | `handleCreateGreen` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`undefined` \| `VerifyGreenResult`\> |
 | `handleGenerateGreen` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| `GenerateGreenResult`\> |
-| `isLoading` | `boolean` |
+| `isGreensLoading` | `boolean` |
+| `reloadGreens` | () => `void` |
 | `status` | `string` |
 
 ___
@@ -328,18 +321,19 @@ ___
 | `error` | `unknown` |
 | `handlePurchaseIdentity` | () => `void` |
 | `identity` | `undefined` \| { `address?`: `string` ; `identityId?`: `BigNumber`  } |
-| `isLoading` | `boolean` |
+| `isIdentityLoading` | `boolean` |
+| `reloadIdentity` | () => `void` |
 | `status` | `string` |
 
 ___
 
 ### useMasa
 
-▸ **useMasa**(): [`MasaShape`](interfaces/MasaShape.md)
+▸ **useMasa**(): `MasaShape`
 
 #### Returns
 
-[`MasaShape`](interfaces/MasaShape.md)
+`MasaShape`
 
 ___
 
@@ -364,6 +358,76 @@ ___
 
 ___
 
+### useModal
+
+▸ **useModal**(`masa`, `provider`, `networkName?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | ``null`` \| `default` |
+| `provider` | ``null`` \| `Signer` \| `Wallet` |
+| `networkName?` | `NetworkName` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `closeModal` | () => `void` |
+| `isModalOpen` | `boolean` |
+| `setModalCallback` | (`callback`: () => `void`) => `void` |
+| `setModalOpen` | (`modalOpen`: `boolean`) => `void` |
+
+___
+
+### useNetwork
+
+▸ **useNetwork**(`provider`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `provider` | ``null`` \| `Signer` \| `Wallet` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `addNetwork` | (`networkDetails`: [`Network`](interfaces/Network.md)) => `void` |
+| `network` | ``null`` \| `Network` |
+| `switchNetwork` | (`chainId`: `number`) => `void` |
+
+___
+
+### useProvider
+
+▸ **useProvider**(`signer?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `signer?` | `Signer` \| `Wallet` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `isProviderMissing` | `undefined` \| `boolean` |
+| `provider` | ``null`` \| `Signer` \| `Wallet` |
+| `setIsProviderMissing` | (`providerMissing`: `boolean`) => `void` |
+| `setProvider` | (`provider`: ``null`` \| `Signer` \| `Wallet`) => `void` |
+
+___
+
 ### useSession
 
 ▸ **useSession**(`masa`, `walletAddress`): `Object`
@@ -382,10 +446,10 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `error` | `unknown` |
-| `isLoading` | `boolean` |
-| `loggedIn?` | `boolean` |
-| `login` | () => `void` |
-| `logout` | () => `void` |
+| `handleLogin` | () => `void` |
+| `handleLogout` | () => `void` |
+| `isLoggedIn?` | `boolean` |
+| `isSessionLoading` | `boolean` |
 | `status` | `string` |
 
 ___
@@ -409,7 +473,8 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `error` | `unknown` |
-| `isLoading` | `boolean` |
+| `isSoulnamesLoading` | `boolean` |
+| `reloadSoulnames` | () => `void` |
 | `soulnames` | `undefined` \| `SoulNameDetails`[] |
 | `status` | `string` |
 
@@ -424,7 +489,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `masa` | ``null`` \| `default` |
-| `provider` | ``null`` \| `Wallet` \| `Signer` |
+| `provider` | ``null`` \| `Signer` \| `Wallet` |
 
 #### Returns
 
@@ -433,7 +498,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `error` | `unknown` |
-| `isLoading` | `boolean` |
-| `network` | ``null`` \| `Network` |
+| `isConnected` | `boolean` |
+| `isWalletLoading` | `boolean` |
 | `status` | `string` |
 | `walletAddress` | `undefined` \| `string` |

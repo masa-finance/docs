@@ -1,11 +1,11 @@
 [# Masa React
- - v0.27.1](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v0.27.7](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
 ## Hierarchy
 
-- [`MasaShape`](MasaShape.md)
+- `MasaShape`
 
   ↳ **`MasaContextProviderProps`**
 
@@ -21,7 +21,6 @@
 - [connect](MasaContextProviderProps.md#connect)
 - [creditScores](MasaContextProviderProps.md#creditscores)
 - [environmentName](MasaContextProviderProps.md#environmentname)
-- [greenLoading](MasaContextProviderProps.md#greenloading)
 - [greens](MasaContextProviderProps.md#greens)
 - [handleCreateCreditScore](MasaContextProviderProps.md#handlecreatecreditscore)
 - [handleCreateGreen](MasaContextProviderProps.md#handlecreategreen)
@@ -31,20 +30,27 @@
 - [handlePurchaseIdentity](MasaContextProviderProps.md#handlepurchaseidentity)
 - [identity](MasaContextProviderProps.md#identity)
 - [isConnected](MasaContextProviderProps.md#isconnected)
+- [isCreditScoresLoading](MasaContextProviderProps.md#iscreditscoresloading)
+- [isGreensLoading](MasaContextProviderProps.md#isgreensloading)
+- [isIdentityLoading](MasaContextProviderProps.md#isidentityloading)
+- [isLoading](MasaContextProviderProps.md#isloading)
+- [isLoggedIn](MasaContextProviderProps.md#isloggedin)
 - [isModalOpen](MasaContextProviderProps.md#ismodalopen)
-- [loadCreditScores](MasaContextProviderProps.md#loadcreditscores)
-- [loadSoulnames](MasaContextProviderProps.md#loadsoulnames)
-- [loading](MasaContextProviderProps.md#loading)
-- [loggedIn](MasaContextProviderProps.md#loggedin)
-- [logginLoading](MasaContextProviderProps.md#logginloading)
+- [isProviderMissing](MasaContextProviderProps.md#isprovidermissing)
+- [isSessionLoading](MasaContextProviderProps.md#issessionloading)
+- [isSoulnamesLoading](MasaContextProviderProps.md#issoulnamesloading)
+- [isWalletLoading](MasaContextProviderProps.md#iswalletloading)
 - [masa](MasaContextProviderProps.md#masa)
-- [missingProvider](MasaContextProviderProps.md#missingprovider)
 - [network](MasaContextProviderProps.md#network)
 - [networkName](MasaContextProviderProps.md#networkname)
 - [noWallet](MasaContextProviderProps.md#nowallet)
 - [provider](MasaContextProviderProps.md#provider)
+- [reloadCreditScores](MasaContextProviderProps.md#reloadcreditscores)
+- [reloadGreens](MasaContextProviderProps.md#reloadgreens)
+- [reloadIdentity](MasaContextProviderProps.md#reloadidentity)
+- [reloadSoulnames](MasaContextProviderProps.md#reloadsoulnames)
 - [scope](MasaContextProviderProps.md#scope)
-- [setMissingProvider](MasaContextProviderProps.md#setmissingprovider)
+- [setIsProviderMissing](MasaContextProviderProps.md#setisprovidermissing)
 - [setModalOpen](MasaContextProviderProps.md#setmodalopen)
 - [setProvider](MasaContextProviderProps.md#setprovider)
 - [signer](MasaContextProviderProps.md#signer)
@@ -57,25 +63,11 @@
 
 ### SupportedNetworks
 
-• `Optional` **SupportedNetworks**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `alfajores` | [`Network`](Network.md) |
-| `bsc` | [`Network`](Network.md) |
-| `bsctest` | [`Network`](Network.md) |
-| `celo` | [`Network`](Network.md) |
-| `ethereum` | [`Network`](Network.md) |
-| `goerli` | [`Network`](Network.md) |
-| `mainnet` | [`Network`](Network.md) |
-| `mumbai` | [`Network`](Network.md) |
-| `polygon` | [`Network`](Network.md) |
+• `Optional` **SupportedNetworks**: `Partial`<{ `alfajores`: [`Network`](Network.md) ; `bsc`: [`Network`](Network.md) ; `bsctest`: [`Network`](Network.md) ; `celo`: [`Network`](Network.md) ; `ethereum`: [`Network`](Network.md) ; `goerli`: [`Network`](Network.md) ; `mainnet`: [`Network`](Network.md) ; `mumbai`: [`Network`](Network.md) ; `polygon`: [`Network`](Network.md) ; `unknown`: [`Network`](Network.md)  }\>
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[SupportedNetworks](MasaShape.md#supportednetworks)
+MasaShape.SupportedNetworks
 
 ___
 
@@ -91,7 +83,7 @@ ___
 
 #### Overrides
 
-[MasaShape](MasaShape.md).[children](MasaShape.md#children)
+MasaShape.children
 
 ___
 
@@ -109,7 +101,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[closeModal](MasaShape.md#closemodal)
+MasaShape.closeModal
 
 ___
 
@@ -119,7 +111,7 @@ ___
 
 #### Overrides
 
-[MasaShape](MasaShape.md).[company](MasaShape.md#company)
+MasaShape.company
 
 ___
 
@@ -145,7 +137,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[connect](MasaShape.md#connect)
+MasaShape.connect
 
 ___
 
@@ -155,7 +147,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[creditScores](MasaShape.md#creditscores)
+MasaShape.creditScores
 
 ___
 
@@ -165,23 +157,13 @@ ___
 
 ___
 
-### greenLoading
-
-• `Optional` **greenLoading**: `boolean`
-
-#### Inherited from
-
-[MasaShape](MasaShape.md).[greenLoading](MasaShape.md#greenloading)
-
-___
-
 ### greens
 
 • `Optional` **greens**: { `metadata?`: `IGreen` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[greens](MasaShape.md#greens)
+MasaShape.greens
 
 ___
 
@@ -199,7 +181,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[handleCreateCreditScore](MasaShape.md#handlecreatecreditscore)
+MasaShape.handleCreateCreditScore
 
 ___
 
@@ -224,7 +206,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[handleCreateGreen](MasaShape.md#handlecreategreen)
+MasaShape.handleCreateGreen
 
 ___
 
@@ -248,7 +230,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[handleGenerateGreen](MasaShape.md#handlegenerategreen)
+MasaShape.handleGenerateGreen
 
 ___
 
@@ -266,7 +248,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[handleLogin](MasaShape.md#handlelogin)
+MasaShape.handleLogin
 
 ___
 
@@ -290,7 +272,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[handleLogout](MasaShape.md#handlelogout)
+MasaShape.handleLogout
 
 ___
 
@@ -308,7 +290,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[handlePurchaseIdentity](MasaShape.md#handlepurchaseidentity)
+MasaShape.handlePurchaseIdentity
 
 ___
 
@@ -325,7 +307,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[identity](MasaShape.md#identity)
+MasaShape.identity
 
 ___
 
@@ -335,7 +317,57 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[isConnected](MasaShape.md#isconnected)
+MasaShape.isConnected
+
+___
+
+### isCreditScoresLoading
+
+• `Optional` **isCreditScoresLoading**: `boolean`
+
+#### Inherited from
+
+MasaShape.isCreditScoresLoading
+
+___
+
+### isGreensLoading
+
+• `Optional` **isGreensLoading**: `boolean`
+
+#### Inherited from
+
+MasaShape.isGreensLoading
+
+___
+
+### isIdentityLoading
+
+• `Optional` **isIdentityLoading**: `boolean`
+
+#### Inherited from
+
+MasaShape.isIdentityLoading
+
+___
+
+### isLoading
+
+• `Optional` **isLoading**: `boolean`
+
+#### Inherited from
+
+MasaShape.isLoading
+
+___
+
+### isLoggedIn
+
+• `Optional` **isLoggedIn**: `boolean`
+
+#### Inherited from
+
+MasaShape.isLoggedIn
 
 ___
 
@@ -345,73 +377,47 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[isModalOpen](MasaShape.md#ismodalopen)
+MasaShape.isModalOpen
 
 ___
 
-### loadCreditScores
+### isProviderMissing
 
-• `Optional` **loadCreditScores**: () => `void`
-
-#### Type declaration
-
-▸ (): `void`
-
-##### Returns
-
-`void`
+• `Optional` **isProviderMissing**: `boolean`
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[loadCreditScores](MasaShape.md#loadcreditscores)
+MasaShape.isProviderMissing
 
 ___
 
-### loadSoulnames
+### isSessionLoading
 
-• `Optional` **loadSoulnames**: () => `void`
-
-#### Type declaration
-
-▸ (): `void`
-
-##### Returns
-
-`void`
+• `Optional` **isSessionLoading**: `boolean`
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[loadSoulnames](MasaShape.md#loadsoulnames)
+MasaShape.isSessionLoading
 
 ___
 
-### loading
+### isSoulnamesLoading
 
-• `Optional` **loading**: `boolean`
+• `Optional` **isSoulnamesLoading**: `boolean`
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[loading](MasaShape.md#loading)
+MasaShape.isSoulnamesLoading
 
 ___
 
-### loggedIn
+### isWalletLoading
 
-• `Optional` **loggedIn**: `boolean`
-
-#### Inherited from
-
-[MasaShape](MasaShape.md).[loggedIn](MasaShape.md#loggedin)
-
-___
-
-### logginLoading
-
-• `Optional` **logginLoading**: `boolean`
+• `Optional` **isWalletLoading**: `boolean`
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[logginLoading](MasaShape.md#logginloading)
+MasaShape.isWalletLoading
 
 ___
 
@@ -421,17 +427,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[masa](MasaShape.md#masa)
-
-___
-
-### missingProvider
-
-• `Optional` **missingProvider**: `boolean`
-
-#### Inherited from
-
-[MasaShape](MasaShape.md).[missingProvider](MasaShape.md#missingprovider)
+MasaShape.masa
 
 ___
 
@@ -441,7 +437,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[network](MasaShape.md#network)
+MasaShape.network
 
 ___
 
@@ -451,7 +447,7 @@ ___
 
 #### Overrides
 
-[MasaShape](MasaShape.md).[networkName](MasaShape.md#networkname)
+MasaShape.networkName
 
 ___
 
@@ -463,11 +459,83 @@ ___
 
 ### provider
 
-• `Optional` **provider**: ``null`` \| `Wallet` \| `Signer`
+• `Optional` **provider**: ``null`` \| `Signer` \| `Wallet`
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[provider](MasaShape.md#provider)
+MasaShape.provider
+
+___
+
+### reloadCreditScores
+
+• `Optional` **reloadCreditScores**: () => `void`
+
+#### Type declaration
+
+▸ (): `void`
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+MasaShape.reloadCreditScores
+
+___
+
+### reloadGreens
+
+• `Optional` **reloadGreens**: () => `void`
+
+#### Type declaration
+
+▸ (): `void`
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+MasaShape.reloadGreens
+
+___
+
+### reloadIdentity
+
+• `Optional` **reloadIdentity**: () => `void`
+
+#### Type declaration
+
+▸ (): `void`
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+MasaShape.reloadIdentity
+
+___
+
+### reloadSoulnames
+
+• `Optional` **reloadSoulnames**: () => `void`
+
+#### Type declaration
+
+▸ (): `void`
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+MasaShape.reloadSoulnames
 
 ___
 
@@ -477,13 +545,13 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[scope](MasaShape.md#scope)
+MasaShape.scope
 
 ___
 
-### setMissingProvider
+### setIsProviderMissing
 
-• `Optional` **setMissingProvider**: (`value`: `boolean`) => `void`
+• `Optional` **setIsProviderMissing**: (`value`: `boolean`) => `void`
 
 #### Type declaration
 
@@ -501,7 +569,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[setMissingProvider](MasaShape.md#setmissingprovider)
+MasaShape.setIsProviderMissing
 
 ___
 
@@ -525,13 +593,13 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[setModalOpen](MasaShape.md#setmodalopen)
+MasaShape.setModalOpen
 
 ___
 
 ### setProvider
 
-• `Optional` **setProvider**: (`provider`: ``null`` \| `Wallet` \| `Signer`) => `void`
+• `Optional` **setProvider**: (`provider`: ``null`` \| `Signer` \| `Wallet`) => `void`
 
 #### Type declaration
 
@@ -541,7 +609,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `provider` | ``null`` \| `Wallet` \| `Signer` |
+| `provider` | ``null`` \| `Signer` \| `Wallet` |
 
 ##### Returns
 
@@ -549,13 +617,13 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[setProvider](MasaShape.md#setprovider)
+MasaShape.setProvider
 
 ___
 
 ### signer
 
-• `Optional` **signer**: `Wallet` \| `Signer`
+• `Optional` **signer**: `Signer` \| `Wallet`
 
 ___
 
@@ -565,7 +633,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[soulnames](MasaShape.md#soulnames)
+MasaShape.soulnames
 
 ___
 
@@ -589,7 +657,7 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[switchNetwork](MasaShape.md#switchnetwork)
+MasaShape.switchNetwork
 
 ___
 
@@ -605,4 +673,4 @@ ___
 
 #### Inherited from
 
-[MasaShape](MasaShape.md).[walletAddress](MasaShape.md#walletaddress)
+MasaShape.walletAddress
