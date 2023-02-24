@@ -10,6 +10,7 @@
 
 - [ArweaveConfig](interfaces/ArweaveConfig.md)
 - [MasaContextProviderProps](interfaces/MasaContextProviderProps.md)
+- [MasaShape](interfaces/MasaShape.md)
 - [ModalProps](interfaces/ModalProps.md)
 - [Network](interfaces/Network.md)
 - [SpinnerProps](interfaces/SpinnerProps.md)
@@ -58,7 +59,7 @@
 
 ### MASA\_CONTEXT
 
-• `Const` **MASA\_CONTEXT**: `Context`<`MasaShape`\>
+• `Const` **MASA\_CONTEXT**: `Context`<[`MasaShape`](interfaces/MasaShape.md)\>
 
 ___
 
@@ -330,11 +331,11 @@ ___
 
 ### useMasa
 
-▸ **useMasa**(): `MasaShape`
+▸ **useMasa**(): [`MasaShape`](interfaces/MasaShape.md)
 
 #### Returns
 
-`MasaShape`
+[`MasaShape`](interfaces/MasaShape.md)
 
 ___
 

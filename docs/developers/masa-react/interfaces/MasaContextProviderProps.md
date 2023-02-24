@@ -5,7 +5,7 @@
 
 ## Hierarchy
 
-- `MasaShape`
+- [`MasaShape`](MasaShape.md)
 
   ↳ **`MasaContextProviderProps`**
 
@@ -64,7 +64,7 @@
 
 #### Inherited from
 
-MasaShape.SupportedNetworks
+[MasaShape](MasaShape.md).[SupportedNetworks](MasaShape.md#supportednetworks)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Overrides
 
-MasaShape.children
+[MasaShape](MasaShape.md).[children](MasaShape.md#children)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Inherited from
 
-MasaShape.closeModal
+[MasaShape](MasaShape.md).[closeModal](MasaShape.md#closemodal)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Overrides
 
-MasaShape.company
+[MasaShape](MasaShape.md).[company](MasaShape.md#company)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Inherited from
 
-MasaShape.connect
+[MasaShape](MasaShape.md).[connect](MasaShape.md#connect)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Inherited from
 
-MasaShape.creditScores
+[MasaShape](MasaShape.md).[creditScores](MasaShape.md#creditscores)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Inherited from
 
-MasaShape.greens
+[MasaShape](MasaShape.md).[greens](MasaShape.md#greens)
 
 ___
 
@@ -178,7 +178,7 @@ ___
 
 #### Inherited from
 
-MasaShape.handleCreateCreditScore
+[MasaShape](MasaShape.md).[handleCreateCreditScore](MasaShape.md#handlecreatecreditscore)
 
 ___
 
@@ -203,7 +203,7 @@ ___
 
 #### Inherited from
 
-MasaShape.handleCreateGreen
+[MasaShape](MasaShape.md).[handleCreateGreen](MasaShape.md#handlecreategreen)
 
 ___
 
@@ -227,7 +227,7 @@ ___
 
 #### Inherited from
 
-MasaShape.handleGenerateGreen
+[MasaShape](MasaShape.md).[handleGenerateGreen](MasaShape.md#handlegenerategreen)
 
 ___
 
@@ -245,7 +245,7 @@ ___
 
 #### Inherited from
 
-MasaShape.handleLogin
+[MasaShape](MasaShape.md).[handleLogin](MasaShape.md#handlelogin)
 
 ___
 
@@ -269,7 +269,7 @@ ___
 
 #### Inherited from
 
-MasaShape.handleLogout
+[MasaShape](MasaShape.md).[handleLogout](MasaShape.md#handlelogout)
 
 ___
 
@@ -287,7 +287,7 @@ ___
 
 #### Inherited from
 
-MasaShape.handlePurchaseIdentity
+[MasaShape](MasaShape.md).[handlePurchaseIdentity](MasaShape.md#handlepurchaseidentity)
 
 ___
 
@@ -304,7 +304,7 @@ ___
 
 #### Inherited from
 
-MasaShape.identity
+[MasaShape](MasaShape.md).[identity](MasaShape.md#identity)
 
 ___
 
@@ -314,7 +314,7 @@ ___
 
 #### Inherited from
 
-MasaShape.isConnected
+[MasaShape](MasaShape.md).[isConnected](MasaShape.md#isconnected)
 
 ___
 
@@ -324,7 +324,7 @@ ___
 
 #### Inherited from
 
-MasaShape.isCreditScoresLoading
+[MasaShape](MasaShape.md).[isCreditScoresLoading](MasaShape.md#iscreditscoresloading)
 
 ___
 
@@ -334,7 +334,7 @@ ___
 
 #### Inherited from
 
-MasaShape.isGreensLoading
+[MasaShape](MasaShape.md).[isGreensLoading](MasaShape.md#isgreensloading)
 
 ___
 
@@ -344,7 +344,7 @@ ___
 
 #### Inherited from
 
-MasaShape.isIdentityLoading
+[MasaShape](MasaShape.md).[isIdentityLoading](MasaShape.md#isidentityloading)
 
 ___
 
@@ -354,7 +354,7 @@ ___
 
 #### Inherited from
 
-MasaShape.isLoading
+[MasaShape](MasaShape.md).[isLoading](MasaShape.md#isloading)
 
 ___
 
@@ -364,7 +364,7 @@ ___
 
 #### Inherited from
 
-MasaShape.isLoggedIn
+[MasaShape](MasaShape.md).[isLoggedIn](MasaShape.md#isloggedin)
 
 ___
 
@@ -374,7 +374,7 @@ ___
 
 #### Inherited from
 
-MasaShape.isModalOpen
+[MasaShape](MasaShape.md).[isModalOpen](MasaShape.md#ismodalopen)
 
 ___
 
@@ -384,7 +384,7 @@ ___
 
 #### Inherited from
 
-MasaShape.isSessionLoading
+[MasaShape](MasaShape.md).[isSessionLoading](MasaShape.md#issessionloading)
 
 ___
 
@@ -394,7 +394,7 @@ ___
 
 #### Inherited from
 
-MasaShape.isSoulnamesLoading
+[MasaShape](MasaShape.md).[isSoulnamesLoading](MasaShape.md#issoulnamesloading)
 
 ___
 
@@ -404,7 +404,7 @@ ___
 
 #### Inherited from
 
-MasaShape.isWalletLoading
+[MasaShape](MasaShape.md).[isWalletLoading](MasaShape.md#iswalletloading)
 
 ___
 
@@ -414,7 +414,7 @@ ___
 
 #### Inherited from
 
-MasaShape.masa
+[MasaShape](MasaShape.md).[masa](MasaShape.md#masa)
 
 ___
 
@@ -424,7 +424,7 @@ ___
 
 #### Inherited from
 
-MasaShape.network
+[MasaShape](MasaShape.md).[network](MasaShape.md#network)
 
 ___
 
@@ -440,7 +440,7 @@ ___
 
 #### Inherited from
 
-MasaShape.provider
+[MasaShape](MasaShape.md).[provider](MasaShape.md#provider)
 
 ___
 
@@ -458,7 +458,7 @@ ___
 
 #### Inherited from
 
-MasaShape.reloadCreditScores
+[MasaShape](MasaShape.md).[reloadCreditScores](MasaShape.md#reloadcreditscores)
 
 ___
 
@@ -476,7 +476,7 @@ ___
 
 #### Inherited from
 
-MasaShape.reloadGreens
+[MasaShape](MasaShape.md).[reloadGreens](MasaShape.md#reloadgreens)
 
 ___
 
@@ -494,7 +494,7 @@ ___
 
 #### Inherited from
 
-MasaShape.reloadIdentity
+[MasaShape](MasaShape.md).[reloadIdentity](MasaShape.md#reloadidentity)
 
 ___
 
@@ -512,7 +512,7 @@ ___
 
 #### Inherited from
 
-MasaShape.reloadSoulnames
+[MasaShape](MasaShape.md).[reloadSoulnames](MasaShape.md#reloadsoulnames)
 
 ___
 
@@ -522,7 +522,7 @@ ___
 
 #### Inherited from
 
-MasaShape.scope
+[MasaShape](MasaShape.md).[scope](MasaShape.md#scope)
 
 ___
 
@@ -546,7 +546,7 @@ ___
 
 #### Inherited from
 
-MasaShape.setModalOpen
+[MasaShape](MasaShape.md).[setModalOpen](MasaShape.md#setmodalopen)
 
 ___
 
@@ -570,7 +570,7 @@ ___
 
 #### Inherited from
 
-MasaShape.setProvider
+[MasaShape](MasaShape.md).[setProvider](MasaShape.md#setprovider)
 
 ___
 
@@ -586,7 +586,7 @@ ___
 
 #### Inherited from
 
-MasaShape.soulnames
+[MasaShape](MasaShape.md).[soulnames](MasaShape.md#soulnames)
 
 ___
 
@@ -610,7 +610,7 @@ ___
 
 #### Inherited from
 
-MasaShape.switchNetwork
+[MasaShape](MasaShape.md).[switchNetwork](MasaShape.md#switchnetwork)
 
 ___
 
@@ -626,4 +626,4 @@ ___
 
 #### Inherited from
 
-MasaShape.walletAddress
+[MasaShape](MasaShape.md).[walletAddress](MasaShape.md#walletaddress)
