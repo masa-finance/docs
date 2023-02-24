@@ -1,5 +1,5 @@
 [# Masa React
- - v0.27.7](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v0.28.0-alpha.3](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -36,7 +36,6 @@
 - [isLoading](MasaContextProviderProps.md#isloading)
 - [isLoggedIn](MasaContextProviderProps.md#isloggedin)
 - [isModalOpen](MasaContextProviderProps.md#ismodalopen)
-- [isProviderMissing](MasaContextProviderProps.md#isprovidermissing)
 - [isSessionLoading](MasaContextProviderProps.md#issessionloading)
 - [isSoulnamesLoading](MasaContextProviderProps.md#issoulnamesloading)
 - [isWalletLoading](MasaContextProviderProps.md#iswalletloading)
@@ -50,7 +49,6 @@
 - [reloadIdentity](MasaContextProviderProps.md#reloadidentity)
 - [reloadSoulnames](MasaContextProviderProps.md#reloadsoulnames)
 - [scope](MasaContextProviderProps.md#scope)
-- [setIsProviderMissing](MasaContextProviderProps.md#setisprovidermissing)
 - [setModalOpen](MasaContextProviderProps.md#setmodalopen)
 - [setProvider](MasaContextProviderProps.md#setprovider)
 - [signer](MasaContextProviderProps.md#signer)
@@ -143,7 +141,7 @@ ___
 
 ### creditScores
 
-• `Optional` **creditScores**: ``null`` \| { `metadata?`: `ICreditScore` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]
+• `Optional` **creditScores**: { `metadata?`: `ICreditScore` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]
 
 #### Inherited from
 
@@ -254,17 +252,17 @@ ___
 
 ### handleLogout
 
-• `Optional` **handleLogout**: (`callback?`: () => `void`) => `void`
+• `Optional` **handleLogout**: (`logoutCallback?`: () => `void`) => `void`
 
 #### Type declaration
 
-▸ (`callback?`): `void`
+▸ (`logoutCallback?`): `void`
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `callback?` | () => `void` |
+| `logoutCallback?` | () => `void` |
 
 ##### Returns
 
@@ -381,16 +379,6 @@ MasaShape.isModalOpen
 
 ___
 
-### isProviderMissing
-
-• `Optional` **isProviderMissing**: `boolean`
-
-#### Inherited from
-
-MasaShape.isProviderMissing
-
-___
-
 ### isSessionLoading
 
 • `Optional` **isSessionLoading**: `boolean`
@@ -433,7 +421,7 @@ ___
 
 ### network
 
-• `Optional` **network**: ``null`` \| `Network`
+• `Optional` **network**: `Network`
 
 #### Inherited from
 
@@ -459,7 +447,7 @@ ___
 
 ### provider
 
-• `Optional` **provider**: ``null`` \| `Signer` \| `Wallet`
+• `Optional` **provider**: `Signer` \| `Wallet`
 
 #### Inherited from
 
@@ -549,30 +537,6 @@ MasaShape.scope
 
 ___
 
-### setIsProviderMissing
-
-• `Optional` **setIsProviderMissing**: (`value`: `boolean`) => `void`
-
-#### Type declaration
-
-▸ (`value`): `void`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `boolean` |
-
-##### Returns
-
-`void`
-
-#### Inherited from
-
-MasaShape.setIsProviderMissing
-
-___
-
 ### setModalOpen
 
 • `Optional` **setModalOpen**: (`val`: `boolean`) => `void`
@@ -599,17 +563,17 @@ ___
 
 ### setProvider
 
-• `Optional` **setProvider**: (`provider`: ``null`` \| `Signer` \| `Wallet`) => `void`
+• `Optional` **setProvider**: (`provider?`: `Signer` \| `Wallet`) => `void`
 
 #### Type declaration
 
-▸ (`provider`): `void`
+▸ (`provider?`): `void`
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `provider` | ``null`` \| `Signer` \| `Wallet` |
+| `provider?` | `Signer` \| `Wallet` |
 
 ##### Returns
 
@@ -629,7 +593,7 @@ ___
 
 ### soulnames
 
-• `Optional` **soulnames**: ``null`` \| `SoulNameDetails`[]
+• `Optional` **soulnames**: `SoulNameDetails`[]
 
 #### Inherited from
 

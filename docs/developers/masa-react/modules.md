@@ -1,8 +1,8 @@
 [# Masa React
- - v0.27.7](README.md) / Exports
+ - v0.28.0-alpha.3](README.md) / Exports
 
 # # Masa React
- - v0.27.7
+ - v0.28.0-alpha.3
 
 ## Table of contents
 
@@ -44,7 +44,6 @@
 - [useMetamask](modules.md#usemetamask)
 - [useModal](modules.md#usemodal)
 - [useNetwork](modules.md#usenetwork)
-- [useProvider](modules.md#useprovider)
 - [useSession](modules.md#usesession)
 - [useSoulnames](modules.md#usesoulnames)
 - [useWallet](modules.md#usewallet)
@@ -100,7 +99,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `disable?` | `boolean` |
+| › `disableMetamask?` | `boolean` |
 
 #### Returns
 
@@ -168,7 +167,7 @@ ___
 
 ### createNewMasa
 
-▸ **createNewMasa**(`«destructured»`): `Promise`<``null`` \| `default`\>
+▸ **createNewMasa**(`«destructured»`): `Promise`<`undefined` \| `default`\>
 
 #### Parameters
 
@@ -182,7 +181,7 @@ ___
 
 #### Returns
 
-`Promise`<``null`` \| `default`\>
+`Promise`<`undefined` \| `default`\>
 
 ___
 
@@ -214,15 +213,17 @@ ___
 
 ### useCreditScores
 
-▸ **useCreditScores**(`masa`, `walletAddress`, `identity`): `Object`
+▸ **useCreditScores**(`masa?`, `walletAddress?`, `identity?`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | ``null`` \| `default` |
-| `walletAddress` | `undefined` \| `string` |
-| `identity` | `undefined` \| { `address?`: `string` ; `identityId?`: `BigNumber`  } |
+| `masa?` | `default` |
+| `walletAddress?` | `string` |
+| `identity?` | `Object` |
+| `identity.address?` | `string` |
+| `identity.identityId?` | `BigNumber` |
 
 #### Returns
 
@@ -276,14 +277,14 @@ ___
 
 ### useGreen
 
-▸ **useGreen**(`masa`, `walletAddress`): `Object`
+▸ **useGreen**(`masa?`, `walletAddress?`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | ``null`` \| `default` |
-| `walletAddress` | `undefined` \| `string` |
+| `masa?` | `default` |
+| `walletAddress?` | `string` |
 
 #### Returns
 
@@ -303,14 +304,14 @@ ___
 
 ### useIdentity
 
-▸ **useIdentity**(`masa`, `walletAddress`): `Object`
+▸ **useIdentity**(`masa?`, `walletAddress?`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | ``null`` \| `default` |
-| `walletAddress` | `undefined` \| `string` |
+| `masa?` | `default` |
+| `walletAddress?` | `string` |
 
 #### Returns
 
@@ -346,7 +347,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `disable?` | `boolean` |
+| › `disabled?` | `boolean` |
 
 #### Returns
 
@@ -360,15 +361,16 @@ ___
 
 ### useModal
 
-▸ **useModal**(`masa`, `provider`, `networkName?`): `Object`
+▸ **useModal**(`networkName?`, `isLoggedIn?`, `isConnected?`, `network?`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | ``null`` \| `default` |
-| `provider` | ``null`` \| `Signer` \| `Wallet` |
 | `networkName?` | `NetworkName` |
+| `isLoggedIn?` | `boolean` |
+| `isConnected?` | `boolean` |
+| `network?` | `Network` |
 
 #### Returns
 
@@ -385,13 +387,13 @@ ___
 
 ### useNetwork
 
-▸ **useNetwork**(`provider`): `Object`
+▸ **useNetwork**(`provider?`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `provider` | ``null`` \| `Signer` \| `Wallet` |
+| `provider?` | `Signer` \| `Wallet` |
 
 #### Returns
 
@@ -400,44 +402,21 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `addNetwork` | (`networkDetails`: [`Network`](interfaces/Network.md)) => `void` |
-| `network` | ``null`` \| `Network` |
+| `network?` | `Network` |
 | `switchNetwork` | (`chainId`: `number`) => `void` |
-
-___
-
-### useProvider
-
-▸ **useProvider**(`signer?`): `Object`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `signer?` | `Signer` \| `Wallet` |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `isProviderMissing` | `undefined` \| `boolean` |
-| `provider` | ``null`` \| `Signer` \| `Wallet` |
-| `setIsProviderMissing` | (`providerMissing`: `boolean`) => `void` |
-| `setProvider` | (`provider`: ``null`` \| `Signer` \| `Wallet`) => `void` |
 
 ___
 
 ### useSession
 
-▸ **useSession**(`masa`, `walletAddress`): `Object`
+▸ **useSession**(`masa?`, `walletAddress?`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | ``null`` \| `default` |
-| `walletAddress` | `undefined` \| `string` |
+| `masa?` | `default` |
+| `walletAddress?` | `string` |
 
 #### Returns
 
@@ -447,7 +426,7 @@ ___
 | :------ | :------ |
 | `error` | `unknown` |
 | `handleLogin` | () => `void` |
-| `handleLogout` | () => `void` |
+| `handleLogout` | (`logoutCallback?`: () => `void`) => `void` |
 | `isLoggedIn?` | `boolean` |
 | `isSessionLoading` | `boolean` |
 | `status` | `string` |
@@ -456,15 +435,17 @@ ___
 
 ### useSoulnames
 
-▸ **useSoulnames**(`masa`, `walletAddress`, `identity`): `Object`
+▸ **useSoulnames**(`masa?`, `walletAddress?`, `identity?`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | ``null`` \| `default` |
-| `walletAddress` | `undefined` \| `string` |
-| `identity` | `undefined` \| { `address?`: `string` ; `identityId?`: `BigNumber`  } |
+| `masa?` | `default` |
+| `walletAddress?` | `string` |
+| `identity?` | `Object` |
+| `identity.address?` | `string` |
+| `identity.identityId?` | `BigNumber` |
 
 #### Returns
 
@@ -482,14 +463,14 @@ ___
 
 ### useWallet
 
-▸ **useWallet**(`masa`, `provider`): `Object`
+▸ **useWallet**(`masa?`, `provider?`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | ``null`` \| `default` |
-| `provider` | ``null`` \| `Signer` \| `Wallet` |
+| `masa?` | `default` |
+| `provider?` | `Signer` \| `Wallet` |
 
 #### Returns
 
