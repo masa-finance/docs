@@ -1,5 +1,5 @@
 # Masa React
- - v0.28.0-alpha.3 / [Exports](modules.md)
+ - v0.28.2 / [Exports](modules.md)
 
 ---
 
@@ -103,7 +103,9 @@ const askForCreditScores = useCallback(async () => {
 
 <Button
   onClick={askForCreditScores}>
-  Show credit reports
+  Show
+  credit
+  reports
 </Button>
 
 ```
@@ -129,25 +131,89 @@ const connectionHandler = useCallback(() => {
 
 ### Current useMasa shape
 
-```typescript jsx
-interface MasaShape {
-  setProvider?: (provider: any) => void;
-  provider?: any;
-  isModalOpen?: boolean;
-  setModalOpen?: (val: boolean) => void;
+```typescript
+export interface MasaShape {
+  children?: React.ReactNode;
+
+  // masa
   masa?: Masa;
-  isConnected?: boolean;
-  loading?: boolean;
-  setLoading?: (val: boolean) => void;
-  walletAddress?: string | null;
-  identity?: any;
-  loggedIn?: boolean;
-  handleLogin?: () => void;
-  handleLogout?: () => void;
-  handlePurchaseIdentity?: () => void;
-  connect?: (options?: { scope?: string[]; callback?: Function }) => void;
-  closeModal?: Function;
+  // global loading
+  isLoading?: boolean;
+
+  // global connect
+  connect?: (options?: { scope?: string[]; callback?: () => void }) => void;
+
+  // general config
   scope?: string[];
   company?: string;
+
+  // provider
+  provider?: ethers.Wallet | ethers.Signer;
+  setProvider?: (provider?: ethers.Wallet | ethers.Signer) => void;
+
+  // modal
+  isModalOpen?: boolean;
+  setModalOpen?: (val: boolean) => void;
+  closeModal?: () => void;
+
+  // wallet
+  walletAddress?: string;
+  isWalletLoading?: boolean;
+  isConnected?: boolean;
+
+  // identity
+  identity?: {
+    identityId?: BigNumber;
+    address?: string;
+  };
+  isIdentityLoading?: boolean;
+  handlePurchaseIdentity?: () => void;
+  reloadIdentity?: () => void;
+
+  // session
+  isLoggedIn?: boolean;
+  isSessionLoading?: boolean;
+  handleLogin?: () => void;
+  handleLogout?: (logoutCallback?: () => void) => void;
+
+  // credit scores
+  creditScores?:
+    | {
+    tokenId: BigNumber;
+    tokenUri: string;
+    metadata?: ICreditScore | undefined;
+  }[];
+  isCreditScoresLoading?: boolean;
+  handleCreateCreditScore?: () => void;
+  reloadCreditScores?: () => void;
+
+  // soul names
+  soulnames?: SoulNameDetails[];
+  isSoulnamesLoading?: boolean;
+  reloadSoulnames?: () => void;
+
+  // greens
+  greens?:
+    | {
+    tokenId: BigNumber;
+    tokenUri: string;
+    metadata?: IGreen;
+  }[]
+    | undefined;
+  isGreensLoading?: boolean;
+  handleGenerateGreen?: (
+    phoneNumber: string
+  ) => Promise<GenerateGreenResult | undefined>;
+  handleCreateGreen?: (
+    phoneNumber: string,
+    code: string
+  ) => Promise<VerifyGreenResult | undefined>;
+  reloadGreens?: () => void;
+
+  // network
+  networkName?: NetworkName;
+  network?: ethers.providers.Network;
+  SupportedNetworks?: Partial<{ [index in NetworkName]: Network }>;
+  switchNetwork?: (chainId: number) => void;
 }
 ```

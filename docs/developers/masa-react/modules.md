@@ -1,8 +1,8 @@
 [# Masa React
- - v0.28.0-alpha.3](README.md) / Exports
+ - v0.28.2](README.md) / Exports
 
 # # Masa React
- - v0.28.0-alpha.3
+ - v0.28.2
 
 ## Table of contents
 
@@ -361,13 +361,13 @@ ___
 
 ### useModal
 
-▸ **useModal**(`networkName?`, `isLoggedIn?`, `isConnected?`, `network?`): `Object`
+▸ **useModal**(`masa?`, `isLoggedIn?`, `isConnected?`, `network?`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `networkName?` | `NetworkName` |
+| `masa?` | `default` |
 | `isLoggedIn?` | `boolean` |
 | `isConnected?` | `boolean` |
 | `network?` | `Network` |

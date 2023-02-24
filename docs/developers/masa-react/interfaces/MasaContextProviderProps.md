@@ -1,5 +1,5 @@
 [# Masa React
- - v0.28.0-alpha.3](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v0.28.2](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -41,7 +41,6 @@
 - [isWalletLoading](MasaContextProviderProps.md#iswalletloading)
 - [masa](MasaContextProviderProps.md#masa)
 - [network](MasaContextProviderProps.md#network)
-- [networkName](MasaContextProviderProps.md#networkname)
 - [noWallet](MasaContextProviderProps.md#nowallet)
 - [provider](MasaContextProviderProps.md#provider)
 - [reloadCreditScores](MasaContextProviderProps.md#reloadcreditscores)
@@ -426,16 +425,6 @@ ___
 #### Inherited from
 
 MasaShape.network
-
-___
-
-### networkName
-
-• `Optional` **networkName**: `NetworkName`
-
-#### Overrides
-
-MasaShape.networkName
 
 ___
 
