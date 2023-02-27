@@ -1,5 +1,5 @@
 # Masa SDK
- - v1.5.6 / [Exports](modules.md)
+ - v1.6.0 / [Exports](modules.md)
 
 ---
 

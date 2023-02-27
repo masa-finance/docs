@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.5.6](../README.md) / [Exports](../modules.md) / User
+ - v1.6.0](../README.md) / [Exports](../modules.md) / User
 
 # Interface: User
 
