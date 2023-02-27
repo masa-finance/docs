@@ -36,6 +36,7 @@ ___
 | :------ | :------ |
 | `active` | `boolean` |
 | `expirationDate` | `BigNumber` |
+| `extension` | `string` |
 | `identityId` | `BigNumber` |
 | `linked` | `boolean` |
 | `sbtName` | `string` |
