@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.6.0](../README.md) / [Exports](../modules.md) / MasaClient
+ - v1.6.1](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -85,7 +85,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`uri`: `string`, `additionalHeaders?`: `Record`<`string`, `string`\>) => `Promise`<`undefined` \| [`IIdentity`](../interfaces/IIdentity.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IGreen`](../interfaces/IGreen.md)\> |
+| `get` | (`uri`: `string`, `additionalHeaders?`: `Record`<`string`, `string`\>) => `Promise`<`undefined` \| [`IGreen`](../interfaces/IGreen.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IIdentity`](../interfaces/IIdentity.md)\> |
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`) => `Promise`<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md)\> |
+| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`, `network`: [`NetworkName`](../modules.md#networkname)) => `Promise`<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md)\> |
 
 ## Accessors
 

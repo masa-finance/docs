@@ -1,7 +1,13 @@
 [# Masa SDK
- - v1.6.0](../README.md) / [Exports](../modules.md) / MasaIdentity
+ - v1.6.1](../README.md) / [Exports](../modules.md) / MasaIdentity
 
 # Class: MasaIdentity
+
+## Hierarchy
+
+- `MasaBase`
+
+  ↳ **`MasaIdentity`**
 
 ## Table of contents
 
@@ -34,6 +40,10 @@
 | :------ | :------ |
 | `masa` | [`Masa`](Masa.md) |
 
+#### Overrides
+
+MasaBase.constructor
+
 ## Properties
 
 ### links
@@ -44,7 +54,11 @@ ___
 
 ### masa
 
-• `Private` **masa**: [`Masa`](Masa.md)
+• `Protected` **masa**: [`Masa`](Masa.md)
+
+#### Inherited from
+
+MasaBase.masa
 
 ## Methods
 

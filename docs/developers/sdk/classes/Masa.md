@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.6.0](../README.md) / [Exports](../modules.md) / Masa
+ - v1.6.1](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -19,7 +19,6 @@
 - [creditScore](Masa.md#creditscore)
 - [green](Masa.md#green)
 - [identity](Masa.md#identity)
-- [metadata](Masa.md#metadata)
 - [session](Masa.md#session)
 - [soulName](Masa.md#soulname)
 - [utils](Masa.md#utils)
@@ -83,19 +82,6 @@ ___
 ### identity
 
 • `Readonly` **identity**: [`MasaIdentity`](MasaIdentity.md)
-
-___
-
-### metadata
-
-• **metadata**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `retrieve` | (`url`: `string`, `additionalHeaders?`: `Record`<`string`, `string`\>) => `Promise`<`undefined` \| [`IIdentity`](../interfaces/IIdentity.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IGreen`](../interfaces/IGreen.md)\> |
-| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`) => `Promise`<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md)\> |
 
 ___
 

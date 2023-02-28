@@ -1,7 +1,13 @@
 [# Masa SDK
- - v1.6.0](../README.md) / [Exports](../modules.md) / MasaSession
+ - v1.6.1](../README.md) / [Exports](../modules.md) / MasaSession
 
 # Class: MasaSession
+
+## Hierarchy
+
+- `MasaBase`
+
+  ↳ **`MasaSession`**
 
 ## Table of contents
 
@@ -33,11 +39,19 @@
 | :------ | :------ |
 | `masa` | [`Masa`](Masa.md) |
 
+#### Overrides
+
+MasaBase.constructor
+
 ## Properties
 
 ### masa
 
-• `Private` **masa**: [`Masa`](Masa.md)
+• `Protected` **masa**: [`Masa`](Masa.md)
+
+#### Inherited from
+
+MasaBase.masa
 
 ## Methods
 

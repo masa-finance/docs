@@ -1,7 +1,13 @@
 [# Masa SDK
- - v1.6.0](../README.md) / [Exports](../modules.md) / MasaSoulLinker
+ - v1.6.1](../README.md) / [Exports](../modules.md) / MasaSoulLinker
 
 # Class: MasaSoulLinker
+
+## Hierarchy
+
+- `MasaBase`
+
+  ↳ **`MasaSoulLinker`**
 
 ## Table of contents
 
@@ -36,6 +42,10 @@
 | `masa` | [`Masa`](Masa.md) |
 | `contract` | `Contract` |
 
+#### Overrides
+
+MasaBase.constructor
+
 ## Properties
 
 ### contract
@@ -46,7 +56,11 @@ ___
 
 ### masa
 
-• `Private` **masa**: [`Masa`](Masa.md)
+• `Protected` **masa**: [`Masa`](Masa.md)
+
+#### Inherited from
+
+MasaBase.masa
 
 ## Methods
 
