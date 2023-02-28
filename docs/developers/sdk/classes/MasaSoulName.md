@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.6.1](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v1.6.3](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
@@ -24,6 +24,7 @@
 - [burn](MasaSoulName.md#burn)
 - [create](MasaSoulName.md#create)
 - [getRegistrationPrice](MasaSoulName.md#getregistrationprice)
+- [getSoulNameMetadataPrefix](MasaSoulName.md#getsoulnamemetadataprefix)
 - [list](MasaSoulName.md#list)
 - [loadSoulNameByName](MasaSoulName.md#loadsoulnamebyname)
 - [loadSoulNameByTokenId](MasaSoulName.md#loadsoulnamebytokenid)
@@ -109,6 +110,16 @@ ___
 #### Returns
 
 `Promise`<`BigNumber`\>
+
+___
+
+### getSoulNameMetadataPrefix
+
+▸ **getSoulNameMetadataPrefix**(): `string`
+
+#### Returns
+
+`string`
 
 ___
 

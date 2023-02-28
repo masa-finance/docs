@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.6.1](README.md) / Exports
+ - v1.6.3](README.md) / Exports
 
 # # Masa SDK
- - v1.6.1
+ - v1.6.3
 
 ## Table of contents
 
@@ -92,6 +92,7 @@
 - [getBalances](modules.md#getbalances)
 - [getRegistrationPrice](modules.md#getregistrationprice)
 - [getSession](modules.md#getsession)
+- [getSoulNameMetadataPrefix](modules.md#getsoulnamemetadataprefix)
 - [listCreditScores](modules.md#listcreditscores)
 - [listGreens](modules.md#listgreens)
 - [listLinks](modules.md#listlinks)
@@ -673,6 +674,22 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| [`ISession`](interfaces/ISession.md)\>
+
+___
+
+### getSoulNameMetadataPrefix
+
+▸ **getSoulNameMetadataPrefix**(`masa`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+
+#### Returns
+
+`string`
 
 ___
 

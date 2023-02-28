@@ -1,5 +1,5 @@
 # Masa SDK
- - v1.6.1 / [Exports](modules.md)
+ - v1.6.3 / [Exports](modules.md)
 
 <!-- TOC -->
   * [Installation](#installation)
