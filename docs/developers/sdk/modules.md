@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.6.3](README.md) / Exports
+ - v1.6.4](README.md) / Exports
 
 # # Masa SDK
- - v1.6.3
+ - v1.6.4
 
 ## Table of contents
 
@@ -40,6 +40,7 @@
 - [LogoutResult](interfaces/LogoutResult.md)
 - [MasaArgs](interfaces/MasaArgs.md)
 - [MasaConfig](interfaces/MasaConfig.md)
+- [SessionUser](interfaces/SessionUser.md)
 - [SoulNameDetails](interfaces/SoulNameDetails.md)
 - [SoulNameMetadataStoreResult](interfaces/SoulNameMetadataStoreResult.md)
 - [UpdateCreditScoreResult](interfaces/UpdateCreditScoreResult.md)
