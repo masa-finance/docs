@@ -1,5 +1,5 @@
 [# Masa React
- - v0.28.3](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v1.0.0](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -14,6 +14,7 @@
 ### Properties
 
 - [SupportedNetworks](MasaContextProviderProps.md#supportednetworks)
+- [areScopesFullfiled](MasaContextProviderProps.md#arescopesfullfiled)
 - [arweaveConfig](MasaContextProviderProps.md#arweaveconfig)
 - [children](MasaContextProviderProps.md#children)
 - [closeModal](MasaContextProviderProps.md#closemodal)
@@ -21,6 +22,7 @@
 - [connect](MasaContextProviderProps.md#connect)
 - [creditScores](MasaContextProviderProps.md#creditscores)
 - [environmentName](MasaContextProviderProps.md#environmentname)
+- [forcedPage](MasaContextProviderProps.md#forcedpage)
 - [greens](MasaContextProviderProps.md#greens)
 - [handleCreateCreditScore](MasaContextProviderProps.md#handlecreatecreditscore)
 - [handleCreateGreen](MasaContextProviderProps.md#handlecreategreen)
@@ -28,6 +30,7 @@
 - [handleLogin](MasaContextProviderProps.md#handlelogin)
 - [handleLogout](MasaContextProviderProps.md#handlelogout)
 - [handlePurchaseIdentity](MasaContextProviderProps.md#handlepurchaseidentity)
+- [handlePurchaseIdentityWithSoulname](MasaContextProviderProps.md#handlepurchaseidentitywithsoulname)
 - [identity](MasaContextProviderProps.md#identity)
 - [isConnected](MasaContextProviderProps.md#isconnected)
 - [isCreditScoresLoading](MasaContextProviderProps.md#iscreditscoresloading)
@@ -42,12 +45,14 @@
 - [masa](MasaContextProviderProps.md#masa)
 - [network](MasaContextProviderProps.md#network)
 - [noWallet](MasaContextProviderProps.md#nowallet)
+- [openMintSoulnameModal](MasaContextProviderProps.md#openmintsoulnamemodal)
 - [provider](MasaContextProviderProps.md#provider)
 - [reloadCreditScores](MasaContextProviderProps.md#reloadcreditscores)
 - [reloadGreens](MasaContextProviderProps.md#reloadgreens)
 - [reloadIdentity](MasaContextProviderProps.md#reloadidentity)
 - [reloadSoulnames](MasaContextProviderProps.md#reloadsoulnames)
 - [scope](MasaContextProviderProps.md#scope)
+- [setForcedPage](MasaContextProviderProps.md#setforcedpage)
 - [setModalOpen](MasaContextProviderProps.md#setmodalopen)
 - [setProvider](MasaContextProviderProps.md#setprovider)
 - [signer](MasaContextProviderProps.md#signer)
@@ -65,6 +70,16 @@
 #### Inherited from
 
 [MasaShape](MasaShape.md).[SupportedNetworks](MasaShape.md#supportednetworks)
+
+___
+
+### areScopesFullfiled
+
+• `Optional` **areScopesFullfiled**: `boolean`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[areScopesFullfiled](MasaShape.md#arescopesfullfiled)
 
 ___
 
@@ -86,11 +101,17 @@ ___
 
 ### closeModal
 
-• `Optional` **closeModal**: () => `void`
+• `Optional` **closeModal**: (`forceCallback?`: `boolean`) => `void`
 
 #### Type declaration
 
-▸ (): `void`
+▸ (`forceCallback?`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `forceCallback?` | `boolean` |
 
 ##### Returns
 
@@ -151,6 +172,16 @@ ___
 ### environmentName
 
 • `Optional` **environmentName**: `undefined`
+
+___
+
+### forcedPage
+
+• `Optional` **forcedPage**: ``null`` \| `string`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[forcedPage](MasaShape.md#forcedpage)
 
 ___
 
@@ -288,6 +319,32 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[handlePurchaseIdentity](MasaShape.md#handlepurchaseidentity)
+
+___
+
+### handlePurchaseIdentityWithSoulname
+
+• `Optional` **handlePurchaseIdentityWithSoulname**: (`soulname`: `string`, `registrationPrice`: `number`, `paymentMethod`: `PaymentMethod`) => `Promise`<`boolean`\>
+
+#### Type declaration
+
+▸ (`soulname`, `registrationPrice`, `paymentMethod`): `Promise`<`boolean`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `soulname` | `string` |
+| `registrationPrice` | `number` |
+| `paymentMethod` | `PaymentMethod` |
+
+##### Returns
+
+`Promise`<`boolean`\>
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[handlePurchaseIdentityWithSoulname](MasaShape.md#handlepurchaseidentitywithsoulname)
 
 ___
 
@@ -434,6 +491,30 @@ ___
 
 ___
 
+### openMintSoulnameModal
+
+• `Optional` **openMintSoulnameModal**: (`callback?`: () => `void`) => `void`
+
+#### Type declaration
+
+▸ (`callback?`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback?` | () => `void` |
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[openMintSoulnameModal](MasaShape.md#openmintsoulnamemodal)
+
+___
+
 ### provider
 
 • `Optional` **provider**: `Signer` \| `Wallet`
@@ -523,6 +604,30 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[scope](MasaShape.md#scope)
+
+___
+
+### setForcedPage
+
+• `Optional` **setForcedPage**: (`page`: ``null`` \| `string`) => `void`
+
+#### Type declaration
+
+▸ (`page`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `page` | ``null`` \| `string` |
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[setForcedPage](MasaShape.md#setforcedpage)
 
 ___
 

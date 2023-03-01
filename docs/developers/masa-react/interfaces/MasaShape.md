@@ -1,5 +1,5 @@
 [# Masa React
- - v0.28.3](../README.md) / [Exports](../modules.md) / MasaShape
+ - v1.0.0](../README.md) / [Exports](../modules.md) / MasaShape
 
 # Interface: MasaShape
 
@@ -14,11 +14,13 @@
 ### Properties
 
 - [SupportedNetworks](MasaShape.md#supportednetworks)
+- [areScopesFullfiled](MasaShape.md#arescopesfullfiled)
 - [children](MasaShape.md#children)
 - [closeModal](MasaShape.md#closemodal)
 - [company](MasaShape.md#company)
 - [connect](MasaShape.md#connect)
 - [creditScores](MasaShape.md#creditscores)
+- [forcedPage](MasaShape.md#forcedpage)
 - [greens](MasaShape.md#greens)
 - [handleCreateCreditScore](MasaShape.md#handlecreatecreditscore)
 - [handleCreateGreen](MasaShape.md#handlecreategreen)
@@ -26,6 +28,7 @@
 - [handleLogin](MasaShape.md#handlelogin)
 - [handleLogout](MasaShape.md#handlelogout)
 - [handlePurchaseIdentity](MasaShape.md#handlepurchaseidentity)
+- [handlePurchaseIdentityWithSoulname](MasaShape.md#handlepurchaseidentitywithsoulname)
 - [identity](MasaShape.md#identity)
 - [isConnected](MasaShape.md#isconnected)
 - [isCreditScoresLoading](MasaShape.md#iscreditscoresloading)
@@ -39,12 +42,14 @@
 - [isWalletLoading](MasaShape.md#iswalletloading)
 - [masa](MasaShape.md#masa)
 - [network](MasaShape.md#network)
+- [openMintSoulnameModal](MasaShape.md#openmintsoulnamemodal)
 - [provider](MasaShape.md#provider)
 - [reloadCreditScores](MasaShape.md#reloadcreditscores)
 - [reloadGreens](MasaShape.md#reloadgreens)
 - [reloadIdentity](MasaShape.md#reloadidentity)
 - [reloadSoulnames](MasaShape.md#reloadsoulnames)
 - [scope](MasaShape.md#scope)
+- [setForcedPage](MasaShape.md#setforcedpage)
 - [setModalOpen](MasaShape.md#setmodalopen)
 - [setProvider](MasaShape.md#setprovider)
 - [soulnames](MasaShape.md#soulnames)
@@ -59,6 +64,12 @@
 
 ___
 
+### areScopesFullfiled
+
+• `Optional` **areScopesFullfiled**: `boolean`
+
+___
+
 ### children
 
 • `Optional` **children**: `ReactNode`
@@ -67,11 +78,17 @@ ___
 
 ### closeModal
 
-• `Optional` **closeModal**: () => `void`
+• `Optional` **closeModal**: (`forceCallback?`: `boolean`) => `void`
 
 #### Type declaration
 
-▸ (): `void`
+▸ (`forceCallback?`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `forceCallback?` | `boolean` |
 
 ##### Returns
 
@@ -110,6 +127,12 @@ ___
 ### creditScores
 
 • `Optional` **creditScores**: { `metadata?`: `ICreditScore` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]
+
+___
+
+### forcedPage
+
+• `Optional` **forcedPage**: ``null`` \| `string`
 
 ___
 
@@ -222,6 +245,28 @@ ___
 
 ___
 
+### handlePurchaseIdentityWithSoulname
+
+• `Optional` **handlePurchaseIdentityWithSoulname**: (`soulname`: `string`, `registrationPrice`: `number`, `paymentMethod`: `PaymentMethod`) => `Promise`<`boolean`\>
+
+#### Type declaration
+
+▸ (`soulname`, `registrationPrice`, `paymentMethod`): `Promise`<`boolean`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `soulname` | `string` |
+| `registrationPrice` | `number` |
+| `paymentMethod` | `PaymentMethod` |
+
+##### Returns
+
+`Promise`<`boolean`\>
+
+___
+
 ### identity
 
 • `Optional` **identity**: `Object`
@@ -307,6 +352,26 @@ ___
 
 ___
 
+### openMintSoulnameModal
+
+• `Optional` **openMintSoulnameModal**: (`callback?`: () => `void`) => `void`
+
+#### Type declaration
+
+▸ (`callback?`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback?` | () => `void` |
+
+##### Returns
+
+`void`
+
+___
+
 ### provider
 
 • `Optional` **provider**: `Signer` \| `Wallet`
@@ -372,6 +437,26 @@ ___
 ### scope
 
 • `Optional` **scope**: `string`[]
+
+___
+
+### setForcedPage
+
+• `Optional` **setForcedPage**: (`page`: ``null`` \| `string`) => `void`
+
+#### Type declaration
+
+▸ (`page`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `page` | ``null`` \| `string` |
+
+##### Returns
+
+`void`
 
 ___
 

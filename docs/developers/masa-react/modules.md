@@ -1,8 +1,8 @@
 [# Masa React
- - v0.28.3](README.md) / Exports
+ - v1.0.0](README.md) / Exports
 
 # # Masa React
- - v0.28.3
+ - v1.0.0
 
 ## Table of contents
 
@@ -322,6 +322,7 @@ ___
 | :------ | :------ |
 | `error` | `unknown` |
 | `handlePurchaseIdentity` | () => `void` |
+| `handlePurchaseIdentityWithSoulname` | (`soulname`: `string`, `registrationPeriod`: `number`, `paymentMethod`: `PaymentMethod`) => `Promise`<`boolean`\> |
 | `identity` | `undefined` \| { `address?`: `string` ; `identityId?`: `BigNumber`  } |
 | `isIdentityLoading` | `boolean` |
 | `reloadIdentity` | () => `void` |
@@ -362,7 +363,7 @@ ___
 
 ### useModal
 
-▸ **useModal**(`masa?`, `isLoggedIn?`, `isConnected?`, `network?`): `Object`
+▸ **useModal**(`masa?`, `isLoggedIn?`, `isConnected?`, `network?`, `areScopesFullfiled?`): `Object`
 
 #### Parameters
 
@@ -372,6 +373,7 @@ ___
 | `isLoggedIn?` | `boolean` |
 | `isConnected?` | `boolean` |
 | `network?` | `Network` |
+| `areScopesFullfiled?` | `boolean` |
 
 #### Returns
 
@@ -379,8 +381,10 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `closeModal` | () => `void` |
+| `closeModal` | (`forceCallback?`: `boolean`) => `void` |
+| `forcedPage` | ``null`` \| `string` |
 | `isModalOpen` | `boolean` |
+| `setForcedPage?` | (`page`: ``null`` \| `string`) => `void` |
 | `setModalCallback` | (`callback`: () => `void`) => `void` |
 | `setModalOpen` | (`modalOpen`: `boolean`) => `void` |
 

@@ -1,5 +1,5 @@
 [# Masa React
- - v0.28.3](../README.md) / [Exports](../modules.md) / SpinnerProps
+ - v1.0.0](../README.md) / [Exports](../modules.md) / SpinnerProps
 
 # Interface: SpinnerProps
 
@@ -8,6 +8,7 @@
 ### Properties
 
 - [color](SpinnerProps.md#color)
+- [size](SpinnerProps.md#size)
 
 ## Properties
 
@@ -16,3 +17,9 @@
 • `Optional` **color**: `string`
 
 Spinner color
+
+___
+
+### size
+
+• `Optional` **size**: `string` \| `number`
