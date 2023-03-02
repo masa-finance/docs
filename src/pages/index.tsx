@@ -8,7 +8,7 @@ import BrowserOnly from "@docusaurus/BrowserOnly";
 function HomepageHeader() {
   return (
     <Link to="docs/masa/introduction">
-      <Hero/>
+      <Hero />
     </Link>
   );
 }
@@ -30,13 +30,13 @@ export default function Home(): JSX.Element {
 
           return (
             <MasaProvider>
-              <MasaLogin/>
+              <MasaLogin />
             </MasaProvider>
           );
         }}
       </BrowserOnly>
 
-      <HomepageHeader/>
+      <HomepageHeader />
     </Layout>
   );
 }
