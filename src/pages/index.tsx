@@ -3,17 +3,17 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Hero from "../components/Hero";
-import BrowserOnly from "@docusaurus/BrowserOnly";
+import "./index.module.css";
 
-function HomepageHeader() {
+const HomepageHeader = () => {
   return (
     <Link to="docs/masa/introduction">
       <Hero />
     </Link>
   );
-}
+};
 
-export default function Home(): JSX.Element {
+const Home = (): JSX.Element => {
   const { siteConfig } = useDocusaurusContext();
 
   return (
@@ -21,22 +21,9 @@ export default function Home(): JSX.Element {
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <BrowserOnly>
-        {() => {
-          require("@masa-finance/masa-react/dist/src/provider/styles.scss");
-
-          const { MasaProvider } = require("@masa-finance/masa-react");
-          const MasaLogin = require("@site/src/components/masa-login/masa-login");
-
-          return (
-            <MasaProvider>
-              <MasaLogin />
-            </MasaProvider>
-          );
-        }}
-      </BrowserOnly>
-
       <HomepageHeader />
     </Layout>
   );
-}
+};
+
+export default Home;
