@@ -1,47 +1,116 @@
 [# Masa React
- - v0.16.8](README.md) / Exports
+ - v1.0.1](README.md) / Exports
 
 # # Masa React
- - v0.16.8
+ - v1.0.1
 
 ## Table of contents
 
-### Namespaces
+### Interfaces
 
-- [rest](modules/rest.md)
+- [ArweaveConfig](interfaces/ArweaveConfig.md)
+- [MasaContextProviderProps](interfaces/MasaContextProviderProps.md)
+- [MasaShape](interfaces/MasaShape.md)
+- [ModalProps](interfaces/ModalProps.md)
+- [Network](interfaces/Network.md)
+- [SpinnerProps](interfaces/SpinnerProps.md)
+
+### Type Aliases
+
+- [EnvironmentNameEx](modules.md#environmentnameex)
 
 ### Variables
 
-- [addresses](modules.md#addresses)
+- [MASA\_CONTEXT](modules.md#masa_context)
+- [SupportedNetworks](modules.md#supportednetworks)
+- [queryClient](modules.md#queryclient)
 
 ### Functions
 
-- [AccessTokenProvider](modules.md#accesstokenprovider)
+- [MasaContextProvider](modules.md#masacontextprovider)
+- [MasaInterface](modules.md#masainterface)
+- [MasaLoading](modules.md#masaloading)
 - [MasaProvider](modules.md#masaprovider)
-- [MasaToolsProvider](modules.md#masatoolsprovider)
-- [MasaToolsWrapper](modules.md#masatoolswrapper)
-- [loadIdentityContracts](modules.md#loadidentitycontracts)
-- [useContractCall](modules.md#usecontractcall)
+- [ModalComponent](modules.md#modalcomponent)
+- [Spinner](modules.md#spinner)
+- [createNewMasa](modules.md#createnewmasa)
+- [getNetworkNameByChainId](modules.md#getnetworknamebychainid)
+- [getWeb3Provider](modules.md#getweb3provider)
+- [useCreditScores](modules.md#usecreditscores)
+- [useDebounce](modules.md#usedebounce)
+- [useDebounceIfValue](modules.md#usedebounceifvalue)
+- [useGreen](modules.md#usegreen)
+- [useIdentity](modules.md#useidentity)
 - [useMasa](modules.md#usemasa)
-- [useMasaTools](modules.md#usemasatools)
+- [useMetamask](modules.md#usemetamask)
+- [useModal](modules.md#usemodal)
+- [useNetwork](modules.md#usenetwork)
+- [useSession](modules.md#usesession)
+- [useSoulnames](modules.md#usesoulnames)
+- [useWallet](modules.md#usewallet)
+
+## Type Aliases
+
+### EnvironmentNameEx
+
+Ƭ **EnvironmentNameEx**: `EnvironmentName` & ``"local"`` \| ``"stage"``
 
 ## Variables
 
-### addresses
+### MASA\_CONTEXT
 
-• `Const` **addresses**: `Addresses`
+• `Const` **MASA\_CONTEXT**: `Context`<[`MasaShape`](interfaces/MasaShape.md)\>
+
+___
+
+### SupportedNetworks
+
+• `Const` **SupportedNetworks**: `Partial`<{ [key in NetworkName]: Network }\>
+
+___
+
+### queryClient
+
+• `Const` **queryClient**: `QueryClient`
 
 ## Functions
 
-### AccessTokenProvider
+### MasaContextProvider
 
-▸ **AccessTokenProvider**(`__namedParameters`): `Element`
+▸ **MasaContextProvider**(`«destructured»`): `Element`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `AccessTokenProps` |
+| `«destructured»` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) |
+
+#### Returns
+
+`Element`
+
+___
+
+### MasaInterface
+
+▸ **MasaInterface**(`«destructured»`): `Element`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `Object` |
+| › `disableMetamask?` | `boolean` |
+
+#### Returns
+
+`Element`
+
+___
+
+### MasaLoading
+
+▸ **MasaLoading**(): `Element`
 
 #### Returns
 
@@ -51,13 +120,13 @@ ___
 
 ### MasaProvider
 
-▸ **MasaProvider**(`__namedParameters`): `Element`
+▸ **MasaProvider**(`«destructured»`): `Element`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `MasaContextProviderProps` |
+| `«destructured»` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) |
 
 #### Returns
 
@@ -65,15 +134,15 @@ ___
 
 ___
 
-### MasaToolsProvider
+### ModalComponent
 
-▸ **MasaToolsProvider**(`__namedParameters`): `Element`
+▸ **ModalComponent**(`«destructured»`): `Element`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `MasaToolsProviderProps` |
+| `«destructured»` | [`ModalProps`](interfaces/ModalProps.md) |
 
 #### Returns
 
@@ -81,15 +150,15 @@ ___
 
 ___
 
-### MasaToolsWrapper
+### Spinner
 
-▸ **MasaToolsWrapper**(`__namedParameters`): `Element`
+▸ **Spinner**(`«destructured»`): `Element`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `MasaToolsWrapperProps` |
+| `«destructured»` | [`SpinnerProps`](interfaces/SpinnerProps.md) |
 
 #### Returns
 
@@ -97,32 +166,65 @@ ___
 
 ___
 
-### loadIdentityContracts
+### createNewMasa
 
-▸ **loadIdentityContracts**(`__namedParameters`): `IIdentityContracts`
+▸ **createNewMasa**(`«destructured»`): `Promise`<`undefined` \| `default`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `LoadContractArgs` |
+| `«destructured»` | `Object` |
+| › `arweaveConfig?` | [`ArweaveConfig`](interfaces/ArweaveConfig.md) |
+| › `environmentName` | `string` |
+| › `signer` | ``null`` \| `Signer` |
+| › `verbose` | `boolean` |
 
 #### Returns
 
-`IIdentityContracts`
+`Promise`<`undefined` \| `default`\>
 
 ___
 
-### useContractCall
+### getNetworkNameByChainId
 
-▸ **useContractCall**(`__namedParameters`): `Object`
+▸ **getNetworkNameByChainId**(`chainId`): `NetworkName`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `Object` |
-| `__namedParameters.method` | `Promise`<`any`\> |
+| `chainId` | `number` |
+
+#### Returns
+
+`NetworkName`
+
+___
+
+### getWeb3Provider
+
+▸ **getWeb3Provider**(): `undefined` \| `Web3Provider`
+
+#### Returns
+
+`undefined` \| `Web3Provider`
+
+___
+
+### useCreditScores
+
+▸ **useCreditScores**(`masa?`, `walletAddress?`, `identity?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa?` | `default` |
+| `walletAddress?` | `string` |
+| `identity?` | `Object` |
+| `identity.address?` | `string` |
+| `identity.identityId?` | `BigNumber` |
 
 #### Returns
 
@@ -130,27 +232,259 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `data` | `any` |
-| `error` | `any` |
-| `getData` | () => `any` |
-| `loading` | `boolean` |
+| `creditScores` | `undefined` \| { `metadata?`: `ICreditScore` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] |
+| `error` | `unknown` |
+| `handleCreateCreditScore` | () => `void` |
+| `isCreditScoresLoading` | `boolean` |
+| `reloadCreditScores` | () => `void` |
+| `status` | `string` |
+
+___
+
+### useDebounce
+
+▸ **useDebounce**(`value`, `delay`): `string` \| `number`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `string` \| `number` |
+| `delay` | `number` |
+
+#### Returns
+
+`string` \| `number`
+
+___
+
+### useDebounceIfValue
+
+▸ **useDebounceIfValue**(`value`, `target`, `delay`): `string` \| `number`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `string` \| `number` |
+| `target` | `string` \| `number` |
+| `delay` | `number` |
+
+#### Returns
+
+`string` \| `number`
+
+___
+
+### useGreen
+
+▸ **useGreen**(`masa?`, `walletAddress?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa?` | `default` |
+| `walletAddress?` | `string` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `error` | `unknown` |
+| `greens` | `undefined` \| { `metadata?`: `IGreen` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] |
+| `handleCreateGreen` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`undefined` \| `VerifyGreenResult`\> |
+| `handleGenerateGreen` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| `GenerateGreenResult`\> |
+| `isGreensLoading` | `boolean` |
+| `reloadGreens` | () => `void` |
+| `status` | `string` |
+
+___
+
+### useIdentity
+
+▸ **useIdentity**(`masa?`, `walletAddress?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa?` | `default` |
+| `walletAddress?` | `string` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `error` | `unknown` |
+| `handlePurchaseIdentity` | () => `void` |
+| `handlePurchaseIdentityWithSoulname` | (`soulname`: `string`, `registrationPeriod`: `number`, `paymentMethod`: `PaymentMethod`) => `Promise`<`boolean`\> |
+| `identity` | `undefined` \| { `address?`: `string` ; `identityId?`: `BigNumber`  } |
+| `isIdentityLoading` | `boolean` |
+| `reloadIdentity` | () => `void` |
+| `status` | `string` |
 
 ___
 
 ### useMasa
 
-▸ **useMasa**(): `MasaShape`
+▸ **useMasa**(): [`MasaShape`](interfaces/MasaShape.md)
 
 #### Returns
 
-`MasaShape`
+[`MasaShape`](interfaces/MasaShape.md)
 
 ___
 
-### useMasaTools
+### useMetamask
 
-▸ **useMasaTools**(): `MasaToolsShape`
+▸ **useMetamask**(`«destructured»`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `Object` |
+| › `disabled?` | `boolean` |
 
 #### Returns
 
-`MasaToolsShape`
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `connect` | () => `void` |
+
+___
+
+### useModal
+
+▸ **useModal**(`masa?`, `isLoggedIn?`, `isConnected?`, `network?`, `areScopesFullfiled?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa?` | `default` |
+| `isLoggedIn?` | `boolean` |
+| `isConnected?` | `boolean` |
+| `network?` | `Network` |
+| `areScopesFullfiled?` | `boolean` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `closeModal` | (`forceCallback?`: `boolean`) => `void` |
+| `forcedPage` | ``null`` \| `string` |
+| `isModalOpen` | `boolean` |
+| `setForcedPage?` | (`page`: ``null`` \| `string`) => `void` |
+| `setModalCallback` | (`callback`: () => `void`) => `void` |
+| `setModalOpen` | (`modalOpen`: `boolean`) => `void` |
+
+___
+
+### useNetwork
+
+▸ **useNetwork**(`provider?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `provider?` | `Signer` \| `Wallet` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `addNetwork` | (`networkDetails`: [`Network`](interfaces/Network.md)) => `void` |
+| `network?` | `Network` |
+| `switchNetwork` | (`chainId`: `number`) => `void` |
+
+___
+
+### useSession
+
+▸ **useSession**(`masa?`, `walletAddress?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa?` | `default` |
+| `walletAddress?` | `string` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `error` | `unknown` |
+| `handleLogin` | () => `void` |
+| `handleLogout` | (`logoutCallback?`: () => `void`) => `void` |
+| `isLoggedIn?` | `boolean` |
+| `isSessionLoading` | `boolean` |
+| `status` | `string` |
+
+___
+
+### useSoulnames
+
+▸ **useSoulnames**(`masa?`, `walletAddress?`, `identity?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa?` | `default` |
+| `walletAddress?` | `string` |
+| `identity?` | `Object` |
+| `identity.address?` | `string` |
+| `identity.identityId?` | `BigNumber` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `error` | `unknown` |
+| `isSoulnamesLoading` | `boolean` |
+| `reloadSoulnames` | () => `void` |
+| `soulnames` | `undefined` \| `SoulNameDetails`[] |
+| `status` | `string` |
+
+___
+
+### useWallet
+
+▸ **useWallet**(`masa?`, `provider?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa?` | `default` |
+| `provider?` | `Signer` \| `Wallet` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `error` | `unknown` |
+| `isConnected` | `boolean` |
+| `isWalletLoading` | `boolean` |
+| `status` | `string` |
+| `walletAddress` | `undefined` \| `string` |

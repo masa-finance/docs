@@ -10,45 +10,30 @@ Soul linker smart contract that let add links to a Soulbound token.
 
 ## Methods
 
-### addErc20Token
+### DEFAULT_ADMIN_ROLE
 
 ```solidity
-function addErc20Token(address _erc20token) external nonpayable
+function DEFAULT_ADMIN_ROLE() external view returns (bytes32)
 ```
 
-Adds a new ERC20 token as a valid payment method
 
-*The caller must have the owner to call this function*
 
-#### Parameters
+
+
+
+#### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _erc20token | address | New ERC20 token to add |
+| _0 | bytes32 | undefined |
 
-### addLinkedSBT
-
-```solidity
-function addLinkedSBT(address token) external nonpayable
-```
-
-Adds an SBT to the list of linked SBTs
-
-*The caller must be the owner to call this function*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| token | address | Address of the SBT contract |
-
-### addPermission
+### addLink
 
 ```solidity
-function addPermission(uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, string data, uint256 signatureDate, uint256 expirationDate, bytes signature) external nonpayable
+function addLink(address paymentMethod, uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, uint256 signatureDate, uint256 expirationDate, bytes signature) external payable
 ```
 
-Stores the permission, validating the signature of the given read link request
+Stores the link, validating the signature of the given read link request
 
 *The token must be linked to this soul linker*
 
@@ -56,53 +41,51 @@ Stores the permission, validating the signature of the given read link request
 
 | Name | Type | Description |
 |---|---|---|
+| paymentMethod | address | undefined |
 | readerIdentityId | uint256 | Id of the identity of the reader |
 | ownerIdentityId | uint256 | Id of the identity of the owner of the SBT |
 | token | address | Address of the SBT contract |
 | tokenId | uint256 | Id of the token |
-| data | string | Data that owner wants to share |
 | signatureDate | uint256 | Signature date of the signature |
 | expirationDate | uint256 | Expiration date of the signature |
 | signature | bytes | Signature of the read link request made by the owner |
 
-### addPermissionPrice
+### disablePaymentMethod
 
 ```solidity
-function addPermissionPrice() external view returns (uint256)
+function disablePaymentMethod(address _paymentMethod) external nonpayable
 ```
 
+Removes a token as a valid payment method
 
+*The caller must have the admin role to call this function*
 
-
-
-
-#### Returns
+#### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256 | undefined |
+| _paymentMethod | address | Token to remove |
 
-### addPermissionPriceMASA
+### enablePaymentMethod
 
 ```solidity
-function addPermissionPriceMASA() external view returns (uint256)
+function enablePaymentMethod(address _paymentMethod) external nonpayable
 ```
 
+Adds a new token as a valid payment method
 
+*The caller must have the admin role to call this function*
 
-
-
-
-#### Returns
+#### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256 | undefined |
+| _paymentMethod | address | New token to add |
 
-### erc20token
+### enabledPaymentMethod
 
 ```solidity
-function erc20token(address) external view returns (bool)
+function enabledPaymentMethod(address) external view returns (bool)
 ```
 
 
@@ -121,10 +104,10 @@ function erc20token(address) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
-### erc20tokens
+### enabledPaymentMethods
 
 ```solidity
-function erc20tokens(uint256) external view returns (address)
+function enabledPaymentMethods(uint256) external view returns (address)
 ```
 
 
@@ -142,6 +125,23 @@ function erc20tokens(uint256) external view returns (address)
 | Name | Type | Description |
 |---|---|---|
 | _0 | address | undefined |
+
+### getEnabledPaymentMethods
+
+```solidity
+function getEnabledPaymentMethods() external view returns (address[])
+```
+
+Returns all available payment methods
+
+*Returns the address of all available payment methods*
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address[] | Array of all enabled payment methods |
 
 ### getIdentityId
 
@@ -166,33 +166,13 @@ Returns the identityId owned by the given token
 |---|---|---|
 | _0 | uint256 | Id of the identity |
 
-### getPaymentMethods
+### getLinkInfo
 
 ```solidity
-function getPaymentMethods() external view returns (address _nativeToken, address _stableCoin, address _utilityToken, address[] _erc20tokens)
+function getLinkInfo(address token, uint256 tokenId, uint256 readerIdentityId, uint256 signatureDate) external view returns (struct SoulLinker.LinkData)
 ```
 
-Returns all available payment methods
-
-*Returns the address of all available payment methods*
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _nativeToken | address | Address of the native token (ETH) |
-| _stableCoin | address | Address of the stable coin (USDC) |
-| _utilityToken | address | Address of the utility token ($MASA) |
-| _erc20tokens | address[] | Array of all ERC20 tokens |
-
-### getPermissionInfo
-
-```solidity
-function getPermissionInfo(address token, uint256 tokenId, uint256 readerIdentityId, uint256 signatureDate) external view returns (struct SoulLinker.PermissionData)
-```
-
-Returns the information of permission dates for a given SBT token and reader
+Returns the information of link dates for a given SBT token and reader
 
 
 
@@ -209,15 +189,15 @@ Returns the information of permission dates for a given SBT token and reader
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | SoulLinker.PermissionData | permissionData List of linked SBTs |
+| _0 | SoulLinker.LinkData | linkData List of linked SBTs |
 
-### getPermissionSignatureDates
+### getLinkSignatureDates
 
 ```solidity
-function getPermissionSignatureDates(address token, uint256 tokenId, uint256 readerIdentityId) external view returns (uint256[])
+function getLinkSignatureDates(address token, uint256 tokenId, uint256 readerIdentityId) external view returns (uint256[])
 ```
 
-Returns the list of permission signature dates for a given SBT token and reader
+Returns the list of link signature dates for a given SBT token and reader
 
 
 
@@ -235,32 +215,105 @@ Returns the list of permission signature dates for a given SBT token and reader
 |---|---|---|
 | _0 | uint256[] | List of linked SBTs |
 
-### getPriceForAddPermission
+### getLinks
 
 ```solidity
-function getPriceForAddPermission() external view returns (uint256 priceInUtilityToken)
+function getLinks(address token, uint256 tokenId) external view returns (struct SoulLinker.LinkKey[])
 ```
 
-Returns the price for storing a permission
+Returns the list of link signature dates for a given SBT token and reader
 
-*Returns the current pricing for storing a permission*
 
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| token | address | Address of the SBT contract |
+| tokenId | uint256 | Id of the token |
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| priceInUtilityToken | uint256 | Current price of storing a permission in utility token ($MASA) |
+| _0 | SoulLinker.LinkKey[] | List of linked SBTs |
 
-### getSBTLinks
+### getPriceForAddLink
 
 ```solidity
-function getSBTLinks(uint256 identityId, address token) external view returns (uint256[])
+function getPriceForAddLink(address paymentMethod, address token) external view returns (uint256)
 ```
 
-Returns the list of linked SBTs by a given SBT token
+Returns the price for storing a link
 
-*The token must be linked to this soul linker*
+*Returns the current pricing for storing a link*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
+| token | address | Token that user want to store link |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | Current price for storing a link |
+
+### getReaderLinks
+
+```solidity
+function getReaderLinks(uint256 readerIdentityId) external view returns (struct SoulLinker.ReaderLink[])
+```
+
+Returns the list of links for a given reader identity id
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| readerIdentityId | uint256 | Id of the identity of the reader of the SBT |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | SoulLinker.ReaderLink[] | List of links for the reader |
+
+### getRoleAdmin
+
+```solidity
+function getRoleAdmin(bytes32 role) external view returns (bytes32)
+```
+
+
+
+*Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role&#39;s admin, use {_setRoleAdmin}.*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role | bytes32 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bytes32 | undefined |
+
+### getSBTConnections
+
+```solidity
+function getSBTConnections(uint256 identityId, address token) external view returns (uint256[])
+```
+
+Returns the list of connected SBTs by a given SBT token
+
+
 
 #### Parameters
 
@@ -273,17 +326,17 @@ Returns the list of linked SBTs by a given SBT token
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256[] | List of linked SBTs |
+| _0 | uint256[] | List of connected SBTs |
 
-### getSBTLinks
+### getSBTConnections
 
 ```solidity
-function getSBTLinks(address owner, address token) external view returns (uint256[])
+function getSBTConnections(address owner, address token) external view returns (uint256[])
 ```
 
-Returns the list of linked SBTs by a given SBT token
+Returns the list of connected SBTs by a given SBT token
 
-*The token must be linked to this soul linker*
+
 
 #### Parameters
 
@@ -296,23 +349,41 @@ Returns the list of linked SBTs by a given SBT token
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256[] | List of linked SBTs |
+| _0 | uint256[] | List of connectec SBTs |
 
-### linkedSBT
+### grantRole
 
 ```solidity
-function linkedSBT(address) external view returns (bool)
+function grantRole(bytes32 role, address account) external nonpayable
 ```
 
 
 
-
+*Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``&#39;s admin role. May emit a {RoleGranted} event.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | address | undefined |
+| role | bytes32 | undefined |
+| account | address | undefined |
+
+### hasRole
+
+```solidity
+function hasRole(bytes32 role, address account) external view returns (bool)
+```
+
+
+
+*Returns `true` if `account` has been granted `role`.*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role | bytes32 | undefined |
+| account | address | undefined |
 
 #### Returns
 
@@ -320,37 +391,15 @@ function linkedSBT(address) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
-### linkedSBTs
+### masaToken
 
 ```solidity
-function linkedSBTs(uint256) external view returns (address)
+function masaToken() external view returns (address)
 ```
 
 
 
 
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
-
-### owner
-
-```solidity
-function owner() external view returns (address)
-```
-
-
-
-*Returns the address of the current owner.*
 
 
 #### Returns
@@ -359,48 +408,50 @@ function owner() external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
-### removeErc20Token
+### pause
 
 ```solidity
-function removeErc20Token(address _erc20token) external nonpayable
+function pause() external nonpayable
 ```
 
-Removes an ERC20 token as a valid payment method
+Pauses the smart contract
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
+
+
+### paused
+
+```solidity
+function paused() external view returns (bool)
+```
+
+
+
+*Returns true if the contract is paused, and false otherwise.*
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
+### renounceRole
+
+```solidity
+function renounceRole(bytes32 role, address account) external nonpayable
+```
+
+
+
+*Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function&#39;s purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`. May emit a {RoleRevoked} event.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| _erc20token | address | ERC20 token to remove |
-
-### removeLinkedSBT
-
-```solidity
-function removeLinkedSBT(address token) external nonpayable
-```
-
-Removes an SBT from the list of linked SBTs
-
-*The caller must be the owner to call this function*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| token | address | Address of the SBT contract |
-
-### renounceOwnership
-
-```solidity
-function renounceOwnership() external nonpayable
-```
-
-
-
-*Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.*
-
+| role | bytes32 | undefined |
+| account | address | undefined |
 
 ### reserveWallet
 
@@ -419,15 +470,15 @@ function reserveWallet() external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
-### revokePermission
+### revokeLink
 
 ```solidity
-function revokePermission(uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, uint256 signatureDate) external nonpayable
+function revokeLink(uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, uint256 signatureDate) external nonpayable
 ```
 
-Revokes the permission
+Revokes the link
 
-*The token must be linked to this soul linker*
+*The links can be revoked, wether the token is linked or not. The caller must be the owner of the token. The owner of the token can revoke a link even if the reader has not added it yet.*
 
 #### Parameters
 
@@ -439,37 +490,38 @@ Revokes the permission
 | tokenId | uint256 | Id of the token |
 | signatureDate | uint256 | Signature date of the signature |
 
-### setAddPermissionPrice
+### revokeRole
 
 ```solidity
-function setAddPermissionPrice(uint256 _addPermissionPrice) external nonpayable
+function revokeRole(bytes32 role, address account) external nonpayable
 ```
 
-Sets the price of store permission in stable coin
 
-*The caller must have the owner to call this function*
+
+*Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``&#39;s admin role. May emit a {RoleRevoked} event.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| _addPermissionPrice | uint256 | New price of the store permission in stable coin |
+| role | bytes32 | undefined |
+| account | address | undefined |
 
-### setAddPermissionPriceMASA
+### setMasaToken
 
 ```solidity
-function setAddPermissionPriceMASA(uint256 _addPermissionPriceMASA) external nonpayable
+function setMasaToken(address _masaToken) external nonpayable
 ```
 
-Sets the price of store permission in $MASA
+Sets the utility token to pay the fee in (MASA)
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function It can be set to address(0) to disable paying in MASA*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| _addPermissionPriceMASA | uint256 | New price of the store permission in $MASA |
+| _masaToken | address | New utility token to pay the fee in |
 
 ### setReserveWallet
 
@@ -479,7 +531,7 @@ function setReserveWallet(address _reserveWallet) external nonpayable
 
 Set the reserve wallet
 
-*Let change the reserve walled. It can be triggered by an authorized account.*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -495,7 +547,7 @@ function setSoulboundIdentity(contract ISoulboundIdentity _soulboundIdentity) ex
 
 Sets the SoulboundIdentity contract address linked to this soul name
 
-*The caller must be the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -511,7 +563,7 @@ function setStableCoin(address _stableCoin) external nonpayable
 
 Sets the stable coin to pay the fee in (USDC)
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -527,29 +579,13 @@ function setSwapRouter(address _swapRouter) external nonpayable
 
 Sets the swap router address
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
 | _swapRouter | address | New swap router address |
-
-### setUtilityToken
-
-```solidity
-function setUtilityToken(address _utilityToken) external nonpayable
-```
-
-Sets the utility token to pay the fee in ($MASA)
-
-*The caller must have the owner to call this function*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _utilityToken | address | New utility token to pay the fee in |
 
 ### setWrappedNativeToken
 
@@ -559,7 +595,7 @@ function setWrappedNativeToken(address _wrappedNativeToken) external nonpayable
 
 Sets the wrapped native token address
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -601,6 +637,28 @@ function stableCoin() external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
+### supportsInterface
+
+```solidity
+function supportsInterface(bytes4 interfaceId) external view returns (bool)
+```
+
+
+
+*See {IERC165-supportsInterface}.*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| interfaceId | bytes4 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
 ### swapRouter
 
 ```solidity
@@ -618,46 +676,24 @@ function swapRouter() external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
-### transferOwnership
+### unpause
 
 ```solidity
-function transferOwnership(address newOwner) external nonpayable
+function unpause() external nonpayable
 ```
 
+Unpauses the smart contract
+
+*The caller must have the admin role to call this function*
 
 
-*Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| newOwner | address | undefined |
-
-### utilityToken
+### validateLink
 
 ```solidity
-function utilityToken() external view returns (address)
+function validateLink(uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, uint256 signatureDate) external view returns (bool)
 ```
 
-
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
-
-### validatePermission
-
-```solidity
-function validatePermission(uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, uint256 signatureDate) external view returns (string)
-```
-
-Validates the permission of the given read link request and returns the data that reader can read if the permission is valid
+Validates the link of the given read link request and returns the data that reader can read if the link is valid
 
 *The token must be linked to this soul linker*
 
@@ -675,7 +711,7 @@ Validates the permission of the given read link request and returns the data tha
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | string | Data that the reader can read |
+| _0 | bool | True if the link is valid |
 
 ### wrappedNativeToken
 
@@ -698,27 +734,10 @@ function wrappedNativeToken() external view returns (address)
 
 ## Events
 
-### OwnershipTransferred
+### LinkAdded
 
 ```solidity
-event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| previousOwner `indexed` | address | undefined |
-| newOwner `indexed` | address | undefined |
-
-### PermissionAdded
-
-```solidity
-event PermissionAdded(uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, string data, uint256 signatureDate, uint256 expirationDate)
+event LinkAdded(uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, uint256 signatureDate, uint256 expirationDate)
 ```
 
 
@@ -733,14 +752,13 @@ event PermissionAdded(uint256 readerIdentityId, uint256 ownerIdentityId, address
 | ownerIdentityId  | uint256 | undefined |
 | token  | address | undefined |
 | tokenId  | uint256 | undefined |
-| data  | string | undefined |
 | signatureDate  | uint256 | undefined |
 | expirationDate  | uint256 | undefined |
 
-### PermissionRevoked
+### LinkRevoked
 
 ```solidity
-event PermissionRevoked(uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, uint256 signatureDate)
+event LinkRevoked(uint256 readerIdentityId, uint256 ownerIdentityId, address token, uint256 tokenId, uint256 signatureDate)
 ```
 
 
@@ -756,6 +774,363 @@ event PermissionRevoked(uint256 readerIdentityId, uint256 ownerIdentityId, addre
 | token  | address | undefined |
 | tokenId  | uint256 | undefined |
 | signatureDate  | uint256 | undefined |
+
+### Paused
+
+```solidity
+event Paused(address account)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| account  | address | undefined |
+
+### RoleAdminChanged
+
+```solidity
+event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role `indexed` | bytes32 | undefined |
+| previousAdminRole `indexed` | bytes32 | undefined |
+| newAdminRole `indexed` | bytes32 | undefined |
+
+### RoleGranted
+
+```solidity
+event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role `indexed` | bytes32 | undefined |
+| account `indexed` | address | undefined |
+| sender `indexed` | address | undefined |
+
+### RoleRevoked
+
+```solidity
+event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role `indexed` | bytes32 | undefined |
+| account `indexed` | address | undefined |
+| sender `indexed` | address | undefined |
+
+### Unpaused
+
+```solidity
+event Unpaused(address account)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| account  | address | undefined |
+
+
+
+## Errors
+
+### AlreadyAdded
+
+```solidity
+error AlreadyAdded()
+```
+
+
+
+
+
+
+### CallerNotOwner
+
+```solidity
+error CallerNotOwner(address caller)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| caller | address | undefined |
+
+### CallerNotReader
+
+```solidity
+error CallerNotReader(address caller)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| caller | address | undefined |
+
+### IdentityOwnerIsReader
+
+```solidity
+error IdentityOwnerIsReader(uint256 readerIdentityId)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| readerIdentityId | uint256 | undefined |
+
+### IdentityOwnerNotTokenOwner
+
+```solidity
+error IdentityOwnerNotTokenOwner(uint256 tokenId, uint256 ownerIdentityId)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId | uint256 | undefined |
+| ownerIdentityId | uint256 | undefined |
+
+### InsufficientEthAmount
+
+```solidity
+error InsufficientEthAmount(uint256 amount)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| amount | uint256 | undefined |
+
+### InvalidPaymentMethod
+
+```solidity
+error InvalidPaymentMethod(address paymentMethod)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | undefined |
+
+### InvalidSignature
+
+```solidity
+error InvalidSignature()
+```
+
+
+
+
+
+
+### InvalidSignatureDate
+
+```solidity
+error InvalidSignatureDate(uint256 signatureDate)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| signatureDate | uint256 | undefined |
+
+### InvalidToken
+
+```solidity
+error InvalidToken(address token)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| token | address | undefined |
+
+### LinkAlreadyExists
+
+```solidity
+error LinkAlreadyExists(address token, uint256 tokenId, uint256 readerIdentityId, uint256 signatureDate)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| token | address | undefined |
+| tokenId | uint256 | undefined |
+| readerIdentityId | uint256 | undefined |
+| signatureDate | uint256 | undefined |
+
+### LinkAlreadyRevoked
+
+```solidity
+error LinkAlreadyRevoked()
+```
+
+
+
+
+
+
+### LinkDoesNotExist
+
+```solidity
+error LinkDoesNotExist()
+```
+
+
+
+
+
+
+### NonExistingErc20Token
+
+```solidity
+error NonExistingErc20Token(address erc20token)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| erc20token | address | undefined |
+
+### RefundFailed
+
+```solidity
+error RefundFailed()
+```
+
+
+
+
+
+
+### SameValue
+
+```solidity
+error SameValue()
+```
+
+
+
+
+
+
+### TransferFailed
+
+```solidity
+error TransferFailed()
+```
+
+
+
+
+
+
+### ValidPeriodExpired
+
+```solidity
+error ValidPeriodExpired(uint256 expirationDate)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| expirationDate | uint256 | undefined |
+
+### ZeroAddress
+
+```solidity
+error ZeroAddress()
+```
+
+
+
+
 
 
 

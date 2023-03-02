@@ -3,14 +3,13 @@ import React from "react";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import { MasaProvider } from "@masa-finance/masa-react";
-import MasaLogin from "../components/masa-login/masa-login";
+
+import Hero from "../components/Hero"
 
 function HomepageHeader() {
   return (
     <Link to="docs/masa/introduction">
-      <img src={useBaseUrl("/img/banner.png")} />;
+      <Hero />
     </Link>
   );
 }
@@ -23,12 +22,7 @@ export default function Home(): JSX.Element {
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <MasaProvider environment="test">
-        <HomepageHeader />
-        <main>
-          <MasaLogin />
-        </main>
-      </MasaProvider>
+      <HomepageHeader />
     </Layout>
   );
 }

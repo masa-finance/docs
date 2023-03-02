@@ -44,6 +44,40 @@ function MINTER_ROLE() external view returns (bytes32)
 |---|---|---|
 | _0 | bytes32 | undefined |
 
+### addLinkPrice
+
+```solidity
+function addLinkPrice() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### addLinkPriceMASA
+
+```solidity
+function addLinkPriceMASA() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
 ### balanceOf
 
 ```solidity
@@ -81,6 +115,28 @@ function burn(uint256 tokenId) external nonpayable
 | Name | Type | Description |
 |---|---|---|
 | tokenId | uint256 | undefined |
+
+### exists
+
+```solidity
+function exists(uint256 tokenId) external view returns (bool)
+```
+
+Returns true if the token exists
+
+*Returns true if the token has been minted*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId | uint256 | Token to check |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | True if the token exists |
 
 ### getExtension
 
@@ -205,7 +261,7 @@ Returns the information of a soul name
 | sbtName | string | Soul name, in upper/lower case and extension |
 | linked | bool | `true` if the soul name is linked, `false` otherwise |
 | identityId | uint256 | Identity id of the soul name |
-| tokenId | uint256 | SoulName id id of the soul name |
+| tokenId | uint256 | SoulName id of the soul name |
 | expirationDate | uint256 | Expiration date of the soul name |
 | active | bool | `true` if the soul name is active, `false` otherwise |
 
@@ -285,7 +341,7 @@ Mints a new soulbound identity
 
 | Name | Type | Description |
 |---|---|---|
-| to | address | Address of the owner of the new identity |
+| to | address | Address of the admin of the new identity |
 
 #### Returns
 
@@ -296,7 +352,7 @@ Mints a new soulbound identity
 ### mintIdentityWithName
 
 ```solidity
-function mintIdentityWithName(address to, string name, uint256 yearsPeriod, string _tokenURI) external payable returns (uint256)
+function mintIdentityWithName(address to, string name, uint256 yearsPeriod, string _tokenURI) external nonpayable returns (uint256)
 ```
 
 Mints a new soulbound identity with a SoulName associated to it
@@ -307,7 +363,7 @@ Mints a new soulbound identity with a SoulName associated to it
 
 | Name | Type | Description |
 |---|---|---|
-| to | address | Address of the owner of the new identity |
+| to | address | Address of the admin of the new identity |
 | name | string | Name of the new identity |
 | yearsPeriod | uint256 | Years of validity of the name |
 | _tokenURI | string | URI of the NFT |
@@ -334,23 +390,6 @@ function name() external view returns (string)
 | Name | Type | Description |
 |---|---|---|
 | _0 | string | undefined |
-
-### owner
-
-```solidity
-function owner() external view returns (address)
-```
-
-
-
-*Returns the address of the current owner.*
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
 
 ### ownerOf
 
@@ -396,16 +435,39 @@ Returns the owner address of a soul name
 |---|---|---|
 | _0 | address | Address of the owner of the identity |
 
-### renounceOwnership
+### queryLinkPrice
 
 ```solidity
-function renounceOwnership() external nonpayable
+function queryLinkPrice() external view returns (uint256)
 ```
 
 
 
-*Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.*
 
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### queryLinkPriceMASA
+
+```solidity
+function queryLinkPriceMASA() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
 
 ### renounceRole
 
@@ -441,6 +503,70 @@ function revokeRole(bytes32 role, address account) external nonpayable
 | role | bytes32 | undefined |
 | account | address | undefined |
 
+### setAddLinkPrice
+
+```solidity
+function setAddLinkPrice(uint256 _addLinkPrice) external nonpayable
+```
+
+Sets the price for adding the link in SoulLinker in stable coin
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _addLinkPrice | uint256 | New price for adding the link in SoulLinker in stable coin |
+
+### setAddLinkPriceMASA
+
+```solidity
+function setAddLinkPriceMASA(uint256 _addLinkPriceMASA) external nonpayable
+```
+
+Sets the price for adding the link in SoulLinker in MASA
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _addLinkPriceMASA | uint256 | New price for adding the link in SoulLinker in MASA |
+
+### setQueryLinkPrice
+
+```solidity
+function setQueryLinkPrice(uint256 _queryLinkPrice) external nonpayable
+```
+
+Sets the price for reading data in SoulLinker in stable coin
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _queryLinkPrice | uint256 | New price for reading data in SoulLinker in stable coin |
+
+### setQueryLinkPriceMASA
+
+```solidity
+function setQueryLinkPriceMASA(uint256 _queryLinkPriceMASA) external nonpayable
+```
+
+Sets the price for reading data in SoulLinker in MASA
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _queryLinkPriceMASA | uint256 | New price for reading data in SoulLinker in MASA |
+
 ### setSoulName
 
 ```solidity
@@ -449,7 +575,7 @@ function setSoulName(contract ISoulName _soulName) external nonpayable
 
 Sets the SoulName contract address linked to this identity
 
-*The caller must have the owner to call this function*
+*The caller must have the admin role to call this function*
 
 #### Parameters
 
@@ -663,22 +789,6 @@ function totalSupply() external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
-### transferOwnership
-
-```solidity
-function transferOwnership(address newOwner) external nonpayable
-```
-
-
-
-*Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| newOwner | address | undefined |
-
 
 
 ## Events
@@ -716,23 +826,6 @@ event Mint(address indexed _owner, uint256 indexed _tokenId)
 |---|---|---|
 | _owner `indexed` | address | undefined |
 | _tokenId `indexed` | uint256 | undefined |
-
-### OwnershipTransferred
-
-```solidity
-event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| previousOwner `indexed` | address | undefined |
-| newOwner `indexed` | address | undefined |
 
 ### RoleAdminChanged
 
@@ -787,6 +880,58 @@ event RoleRevoked(bytes32 indexed role, address indexed account, address indexed
 | role `indexed` | bytes32 | undefined |
 | account `indexed` | address | undefined |
 | sender `indexed` | address | undefined |
+
+
+
+## Errors
+
+### IdentityAlreadyCreated
+
+```solidity
+error IdentityAlreadyCreated(address to)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| to | address | undefined |
+
+### SameValue
+
+```solidity
+error SameValue()
+```
+
+
+
+
+
+
+### SoulNameContractNotSet
+
+```solidity
+error SoulNameContractNotSet()
+```
+
+
+
+
+
+
+### ZeroAddress
+
+```solidity
+error ZeroAddress()
+```
+
+
+
+
 
 
 

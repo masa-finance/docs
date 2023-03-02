@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.5.4](../README.md) / [Exports](../modules.md) / LoadContractArgs
+ - v1.6.4](../README.md) / [Exports](../modules.md) / LoadContractArgs
 
 # Interface: LoadContractArgs
 
@@ -14,7 +14,7 @@
 
 ### network
 
-• `Optional` **network**: `string`
+• `Optional` **network**: [`NetworkName`](../modules.md#networkname)
 
 ___
 

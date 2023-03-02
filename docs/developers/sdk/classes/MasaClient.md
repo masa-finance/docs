@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.5.4](../README.md) / [Exports](../modules.md) / MasaClient
+ - v1.6.4](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -11,175 +11,115 @@
 
 ### Properties
 
+- [\_cookie](MasaClient.md#_cookie)
+- [\_middlewareClient](MasaClient.md#_middlewareclient)
+- [creditScore](MasaClient.md#creditscore)
+- [green](MasaClient.md#green)
+- [metadata](MasaClient.md#metadata)
+- [session](MasaClient.md#session)
+- [soulName](MasaClient.md#soulname)
+
+### Accessors
+
 - [cookie](MasaClient.md#cookie)
-- [middlewareClient](MasaClient.md#middlewareclient)
-
-### Methods
-
-- [checkSignature](MasaClient.md#checksignature)
-- [creditScoreMint](MasaClient.md#creditscoremint)
-- [getChallenge](MasaClient.md#getchallenge)
-- [getMetadata](MasaClient.md#getmetadata)
-- [sessionCheck](MasaClient.md#sessioncheck)
-- [sessionLogout](MasaClient.md#sessionlogout)
-- [storeMetadata](MasaClient.md#storemetadata)
-- [twoFAGenerate](MasaClient.md#twofagenerate)
-- [twoFAMint](MasaClient.md#twofamint)
 
 ## Constructors
 
 ### constructor
 
-• **new MasaClient**(`__namedParameters`)
+• **new MasaClient**(`«destructured»`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `Object` |
-| `__namedParameters.apiUrl` | `string` |
-| `__namedParameters.cookie?` | `string` |
+| `«destructured»` | `Object` |
+| › `apiUrl` | `string` |
+| › `cookie?` | `string` |
 
 ## Properties
 
+### \_cookie
+
+• `Private` `Optional` **\_cookie**: `string`
+
+___
+
+### \_middlewareClient
+
+• `Private` **\_middlewareClient**: `AxiosInstance`
+
+___
+
+### creditScore
+
+• **creditScore**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `generate` | () => `Promise`<`undefined` \| [`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\> |
+| `update` | (`transactionHash`: `string`) => `Promise`<`undefined` \| [`UpdateCreditScoreResult`](../interfaces/UpdateCreditScoreResult.md)\> |
+
+___
+
+### green
+
+• **green**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| [`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\> |
+| `verify` | (`phoneNumber`: `string`, `code`: `string`, `network`: `string`) => `Promise`<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\> |
+
+___
+
+### metadata
+
+• **metadata**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `get` | (`uri`: `string`, `additionalHeaders?`: `Record`<`string`, `string`\>) => `Promise`<`undefined` \| [`IGreen`](../interfaces/IGreen.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IIdentity`](../interfaces/IIdentity.md)\> |
+
+___
+
+### session
+
+• **session**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `check` | () => `Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\> |
+| `checkSignature` | (`address`: `string`, `signature`: `string`, `cookie?`: `string`) => `Promise`<`undefined` \| [`SessionUser`](../interfaces/SessionUser.md)\> |
+| `getChallenge` | () => `Promise`<`undefined` \| [`GetChallengeResult`](../interfaces/GetChallengeResult.md)\> |
+| `logout` | () => `Promise`<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\> |
+
+___
+
+### soulName
+
+• **soulName**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`, `network`: [`NetworkName`](../modules.md#networkname)) => `Promise`<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md)\> |
+
+## Accessors
+
 ### cookie
 
-• `Optional` **cookie**: `string`
-
-___
-
-### middlewareClient
-
-• `Private` **middlewareClient**: `AxiosInstance`
-
-## Methods
-
-### checkSignature
-
-▸ **checkSignature**(`address`, `signature`, `cookie?`): `Promise`<`any`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `signature` | `string` |
-| `cookie?` | `string` |
+• `get` **cookie**(): `undefined` \| `string`
 
 #### Returns
 
-`Promise`<`any`\>
-
-___
-
-### creditScoreMint
-
-▸ **creditScoreMint**(`address`, `signature`): `Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `signature` | `string` |
-
-#### Returns
-
-`Promise`<`undefined` \| { `message`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>
-
-___
-
-### getChallenge
-
-▸ **getChallenge**(): `Promise`<`any`\>
-
-#### Returns
-
-`Promise`<`any`\>
-
-___
-
-### getMetadata
-
-▸ **getMetadata**(`uri`): `Promise`<`undefined` \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IIdentity`](../interfaces/IIdentity.md) \| [`I2FA`](../interfaces/I2FA.md)\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `uri` | `string` |
-
-#### Returns
-
-`Promise`<`undefined` \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IIdentity`](../interfaces/IIdentity.md) \| [`I2FA`](../interfaces/I2FA.md)\>
-
-___
-
-### sessionCheck
-
-▸ **sessionCheck**(): `Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\>
-
-#### Returns
-
-`Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\>
-
-___
-
-### sessionLogout
-
-▸ **sessionLogout**(): `Promise`<`undefined` \| { `status`: `string`  }\>
-
-#### Returns
-
-`Promise`<`undefined` \| { `status`: `string`  }\>
-
-___
-
-### storeMetadata
-
-▸ **storeMetadata**(`soulName`): `Promise`<`undefined` \| { `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default`  }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `soulName` | `string` |
-
-#### Returns
-
-`Promise`<`undefined` \| { `imageResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `imageTransaction`: `default` ; `metadataResponse`: { `data`: `any` ; `status`: `number` ; `statusText`: `string`  } ; `metadataTransaction`: `default`  }\>
-
-___
-
-### twoFAGenerate
-
-▸ **twoFAGenerate**(`phoneNumber`): `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `phoneNumber` | `string` |
-
-#### Returns
-
-`Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean`  }\>
-
-___
-
-### twoFAMint
-
-▸ **twoFAMint**(`address`, `phoneNumber`, `code`, `signature`): `Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `phoneNumber` | `string` |
-| `code` | `string` |
-| `signature` | `string` |
-
-#### Returns
-
-`Promise`<`undefined` \| { `message`: `string` ; `status`: `string` ; `success`: `boolean` ; `tokenId`: `string` \| `BigNumber`  }\>
+`undefined` \| `string`

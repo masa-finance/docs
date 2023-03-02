@@ -1,5 +1,5 @@
 [# Masa SDK
- - v0.5.4](../README.md) / [Exports](../modules.md) / ISoulName
+ - v1.6.4](../README.md) / [Exports](../modules.md) / ISoulName
 
 # Interface: ISoulName
 
@@ -8,16 +8,27 @@
 ### Properties
 
 - [attributes](ISoulName.md#attributes)
+- [chainId](ISoulName.md#chainid)
 - [description](ISoulName.md#description)
 - [external\_url](ISoulName.md#external_url)
 - [image](ISoulName.md#image)
+- [imageHash](ISoulName.md#imagehash)
+- [imageHashSignature](ISoulName.md#imagehashsignature)
 - [name](ISoulName.md#name)
+- [network](ISoulName.md#network)
+- [signature](ISoulName.md#signature)
 
 ## Properties
 
 ### attributes
 
 • **attributes**: [`Attribute`](Attribute.md)[]
+
+___
+
+### chainId
+
+• **chainId**: `string`
 
 ___
 
@@ -29,7 +40,7 @@ ___
 
 ### external\_url
 
-• **external\_url**: ``"https://beta.claimyoursoul.masa.finance"``
+• **external\_url**: ``"https://testnet.app.masa.finance"`` \| ``"https://app.masa.finance"``
 
 ___
 
@@ -39,6 +50,30 @@ ___
 
 ___
 
+### imageHash
+
+• **imageHash**: `string`
+
+___
+
+### imageHashSignature
+
+• **imageHashSignature**: `string`
+
+___
+
 ### name
 
 • **name**: `string`
+
+___
+
+### network
+
+• **network**: `string`
+
+___
+
+### signature
+
+• **signature**: `string`

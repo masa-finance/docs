@@ -1,19 +1,11 @@
 # Masa SDK
- - v0.5.4 / [Exports](modules.md)
-
----
-
-**🌽🌽 THIS IS BETA SOFTWARE. IT COULD LEAD TO RAPID UNSCHEDULED DISASSEMBLY. If you run into problems, please open up a new issue. 🌽🌽**
-
----
+ - v1.6.4 / [Exports](modules.md)
 
 <!-- TOC -->
-
-* [Installation](#installation)
+  * [Installation](#installation)
     * [Usage](#usage)
     * [Interface](#interface)
     * [Configuration](#configuration)
-
 <!-- TOC -->
 
 ## Installation
