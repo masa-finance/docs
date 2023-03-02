@@ -56,8 +56,3 @@ body {
 a svg {
     display: inline-block;
 }
-
-.rodal {
-    position: relative !important;
-    padding-top: 650px !important;
-}
