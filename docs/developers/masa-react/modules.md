@@ -1,8 +1,8 @@
 [# Masa React
- - v1.0.1](README.md) / Exports
+ - v1.0.7](README.md) / Exports
 
 # # Masa React
- - v1.0.1
+ - v1.0.7
 
 ## Table of contents
 
@@ -357,7 +357,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `connect` | () => `void` |
+| `connectMetamask` | () => `void` |
 
 ___
 
@@ -384,6 +384,7 @@ ___
 | `closeModal` | (`forceCallback?`: `boolean`) => `void` |
 | `forcedPage` | ``null`` \| `string` |
 | `isModalOpen` | `boolean` |
+| `openMintSoulnameModal` | (`mintCallback?`: () => `void`) => `void` |
 | `setForcedPage?` | (`page`: ``null`` \| `string`) => `void` |
 | `setModalCallback` | (`callback`: () => `void`) => `void` |
 | `setModalOpen` | (`modalOpen`: `boolean`) => `void` |
@@ -459,6 +460,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `error` | `unknown` |
+| `handlePurchaseSoulname` | (`soulname`: `string`, `registrationPeriod`: `number`, `paymentMethod`: `PaymentMethod`) => `Promise`<`boolean`\> |
 | `isSoulnamesLoading` | `boolean` |
 | `reloadSoulnames` | () => `void` |
 | `soulnames` | `undefined` \| `SoulNameDetails`[] |
