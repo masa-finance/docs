@@ -2,23 +2,20 @@ import React from "react";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import Hero from "../components/Hero";
+import "./index.module.css";
 
-import Hero from "../components/Hero"
-
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-
+const HomepageHeader = () => {
   return (
     <Link to="docs/masa/introduction">
       <Hero />
     </Link>
   );
-}
+};
 
-export default function Home(): JSX.Element {
+const Home = (): JSX.Element => {
   const { siteConfig } = useDocusaurusContext();
+
   return (
     <Layout
       title={`${siteConfig.title}`}
@@ -27,4 +24,6 @@ export default function Home(): JSX.Element {
       <HomepageHeader />
     </Layout>
   );
-}
+};
+
+export default Home;

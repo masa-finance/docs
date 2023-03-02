@@ -27,6 +27,12 @@ const config = {
     locales: ["en"],
   },
 
+  plugins: [
+    "docusaurus-node-polyfills",
+    require("./src/plugins/http-support"),
+    require("./src/plugins/tailwind"),
+  ],
+
   presets: [
     [
       "classic",
@@ -114,20 +120,6 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-
-  plugins: [
-    async function myPlugin(context, options) {
-      return {
-        name: "docusaurus-tailwindcss",
-        configurePostCss(postcssOptions) {
-          // Appends TailwindCSS and AutoPrefixer.
-          postcssOptions.plugins.push(require("tailwindcss"));
-          postcssOptions.plugins.push(require("autoprefixer"));
-          return postcssOptions;
-        },
-      };
-    },
-  ]
 };
 
 module.exports = config;
