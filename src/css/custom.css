@@ -52,3 +52,7 @@
 body {
     font-family: Inter, serif;
 }
+
+a svg {
+    display: inline-block;
+}

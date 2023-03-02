@@ -32,6 +32,10 @@ module.exports = function (_context, _options) {
               test: /\.txt$/i,
               use: "raw-loader",
             },
+            {
+              test: /\.scss$/,
+              use: ["style-loader", "css-loader"],
+            },
           ],
         },
       };
