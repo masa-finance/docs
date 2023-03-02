@@ -10,7 +10,7 @@ const TryMasa = (): JSX.Element => {
     <Layout title={`${siteConfig.title}`}>
       <BrowserOnly>
         {() => {
-          require("@masa-finance/masa-react/dist/src/provider/styles.scss");
+          require("@masa-finance/masa-react/dist/browser/main.css");
 
           const { MasaProvider } = require("@masa-finance/masa-react");
           const {
