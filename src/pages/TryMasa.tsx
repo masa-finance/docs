@@ -18,7 +18,7 @@ const TryMasa = (): JSX.Element => {
           } = require("@site/src/components/masa-login/masa-login");
 
           return (
-            <MasaProvider>
+            <MasaProvider environmentName="prod" company="Masa">
               <MasaLogin />
             </MasaProvider>
           );
