@@ -1,8 +1,8 @@
 [# Masa React
- - v1.0.7](README.md) / Exports
+ - v1.0.10](README.md) / Exports
 
 # # Masa React
- - v1.0.7
+ - v1.0.10
 
 ## Table of contents
 
@@ -372,7 +372,7 @@ ___
 | `masa?` | `default` |
 | `isLoggedIn?` | `boolean` |
 | `isConnected?` | `boolean` |
-| `network?` | `Network` |
+| `network?` | [`Network`](interfaces/Network.md) |
 | `areScopesFullfiled?` | `boolean` |
 
 #### Returns
@@ -408,7 +408,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `addNetwork` | (`networkDetails`: [`Network`](interfaces/Network.md)) => `void` |
-| `network?` | `Network` |
+| `currentNetwork?` | [`Network`](interfaces/Network.md) |
 | `switchNetwork` | (`chainId`: `number`) => `void` |
 
 ___

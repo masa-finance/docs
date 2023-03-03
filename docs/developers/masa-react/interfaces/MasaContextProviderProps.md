@@ -1,5 +1,5 @@
 [# Masa React
- - v1.0.7](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v1.0.10](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -21,6 +21,7 @@
 - [company](MasaContextProviderProps.md#company)
 - [connect](MasaContextProviderProps.md#connect)
 - [creditScores](MasaContextProviderProps.md#creditscores)
+- [currentNetwork](MasaContextProviderProps.md#currentnetwork)
 - [environmentName](MasaContextProviderProps.md#environmentname)
 - [forcedPage](MasaContextProviderProps.md#forcedpage)
 - [greens](MasaContextProviderProps.md#greens)
@@ -43,7 +44,6 @@
 - [isSoulnamesLoading](MasaContextProviderProps.md#issoulnamesloading)
 - [isWalletLoading](MasaContextProviderProps.md#iswalletloading)
 - [masa](MasaContextProviderProps.md#masa)
-- [network](MasaContextProviderProps.md#network)
 - [noWallet](MasaContextProviderProps.md#nowallet)
 - [openMintSoulnameModal](MasaContextProviderProps.md#openmintsoulnamemodal)
 - [provider](MasaContextProviderProps.md#provider)
@@ -166,6 +166,16 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[creditScores](MasaShape.md#creditscores)
+
+___
+
+### currentNetwork
+
+• `Optional` **currentNetwork**: [`Network`](Network.md)
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[currentNetwork](MasaShape.md#currentnetwork)
 
 ___
 
@@ -472,16 +482,6 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[masa](MasaShape.md#masa)
-
-___
-
-### network
-
-• `Optional` **network**: `Network`
-
-#### Inherited from
-
-[MasaShape](MasaShape.md).[network](MasaShape.md#network)
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa React
- - v1.0.7](../README.md) / [Exports](../modules.md) / MasaShape
+ - v1.0.10](../README.md) / [Exports](../modules.md) / MasaShape
 
 # Interface: MasaShape
 
@@ -20,6 +20,7 @@
 - [company](MasaShape.md#company)
 - [connect](MasaShape.md#connect)
 - [creditScores](MasaShape.md#creditscores)
+- [currentNetwork](MasaShape.md#currentnetwork)
 - [forcedPage](MasaShape.md#forcedpage)
 - [greens](MasaShape.md#greens)
 - [handleCreateCreditScore](MasaShape.md#handlecreatecreditscore)
@@ -41,7 +42,6 @@
 - [isSoulnamesLoading](MasaShape.md#issoulnamesloading)
 - [isWalletLoading](MasaShape.md#iswalletloading)
 - [masa](MasaShape.md#masa)
-- [network](MasaShape.md#network)
 - [openMintSoulnameModal](MasaShape.md#openmintsoulnamemodal)
 - [provider](MasaShape.md#provider)
 - [reloadCreditScores](MasaShape.md#reloadcreditscores)
@@ -127,6 +127,12 @@ ___
 ### creditScores
 
 • `Optional` **creditScores**: { `metadata?`: `ICreditScore` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]
+
+___
+
+### currentNetwork
+
+• `Optional` **currentNetwork**: [`Network`](Network.md)
 
 ___
 
@@ -343,12 +349,6 @@ ___
 ### masa
 
 • `Optional` **masa**: `default`
-
-___
-
-### network
-
-• `Optional` **network**: `Network`
 
 ___
 

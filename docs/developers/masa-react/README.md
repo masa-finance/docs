@@ -1,5 +1,5 @@
 # Masa React
- - v1.0.7 / [Exports](modules.md)
+ - v1.0.10 / [Exports](modules.md)
 
 ---
 
