@@ -441,7 +441,7 @@ ___
 
 ### useSoulnames
 
-▸ **useSoulnames**(`masa?`, `walletAddress?`, `identity?`): `Object`
+▸ **useSoulnames**(`masa?`, `walletAddress?`): `Object`
 
 #### Parameters
 
@@ -449,9 +449,6 @@ ___
 | :------ | :------ |
 | `masa?` | `default` |
 | `walletAddress?` | `string` |
-| `identity?` | `Object` |
-| `identity.address?` | `string` |
-| `identity.identityId?` | `BigNumber` |
 
 #### Returns
 

@@ -9,6 +9,7 @@
 
 - [children](ModalProps.md#children)
 - [close](ModalProps.md#close)
+- [height](ModalProps.md#height)
 - [open](ModalProps.md#open)
 - [setOpen](ModalProps.md#setopen)
 
@@ -31,6 +32,12 @@ ___
 ##### Returns
 
 `void`
+
+___
+
+### height
+
+• `Optional` **height**: `number`
 
 ___
 
