@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.6.6](README.md) / Exports
+ - v1.7.0](README.md) / Exports
 
 # # Masa SDK
- - v1.6.6
+ - v1.7.0
 
 ## Table of contents
 
@@ -49,6 +49,7 @@
 
 ### Type Aliases
 
+- [BreakLinkResult](modules.md#breaklinkresult)
 - [CreateLinkResult](modules.md#createlinkresult)
 - [Environment](modules.md#environment)
 - [EnvironmentName](modules.md#environmentname)
@@ -57,6 +58,7 @@
 - [ListLinksResult](modules.md#listlinksresult)
 - [NetworkName](modules.md#networkname)
 - [PaymentMethod](modules.md#paymentmethod)
+- [QueryLinkResult](modules.md#querylinkresult)
 - [VerifyLinkResult](modules.md#verifylinkresult)
 
 ### Variables
@@ -69,6 +71,7 @@
 ### Functions
 
 - [arweave](modules.md#arweave)
+- [breakLink](modules.md#breaklink)
 - [burnCreditScore](modules.md#burncreditscore)
 - [burnCreditScoreById](modules.md#burncreditscorebyid)
 - [burnGreen](modules.md#burngreen)
@@ -116,10 +119,13 @@
 - [login](modules.md#login)
 - [logout](modules.md#logout)
 - [mintGreen](modules.md#mintgreen)
+- [parsePassport](modules.md#parsepassport)
 - [patchMetadataUrl](modules.md#patchmetadataurl)
 - [printSoulName](modules.md#printsoulname)
 - [purchaseIdentity](modules.md#purchaseidentity)
 - [purchaseIdentityWithSoulName](modules.md#purchaseidentitywithsoulname)
+- [queryLink](modules.md#querylink)
+- [queryLinkFromPassport](modules.md#querylinkfrompassport)
 - [recoverAddress](modules.md#recoveraddress)
 - [sendSoulName](modules.md#sendsoulname)
 - [sendSoulNameByName](modules.md#sendsoulnamebyname)
@@ -134,6 +140,12 @@
 - [version](modules.md#version)
 
 ## Type Aliases
+
+### BreakLinkResult
+
+Ƭ **BreakLinkResult**: [`BaseResult`](interfaces/BaseResult.md)
+
+___
 
 ### CreateLinkResult
 
@@ -191,6 +203,12 @@ ___
 ### PaymentMethod
 
 Ƭ **PaymentMethod**: ``"eth"`` \| ``"weth"`` \| ``"stable"`` \| ``"utility"``
+
+___
+
+### QueryLinkResult
+
+Ƭ **QueryLinkResult**: [`BaseResult`](interfaces/BaseResult.md)
 
 ___
 
@@ -255,6 +273,25 @@ ___
 #### Returns
 
 [`MasaArweave`](classes/MasaArweave.md)
+
+___
+
+### breakLink
+
+▸ **breakLink**(`masa`, `contract`, `tokenId`, `readerIdentityId`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `contract` | `Contract` |
+| `tokenId` | `BigNumber` |
+| `readerIdentityId` | `BigNumber` |
+
+#### Returns
+
+`Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
@@ -427,14 +464,14 @@ ___
 
 ### createCreditScore
 
-▸ **createCreditScore**(`masa`, `paymentMethod?`): `Promise`<`undefined` \| [`GenerateCreditScoreResult`](interfaces/GenerateCreditScoreResult.md)\>
+▸ **createCreditScore**(`masa`, `paymentMethod`): `Promise`<`undefined` \| [`GenerateCreditScoreResult`](interfaces/GenerateCreditScoreResult.md)\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) | `"eth"` |
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 
 #### Returns
 
@@ -444,13 +481,14 @@ ___
 
 ### createGreen
 
-▸ **createGreen**(`masa`, `phoneNumber`, `code`): `Promise`<[`VerifyGreenResult`](interfaces/VerifyGreenResult.md)\>
+▸ **createGreen**(`masa`, `paymentMethod`, `phoneNumber`, `code`): `Promise`<[`VerifyGreenResult`](interfaces/VerifyGreenResult.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
+| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 | `phoneNumber` | `string` |
 | `code` | `string` |
 
@@ -478,16 +516,16 @@ ___
 
 ### createIdentityWithSoulName
 
-▸ **createIdentityWithSoulName**(`masa`, `soulName`, `duration`, `paymentMethod`): `Promise`<`boolean`\>
+▸ **createIdentityWithSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`): `Promise`<`boolean`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
+| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 | `soulName` | `string` |
 | `duration` | `number` |
-| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 
 #### Returns
 
@@ -532,16 +570,17 @@ ___
 
 ### createSoulName
 
-▸ **createSoulName**(`masa`, `soulName`, `duration`, `paymentMethod`): `Promise`<[`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
+▸ **createSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`, `receiver?`): `Promise`<[`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
+| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 | `soulName` | `string` |
 | `duration` | `number` |
-| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
+| `receiver?` | `string` |
 
 #### Returns
 
@@ -551,15 +590,15 @@ ___
 
 ### establishLink
 
-▸ **establishLink**(`masa`, `contract`, `paymentMethod`, `tokenId`, `readerIdentityId`, `signature`, `signatureDate`, `expirationDate`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+▸ **establishLink**(`masa`, `paymentMethod`, `contract`, `tokenId`, `readerIdentityId`, `signature`, `signatureDate`, `expirationDate`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `contract` | `Contract` |
 | `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
+| `contract` | `Contract` |
 | `tokenId` | `BigNumber` |
 | `readerIdentityId` | `BigNumber` |
 | `signature` | `string` |
@@ -574,16 +613,16 @@ ___
 
 ### establishLinkFromPassport
 
-▸ **establishLinkFromPassport**(`masa`, `contract`, `passport`, `paymentMethod`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+▸ **establishLinkFromPassport**(`masa`, `paymentMethod`, `contract`, `passport`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
+| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 | `contract` | `Contract` |
 | `passport` | `string` |
-| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 
 #### Returns
 
@@ -645,16 +684,16 @@ ___
 
 ### getRegistrationPrice
 
-▸ **getRegistrationPrice**(`masa`, `soulName`, `duration`, `paymentMethod`): `Promise`<`BigNumber`\>
+▸ **getRegistrationPrice**(`masa`, `paymentMethod`, `soulName`, `duration`): `Promise`<`BigNumber`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
+| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 | `soulName` | `string` |
 | `duration` | `number` |
-| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 
 #### Returns
 
@@ -1052,21 +1091,37 @@ ___
 
 ### mintGreen
 
-▸ **mintGreen**(`masa`, `authorityAddress`, `signatureDate`, `signature`, `paymentMethod?`): `Promise`<`undefined` \| { `tokenId`: `BigNumber`  }\>
+▸ **mintGreen**(`masa`, `paymentMethod`, `authorityAddress`, `signatureDate`, `signature`): `Promise`<`undefined` \| { `tokenId`: `BigNumber`  }\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
-| `authorityAddress` | `string` | `undefined` |
-| `signatureDate` | `number` | `undefined` |
-| `signature` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) | `"eth"` |
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
+| `authorityAddress` | `string` |
+| `signatureDate` | `number` |
+| `signature` | `string` |
 
 #### Returns
 
 `Promise`<`undefined` \| { `tokenId`: `BigNumber`  }\>
+
+___
+
+### parsePassport
+
+▸ **parsePassport**(`passportEncoded`): [`IPassport`](interfaces/IPassport.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `passportEncoded` | `string` |
+
+#### Returns
+
+[`IPassport`](interfaces/IPassport.md)
 
 ___
 
@@ -1137,6 +1192,48 @@ ___
 #### Returns
 
 `Promise`<`void`\>
+
+___
+
+### queryLink
+
+▸ **queryLink**(`masa`, `contract`, `paymentMethod`, `tokenId`, `readerIdentityId`, `signature`, `signatureDate`, `expirationDate`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `contract` | `Contract` |
+| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
+| `tokenId` | `BigNumber` |
+| `readerIdentityId` | `BigNumber` |
+| `signature` | `string` |
+| `signatureDate` | `number` |
+| `expirationDate` | `number` |
+
+#### Returns
+
+`Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+
+___
+
+### queryLinkFromPassport
+
+▸ **queryLinkFromPassport**(`masa`, `paymentMethod`, `contract`, `passport`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
+| `contract` | `Contract` |
+| `passport` | `string` |
+
+#### Returns
+
+`Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 

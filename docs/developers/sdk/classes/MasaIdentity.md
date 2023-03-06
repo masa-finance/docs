@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.6.6](../README.md) / [Exports](../modules.md) / MasaIdentity
+ - v1.7.0](../README.md) / [Exports](../modules.md) / MasaIdentity
 
 # Class: MasaIdentity
 
@@ -84,15 +84,15 @@ ___
 
 ### createWithSoulName
 
-▸ **createWithSoulName**(`soulName`, `duration`, `paymentMethod`): `Promise`<`boolean`\>
+▸ **createWithSoulName**(`paymentMethod`, `soulName`, `duration`): `Promise`<`boolean`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
 | `soulName` | `string` |
 | `duration` | `number` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
 
 #### Returns
 

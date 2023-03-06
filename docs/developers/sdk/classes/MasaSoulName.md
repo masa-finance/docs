@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.6.6](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v1.7.0](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
@@ -79,15 +79,16 @@ ___
 
 ### create
 
-▸ **create**(`soulName`, `duration`, `paymentMethod`): `Promise`<[`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
+▸ **create**(`paymentMethod?`, `soulName`, `duration`, `receiver?`): `Promise`<[`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `soulName` | `string` |
-| `duration` | `number` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"eth"` |
+| `soulName` | `string` | `undefined` |
+| `duration` | `number` | `undefined` |
+| `receiver?` | `string` | `undefined` |
 
 #### Returns
 
@@ -97,15 +98,15 @@ ___
 
 ### getRegistrationPrice
 
-▸ **getRegistrationPrice**(`soulName`, `duration`, `paymentMethod`): `Promise`<`BigNumber`\>
+▸ **getRegistrationPrice**(`paymentMethod?`, `soulName`, `duration`): `Promise`<`BigNumber`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `soulName` | `string` |
-| `duration` | `number` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"eth"` |
+| `soulName` | `string` | `undefined` |
+| `duration` | `number` | `undefined` |
 
 #### Returns
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.6.6](../README.md) / [Exports](../modules.md) / MasaGreen
+ - v1.7.0](../README.md) / [Exports](../modules.md) / MasaGreen
 
 # Class: MasaGreen
 
@@ -84,16 +84,17 @@ ___
 
 ### create
 
-▸ **create**(`phoneNumber`, `code`): `Promise`<[`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\>
+▸ **create**(`paymentMethod?`, `phoneNumber`, `code`): `Promise`<[`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\>
 
 Does the verification and mint step in one go
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `phoneNumber` | `string` |
-| `code` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"eth"` |
+| `phoneNumber` | `string` | `undefined` |
+| `code` | `string` | `undefined` |
 
 #### Returns
 
@@ -157,17 +158,18 @@ ___
 
 ### mint
 
-▸ **mint**(`authorityAddress`, `signatureDate`, `signature`): `Promise`<`undefined` \| { `tokenId`: `BigNumber`  }\>
+▸ **mint**(`paymentMethod?`, `authorityAddress`, `signatureDate`, `signature`): `Promise`<`undefined` \| { `tokenId`: `BigNumber`  }\>
 
 Mints a green based on the previously made verification result
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `authorityAddress` | `string` |
-| `signatureDate` | `number` |
-| `signature` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"eth"` |
+| `authorityAddress` | `string` | `undefined` |
+| `signatureDate` | `number` | `undefined` |
+| `signature` | `string` | `undefined` |
 
 #### Returns
 

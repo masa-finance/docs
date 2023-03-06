@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.6.6](../README.md) / [Exports](../modules.md) / MasaSoulLinker
+ - v1.7.0](../README.md) / [Exports](../modules.md) / MasaSoulLinker
 
 # Class: MasaSoulLinker
 
@@ -100,14 +100,14 @@ ___
 
 ### establish
 
-▸ **establish**(`passport`, `paymentMethod?`): `Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+▸ **establish**(`paymentMethod?`, `passport`): `Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `passport` | `string` | `undefined` |
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"eth"` |
+| `passport` | `string` | `undefined` |
 
 #### Returns
 
@@ -133,14 +133,14 @@ ___
 
 ### query
 
-▸ **query**(`passport`, `paymentMethod?`): `Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+▸ **query**(`paymentMethod`, `passport`): `Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `passport` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"eth"` |
+| Name | Type |
+| :------ | :------ |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
+| `passport` | `string` |
 
 #### Returns
 
