@@ -1,5 +1,5 @@
 [# Masa React
- - v1.0.15](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v1.0.19](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -23,6 +23,7 @@
 - [creditScores](MasaContextProviderProps.md#creditscores)
 - [currentNetwork](MasaContextProviderProps.md#currentnetwork)
 - [environmentName](MasaContextProviderProps.md#environmentname)
+- [forceNetwork](MasaContextProviderProps.md#forcenetwork)
 - [forcedPage](MasaContextProviderProps.md#forcedpage)
 - [greens](MasaContextProviderProps.md#greens)
 - [handleCreateCreditScore](MasaContextProviderProps.md#handlecreatecreditscore)
@@ -185,6 +186,16 @@ ___
 
 ___
 
+### forceNetwork
+
+• `Optional` **forceNetwork**: `NetworkName`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[forceNetwork](MasaShape.md#forcenetwork)
+
+___
+
 ### forcedPage
 
 • `Optional` **forcedPage**: ``null`` \| `string`
@@ -334,19 +345,19 @@ ___
 
 ### handlePurchaseIdentityWithSoulname
 
-• `Optional` **handlePurchaseIdentityWithSoulname**: (`soulname`: `string`, `registrationPrice`: `number`, `paymentMethod`: `PaymentMethod`) => `Promise`<`boolean`\>
+• `Optional` **handlePurchaseIdentityWithSoulname**: (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPrice`: `number`) => `Promise`<`boolean`\>
 
 #### Type declaration
 
-▸ (`soulname`, `registrationPrice`, `paymentMethod`): `Promise`<`boolean`\>
+▸ (`paymentMethod`, `soulname`, `registrationPrice`): `Promise`<`boolean`\>
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
+| `paymentMethod` | `PaymentMethod` |
 | `soulname` | `string` |
 | `registrationPrice` | `number` |
-| `paymentMethod` | `PaymentMethod` |
 
 ##### Returns
 
@@ -697,17 +708,17 @@ ___
 
 ### switchNetwork
 
-• `Optional` **switchNetwork**: (`chainId`: `number`) => `void`
+• `Optional` **switchNetwork**: (`networkName`: `NetworkName`) => `void`
 
 #### Type declaration
 
-▸ (`chainId`): `void`
+▸ (`networkName`): `void`
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `chainId` | `number` |
+| `networkName` | `NetworkName` |
 
 ##### Returns
 

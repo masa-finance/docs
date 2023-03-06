@@ -1,5 +1,5 @@
 [# Masa React
- - v1.0.15](../README.md) / [Exports](../modules.md) / MasaShape
+ - v1.0.19](../README.md) / [Exports](../modules.md) / MasaShape
 
 # Interface: MasaShape
 
@@ -21,6 +21,7 @@
 - [connect](MasaShape.md#connect)
 - [creditScores](MasaShape.md#creditscores)
 - [currentNetwork](MasaShape.md#currentnetwork)
+- [forceNetwork](MasaShape.md#forcenetwork)
 - [forcedPage](MasaShape.md#forcedpage)
 - [greens](MasaShape.md#greens)
 - [handleCreateCreditScore](MasaShape.md#handlecreatecreditscore)
@@ -133,6 +134,12 @@ ___
 ### currentNetwork
 
 • `Optional` **currentNetwork**: [`Network`](Network.md)
+
+___
+
+### forceNetwork
+
+• `Optional` **forceNetwork**: `NetworkName`
 
 ___
 
@@ -253,19 +260,19 @@ ___
 
 ### handlePurchaseIdentityWithSoulname
 
-• `Optional` **handlePurchaseIdentityWithSoulname**: (`soulname`: `string`, `registrationPrice`: `number`, `paymentMethod`: `PaymentMethod`) => `Promise`<`boolean`\>
+• `Optional` **handlePurchaseIdentityWithSoulname**: (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPrice`: `number`) => `Promise`<`boolean`\>
 
 #### Type declaration
 
-▸ (`soulname`, `registrationPrice`, `paymentMethod`): `Promise`<`boolean`\>
+▸ (`paymentMethod`, `soulname`, `registrationPrice`): `Promise`<`boolean`\>
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
+| `paymentMethod` | `PaymentMethod` |
 | `soulname` | `string` |
 | `registrationPrice` | `number` |
-| `paymentMethod` | `PaymentMethod` |
 
 ##### Returns
 
@@ -508,17 +515,17 @@ ___
 
 ### switchNetwork
 
-• `Optional` **switchNetwork**: (`chainId`: `number`) => `void`
+• `Optional` **switchNetwork**: (`networkName`: `NetworkName`) => `void`
 
 #### Type declaration
 
-▸ (`chainId`): `void`
+▸ (`networkName`): `void`
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `chainId` | `number` |
+| `networkName` | `NetworkName` |
 
 ##### Returns
 

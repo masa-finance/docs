@@ -1,8 +1,8 @@
 [# Masa React
- - v1.0.15](README.md) / Exports
+ - v1.0.19](README.md) / Exports
 
 # # Masa React
- - v1.0.15
+ - v1.0.19
 
 ## Table of contents
 
@@ -177,6 +177,7 @@ ___
 | `«destructured»` | `Object` |
 | › `arweaveConfig?` | [`ArweaveConfig`](interfaces/ArweaveConfig.md) |
 | › `environmentName` | `string` |
+| › `networkName?` | `NetworkName` |
 | › `signer` | ``null`` \| `Signer` |
 | › `verbose` | `boolean` |
 
@@ -322,7 +323,7 @@ ___
 | :------ | :------ |
 | `error` | `unknown` |
 | `handlePurchaseIdentity` | () => `void` |
-| `handlePurchaseIdentityWithSoulname` | (`soulname`: `string`, `registrationPeriod`: `number`, `paymentMethod`: `PaymentMethod`) => `Promise`<`boolean`\> |
+| `handlePurchaseIdentityWithSoulname` | (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`) => `Promise`<`boolean`\> |
 | `identity` | `undefined` \| { `address?`: `string` ; `identityId?`: `BigNumber`  } |
 | `isIdentityLoading` | `boolean` |
 | `reloadIdentity` | () => `void` |
@@ -363,16 +364,14 @@ ___
 
 ### useModal
 
-▸ **useModal**(`masa?`, `isLoggedIn?`, `isConnected?`, `network?`, `areScopesFullfiled?`): `Object`
+▸ **useModal**(`isLoggedIn?`, `isConnected?`, `areScopesFullfiled?`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masa?` | `default` |
 | `isLoggedIn?` | `boolean` |
 | `isConnected?` | `boolean` |
-| `network?` | [`Network`](interfaces/Network.md) |
 | `areScopesFullfiled?` | `boolean` |
 
 #### Returns
@@ -409,7 +408,7 @@ ___
 | :------ | :------ |
 | `addNetwork` | (`networkDetails`: [`Network`](interfaces/Network.md)) => `void` |
 | `currentNetwork?` | [`Network`](interfaces/Network.md) |
-| `switchNetwork` | (`chainId`: `number`) => `void` |
+| `switchNetwork` | (`networkName`: `NetworkName`) => `void` |
 
 ___
 
