@@ -1,5 +1,5 @@
 [# Masa React
- - v1.0.21](../README.md) / [Exports](../modules.md) / Network
+ - v1.0.22](../README.md) / [Exports](../modules.md) / Network
 
 # Interface: Network
 
