@@ -1,5 +1,5 @@
 [# Masa React
- - v1.0.25](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v1.0.29](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -33,8 +33,8 @@
 - [handleLogout](MasaContextProviderProps.md#handlelogout)
 - [handlePurchaseIdentity](MasaContextProviderProps.md#handlepurchaseidentity)
 - [handlePurchaseIdentityWithSoulname](MasaContextProviderProps.md#handlepurchaseidentitywithsoulname)
+- [hasWalletAddress](MasaContextProviderProps.md#haswalletaddress)
 - [identity](MasaContextProviderProps.md#identity)
-- [isConnected](MasaContextProviderProps.md#isconnected)
 - [isCreditScoresLoading](MasaContextProviderProps.md#iscreditscoresloading)
 - [isGreensLoading](MasaContextProviderProps.md#isgreensloading)
 - [isIdentityLoading](MasaContextProviderProps.md#isidentityloading)
@@ -92,9 +92,9 @@ ___
 
 ### children
 
-• **children**: `ReactNode`
+• `Optional` **children**: `ReactNode`
 
-#### Overrides
+#### Inherited from
 
 [MasaShape](MasaShape.md).[children](MasaShape.md#children)
 
@@ -128,7 +128,7 @@ ___
 
 • `Optional` **company**: `string`
 
-#### Overrides
+#### Inherited from
 
 [MasaShape](MasaShape.md).[company](MasaShape.md#company)
 
@@ -369,6 +369,16 @@ ___
 
 ___
 
+### hasWalletAddress
+
+• `Optional` **hasWalletAddress**: `boolean`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[hasWalletAddress](MasaShape.md#haswalletaddress)
+
+___
+
 ### identity
 
 • `Optional` **identity**: `Object`
@@ -383,16 +393,6 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[identity](MasaShape.md#identity)
-
-___
-
-### isConnected
-
-• `Optional` **isConnected**: `boolean`
-
-#### Inherited from
-
-[MasaShape](MasaShape.md).[isConnected](MasaShape.md#isconnected)
 
 ___
 
@@ -733,6 +733,10 @@ ___
 ### verbose
 
 • `Optional` **verbose**: `boolean`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[verbose](MasaShape.md#verbose)
 
 ___
 

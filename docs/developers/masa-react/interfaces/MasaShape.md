@@ -1,5 +1,5 @@
 [# Masa React
- - v1.0.25](../README.md) / [Exports](../modules.md) / MasaShape
+ - v1.0.29](../README.md) / [Exports](../modules.md) / MasaShape
 
 # Interface: MasaShape
 
@@ -31,8 +31,8 @@
 - [handleLogout](MasaShape.md#handlelogout)
 - [handlePurchaseIdentity](MasaShape.md#handlepurchaseidentity)
 - [handlePurchaseIdentityWithSoulname](MasaShape.md#handlepurchaseidentitywithsoulname)
+- [hasWalletAddress](MasaShape.md#haswalletaddress)
 - [identity](MasaShape.md#identity)
-- [isConnected](MasaShape.md#isconnected)
 - [isCreditScoresLoading](MasaShape.md#iscreditscoresloading)
 - [isGreensLoading](MasaShape.md#isgreensloading)
 - [isIdentityLoading](MasaShape.md#isidentityloading)
@@ -55,6 +55,7 @@
 - [setProvider](MasaShape.md#setprovider)
 - [soulnames](MasaShape.md#soulnames)
 - [switchNetwork](MasaShape.md#switchnetwork)
+- [verbose](MasaShape.md#verbose)
 - [walletAddress](MasaShape.md#walletaddress)
 
 ## Properties
@@ -280,6 +281,12 @@ ___
 
 ___
 
+### hasWalletAddress
+
+• `Optional` **hasWalletAddress**: `boolean`
+
+___
+
 ### identity
 
 • `Optional` **identity**: `Object`
@@ -290,12 +297,6 @@ ___
 | :------ | :------ |
 | `address?` | `string` |
 | `identityId?` | `BigNumber` |
-
-___
-
-### isConnected
-
-• `Optional` **isConnected**: `boolean`
 
 ___
 
@@ -530,6 +531,12 @@ ___
 ##### Returns
 
 `void`
+
+___
+
+### verbose
+
+• `Optional` **verbose**: `boolean`
 
 ___
 

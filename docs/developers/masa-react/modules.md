@@ -1,8 +1,8 @@
 [# Masa React
- - v1.0.25](README.md) / Exports
+ - v1.0.29](README.md) / Exports
 
 # # Masa React
- - v1.0.25
+ - v1.0.29
 
 ## Table of contents
 
@@ -41,6 +41,7 @@
 - [useDebounceIfValue](modules.md#usedebounceifvalue)
 - [useGreen](modules.md#usegreen)
 - [useIdentity](modules.md#useidentity)
+- [useLocalStorage](modules.md#uselocalstorage)
 - [useMasa](modules.md#usemasa)
 - [useMetamask](modules.md#usemetamask)
 - [useModal](modules.md#usemodal)
@@ -331,6 +332,21 @@ ___
 
 ___
 
+### useLocalStorage
+
+▸ **useLocalStorage**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `localStorageGet` | <T\>(`key`: `string`) => `undefined` \| `T` |
+| `localStorageSet` | <T\>(`key`: `string`, `value`: `T`) => `void` |
+
+___
+
 ### useMasa
 
 ▸ **useMasa**(): [`MasaShape`](interfaces/MasaShape.md)
@@ -482,7 +498,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `error` | `unknown` |
-| `isConnected` | `boolean` |
+| `hasWalletAddress` | `boolean` |
 | `isWalletLoading` | `boolean` |
 | `status` | `string` |
 | `walletAddress` | `undefined` \| `string` |
