@@ -1,5 +1,5 @@
 [# Masa React
- - v1.0.29](../README.md) / [Exports](../modules.md) / SpinnerProps
+ - v1.0.30](../README.md) / [Exports](../modules.md) / SpinnerProps
 
 # Interface: SpinnerProps
 
