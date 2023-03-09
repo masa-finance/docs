@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.7.3](../README.md) / [Exports](../modules.md) / VerifyGreenResult
+ - v1.8.0](../README.md) / [Exports](../modules.md) / VerifyGreenResult
 
 # Interface: VerifyGreenResult
 

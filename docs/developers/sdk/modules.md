@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.7.3](README.md) / Exports
+ - v1.8.0](README.md) / Exports
 
 # # Masa SDK
- - v1.7.3
+ - v1.8.0
 
 ## Table of contents
 
@@ -131,7 +131,6 @@
 - [sendSoulNameByName](modules.md#sendsoulnamebyname)
 - [showIdentity](modules.md#showidentity)
 - [signMessage](modules.md#signmessage)
-- [signSoulLinkerLink](modules.md#signsoullinkerlink)
 - [signTypedData](modules.md#signtypeddata)
 - [unpackSessionId](modules.md#unpacksessionid)
 - [validateSoulName](modules.md#validatesoulname)
@@ -1323,28 +1322,6 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| `string`\>
-
-___
-
-### signSoulLinkerLink
-
-▸ **signSoulLinkerLink**(`masa`, `readerIdentityId`, `ownerIdentityId`, `tokenAddress`, `tokenId`, `signatureDate?`, `expirationOffset?`): `Promise`<{ `expirationDate`: `number` ; `signature`: `string` ; `signatureDate`: `number`  }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `readerIdentityId` | `BigNumber` |
-| `ownerIdentityId` | `BigNumber` |
-| `tokenAddress` | `string` |
-| `tokenId` | `BigNumber` |
-| `signatureDate` | `number` |
-| `expirationOffset` | `number` |
-
-#### Returns
-
-`Promise`<{ `expirationDate`: `number` ; `signature`: `string` ; `signatureDate`: `number`  }\>
 
 ___
 
