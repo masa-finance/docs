@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.8.0](../README.md) / [Exports](../modules.md) / MasaGreen
+ - v1.8.1](../README.md) / [Exports](../modules.md) / MasaGreen
 
 # Class: MasaGreen
 

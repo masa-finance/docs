@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.8.0](README.md) / Exports
+ - v1.8.1](README.md) / Exports
 
 # # Masa SDK
- - v1.8.0
+ - v1.8.1
 
 ## Table of contents
 
@@ -515,7 +515,7 @@ ___
 
 ### createIdentityWithSoulName
 
-▸ **createIdentityWithSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`): `Promise`<`boolean`\>
+▸ **createIdentityWithSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`): `Promise`<`undefined` \| [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 #### Parameters
 
@@ -528,7 +528,7 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`<`undefined` \| [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 ___
 
@@ -1176,7 +1176,7 @@ ___
 
 ### purchaseIdentityWithSoulName
 
-▸ **purchaseIdentityWithSoulName**(`masa`, `soulName`, `soulNameLength`, `duration`, `paymentMethod`): `Promise`<`void`\>
+▸ **purchaseIdentityWithSoulName**(`masa`, `soulName`, `soulNameLength`, `duration`, `paymentMethod`): `Promise`<`undefined` \| { `soulName`: `string` ; `tokenId`: `string`  }\>
 
 #### Parameters
 
@@ -1190,7 +1190,7 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`<`undefined` \| { `soulName`: `string` ; `tokenId`: `string`  }\>
 
 ___
 
