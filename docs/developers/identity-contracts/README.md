@@ -68,6 +68,7 @@ The base url for the Metadata url that is beeing generated from the contract
 * Set `ETHERSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
 * Set `BSCSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
 * Set `POLYGONSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
+* Set `CELOSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
 
 ### Deploy
 
