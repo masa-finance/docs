@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.8.1](README.md) / Exports
+ - v1.9.0](README.md) / Exports
 
 # # Masa SDK
- - v1.8.1
+ - v1.9.0
 
 ## Table of contents
 
@@ -70,7 +70,6 @@
 
 ### Functions
 
-- [arweave](modules.md#arweave)
 - [breakLink](modules.md#breaklink)
 - [burnCreditScore](modules.md#burncreditscore)
 - [burnCreditScoreById](modules.md#burncreditscorebyid)
@@ -113,9 +112,10 @@
 - [loadLinks](modules.md#loadlinks)
 - [loadSoulNameByName](modules.md#loadsoulnamebyname)
 - [loadSoulNameByTokenId](modules.md#loadsoulnamebytokenid)
+- [loadSoulNameDetailsByAddress](modules.md#loadsoulnamedetailsbyaddress)
 - [loadSoulNamesByAddress](modules.md#loadsoulnamesbyaddress)
 - [loadSoulNamesByIdentityId](modules.md#loadsoulnamesbyidentityid)
-- [loadSoulNamesByName](modules.md#loadsoulnamesbyname)
+- [loadSoulNamesByNames](modules.md#loadsoulnamesbynames)
 - [login](modules.md#login)
 - [logout](modules.md#logout)
 - [mintGreen](modules.md#mintgreen)
@@ -127,6 +127,7 @@
 - [queryLink](modules.md#querylink)
 - [queryLinkFromPassport](modules.md#querylinkfrompassport)
 - [recoverAddress](modules.md#recoveraddress)
+- [resolve](modules.md#resolve)
 - [sendSoulName](modules.md#sendsoulname)
 - [sendSoulNameByName](modules.md#sendsoulnamebyname)
 - [showIdentity](modules.md#showidentity)
@@ -254,26 +255,6 @@ ___
 • `Const` **environments**: [`Environment`](modules.md#environment)[]
 
 ## Functions
-
-### arweave
-
-▸ **arweave**(`«destructured»`): [`MasaArweave`](classes/MasaArweave.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `host` | `string` |
-| › `logging?` | `boolean` |
-| › `port` | `number` |
-| › `protocol` | `string` |
-
-#### Returns
-
-[`MasaArweave`](classes/MasaArweave.md)
-
-___
 
 ### breakLink
 
@@ -648,7 +629,7 @@ ___
 
 ### generateSignatureDomain
 
-▸ **generateSignatureDomain**(`wallet`, `name`, `verifyingContract`): `Promise`<{ `chainId`: `number` ; `name`: `string` ; `verifyingContract`: `string` ; `version`: `string` = "1.0.0" }\>
+▸ **generateSignatureDomain**(`wallet`, `name`, `verifyingContract`): `Promise`<`TypedDataDomain`\>
 
 #### Parameters
 
@@ -660,7 +641,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `chainId`: `number` ; `name`: `string` ; `verifyingContract`: `string` ; `version`: `string` = "1.0.0" }\>
+`Promise`<`TypedDataDomain`\>
 
 ___
 
@@ -1005,9 +986,9 @@ ___
 
 ___
 
-### loadSoulNamesByAddress
+### loadSoulNameDetailsByAddress
 
-▸ **loadSoulNamesByAddress**(`masa`, `address`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+▸ **loadSoulNameDetailsByAddress**(`masa`, `address`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
@@ -1019,6 +1000,23 @@ ___
 #### Returns
 
 `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+
+___
+
+### loadSoulNamesByAddress
+
+▸ **loadSoulNamesByAddress**(`masa`, `address`): `Promise`<`string`[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `address` | `string` |
+
+#### Returns
+
+`Promise`<`string`[]\>
 
 ___
 
@@ -1039,9 +1037,9 @@ ___
 
 ___
 
-### loadSoulNamesByName
+### loadSoulNamesByNames
 
-▸ **loadSoulNamesByName**(`masa`, `soulNames`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+▸ **loadSoulNamesByNames**(`masa`, `soulNames`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
@@ -1254,6 +1252,23 @@ ___
 
 ___
 
+### resolve
+
+▸ **resolve**(`masa`, `soulName`): `Promise`<`undefined` \| `string`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `soulName` | `string` |
+
+#### Returns
+
+`Promise`<`undefined` \| `string`\>
+
+___
+
 ### sendSoulName
 
 ▸ **sendSoulName**(`masa`, `soulName`, `receiver`): `Promise`<`void`\>
@@ -1327,13 +1342,13 @@ ___
 
 ### signTypedData
 
-▸ **signTypedData**(`contract`, `wallet`, `name`, `types`, `value`): `Promise`<{ `domain`: { `chainId`: `number` ; `name`: `string` ; `verifyingContract`: `string` ; `version`: `string` = "1.0.0" } ; `signature`: `string`  }\>
+▸ **signTypedData**(`contract`, `wallet`, `name`, `types`, `value`): `Promise`<{ `domain`: `TypedDataDomain` ; `signature`: `string`  }\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `contract` | `Contract` |
+| `contract` | `BaseContract` |
 | `wallet` | `Wallet` |
 | `name` | `string` |
 | `types` | `Record`<`string`, `TypedDataField`[]\> |
@@ -1341,7 +1356,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `domain`: { `chainId`: `number` ; `name`: `string` ; `verifyingContract`: `string` ; `version`: `string` = "1.0.0" } ; `signature`: `string`  }\>
+`Promise`<{ `domain`: `TypedDataDomain` ; `signature`: `string`  }\>
 
 ___
 

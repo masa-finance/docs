@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.8.1](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v1.9.0](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -19,6 +19,10 @@
 - [soulLinker](MasaContracts.md#soullinker)
 - [soulName](MasaContracts.md#soulname)
 - [tools](MasaContracts.md#tools)
+
+### Methods
+
+- [factory](MasaContracts.md#factory)
 
 ## Constructors
 
@@ -137,3 +141,20 @@ ___
 | `checkOrGiveAllowance` | (`paymentAddress`: `string`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `price`: `BigNumber`) => `Promise`<`undefined` \| `ContractReceipt`\> |
 | `formatPrice` | (`paymentAddress`: `string`, `price`: `BigNumber`) => `Promise`<`string`\> |
 | `getPaymentAddress` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `string` |
+| `verify` | (`errorMessage`: `string`, `domain`: `TypedDataDomain`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`) => `Promise`<`void`\> |
+
+## Methods
+
+### factory
+
+▸ **factory**(`address`): `Promise`<{ `selfSovereignSBT`: `undefined` \| `MasaSBTSelfSovereign` ; `sign`: (`name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `address` | `string` |
+
+#### Returns
+
+`Promise`<{ `selfSovereignSBT`: `undefined` \| `MasaSBTSelfSovereign` ; `sign`: (`name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>  }\>

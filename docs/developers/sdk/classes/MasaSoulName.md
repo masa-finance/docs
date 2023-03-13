@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.8.1](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v1.9.0](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
@@ -29,6 +29,7 @@
 - [loadSoulNameByName](MasaSoulName.md#loadsoulnamebyname)
 - [loadSoulNameByTokenId](MasaSoulName.md#loadsoulnamebytokenid)
 - [loadSoulNamesByIdentityId](MasaSoulName.md#loadsoulnamesbyidentityid)
+- [resolve](MasaSoulName.md#resolve)
 - [send](MasaSoulName.md#send)
 - [validate](MasaSoulName.md#validate)
 - [verify](MasaSoulName.md#verify)
@@ -185,6 +186,22 @@ ___
 #### Returns
 
 `Promise`<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
+
+___
+
+### resolve
+
+▸ **resolve**(`soulName`): `Promise`<`undefined` \| `string`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `soulName` | `string` |
+
+#### Returns
+
+`Promise`<`undefined` \| `string`\>
 
 ___
 

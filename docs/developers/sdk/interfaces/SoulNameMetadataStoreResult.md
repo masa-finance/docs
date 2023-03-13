@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.8.1](../README.md) / [Exports](../modules.md) / SoulNameMetadataStoreResult
+ - v1.9.0](../README.md) / [Exports](../modules.md) / SoulNameMetadataStoreResult
 
 # Interface: SoulNameMetadataStoreResult
 

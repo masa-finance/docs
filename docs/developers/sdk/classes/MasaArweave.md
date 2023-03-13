@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.8.1](../README.md) / [Exports](../modules.md) / MasaArweave
+ - v1.9.0](../README.md) / [Exports](../modules.md) / MasaArweave
 
 # Class: MasaArweave
 
@@ -21,6 +21,7 @@
 - [ar](MasaArweave.md#ar)
 - [blocks](MasaArweave.md#blocks)
 - [chunks](MasaArweave.md#chunks)
+- [masaConfig](MasaArweave.md#masaconfig)
 - [network](MasaArweave.md#network)
 - [silo](MasaArweave.md#silo)
 - [transactions](MasaArweave.md#transactions)
@@ -46,13 +47,14 @@
 
 ### constructor
 
-• **new MasaArweave**(`config`)
+• **new MasaArweave**(`config`, `masaConfig`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `config` | `ApiConfig` |
+| `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) |
 
 #### Overrides
 
@@ -97,6 +99,12 @@ ___
 #### Inherited from
 
 Arweave.chunks
+
+___
+
+### masaConfig
+
+• `Private` **masaConfig**: [`MasaConfig`](../interfaces/MasaConfig.md)
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.8.1](../README.md) / [Exports](../modules.md) / MasaArgs
+ - v1.9.0](../README.md) / [Exports](../modules.md) / MasaArgs
 
 # Interface: MasaArgs
 
@@ -25,16 +25,7 @@ ___
 
 ### arweave
 
-• `Optional` **arweave**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `host` | `string` |
-| `logging?` | `boolean` |
-| `port` | `number` |
-| `protocol` | `string` |
+• `Optional` **arweave**: `ApiConfig`
 
 ___
 
