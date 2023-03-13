@@ -26,6 +26,8 @@
     * [`masa soul-name`](#masa-soul-name)
       * [`masa soul-name info`](#masa-soul-name-info)
       * [`masa soul-name list`](#masa-soul-name-list)
+      * [`masa soul-name resolve <soulname>`](#masa-soul-name-resolve-soulname)
+      * [`masa soul-name resolve-reverse <soulname>`](#masa-soul-name-resolve-reverse-soulname)
       * [`masa soul-name create <soulname> <duration>`](#masa-soul-name-create-soulname-duration)
       * [`masa soul-name burn <soulname>`](#masa-soul-name-burn-soulname)
       * [`masa soul-name send <soulname> <receiver>`](#masa-soul-name-send-soulname-receiver)
@@ -49,9 +51,13 @@
       * [`masa green list`](#masa-green-list)
       * [`masa green create <phone-number>`](#masa-green-create-phone-number)
       * [`masa green burn <green-id>`](#masa-green-burn-green-id)
+    * [`masa factory`](#masa-factory)
+      * [`masa factory info <address>`](#masa-factory-info-address)
+      * [`masa factory sign <address> <name> <types> <value>`](#masa-factory-sign-address-name-types-value)
     * [`masa settings`](#masa-settings)
       * [`masa settings set <key> <value>`](#masa-settings-set-key-value)
       * [`masa settings preset <environment>`](#masa-settings-preset-environment)
+      * [`masa settings show`](#masa-settings-show)
   * [Configuration](#configuration)
 <!-- TOC -->
 
@@ -87,6 +93,8 @@ Commands:
   soul-name                                                         Soul Name Commands
   soul-name info                                                    Shows info about all Soul Names
   soul-name list [options]                                          Lists your soul names
+  soul-name resolve <soulname>                                      Resolves a soul name to the address
+  soul-name resolve-reverse <soulname>                              Resolves an address to soul names
   soul-name create <soulname> <duration>                            Creates a new soul name
   soul-name burn <soulname>                                         Burns soul name that you own
   soul-name send <soulname> <receiver>                              Sends a soul name to that you own to a receiver
@@ -110,9 +118,13 @@ Commands:
   green list [options]                                              Lists your Greens
   green create <phone-number>                                       Creates a Green Token
   green burn <green-id>                                             Burns a green
+  factory                                                           Factory Commands
+  factory info <address>                                            Shows info about an SBT
+  factory sign <address> <name> <types> <value>                     Signs an SBT
   settings                                                          Set config settings
   settings set <key> <value>                                        Changes setting <key> to <value>
   settings preset <environment>                                     Changes setting <environment> presets
+  settings show                                                     Shows config values
   help [command]                                                    display help for command
 ```
 
@@ -225,6 +237,18 @@ Options:
 
 - `-a, --address <address>`
   Address override
+
+#### `masa soul-name resolve <soulname>`
+
+Resolves a soul name to the address
+
+- `<soulname> Soul Name to resolve`
+
+#### `masa soul-name resolve-reverse <soulname>`
+
+Resolves an address to soul names
+
+- `<soulname> Address to resolve`
 
 #### `masa soul-name create <soulname> <duration>`
 
@@ -365,6 +389,25 @@ Burns a green
 
 - `<green-id> ID of the Green to burn`
 
+### `masa factory`
+
+Factory Commands
+
+#### `masa factory info <address>`
+
+Shows info about Masa Green
+
+- `<address> Address of the SBT to sign`
+
+#### `masa factory sign <address> <name> <types> <value>`
+
+Signs an SBT
+
+- `<address> Address of the SBT to sign`
+- `<name> Name of the contract`
+- `<types> Types structure to sign`
+- `<value> Values of the structure`
+
 ### `masa settings`
 
 Set config settings
@@ -381,6 +424,10 @@ Changes setting &lt;key&gt; to &lt;value&gt;
 Changes setting &lt;environment&gt; presets
 
 - `<environment> The environment to use as preset`
+
+#### `masa settings show`
+
+Shows config values
 
 ## Configuration
 
