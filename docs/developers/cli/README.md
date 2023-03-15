@@ -51,9 +51,11 @@
       * [`masa green list`](#masa-green-list)
       * [`masa green create <phone-number>`](#masa-green-create-phone-number)
       * [`masa green burn <green-id>`](#masa-green-burn-green-id)
-    * [`masa factory`](#masa-factory)
-      * [`masa factory info <address>`](#masa-factory-info-address)
-      * [`masa factory sign <address> <name> <types> <value>`](#masa-factory-sign-address-name-types-value)
+    * [`masa sbt`](#masa-sbt)
+      * [`masa sbt info <contract-address>`](#masa-sbt-info-contract-address)
+      * [`masa sbt list <contract-address>`](#masa-sbt-list-contract-address)
+      * [`masa sbt sign <contract-address> <name> <types> <value>`](#masa-sbt-sign-contract-address-name-types-value)
+      * [`masa sbt burn <contract-address> <sbt-id>`](#masa-sbt-burn-contract-address-sbt-id)
     * [`masa settings`](#masa-settings)
       * [`masa settings set <key> <value>`](#masa-settings-set-key-value)
       * [`masa settings preset <environment>`](#masa-settings-preset-environment)
@@ -118,9 +120,11 @@ Commands:
   green list [options]                                              Lists your Greens
   green create <phone-number>                                       Creates a Green Token
   green burn <green-id>                                             Burns a green
-  factory                                                           Factory Commands
-  factory info <address>                                            Shows info about an SBT
-  factory sign <address> <name> <types> <value>                     Signs an SBT
+  sbt                                                               SBT Commands
+  sbt info <contract-address>                                       Shows info about an SBT
+  sbt list [options] <contract-address>                             Lists your SBTs
+  sbt sign <contract-address> <name> <types> <value>                Signs an SBT
+  sbt burn <contract-address> <sbt-id>                              Burns an SBT
   settings                                                          Set config settings
   settings set <key> <value>                                        Changes setting <key> to <value>
   settings preset <environment>                                     Changes setting <environment> presets
@@ -389,24 +393,40 @@ Burns a green
 
 - `<green-id> ID of the Green to burn`
 
-### `masa factory`
+### `masa sbt`
 
-Factory Commands
+SBT Commands
 
-#### `masa factory info <address>`
+#### `masa sbt info <contract-address>`
 
-Shows info about Masa Green
+Shows info about an SBT
 
-- `<address> Address of the SBT to sign`
+- `<contract-address> Address of the SBT to sign`
 
-#### `masa factory sign <address> <name> <types> <value>`
+#### `masa sbt list <contract-address>`
+
+Lists your SBTs
+
+- `<contract-address> Address of the SBT contract to list`
+  Options:
+- `-a, --address <address>`
+  Address override
+
+#### `masa sbt sign <contract-address> <name> <types> <value>`
 
 Signs an SBT
 
-- `<address> Address of the SBT to sign`
+- `<contract-address> Address of the SBT to sign`
 - `<name> Name of the contract`
 - `<types> Types structure to sign`
 - `<value> Values of the structure`
+
+#### `masa sbt burn <contract-address> <sbt-id>`
+
+Burns an SBT
+
+- `<contract-address> Address of the SBT to sign`
+- `<sbt-id> ID of the SBT to burn`
 
 ### `masa settings`
 
