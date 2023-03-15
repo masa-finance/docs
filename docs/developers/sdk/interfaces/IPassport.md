@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.9.0](../README.md) / [Exports](../modules.md) / IPassport
+ - v1.9.4](../README.md) / [Exports](../modules.md) / IPassport
 
 # Interface: IPassport
 

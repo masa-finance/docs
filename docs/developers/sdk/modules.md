@@ -1,13 +1,14 @@
 [# Masa SDK
- - v1.9.0](README.md) / Exports
+ - v1.9.4](README.md) / Exports
 
 # # Masa SDK
- - v1.9.0
+ - v1.9.4
 
 ## Table of contents
 
 ### Classes
 
+- [ContractFactory](classes/ContractFactory.md)
 - [Masa](classes/Masa.md)
 - [MasaAccount](classes/MasaAccount.md)
 - [MasaArweave](classes/MasaArweave.md)
@@ -16,6 +17,7 @@
 - [MasaCreditScore](classes/MasaCreditScore.md)
 - [MasaGreen](classes/MasaGreen.md)
 - [MasaIdentity](classes/MasaIdentity.md)
+- [MasaSBT](classes/MasaSBT.md)
 - [MasaSession](classes/MasaSession.md)
 - [MasaSoulLinker](classes/MasaSoulLinker.md)
 - [MasaSoulName](classes/MasaSoulName.md)
@@ -110,6 +112,7 @@
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
 - [loadIdentityDetails](modules.md#loadidentitydetails)
 - [loadLinks](modules.md#loadlinks)
+- [loadSBTContract](modules.md#loadsbtcontract)
 - [loadSoulNameByName](modules.md#loadsoulnamebyname)
 - [loadSoulNameByTokenId](modules.md#loadsoulnamebytokenid)
 - [loadSoulNameDetailsByAddress](modules.md#loadsoulnamedetailsbyaddress)
@@ -318,7 +321,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `greenId` | `number` |
+| `greenId` | `BigNumber` |
 
 #### Returns
 
@@ -335,7 +338,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `greenId` | `number` |
+| `greenId` | `BigNumber` |
 
 #### Returns
 
@@ -949,6 +952,30 @@ ___
 #### Returns
 
 `Promise`<[`Link`](modules.md#link)[]\>
+
+___
+
+### loadSBTContract
+
+▸ **loadSBTContract**<`Contract`\>(`masaConfig`, `address`, `factory?`): `Promise`<`undefined` \| `Contract`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `MasaSBTSelfSovereign`<`Contract`\> |
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `masaConfig` | [`MasaConfig`](interfaces/MasaConfig.md) | `undefined` |
+| `address` | `string` | `undefined` |
+| `factory` | [`ContractFactory`](classes/ContractFactory.md) | `MasaSBTSelfSovereign__factory` |
+
+#### Returns
+
+`Promise`<`undefined` \| `Contract`\>
 
 ___
 

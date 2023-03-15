@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.9.0](../README.md) / [Exports](../modules.md) / Masa
+ - v1.9.4](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -19,6 +19,7 @@
 - [creditScore](Masa.md#creditscore)
 - [green](Masa.md#green)
 - [identity](Masa.md#identity)
+- [sbt](Masa.md#sbt)
 - [session](Masa.md#session)
 - [soulName](Masa.md#soulname)
 - [utils](Masa.md#utils)
@@ -82,6 +83,12 @@ ___
 ### identity
 
 • `Readonly` **identity**: [`MasaIdentity`](MasaIdentity.md)
+
+___
+
+### sbt
+
+• `Readonly` **sbt**: [`MasaSBT`](MasaSBT.md)
 
 ___
 

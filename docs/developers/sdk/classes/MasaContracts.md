@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.9.0](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v1.9.4](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -22,7 +22,7 @@
 
 ### Methods
 
-- [factory](MasaContracts.md#factory)
+- [sbt](MasaContracts.md#sbt)
 
 ## Constructors
 
@@ -141,20 +141,27 @@ ___
 | `checkOrGiveAllowance` | (`paymentAddress`: `string`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `price`: `BigNumber`) => `Promise`<`undefined` \| `ContractReceipt`\> |
 | `formatPrice` | (`paymentAddress`: `string`, `price`: `BigNumber`) => `Promise`<`string`\> |
 | `getPaymentAddress` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `string` |
-| `verify` | (`errorMessage`: `string`, `domain`: `TypedDataDomain`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`) => `Promise`<`void`\> |
+| `verify` | (`errorMessage`: `string`, `contract`: `SoulLinker` \| `SoulStore` \| `MasaSBTSelfSovereign`, `domain`: `TypedDataDomain`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`) => `Promise`<`void`\> |
 
 ## Methods
 
-### factory
+### sbt
 
-▸ **factory**(`address`): `Promise`<{ `selfSovereignSBT`: `undefined` \| `MasaSBTSelfSovereign` ; `sign`: (`name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>  }\>
+▸ **sbt**<`Contract`\>(`address`, `factory?`): `Promise`<{ `getPrice`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `slippage`: `undefined` \| `number`) => `Promise`<`undefined` \| { `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> ; `prepareMint`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`undefined` \| { `paymentAddress`: `string` = priceObject.paymentAddress; `price`: `BigNumber` = priceObject.price }\> ; `selfSovereignSBT`: `undefined` \| `Contract` ; `sign`: (`name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>  }\>
 
-#### Parameters
+#### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `address` | `string` |
+| `Contract` | extends `MasaSBTSelfSovereign`<`Contract`\> |
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `address` | `string` | `undefined` |
+| `factory` | [`ContractFactory`](ContractFactory.md) | `MasaSBTSelfSovereign__factory` |
 
 #### Returns
 
-`Promise`<{ `selfSovereignSBT`: `undefined` \| `MasaSBTSelfSovereign` ; `sign`: (`name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>  }\>
+`Promise`<{ `getPrice`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `slippage`: `undefined` \| `number`) => `Promise`<`undefined` \| { `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> ; `prepareMint`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`undefined` \| { `paymentAddress`: `string` = priceObject.paymentAddress; `price`: `BigNumber` = priceObject.price }\> ; `selfSovereignSBT`: `undefined` \| `Contract` ; `sign`: (`name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>  }\>

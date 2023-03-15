@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.9.0](../README.md) / [Exports](../modules.md) / MasaGreen
+ - v1.9.4](../README.md) / [Exports](../modules.md) / MasaGreen
 
 # Class: MasaGreen
 
@@ -74,7 +74,7 @@ Burns a green
 
 | Name | Type |
 | :------ | :------ |
-| `greenId` | `number` |
+| `greenId` | `BigNumber` |
 
 #### Returns
 
