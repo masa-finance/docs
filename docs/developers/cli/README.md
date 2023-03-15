@@ -55,6 +55,7 @@
       * [`masa sbt info <contract-address>`](#masa-sbt-info-contract-address)
       * [`masa sbt list <contract-address>`](#masa-sbt-list-contract-address)
       * [`masa sbt sign <contract-address> <name> <types> <value>`](#masa-sbt-sign-contract-address-name-types-value)
+      * [`masa sbt prepare-mint <contract-address> <name> <types> <value> <authority-address> <signature>`](#masa-sbt-prepare-mint-contract-address-name-types-value-authority-address-signature)
       * [`masa sbt burn <contract-address> <sbt-id>`](#masa-sbt-burn-contract-address-sbt-id)
     * [`masa settings`](#masa-settings)
       * [`masa settings set <key> <value>`](#masa-settings-set-key-value)
@@ -78,58 +79,59 @@ Usage: masa [command] [subcommand] [arguments] [options]
 The Masa CLI
 
 Options:
-  -v, --version                                                     output the version number
-  --verbose                                                         output with verbose logging
-  -h, --help                                                        display help for command
+  -v, --version                                                                               output the version number
+  --verbose                                                                                   output with verbose logging
+  -h, --help                                                                                  display help for command
 
 Commands:
-  login                                                             Login to the masa infrastructure
-  logout                                                            Logout from the masa infrastructure
-  account                                                           Shows information about your account
-  identity                                                          Identity commands
-  identity info                                                     Shows info about all Identities
-  identity create <soulname> <duration>                             Creates a masa identity with soul name
-  identity register                                                 Creates a masa identity without soul name
-  identity show [options]                                           Shows detail about your masa identity
-  identity burn                                                     Burns your masa identity
-  soul-name                                                         Soul Name Commands
-  soul-name info                                                    Shows info about all Soul Names
-  soul-name list [options]                                          Lists your soul names
-  soul-name resolve <soulname>                                      Resolves a soul name to the address
-  soul-name resolve-reverse <soulname>                              Resolves an address to soul names
-  soul-name create <soulname> <duration>                            Creates a new soul name
-  soul-name burn <soulname>                                         Burns soul name that you own
-  soul-name send <soulname> <receiver>                              Sends a soul name to that you own to a receiver
-  soul-name show <soulname>                                         Shows info about a Soul Name
-  soul-name verify <soulname>                                       Verifies a Soul Name
-  credit-score                                                      Credit Score Commands
-  credit-score info                                                 Shows info about all Credit Scores
-  credit-score list [options]                                       Lists your Credit Scores
-  credit-score create                                               Creates a Credit Score
-  credit-score burn <credit-score-id>                               Burns a Credit Score
-  credit-score load <credit-score-id>                               Loads a Credit Score
-  credit-score link                                                 Credit Score Soul Linker Commands
-  credit-score link create <credit-score-id> <reader-identity-id>   Creates a Soul Linker Passport
-  credit-score link establish <passport>                            Establishes a link to a Credit Score
-  credit-score link query <passport>                                Queries a link to a Credit Score
-  credit-score link list <credit-score-id>                          Lists all soul links for a credit report id
-  credit-score link verify [options] <credit-score-id>              Verifies soul link
-  credit-score link break <credit-score-id> <reader-identity-id>    Verifies soul link
-  green                                                             Green Commands
-  green info                                                        Shows info about Masa Green
-  green list [options]                                              Lists your Greens
-  green create <phone-number>                                       Creates a Green Token
-  green burn <green-id>                                             Burns a green
-  sbt                                                               SBT Commands
-  sbt info <contract-address>                                       Shows info about an SBT
-  sbt list [options] <contract-address>                             Lists your SBTs
-  sbt sign <contract-address> <name> <types> <value>                Signs an SBT
-  sbt burn <contract-address> <sbt-id>                              Burns an SBT
-  settings                                                          Set config settings
-  settings set <key> <value>                                        Changes setting <key> to <value>
-  settings preset <environment>                                     Changes setting <environment> presets
-  settings show                                                     Shows config values
-  help [command]                                                    display help for command
+  login                                                                                       Login to the masa infrastructure
+  logout                                                                                      Logout from the masa infrastructure
+  account                                                                                     Shows information about your account
+  identity                                                                                    Identity commands
+  identity info                                                                               Shows info about all Identities
+  identity create <soulname> <duration>                                                       Creates a masa identity with soul name
+  identity register                                                                           Creates a masa identity without soul name
+  identity show [options]                                                                     Shows detail about your masa identity
+  identity burn                                                                               Burns your masa identity
+  soul-name                                                                                   Soul Name Commands
+  soul-name info                                                                              Shows info about all Soul Names
+  soul-name list [options]                                                                    Lists your soul names
+  soul-name resolve <soulname>                                                                Resolves a soul name to the address
+  soul-name resolve-reverse <soulname>                                                        Resolves an address to soul names
+  soul-name create <soulname> <duration>                                                      Creates a new soul name
+  soul-name burn <soulname>                                                                   Burns soul name that you own
+  soul-name send <soulname> <receiver>                                                        Sends a soul name to that you own to a receiver
+  soul-name show <soulname>                                                                   Shows info about a Soul Name
+  soul-name verify <soulname>                                                                 Verifies a Soul Name
+  credit-score                                                                                Credit Score Commands
+  credit-score info                                                                           Shows info about all Credit Scores
+  credit-score list [options]                                                                 Lists your Credit Scores
+  credit-score create                                                                         Creates a Credit Score
+  credit-score burn <credit-score-id>                                                         Burns a Credit Score
+  credit-score load <credit-score-id>                                                         Loads a Credit Score
+  credit-score link                                                                           Credit Score Soul Linker Commands
+  credit-score link create <credit-score-id> <reader-identity-id>                             Creates a Soul Linker Passport
+  credit-score link establish <passport>                                                      Establishes a link to a Credit Score
+  credit-score link query <passport>                                                          Queries a link to a Credit Score
+  credit-score link list <credit-score-id>                                                    Lists all soul links for a credit report id
+  credit-score link verify [options] <credit-score-id>                                        Verifies soul link
+  credit-score link break <credit-score-id> <reader-identity-id>                              Verifies soul link
+  green                                                                                       Green Commands
+  green info                                                                                  Shows info about Masa Green
+  green list [options]                                                                        Lists your Greens
+  green create <phone-number>                                                                 Creates a Green Token
+  green burn <green-id>                                                                       Burns a green
+  sbt                                                                                         SBT Commands
+  sbt info <contract-address>                                                                 Shows info about an SBT
+  sbt list [options] <contract-address>                                                       Lists your SBTs
+  sbt sign <contract-address> <name> <types> <value>                                          Signs an SBT
+  sbt prepare-mint <contract-address> <name> <types> <value> <authority-address> <signature>  Prepares an SBT mint operation
+  sbt burn <contract-address> <sbt-id>                                                        Burns an SBT
+  settings                                                                                    Set config settings
+  settings set <key> <value>                                                                  Changes setting <key> to <value>
+  settings preset <environment>                                                               Changes setting <environment> presets
+  settings show                                                                               Shows config values
+  help [command]                                                                              display help for command
 ```
 
 To get help for a specific command use:
@@ -420,6 +422,17 @@ Signs an SBT
 - `<name> Name of the contract`
 - `<types> Types structure to sign`
 - `<value> Values of the structure`
+
+#### `masa sbt prepare-mint <contract-address> <name> <types> <value> <authority-address> <signature>`
+
+Prepares an SBT mint operation
+
+- `<contract-address> Address of the SBT to sign`
+- `<name> Name of the contract`
+- `<types> Types structure to sign`
+- `<value> Values of the structure`
+- `<authority-address> Authority address used for signing`
+- `<signature> Signature from the signing step`
 
 #### `masa sbt burn <contract-address> <sbt-id>`
 
