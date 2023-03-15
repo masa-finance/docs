@@ -60,6 +60,7 @@
     * [`masa settings`](#masa-settings)
       * [`masa settings set <key> <value>`](#masa-settings-set-key-value)
       * [`masa settings preset <environment>`](#masa-settings-preset-environment)
+      * [`masa settings preset-network <network-name>`](#masa-settings-preset-network-network-name)
       * [`masa settings show`](#masa-settings-show)
   * [Configuration](#configuration)
 <!-- TOC -->
@@ -130,6 +131,7 @@ Commands:
   settings                                                                                    Set config settings
   settings set <key> <value>                                                                  Changes setting <key> to <value>
   settings preset <environment>                                                               Changes setting <environment> presets
+  settings preset-network <network-name>                                                      Changes setting <network-name> presets
   settings show                                                                               Shows config values
   help [command]                                                                              display help for command
 ```
@@ -457,6 +459,12 @@ Changes setting &lt;key&gt; to &lt;value&gt;
 Changes setting &lt;environment&gt; presets
 
 - `<environment> The environment to use as preset`
+
+#### `masa settings preset-network <network-name>`
+
+Changes setting &lt;network-name&gt; presets
+
+- `<network-name> The network to use as preset`
 
 #### `masa settings show`
 
