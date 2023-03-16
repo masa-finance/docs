@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.9.4](../README.md) / [Exports](../modules.md) / LogoutResult
+ - v1.9.5](../README.md) / [Exports](../modules.md) / LogoutResult
 
 # Interface: LogoutResult
 

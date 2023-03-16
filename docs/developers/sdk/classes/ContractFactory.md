@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.9.4](../README.md) / [Exports](../modules.md) / ContractFactory
+ - v1.9.5](../README.md) / [Exports](../modules.md) / ContractFactory
 
 # Class: ContractFactory
 

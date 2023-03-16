@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.9.4](README.md) / Exports
+ - v1.9.5](README.md) / Exports
 
 # # Masa SDK
- - v1.9.4
+ - v1.9.5
 
 ## Table of contents
 
@@ -42,6 +42,7 @@
 - [LogoutResult](interfaces/LogoutResult.md)
 - [MasaArgs](interfaces/MasaArgs.md)
 - [MasaConfig](interfaces/MasaConfig.md)
+- [Network](interfaces/Network.md)
 - [SessionUser](interfaces/SessionUser.md)
 - [SoulNameDetails](interfaces/SoulNameDetails.md)
 - [SoulNameMetadataStoreResult](interfaces/SoulNameMetadataStoreResult.md)
@@ -66,6 +67,7 @@
 ### Variables
 
 - [Messages](modules.md#messages)
+- [SupportedNetworks](modules.md#supportednetworks)
 - [Templates](modules.md#templates)
 - [addresses](modules.md#addresses)
 - [environments](modules.md#environments)
@@ -95,6 +97,7 @@
 - [generateGreen](modules.md#generategreen)
 - [generateSignatureDomain](modules.md#generatesignaturedomain)
 - [getBalances](modules.md#getbalances)
+- [getNetworkNameByChainId](modules.md#getnetworknamebychainid)
 - [getRegistrationPrice](modules.md#getregistrationprice)
 - [getSession](modules.md#getsession)
 - [getSoulNameMetadataPrefix](modules.md#getsoulnamemetadataprefix)
@@ -199,7 +202,7 @@ ___
 
 ### NetworkName
 
-Ƭ **NetworkName**: ``"goerli"`` \| ``"ethereum"`` \| ``"mainnet"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"unknown"``
+Ƭ **NetworkName**: ``"goerli"`` \| ``"ethereum"`` \| ``"mainnet"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``
 
 ___
 
@@ -232,6 +235,12 @@ ___
 | `NoIdentity` | (`address?`: `string`) => `string` |
 | `NotLoggedIn` | () => `string` |
 | `WaitingToFinalize` | (`txHash`: `string`) => `string` |
+
+___
+
+### SupportedNetworks
+
+• `Const` **SupportedNetworks**: `Partial`<{ [key in NetworkName]: Network }\>
 
 ___
 
@@ -662,6 +671,22 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| { `ethBalance`: `BigNumber` ; `identityBalance`: `BigNumber` ; `masaBalance`: `BigNumber` ; `soulNameBalance`: `BigNumber` ; `soulboundCreditScoreBalance`: `BigNumber` ; `soulboundGreenBalance`: `BigNumber` ; `usdcBalance`: `BigNumber` ; `wethBalance`: `BigNumber`  }\>
+
+___
+
+### getNetworkNameByChainId
+
+▸ **getNetworkNameByChainId**(`chainId`): [`NetworkName`](modules.md#networkname)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `chainId` | `number` |
+
+#### Returns
+
+[`NetworkName`](modules.md#networkname)
 
 ___
 
