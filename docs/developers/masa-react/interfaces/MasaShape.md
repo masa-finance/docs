@@ -1,5 +1,5 @@
 [# Masa React
- - v1.0.37](../README.md) / [Exports](../modules.md) / MasaShape
+ - v1.0.38](../README.md) / [Exports](../modules.md) / MasaShape
 
 # Interface: MasaShape
 
