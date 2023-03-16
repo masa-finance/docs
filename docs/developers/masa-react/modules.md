@@ -12,7 +12,6 @@
 - [MasaContextProviderProps](interfaces/MasaContextProviderProps.md)
 - [MasaShape](interfaces/MasaShape.md)
 - [ModalProps](interfaces/ModalProps.md)
-- [Network](interfaces/Network.md)
 - [SpinnerProps](interfaces/SpinnerProps.md)
 
 ### Type Aliases
@@ -22,7 +21,6 @@
 ### Variables
 
 - [MASA\_CONTEXT](modules.md#masa_context)
-- [SupportedNetworks](modules.md#supportednetworks)
 - [queryClient](modules.md#queryclient)
 
 ### Functions
@@ -34,7 +32,6 @@
 - [ModalComponent](modules.md#modalcomponent)
 - [Spinner](modules.md#spinner)
 - [createNewMasa](modules.md#createnewmasa)
-- [getNetworkNameByChainId](modules.md#getnetworknamebychainid)
 - [getWeb3Provider](modules.md#getweb3provider)
 - [useCreditScores](modules.md#usecreditscores)
 - [useDebounce](modules.md#usedebounce)
@@ -61,12 +58,6 @@
 ### MASA\_CONTEXT
 
 • `Const` **MASA\_CONTEXT**: `Context`<[`MasaShape`](interfaces/MasaShape.md)\>
-
-___
-
-### SupportedNetworks
-
-• `Const` **SupportedNetworks**: `Partial`<{ [key in NetworkName]: Network }\>
 
 ___
 
@@ -185,22 +176,6 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| `default`\>
-
-___
-
-### getNetworkNameByChainId
-
-▸ **getNetworkNameByChainId**(`chainId`): `NetworkName`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `chainId` | `number` |
-
-#### Returns
-
-`NetworkName`
 
 ___
 
@@ -422,8 +397,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `addNetwork` | (`networkDetails`: [`Network`](interfaces/Network.md)) => `void` |
-| `currentNetwork?` | [`Network`](interfaces/Network.md) |
+| `addNetwork` | (`networkDetails`: `Network`) => `void` |
+| `currentNetwork?` | `Network` |
 | `switchNetwork` | (`networkName`: `NetworkName`) => `void` |
 
 ___

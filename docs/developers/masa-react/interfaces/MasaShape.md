@@ -62,7 +62,7 @@
 
 ### SupportedNetworks
 
-• `Optional` **SupportedNetworks**: `Partial`<{ `alfajores`: [`Network`](Network.md) ; `bsc`: [`Network`](Network.md) ; `bsctest`: [`Network`](Network.md) ; `celo`: [`Network`](Network.md) ; `ethereum`: [`Network`](Network.md) ; `goerli`: [`Network`](Network.md) ; `mainnet`: [`Network`](Network.md) ; `mumbai`: [`Network`](Network.md) ; `polygon`: [`Network`](Network.md) ; `unknown`: [`Network`](Network.md)  }\>
+• `Optional` **SupportedNetworks**: `Partial`<{ `alfajores`: `Network` ; `basegoerli`: `Network` ; `bsc`: `Network` ; `bsctest`: `Network` ; `celo`: `Network` ; `ethereum`: `Network` ; `goerli`: `Network` ; `mainnet`: `Network` ; `mumbai`: `Network` ; `polygon`: `Network` ; `unknown`: `Network`  }\>
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 ### currentNetwork
 
-• `Optional` **currentNetwork**: [`Network`](Network.md)
+• `Optional` **currentNetwork**: `Network`
 
 ___
 
