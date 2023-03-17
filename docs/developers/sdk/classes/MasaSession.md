@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.9.6](../README.md) / [Exports](../modules.md) / MasaSession
+ - v1.10.0](../README.md) / [Exports](../modules.md) / MasaSession
 
 # Class: MasaSession
 
@@ -39,7 +39,7 @@
 | :------ | :------ |
 | `masa` | [`Masa`](Masa.md) |
 
-#### Overrides
+#### Inherited from
 
 MasaBase.constructor
 

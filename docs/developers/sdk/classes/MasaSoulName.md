@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.9.6](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v1.10.0](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
@@ -46,7 +46,7 @@
 | :------ | :------ |
 | `masa` | [`Masa`](Masa.md) |
 
-#### Overrides
+#### Inherited from
 
 MasaBase.constructor
 
