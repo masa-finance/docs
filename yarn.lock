@@ -2084,20 +2084,20 @@
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
-"@masa-finance/masa-contracts-identity@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-contracts-identity/-/masa-contracts-identity-1.3.1.tgz#93e897b27b3d979b90c8cdf12acb647d0bbca4cd"
-  integrity sha512-vJdLV/7R5GlEE/UvMAFehJlXNIo60kFGb9Bq6eRHZ+AnmolUZq2abzAvDJt82whDiBcMbP17C/XLnYawxXSX9g==
+"@masa-finance/masa-contracts-identity@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-contracts-identity/-/masa-contracts-identity-1.4.0.tgz#4e38f996aeacd1a5092b1746e3daa99b4c0183bc"
+  integrity sha512-MivrXwKnPPp5BPBmHRtUBZ16farNoP5EgRFhGirfPFD6mZg3jruHYxneOAdkpDPOLV2QcAmwV2Ks6blUmi1xGw==
   dependencies:
     ethers "~5.7.2"
 
-"@masa-finance/masa-react@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-react/-/masa-react-1.0.7.tgz#72550545e299ec3ca53fa74adbccd28bda5fc8be"
-  integrity sha512-UigbS4aUMVGJR7XJdZvxLil7tga2BDoqdvRl3/Z6+8/9dgAKjVSjxrPZ6i/o3SySfzbSib2ntJkVrq+vJSc9MQ==
+"@masa-finance/masa-react@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-react/-/masa-react-1.1.1.tgz#35a4831de3e4b2dccb6e30c9de94ce7eb5b10e2d"
+  integrity sha512-V8O81s8OBCFjJowj5jXhxZ+DwAQLDIrtNEFs+QiFSytVcIxgDJdruGHU6z00eqMBwo8Eorw/gXEqbjXVZMSnGg==
   dependencies:
     "@babel/preset-typescript" "^7.21.0"
-    "@masa-finance/masa-sdk" "^1.6.4"
+    "@masa-finance/masa-sdk" "^1.10.0"
     "@metamask/providers" "^10.2.1"
     babel-loader "^9.1.2"
     babel-plugin-import "^1.13.6"
@@ -2111,14 +2111,13 @@
     react-spinners "^0.13.8"
     rodal "^2.0.0"
     storybook-addon-sass-postcss "^0.1.3"
-    tsconfig-paths-webpack-plugin "^4.0.0"
 
-"@masa-finance/masa-sdk@^1.6.4":
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-1.6.4.tgz#86b9980eff5a258c72488d2ed4bb304243f8dfd0"
-  integrity sha512-DZKBYxtlsLa3/xb1bNge6m0adbBoY5Blm/TCoyilg1HGcMnv5TFdLFTcZ8SXOKXho4yLTbNIOEieWh4Hfd/ygQ==
+"@masa-finance/masa-sdk@^1.10.0":
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-1.10.0.tgz#1b5c9eee5ac237fc8ddf5401b6e6ed624abee9f9"
+  integrity sha512-B/iYVr7Dh4CMbIvPAkEZgHtNDbA/yI6ativFkZmO1hqZsPxAx3HXBEACNbPltYwZztEy7KYiKUwZ60R7HhC5Bg==
   dependencies:
-    "@masa-finance/masa-contracts-identity" "^1.3.1"
+    "@masa-finance/masa-contracts-identity" "^1.4.0"
     "@masa-finance/masa-token" "^1.0.0"
     arweave "~1.12.6"
     axios "^1.3.2"
@@ -4781,7 +4780,7 @@ end-of-stream@^1.1.0, end-of-stream@^1.4.4:
   dependencies:
     once "^1.4.0"
 
-enhanced-resolve@^5.10.0, enhanced-resolve@^5.7.0:
+enhanced-resolve@^5.10.0:
   version "5.12.0"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.12.0.tgz#300e1c90228f5b570c4d35babf263f6da7155634"
   integrity sha512-QHTXI/sZQmko1cbDoNAa3mJ5qhWUUNAq3vR0/YiD379fWQrcfuoX1+HW2S0MTt7XmoPLapdaDKUtelUSPic7hQ==
@@ -9320,11 +9319,6 @@ strip-bom-string@^1.0.0:
   resolved "https://registry.yarnpkg.com/strip-bom-string/-/strip-bom-string-1.0.0.tgz#e5211e9224369fbb81d633a2f00044dc8cedad92"
   integrity sha512-uCC2VHvQRYu+lMh4My/sFNmF2klFymLX1wHJeXnbEJERpV/ZsVuonzerjfrGpIGF7LBVa1O7i9kjiWvJiFck8g==
 
-strip-bom@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
-  integrity sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==
-
 strip-final-newline@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/strip-final-newline/-/strip-final-newline-2.0.0.tgz#89b852fb2fcbe936f6f4b3187afb0a12c1ab58ad"
@@ -9569,24 +9563,6 @@ trough@^1.0.0:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/true-case-path/-/true-case-path-2.2.1.tgz#c5bf04a5bbec3fd118be4084461b3a27c4d796bf"
   integrity sha512-0z3j8R7MCjy10kc/g+qg7Ln3alJTodw9aDuVWZa3uiWqfuBMKeAeP2ocWcxoyM3D73yz3Jt/Pu4qPr4wHSdB/Q==
-
-tsconfig-paths-webpack-plugin@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/tsconfig-paths-webpack-plugin/-/tsconfig-paths-webpack-plugin-4.0.0.tgz#84008fc3e3e0658fdb0262758b07b4da6265ff1a"
-  integrity sha512-fw/7265mIWukrSHd0i+wSwx64kYUSAKPfxRDksjKIYTxSAp9W9/xcZVBF4Kl0eqQd5eBpAQ/oQrc5RyM/0c1GQ==
-  dependencies:
-    chalk "^4.1.0"
-    enhanced-resolve "^5.7.0"
-    tsconfig-paths "^4.0.0"
-
-tsconfig-paths@^4.0.0:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-4.1.2.tgz#4819f861eef82e6da52fb4af1e8c930a39ed979a"
-  integrity sha512-uhxiMgnXQp1IR622dUXI+9Ehnws7i/y6xvpZB9IbUVOPy0muvdvgXeZOn88UcGPiT98Vp3rJPTa8bFoalZ3Qhw==
-  dependencies:
-    json5 "^2.2.2"
-    minimist "^1.2.6"
-    strip-bom "^3.0.0"
 
 tslib@^2.0.3, tslib@^2.1.0, tslib@^2.4.0:
   version "2.5.0"
