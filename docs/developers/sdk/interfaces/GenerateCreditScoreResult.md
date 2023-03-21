@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.10.2](../README.md) / [Exports](../modules.md) / GenerateCreditScoreResult
+ - v1.10.3](../README.md) / [Exports](../modules.md) / GenerateCreditScoreResult
 
 # Interface: GenerateCreditScoreResult
 

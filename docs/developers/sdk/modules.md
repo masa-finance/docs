@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.10.2](README.md) / Exports
+ - v1.10.3](README.md) / Exports
 
 # # Masa SDK
- - v1.10.2
+ - v1.10.3
 
 ## Table of contents
 
@@ -1430,7 +1430,7 @@ ___
 
 ### validateSoulName
 
-▸ **validateSoulName**(`masa`, `soulName`): `Object`
+▸ **validateSoulName**(`masa`, `soulName`, `verbose?`): `Object`
 
 #### Parameters
 
@@ -1438,6 +1438,7 @@ ___
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
 | `soulName` | `string` |
+| `verbose?` | `boolean` |
 
 #### Returns
 
