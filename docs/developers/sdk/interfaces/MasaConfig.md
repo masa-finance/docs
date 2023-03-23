@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.10.5](../README.md) / [Exports](../modules.md) / MasaConfig
+ - v1.10.6](../README.md) / [Exports](../modules.md) / MasaConfig
 
 # Interface: MasaConfig
 
@@ -10,6 +10,7 @@
 - [apiUrl](MasaConfig.md#apiurl)
 - [environment](MasaConfig.md#environment)
 - [network](MasaConfig.md#network)
+- [networkName](MasaConfig.md#networkname)
 - [verbose](MasaConfig.md#verbose)
 - [wallet](MasaConfig.md#wallet)
 
@@ -29,7 +30,13 @@ ___
 
 ### network
 
-• `Readonly` **network**: [`NetworkName`](../modules.md#networkname)
+• `Optional` `Readonly` **network**: [`Network`](Network.md)
+
+___
+
+### networkName
+
+• `Readonly` **networkName**: [`NetworkName`](../modules.md#networkname)
 
 ___
 

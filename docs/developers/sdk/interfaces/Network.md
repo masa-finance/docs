@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.10.5](../README.md) / [Exports](../modules.md) / Network
+ - v1.10.6](../README.md) / [Exports](../modules.md) / Network
 
 # Interface: Network
 
@@ -7,6 +7,7 @@
 
 ### Properties
 
+- [addresses](Network.md#addresses)
 - [blockExplorerUrls](Network.md#blockexplorerurls)
 - [chainId](Network.md#chainid)
 - [chainName](Network.md#chainname)
@@ -15,6 +16,12 @@
 - [rpcUrls](Network.md#rpcurls)
 
 ## Properties
+
+### addresses
+
+• **addresses**: [`Addresses`](Addresses.md)
+
+___
 
 ### blockExplorerUrls
 

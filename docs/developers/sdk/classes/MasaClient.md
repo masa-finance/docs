@@ -1,7 +1,13 @@
 [# Masa SDK
- - v1.10.5](../README.md) / [Exports](../modules.md) / MasaClient
+ - v1.10.6](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
+
+## Hierarchy
+
+- `MasaBase`
+
+  ↳ **`MasaClient`**
 
 ## Table of contents
 
@@ -15,6 +21,7 @@
 - [\_middlewareClient](MasaClient.md#_middlewareclient)
 - [creditScore](MasaClient.md#creditscore)
 - [green](MasaClient.md#green)
+- [masa](MasaClient.md#masa)
 - [metadata](MasaClient.md#metadata)
 - [session](MasaClient.md#session)
 - [soulName](MasaClient.md#soulname)
@@ -36,6 +43,11 @@
 | `«destructured»` | `Object` |
 | › `apiUrl` | `string` |
 | › `cookie?` | `string` |
+| › `masa` | [`Masa`](Masa.md) |
+
+#### Overrides
+
+MasaBase.constructor
 
 ## Properties
 
@@ -73,7 +85,17 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| [`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\> |
-| `verify` | (`phoneNumber`: `string`, `code`: `string`, `network`: `string`) => `Promise`<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\> |
+| `verify` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\> |
+
+___
+
+### masa
+
+• `Protected` **masa**: [`Masa`](Masa.md)
+
+#### Inherited from
+
+MasaBase.masa
 
 ___
 
@@ -85,7 +107,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`uri`: `string`, `additionalHeaders?`: `Record`<`string`, `string`\>) => `Promise`<`undefined` \| [`IGreen`](../interfaces/IGreen.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IIdentity`](../interfaces/IIdentity.md)\> |
+| `get` | (`uri`: `string`, `additionalHeaders?`: `Record`<`string`, `string`\>) => `Promise`<`undefined` \| [`IIdentity`](../interfaces/IIdentity.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IGreen`](../interfaces/IGreen.md)\> |
 
 ___
 
@@ -112,7 +134,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`, `network`: [`NetworkName`](../modules.md#networkname)) => `Promise`<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md)\> |
+| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`) => `Promise`<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md)\> |
 
 ## Accessors
 

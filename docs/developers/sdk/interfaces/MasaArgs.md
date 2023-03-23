@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.10.5](../README.md) / [Exports](../modules.md) / MasaArgs
+ - v1.10.6](../README.md) / [Exports](../modules.md) / MasaArgs
 
 # Interface: MasaArgs
 
@@ -10,8 +10,8 @@
 - [apiUrl](MasaArgs.md#apiurl)
 - [arweave](MasaArgs.md#arweave)
 - [cookie](MasaArgs.md#cookie)
-- [defaultNetwork](MasaArgs.md#defaultnetwork)
 - [environment](MasaArgs.md#environment)
+- [networkName](MasaArgs.md#networkname)
 - [verbose](MasaArgs.md#verbose)
 - [wallet](MasaArgs.md#wallet)
 
@@ -35,15 +35,15 @@ ___
 
 ___
 
-### defaultNetwork
-
-• `Optional` **defaultNetwork**: [`NetworkName`](../modules.md#networkname)
-
-___
-
 ### environment
 
 • `Optional` **environment**: [`EnvironmentName`](../modules.md#environmentname)
+
+___
+
+### networkName
+
+• `Optional` **networkName**: [`NetworkName`](../modules.md#networkname)
 
 ___
 
