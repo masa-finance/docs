@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.10.3](../README.md) / [Exports](../modules.md) / Addresses
+ - v1.10.5](../README.md) / [Exports](../modules.md) / Addresses
 
 # Interface: Addresses
 
@@ -7,23 +7,15 @@
 
 ### Properties
 
-- [MASA](Addresses.md#masa)
 - [SoulLinkerAddress](Addresses.md#soullinkeraddress)
 - [SoulNameAddress](Addresses.md#soulnameaddress)
 - [SoulStoreAddress](Addresses.md#soulstoreaddress)
 - [SoulboundCreditScoreAddress](Addresses.md#soulboundcreditscoreaddress)
 - [SoulboundGreenAddress](Addresses.md#soulboundgreenaddress)
 - [SoulboundIdentityAddress](Addresses.md#soulboundidentityaddress)
-- [USDC](Addresses.md#usdc)
-- [WETH](Addresses.md#weth)
+- [tokens](Addresses.md#tokens)
 
 ## Properties
-
-### MASA
-
-• `Optional` **MASA**: `string`
-
-___
 
 ### SoulLinkerAddress
 
@@ -61,12 +53,6 @@ ___
 
 ___
 
-### USDC
+### tokens
 
-• `Optional` **USDC**: `string`
-
-___
-
-### WETH
-
-• `Optional` **WETH**: `string`
+• `Optional` **tokens**: `Partial`<{ `CELO`: `string` ; `ETH`: `string` ; `G$`: `string` ; `MASA`: `string` ; `USDC`: `string` ; `WETH`: `string` ; `cUSD`: `string`  }\>

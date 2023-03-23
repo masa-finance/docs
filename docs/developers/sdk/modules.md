@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.10.3](README.md) / Exports
+ - v1.10.5](README.md) / Exports
 
 # # Masa SDK
- - v1.10.3
+ - v1.10.5
 
 ## Table of contents
 
@@ -52,16 +52,20 @@
 
 ### Type Aliases
 
+- [Balances](modules.md#balances)
 - [BreakLinkResult](modules.md#breaklinkresult)
 - [CreateLinkResult](modules.md#createlinkresult)
+- [ERC20](modules.md#erc20)
 - [Environment](modules.md#environment)
 - [EnvironmentName](modules.md#environmentname)
 - [EstablishLinkResult](modules.md#establishlinkresult)
 - [Link](modules.md#link)
 - [ListLinksResult](modules.md#listlinksresult)
+- [NativeCurrencies](modules.md#nativecurrencies)
 - [NetworkName](modules.md#networkname)
 - [PaymentMethod](modules.md#paymentmethod)
 - [QueryLinkResult](modules.md#querylinkresult)
+- [Tokens](modules.md#tokens)
 - [VerifyLinkResult](modules.md#verifylinkresult)
 
 ### Variables
@@ -101,6 +105,8 @@
 - [getRegistrationPrice](modules.md#getregistrationprice)
 - [getSession](modules.md#getsession)
 - [getSoulNameMetadataPrefix](modules.md#getsoulnamemetadataprefix)
+- [isERC20Currency](modules.md#iserc20currency)
+- [isNativeCurrency](modules.md#isnativecurrency)
 - [listCreditScores](modules.md#listcreditscores)
 - [listGreens](modules.md#listgreens)
 - [listLinks](modules.md#listlinks)
@@ -147,6 +153,12 @@
 
 ## Type Aliases
 
+### Balances
+
+Ƭ **Balances**: `Partial`<{ [index in BalanceTypes]: number \| undefined }\>
+
+___
+
 ### BreakLinkResult
 
 Ƭ **BreakLinkResult**: [`BaseResult`](interfaces/BaseResult.md)
@@ -156,6 +168,12 @@ ___
 ### CreateLinkResult
 
 Ƭ **CreateLinkResult**: [`BaseResult`](interfaces/BaseResult.md) & { `passport?`: `string`  }
+
+___
+
+### ERC20
+
+Ƭ **ERC20**: typeof `erc20`[`number`]
 
 ___
 
@@ -200,6 +218,12 @@ ___
 
 ___
 
+### NativeCurrencies
+
+Ƭ **NativeCurrencies**: typeof `nativeCurrencies`[`number`]
+
+___
+
 ### NetworkName
 
 Ƭ **NetworkName**: ``"goerli"`` \| ``"ethereum"`` \| ``"mainnet"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``
@@ -208,13 +232,19 @@ ___
 
 ### PaymentMethod
 
-Ƭ **PaymentMethod**: ``"eth"`` \| ``"weth"`` \| ``"stable"`` \| ``"utility"``
+Ƭ **PaymentMethod**: [`NativeCurrencies`](modules.md#nativecurrencies) \| [`ERC20`](modules.md#erc20)
 
 ___
 
 ### QueryLinkResult
 
 Ƭ **QueryLinkResult**: [`BaseResult`](interfaces/BaseResult.md)
+
+___
+
+### Tokens
+
+Ƭ **Tokens**: `Partial`<{ [key in PaymentMethod]: string }\>
 
 ___
 
@@ -659,7 +689,7 @@ ___
 
 ### getBalances
 
-▸ **getBalances**(`masa`, `address?`): `Promise`<`undefined` \| { `ethBalance`: `BigNumber` ; `identityBalance`: `BigNumber` ; `masaBalance`: `BigNumber` ; `soulNameBalance`: `BigNumber` ; `soulboundCreditScoreBalance`: `BigNumber` ; `soulboundGreenBalance`: `BigNumber` ; `usdcBalance`: `BigNumber` ; `wethBalance`: `BigNumber`  }\>
+▸ **getBalances**(`masa`, `address?`): `Promise`<`Partial`<{ `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
 
 #### Parameters
 
@@ -670,7 +700,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `ethBalance`: `BigNumber` ; `identityBalance`: `BigNumber` ; `masaBalance`: `BigNumber` ; `soulNameBalance`: `BigNumber` ; `soulboundCreditScoreBalance`: `BigNumber` ; `soulboundGreenBalance`: `BigNumber` ; `usdcBalance`: `BigNumber` ; `wethBalance`: `BigNumber`  }\>
+`Promise`<`Partial`<{ `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
 
 ___
 
@@ -738,6 +768,38 @@ ___
 #### Returns
 
 `string`
+
+___
+
+### isERC20Currency
+
+▸ **isERC20Currency**(`paymentMethod`): paymentMethod is "MASA" \| "WETH" \| "G$" \| "USDC" \| "cUSD"
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `paymentMethod` | `unknown` |
+
+#### Returns
+
+paymentMethod is "MASA" \| "WETH" \| "G$" \| "USDC" \| "cUSD"
+
+___
+
+### isNativeCurrency
+
+▸ **isNativeCurrency**(`paymentMethod`): paymentMethod is "ETH" \| "CELO"
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `paymentMethod` | `unknown` |
+
+#### Returns
+
+paymentMethod is "ETH" \| "CELO"
 
 ___
 

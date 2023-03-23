@@ -1,7 +1,13 @@
 [# Masa SDK
- - v1.10.3](../README.md) / [Exports](../modules.md) / MasaAccount
+ - v1.10.5](../README.md) / [Exports](../modules.md) / MasaAccount
 
 # Class: MasaAccount
+
+## Hierarchy
+
+- `MasaBase`
+
+  ↳ **`MasaAccount`**
 
 ## Table of contents
 
@@ -11,7 +17,7 @@
 
 ### Properties
 
-- [mass](MasaAccount.md#mass)
+- [masa](MasaAccount.md#masa)
 
 ### Methods
 
@@ -21,25 +27,33 @@
 
 ### constructor
 
-• **new MasaAccount**(`mass`)
+• **new MasaAccount**(`masa`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `mass` | [`Masa`](Masa.md) |
+| `masa` | [`Masa`](Masa.md) |
+
+#### Inherited from
+
+MasaBase.constructor
 
 ## Properties
 
-### mass
+### masa
 
-• `Private` **mass**: [`Masa`](Masa.md)
+• `Protected` **masa**: [`Masa`](Masa.md)
+
+#### Inherited from
+
+MasaBase.masa
 
 ## Methods
 
 ### getBalances
 
-▸ **getBalances**(`address?`): `Promise`<`undefined` \| { `ethBalance`: `BigNumber` ; `identityBalance`: `BigNumber` ; `masaBalance`: `BigNumber` ; `soulNameBalance`: `BigNumber` ; `soulboundCreditScoreBalance`: `BigNumber` ; `soulboundGreenBalance`: `BigNumber` ; `usdcBalance`: `BigNumber` ; `wethBalance`: `BigNumber`  }\>
+▸ **getBalances**(`address?`): `Promise`<`Partial`<{ `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
 
 #### Parameters
 
@@ -49,4 +63,4 @@
 
 #### Returns
 
-`Promise`<`undefined` \| { `ethBalance`: `BigNumber` ; `identityBalance`: `BigNumber` ; `masaBalance`: `BigNumber` ; `soulNameBalance`: `BigNumber` ; `soulboundCreditScoreBalance`: `BigNumber` ; `soulboundGreenBalance`: `BigNumber` ; `usdcBalance`: `BigNumber` ; `wethBalance`: `BigNumber`  }\>
+`Promise`<`Partial`<{ `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>

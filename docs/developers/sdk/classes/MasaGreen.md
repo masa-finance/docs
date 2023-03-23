@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.10.3](../README.md) / [Exports](../modules.md) / MasaGreen
+ - v1.10.5](../README.md) / [Exports](../modules.md) / MasaGreen
 
 # Class: MasaGreen
 
@@ -92,7 +92,7 @@ Does the verification and mint step in one go
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"eth"` |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"ETH"` |
 | `phoneNumber` | `string` | `undefined` |
 | `code` | `string` | `undefined` |
 
@@ -166,7 +166,7 @@ Mints a green based on the previously made verification result
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"eth"` |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"ETH"` |
 | `authorityAddress` | `string` | `undefined` |
 | `signatureDate` | `number` | `undefined` |
 | `signature` | `string` | `undefined` |

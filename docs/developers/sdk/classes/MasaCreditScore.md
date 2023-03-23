@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.10.3](../README.md) / [Exports](../modules.md) / MasaCreditScore
+ - v1.10.5](../README.md) / [Exports](../modules.md) / MasaCreditScore
 
 # Class: MasaCreditScore
 
@@ -85,7 +85,7 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"eth"` |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"ETH"` |
 
 #### Returns
 

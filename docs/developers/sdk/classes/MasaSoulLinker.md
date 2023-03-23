@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.10.3](../README.md) / [Exports](../modules.md) / MasaSoulLinker
+ - v1.10.5](../README.md) / [Exports](../modules.md) / MasaSoulLinker
 
 # Class: MasaSoulLinker
 
@@ -106,7 +106,7 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"eth"` |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"ETH"` |
 | `passport` | `string` | `undefined` |
 
 #### Returns

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.10.3](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v1.10.5](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
@@ -86,7 +86,7 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"eth"` |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"ETH"` |
 | `soulName` | `string` | `undefined` |
 | `duration` | `number` | `undefined` |
 | `receiver?` | `string` | `undefined` |
@@ -105,7 +105,7 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"eth"` |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"ETH"` |
 | `soulName` | `string` | `undefined` |
 | `duration` | `number` | `undefined` |
 
