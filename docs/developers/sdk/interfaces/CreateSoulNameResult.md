@@ -1,11 +1,11 @@
 [# Masa SDK
- - v1.10.6](../README.md) / [Exports](../modules.md) / CreateSoulNameResult
+ - v1.11.0](../README.md) / [Exports](../modules.md) / CreateSoulNameResult
 
 # Interface: CreateSoulNameResult
 
 ## Hierarchy
 
-- [`BaseResult`](BaseResult.md)
+- [`SoulNameResultBase`](SoulNameResultBase.md)
 
   ↳ **`CreateSoulNameResult`**
 
@@ -13,6 +13,7 @@
 
 ### Properties
 
+- [errorCode](CreateSoulNameResult.md#errorcode)
 - [message](CreateSoulNameResult.md#message)
 - [soulName](CreateSoulNameResult.md#soulname)
 - [success](CreateSoulNameResult.md#success)
@@ -20,13 +21,23 @@
 
 ## Properties
 
+### errorCode
+
+• **errorCode**: [`SoulNameErrorCodes`](../enums/SoulNameErrorCodes.md)
+
+#### Inherited from
+
+[SoulNameResultBase](SoulNameResultBase.md).[errorCode](SoulNameResultBase.md#errorcode)
+
+___
+
 ### message
 
 • **message**: `string`
 
 #### Inherited from
 
-[BaseResult](BaseResult.md).[message](BaseResult.md#message)
+[SoulNameResultBase](SoulNameResultBase.md).[message](SoulNameResultBase.md#message)
 
 ___
 
@@ -42,7 +53,7 @@ ___
 
 #### Inherited from
 
-[BaseResult](BaseResult.md).[success](BaseResult.md#success)
+[SoulNameResultBase](SoulNameResultBase.md).[success](SoulNameResultBase.md#success)
 
 ___
 
@@ -52,4 +63,4 @@ ___
 
 #### Inherited from
 
-[BaseResult](BaseResult.md).[tokenId](BaseResult.md#tokenid)
+[SoulNameResultBase](SoulNameResultBase.md).[tokenId](SoulNameResultBase.md#tokenid)

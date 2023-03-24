@@ -1,14 +1,19 @@
 [# Masa SDK
- - v1.10.6](README.md) / Exports
+ - v1.11.0](README.md) / Exports
 
 # # Masa SDK
- - v1.10.6
+ - v1.11.0
 
 ## Table of contents
+
+### Enumerations
+
+- [SoulNameErrorCodes](enums/SoulNameErrorCodes.md)
 
 ### Classes
 
 - [ContractFactory](classes/ContractFactory.md)
+- [ERC20\_\_factory](classes/ERC20__factory.md)
 - [Masa](classes/Masa.md)
 - [MasaAccount](classes/MasaAccount.md)
 - [MasaArweave](classes/MasaArweave.md)
@@ -25,9 +30,12 @@
 ### Interfaces
 
 - [Addresses](interfaces/Addresses.md)
+- [ApprovalEventObject](interfaces/ApprovalEventObject.md)
 - [Attribute](interfaces/Attribute.md)
 - [BaseResult](interfaces/BaseResult.md)
 - [CreateSoulNameResult](interfaces/CreateSoulNameResult.md)
+- [ERC20](interfaces/ERC20.md)
+- [ERC20Interface](interfaces/ERC20Interface.md)
 - [GenerateCreditScoreResult](interfaces/GenerateCreditScoreResult.md)
 - [GenerateGreenResult](interfaces/GenerateGreenResult.md)
 - [GetChallengeResult](interfaces/GetChallengeResult.md)
@@ -46,16 +54,20 @@
 - [SessionUser](interfaces/SessionUser.md)
 - [SoulNameDetails](interfaces/SoulNameDetails.md)
 - [SoulNameMetadataStoreResult](interfaces/SoulNameMetadataStoreResult.md)
+- [SoulNameResultBase](interfaces/SoulNameResultBase.md)
+- [TransferEventObject](interfaces/TransferEventObject.md)
 - [UpdateCreditScoreResult](interfaces/UpdateCreditScoreResult.md)
 - [User](interfaces/User.md)
 - [VerifyGreenResult](interfaces/VerifyGreenResult.md)
 
 ### Type Aliases
 
+- [ApprovalEvent](modules.md#approvalevent)
+- [ApprovalEventFilter](modules.md#approvaleventfilter)
 - [Balances](modules.md#balances)
 - [BreakLinkResult](modules.md#breaklinkresult)
 - [CreateLinkResult](modules.md#createlinkresult)
-- [ERC20](modules.md#erc20)
+- [ERC20Currencies](modules.md#erc20currencies)
 - [Environment](modules.md#environment)
 - [EnvironmentName](modules.md#environmentname)
 - [EstablishLinkResult](modules.md#establishlinkresult)
@@ -66,6 +78,8 @@
 - [PaymentMethod](modules.md#paymentmethod)
 - [QueryLinkResult](modules.md#querylinkresult)
 - [Tokens](modules.md#tokens)
+- [TransferEvent](modules.md#transferevent)
+- [TransferEventFilter](modules.md#transfereventfilter)
 - [VerifyLinkResult](modules.md#verifylinkresult)
 
 ### Variables
@@ -107,6 +121,7 @@
 - [getSoulNameMetadataPrefix](modules.md#getsoulnamemetadataprefix)
 - [isERC20Currency](modules.md#iserc20currency)
 - [isNativeCurrency](modules.md#isnativecurrency)
+- [isSoulNameMetadataStoreResult](modules.md#issoulnamemetadatastoreresult)
 - [listCreditScores](modules.md#listcreditscores)
 - [listGreens](modules.md#listgreens)
 - [listLinks](modules.md#listlinks)
@@ -153,6 +168,18 @@
 
 ## Type Aliases
 
+### ApprovalEvent
+
+Ƭ **ApprovalEvent**: `TypedEvent`<[`string`, `string`, `BigNumber`], [`ApprovalEventObject`](interfaces/ApprovalEventObject.md)\>
+
+___
+
+### ApprovalEventFilter
+
+Ƭ **ApprovalEventFilter**: `TypedEventFilter`<[`ApprovalEvent`](modules.md#approvalevent)\>
+
+___
+
 ### Balances
 
 Ƭ **Balances**: `Partial`<{ [index in BalanceTypes]: number \| undefined }\>
@@ -171,9 +198,9 @@ ___
 
 ___
 
-### ERC20
+### ERC20Currencies
 
-Ƭ **ERC20**: typeof `erc20`[`number`]
+Ƭ **ERC20Currencies**: typeof `erc20Currencies`[`number`]
 
 ___
 
@@ -232,7 +259,7 @@ ___
 
 ### PaymentMethod
 
-Ƭ **PaymentMethod**: [`NativeCurrencies`](modules.md#nativecurrencies) \| [`ERC20`](modules.md#erc20)
+Ƭ **PaymentMethod**: [`NativeCurrencies`](modules.md#nativecurrencies) \| [`ERC20Currencies`](modules.md#erc20currencies)
 
 ___
 
@@ -245,6 +272,18 @@ ___
 ### Tokens
 
 Ƭ **Tokens**: `Partial`<{ [key in PaymentMethod]: string }\>
+
+___
+
+### TransferEvent
+
+Ƭ **TransferEvent**: `TypedEvent`<[`string`, `string`, `BigNumber`], [`TransferEventObject`](interfaces/TransferEventObject.md)\>
+
+___
+
+### TransferEventFilter
+
+Ƭ **TransferEventFilter**: `TypedEventFilter`<[`TransferEvent`](modules.md#transferevent)\>
 
 ___
 
@@ -522,7 +561,7 @@ ___
 
 ### createIdentity
 
-▸ **createIdentity**(`masa`): `Promise`<`boolean`\>
+▸ **createIdentity**(`masa`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -532,13 +571,13 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
 ### createIdentityWithSoulName
 
-▸ **createIdentityWithSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`): `Promise`<`undefined` \| [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
+▸ **createIdentityWithSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`): `Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 #### Parameters
 
@@ -551,7 +590,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
+`Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 ___
 
@@ -800,6 +839,22 @@ ___
 #### Returns
 
 paymentMethod is "ETH" \| "CELO"
+
+___
+
+### isSoulNameMetadataStoreResult
+
+▸ **isSoulNameMetadataStoreResult**(`result`): result is SoulNameMetadataStoreResult
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `result` | [`SoulNameResultBase`](interfaces/SoulNameResultBase.md) |
+
+#### Returns
+
+result is SoulNameMetadataStoreResult
 
 ___
 
@@ -1202,7 +1257,7 @@ ___
 
 ### mintGreen
 
-▸ **mintGreen**(`masa`, `paymentMethod`, `authorityAddress`, `signatureDate`, `signature`): `Promise`<`undefined` \| { `tokenId`: `BigNumber`  }\>
+▸ **mintGreen**(`masa`, `paymentMethod`, `authorityAddress`, `signatureDate`, `signature`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -1216,7 +1271,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `tokenId`: `BigNumber`  }\>
+`Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
@@ -1238,14 +1293,16 @@ ___
 
 ### patchMetadataUrl
 
-▸ **patchMetadataUrl**(`masa`, `tokeUri`): `string`
+▸ **patchMetadataUrl**(`masa`, `metadataUrl`): `string`
+
+todo: fix this thing, its not good
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `tokeUri` | `string` |
+| `metadataUrl` | `string` |
 
 #### Returns
 
@@ -1272,7 +1329,7 @@ ___
 
 ### purchaseIdentity
 
-▸ **purchaseIdentity**(`masa`): `Promise`<`void`\>
+▸ **purchaseIdentity**(`masa`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -1282,13 +1339,13 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
 ### purchaseIdentityWithSoulName
 
-▸ **purchaseIdentityWithSoulName**(`masa`, `soulName`, `soulNameLength`, `duration`, `paymentMethod`): `Promise`<`undefined` \| { `soulName`: `string` ; `tokenId`: `string`  }\>
+▸ **purchaseIdentityWithSoulName**(`masa`, `soulName`, `soulNameLength`, `duration`, `paymentMethod`): `Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 #### Parameters
 
@@ -1302,7 +1359,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `soulName`: `string` ; `tokenId`: `string`  }\>
+`Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 ___
 

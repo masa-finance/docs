@@ -1,7 +1,13 @@
 [# Masa SDK
- - v1.10.6](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v1.11.0](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
+
+## Hierarchy
+
+- `MasaBase`
+
+  ↳ **`MasaContracts`**
 
 ## Table of contents
 
@@ -15,26 +21,31 @@
 - [green](MasaContracts.md#green)
 - [identity](MasaContracts.md#identity)
 - [instances](MasaContracts.md#instances)
-- [masaConfig](MasaContracts.md#masaconfig)
+- [masa](MasaContracts.md#masa)
 - [soulLinker](MasaContracts.md#soullinker)
 - [soulName](MasaContracts.md#soulname)
 - [tools](MasaContracts.md#tools)
 
 ### Methods
 
+- [parseLogs](MasaContracts.md#parselogs)
 - [sbt](MasaContracts.md#sbt)
 
 ## Constructors
 
 ### constructor
 
-• **new MasaContracts**(`masaConfig`)
+• **new MasaContracts**(`masa`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) |
+| `masa` | [`Masa`](Masa.md) |
+
+#### Overrides
+
+MasaBase.constructor
 
 ## Properties
 
@@ -89,9 +100,13 @@ ___
 
 ___
 
-### masaConfig
+### masa
 
-• `Private` **masaConfig**: [`MasaConfig`](../interfaces/MasaConfig.md)
+• `Protected` **masa**: [`Masa`](Masa.md)
+
+#### Inherited from
+
+MasaBase.masa
 
 ___
 
@@ -138,12 +153,28 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `addSlippage` | (`price`: `BigNumber`, `slippage`: `number`) => `BigNumber` |
-| `checkOrGiveAllowance` | (`paymentAddress`: `string`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `price`: `BigNumber`) => `Promise`<`undefined` \| `ContractReceipt`\> |
+| `checkOrGiveAllowance` | (`paymentAddress`: `string`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `spenderAddress`: `string`, `price`: `BigNumber`) => `Promise`<`undefined` \| `ContractReceipt`\> |
 | `formatPrice` | (`paymentAddress`: `string`, `price`: `BigNumber`) => `Promise`<`string`\> |
 | `getPaymentAddress` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `string` |
 | `verify` | (`errorMessage`: `string`, `contract`: `SoulLinker` \| `SoulStore` \| `MasaSBTSelfSovereign`, `domain`: `TypedDataDomain`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`) => `Promise`<`void`\> |
 
 ## Methods
+
+### parseLogs
+
+▸ **parseLogs**(`logs`): `LogDescription`[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `logs` | `Log`[] |
+
+#### Returns
+
+`LogDescription`[]
+
+___
 
 ### sbt
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.10.6](../README.md) / [Exports](../modules.md) / GetChallengeResult
+ - v1.11.0](../README.md) / [Exports](../modules.md) / GetChallengeResult
 
 # Interface: GetChallengeResult
 

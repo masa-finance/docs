@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.10.6](../README.md) / [Exports](../modules.md) / MasaGreen
+ - v1.11.0](../README.md) / [Exports](../modules.md) / MasaGreen
 
 # Class: MasaGreen
 
@@ -158,7 +158,7 @@ ___
 
 ### mint
 
-▸ **mint**(`paymentMethod?`, `authorityAddress`, `signatureDate`, `signature`): `Promise`<`undefined` \| { `tokenId`: `BigNumber`  }\>
+▸ **mint**(`paymentMethod?`, `authorityAddress`, `signatureDate`, `signature`): `Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 Mints a green based on the previously made verification result
 
@@ -173,7 +173,7 @@ Mints a green based on the previously made verification result
 
 #### Returns
 
-`Promise`<`undefined` \| { `tokenId`: `BigNumber`  }\>
+`Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
