@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.11.0](README.md) / Exports
+ - v1.11.1](README.md) / Exports
 
 # # Masa SDK
- - v1.11.0
+ - v1.11.1
 
 ## Table of contents
 
@@ -33,12 +33,13 @@
 - [ApprovalEventObject](interfaces/ApprovalEventObject.md)
 - [Attribute](interfaces/Attribute.md)
 - [BaseResult](interfaces/BaseResult.md)
+- [ChallengeResult](interfaces/ChallengeResult.md)
+- [ChallengeResultWithCookie](interfaces/ChallengeResultWithCookie.md)
 - [CreateSoulNameResult](interfaces/CreateSoulNameResult.md)
 - [ERC20](interfaces/ERC20.md)
 - [ERC20Interface](interfaces/ERC20Interface.md)
 - [GenerateCreditScoreResult](interfaces/GenerateCreditScoreResult.md)
 - [GenerateGreenResult](interfaces/GenerateGreenResult.md)
-- [GetChallengeResult](interfaces/GetChallengeResult.md)
 - [ICreditScore](interfaces/ICreditScore.md)
 - [IGreen](interfaces/IGreen.md)
 - [IIdentity](interfaces/IIdentity.md)
@@ -126,6 +127,7 @@
 - [listGreens](modules.md#listgreens)
 - [listLinks](modules.md#listlinks)
 - [listSoulNames](modules.md#listsoulnames)
+- [listSoulNamesAndPrint](modules.md#listsoulnamesandprint)
 - [loadAddressFromIdentityId](modules.md#loadaddressfromidentityid)
 - [loadCreditScoreByTokenId](modules.md#loadcreditscorebytokenid)
 - [loadCreditScoresByIdentityId](modules.md#loadcreditscoresbyidentityid)
@@ -913,6 +915,23 @@ ___
 ### listSoulNames
 
 ▸ **listSoulNames**(`masa`, `address?`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `address?` | `string` |
+
+#### Returns
+
+`Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+
+___
+
+### listSoulNamesAndPrint
+
+▸ **listSoulNamesAndPrint**(`masa`, `address?`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 

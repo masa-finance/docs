@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.11.0](../README.md) / [Exports](../modules.md) / MasaClient
+ - v1.11.1](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -121,7 +121,7 @@ ___
 | :------ | :------ |
 | `check` | () => `Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\> |
 | `checkSignature` | (`address`: `string`, `signature`: `string`, `cookie?`: `string`) => `Promise`<`undefined` \| [`SessionUser`](../interfaces/SessionUser.md)\> |
-| `getChallenge` | () => `Promise`<`undefined` \| [`GetChallengeResult`](../interfaces/GetChallengeResult.md)\> |
+| `getChallenge` | () => `Promise`<`undefined` \| [`ChallengeResultWithCookie`](../interfaces/ChallengeResultWithCookie.md)\> |
 | `logout` | () => `Promise`<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\> |
 
 ___
