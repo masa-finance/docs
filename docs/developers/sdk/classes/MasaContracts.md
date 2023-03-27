@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.11.3](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v1.11.4](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -162,13 +162,14 @@ ___
 
 ### parseLogs
 
-▸ **parseLogs**(`logs`): `LogDescription`[]
+▸ **parseLogs**(`logs`, `additionalContracts?`): `LogDescription`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `logs` | `Log`[] |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `logs` | `Log`[] | `undefined` |
+| `additionalContracts` | `BaseContract`[] | `[]` |
 
 #### Returns
 
