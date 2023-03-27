@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.11.1](../README.md) / [Exports](../modules.md) / MasaCreditScore
+ - v1.11.3](../README.md) / [Exports](../modules.md) / MasaCreditScore
 
 # Class: MasaCreditScore
 
@@ -79,7 +79,7 @@ ___
 
 ### create
 
-▸ **create**(`paymentMethod?`): `Promise`<`undefined` \| [`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\>
+▸ **create**(`paymentMethod?`): `Promise`<[`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\>
 
 #### Parameters
 
@@ -89,7 +89,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\>
+`Promise`<[`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\>
 
 ___
 
