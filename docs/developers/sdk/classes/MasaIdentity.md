@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.11.5](../README.md) / [Exports](../modules.md) / MasaIdentity
+ - v1.12.1](../README.md) / [Exports](../modules.md) / MasaIdentity
 
 # Class: MasaIdentity
 
@@ -118,7 +118,7 @@ ___
 
 ### show
 
-▸ **show**(`address?`): `Promise`<`undefined` \| { `metadata?`: [`IIdentity`](../interfaces/IIdentity.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }\>
+▸ **show**(`address?`): `Promise`<`undefined` \| [`IdentityDetails`](../interfaces/IdentityDetails.md)\>
 
 #### Parameters
 
@@ -128,4 +128,4 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `metadata?`: [`IIdentity`](../interfaces/IIdentity.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }\>
+`Promise`<`undefined` \| [`IdentityDetails`](../interfaces/IdentityDetails.md)\>

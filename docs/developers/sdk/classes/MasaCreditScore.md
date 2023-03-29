@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.11.5](../README.md) / [Exports](../modules.md) / MasaCreditScore
+ - v1.12.1](../README.md) / [Exports](../modules.md) / MasaCreditScore
 
 # Class: MasaCreditScore
 
@@ -95,7 +95,7 @@ ___
 
 ### list
 
-▸ **list**(`address?`): `Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **list**(`address?`): `Promise`<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
 
 #### Parameters
 
@@ -105,13 +105,13 @@ ___
 
 #### Returns
 
-`Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
 
 ___
 
 ### load
 
-▸ **load**(`creditScoreId`): `Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }\>
+▸ **load**(`creditScoreId`): `Promise`<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)\>
 
 #### Parameters
 
@@ -121,4 +121,4 @@ ___
 
 #### Returns
 
-`Promise`<{ `metadata?`: [`ICreditScore`](../interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }\>
+`Promise`<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)\>

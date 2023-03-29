@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.11.5](../README.md) / [Exports](../modules.md) / ERC20Interface
+ - v1.12.1](../README.md) / [Exports](../modules.md) / ERC20Interface
 
 # Interface: ERC20Interface
 
@@ -860,7 +860,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `nameOrSignatureOrTopic` | ``"symbol"`` \| ``"balanceOf"`` \| ``"name"`` \| ``"totalSupply"`` \| ``"approve"`` \| ``"transferFrom"`` \| ``"allowance"`` \| ``"decimals"`` \| ``"decreaseAllowance"`` \| ``"increaseAllowance"`` \| ``"transfer"`` |
+| `nameOrSignatureOrTopic` | ``"symbol"`` \| ``"name"`` \| ``"decimals"`` \| ``"balanceOf"`` \| ``"totalSupply"`` \| ``"approve"`` \| ``"transferFrom"`` \| ``"allowance"`` \| ``"decreaseAllowance"`` \| ``"increaseAllowance"`` \| ``"transfer"`` |
 
 #### Returns
 

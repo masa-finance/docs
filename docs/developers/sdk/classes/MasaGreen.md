@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.11.5](../README.md) / [Exports](../modules.md) / MasaGreen
+ - v1.12.1](../README.md) / [Exports](../modules.md) / MasaGreen
 
 # Class: MasaGreen
 
@@ -122,7 +122,7 @@ ___
 
 ### list
 
-▸ **list**(`address?`): `Promise`<{ `metadata?`: [`IGreen`](../interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **list**(`address?`): `Promise`<[`GreenDetails`](../interfaces/GreenDetails.md)[]\>
 
 Lits all greens on the current network
 
@@ -134,13 +134,13 @@ Lits all greens on the current network
 
 #### Returns
 
-`Promise`<{ `metadata?`: [`IGreen`](../interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`<[`GreenDetails`](../interfaces/GreenDetails.md)[]\>
 
 ___
 
 ### load
 
-▸ **load**(`identityId`): `Promise`<{ `metadata?`: [`IGreen`](../interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **load**(`identityId`): `Promise`<[`GreenDetails`](../interfaces/GreenDetails.md)[]\>
 
 Loads all greens for an identity on the current network
 
@@ -152,7 +152,7 @@ Loads all greens for an identity on the current network
 
 #### Returns
 
-`Promise`<{ `metadata?`: [`IGreen`](../interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`<[`GreenDetails`](../interfaces/GreenDetails.md)[]\>
 
 ___
 

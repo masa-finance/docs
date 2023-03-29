@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.11.5](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v1.12.1](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -22,14 +22,13 @@
 - [identity](MasaContracts.md#identity)
 - [instances](MasaContracts.md#instances)
 - [masa](MasaContracts.md#masa)
+- [sbt](MasaContracts.md#sbt)
 - [soulLinker](MasaContracts.md#soullinker)
 - [soulName](MasaContracts.md#soulname)
-- [tools](MasaContracts.md#tools)
 
 ### Methods
 
 - [parseLogs](MasaContracts.md#parselogs)
-- [sbt](MasaContracts.md#sbt)
 
 ## Constructors
 
@@ -51,46 +50,19 @@ MasaBase.constructor
 
 ### creditScore
 
-• **creditScore**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `getPrice` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `slippage`: `undefined` \| `number`) => `Promise`<{ `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> |
-| `mint` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `identityId`: `BigNumber`, `authorityAddress`: `string`, `signatureDate`: `number`, `signature`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`ContractTransaction`\> |
-| `sign` | (`identityId`: `BigNumber`) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\> |
-| `types` | { `MintCreditScore`: { `name`: `string` = "identityId"; `type`: `string` = "uint256" }[]  } |
-| `types.MintCreditScore` | { `name`: `string` = "identityId"; `type`: `string` = "uint256" }[] |
+• **creditScore**: `CreditScore`
 
 ___
 
 ### green
 
-• **green**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `getPrice` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `slippage`: `undefined` \| `number`) => `Promise`<{ `formattedMintTransactionFee`: `string` ; `formattedPrice`: `string` ; `mintTransactionEstimatedGas`: `BigNumber` ; `mintTransactionFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> |
-| `mint` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `receiver`: `string`, `authorityAddress`: `string`, `signatureDate`: `number`, `signature`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`ContractTransaction`\> |
-| `sign` | (`receiver`: `string`) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\> |
-| `types` | { `MintGreen`: { `name`: `string` = "to"; `type`: `string` = "address" }[]  } |
-| `types.MintGreen` | { `name`: `string` = "to"; `type`: `string` = "address" }[] |
+• **green**: `Green`
 
 ___
 
 ### identity
 
-• **identity**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `purchase` | () => `Promise`<`ContractTransaction`\> |
-| `purchaseIdentityAndName` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `nameLength`: `number`, `duration`: `number`, `metadataURL`: `string`, `authorityAddress`: `string`, `signature`: `string`) => `Promise`<`ContractTransaction`\> |
+• **identity**: `Identity`
 
 ___
 
@@ -110,53 +82,21 @@ MasaBase.masa
 
 ___
 
+### sbt
+
+• **sbt**: `SBT`
+
+___
+
 ### soulLinker
 
-• **soulLinker**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `addLink` | (`tokenAddress`: `string`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `readerIdentityId`: `BigNumber`, `ownerIdentityId`: `BigNumber`, `tokenId`: `BigNumber`, `signatureDate`: `number`, `expirationDate`: `number`, `signature`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`boolean`\> |
-| `getPrice` | (`tokenAddress`: `string`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `slippage`: `undefined` \| `number`) => `Promise`<{ `paymentAddress`: `string` ; `price`: `BigNumber`  }\> |
-| `signLink` | (`readerIdentityId`: `BigNumber`, `ownerIdentityId`: `BigNumber`, `tokenAddress`: `string`, `tokenId`: `BigNumber`, `signatureDate`: `number`, `expirationOffset`: `number`) => `Promise`<{ `expirationDate`: `number` ; `signature`: `string` ; `signatureDate`: `number`  }\> |
-| `types` | { `Link`: { `name`: `string` = "readerIdentityId"; `type`: `string` = "uint256" }[]  } |
-| `types.Link` | { `name`: `string` = "readerIdentityId"; `type`: `string` = "uint256" }[] |
+• **soulLinker**: `SoulLinker`
 
 ___
 
 ### soulName
 
-• **soulName**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `getPrice` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `nameLength`: `number`, `duration`: `number`, `slippage`: `undefined` \| `number`) => `Promise`<{ `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> |
-| `getSoulnameData` | (`soulName`: `string`) => `Promise`<{ `exists`: `boolean` ; `tokenId`: `BigNumber`  }\> |
-| `isAvailable` | (`soulName`: `string`) => `Promise`<`boolean`\> |
-| `purchase` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `nameLength`: `number`, `duration`: `number`, `metadataURL`: `string`, `authorityAddress`: `string`, `signature`: `string`, `receiver?`: `string`) => `Promise`<`ContractTransaction`\> |
-| `sign` | (`soulName`: `string`, `soulNameLength`: `number`, `duration`: `number`, `metadataUrl`: `string`, `receiver`: `string`) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\> |
-| `types` | { `MintSoulName`: { `name`: `string` = "to"; `type`: `string` = "address" }[]  } |
-| `types.MintSoulName` | { `name`: `string` = "to"; `type`: `string` = "address" }[] |
-
-___
-
-### tools
-
-• `Private` **tools**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `addSlippage` | (`price`: `BigNumber`, `slippage`: `number`) => `BigNumber` |
-| `checkOrGiveAllowance` | (`paymentAddress`: `string`, `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `spenderAddress`: `string`, `price`: `BigNumber`) => `Promise`<`undefined` \| `ContractReceipt`\> |
-| `formatPrice` | (`paymentAddress`: `string`, `price`: `BigNumber`) => `Promise`<`string`\> |
-| `getPaymentAddress` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod)) => `string` |
-| `verify` | (`errorMessage`: `string`, `contract`: `SoulLinker` \| `SoulStore` \| `MasaSBTSelfSovereign`, `domain`: `TypedDataDomain`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`) => `Promise`<`void`\> |
+• **soulName**: `SoulName`
 
 ## Methods
 
@@ -174,26 +114,3 @@ ___
 #### Returns
 
 `LogDescription`[]
-
-___
-
-### sbt
-
-▸ **sbt**<`Contract`\>(`address`, `factory?`): `Promise`<{ `getPrice`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `slippage`: `undefined` \| `number`) => `Promise`<`undefined` \| { `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> ; `prepareMint`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`undefined` \| { `paymentAddress`: `string` = priceObject.paymentAddress; `price`: `BigNumber` = priceObject.price }\> ; `selfSovereignSBT`: `undefined` \| `Contract` ; `sign`: (`name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>  }\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBTSelfSovereign`<`Contract`\> |
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `address` | `string` | `undefined` |
-| `factory` | [`ContractFactory`](ContractFactory.md) | `MasaSBTSelfSovereign__factory` |
-
-#### Returns
-
-`Promise`<{ `getPrice`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `slippage`: `undefined` \| `number`) => `Promise`<`undefined` \| { `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> ; `prepareMint`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`undefined` \| { `paymentAddress`: `string` = priceObject.paymentAddress; `price`: `BigNumber` = priceObject.price }\> ; `selfSovereignSBT`: `undefined` \| `Contract` ; `sign`: (`name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>  }\>

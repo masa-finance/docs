@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.11.5](README.md) / Exports
+ - v1.12.1](README.md) / Exports
 
 # # Masa SDK
- - v1.11.5
+ - v1.12.1
 
 ## Table of contents
 
@@ -36,10 +36,12 @@
 - [ChallengeResult](interfaces/ChallengeResult.md)
 - [ChallengeResultWithCookie](interfaces/ChallengeResultWithCookie.md)
 - [CreateSoulNameResult](interfaces/CreateSoulNameResult.md)
+- [CreditScoreDetails](interfaces/CreditScoreDetails.md)
 - [ERC20](interfaces/ERC20.md)
 - [ERC20Interface](interfaces/ERC20Interface.md)
 - [GenerateCreditScoreResult](interfaces/GenerateCreditScoreResult.md)
 - [GenerateGreenResult](interfaces/GenerateGreenResult.md)
+- [GreenDetails](interfaces/GreenDetails.md)
 - [ICreditScore](interfaces/ICreditScore.md)
 - [IGreen](interfaces/IGreen.md)
 - [IIdentity](interfaces/IIdentity.md)
@@ -47,6 +49,7 @@
 - [IPassport](interfaces/IPassport.md)
 - [ISession](interfaces/ISession.md)
 - [ISoulName](interfaces/ISoulName.md)
+- [IdentityDetails](interfaces/IdentityDetails.md)
 - [LoadContractArgs](interfaces/LoadContractArgs.md)
 - [LogoutResult](interfaces/LogoutResult.md)
 - [MasaArgs](interfaces/MasaArgs.md)
@@ -90,6 +93,8 @@
 - [Templates](modules.md#templates)
 - [addresses](modules.md#addresses)
 - [environments](modules.md#environments)
+- [erc20Currencies](modules.md#erc20currencies-1)
+- [nativeCurrencies](modules.md#nativecurrencies-1)
 
 ### Functions
 
@@ -97,9 +102,9 @@
 - [burnCreditScore](modules.md#burncreditscore)
 - [burnCreditScoreById](modules.md#burncreditscorebyid)
 - [burnGreen](modules.md#burngreen)
-- [burnGreenById](modules.md#burngreenbyid)
 - [burnIdentity](modules.md#burnidentity)
 - [burnIdentityById](modules.md#burnidentitybyid)
+- [burnSBT](modules.md#burnsbt)
 - [burnSoulName](modules.md#burnsoulname)
 - [burnSoulNameByName](modules.md#burnsoulnamebyname)
 - [calculateSoulNameLength](modules.md#calculatesoulnamelength)
@@ -124,21 +129,28 @@
 - [isNativeCurrency](modules.md#isnativecurrency)
 - [isSoulNameMetadataStoreResult](modules.md#issoulnamemetadatastoreresult)
 - [listCreditScores](modules.md#listcreditscores)
+- [listCreditScoresAndPrint](modules.md#listcreditscoresandprint)
 - [listGreens](modules.md#listgreens)
+- [listGreensAndPrint](modules.md#listgreensandprint)
 - [listLinks](modules.md#listlinks)
+- [listSBTs](modules.md#listsbts)
 - [listSoulNames](modules.md#listsoulnames)
 - [listSoulNamesAndPrint](modules.md#listsoulnamesandprint)
 - [loadAddressFromIdentityId](modules.md#loadaddressfromidentityid)
 - [loadCreditScoreByTokenId](modules.md#loadcreditscorebytokenid)
 - [loadCreditScoresByIdentityId](modules.md#loadcreditscoresbyidentityid)
-- [loadGreenIds](modules.md#loadgreenids)
+- [loadGreenDetails](modules.md#loadgreendetails)
 - [loadGreensByAddress](modules.md#loadgreensbyaddress)
 - [loadGreensByIdentityId](modules.md#loadgreensbyidentityid)
+- [loadIdentity](modules.md#loadidentity)
 - [loadIdentityByAddress](modules.md#loadidentitybyaddress)
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
 - [loadIdentityDetails](modules.md#loadidentitydetails)
 - [loadLinks](modules.md#loadlinks)
 - [loadSBTContract](modules.md#loadsbtcontract)
+- [loadSBTIDs](modules.md#loadsbtids)
+- [loadSBTsByAddress](modules.md#loadsbtsbyaddress)
+- [loadSBTsByIdentityId](modules.md#loadsbtsbyidentityid)
 - [loadSoulNameByName](modules.md#loadsoulnamebyname)
 - [loadSoulNameByTokenId](modules.md#loadsoulnamebytokenid)
 - [loadSoulNameDetailsByAddress](modules.md#loadsoulnamedetailsbyaddress)
@@ -164,6 +176,7 @@
 - [signTypedData](modules.md#signtypeddata)
 - [unpackSessionId](modules.md#unpacksessionid)
 - [validateSoulName](modules.md#validatesoulname)
+- [verifyByName](modules.md#verifybyname)
 - [verifyGreen](modules.md#verifygreen)
 - [verifyLink](modules.md#verifylink)
 - [version](modules.md#version)
@@ -202,7 +215,7 @@ ___
 
 ### ERC20Currencies
 
-Ƭ **ERC20Currencies**: typeof `erc20Currencies`[`number`]
+Ƭ **ERC20Currencies**: typeof [`erc20Currencies`](modules.md#erc20currencies-1)[`number`]
 
 ___
 
@@ -249,7 +262,7 @@ ___
 
 ### NativeCurrencies
 
-Ƭ **NativeCurrencies**: typeof `nativeCurrencies`[`number`]
+Ƭ **NativeCurrencies**: typeof [`nativeCurrencies`](modules.md#nativecurrencies-1)[`number`]
 
 ___
 
@@ -337,6 +350,18 @@ ___
 
 • `Const` **environments**: [`Environment`](modules.md#environment)[]
 
+___
+
+### erc20Currencies
+
+• `Const` **erc20Currencies**: readonly [``"MASA"``, ``"WETH"``, ``"G$"``, ``"USDC"``, ``"cUSD"``]
+
+___
+
+### nativeCurrencies
+
+• `Const` **nativeCurrencies**: readonly [``"ETH"``, ``"CELO"``]
+
 ## Functions
 
 ### breakLink
@@ -409,23 +434,6 @@ ___
 
 ___
 
-### burnGreenById
-
-▸ **burnGreenById**(`masa`, `greenId`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `greenId` | `BigNumber` |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
-___
-
 ### burnIdentity
 
 ▸ **burnIdentity**(`masa`): `Promise`<`boolean`\>
@@ -459,9 +467,27 @@ ___
 
 ___
 
+### burnSBT
+
+▸ **burnSBT**(`masa`, `contract`, `SBTId`): `Promise`<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `contract` | `MasaSBTSelfSovereign` |
+| `SBTId` | `BigNumber` |
+
+#### Returns
+
+`Promise`<`boolean`\>
+
+___
+
 ### burnSoulName
 
-▸ **burnSoulName**(`masa`, `soulName`): `Promise`<`void`\>
+▸ **burnSoulName**(`masa`, `soulName`): `Promise`<`boolean`\>
 
 #### Parameters
 
@@ -472,13 +498,13 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`<`boolean`\>
 
 ___
 
 ### burnSoulNameByName
 
-▸ **burnSoulNameByName**(`masa`, `soulName`): `Promise`<`void`\>
+▸ **burnSoulNameByName**(`masa`, `soulName`): `Promise`<`boolean`\>
 
 #### Parameters
 
@@ -489,7 +515,7 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`<`boolean`\>
 
 ___
 
@@ -830,7 +856,7 @@ ___
 
 ### isNativeCurrency
 
-▸ **isNativeCurrency**(`paymentMethod`): paymentMethod is "ETH" \| "CELO"
+▸ **isNativeCurrency**(`paymentMethod`): paymentMethod is "CELO" \| "ETH"
 
 #### Parameters
 
@@ -840,7 +866,7 @@ ___
 
 #### Returns
 
-paymentMethod is "ETH" \| "CELO"
+paymentMethod is "CELO" \| "ETH"
 
 ___
 
@@ -862,7 +888,7 @@ ___
 
 ### listCreditScores
 
-▸ **listCreditScores**(`masa`, `address?`): `Promise`<{ `metadata?`: [`ICreditScore`](interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **listCreditScores**(`masa`, `address?`): `Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 #### Parameters
 
@@ -873,13 +899,30 @@ ___
 
 #### Returns
 
-`Promise`<{ `metadata?`: [`ICreditScore`](interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
+
+___
+
+### listCreditScoresAndPrint
+
+▸ **listCreditScoresAndPrint**(`masa`, `address?`): `Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `address?` | `string` |
+
+#### Returns
+
+`Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 ___
 
 ### listGreens
 
-▸ **listGreens**(`masa`, `address?`): `Promise`<{ `metadata?`: [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **listGreens**(`masa`, `address?`): `Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 #### Parameters
 
@@ -890,7 +933,24 @@ ___
 
 #### Returns
 
-`Promise`<{ `metadata?`: [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
+
+___
+
+### listGreensAndPrint
+
+▸ **listGreensAndPrint**(`masa`, `address?`): `Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `address?` | `string` |
+
+#### Returns
+
+`Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 ___
 
@@ -909,6 +969,24 @@ ___
 #### Returns
 
 `Promise`<[`ListLinksResult`](modules.md#listlinksresult)\>
+
+___
+
+### listSBTs
+
+▸ **listSBTs**(`masa`, `contract`, `address?`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `address?` | `string` |
+
+#### Returns
+
+`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 ___
 
@@ -965,7 +1043,7 @@ ___
 
 ### loadCreditScoreByTokenId
 
-▸ **loadCreditScoreByTokenId**(`masa`, `creditScoreId`): `Promise`<{ `metadata?`: [`ICreditScore`](interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }\>
+▸ **loadCreditScoreByTokenId**(`masa`, `creditScoreId`): `Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)\>
 
 #### Parameters
 
@@ -976,13 +1054,13 @@ ___
 
 #### Returns
 
-`Promise`<{ `metadata?`: [`ICreditScore`](interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }\>
+`Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)\>
 
 ___
 
 ### loadCreditScoresByIdentityId
 
-▸ **loadCreditScoresByIdentityId**(`masa`, `identityId`): `Promise`<{ `metadata?`: [`ICreditScore`](interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **loadCreditScoresByIdentityId**(`masa`, `identityId`): `Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 #### Parameters
 
@@ -993,13 +1071,13 @@ ___
 
 #### Returns
 
-`Promise`<{ `metadata?`: [`ICreditScore`](interfaces/ICreditScore.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 ___
 
-### loadGreenIds
+### loadGreenDetails
 
-▸ **loadGreenIds**(`masa`, `greenIds`): `Promise`<{ `metadata`: `undefined` \| [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **loadGreenDetails**(`masa`, `greenIds`): `Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 #### Parameters
 
@@ -1010,13 +1088,13 @@ ___
 
 #### Returns
 
-`Promise`<{ `metadata`: `undefined` \| [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 ___
 
 ### loadGreensByAddress
 
-▸ **loadGreensByAddress**(`masa`, `address`): `Promise`<{ `metadata?`: [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **loadGreensByAddress**(`masa`, `address`): `Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 #### Parameters
 
@@ -1027,13 +1105,13 @@ ___
 
 #### Returns
 
-`Promise`<{ `metadata?`: [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 ___
 
 ### loadGreensByIdentityId
 
-▸ **loadGreensByIdentityId**(`masa`, `identityId`): `Promise`<{ `metadata?`: [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **loadGreensByIdentityId**(`masa`, `identityId`): `Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 #### Parameters
 
@@ -1044,7 +1122,24 @@ ___
 
 #### Returns
 
-`Promise`<{ `metadata?`: [`IGreen`](interfaces/IGreen.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
+
+___
+
+### loadIdentity
+
+▸ **loadIdentity**(`masa`, `address?`): `Promise`<`undefined` \| [`IdentityDetails`](interfaces/IdentityDetails.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `address?` | `string` |
+
+#### Returns
+
+`Promise`<`undefined` \| [`IdentityDetails`](interfaces/IdentityDetails.md)\>
 
 ___
 
@@ -1083,7 +1178,7 @@ ___
 
 ### loadIdentityDetails
 
-▸ **loadIdentityDetails**(`masa`, `identityId`): `Promise`<{ `metadata?`: [`IIdentity`](interfaces/IIdentity.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }\>
+▸ **loadIdentityDetails**(`masa`, `identityId`): `Promise`<[`IdentityDetails`](interfaces/IdentityDetails.md)\>
 
 #### Parameters
 
@@ -1094,7 +1189,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `metadata?`: [`IIdentity`](interfaces/IIdentity.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }\>
+`Promise`<[`IdentityDetails`](interfaces/IdentityDetails.md)\>
 
 ___
 
@@ -1137,6 +1232,60 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| `Contract`\>
+
+___
+
+### loadSBTIDs
+
+▸ **loadSBTIDs**(`masa`, `contract`, `sbtIDs`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `sbtIDs` | `BigNumber`[] |
+
+#### Returns
+
+`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+___
+
+### loadSBTsByAddress
+
+▸ **loadSBTsByAddress**(`masa`, `contract`, `address`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `address` | `string` |
+
+#### Returns
+
+`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+___
+
+### loadSBTsByIdentityId
+
+▸ **loadSBTsByIdentityId**(`masa`, `contract`, `identityId`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `contract` | `MasaSBTSelfSovereign` |
+| `identityId` | `BigNumber` |
+
+#### Returns
+
+`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 ___
 
@@ -1461,7 +1610,7 @@ ___
 
 ### sendSoulName
 
-▸ **sendSoulName**(`masa`, `soulName`, `receiver`): `Promise`<`void`\>
+▸ **sendSoulName**(`masa`, `soulName`, `receiver`): `Promise`<`boolean`\>
 
 #### Parameters
 
@@ -1473,13 +1622,13 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`<`boolean`\>
 
 ___
 
 ### sendSoulNameByName
 
-▸ **sendSoulNameByName**(`masa`, `soulName`, `receiver`): `Promise`<`void`\>
+▸ **sendSoulNameByName**(`masa`, `soulName`, `receiver`): `Promise`<`boolean`\>
 
 #### Parameters
 
@@ -1491,13 +1640,13 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`<`boolean`\>
 
 ___
 
 ### showIdentity
 
-▸ **showIdentity**(`masa`, `address?`): `Promise`<`undefined` \| { `metadata?`: [`IIdentity`](interfaces/IIdentity.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }\>
+▸ **showIdentity**(`masa`, `address?`): `Promise`<`undefined` \| [`IdentityDetails`](interfaces/IdentityDetails.md)\>
 
 #### Parameters
 
@@ -1508,7 +1657,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `metadata?`: [`IIdentity`](interfaces/IIdentity.md) ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }\>
+`Promise`<`undefined` \| [`IdentityDetails`](interfaces/IdentityDetails.md)\>
 
 ___
 
@@ -1587,6 +1736,23 @@ ___
 | `isValid` | `boolean` |
 | `length` | `number` |
 | `message?` | `string` |
+
+___
+
+### verifyByName
+
+▸ **verifyByName**(`masa`, `soulName`): `Promise`<{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `soulName` | `string` |
+
+#### Returns
+
+`Promise`<{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\>
 
 ___
 

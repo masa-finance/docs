@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.11.5](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v1.12.1](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
@@ -64,7 +64,7 @@ MasaBase.masa
 
 ### burn
 
-▸ **burn**(`soulName`): `Promise`<`void`\>
+▸ **burn**(`soulName`): `Promise`<`boolean`\>
 
 #### Parameters
 
@@ -74,7 +74,7 @@ MasaBase.masa
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`<`boolean`\>
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 ### send
 
-▸ **send**(`soulName`, `receiver`): `Promise`<`void`\>
+▸ **send**(`soulName`, `receiver`): `Promise`<`boolean`\>
 
 #### Parameters
 
@@ -218,7 +218,7 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`<`boolean`\>
 
 ___
 
