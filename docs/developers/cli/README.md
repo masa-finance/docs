@@ -20,6 +20,7 @@
     * [`masa soul-name`](#masa-soul-name)
       * [`masa soul-name info`](#masa-soul-name-info)
       * [`masa soul-name list`](#masa-soul-name-list)
+      * [`masa soul-name tail`](#masa-soul-name-tail)
       * [`masa soul-name resolve <soulname>`](#masa-soul-name-resolve-soulname)
       * [`masa soul-name resolve-reverse <soulname>`](#masa-soul-name-resolve-reverse-soulname)
       * [`masa soul-name create <soulname> <duration>`](#masa-soul-name-create-soulname-duration)
@@ -91,6 +92,7 @@ Commands:
   soul-name                                                                                   Soul Name Commands
   soul-name info                                                                              Shows info about all Soul Names
   soul-name list [options]                                                                    Lists your soul names
+  soul-name tailoptions]                                                                      Tails your soul names
   soul-name resolve <soulname>                                                                Resolves a soul name to the address
   soul-name resolve-reverse <soulname>                                                        Resolves an address to soul names
   soul-name create <soulname> <duration>                                                      Creates a new soul name
@@ -239,6 +241,15 @@ Options:
 
 - `-a, --address <address>`
   Address override
+
+#### `masa soul-name tail`
+
+Tails your soul names
+
+Options:
+
+- `-l, --limit <limit>`
+  Limit
 
 #### `masa soul-name resolve <soulname>`
 
