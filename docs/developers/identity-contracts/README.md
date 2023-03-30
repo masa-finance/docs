@@ -1,25 +1,17 @@
 # Masa Identity Contracts
 
----
-
-**🌽🌽 THIS IS BETA SOFTWARE. IT COULD LEAD TO RAPID UNSCHEDULED DISASSEMBLY. If you run into problems, please open up a new issue. 🌽🌽**
-
----
-
 <!-- TOC -->
-
 * [Masa Identity Contracts](#masa-identity-contracts)
-    * [Contract Deployments](#contract-deployments)
-        * [Goerli test network](#goerli-test-network)
-            * [Configuration](#configuration)
-    * [Roles](#roles)
-    * [Interface](#interface)
-    * [Deployment](#deployment)
-        * [Preparations](#preparations)
-        * [Deploy](#deploy)
-    * [Installation and usage](#installation-and-usage)
-    * [Generation of a new release](#generation-of-a-new-release)
-
+  * [Contract Deployments](#contract-deployments)
+    * [Goerli test network](#goerli-test-network)
+      * [Configuration](#configuration)
+  * [Roles](#roles)
+  * [Interface](#interface)
+  * [Deployment](#deployment)
+    * [Preparations](#preparations)
+    * [Deploy](#deploy)
+  * [Installation and usage](#installation-and-usage)
+  * [Generation of a new release](#generation-of-a-new-release)
 <!-- TOC -->
 
 ## Contract Deployments
@@ -85,7 +77,10 @@ npm i @masa-finance/masa-contracts-identity
 Import in your project:
 
 ```typescript
-import { SoulboundIdentity, SoulboundIdentity__factory } from "@masa-finance/masa-contracts-identity";
+import {
+  SoulboundIdentity,
+  SoulboundIdentity__factory
+} from "@masa-finance/masa-contracts-identity";
 
 const soulboundIdentity: SoulboundIdentity = SoulboundIdentity__factory.connect(
   <address>, // address of the deployed contract
