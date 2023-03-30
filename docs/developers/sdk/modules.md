@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.12.1](README.md) / Exports
+ - v1.12.3](README.md) / Exports
 
 # # Masa SDK
- - v1.12.1
+ - v1.12.3
 
 ## Table of contents
 
@@ -13,7 +13,10 @@
 ### Classes
 
 - [ContractFactory](classes/ContractFactory.md)
+- [CreditScore](classes/CreditScore.md)
 - [ERC20\_\_factory](classes/ERC20__factory.md)
+- [Green](classes/Green.md)
+- [Identity](classes/Identity.md)
 - [Masa](classes/Masa.md)
 - [MasaAccount](classes/MasaAccount.md)
 - [MasaArweave](classes/MasaArweave.md)
@@ -22,10 +25,14 @@
 - [MasaCreditScore](classes/MasaCreditScore.md)
 - [MasaGreen](classes/MasaGreen.md)
 - [MasaIdentity](classes/MasaIdentity.md)
+- [MasaModuleBase](classes/MasaModuleBase.md)
 - [MasaSBT](classes/MasaSBT.md)
 - [MasaSession](classes/MasaSession.md)
 - [MasaSoulLinker](classes/MasaSoulLinker.md)
 - [MasaSoulName](classes/MasaSoulName.md)
+- [SBT](classes/SBT.md)
+- [SoulLinker](classes/SoulLinker.md)
+- [SoulName](classes/SoulName.md)
 
 ### Interfaces
 
@@ -68,6 +75,7 @@
 
 - [ApprovalEvent](modules.md#approvalevent)
 - [ApprovalEventFilter](modules.md#approvaleventfilter)
+- [BalanceTypes](modules.md#balancetypes)
 - [Balances](modules.md#balances)
 - [BreakLinkResult](modules.md#breaklinkresult)
 - [CreateLinkResult](modules.md#createlinkresult)
@@ -81,6 +89,7 @@
 - [NetworkName](modules.md#networkname)
 - [PaymentMethod](modules.md#paymentmethod)
 - [QueryLinkResult](modules.md#querylinkresult)
+- [SBTContractNames](modules.md#sbtcontractnames)
 - [Tokens](modules.md#tokens)
 - [TransferEvent](modules.md#transferevent)
 - [TransferEventFilter](modules.md#transfereventfilter)
@@ -195,6 +204,12 @@ ___
 
 ___
 
+### BalanceTypes
+
+Ƭ **BalanceTypes**: ``"Native"`` \| [`PaymentMethod`](modules.md#paymentmethod) \| [`SBTContractNames`](modules.md#sbtcontractnames)
+
+___
+
 ### Balances
 
 Ƭ **Balances**: `Partial`<{ [index in BalanceTypes]: number \| undefined }\>
@@ -281,6 +296,12 @@ ___
 ### QueryLinkResult
 
 Ƭ **QueryLinkResult**: [`BaseResult`](interfaces/BaseResult.md)
+
+___
+
+### SBTContractNames
+
+Ƭ **SBTContractNames**: ``"Identity"`` \| ``"SoulName"`` \| ``"Green"`` \| ``"CreditScore"``
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.1](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v1.12.3](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -50,19 +50,19 @@ MasaBase.constructor
 
 ### creditScore
 
-• **creditScore**: `CreditScore`
+• **creditScore**: [`CreditScore`](CreditScore.md)
 
 ___
 
 ### green
 
-• **green**: `Green`
+• **green**: [`Green`](Green.md)
 
 ___
 
 ### identity
 
-• **identity**: `Identity`
+• **identity**: [`Identity`](Identity.md)
 
 ___
 
@@ -84,19 +84,19 @@ ___
 
 ### sbt
 
-• **sbt**: `SBT`
+• **sbt**: [`SBT`](SBT.md)
 
 ___
 
 ### soulLinker
 
-• **soulLinker**: `SoulLinker`
+• **soulLinker**: [`SoulLinker`](SoulLinker.md)
 
 ___
 
 ### soulName
 
-• **soulName**: `SoulName`
+• **soulName**: [`SoulName`](SoulName.md)
 
 ## Methods
 

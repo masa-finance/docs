@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.1](../README.md) / [Exports](../modules.md) / ICreditScore
+ - v1.12.3](../README.md) / [Exports](../modules.md) / ICreditScore
 
 # Interface: ICreditScore
 
