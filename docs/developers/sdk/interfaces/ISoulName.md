@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.3](../README.md) / [Exports](../modules.md) / ISoulName
+ - v1.12.5](../README.md) / [Exports](../modules.md) / ISoulName
 
 # Interface: ISoulName
 
@@ -40,7 +40,7 @@ ___
 
 ### external\_url
 
-• **external\_url**: ``"https://app.getbasecamp.xyz"`` \| ``"https://app.prosperity.global"`` \| ``"https://testnet.app.masa.finance"`` \| ``"https://app.masa.finance"``
+• **external\_url**: ``"https://app.basecamp.global"`` \| ``"https://app.prosperity.global"`` \| ``"https://testnet.app.masa.finance"`` \| ``"https://app.masa.finance"``
 
 ___
 

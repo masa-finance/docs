@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.12.3](README.md) / Exports
+ - v1.12.5](README.md) / Exports
 
 # # Masa SDK
- - v1.12.3
+ - v1.12.5
 
 ## Table of contents
 
@@ -131,7 +131,6 @@
 - [generateSignatureDomain](modules.md#generatesignaturedomain)
 - [getBalances](modules.md#getbalances)
 - [getNetworkNameByChainId](modules.md#getnetworknamebychainid)
-- [getRegistrationPrice](modules.md#getregistrationprice)
 - [getSession](modules.md#getsession)
 - [getSoulNameMetadataPrefix](modules.md#getsoulnamemetadataprefix)
 - [isERC20Currency](modules.md#iserc20currency)
@@ -183,6 +182,8 @@
 - [showIdentity](modules.md#showidentity)
 - [signMessage](modules.md#signmessage)
 - [signTypedData](modules.md#signtypeddata)
+- [tailSoulNames](modules.md#tailsoulnames)
+- [tailSoulNamesAndPrint](modules.md#tailsoulnamesandprint)
 - [unpackSessionId](modules.md#unpacksessionid)
 - [validateSoulName](modules.md#validatesoulname)
 - [verifyByName](modules.md#verifybyname)
@@ -805,25 +806,6 @@ ___
 #### Returns
 
 [`NetworkName`](modules.md#networkname)
-
-___
-
-### getRegistrationPrice
-
-▸ **getRegistrationPrice**(`masa`, `paymentMethod`, `soulName`, `duration`): `Promise`<`BigNumber`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
-| `soulName` | `string` |
-| `duration` | `number` |
-
-#### Returns
-
-`Promise`<`BigNumber`\>
 
 ___
 
@@ -1501,14 +1483,15 @@ ___
 
 ### printSoulName
 
-▸ **printSoulName**(`soulName`, `index?`): `void`
+▸ **printSoulName**(`soulName`, `index?`, `verbose?`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `soulName` | [`SoulNameDetails`](interfaces/SoulNameDetails.md) |
-| `index?` | `number` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `soulName` | [`SoulNameDetails`](interfaces/SoulNameDetails.md) | `undefined` |
+| `index?` | `number` | `undefined` |
+| `verbose` | `boolean` | `false` |
 
 #### Returns
 
@@ -1717,6 +1700,40 @@ ___
 #### Returns
 
 `Promise`<{ `domain`: `TypedDataDomain` ; `signature`: `string`  }\>
+
+___
+
+### tailSoulNames
+
+▸ **tailSoulNames**(`masa`, `limit?`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
+| `limit` | `number` | `5` |
+
+#### Returns
+
+`Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+
+___
+
+### tailSoulNamesAndPrint
+
+▸ **tailSoulNamesAndPrint**(`masa`, `limit?`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
+| `limit` | `number` | `5` |
+
+#### Returns
+
+`Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 ___
 

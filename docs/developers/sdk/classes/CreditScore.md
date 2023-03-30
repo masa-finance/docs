@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.3](../README.md) / [Exports](../modules.md) / CreditScore
+ - v1.12.5](../README.md) / [Exports](../modules.md) / CreditScore
 
 # Class: CreditScore
 

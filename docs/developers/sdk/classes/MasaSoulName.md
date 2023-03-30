@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.3](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v1.12.5](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
@@ -23,7 +23,6 @@
 
 - [burn](MasaSoulName.md#burn)
 - [create](MasaSoulName.md#create)
-- [getRegistrationPrice](MasaSoulName.md#getregistrationprice)
 - [getSoulNameMetadataPrefix](MasaSoulName.md#getsoulnamemetadataprefix)
 - [list](MasaSoulName.md#list)
 - [loadSoulNameByName](MasaSoulName.md#loadsoulnamebyname)
@@ -31,6 +30,7 @@
 - [loadSoulNamesByIdentityId](MasaSoulName.md#loadsoulnamesbyidentityid)
 - [resolve](MasaSoulName.md#resolve)
 - [send](MasaSoulName.md#send)
+- [tail](MasaSoulName.md#tail)
 - [validate](MasaSoulName.md#validate)
 - [verify](MasaSoulName.md#verify)
 
@@ -94,24 +94,6 @@ ___
 #### Returns
 
 `Promise`<[`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
-
-___
-
-### getRegistrationPrice
-
-▸ **getRegistrationPrice**(`paymentMethod?`, `soulName`, `duration`): `Promise`<`BigNumber`\>
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"ETH"` |
-| `soulName` | `string` | `undefined` |
-| `duration` | `number` | `undefined` |
-
-#### Returns
-
-`Promise`<`BigNumber`\>
 
 ___
 
@@ -219,6 +201,22 @@ ___
 #### Returns
 
 `Promise`<`boolean`\>
+
+___
+
+### tail
+
+▸ **tail**(`limit?`): `Promise`<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `limit?` | `number` |
+
+#### Returns
+
+`Promise`<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
 
 ___
 
