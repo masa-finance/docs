@@ -39,8 +39,9 @@ Masa Endpoint: https://dev.middleware.masa.finance/
 bash ~ %
 ```
 
-> [Yarn](https://developers.masa.finance/docs/developers/cli/#yarn) and [npx](https://developers.masa.finance/docs/developers/cli/#npx) are also supported, check out the instructions in the docs here.
-> 
+:::info
+[Yarn](https://developers.masa.finance/docs/developers/cli/#yarn) and [npx](https://developers.masa.finance/docs/developers/cli/#npx) are also supported, check out the instructions in the docs.
+:::
 
 ### Set Base Goerli network
 
@@ -59,8 +60,9 @@ Preset network 'basegoerli' set!
 bash ~ %
 ```
 
-> The Masa CLI interacts with the Masa SDK using simple and intuitive commands that enable quick and easy development with Masa SBTs.
-> 
+:::info
+The Masa CLI interacts with the Masa SDK using simple and intuitive commands that enable quick and easy development with Masa SBTs.
+:::
 
 ### Get account information
 
@@ -90,8 +92,9 @@ Green: '0'
 bash ~ %
 ```
 
-> Transfer some Base Goerli ETH into the account address listed in the CLI.
-> 
+:::info
+Transfer some Base Goerli ETH into the account address listed in the CLI.
+:::
 
 ## Mint your first SBT
 

@@ -54,7 +54,7 @@ const config = {
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
-      disableSwitch: false,
+      disableSwitch: true,
       respectPrefersColorScheme: false,
     },
     navbar: {
@@ -69,7 +69,7 @@ const config = {
       items: [
         {
           type: "doc",
-          docId: "masa/introduction",
+          docId: "quickstart/base",
           position: "left",
           label: "Docs",
         },
