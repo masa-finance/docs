@@ -8,10 +8,11 @@ title: 🔵 Base
 
 *Video - get started with Masa in 3 minutes*
 
-Let’s test using Masa on the [Base Goerli Testnet](https://goerli.basescan.org/) where you will mint a Masa Green 2FA Self Sovereign SBT which is a 2FA SBT that verifies that the holder is a not bot through a phone OTP verification. The Quickstart will take you through minting a Masa Green 2FA SBT in a few easy steps. Using the Masa CLI and before you know it you will have minted a Masa Green SBT you will have verified you are not a bot!
+Let’s start using Masa on the [Base Goerli Testnet](https://goerli.basescan.org/) where you will mint a Masa Green 2FA Self Sovereign SBT. Masa Green SBT is a 2FA SBT that verifies that the holder is a not bot through a phone OTP verification. The Quickstart will take you through minting a Masa Green 2FA SBT in a few easy steps. Using the Masa CLI and before you know it you will have minted a Masa Green SBT you will have verified you are not a bot!
 
-> In order to complete the Quickstart you will must first get some Base Goerli ETH from a faucet such as [Coinbase](https://www.coinbase.com/faucets/base-ethereum-goerli-faucet) or [Quicknode](https://faucet.quicknode.com/base/goerli).
-> 
+:::tip
+To complete the Quickstart you will need some **Base Goerli ETH** from a faucet such as [Coinbase](https://www.coinbase.com/faucets/base-ethereum-goerli-faucet) or [Quicknode](https://faucet.quicknode.com/base/goerli).
+::: 
 
 ## Quickstart setup
 
