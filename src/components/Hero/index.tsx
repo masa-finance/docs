@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "@docusaurus/Link";
 
 export default function Hero() {
   return (
@@ -17,7 +18,9 @@ export default function Hero() {
         <p className="text-[gray] text-[22px]">
           The premiere web3 identity and credit protocol
         </p>
-        <p className="py-8">Get Started</p>
+        <Link to="docs/masa/introduction">
+            <p className="py-8 text-xl font-bold">Get Started</p>
+        </Link>
         <p className="font-bold">Build with Masa</p>
       </div>
     </section>

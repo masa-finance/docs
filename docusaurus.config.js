@@ -51,23 +51,29 @@ const config = {
     ],
   ],
 
-  themeConfig:
-    /** @type {import("@docusaurus/preset-classic").ThemeConfig} */
-    ({
-      navbar: {
-        title: "Masa Finance",
-        logo: {
-          alt: "Masa Finance",
-          src: "img/logo.svg",
+  themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
+    navbar: {
+      title: "Masa Finance",
+      logo: {
+        alt: "Masa Finance",
+        src: "img/logo.svg",
+        srcDark: "img/logo-darkmode.svg",
+        width: 100,
+        style: {marginRight: '1rem'},
+      },
+      items: [
+        {
+          type: "doc",
+          docId: "masa/introduction",
+          position: "left",
+          label: "Docs",
         },
-        items: [
-          {
-            type: "doc",
-            docId: "masa/introduction",
-            position: "left",
-            label: "Docs",
-          },
-          {
+        {
             href: "https://github.com/masa-finance/docs",
             label: "GitHub",
             position: "right",
@@ -119,7 +125,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-    }),
+    },
 };
 
 module.exports = config;
