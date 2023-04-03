@@ -7,7 +7,7 @@ import "./index.module.css";
 
 const HomepageHeader = () => {
   return (
-    <Link to="docs/masa/introduction">
+    <Link to="docs/quickstart/base">
       <Hero />
     </Link>
   );
