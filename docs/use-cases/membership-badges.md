@@ -39,7 +39,7 @@ In this guide we will use an Authority SBT that can be minted (dropped) directly
 
 ### Deploy contract using CLI
 ```bash
-masa deploy asbt --network basegorli 
+masa asbt deploy --network basegorli 
 ```
  ```bash
   __  __                            ____   _       ___ 
