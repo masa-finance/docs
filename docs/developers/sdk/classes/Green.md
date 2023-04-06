@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.5](../README.md) / [Exports](../modules.md) / Green
+ - v1.13.0](../README.md) / [Exports](../modules.md) / Green
 
 # Class: Green
 
@@ -24,6 +24,7 @@
 ### Methods
 
 - [addSlippage](Green.md#addslippage)
+- [burn](Green.md#burn)
 - [checkOrGiveAllowance](Green.md#checkorgiveallowance)
 - [formatPrice](Green.md#formatprice)
 - [getPaymentAddress](Green.md#getpaymentaddress)
@@ -103,6 +104,22 @@ adds a percentage to the price as slippage
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[addSlippage](MasaModuleBase.md#addslippage)
+
+___
+
+### burn
+
+▸ **burn**(`greenId`): `Promise`<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `greenId` | `BigNumber` |
+
+#### Returns
+
+`Promise`<`boolean`\>
 
 ___
 

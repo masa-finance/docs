@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.5](../README.md) / [Exports](../modules.md) / Identity
+ - v1.13.0](../README.md) / [Exports](../modules.md) / Identity
 
 # Class: Identity
 
@@ -23,6 +23,7 @@
 ### Methods
 
 - [addSlippage](Identity.md#addslippage)
+- [burn](Identity.md#burn)
 - [checkOrGiveAllowance](Identity.md#checkorgiveallowance)
 - [formatPrice](Identity.md#formatprice)
 - [getPaymentAddress](Identity.md#getpaymentaddress)
@@ -89,6 +90,22 @@ adds a percentage to the price as slippage
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[addSlippage](MasaModuleBase.md#addslippage)
+
+___
+
+### burn
+
+▸ **burn**(`identityId`): `Promise`<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `identityId` | `BigNumber` |
+
+#### Returns
+
+`Promise`<`boolean`\>
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.5](../README.md) / [Exports](../modules.md) / SoulLinker
+ - v1.13.0](../README.md) / [Exports](../modules.md) / SoulLinker
 
 # Class: SoulLinker
 
@@ -25,6 +25,7 @@
 
 - [addLink](SoulLinker.md#addlink)
 - [addSlippage](SoulLinker.md#addslippage)
+- [breakLink](SoulLinker.md#breaklink)
 - [checkOrGiveAllowance](SoulLinker.md#checkorgiveallowance)
 - [formatPrice](SoulLinker.md#formatprice)
 - [getPaymentAddress](SoulLinker.md#getpaymentaddress)
@@ -129,6 +130,24 @@ adds a percentage to the price as slippage
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[addSlippage](MasaModuleBase.md#addslippage)
+
+___
+
+### breakLink
+
+▸ **breakLink**(`contract`, `tokenId`, `readerIdentityId`): `Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `contract` | `Contract` |
+| `tokenId` | `BigNumber` |
+| `readerIdentityId` | `BigNumber` |
+
+#### Returns
+
+`Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 

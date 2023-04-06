@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.5](../README.md) / [Exports](../modules.md) / MasaIdentity
+ - v1.13.0](../README.md) / [Exports](../modules.md) / MasaIdentity
 
 # Class: MasaIdentity
 
@@ -102,7 +102,7 @@ ___
 
 ### load
 
-▸ **load**(`address?`): `Promise`<{ `address?`: `string` ; `identityId?`: `BigNumber`  }\>
+▸ **load**(`address?`): `Promise`<{ `address`: `string` ; `identityId?`: `BigNumber`  }\>
 
 #### Parameters
 
@@ -112,7 +112,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `address?`: `string` ; `identityId?`: `BigNumber`  }\>
+`Promise`<{ `address`: `string` ; `identityId?`: `BigNumber`  }\>
 
 ___
 

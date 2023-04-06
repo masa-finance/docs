@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.5](../README.md) / [Exports](../modules.md) / MasaCreditScore
+ - v1.13.0](../README.md) / [Exports](../modules.md) / MasaCreditScore
 
 # Class: MasaCreditScore
 
@@ -111,14 +111,14 @@ ___
 
 ### load
 
-▸ **load**(`creditScoreId`): `Promise`<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)\>
+▸ **load**(`identityIdOrAddress`): `Promise`<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `creditScoreId` | `BigNumber` |
+| `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns
 
-`Promise`<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)\>
+`Promise`<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>

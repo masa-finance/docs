@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.5](../README.md) / [Exports](../modules.md) / MasaGreen
+ - v1.13.0](../README.md) / [Exports](../modules.md) / MasaGreen
 
 # Class: MasaGreen
 
@@ -104,7 +104,7 @@ ___
 
 ### generate
 
-▸ **generate**(`phoneNumber`): `Promise`<`undefined` \| [`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\>
+▸ **generate**(`phoneNumber`): `Promise`<[`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\>
 
 Generates a new verification attempt
 
@@ -116,7 +116,7 @@ Generates a new verification attempt
 
 #### Returns
 
-`Promise`<`undefined` \| [`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\>
+`Promise`<[`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\>
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 ### load
 
-▸ **load**(`identityId`): `Promise`<[`GreenDetails`](../interfaces/GreenDetails.md)[]\>
+▸ **load**(`identityIdOrAddress`): `Promise`<[`GreenDetails`](../interfaces/GreenDetails.md)[]\>
 
 Loads all greens for an identity on the current network
 
@@ -148,7 +148,7 @@ Loads all greens for an identity on the current network
 
 | Name | Type |
 | :------ | :------ |
-| `identityId` | `BigNumber` |
+| `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns
 

@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.12.5](README.md) / Exports
+ - v1.13.0](README.md) / Exports
 
 # # Masa SDK
- - v1.12.5
+ - v1.13.0
 
 ## Table of contents
 
@@ -42,6 +42,7 @@
 - [BaseResult](interfaces/BaseResult.md)
 - [ChallengeResult](interfaces/ChallengeResult.md)
 - [ChallengeResultWithCookie](interfaces/ChallengeResultWithCookie.md)
+- [ContractInfo](interfaces/ContractInfo.md)
 - [CreateSoulNameResult](interfaces/CreateSoulNameResult.md)
 - [CreditScoreDetails](interfaces/CreditScoreDetails.md)
 - [ERC20](interfaces/ERC20.md)
@@ -107,15 +108,9 @@
 
 ### Functions
 
-- [breakLink](modules.md#breaklink)
-- [burnCreditScore](modules.md#burncreditscore)
-- [burnCreditScoreById](modules.md#burncreditscorebyid)
-- [burnGreen](modules.md#burngreen)
 - [burnIdentity](modules.md#burnidentity)
-- [burnIdentityById](modules.md#burnidentitybyid)
 - [burnSBT](modules.md#burnsbt)
 - [burnSoulName](modules.md#burnsoulname)
-- [burnSoulNameByName](modules.md#burnsoulnamebyname)
 - [calculateSoulNameLength](modules.md#calculatesoulnamelength)
 - [checkLogin](modules.md#checklogin)
 - [createCreditScore](modules.md#createcreditscore)
@@ -125,6 +120,7 @@
 - [createLink](modules.md#createlink)
 - [createRandomWallet](modules.md#createrandomwallet)
 - [createSoulName](modules.md#createsoulname)
+- [deployASBT](modules.md#deployasbt)
 - [establishLink](modules.md#establishlink)
 - [establishLinkFromPassport](modules.md#establishlinkfrompassport)
 - [generateGreen](modules.md#generategreen)
@@ -133,6 +129,7 @@
 - [getNetworkNameByChainId](modules.md#getnetworknamebychainid)
 - [getSession](modules.md#getsession)
 - [getSoulNameMetadataPrefix](modules.md#getsoulnamemetadataprefix)
+- [isBigNumber](modules.md#isbignumber)
 - [isERC20Currency](modules.md#iserc20currency)
 - [isNativeCurrency](modules.md#isnativecurrency)
 - [isSoulNameMetadataStoreResult](modules.md#issoulnamemetadatastoreresult)
@@ -144,12 +141,10 @@
 - [listSBTs](modules.md#listsbts)
 - [listSoulNames](modules.md#listsoulnames)
 - [listSoulNamesAndPrint](modules.md#listsoulnamesandprint)
-- [loadAddressFromIdentityId](modules.md#loadaddressfromidentityid)
-- [loadCreditScoreByTokenId](modules.md#loadcreditscorebytokenid)
-- [loadCreditScoresByIdentityId](modules.md#loadcreditscoresbyidentityid)
+- [loadCreditScoreDetails](modules.md#loadcreditscoredetails)
+- [loadCreditScores](modules.md#loadcreditscores)
 - [loadGreenDetails](modules.md#loadgreendetails)
-- [loadGreensByAddress](modules.md#loadgreensbyaddress)
-- [loadGreensByIdentityId](modules.md#loadgreensbyidentityid)
+- [loadGreens](modules.md#loadgreens)
 - [loadIdentity](modules.md#loadidentity)
 - [loadIdentityByAddress](modules.md#loadidentitybyaddress)
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
@@ -157,13 +152,11 @@
 - [loadLinks](modules.md#loadlinks)
 - [loadSBTContract](modules.md#loadsbtcontract)
 - [loadSBTIDs](modules.md#loadsbtids)
-- [loadSBTsByAddress](modules.md#loadsbtsbyaddress)
-- [loadSBTsByIdentityId](modules.md#loadsbtsbyidentityid)
+- [loadSBTs](modules.md#loadsbts)
 - [loadSoulNameByName](modules.md#loadsoulnamebyname)
 - [loadSoulNameByTokenId](modules.md#loadsoulnamebytokenid)
 - [loadSoulNameDetailsByAddress](modules.md#loadsoulnamedetailsbyaddress)
-- [loadSoulNamesByAddress](modules.md#loadsoulnamesbyaddress)
-- [loadSoulNamesByIdentityId](modules.md#loadsoulnamesbyidentityid)
+- [loadSoulNames](modules.md#loadsoulnames)
 - [loadSoulNamesByNames](modules.md#loadsoulnamesbynames)
 - [login](modules.md#login)
 - [logout](modules.md#logout)
@@ -176,9 +169,10 @@
 - [queryLink](modules.md#querylink)
 - [queryLinkFromPassport](modules.md#querylinkfrompassport)
 - [recoverAddress](modules.md#recoveraddress)
-- [resolve](modules.md#resolve)
+- [resolveIdentity](modules.md#resolveidentity)
+- [resolveReverseIdentity](modules.md#resolvereverseidentity)
+- [resolveSoulName](modules.md#resolvesoulname)
 - [sendSoulName](modules.md#sendsoulname)
-- [sendSoulNameByName](modules.md#sendsoulnamebyname)
 - [showIdentity](modules.md#showidentity)
 - [signMessage](modules.md#signmessage)
 - [signTypedData](modules.md#signtypeddata)
@@ -338,6 +332,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
+| `ContractNotDeployed` | (`networkName`: [`NetworkName`](modules.md#networkname)) => `string` |
 | `NoIdentity` | (`address?`: `string`) => `string` |
 | `NotLoggedIn` | () => `string` |
 | `WaitingToFinalize` | (`txHash`: `string`) => `string` |
@@ -386,76 +381,6 @@ ___
 
 ## Functions
 
-### breakLink
-
-▸ **breakLink**(`masa`, `contract`, `tokenId`, `readerIdentityId`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `contract` | `Contract` |
-| `tokenId` | `BigNumber` |
-| `readerIdentityId` | `BigNumber` |
-
-#### Returns
-
-`Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
-
-___
-
-### burnCreditScore
-
-▸ **burnCreditScore**(`masa`, `creditScoreId`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `creditScoreId` | `BigNumber` |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
-___
-
-### burnCreditScoreById
-
-▸ **burnCreditScoreById**(`masa`, `creditScoreId`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `creditScoreId` | `BigNumber` |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
-___
-
-### burnGreen
-
-▸ **burnGreen**(`masa`, `greenId`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `greenId` | `BigNumber` |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
-___
-
 ### burnIdentity
 
 ▸ **burnIdentity**(`masa`): `Promise`<`boolean`\>
@@ -465,23 +390,6 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
-___
-
-### burnIdentityById
-
-▸ **burnIdentityById**(`masa`, `identityId`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `identityId` | `BigNumber` |
 
 #### Returns
 
@@ -510,23 +418,6 @@ ___
 ### burnSoulName
 
 ▸ **burnSoulName**(`masa`, `soulName`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `soulName` | `string` |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
-___
-
-### burnSoulNameByName
-
-▸ **burnSoulNameByName**(`masa`, `soulName`): `Promise`<`boolean`\>
 
 #### Parameters
 
@@ -699,6 +590,25 @@ ___
 
 ___
 
+### deployASBT
+
+▸ **deployASBT**(`masa`, `name`, `symbol`, `baseTokenUri`): `Promise`<`string`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `name` | `string` |
+| `symbol` | `string` |
+| `baseTokenUri` | `string` |
+
+#### Returns
+
+`Promise`<`string`\>
+
+___
+
 ### establishLink
 
 ▸ **establishLink**(`masa`, `paymentMethod`, `contract`, `tokenId`, `readerIdentityId`, `signature`, `signatureDate`, `expirationDate`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
@@ -743,7 +653,7 @@ ___
 
 ### generateGreen
 
-▸ **generateGreen**(`masa`, `phoneNumber`): `Promise`<`undefined` \| [`GenerateGreenResult`](interfaces/GenerateGreenResult.md)\>
+▸ **generateGreen**(`masa`, `phoneNumber`): `Promise`<[`GenerateGreenResult`](interfaces/GenerateGreenResult.md)\>
 
 #### Parameters
 
@@ -754,7 +664,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`GenerateGreenResult`](interfaces/GenerateGreenResult.md)\>
+`Promise`<[`GenerateGreenResult`](interfaces/GenerateGreenResult.md)\>
 
 ___
 
@@ -838,6 +748,22 @@ ___
 #### Returns
 
 `string`
+
+___
+
+### isBigNumber
+
+▸ **isBigNumber**(`item`): item is BigNumber
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `item` | `string` \| `BigNumber` |
+
+#### Returns
+
+item is BigNumber
 
 ___
 
@@ -1027,50 +953,33 @@ ___
 
 ___
 
-### loadAddressFromIdentityId
+### loadCreditScoreDetails
 
-▸ **loadAddressFromIdentityId**(`masa`, `identityId`): `Promise`<`undefined` \| `string`\>
+▸ **loadCreditScoreDetails**(`masa`, `creditScoreIds`): `Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `identityId` | `BigNumber` |
+| `creditScoreIds` | `BigNumber`[] |
 
 #### Returns
 
-`Promise`<`undefined` \| `string`\>
+`Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 ___
 
-### loadCreditScoreByTokenId
+### loadCreditScores
 
-▸ **loadCreditScoreByTokenId**(`masa`, `creditScoreId`): `Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)\>
+▸ **loadCreditScores**(`masa`, `identityIdOrAddress`): `Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `creditScoreId` | `BigNumber` |
-
-#### Returns
-
-`Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)\>
-
-___
-
-### loadCreditScoresByIdentityId
-
-▸ **loadCreditScoresByIdentityId**(`masa`, `identityId`): `Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `identityId` | `BigNumber` |
+| `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns
 
@@ -1095,33 +1004,16 @@ ___
 
 ___
 
-### loadGreensByAddress
+### loadGreens
 
-▸ **loadGreensByAddress**(`masa`, `address`): `Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `address` | `string` |
-
-#### Returns
-
-`Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
-
-___
-
-### loadGreensByIdentityId
-
-▸ **loadGreensByIdentityId**(`masa`, `identityId`): `Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
+▸ **loadGreens**(`masa`, `identityIdOrAddress`): `Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `identityId` | `BigNumber` |
+| `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns
 
@@ -1148,7 +1040,7 @@ ___
 
 ### loadIdentityByAddress
 
-▸ **loadIdentityByAddress**(`masa`, `address?`): `Promise`<{ `address?`: `string` ; `identityId?`: `BigNumber`  }\>
+▸ **loadIdentityByAddress**(`masa`, `address?`): `Promise`<{ `address`: `string` ; `identityId?`: `BigNumber`  }\>
 
 #### Parameters
 
@@ -1159,7 +1051,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `address?`: `string` ; `identityId?`: `BigNumber`  }\>
+`Promise`<{ `address`: `string` ; `identityId?`: `BigNumber`  }\>
 
 ___
 
@@ -1181,14 +1073,14 @@ ___
 
 ### loadIdentityDetails
 
-▸ **loadIdentityDetails**(`masa`, `identityId`): `Promise`<[`IdentityDetails`](interfaces/IdentityDetails.md)\>
+▸ **loadIdentityDetails**(`masa`, `identityIdOrAddress`): `Promise`<[`IdentityDetails`](interfaces/IdentityDetails.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `identityId` | `BigNumber` |
+| `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns
 
@@ -1256,9 +1148,9 @@ ___
 
 ___
 
-### loadSBTsByAddress
+### loadSBTs
 
-▸ **loadSBTsByAddress**(`masa`, `contract`, `address`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **loadSBTs**(`masa`, `contract`, `identityIdOrAddress`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Parameters
 
@@ -1266,25 +1158,7 @@ ___
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
 | `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
-| `address` | `string` |
-
-#### Returns
-
-`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
-
-___
-
-### loadSBTsByIdentityId
-
-▸ **loadSBTsByIdentityId**(`masa`, `contract`, `identityId`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `contract` | `MasaSBTSelfSovereign` |
-| `identityId` | `BigNumber` |
+| `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns
 
@@ -1343,37 +1217,20 @@ ___
 
 ___
 
-### loadSoulNamesByAddress
+### loadSoulNames
 
-▸ **loadSoulNamesByAddress**(`masa`, `address`): `Promise`<`string`[]\>
+▸ **loadSoulNames**(`masa`, `identityIdOrAddress`): `Promise`<`string`[]\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `address` | `string` |
+| `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns
 
 `Promise`<`string`[]\>
-
-___
-
-### loadSoulNamesByIdentityId
-
-▸ **loadSoulNamesByIdentityId**(`masa`, `identityId`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `identityId` | `BigNumber` |
-
-#### Returns
-
-`Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 ___
 
@@ -1503,6 +1360,8 @@ ___
 
 ▸ **purchaseIdentity**(`masa`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
 
+Identity only
+
 #### Parameters
 
 | Name | Type |
@@ -1518,6 +1377,8 @@ ___
 ### purchaseIdentityWithSoulName
 
 ▸ **purchaseIdentityWithSoulName**(`masa`, `soulName`, `soulNameLength`, `duration`, `paymentMethod`): `Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
+
+Identity with soul name
 
 #### Parameters
 
@@ -1595,9 +1456,45 @@ ___
 
 ___
 
-### resolve
+### resolveIdentity
 
-▸ **resolve**(`masa`, `soulName`): `Promise`<`undefined` \| `string`\>
+▸ **resolveIdentity**(`masa`, `identityId`): `Promise`<`undefined` \| `string`\>
+
+Resolves identity id into address
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `identityId` | `BigNumber` |
+
+#### Returns
+
+`Promise`<`undefined` \| `string`\>
+
+___
+
+### resolveReverseIdentity
+
+▸ **resolveReverseIdentity**(`masa`, `address`): `Promise`<`undefined` \| `BigNumber`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `address` | `string` |
+
+#### Returns
+
+`Promise`<`undefined` \| `BigNumber`\>
+
+___
+
+### resolveSoulName
+
+▸ **resolveSoulName**(`masa`, `soulName`): `Promise`<`undefined` \| `string`\>
 
 #### Parameters
 
@@ -1615,24 +1512,6 @@ ___
 ### sendSoulName
 
 ▸ **sendSoulName**(`masa`, `soulName`, `receiver`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `soulName` | `string` |
-| `receiver` | `string` |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
-___
-
-### sendSoulNameByName
-
-▸ **sendSoulNameByName**(`masa`, `soulName`, `receiver`): `Promise`<`boolean`\>
 
 #### Parameters
 

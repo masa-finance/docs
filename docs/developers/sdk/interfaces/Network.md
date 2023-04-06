@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.5](../README.md) / [Exports](../modules.md) / Network
+ - v1.13.0](../README.md) / [Exports](../modules.md) / Network
 
 # Interface: Network
 
@@ -11,6 +11,7 @@
 - [blockExplorerUrls](Network.md#blockexplorerurls)
 - [chainId](Network.md#chainid)
 - [chainName](Network.md#chainname)
+- [gasSlippagePercentage](Network.md#gasslippagepercentage)
 - [nativeCurrency](Network.md#nativecurrency)
 - [networkName](Network.md#networkname)
 - [rpcUrls](Network.md#rpcurls)
@@ -38,6 +39,12 @@ ___
 ### chainName
 
 • **chainName**: `string`
+
+___
+
+### gasSlippagePercentage
+
+• `Optional` **gasSlippagePercentage**: `number`
 
 ___
 

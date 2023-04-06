@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.5](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v1.13.0](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
@@ -27,7 +27,7 @@
 - [list](MasaSoulName.md#list)
 - [loadSoulNameByName](MasaSoulName.md#loadsoulnamebyname)
 - [loadSoulNameByTokenId](MasaSoulName.md#loadsoulnamebytokenid)
-- [loadSoulNamesByIdentityId](MasaSoulName.md#loadsoulnamesbyidentityid)
+- [loadSoulNames](MasaSoulName.md#loadsoulnames)
 - [resolve](MasaSoulName.md#resolve)
 - [send](MasaSoulName.md#send)
 - [tail](MasaSoulName.md#tail)
@@ -155,19 +155,19 @@ ___
 
 ___
 
-### loadSoulNamesByIdentityId
+### loadSoulNames
 
-▸ **loadSoulNamesByIdentityId**(`identityId`): `Promise`<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
+▸ **loadSoulNames**(`identityIdOrAddress`): `Promise`<`string`[]\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `identityId` | `BigNumber` |
+| `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns
 
-`Promise`<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
+`Promise`<`string`[]\>
 
 ___
 

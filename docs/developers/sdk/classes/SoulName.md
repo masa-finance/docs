@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.5](../README.md) / [Exports](../modules.md) / SoulName
+ - v1.13.0](../README.md) / [Exports](../modules.md) / SoulName
 
 # Class: SoulName
 
@@ -24,6 +24,7 @@
 ### Methods
 
 - [addSlippage](SoulName.md#addslippage)
+- [burn](SoulName.md#burn)
 - [checkOrGiveAllowance](SoulName.md#checkorgiveallowance)
 - [formatPrice](SoulName.md#formatprice)
 - [getPaymentAddress](SoulName.md#getpaymentaddress)
@@ -32,6 +33,7 @@
 - [isAvailable](SoulName.md#isavailable)
 - [purchase](SoulName.md#purchase)
 - [sign](SoulName.md#sign)
+- [transfer](SoulName.md#transfer)
 - [verify](SoulName.md#verify)
 
 ## Constructors
@@ -105,6 +107,22 @@ adds a percentage to the price as slippage
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[addSlippage](MasaModuleBase.md#addslippage)
+
+___
+
+### burn
+
+▸ **burn**(`soulName`): `Promise`<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `soulName` | `string` |
+
+#### Returns
+
+`Promise`<`boolean`\>
 
 ___
 
@@ -277,6 +295,23 @@ signs a soul name
 #### Returns
 
 `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>
+
+___
+
+### transfer
+
+▸ **transfer**(`soulName`, `receiver`): `Promise`<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `soulName` | `string` |
+| `receiver` | `string` |
+
+#### Returns
+
+`Promise`<`boolean`\>
 
 ___
 

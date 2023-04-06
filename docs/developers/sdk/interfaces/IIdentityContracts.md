@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.5](../README.md) / [Exports](../modules.md) / IIdentityContracts
+ - v1.13.0](../README.md) / [Exports](../modules.md) / IIdentityContracts
 
 # Interface: IIdentityContracts
 
@@ -18,34 +18,34 @@
 
 ### SoulLinkerContract
 
-• **SoulLinkerContract**: `SoulLinker`
+• **SoulLinkerContract**: `SoulLinker` & [`ContractInfo`](ContractInfo.md)
 
 ___
 
 ### SoulNameContract
 
-• **SoulNameContract**: `SoulName`
+• **SoulNameContract**: `SoulName` & [`ContractInfo`](ContractInfo.md)
 
 ___
 
 ### SoulStoreContract
 
-• **SoulStoreContract**: `SoulStore`
+• **SoulStoreContract**: `SoulStore` & [`ContractInfo`](ContractInfo.md)
 
 ___
 
 ### SoulboundCreditScoreContract
 
-• **SoulboundCreditScoreContract**: `SoulboundCreditScore`
+• **SoulboundCreditScoreContract**: `SoulboundCreditScore` & [`ContractInfo`](ContractInfo.md)
 
 ___
 
 ### SoulboundGreenContract
 
-• **SoulboundGreenContract**: `SoulboundGreen`
+• **SoulboundGreenContract**: `SoulboundGreen` & [`ContractInfo`](ContractInfo.md)
 
 ___
 
 ### SoulboundIdentityContract
 
-• **SoulboundIdentityContract**: `SoulboundIdentity`
+• **SoulboundIdentityContract**: `SoulboundIdentity` & [`ContractInfo`](ContractInfo.md)

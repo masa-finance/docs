@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.5](../README.md) / [Exports](../modules.md) / MasaClient
+ - v1.13.0](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -84,7 +84,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `generate` | (`phoneNumber`: `string`) => `Promise`<`undefined` \| [`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\> |
+| `generate` | (`phoneNumber`: `string`) => `Promise`<[`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\> |
 | `verify` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\> |
 
 ___

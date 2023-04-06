@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.5](../README.md) / [Exports](../modules.md) / CreditScore
+ - v1.13.0](../README.md) / [Exports](../modules.md) / CreditScore
 
 # Class: CreditScore
 
@@ -24,6 +24,7 @@
 ### Methods
 
 - [addSlippage](CreditScore.md#addslippage)
+- [burn](CreditScore.md#burn)
 - [checkOrGiveAllowance](CreditScore.md#checkorgiveallowance)
 - [formatPrice](CreditScore.md#formatprice)
 - [getPaymentAddress](CreditScore.md#getpaymentaddress)
@@ -103,6 +104,22 @@ adds a percentage to the price as slippage
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[addSlippage](MasaModuleBase.md#addslippage)
+
+___
+
+### burn
+
+▸ **burn**(`creditScoreId`): `Promise`<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `creditScoreId` | `BigNumber` |
+
+#### Returns
+
+`Promise`<`boolean`\>
 
 ___
 

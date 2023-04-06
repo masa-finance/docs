@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.5](../README.md) / [Exports](../modules.md) / ERC20\_\_factory
+ - v1.13.0](../README.md) / [Exports](../modules.md) / ERC20\_\_factory
 
 # Class: ERC20\_\_factory
 
@@ -260,7 +260,7 @@ ___
 | :------ | :------ |
 | `tx` | `Object` |
 | `tx.from` | `string` |
-| `tx.nonce` | `number` \| `BytesLike` \| `BigNumber` |
+| `tx.nonce` | `number` \| `BigNumber` \| `BytesLike` |
 
 #### Returns
 
