@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.13.0](README.md) / Exports
+ - v1.13.2](README.md) / Exports
 
 # # Masa SDK
- - v1.13.0
+ - v1.13.2
 
 ## Table of contents
 
@@ -160,6 +160,7 @@
 - [loadSoulNamesByNames](modules.md#loadsoulnamesbynames)
 - [login](modules.md#login)
 - [logout](modules.md#logout)
+- [mintASBT](modules.md#mintasbt)
 - [mintGreen](modules.md#mintgreen)
 - [parsePassport](modules.md#parsepassport)
 - [patchMetadataUrl](modules.md#patchmetadataurl)
@@ -592,7 +593,7 @@ ___
 
 ### deployASBT
 
-▸ **deployASBT**(`masa`, `name`, `symbol`, `baseTokenUri`): `Promise`<`string`\>
+▸ **deployASBT**(`masa`, `name`, `symbol`, `baseTokenUri`, `adminAddress?`): `Promise`<`undefined` \| `string`\>
 
 #### Parameters
 
@@ -602,10 +603,11 @@ ___
 | `name` | `string` |
 | `symbol` | `string` |
 | `baseTokenUri` | `string` |
+| `adminAddress?` | `string` |
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`<`undefined` \| `string`\>
 
 ___
 
@@ -1280,6 +1282,24 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| { `status`: `string`  }\>
+
+___
+
+### mintASBT
+
+▸ **mintASBT**(`masa`, `sbtContract`, `receiver`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `sbtContract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `receiver` | `string` |
+
+#### Returns
+
+`Promise`<`void`\>
 
 ___
 

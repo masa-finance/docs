@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.13.0](../README.md) / [Exports](../modules.md) / ApprovalEventObject
+ - v1.13.2](../README.md) / [Exports](../modules.md) / ApprovalEventObject
 
 # Interface: ApprovalEventObject
 
