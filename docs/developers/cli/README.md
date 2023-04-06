@@ -52,6 +52,9 @@
       * [`masa sbt sign <contract-address> <name> <types> <value>`](#masa-sbt-sign-contract-address-name-types-value)
       * [`masa sbt prepare-mint <contract-address> <name> <types> <value> <authority-address> <signature>`](#masa-sbt-prepare-mint-contract-address-name-types-value-authority-address-signature)
       * [`masa sbt burn <contract-address> <sbt-id>`](#masa-sbt-burn-contract-address-sbt-id)
+    * [`masa asbt`](#masa-asbt)
+      * [`masa asbt deploy`](#masa-asbt-deploy)
+      * [`masa asbt mint <contract-address> <receiver>`](#masa-asbt-mint-contract-address-receiver)
     * [`masa settings`](#masa-settings)
       * [`masa settings set <key> <value>`](#masa-settings-set-key-value)
       * [`masa settings preset <environment>`](#masa-settings-preset-environment)
@@ -124,6 +127,9 @@ Commands:
   sbt sign <contract-address> <name> <types> <value>                                          Signs an SBT
   sbt prepare-mint <contract-address> <name> <types> <value> <authority-address> <signature>  Prepares an SBT mint operation
   sbt burn <contract-address> <sbt-id>                                                        Burns an SBT
+  asbt                                                                                        ASBT Commands
+  asbt deploy                                                                                 Deploys ASBTs
+  asbt mint <contract-address> <receiver>                                                     Mints ASBTs
   settings                                                                                    Set config settings
   settings set <key> <value>                                                                  Changes setting <key> to <value>
   settings preset <environment>                                                               Changes setting <environment> presets
@@ -447,6 +453,21 @@ Burns an SBT
 
 - `<contract-address> Address of the SBT to sign`
 - `<sbt-id> ID of the SBT to burn`
+
+### `masa asbt`
+
+ASBT Commands
+
+#### `masa asbt deploy`
+
+Deploys ASBTs
+
+#### `masa asbt mint <contract-address> <receiver>`
+
+Mints ASBTs
+
+- `<contract-address> Address of the SBT to mint on`
+- `<receiver> Address of the SBT receiver`
 
 ### `masa settings`
 
