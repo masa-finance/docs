@@ -1,21 +1,21 @@
 ---
-title: Membership badges
+title: Acheivement SBTs
 ---
 
-# Membership badges
+# Achievement badges
 
-With Masa, you can build a membership program using non-transferable, soulbound badges. For example, a web3 gaming platform with active Discord communities can issue a membership badge to their longest-standing community members who will get perks, and access to exclusive offers, and souldrops. In this guide, we cover the steps for setting up a membership program using SBT Badges.
+With Masa, you can track and reward an individuals acheivements in your community by using non-transferable, soulbound Acheivement badges. For example, a web3 quest platform with active members participating in quests can issue an Acheivement SBT to the participants who were in the top 5% of the number of completed quests in a week. Having an achievment SBT would unlock priority access to future quests and grant allow list spots in partner souldrops (airdrops). In this guide, we cover the steps for launching an Acheivement SBT using Masa.
 
-**Using soulbound membership badges you can**
+**Using Achievement SBTs you can build**
 
-- Mint a non-transferable, soulbound badge that represents a user’s community membership as proof-of-status. 
-- Use soulbound membership badges as unique identifiers, you can give badge holders different access to perks and rewards.
-- Use soulbound membership badges as unique identifiers, you can market to a specific group of users with membership badge SBTs in their wallets.
+- A non-transferrable, soulbound badge that represents a user’s achievements and/or quest completions as a proof-of-participation. 
+- Soulbound achievement badges can be coupled with Membership badges to create a tier-based membership system or loyalty program. 
+- Using soulbound achievement badges as unique identifiers, you can reward and market to a specific group of users with achievement badge SBTs in their wallets.
 
 **For example:**
-  - **Loyalty Program:** you can mint various tiers and types of “VIP / OG badges” to represent a user’s loyalty status in a tier-based membership program. 
-  - **Ambassador Program:** you can mint various tiers and types of “contributor/moderator/ambassador badges” to represent a member’s community status
-  - **Employee Program:** you can mint various membership badges to reward employees, such as “Employee #1 / #2 / #3”
+- **Reward / Quest Program:** a user incentive pool which qualification is based on completion of specific quests, identified via quest achievement SBT badges
+- **Off-chain Achievements:** you can mint a Achievement Badge when a user joins your Discord channel
+- **On-chain Achievements:** you can mint a Achievement Badge when a contributor deploys a smart contract 
 
 :::tip
 You need to have the Masa CLI installed, if you have not completed the Quickstart you can do so [here] (#)
@@ -104,7 +104,7 @@ You can view the transaction on the Base Goerli testnet [here] (https://goerli.b
 ## Whats next 
 If you’re interested in other use cases, you can dive into our guides:
 - Bot killer
-- Achievements
+- Membership
 - Quest
 - Soulnames
 - Credit score
