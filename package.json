@@ -18,7 +18,7 @@
   "dependencies": {
     "@docusaurus/core": "2.4.0",
     "@docusaurus/preset-classic": "2.4.0",
-    "@masa-finance/masa-react": "^1.1.28",
+    "@masa-finance/masa-react": "^1.1.30",
     "@mdx-js/react": "^1.6.22",
     "autoprefixer": "^10.4.14",
     "clsx": "^1.2.1",
@@ -32,7 +32,7 @@
     "@tsconfig/docusaurus": "^1.0.7",
     "docusaurus-node-polyfills": "^1.0.0",
     "tailwindcss": "^3.3.1",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   },
   "browserslist": {
     "production": [

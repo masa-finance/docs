@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.12.5](../README.md) / [Exports](../modules.md) / MasaSBT
+ - v1.13.2](../README.md) / [Exports](../modules.md) / MasaSBT
 
 # Class: MasaSBT
 
@@ -22,6 +22,7 @@
 ### Methods
 
 - [connect](MasaSBT.md#connect)
+- [deployASBT](MasaSBT.md#deployasbt)
 
 ## Constructors
 
@@ -53,7 +54,7 @@ MasaBase.masa
 
 ### connect
 
-▸ **connect**(`address`): `Promise`<{ `burn`: (`SBTId`: `BigNumber`) => `undefined` \| `Promise`<`boolean`\> ; `links`: `undefined` \| [`MasaSoulLinker`](MasaSoulLinker.md) ; `list`: (`address?`: `string`) => `undefined` \| `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>  }\>
+▸ **connect**(`address`): `Promise`<{ `burn`: (`SBTId`: `BigNumber`) => `undefined` \| `Promise`<`boolean`\> ; `links`: `undefined` \| [`MasaSoulLinker`](MasaSoulLinker.md) ; `list`: (`address?`: `string`) => `undefined` \| `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> ; `mintASBT`: (`receiver`: `string`) => `Promise`<`void`\>  }\>
 
 #### Parameters
 
@@ -63,4 +64,23 @@ MasaBase.masa
 
 #### Returns
 
-`Promise`<{ `burn`: (`SBTId`: `BigNumber`) => `undefined` \| `Promise`<`boolean`\> ; `links`: `undefined` \| [`MasaSoulLinker`](MasaSoulLinker.md) ; `list`: (`address?`: `string`) => `undefined` \| `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>  }\>
+`Promise`<{ `burn`: (`SBTId`: `BigNumber`) => `undefined` \| `Promise`<`boolean`\> ; `links`: `undefined` \| [`MasaSoulLinker`](MasaSoulLinker.md) ; `list`: (`address?`: `string`) => `undefined` \| `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> ; `mintASBT`: (`receiver`: `string`) => `Promise`<`void`\>  }\>
+
+___
+
+### deployASBT
+
+▸ **deployASBT**(`name`, `symbol`, `baseTokenUri`, `adminAddress?`): `Promise`<`undefined` \| `string`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `symbol` | `string` |
+| `baseTokenUri` | `string` |
+| `adminAddress?` | `string` |
+
+#### Returns
+
+`Promise`<`undefined` \| `string`\>

@@ -18,7 +18,7 @@ export default function Hero() {
         <p className="text-[gray] text-[22px]">
           The premiere web3 identity and credit protocol
         </p>
-        <Link to="docs/masa/introduction">
+        <Link to="docs/introduction">
             <p className="py-8 text-xl font-bold">Get Started</p>
         </Link>
         <p className="font-bold">Build with Masa</p>
