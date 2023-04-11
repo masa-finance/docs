@@ -205,6 +205,6 @@ Metadata: {
 bash ~ %
 ```
 
-## Next steps
+## Whats next
 
 You can now explore SBT use cases, guides, and developer documentation for the Masa SDK, Masa React, and Masa Identity Contracts.

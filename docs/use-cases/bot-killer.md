@@ -1,5 +1,5 @@
 ---
-title: Bot Killer SBTs
+title: Bot kller 
 ---
 
 # Bot killer
@@ -28,6 +28,8 @@ yarn add @masa-finance/masa-sdk --save
 ```bash
 npm i @masa-finance/masa-sdk --save
 ```
+
+**/// @sebastian - the CLI example here should be deleted becuase it is repeatativ with the quickstart. Can you add at the end an equivalent example using the SDK with code snippets? Thank you!**
 
 ## Mint a Masa Green using CLI
 
@@ -211,9 +213,15 @@ Metadata: {
 bash ~ %
 ```
 
+## Mint Masa Green with SDK
 
-**ID Verification* (coming soon)**
+/// Sebastian to add examples based on the SBT implimentation of Masa Green using the SDK and/or masa-react here 
 
-**OFAC Wallet screening (coming soon)**
+## Whats next
+If you’re interested in using our beta Masa Green SBTs please reach out to help@masa.finance or send us a [DM on Twitter](https://twitter.com/getmasafi)
 
-**Wallet screening (coming soon)**
+**ID Verification* (in beta coming soon)**
+
+**OFAC Wallet screening (in beta coming soon)**
+
+**Wallet screening (in beta coming soon)**

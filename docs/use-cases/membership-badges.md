@@ -95,13 +95,13 @@ You can view the transaction on the Base Goerli testnet [here] (https://goerli.b
 
 ### Using SDK
 
-/// @Sebastian to add code snippet example for minting here
+**/// @Sebastian to add code snippet example for minting here**
 
 ## Display SBT in React UI
 
-/// @Sebastian to add code snippet example for displaying an SBT image in React
+**/// @Sebastian to add code snippet example for displaying an SBT image in React**
 
-## Whats next 
+## Whats next
 If you’re interested in other use cases, you can dive into our guides:
 - Bot killer
 - Achievements

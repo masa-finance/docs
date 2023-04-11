@@ -1,5 +1,5 @@
 ---
-title: Soulnames (Soulbound domains)
+title: Soulnames
 ---
 
 # Soulnames (Soulbound domains)
@@ -8,7 +8,7 @@ With Masa, you can build an engaged a loyal user base around your game or platfo
 
 **Using custom soulbound domain names you can**
 
-- Create a custom domain name for your community members as a unique way to showcase community affinity. For example, if you run a corgi community, you can issue custom “.corgi” domain names through Masa.
+- Create a custom domain name for your community members as a unique way to showcase community affinity. For example, if you run a corgi community, you can issue custom `.corgi` domain names through Masa.
 - Create a custom domain name that represents a smart contract object within a metaverse game. An object might be a plot of land that is represented by a smart contract. Using a Soulname to create a naming convention for land plots enables easy customization of in-game object naming.
 
 ## Whats next 

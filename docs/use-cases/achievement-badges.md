@@ -1,5 +1,5 @@
 ---
-title: Acheivement SBTs
+title: Acheivement badges
 ---
 
 # Achievement badges
@@ -10,7 +10,7 @@ With Masa, you can track and reward an individuals acheivements in your communit
 
 - A non-transferrable, soulbound badge that represents a user’s achievements and/or quest completions as a proof-of-participation. 
 - Soulbound achievement badges can be coupled with Membership badges to create a tier-based membership system or loyalty program. 
-- Using soulbound achievement badges as unique identifiers, you can reward and market to a specific group of users with achievement badge SBTs in their wallets.
+- Soulbound achievement badges as unique identifiers, you can reward and market to a specific group of users with achievement badge SBTs in their wallets.
 
 **For example:**
 - **Reward / Quest Program:** a user incentive pool which qualification is based on completion of specific quests, identified via quest achievement SBT badges

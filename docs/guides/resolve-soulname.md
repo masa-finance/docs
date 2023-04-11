@@ -1,5 +1,0 @@
----
-title: Resolve Soulname
----
-
-# Introduction

@@ -1,5 +1,0 @@
----
-title: Display SBTs
----
-
-# Introduction
