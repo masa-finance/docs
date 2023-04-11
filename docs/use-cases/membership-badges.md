@@ -34,12 +34,16 @@ yarn add @masa-finance/masa-sdk --save
 npm i @masa-finance/masa-sdk --save
 ```
 
-## Deploy ASBT contract
-In this guide we will use an Authority SBT that can be minted (dropped) directly to a users wallet without any user interaction with web3. 
+## Deploy SBT Badge contract
+In this guide we will use an _Authority SBT_ that can be minted (dropped) directly to a users wallet without any user interaction with web3. 
 
-### Deploy contract using CLI
+:::caution
+You will need a *minimum of 0.10* of your testnet asset to deploy a contract. This will either be _Goerli ETH_, _Base ETH_, _Mumbai MATIC_, _Alfajores Celo_, or _Testnet BNB_.
+:::
+
+### Using CLI
 ```bash
-masa deploy asbt --network basegorli 
+masa asbt deploy --network basegoerli 
 ```
  ```bash
   __  __                            ____   _       ___ 
@@ -48,21 +52,59 @@ masa deploy asbt --network basegorli
  | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | | 
  |_|  |_|  \__,_| |___/  \__,_|    \____| |_____| |___|
                                                        
-Deploying ASBT contract for
-Signer Address: '0xb3EAE0c0d3e09241a48485D7fDE226587A4E4461'
-Network: 'basegoerli'
+Deploying ASBT contract
 
-Enter the name of the contract: 'Masa ASBT Example'
-Enter the name of the SBT: 'Masa OG'
-Enter the ticker of theh SBT: 'MOG'
-Enter the URL for the metadata image: 'https://6ryc4y7ispmrqvo6lbfyc7hruojxjl3dvaqxqwffervrwqchnwoq.arweave.net/9HAuY-iT2RhV3lhLgXzxo5N0r2OoIXhYpSRrG0BHbZ0'
-Deploying ASBT on 'basegoerli'
-Waiting for transaction '0x9bb86a26955fbb840ec1ea5df6cee8d8236cd3f9ca79b230a5179885bfeb2ff7' to finalize!
-ASBT sucessfully deployed on 'basegoerli' with contract address: '0x...bnv'
-Now you must configure your ASBT contract! Use the command `masa deploy` to get the help menu for SBT deployments 🚀
-bash ~ %
+Enter the name of the SBT: Base Test SBT 
+Enter the ticker of the SBT: BTS
+Enter the URL for the metadata image: https:test.img
+Admin address (leave empty to use: '0xb3EAE0c0d3e09241a48485D7fDE226587A4E4461'): 
+Deploying ASBT to network 'basegoerli'
+Waiting for transaction '0xf9707485c442b23bc45da03ccf16c048eb73c00be137ab01fc70824149b4d4a7' to finalize!
+ASBT successfully deployed to 'basegoerli' with contract address: '0x4d527F3eFD9dCf5fF44284FfB9fe22C6bdc2Da20'
+bash ~ % 
+
 ```
-
 :::tip
 You can use many of the perminant storage options available for develoeprs in web3 to save your SBT Badge metadata. For a quick guide on using Arweave go here.
 :::
+## Mint SBT Badge
+
+### Using CLI
+It is simple to mint an SBT using the CLI just copy the contract address from your deployment - we will use the one we just deployed `0x4d527F3eFD9dCf5fF44284FfB9fe22C6bdc2Da20` and mint an SBT Badge to the deployer wallet used `0xb3EAE0c0d3e09241a48485D7fDE226587A4E4461`. 
+
+```bash
+masa asbt mint 0x4d527F3eFD9dCf5fF44284FfB9fe22C6bdc2Da20 0xb3EAE0c0d3e09241a48485D7fDE226587A4E4461
+```
+```bash
+  __  __                            ____   _       ___ 
+ |  \/  |   __ _   ___    __ _     / ___| | |     |_ _|
+ | |\/| |  / _` | / __|  / _` |   | |     | |      | | 
+ | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | | 
+ |_|  |_|  \__,_| |___/  \__,_|    \____| |_____| |___|
+                                                       
+Minting SBT on:
+Contract Name: 'Base Test SBT '
+Contract Symbol: 'BTS'
+Contract Address: '0x4d527F3eFD9dCf5fF44284FfB9fe22C6bdc2Da20'
+To receiver: '0xb3EAE0c0d3e09241a48485D7fDE226587A4E4461'
+Waiting for transaction '0xd10bc0eea5adce2af0e2ce5ba4504f94d1a6eb36906b126c10d32a9c2a583d87' to finalize!
+Minted to token with ID: 1 receiver '0xb3EAE0c0d3e09241a48485D7fDE226587A4E4461'
+bash ~ %
+```
+You can view the transaction on the Base Goerli testnet [here] (https://goerli.basescan.org/tx/0xd10bc0eea5adce2af0e2ce5ba4504f94d1a6eb36906b126c10d32a9c2a583d87)
+
+### Using SDK
+
+/// @Sebastian to add code snippet example for minting here
+
+## Display SBT in React UI
+
+/// @Sebastian to add code snippet example for displaying 
+
+## Whats next 
+If you’re interested in other use cases, you can dive into our guides:
+- Bot killer
+- Achievements
+- Quest
+- Soulnames
+- Credit score
