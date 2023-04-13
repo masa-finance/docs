@@ -39,8 +39,8 @@ export const Green = () => {
     <div>
       <div>
         <button
-          onClick={reloadGreens}>Reload
-          Greens
+          onClick={reloadGreens}>
+          Reload Greens
         </button>
       </div>
       {!isGreensLoading && greens ? (
@@ -59,8 +59,7 @@ export const Green = () => {
         )
       ) : (
         <div>
-          Loading
-          ...
+          Loading ...
         </div>
       )}
     </div>
