@@ -123,9 +123,8 @@ In this guide we will use an _Authority SBT_ that can be minted (dropped) direct
 You will need a *minimum of 0.10* of your testnet asset to deploy a contract. This will either be _Goerli ETH_, _Base ETH_, _Mumbai MATIC_, _Alfajores Celo_, or _Testnet BNB_.
 :::
 
-
 ```bash
-masa asbt deploy --network basegoerli 
+masa asbt deploy --network basegoerli
 ```
 
  ```bash
@@ -241,7 +240,7 @@ const { mintASBT } = await masa.sbt.connect(contractAddress);
 await mintASBT(receiver);
 ```
 
-## Whats next
+## What's next
 
 If you’re interested in other use cases, you can dive into our guides:
 
