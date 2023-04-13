@@ -246,7 +246,7 @@ await mintASBT(receiver);
 If you’re interested in other use cases, you can dive into our guides:
 
 - [Bot killer](./bot-killer.md)
-- Membership
+- [Membership](./membership-badges.md)
 - Quest
-- Soulnames
+- [Soulnames](./soul-names.md)
 - Credit score
