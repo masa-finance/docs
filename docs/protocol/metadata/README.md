@@ -1,17 +1,15 @@
 # Metadata Schema
 
 <!-- TOC -->
-
 * [Metadata Schema](#metadata-schema)
-    * [Soulbound Identity](#soulbound-identity)
-        * [Creation Process](#creation-process)
-    * [Soulbound Credit Report](#soulbound-credit-report)
-        * [Creation Process](#creation-process)
-    * [Soulbound 2FA](#soulbound-2fa)
-        * [Creation Process](#creation-process)
-    * [Soul Names](#soul-names)
-        * [Creation Process](#creation-process)
-
+  * [Soulbound Identity](#soulbound-identity)
+    * [Creation Process](#creation-process)
+  * [Soulbound Credit Score](#soulbound-credit-score)
+    * [Creation Process](#creation-process-1)
+  * [Soulbound Green](#soulbound-green)
+    * [Creation Process](#creation-process-2)
+  * [Soul Names](#soul-names)
+    * [Creation Process](#creation-process-3)
 <!-- TOC -->
 
 ## Soulbound Identity
@@ -38,20 +36,21 @@ interface IIdentity {
 
 ![Soulbound Identity Creation Process](../assets/identity_with_soul_name_creation_dataflow.png)
 
-## Soulbound Credit Report
+## Soulbound Credit Score
 
-Endpoint: `https://metadata.masa.finance/v1.0/credit-report/<TokenId>.json`
+Endpoint: `https://metadata.masa.finance/v1.0/credit-score/<TokenId>.json`
 
-See [here](./credit-report/metadata.json) for a sample and [here](./credit-report/metadata_authenticated.json) for an
+See [here](./credit-score/metadata.json) for a sample and [here](./credit-score/metadata_authenticated.json) for an
 authenticated example
 
 ```typescript
-interface ICreditReport {
-  name: "Masa Soulbound Credit Report v1.0.0";
-  description: "A decentralized credit report";
-  image: "https://metadata.masa.finance/v1.0/identity/credit-report.png";
+interface ICreditScore {
+  name: "Masa Soulbound Credit Score v1.0.0";
+  description: "A decentralized credit score";
+  image: "https://metadata.masa.finance/v1.0/credit-score/credit-score.png";
   properties: {
     tokenId: string;
+    identityId?: string;
     account?: string;
     lastUpdated?: string;
     model_version?: string;
@@ -64,31 +63,31 @@ interface ICreditReport {
 
 ### Creation Process
 
-![Soulbound Credit Report Creation Process](../assets/credit_report_creation_dataflow.png)
+![Soulbound Credit Score Creation Process](../assets/credit_score_creation_dataflow.png)
 
-## Soulbound 2FA
+## Soulbound Green
 
-Endpoint: `https://metadata.masa.finance/v1.0/2fa/<TokenId>.json`
+Endpoint: `https://metadata.masa.finance/v1.0/green/<TokenId>.json`
 
 See [here] for a sample and [here] for an
 authenticated example
 
 ```typescript
-interface I2fa {
-  name: "Masa Soulbound 2FA v1.0.0";
-  description: "A decentralized 2fa";
-  image: "https://metadata.masa.finance/v1.0/2fa/2fa.png";
+interface IGreen {
+  name: "Masa Soulbound Green v1.0.0";
+  description: "Masa Green is a decentralized authentication solution";
+  image: "https://metadata.masa.finance/v1.0/green/green.png";
   properties: {
     tokenId: string;
+    identityId?: string;
     account?: string;
   };
 }
-
 ```
 
 ### Creation Process
 
-![Soulbound 2fa Creation Process](../assets/2fa_creation_dataflow.png)
+![Soulbound Green Creation Process](../assets/green_creation_dataflow.png)
 
 ## Soul Names
 
@@ -108,12 +107,16 @@ interface Attribute {
 
 interface ISoulName {
   description: "This is a soul name!";
-  external_url: "https://app.masa.finance";
-  image: string;
+  external_url: string
   name: string;
+  image: string;
+  imageHash: string;
+  imageHashSignature: string;
+  network: string;
+  chainId: string;
+  signature: string;
   attributes: Attribute[];
 }
-
 ```
 
 ### Creation Process
