@@ -13,7 +13,7 @@ Using Masa Green SBT you can quickly and easily kill bots and build
 - **Bot-proof airdrop distributions:** you can implement Masa Green SBT to verify airdrop claimers through on-chain 2FA in order to prevent airdrop distribution bot manipulations 
 - **Bot-proof governance voting:** you can implement Masa Green SBT to kill bot manipulation of your community or DAO governance voting process through on-chain 2FA
 
-## Mint a Masa Green using the Masa CLI
+## Mint Masa Green using the Masa CLI
 
 ### Install Masa CLI
 
