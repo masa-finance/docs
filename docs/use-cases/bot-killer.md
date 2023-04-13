@@ -1,9 +1,9 @@
 ---
-title: Bot Killer
+title: Bot killer
 toc_max_heading_level: 4
 ---
 
-# Bot Killer
+# Bot killer
 
 With Masa Green you can kill bots and comply with regulation while preserving an individuals' privacy. Using two-factor authentication Masa Green can verify an on-chain user and prove they are human (and not a bot) with 99% effectiveness.
 
