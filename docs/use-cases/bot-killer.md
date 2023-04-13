@@ -23,7 +23,6 @@ This guide covers using the Masa CLI to mint a Masa Green SBT. You can use eithe
 
 ```bash
 yarn global add @masa-finance/masa-cli
-
 ```
 
 #### Install via npm
