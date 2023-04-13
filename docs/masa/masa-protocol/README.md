@@ -3,29 +3,27 @@
 Masa, the premiere web3 identity and credit protocol. Be the first to build soulbound tokens in web3.
 
 <!-- TOC -->
-
 * [Masa Protocol](#masa-protocol)
-    * [Introduction](#introduction)
-    * [Masa soulbound Identity](#masa-soulbound-identity)
-    * [Masa soulbound Credit Report](#masa-soulbound-credit-report)
-    * [Masa Soul Names](#masa-soul-names)
+  * [Introduction](#introduction)
+  * [Masa soulbound Identity](#masa-soulbound-identity)
+  * [Masa soulbound Credit Score](#masa-soulbound-credit-score)
+  * [Masa Soul Names](#masa-soul-names)
 * [Masa Metadata API](#masa-metadata-api)
-    * [Soulbound Identity](#soulbound-identity)
-        * [Metadata base URI](#metadata-base-uri)
-        * [**JSON Schema**](#json-schema)
-    * [Soulbound Credit Report](#soulbound-credit-report)
-        * [Metadata base URI](#metadata-base-uri)
-        * [**JSON Schema**](#json-schema)
+  * [Soulbound Identity](#soulbound-identity)
+    * [Metadata base URI](#metadata-base-uri)
+    * [**JSON Schema**](#json-schema)
+  * [Soulbound Credit Score](#soulbound-credit-score)
+    * [Metadata base URI](#metadata-base-uri-1)
+    * [**JSON Schema**](#json-schema-1)
 * [Relevant Repositories](#relevant-repositories)
-    * [Frontends](#frontends)
-    * [Libraries](#libraries)
-    * [Backend & Contracts](#backend--contracts)
-    * [Blockchain](#blockchain)
-    * [Relevant Links](#relevant-links)
-        * [Personal Finance Manager](#personal-finance-manager)
-        * [Soulbound Identity](#soulbound-identity)
-        * [Additional Resources](#additional-resources)
-
+  * [Frontends](#frontends)
+  * [Libraries](#libraries)
+  * [Backend & Contracts](#backend--contracts)
+  * [Blockchain](#blockchain)
+  * [Relevant Links](#relevant-links)
+    * [Personal Finance Manager](#personal-finance-manager)
+    * [Soulbound Identity](#soulbound-identity-1)
+    * [Additional Resources](#additional-resources)
 <!-- TOC -->
 
 ## Introduction
@@ -36,9 +34,9 @@ In order to create the first decentralized credit bureau Masa implements a set o
 
 The Masa Identity is a soulbound Identity Token that is generated for a user when they sign up to the Masa protocol and includes the following information:
 
-## Masa soulbound Credit Report
+## Masa soulbound Credit Score
 
-The soulbound Masa Credit Report enables the bridging and aggregation of on and off-chain data in order to create a hybrid decentralized credit report. The Masa credit report can include the following information depending on which region you are located (read a full list of supported countries [here](https://developers.masa.finance/docs/supported-countries)):
+The soulbound Masa Credit Score enables the bridging and aggregation of on and off-chain data in order to create a hybrid decentralized credit score. The Masa credit score can include the following information depending on which region you are located (read a full list of supported countries [here](https://developers.masa.finance/docs/supported-countries)):
 
 - Credit Bureau Data
 - Bank Transaction Data
@@ -113,32 +111,32 @@ Response:
 }
 ```
 
-## Soulbound Credit Report
+## Soulbound Credit Score
 
 ### Metadata base URI
 
-`https://metadata.masa.finance/v1.0/credit-report/`
+`https://metadata.masa.finance/v1.0/credit-score/`
 
 ### **JSON Schema**
 
-A unique JSON schema is created for each user with the following format. Details can be found [here](https://developers.masa.finance/docs/developers/sdk/interfaces/ICreditReport)
+A unique JSON schema is created for each user with the following format. Details can be found [here](https://developers.masa.finance/docs/developers/sdk/interfaces/ICreditScore)
 
-`GET https://metadata.masa.finance/v1.0/credit-report/{id}.json`
+`GET https://metadata.masa.finance/v1.0/credit-score/{id}.json`
 
 Where `{id}` is a unique 77 character ID that is numeric characters only
 
 From: `0`  
 To: `99999999999999999999999999999999999999999999999999999999999999999999999999999`
 
-Public Request `GET https://metadata.masa.finance/v1.0/credit-report/23334135456782334234234234.json`:
+Public Request `GET https://metadata.masa.finance/v1.0/credit-score/23334135456782334234234234.json`:
 
 Response:
 
 ```json
 {
-  "name": "Masa Soulbound Credit Report v1.0.0",
-  "description": "A decentralized credit report",
-  "image": "https://metadata.masa.finance/v1.0/identity/credit-report.png",
+  "name": "Masa Soulbound Credit Score v1.0.0",
+  "description": "A decentralized credit score",
+  "image": "https://metadata.masa.finance/v1.0/identity/credit-score.png",
   "properties": {
     "tokenId": "23334135456782334234234234",
     "account": "0x418c9210D7EECa2C6e65830130f2d648D3d455A1"
@@ -146,7 +144,7 @@ Response:
 }
 ```
 
-Gated Request `GET https://metadata.masa.finance/v1.0/credit-report/23334135456782334234234234.json` while being logged in to the Masa Infrastructure:
+Gated Request `GET https://metadata.masa.finance/v1.0/credit-score/23334135456782334234234234.json` while being logged in to the Masa Infrastructure:
 
 ```json
 {
@@ -160,9 +158,9 @@ Response:
 
 ```json
 {
-  "name": "Masa Soulbound Credit Report v1.0.0",
-  "description": "A decentralized credit report",
-  "image": "https://metadata.masa.finance/v1.0/identity/credit-report.png",
+  "name": "Masa Soulbound Credit Score v1.0.0",
+  "description": "A decentralized credit score",
+  "image": "https://metadata.masa.finance/v1.0/identity/credit-score.png",
   "properties": {
     "tokenId": "23334135456782334234234234",
     "account": "0x418c9210D7EECa2C6e65830130f2d648D3d455A1",
@@ -229,6 +227,6 @@ Response:
 ### Additional Resources
 
 - [Soulbound Identity](https://github.com/masa-finance/masa-contracts-identity/blob/main/docs/SoulboundIdentity.md)
-- [Soulbound Credit Report](https://github.com/masa-finance/masa-contracts-identity/blob/main/docs/SoulboundCreditReport.md)
+- [Soulbound Credit Score](https://github.com/masa-finance/masa-contracts-identity/blob/main/docs/SoulboundCreditScore.md)
 - [Soul Name](https://github.com/masa-finance/masa-contracts-identity/blob/main/docs/SoulName.md)
 - [Soul Linker](https://github.com/masa-finance/masa-contracts-identity/blob/main/docs/SoulLinker.md)

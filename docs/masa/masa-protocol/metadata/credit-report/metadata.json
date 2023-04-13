@@ -1,9 +1,0 @@
-{
-  "name": "Masa Soulbound Credit Report v1.0.0",
-  "description": "A decentralized credit report",
-  "image": "https://metadata.masa.finance/v1.0/identity/credit-report.png",
-  "properties": {
-    "tokenId": "1",
-    "account": "0x418c9210D7EECa2C6e65830130f2d648D3d455A1"
-  }
-}
