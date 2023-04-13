@@ -217,7 +217,7 @@ Metadata: {
 bash ~ %
 ```
 
-## Mint Masa Green with Masa SDK
+## Mint Masa Green with the Masa SDK
 
 ### Install Masa SDK
 
