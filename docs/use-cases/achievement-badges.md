@@ -1,5 +1,6 @@
 ---
 title: Achievement badges
+toc_max_heading_level: 4
 ---
 
 # Achievement badges
