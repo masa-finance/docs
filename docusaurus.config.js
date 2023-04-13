@@ -88,7 +88,7 @@ const config = {
           items: [
             {
               label: "Introduction",
-              to: "docs/masa/introduction",
+              to: "docs/introduction",
             },
           ],
         },
