@@ -113,7 +113,7 @@ Commands:
   credit-score link create <credit-score-id> <reader-identity-id>                             Creates a Soul Linker Passport
   credit-score link establish <passport>                                                      Establishes a link to a Credit Score
   credit-score link query <passport>                                                          Queries a link to a Credit Score
-  credit-score link list <credit-score-id>                                                    Lists all soul links for a credit report id
+  credit-score link list <credit-score-id>                                                    Lists all soul links for a credit score id
   credit-score link verify [options] <credit-score-id>                                        Verifies soul link
   credit-score link break <credit-score-id> <reader-identity-id>                              Verifies soul link
   green                                                                                       Green Commands
@@ -359,7 +359,7 @@ Queries a link to a Credit Score
 
 ##### `masa credit-score link list <credit-score-id>`
 
-Lists all soul links for a credit report id
+Lists all soul links for a credit score id
 
 - `<credit-score-id> ID of the Credit Score to list all the links of`
 
