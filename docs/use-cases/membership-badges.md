@@ -9,7 +9,7 @@ With Masa, you can build a membership program using non-transferable, soulbound 
 
 **Using soulbound membership badges you can**
 
-- Mint a non-transferable, soulbound badge that represents a user’s community membership as proof-of-status. 
+- Mint a non-transferable, soulbound badge that represents a user’s community membership as proof-of-status.
 - Use soulbound membership badges as unique identifiers, you can give badge holders different access to perks and rewards.
 - Use soulbound membership badges as unique identifiers, you can market to a specific group of users with membership badge SBTs in their wallets.
 
@@ -116,8 +116,6 @@ bash ~ %
 Transfer some Base Goerli ETH into the account address listed in the CLI.
 :::
 
-
-
 ### Deploy SBT Badge contract
 
 In this guide we will use an _Authority SBT_ that can be minted (dropped) directly to a users wallet without any user interaction with web3. 
@@ -125,7 +123,6 @@ In this guide we will use an _Authority SBT_ that can be minted (dropped) direct
 :::caution
 You will need a *minimum of 0.10* of your testnet asset to deploy a contract. This will either be _Goerli ETH_, _Base ETH_, _Mumbai MATIC_, _Alfajores Celo_, or _Testnet BNB_.
 :::
-
 
 ```bash
 masa asbt deploy --network basegoerli 
@@ -156,7 +153,6 @@ You can use many of the permanent storage options available for developers in we
 :::
 
 ### Mint SBT Badge
-
 
 It is simple to mint an SBT using the CLI just copy the contract address from your deployment - we will use the one we just deployed `0x4d527F3eFD9dCf5fF44284FfB9fe22C6bdc2Da20` and mint an SBT Badge to the deployer wallet used `0xb3EAE0c0d3e09241a48485D7fDE226587A4E4461`.
 
