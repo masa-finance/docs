@@ -53,7 +53,7 @@ const config = {
 
   themeConfig: {
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: "dark",
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
@@ -64,7 +64,7 @@ const config = {
         src: "img/logo.svg",
         srcDark: "img/logo-darkmode.svg",
         width: 100,
-        style: {marginRight: '1rem'},
+        style: { marginRight: "1rem" },
       },
       items: [
         {
@@ -74,58 +74,58 @@ const config = {
           label: "Docs",
         },
         {
-            href: "https://github.com/masa-finance/docs",
-            label: "GitHub",
-            position: "right",
-          },
-        ],
-      },
-      footer: {
-        style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Introduction",
-                to: "docs/masa/introduction",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/masa-finance",
-              },
-              {
-                label: "Discord",
-                href: "https://discord.gg/HyHGaKhaKs",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/getmasafi",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "GitHub",
-                href: "https://github.com/masa-finance",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Masa Finance.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
+          href: "https://github.com/masa-finance/docs",
+          label: "GitHub",
+          position: "right",
+        },
+      ],
     },
+    footer: {
+      style: "dark",
+      links: [
+        {
+          title: "Docs",
+          items: [
+            {
+              label: "Introduction",
+              to: "docs/masa/introduction",
+            },
+          ],
+        },
+        {
+          title: "Community",
+          items: [
+            {
+              label: "Stack Overflow",
+              href: "https://stackoverflow.com/questions/tagged/masa-finance",
+            },
+            {
+              label: "Discord",
+              href: "https://discord.gg/HyHGaKhaKs",
+            },
+            {
+              label: "Twitter",
+              href: "https://twitter.com/getmasafi",
+            },
+          ],
+        },
+        {
+          title: "More",
+          items: [
+            {
+              label: "GitHub",
+              href: "https://github.com/masa-finance",
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Masa Finance.`,
+    },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
+    },
+  },
 };
 
 module.exports = config;
