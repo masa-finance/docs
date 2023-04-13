@@ -30,7 +30,7 @@ burn their SBTs.
 ### Masa Soulname NFT (MIN)
 
 A human-readable address that resolves to a person's soul - think ENS for SBTs. Soulnames can be purchased on
-the [Masa Protocol](https://beta.claimyoursoul.masa.finance/) and traded
+the [Masa Protocol](https://app.masa.finance/) and traded
 on [OpenSea](https://testnets.opensea.io/collection/masa-identity-name-v2) - Masa is currently on the Goerli testnet
 only and will launch on the Ethereum mainnet soon.
 
