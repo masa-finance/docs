@@ -221,10 +221,10 @@ Response:
 
 ### Soulbound Identity
 
-- [Masa Identity App - Production](http://claimyoursoul.masa.finance)
-- [Masa Identity App - Staging](http://beta.claimyoursoul.masa.finance)
-- [Masa Identity App - Test](http://test.claimyoursoul.masa.finance)
-- [Masa Identity App - Dev](https://dev.claimyoursoul.masa.finance/)
+- [Masa Identity App - Production](http://app.masa.finance)
+- [Masa Identity App - Staging](http://testnet.app.masa.finance)
+- [Masa Identity App - Test](http://test.app.masa.finance)
+- [Masa Identity App - Dev](https://dev.app.masa.finance/)
 
 ### Additional Resources
 
