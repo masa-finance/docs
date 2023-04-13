@@ -51,9 +51,3 @@ A web3-native credit score computed from a user's web3 activity on the Ethereum 
 
 An SBT factory smart contract enabling developers to deploy a custom SBT smart contract using the Masa SBT standard.
 Deployed smart contracts can be associated with a user's core MID and are fully manageable using the Masa Protocol.
-
-## Protocol status
-
-> 🚧 Important
->
-> Masa is currently on the Goerli testnet and will be launching on the Ethereum mainnet soon
