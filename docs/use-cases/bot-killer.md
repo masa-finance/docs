@@ -219,8 +219,6 @@ bash ~ %
 
 ## Mint Masa Green with Masa SDK
 
-/// Sebastian to add examples based on the SBT implementation of Masa Green using the SDK and/or masa-react here
-
 ### Install Masa SDK
 
 This guide covers using the Masa SDK to mint a Masa Green SBT. You can use either `yarn` or `npm` for the installation.
