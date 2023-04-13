@@ -108,7 +108,7 @@ interface Attribute {
 
 interface ISoulName {
   description: "This is a soul name!";
-  external_url: "https://beta.claimyoursoul.masa.finance";
+  external_url: "https://app.masa.finance";
   image: string;
   name: string;
   attributes: Attribute[];
