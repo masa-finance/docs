@@ -1,4 +1,4 @@
-[Masa SDK](../README.md) / [Exports](../modules.md) / ERC20Interface
+[# Masa SDK](../README.md) / [Exports](../modules.md) / ERC20Interface
 
 # Interface: ERC20Interface
 

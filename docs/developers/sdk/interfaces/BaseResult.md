@@ -1,4 +1,4 @@
-[Masa SDK](../README.md) / [Exports](../modules.md) / BaseResult
+[# Masa SDK](../README.md) / [Exports](../modules.md) / BaseResult
 
 # Interface: BaseResult
 

@@ -1,4 +1,4 @@
-[Masa SDK](../README.md) / [Exports](../modules.md) / MasaContracts
+[# Masa SDK](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 

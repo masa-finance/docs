@@ -1,4 +1,4 @@
-[Masa SDK](../README.md) / [Exports](../modules.md) / GreenDetails
+[# Masa SDK](../README.md) / [Exports](../modules.md) / GreenDetails
 
 # Interface: GreenDetails
 

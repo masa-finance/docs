@@ -1,4 +1,4 @@
-[Masa SDK](../README.md) / [Exports](../modules.md) / ChallengeResult
+[# Masa SDK](../README.md) / [Exports](../modules.md) / ChallengeResult
 
 # Interface: ChallengeResult
 

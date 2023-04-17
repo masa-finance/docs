@@ -1,4 +1,4 @@
-[Masa SDK](../README.md) / [Exports](../modules.md) / MasaIdentity
+[# Masa SDK](../README.md) / [Exports](../modules.md) / MasaIdentity
 
 # Class: MasaIdentity
 

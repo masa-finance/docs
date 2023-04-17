@@ -1,4 +1,4 @@
-[Masa SDK](../README.md) / [Exports](../modules.md) / MasaCreditScore
+[# Masa SDK](../README.md) / [Exports](../modules.md) / MasaCreditScore
 
 # Class: MasaCreditScore
 

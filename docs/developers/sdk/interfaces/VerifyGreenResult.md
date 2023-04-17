@@ -1,4 +1,4 @@
-[Masa SDK](../README.md) / [Exports](../modules.md) / VerifyGreenResult
+[# Masa SDK](../README.md) / [Exports](../modules.md) / VerifyGreenResult
 
 # Interface: VerifyGreenResult
 

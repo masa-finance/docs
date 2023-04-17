@@ -1,4 +1,4 @@
-[Masa SDK](../README.md) / [Exports](../modules.md) / SoulLinker
+[# Masa SDK](../README.md) / [Exports](../modules.md) / SoulLinker
 
 # Class: SoulLinker
 

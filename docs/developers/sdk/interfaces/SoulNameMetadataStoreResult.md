@@ -1,4 +1,4 @@
-[Masa SDK](../README.md) / [Exports](../modules.md) / SoulNameMetadataStoreResult
+[# Masa SDK](../README.md) / [Exports](../modules.md) / SoulNameMetadataStoreResult
 
 # Interface: SoulNameMetadataStoreResult
 

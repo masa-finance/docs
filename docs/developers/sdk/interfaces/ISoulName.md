@@ -1,4 +1,4 @@
-[Masa SDK](../README.md) / [Exports](../modules.md) / ISoulName
+[# Masa SDK](../README.md) / [Exports](../modules.md) / ISoulName
 
 # Interface: ISoulName
 
