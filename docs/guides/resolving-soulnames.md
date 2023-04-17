@@ -42,7 +42,7 @@ Masa supports 10 networks through its CLI and SDK. Masa Green SBT is deployed on
 | BNB Chain      | --bsc        |          |
 | BNB Testnet    | --bsctestnet |          |
 | Celo           | --celo       |          |
-| Celo Alfajores | --bsctestnet |          |
+| Celo Alfajores | --alfajores  |          |
 
 ```bash
 masa settings preset-network <network flag>
