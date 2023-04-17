@@ -8,6 +8,7 @@
 
 - [apiUrl](MasaArgs.md#apiurl)
 - [arweave](MasaArgs.md#arweave)
+- [contractOverrides](MasaArgs.md#contractoverrides)
 - [cookie](MasaArgs.md#cookie)
 - [environment](MasaArgs.md#environment)
 - [networkName](MasaArgs.md#networkname)
@@ -25,6 +26,12 @@ ___
 ### arweave
 
 • `Optional` **arweave**: `ApiConfig`
+
+___
+
+### contractOverrides
+
+• `Optional` **contractOverrides**: `Partial`<[`IIdentityContracts`](IIdentityContracts.md)\>
 
 ___
 

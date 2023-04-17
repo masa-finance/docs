@@ -33,13 +33,14 @@
 
 ### constructor
 
-• **new MasaContracts**(`masa`)
+• **new MasaContracts**(`masa`, `contractOverrides?`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](Masa.md) |
+| `contractOverrides?` | `Partial`<[`IIdentityContracts`](../interfaces/IIdentityContracts.md)\> |
 
 #### Overrides
 
