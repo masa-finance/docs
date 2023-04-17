@@ -1,5 +1,4 @@
-[# Masa React
- - v1.0.38](../README.md) / [Exports](../modules.md) / MasaShape
+[Masa React](../README.md) / [Exports](../modules.md) / MasaShape
 
 # Interface: MasaShape
 
@@ -43,6 +42,8 @@
 - [isSoulnamesLoading](MasaShape.md#issoulnamesloading)
 - [isWalletLoading](MasaShape.md#iswalletloading)
 - [masa](MasaShape.md#masa)
+- [modalSize](MasaShape.md#modalsize)
+- [openMintMasaGreen](MasaShape.md#openmintmasagreen)
 - [openMintSoulnameModal](MasaShape.md#openmintsoulnamemodal)
 - [provider](MasaShape.md#provider)
 - [reloadCreditScores](MasaShape.md#reloadcreditscores)
@@ -55,6 +56,7 @@
 - [setProvider](MasaShape.md#setprovider)
 - [soulnames](MasaShape.md#soulnames)
 - [switchNetwork](MasaShape.md#switchnetwork)
+- [useModalSize](MasaShape.md#usemodalsize)
 - [verbose](MasaShape.md#verbose)
 - [walletAddress](MasaShape.md#walletaddress)
 
@@ -158,15 +160,15 @@ ___
 
 ### handleCreateCreditScore
 
-• `Optional` **handleCreateCreditScore**: () => `void`
+• `Optional` **handleCreateCreditScore**: () => `Promise`<`undefined` \| `boolean`\>
 
 #### Type declaration
 
-▸ (): `void`
+▸ (): `Promise`<`undefined` \| `boolean`\>
 
 ##### Returns
 
-`void`
+`Promise`<`undefined` \| `boolean`\>
 
 ___
 
@@ -227,11 +229,11 @@ ___
 
 ### handleLogout
 
-• `Optional` **handleLogout**: (`logoutCallback?`: () => `void`) => `void`
+• `Optional` **handleLogout**: (`logoutCallback?`: () => `void`) => `Promise`<`void`\>
 
 #### Type declaration
 
-▸ (`logoutCallback?`): `void`
+▸ (`logoutCallback?`): `Promise`<`void`\>
 
 ##### Parameters
 
@@ -241,21 +243,21 @@ ___
 
 ##### Returns
 
-`void`
+`Promise`<`void`\>
 
 ___
 
 ### handlePurchaseIdentity
 
-• `Optional` **handlePurchaseIdentity**: () => `void`
+• `Optional` **handlePurchaseIdentity**: () => `Promise`<`undefined` \| `boolean`\>
 
 #### Type declaration
 
-▸ (): `void`
+▸ (): `Promise`<`undefined` \| `boolean`\>
 
 ##### Returns
 
-`void`
+`Promise`<`undefined` \| `boolean`\>
 
 ___
 
@@ -360,6 +362,32 @@ ___
 
 ___
 
+### modalSize
+
+• `Optional` **modalSize**: ``null`` \| { `height`: `number` ; `width`: `number`  }
+
+___
+
+### openMintMasaGreen
+
+• `Optional` **openMintMasaGreen**: (`callback?`: () => `void`) => `void`
+
+#### Type declaration
+
+▸ (`callback?`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback?` | () => `void` |
+
+##### Returns
+
+`void`
+
+___
+
 ### openMintSoulnameModal
 
 • `Optional` **openMintSoulnameModal**: (`callback?`: () => `void`) => `void`
@@ -382,7 +410,7 @@ ___
 
 ### provider
 
-• `Optional` **provider**: `Signer` \| `Wallet`
+• `Optional` **provider**: `Wallet` \| `Signer`
 
 ___
 
@@ -490,7 +518,7 @@ ___
 
 ### setProvider
 
-• `Optional` **setProvider**: (`provider?`: `Signer` \| `Wallet`) => `void`
+• `Optional` **setProvider**: (`provider?`: `Wallet` \| `Signer`) => `void`
 
 #### Type declaration
 
@@ -500,7 +528,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `provider?` | `Signer` \| `Wallet` |
+| `provider?` | `Wallet` \| `Signer` |
 
 ##### Returns
 
@@ -527,6 +555,28 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `networkName` | `NetworkName` |
+
+##### Returns
+
+`void`
+
+___
+
+### useModalSize
+
+• `Optional` **useModalSize**: (`size`: { `height`: `number` ; `width`: `number`  }) => `void`
+
+#### Type declaration
+
+▸ (`size`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `size` | `Object` |
+| `size.height` | `number` |
+| `size.width` | `number` |
 
 ##### Returns
 
