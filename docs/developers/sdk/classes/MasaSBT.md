@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / MasaSBT
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / MasaSBT
 
 # Class: MasaSBT
 

@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / IIdentity
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / IIdentity
 
 # Interface: IIdentity
 

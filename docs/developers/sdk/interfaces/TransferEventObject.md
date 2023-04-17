@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / TransferEventObject
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / TransferEventObject
 
 # Interface: TransferEventObject
 

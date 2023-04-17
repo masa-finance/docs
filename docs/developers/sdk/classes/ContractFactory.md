@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / ContractFactory
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / ContractFactory
 
 # Class: ContractFactory
 

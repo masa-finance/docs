@@ -1,4 +1,5 @@
-# Masa SDK / [Exports](modules.md)
+# Masa SDK
+ / [Exports](modules.md)
 
 <!-- TOC -->
   * [Installation](#installation)

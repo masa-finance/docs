@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / SoulNameDetails
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / SoulNameDetails
 
 # Interface: SoulNameDetails
 

@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / ISession
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / ISession
 
 # Interface: ISession
 

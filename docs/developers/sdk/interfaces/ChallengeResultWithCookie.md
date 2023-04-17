@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / ChallengeResultWithCookie
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / ChallengeResultWithCookie
 
 # Interface: ChallengeResultWithCookie
 

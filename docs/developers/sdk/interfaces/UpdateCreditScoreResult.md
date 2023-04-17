@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / UpdateCreditScoreResult
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / UpdateCreditScoreResult
 
 # Interface: UpdateCreditScoreResult
 

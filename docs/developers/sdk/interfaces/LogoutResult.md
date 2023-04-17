@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / LogoutResult
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / LogoutResult
 
 # Interface: LogoutResult
 

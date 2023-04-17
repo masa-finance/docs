@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / User
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / User
 
 # Interface: User
 

@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / MasaGreen
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / MasaGreen
 
 # Class: MasaGreen
 

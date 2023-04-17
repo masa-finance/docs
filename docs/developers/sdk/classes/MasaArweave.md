@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / MasaArweave
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / MasaArweave
 
 # Class: MasaArweave
 

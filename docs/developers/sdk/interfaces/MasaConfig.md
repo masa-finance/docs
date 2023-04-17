@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / MasaConfig
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / MasaConfig
 
 # Interface: MasaConfig
 

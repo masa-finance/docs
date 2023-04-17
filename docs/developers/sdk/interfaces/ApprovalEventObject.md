@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / ApprovalEventObject
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / ApprovalEventObject
 
 # Interface: ApprovalEventObject
 

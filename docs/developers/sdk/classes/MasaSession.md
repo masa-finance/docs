@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / MasaSession
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / MasaSession
 
 # Class: MasaSession
 

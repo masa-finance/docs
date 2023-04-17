@@ -1,4 +1,5 @@
-[# Masa SDK](../README.md) / [Exports](../modules.md) / CreditScoreDetails
+[# Masa SDK
+](../README.md) / [Exports](../modules.md) / CreditScoreDetails
 
 # Interface: CreditScoreDetails
 
