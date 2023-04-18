@@ -1,38 +1,21 @@
 # Masa React
- - v1.0.38 / [Exports](modules.md)
-
----
-
-**🌽🌽 THIS IS BETA SOFTWARE. IT COULD LEAD TO RAPID UNSCHEDULED DISASSEMBLY. If you run into problems, please open up a new issue. 🌽🌽**
-
----
+ / [Exports](modules.md)
 
 <!-- TOC -->
-
-* [Setup](#setup)
-* [Getting Started with masa-react](#getting-started-with-masa-react)
-    * [Setup](#setup)
-        * [Styles](#styles)
-    * [Usage ( inside MasaProvider )](#usage--inside-masaprovider-)
-        * [Example for useMasa ( Connect users wallet )](#example-for-usemasa--connect-users-wallet-)
-        * [Example for masa object ( Wallet is already connected here )](#example-for-masa-object--wallet-is-already-connected-here-)
-        * [For some contracts you will need some pre requisites ( Scopes )](#for-some-contracts-you-will-need-some-pre-requisites--scopes-)
-        * [Current useMasa shape](#current-usemasa-shape)
-
+  * [Getting Started with masa-react](#getting-started-with-masa-react)
+    * [Installation](#installation)
+    * [Styles](#styles)
+    * [Setup Storybook](#setup-storybook)
+  * [Usage ( inside MasaProvider )](#usage--inside-masaprovider-)
+    * [Example for useMasa ( Connect users wallet )](#example-for-usemasa--connect-users-wallet-)
+    * [Example for masa object ( Wallet is already connected here )](#example-for-masa-object--wallet-is-already-connected-here-)
+    * [For some contracts you will need some pre requisites ( Scopes )](#for-some-contracts-you-will-need-some-pre-requisites--scopes-)
+  * [Current useMasa shape](#current-usemasa-shape)
 <!-- TOC -->
 
-## Setup
+## Getting Started with masa-react
 
-```bash
-git clone https://github.com/masa-finance/masa-react.git
-
-yarn 
-yarn storybook
-```
-
-# Getting Started with masa-react
-
-## Setup
+### Installation
 
 First install `masa-react` in your project
 `yarn add @masa-finance/masa-react`
@@ -51,13 +34,21 @@ function App() {
     </MasaProvider>
   );
 }
-
 ```
 
 ### Styles
 
 If you want to add our styles to your project just include this line at the very top of your file right below your imports
 `import "@masa-finance/masa-react/dist/style.css";`
+
+### Setup Storybook
+
+```bash
+git clone https://github.com/masa-finance/masa-react.git
+
+yarn 
+yarn storybook
+```
 
 ## Usage ( inside MasaProvider )
 
@@ -82,7 +73,9 @@ const connectionHandler = useCallback(() => {
 
 <Button
   onClick={connectionHandler}>
-  Connect with Masa
+  Connect
+  with
+  Masa
 </Button>
 
 ```
@@ -125,11 +118,13 @@ const connectionHandler = useCallback(() => {
 
 <Button
   onClick={connectionHandler}>
-  Connect with Masa
+  Connect
+  with
+  Masa
 </Button>
 ```
 
-### Current useMasa shape
+## Current useMasa shape
 
 ```typescript
 export interface MasaShape {
@@ -137,29 +132,48 @@ export interface MasaShape {
 
   // masa
   masa?: Masa;
+  // verbose flag
+  verbose?: boolean;
+
   // global loading
   isLoading?: boolean;
 
   // global connect
-  connect?: (options?: { scope?: string[]; callback?: () => void }) => void;
+  connect?: (options?: {
+    scope?: string[];
+    callback?: () => void
+  }) => void;
 
   // general config
   scope?: string[];
+  areScopesFullfiled?: boolean;
   company?: string;
 
   // provider
-  provider?: ethers.Wallet | ethers.Signer;
-  setProvider?: (provider?: ethers.Wallet | ethers.Signer) => void;
+  provider?: Wallet | Signer;
+  setProvider?: (provider?: Wallet | Signer) => void;
 
   // modal
   isModalOpen?: boolean;
   setModalOpen?: (val: boolean) => void;
-  closeModal?: () => void;
+  closeModal?: (forceCallback?: boolean) => void;
+  forcedPage?: string | null;
+  setForcedPage?: (page: string | null) => void;
+  openMintSoulnameModal?: (callback?: () => void) => void;
+  openMintMasaGreen?: (callback?: () => void) => void;
+  modalSize?: {
+    width: number;
+    height: number
+  } | null;
+  useModalSize?: (size: {
+    width: number;
+    height: number
+  }) => void;
 
   // wallet
   walletAddress?: string;
   isWalletLoading?: boolean;
-  isConnected?: boolean;
+  hasWalletAddress?: boolean;
 
   // identity
   identity?: {
@@ -167,24 +181,28 @@ export interface MasaShape {
     address?: string;
   };
   isIdentityLoading?: boolean;
-  handlePurchaseIdentity?: () => void;
+  handlePurchaseIdentity?: () => Promise<boolean | undefined>;
+  handlePurchaseIdentityWithSoulname?: (
+    paymentMethod: PaymentMethod,
+    soulname: string,
+    registrationPrice: number
+  ) => Promise<boolean>;
   reloadIdentity?: () => void;
 
   // session
   isLoggedIn?: boolean;
   isSessionLoading?: boolean;
   handleLogin?: () => void;
-  handleLogout?: (logoutCallback?: () => void) => void;
+  handleLogout?: (logoutCallback?: () => void) => Promise<void>;
 
   // credit scores
-  creditScores?:
-    | {
+  creditScores?: {
     tokenId: BigNumber;
     tokenUri: string;
-    metadata?: ICreditScore | undefined;
+    metadata?: ICreditScore;
   }[];
   isCreditScoresLoading?: boolean;
-  handleCreateCreditScore?: () => void;
+  handleCreateCreditScore?: () => Promise<boolean | undefined>;
   reloadCreditScores?: () => void;
 
   // soul names
@@ -193,13 +211,11 @@ export interface MasaShape {
   reloadSoulnames?: () => void;
 
   // greens
-  greens?:
-    | {
+  greens?: {
     tokenId: BigNumber;
     tokenUri: string;
     metadata?: IGreen;
-  }[]
-    | undefined;
+  }[];
   isGreensLoading?: boolean;
   handleGenerateGreen?: (
     phoneNumber: string
@@ -211,9 +227,9 @@ export interface MasaShape {
   reloadGreens?: () => void;
 
   // network
-  networkName?: NetworkName;
-  network?: ethers.providers.Network;
+  currentNetwork?: Network;
   SupportedNetworks?: Partial<{ [index in NetworkName]: Network }>;
-  switchNetwork?: (chainId: number) => void;
+  switchNetwork?: (networkName: NetworkName) => void;
+  forceNetwork?: NetworkName;
 }
 ```

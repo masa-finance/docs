@@ -1,5 +1,5 @@
 [# Masa React
- - v1.0.38](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -45,7 +45,9 @@
 - [isSoulnamesLoading](MasaContextProviderProps.md#issoulnamesloading)
 - [isWalletLoading](MasaContextProviderProps.md#iswalletloading)
 - [masa](MasaContextProviderProps.md#masa)
+- [modalSize](MasaContextProviderProps.md#modalsize)
 - [noWallet](MasaContextProviderProps.md#nowallet)
+- [openMintMasaGreen](MasaContextProviderProps.md#openmintmasagreen)
 - [openMintSoulnameModal](MasaContextProviderProps.md#openmintsoulnamemodal)
 - [provider](MasaContextProviderProps.md#provider)
 - [reloadCreditScores](MasaContextProviderProps.md#reloadcreditscores)
@@ -59,6 +61,7 @@
 - [signer](MasaContextProviderProps.md#signer)
 - [soulnames](MasaContextProviderProps.md#soulnames)
 - [switchNetwork](MasaContextProviderProps.md#switchnetwork)
+- [useModalSize](MasaContextProviderProps.md#usemodalsize)
 - [verbose](MasaContextProviderProps.md#verbose)
 - [walletAddress](MasaContextProviderProps.md#walletaddress)
 
@@ -218,15 +221,15 @@ ___
 
 ### handleCreateCreditScore
 
-• `Optional` **handleCreateCreditScore**: () => `void`
+• `Optional` **handleCreateCreditScore**: () => `Promise`<`undefined` \| `boolean`\>
 
 #### Type declaration
 
-▸ (): `void`
+▸ (): `Promise`<`undefined` \| `boolean`\>
 
 ##### Returns
 
-`void`
+`Promise`<`undefined` \| `boolean`\>
 
 #### Inherited from
 
@@ -303,11 +306,11 @@ ___
 
 ### handleLogout
 
-• `Optional` **handleLogout**: (`logoutCallback?`: () => `void`) => `void`
+• `Optional` **handleLogout**: (`logoutCallback?`: () => `void`) => `Promise`<`void`\>
 
 #### Type declaration
 
-▸ (`logoutCallback?`): `void`
+▸ (`logoutCallback?`): `Promise`<`void`\>
 
 ##### Parameters
 
@@ -317,7 +320,7 @@ ___
 
 ##### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Inherited from
 
@@ -327,15 +330,15 @@ ___
 
 ### handlePurchaseIdentity
 
-• `Optional` **handlePurchaseIdentity**: () => `void`
+• `Optional` **handlePurchaseIdentity**: () => `Promise`<`undefined` \| `boolean`\>
 
 #### Type declaration
 
-▸ (): `void`
+▸ (): `Promise`<`undefined` \| `boolean`\>
 
 ##### Returns
 
-`void`
+`Promise`<`undefined` \| `boolean`\>
 
 #### Inherited from
 
@@ -496,9 +499,43 @@ ___
 
 ___
 
+### modalSize
+
+• `Optional` **modalSize**: ``null`` \| { `height`: `number` ; `width`: `number`  }
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[modalSize](MasaShape.md#modalsize)
+
+___
+
 ### noWallet
 
 • `Optional` **noWallet**: `boolean`
+
+___
+
+### openMintMasaGreen
+
+• `Optional` **openMintMasaGreen**: (`callback?`: () => `void`) => `void`
+
+#### Type declaration
+
+▸ (`callback?`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback?` | () => `void` |
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[openMintMasaGreen](MasaShape.md#openmintmasagreen)
 
 ___
 
@@ -528,7 +565,7 @@ ___
 
 ### provider
 
-• `Optional` **provider**: `Signer` \| `Wallet`
+• `Optional` **provider**: `Wallet` \| `Signer`
 
 #### Inherited from
 
@@ -668,7 +705,7 @@ ___
 
 ### setProvider
 
-• `Optional` **setProvider**: (`provider?`: `Signer` \| `Wallet`) => `void`
+• `Optional` **setProvider**: (`provider?`: `Wallet` \| `Signer`) => `void`
 
 #### Type declaration
 
@@ -678,7 +715,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `provider?` | `Signer` \| `Wallet` |
+| `provider?` | `Wallet` \| `Signer` |
 
 ##### Returns
 
@@ -692,7 +729,7 @@ ___
 
 ### signer
 
-• `Optional` **signer**: `Signer` \| `Wallet`
+• `Optional` **signer**: `Wallet` \| `Signer`
 
 ___
 
@@ -727,6 +764,32 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[switchNetwork](MasaShape.md#switchnetwork)
+
+___
+
+### useModalSize
+
+• `Optional` **useModalSize**: (`size`: { `height`: `number` ; `width`: `number`  }) => `void`
+
+#### Type declaration
+
+▸ (`size`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `size` | `Object` |
+| `size.height` | `number` |
+| `size.width` | `number` |
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[useModalSize](MasaShape.md#usemodalsize)
 
 ___
 
