@@ -1,4 +1,5 @@
-[Masa React](../README.md) / [Exports](../modules.md) / MasaShape
+[# Masa React
+](../README.md) / [Exports](../modules.md) / MasaShape
 
 # Interface: MasaShape
 
