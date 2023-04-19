@@ -234,7 +234,7 @@ if (!address) {
 
 ### Mint SBT Badge
 
-It is simple to mint an SBT using the SDK feed contract address from your deployment - we will use the one we just deployed `0x4d527F3eFD9dCf5fF44284FfB9fe22C6bdc2Da20` and mint an SBT Badge to the receiver `0xb3EAE0c0d3e09241a48485D7fDE226587A4E4461`.
+It is simple to mint an SBT using the SDK using the contract address from your deployment - we will use the one we just deployed `0x4d527F3eFD9dCf5fF44284FfB9fe22C6bdc2Da20` and mint an SBT Badge to the receiver `0xb3EAE0c0d3e09241a48485D7fDE226587A4E4461`.
 
 ```typescript
 const { mintASBT } = await masa.sbt.connect(contractAddress);

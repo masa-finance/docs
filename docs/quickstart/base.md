@@ -6,8 +6,6 @@ title: 🔵 Base
 
 ## A quick introduction to building on Base Goerli with Masa
 
-*Video - get started with Masa in 3 minutes*
-
 Let’s start using Masa on the [Base Goerli Testnet](https://goerli.basescan.org/) where you will mint a Masa Green 2FA Self Sovereign SBT. Masa Green SBT is a 2FA SBT that verifies that the holder is a not bot through a phone OTP verification. The Quickstart will take you through minting a Masa Green 2FA SBT in a few easy steps. Using the Masa CLI and before you know it you will have minted a Masa Green SBT you will have verified you are not a bot!
 
 :::tip

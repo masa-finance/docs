@@ -4,7 +4,7 @@ title: Displaying SBTs
 
 # Displaying SBTs
 
-Displaying SBTs in a gallery like view can be done with masa-react quite easily. There is a [Mass React Sample Application](https://github.com/masa-finance/masa-react-example) that can be used as a boilerplate.
+Displaying SBTs in a gallery like view can be done with masa-react quite easily. You can use the [Masa React Sample Application](https://github.com/masa-finance/masa-react-example) as a boilerplate.
 
 ## Install Masa SDK
 
@@ -20,7 +20,7 @@ yarn add @masa-finance/masa-react --save
 npm i @masa-finance/masa-react --save
 ```
 
-## Displaying Masa Green Details on a Webpage
+## Displaying Masa Green details on a webpage
 
 ```typescript jsx
 import {
