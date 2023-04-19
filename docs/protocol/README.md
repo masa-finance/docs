@@ -192,6 +192,8 @@ Response:
   | [Changelog](https://github.com/masa-finance/masa-sdk/blob/main/CHANGELOG.md)
 - [Masa React](https://github.com/masa-finance/masa-react)
   | [Changelog](https://github.com/masa-finance/masa-react/blob/master/CHANGELOG.md)
+- [Masa Express](https://github.com/masa-finance/masa-express)
+  | [Changelog](https://github.com/masa-finance/masa-express/blob/master/CHANGELOG.md)
 
 ## Backend & Contracts
 
@@ -210,19 +212,12 @@ Response:
 
 ## Relevant Links
 
-### Personal Finance Manager
-
-- [Masa App - Production](https://app.masa.finance)
-- [Masa App - Staging](https://beta.masa.finance)
-- [Masa App - Test](https://test.masa.finance)
-- [Masa App - Dev](https://dev.masa.finance)
-
 ### Soulbound Identity
 
-- [Masa Identity App - Production](http://app.masa.finance)
-- [Masa Identity App - Staging](http://testnet.app.masa.finance)
-- [Masa Identity App - Test](http://test.app.masa.finance)
-- [Masa Identity App - Dev](https://dev.app.masa.finance/)
+- [Masa Soulbound Tokens App - Production](http://app.masa.finance)
+- [Masa Soulbound Tokens App - Staging](http://testnet.app.masa.finance)
+- [Masa Soulbound Tokens App - Test](http://test.app.masa.finance)
+- [Masa Soulbound Tokens App - Dev](https://dev.app.masa.finance/)
 
 ### Additional Resources
 
