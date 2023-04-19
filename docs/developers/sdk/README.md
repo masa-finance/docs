@@ -3,9 +3,9 @@
 
 <!-- TOC -->
   * [Installation](#installation)
-    * [Usage](#usage)
-    * [Interface](#interface)
-    * [Configuration](#configuration)
+  * [Usage](#usage)
+  * [Interface](#interface)
+  * [Configuration](#configuration)
 <!-- TOC -->
 
 ## Installation
@@ -16,7 +16,7 @@ yarn
 npm  
 `npm i @masa-finance/masa-sdk --save`
 
-### Usage
+## Usage
 
 Browser:
 
@@ -52,14 +52,13 @@ const provider = new ethers.providers.JsonRpcProvider(
 const wallet = new ethers.Wallet("your private key", provider);
 
 export const masa = new Masa({ wallet });
-
 ```
 
-### Interface
+## Interface
 
 For a detailed interface description see [Masa](docs/classes/Masa.md)
 
-### Configuration
+## Configuration
 
 | Key              | Type                             | Description                                                                           | Default Value                          |
 |------------------|----------------------------------|---------------------------------------------------------------------------------------|----------------------------------------|
