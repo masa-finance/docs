@@ -21,7 +21,6 @@ Masa, the premiere web3 identity and credit protocol. Be the first to build soul
   * [Backend & Contracts](#backend--contracts)
   * [Blockchain](#blockchain)
   * [Relevant Links](#relevant-links)
-    * [Personal Finance Manager](#personal-finance-manager)
     * [Soulbound Identity](#soulbound-identity-1)
     * [Additional Resources](#additional-resources)
 <!-- TOC -->
