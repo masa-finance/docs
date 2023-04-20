@@ -80,6 +80,12 @@ const config = {
         },
       ],
     },
+    docs: {
+      sidebar: {
+        hideable: false,
+        autoCollapseCategories: true,
+      },
+    },
     footer: {
       style: "dark",
       links: [
@@ -119,7 +125,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Masa Finance.`,
+      copyright: `Copyright © 2022-${new Date().getFullYear()} Masa Finance.`,
     },
     prism: {
       theme: lightCodeTheme,
