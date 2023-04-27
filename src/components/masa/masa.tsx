@@ -2,6 +2,8 @@ import React from "react";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import "@masa-finance/masa-react/dist/browser/main.css";
 
+require("@rainbow-me/rainbowkit/styles.css");
+
 const Masa = ({ children }): JSX.Element => {
   return (
     <BrowserOnly>
