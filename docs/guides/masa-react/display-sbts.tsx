@@ -13,15 +13,7 @@ export const DisplaySBTs = (): JSX.Element => {
         return isLoggedIn ? (
           <div>
             <div>
-              <button
-                onClick={reloadGreens}
-                style={{
-                  backgroundColor: "black",
-                  color: "white",
-                  padding: 10,
-                  cursor: "pointer",
-                }}
-              >
+              <button onClick={reloadGreens} className="button">
                 Reload Greens
               </button>
             </div>

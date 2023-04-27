@@ -12,9 +12,13 @@ export const MasaLogin = (): JSX.Element => {
         return (
           <div style={{ textAlign: "center" }}>
             {isLoggedIn ? (
-              <button onClick={() => handleLogout?.()}>{walletAddress}</button>
+              <button className="button" onClick={() => handleLogout?.()}>
+                {walletAddress}
+              </button>
             ) : (
-              <button onClick={() => connect?.()}>Connect Masa Account</button>
+              <button className="button" onClick={() => connect?.()}>
+                Connect Masa
+              </button>
             )}
           </div>
         );
