@@ -2,11 +2,20 @@
 title: Displaying SBTs
 ---
 
+import {
+  DisplaySBTs
+} from "./display-sbts";
+import {
+  MasaLogin
+} from "../../../src/components/masa/masa-login";
+import Masa
+  from "../../../src/components/masa/masa";
+
 # Displaying SBTs
 
 Displaying SBTs in a gallery like view can be done with masa-react quite easily. You can use the [Masa React Sample Application](https://github.com/masa-finance/masa-react-example) as a boilerplate.
 
-## Install Masa SDK
+## Install Masa React
 
 #### Install via yarn
 
@@ -23,47 +32,37 @@ npm i @masa-finance/masa-react --save
 ## Displaying Masa Green details on a webpage
 
 ```typescript jsx
-import {
-  useMasa
-} from "@masa-finance/masa-react";
+import {useMasa} from "@masa-finance/masa-react";
 
 export const Green = () => {
-  const {
-    masa,
-    greens,
-    isGreensLoading,
-    reloadGreens
-  } = useMasa();
+  const { masa, greens, isGreensLoading, reloadGreens } = useMasa();
 
   return (
     <div>
       <div>
-        <button
-          onClick={reloadGreens}>
-          Reload Greens
-        </button>
+        <button onClick={reloadGreens}>Reload Greens</button>
       </div>
       {!isGreensLoading && greens ? (
         greens.length > 0 ? (
           greens.map((green) => (
-            <div
-              key={green.tokenId.toString()}>
+            <div key={green.tokenId.toString()}>
               <div>TokenId: {green.tokenId.toString()}</div>
               <div>TokenId: {green.tokenUri}</div>
             </div>
           ))
         ) : (
-          <>no
-            greens
-            on {masa.config.networkName}</>
+          <>no greens on {masa.config.networkName}</>
         )
       ) : (
-        <div>
-          Loading ...
-        </div>
+        <div>Loading ...</div>
       )}
     </div>
   );
 };
-
 ```
+## Try Masa React
+
+<Masa>
+  <MasaLogin/>
+  <DisplaySBTs/>
+</Masa>
