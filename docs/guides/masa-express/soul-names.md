@@ -26,7 +26,25 @@ To run this guide it is required to have two private keys:
 
 ### Server Setup
 
-for the next step see [Soulname Validator and General Plumbing](#soulname-validator-and-general-plumbing)
+To create an endpoint that can be reached by the Masa SDK we need to create server. We are using `express` to run a service on node. The result of this service can be put into a docker, it can be run on AWS or using https://render.com.
+It is important to properly configure the `cors` configuration in case you want to make the endpoint accessible from the browser.
+
+To enable soul names on the newly created service we need to add a soul name router and implement the `/soul-name/store` endpoint:
+
+```typescript
+export const soulNameRouter: Router = express.Router();
+
+soulNameRouter.post(
+  "/store",
+  async (request: Request, response: Response): Promise<void> => {
+    // your code goes here
+  }
+);
+
+app.use("/soul-name", soulNameRouter);
+```
+
+Here is the full server example:
 
 ```typescript
 import express, { Express, RequestHandler, Response, Router } from "express";
@@ -114,7 +132,47 @@ app.listen(port, () => {
 });
 ```
 
+for the next step see [Soulname Validator and General Plumbing](#soulname-validator-and-general-plumbing)
+
 ### Soulname Validator and General Plumbing
+
+To handle the request against the `/soul-name/store` endpoint we need to implement a soul name store handler. This handler will validate the soul name, check availability and finally generate metadata, store the metadata in immutable storage and return a signature so the user can use those information to mint a soul name.
+
+First we need to create a new Masa instance to get access to the signing and storage methods.
+
+```typescript
+const masa = new Masa({
+  wallet: new Wallet(WEB3_PRIVATE_KEY as string).connect(
+    new providers.JsonRpcProvider(SupportedNetworks[network]?.rpcUrls[0])
+  ),
+  networkName: network,
+  verbose: true,
+});
+```
+
+then we need to generate and store the metadata
+
+```typescript
+const generateMetadataResult = await generateMetadata({
+  masa,
+  soulname: soulNameWithExtension,
+});
+```
+
+finally we need to sign the result and return it to the user where the Masa SDK can pick it up and invoke the mint operation on the Blockchain.
+
+```typescript
+const signResult = await masa.contracts.soulName.sign(
+  soulNameWithoutExtension,
+  soulNameLength,
+  duration,
+  // build metadataUrl
+  `ar://${generateMetadataResult.metadataTransaction?.id}`,
+  receiver
+);
+```
+
+Here is the full handler example:
 
 ```typescript
 import {
@@ -234,7 +292,85 @@ export const storeSoulName = async (
 };
 ```
 
+for the next step see [Metadata Generator](#metadata-generator)
+
 ### Metadata Generator
+
+Before we can generate the actual metadata object we must generate the image of the NFT that will be linked from within the metadata object. To do that we are using our own image generator from the [Image Generator](#image-generator) step. After we generated the image we need to hash and sign it to create metadata that can be verified later.
+
+```typescript
+// generate the image and return its buffer here
+const imageData: Buffer = await generateImage(soulname);
+// hash the image
+const imageHash: string = utils.keccak256(imageData);
+// sign the hash using the authority key
+const imageHashSignature = await signMessage(imageHash, masa.config.wallet);
+```
+
+In the next step we are going to generate metadata that is compatible with `OpenSea`. To achieve that we are implementing the `ISoulName` interface.
+
+```typescript
+// create metadata
+const metadata: ISoulName = {
+  description: "This is my 3rd Party soul name!" as any,
+  external_url: "https://my-fancy-app.org" as any,
+  name: soulname,
+  image: `ar://${imageTransaction.id}`,
+  imageHash,
+  imageHashSignature,
+  network: masa.config.networkName,
+  chainId: masa.config.network.chainId.toString(),
+  signature: "",
+  attributes,
+};
+```
+
+After we create the NFT image and the metadata object we need to persist it. In this example we are using `Arweave` but `IPFS` or on-premise storage could be chosen as well.
+
+Storing the image:
+
+```typescript
+// create arweave transaction for the image
+const imageTransaction = await masa.arweave.createTransaction(
+  {
+    data: imageData,
+  },
+  JSON.parse(ARWEAVE_PRIVATE_KEY as string)
+);
+
+// make sure we store the image as png
+imageTransaction.addTag("Content-Type", "image/png");
+
+// sign the arweave transaction
+await masa.arweave.transactions.sign(
+  imageTransaction,
+  JSON.parse(ARWEAVE_PRIVATE_KEY as string)
+);
+const imageResponse = await masa.arweave.transactions.post(imageTransaction);
+```
+
+Storing the metadata:
+
+```typescript
+// create arweave transaction for the metadata
+const metadataTransaction = await masa.arweave.createTransaction(
+  {
+    data: Buffer.from(JSON.stringify(metadata as never)),
+  },
+  JSON.parse(ARWEAVE_PRIVATE_KEY as string)
+);
+
+// make sure we store the metadata as json
+metadataTransaction.addTag("Content-Type", "application/json");
+
+// sign tx
+await masa.arweave.transactions.sign(
+  metadataTransaction,
+  JSON.parse(ARWEAVE_PRIVATE_KEY as string)
+);
+```
+
+full metadata generator example:
 
 ```typescript
 import { generateImage } from "./image-generator";
@@ -437,7 +573,31 @@ export const generateMetadata = async ({
 };
 ```
 
+for the next step see [Image Generator](#image-generator)
+
 ### Image Generator
+
+In the next step we are going to generate an image in the `png` format that will be stored and used as NFT image. It can be generated in any possible way and in different formats like `jpg`. You may like to delegate this step to some image generating service like DALL-E or Midjourney.
+
+We are generating a background image with `canvas` and use the `canvas-emoji` library to stamp on the soul name on the image.
+
+```typescript
+// load emoji lib
+const canvasEmoji = new CanvasEmoji(context2D);
+
+// draw soulname string with embedded emojis
+canvasEmoji.drawPngReplaceEmoji({
+  emojiH: 24,
+  emojiW: 24,
+  fillStyle: "#000",
+  font: "32px serif",
+  x: 50,
+  y: 50,
+  text: soulName,
+});
+```
+
+full image generator example:
 
 ```typescript
 import { Canvas, createCanvas } from "canvas";
