@@ -6,7 +6,7 @@ export default function Hero() {
     <>
       <section
         className="relative bg-gradient-to-t from-lightPeach to-white"
-        style={{ height: "80vh" }}
+        style={{ height: "80vh", width: "auto" }}
       >
         <img
           src="img/astronaut-moon.svg"
