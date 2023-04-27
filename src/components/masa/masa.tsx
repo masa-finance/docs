@@ -1,5 +1,6 @@
 import React from "react";
 import BrowserOnly from "@docusaurus/BrowserOnly";
+import "@masa-finance/masa-react/dist/browser/main.css";
 
 const Masa = ({ children }): JSX.Element => {
   return (
@@ -8,7 +9,11 @@ const Masa = ({ children }): JSX.Element => {
         const { MasaProvider } = require("@masa-finance/masa-react");
 
         return (
-          <MasaProvider environmentName="production" company="Masa">
+          <MasaProvider
+            useRainbowKitWalletConnect
+            environmentName="production"
+            company="Masa"
+          >
             {children}
           </MasaProvider>
         );

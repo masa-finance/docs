@@ -2,7 +2,6 @@ import React from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Hero from "../components/Hero";
-import "@masa-finance/masa-react/dist/browser/main.css";
 import "./index.module.css";
 
 const HomepageHeader = () => {
