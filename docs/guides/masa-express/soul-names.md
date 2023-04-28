@@ -154,6 +154,10 @@ To handle the request against the `/soul-name/store` endpoint we need to impleme
 It is most likely that you want to override the contracts being used by the SDK to connect to your own contracts. You can do that by using the `contractOverrides` object.
 
 ```typescript
+const wallet = new Wallet(WEB3_PRIVATE_KEY as string).connect(
+  new providers.JsonRpcProvider(SupportedNetworks[network]?.rpcUrls[0])
+);
+
 const contractOverrides: Partial<IIdentityContracts> = {};
 
 // set soul store override
@@ -179,9 +183,7 @@ Then we need to create a new Masa instance to get access to the signing and stor
 
 ```typescript
 const masa = new Masa({
-  wallet: new Wallet(WEB3_PRIVATE_KEY as string).connect(
-    new providers.JsonRpcProvider(SupportedNetworks[network]?.rpcUrls[0])
-  ),
+  wallet,
   networkName: network,
   verbose: true,
   contractOverrides,
