@@ -1,5 +1,5 @@
 [# Masa SDK
-](../README.md) / [Exports](../modules.md) / Network
+ - v1.15.1](../README.md) / [Exports](../modules.md) / Network
 
 # Interface: Network
 
@@ -11,6 +11,7 @@
 - [blockExplorerUrls](Network.md#blockexplorerurls)
 - [chainId](Network.md#chainid)
 - [chainName](Network.md#chainname)
+- [chainNameShort](Network.md#chainnameshort)
 - [gasSlippagePercentage](Network.md#gasslippagepercentage)
 - [nativeCurrency](Network.md#nativecurrency)
 - [networkName](Network.md#networkname)
@@ -22,11 +23,15 @@
 
 • **addresses**: [`Addresses`](Addresses.md)
 
+Masa Curated known Addresses of Contracts like Business logic and tokens
+
 ___
 
 ### blockExplorerUrls
 
 • `Optional` **blockExplorerUrls**: `string`[]
+
+set of block explorer urls
 
 ___
 
@@ -34,11 +39,25 @@ ___
 
 • **chainId**: `number`
 
+The networks chain id used to add the network to the wallet
+
 ___
 
 ### chainName
 
 • **chainName**: `string`
+
+The long chain name that metamask displays or that we use to
+offer the user to switch networks
+
+___
+
+### chainNameShort
+
+• **chainNameShort**: `string`
+
+A short version of the Chain Name to be displayed in Buttons or
+locations with less space
 
 ___
 
@@ -46,11 +65,15 @@ ___
 
 • `Optional` **gasSlippagePercentage**: `number`
 
+the default gas slippage percentage used on some testnets
+
 ___
 
 ### nativeCurrency
 
 • `Optional` **nativeCurrency**: `Object`
+
+Information about the native currency
 
 #### Type declaration
 
@@ -66,8 +89,13 @@ ___
 
 • **networkName**: [`NetworkName`](../modules.md#networkname)
 
+the technical network name that the SDK knows
+
 ___
 
 ### rpcUrls
 
 • **rpcUrls**: `string`[]
+
+The list of available rpc urls, required for adding the network
+to the wallet
