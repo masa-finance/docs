@@ -151,7 +151,31 @@ for the next step see [Soulname Validation and General Plumbing](#soulname-valid
 
 To handle the request against the `/soul-name/store` endpoint we need to implement a soul name store handler. This handler will validate the soul name, check availability and finally generate metadata, store the metadata in immutable storage and return a signature so the user can use those information to mint a soul name.
 
-First we need to create a new Masa instance to get access to the signing and storage methods.
+It is most likely that you want to override the contracts being used by the SDK to connect to your own contracts. You can do that by using the `contractOverrides` object.
+
+```typescript
+const contractOverrides: Partial<IIdentityContracts> = {};
+
+// set soul store override
+if (SOULSTORE_ADDRESS) {
+  contractOverrides.SoulStoreContract = SoulStore__factory.connect(
+    SOULSTORE_ADDRESS,
+    wallet
+  );
+  contractOverrides.SoulStoreContract!.hasAddress = true;
+}
+
+// set soul name override
+if (SOULNAME_ADDRESS) {
+  contractOverrides.SoulNameContract = SoulName__factory.connect(
+    SOULNAME_ADDRESS,
+    wallet
+  );
+  contractOverrides.SoulNameContract!.hasAddress = true;
+}
+```
+
+Then we need to create a new Masa instance to get access to the signing and storage methods.
 
 ```typescript
 const masa = new Masa({
@@ -189,6 +213,7 @@ Here is the full handler example:
 
 ```typescript
 import {
+  IIdentityContracts,
   Masa,
   NetworkName,
   SoulNameErrorCodes,
@@ -196,10 +221,14 @@ import {
   SoulNameResultBase,
   SupportedNetworks,
 } from "@masa-finance/masa-sdk";
+import {
+  SoulName__factory,
+  SoulStore__factory,
+} from "@masa-finance/masa-contracts-identity";
 import { providers, Wallet } from "ethers";
 import { generateMetadata } from "./generate-metadata";
 
-const { WEB3_PRIVATE_KEY } = process.env;
+const { WEB3_PRIVATE_KEY, SOULSTORE_ADDRESS, SOULNAME_ADDRESS } = process.env;
 
 export const storeSoulName = async (
   soulName: string,
@@ -214,14 +243,42 @@ export const storeSoulName = async (
     errorCode: SoulNameErrorCodes.UnknownError,
   };
 
+  const wallet = new Wallet(WEB3_PRIVATE_KEY as string).connect(
+    new providers.JsonRpcProvider(SupportedNetworks[network]?.rpcUrls[0])
+  );
+
+  /**
+   *  it is most likely that you want to override the contracts being used by the SDK
+   *  to connect to your own contracts. You can do that by using the  `contractOverrides`
+   *  object
+   */
+  const contractOverrides: Partial<IIdentityContracts> = {};
+
+  // set soul store override
+  if (SOULSTORE_ADDRESS) {
+    contractOverrides.SoulStoreContract = SoulStore__factory.connect(
+      SOULSTORE_ADDRESS,
+      wallet
+    );
+    contractOverrides.SoulStoreContract!.hasAddress = true;
+  }
+
+  // set soul name override
+  if (SOULNAME_ADDRESS) {
+    contractOverrides.SoulNameContract = SoulName__factory.connect(
+      SOULNAME_ADDRESS,
+      wallet
+    );
+    contractOverrides.SoulNameContract!.hasAddress = true;
+  }
+
   // create a new masa instance and connect to the requested network
   // make sure you use the private key of the authority account that has rights on the soulname contract
   const masa = new Masa({
-    wallet: new Wallet(WEB3_PRIVATE_KEY as string).connect(
-      new providers.JsonRpcProvider(SupportedNetworks[network]?.rpcUrls[0])
-    ),
+    wallet,
     networkName: network,
     verbose: true,
+    contractOverrides,
   });
 
   // query the extension from the given contract
