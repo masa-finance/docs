@@ -2,10 +2,11 @@
  / [Exports](modules.md)
 
 <!-- TOC -->
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Interface](#interface)
-  * [Configuration](#configuration)
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Interface](#interface)
+- [Configuration](#configuration)
 <!-- TOC -->
 
 ## Installation
@@ -21,37 +22,31 @@ npm
 Browser:
 
 ```typescript
-import {
-  Masa
-} from "@masa-finance/masa-sdk";
-import {
-  ethers
-} from "ethers";
+import { Masa } from "@masa-finance/masa-sdk";
+import { providers } from "ethers";
 
 // with metamask
-const provider = new ethers.providers.Web3Provider(window.ethereum);
+const provider = new providers.Web3Provider(window.ethereum);
 const signer = provider.getSigner();
 
-export const masa = new Masa({ wallet: signer });
+export const masa = new Masa({
+  wallet: signer,
+});
 ```
 
 Node:
 
 ```typescript
-import {
-  Masa
-} from "@masa-finance/masa-sdk";
-import {
-  ethers
-} from "ethers";
+import { Masa } from "@masa-finance/masa-sdk";
+import { providers, Wallet } from "ethers";
 
-const provider = new ethers.providers.JsonRpcProvider(
-  "your blockchain rpc endpoint"
-);
+const provider = new providers.JsonRpcProvider("your blockchain rpc endpoint");
 
-const wallet = new ethers.Wallet("your private key", provider);
+const wallet = new Wallet("your private key", provider);
 
-export const masa = new Masa({ wallet });
+export const masa = new Masa({
+  wallet,
+});
 ```
 
 ## Interface
@@ -61,10 +56,10 @@ For a detailed interface description see [Masa](docs/classes/Masa.md)
 ## Configuration
 
 | Key              | Type                             | Description                                                                           | Default Value                          |
-|------------------|----------------------------------|---------------------------------------------------------------------------------------|----------------------------------------|
+| ---------------- | -------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------- |
 | cookie           | `string`                         | Cookie value. Don't set this manually unless you know what you do!                    |                                        |
 | wallet           | `ethers.Signer or ethers.Wallet` | The Wallet instance to use when interacting with the Blockchain.                      | "wallet with a random private key"     |
-| apiUrl           | `string`                         | The API Endpoint of the Masa Infrastructure for `dev`, `test`, `beta` and production. | "https://dev.middleware.masa.finance/" | 
+| apiUrl           | `string`                         | The API Endpoint of the Masa Infrastructure for `dev`, `test`, `beta` and production. | "https://dev.middleware.masa.finance/" |
 | environment      | `string`                         | The environment to use `dev`, `test`, `beta`, `production`.                           | "dev"                                  |
 | network          | `string`                         | The network name ie. "goerli".                                                        | "goerli"                               |
 | arweave.host     | `string`                         | The arweave host to use for loading metadata.                                         | "arweave.net"                          |
