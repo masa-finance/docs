@@ -184,6 +184,7 @@ const masa = new Masa({
   ),
   networkName: network,
   verbose: true,
+  contractOverrides,
 });
 ```
 
