@@ -1,7 +1,8 @@
 [# Masa Express
-](README.md) / Exports
+ - v1.0.4](README.md) / Exports
 
 # # Masa Express
+ - v1.0.4
 
 ## Table of contents
 
