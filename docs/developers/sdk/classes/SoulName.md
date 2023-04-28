@@ -1,5 +1,5 @@
 [# Masa SDK
-](../README.md) / [Exports](../modules.md) / SoulName
+ - v1.15.1](../README.md) / [Exports](../modules.md) / SoulName
 
 # Class: SoulName
 
@@ -326,7 +326,7 @@ verify a signature created during one of the SBT signing flows
 | Name | Type |
 | :------ | :------ |
 | `errorMessage` | `string` |
-| `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBTSelfSovereign` |
+| `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
 | `domain` | `TypedDataDomain` |
 | `types` | `Record`<`string`, `TypedDataField`[]\> |
 | `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |

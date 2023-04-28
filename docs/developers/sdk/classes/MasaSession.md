@@ -1,5 +1,5 @@
 [# Masa SDK
-](../README.md) / [Exports](../modules.md) / MasaSession
+ - v1.15.1](../README.md) / [Exports](../modules.md) / MasaSession
 
 # Class: MasaSession
 

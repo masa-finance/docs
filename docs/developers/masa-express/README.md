@@ -16,6 +16,8 @@ npm
 
 ## Usage
 
+A full example can be found in the [Masa Express Boilerplate](https://github.com/masa-finance/masa-express-boilerplate) repo.
+
 ```typescript
 import express, {
   Express,

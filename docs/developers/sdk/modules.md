@@ -1,7 +1,8 @@
 [# Masa SDK
-](README.md) / Exports
+ - v1.15.1](README.md) / Exports
 
 # # Masa SDK
+ - v1.15.1
 
 ## Table of contents
 
@@ -130,6 +131,7 @@
 - [getSoulNameMetadataPrefix](modules.md#getsoulnamemetadataprefix)
 - [isBigNumber](modules.md#isbignumber)
 - [isERC20Currency](modules.md#iserc20currency)
+- [isMasaSBTSelfSovereign](modules.md#ismasasbtselfsovereign)
 - [isNativeCurrency](modules.md#isnativecurrency)
 - [isSoulNameMetadataStoreResult](modules.md#issoulnamemetadatastoreresult)
 - [listCreditScores](modules.md#listcreditscores)
@@ -406,7 +408,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `contract` | `MasaSBTSelfSovereign` |
+| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
 | `SBTId` | `BigNumber` |
 
 #### Returns
@@ -671,15 +673,16 @@ ___
 
 ### generateSignatureDomain
 
-▸ **generateSignatureDomain**(`wallet`, `name`, `verifyingContract`): `Promise`<`TypedDataDomain`\>
+▸ **generateSignatureDomain**(`wallet`, `name`, `verifyingContract`, `version?`): `Promise`<`TypedDataDomain`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `wallet` | `Wallet` |
-| `name` | `string` |
-| `verifyingContract` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `wallet` | `Wallet` | `undefined` |
+| `name` | `string` | `undefined` |
+| `verifyingContract` | `string` | `undefined` |
+| `version` | `string` | `"1.0.0"` |
 
 #### Returns
 
@@ -781,6 +784,22 @@ ___
 #### Returns
 
 paymentMethod is "MASA" \| "WETH" \| "G$" \| "USDC" \| "cUSD"
+
+___
+
+### isMasaSBTSelfSovereign
+
+▸ **isMasaSBTSelfSovereign**(`contract`): contract is MasaSBTSelfSovereign
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `contract` | `unknown` |
+
+#### Returns
+
+contract is MasaSBTSelfSovereign
 
 ___
 
@@ -1115,7 +1134,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `MasaSBTSelfSovereign`<`Contract`\> |
+| `Contract` | extends `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
 
 #### Parameters
 
