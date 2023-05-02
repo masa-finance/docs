@@ -1,9 +1,9 @@
 ---
-title: Achievement badges
+title: SBT Achievement badges
 toc_max_heading_level: 4
 ---
 
-# Achievement badges
+# SBT Achievement badges
 
 With Masa, you can track and reward an individuals achievements in your community by using non-transferable, soulbound Achievement badges. For example, a web3 quest platform with active members participating in quests can issue an Achievement SBT to the participants who were in the top 5% of the number of completed quests in a week. Having an achievement SBT would unlock priority access to future quests and grant allow list spots in partner souldrops (airdrops). In this guide, we cover the steps for launching an Achievement SBT using Masa.
 
@@ -48,16 +48,16 @@ Masa supports 10 networks through its CLI and SDK. Masa Green SBT is deployed on
 
 | Network        | Flag         | Contract |
 |----------------|--------------|----------|
-| ETH            | --ethereum   |          |
-| ETH Goerli     | --goerli     |          |
+| ETH            | ethereum   |          |
+| ETH Goerli     | goerli     |          |
 | Base Mainnet   | NA           |          |
-| Base Goerli    | --basegoerli |          |
-| Polygon        | --polygon    |          |
-| Polygon Mumbai | --mumbai     |          |
-| BNB Chain      | --bsc        |          |
-| BNB Testnet    | --bsctestnet |          |
-| Celo           | --celo       |          |
-| Celo Alfajores | --alfajores  |          |
+| Base Goerli    | basegoerli |          |
+| Polygon        | polygon    |          |
+| Polygon Mumbai | mumbai     |          |
+| BNB Chain      | bsc        |          |
+| BNB Testnet    | bsctestnet |          |
+| Celo           | elo       |          |
+| Celo Alfajores | alfajores  |          |
 
 ```bash
 masa settings preset-network <network flag>
@@ -248,5 +248,5 @@ If you’re interested in other use cases, you can dive into our guides:
 - [Bot killer](./bot-killer.md)
 - [Membership](./membership-badges.md)
 - Quest
-- [Soulnames](./soul-names.md)
+- [Soulnames](./resolving-soulnames.md)
 - Credit score

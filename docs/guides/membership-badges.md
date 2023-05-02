@@ -1,9 +1,9 @@
 ---
-title: Membership badges
+title: SBT Membership badges
 toc_max_heading_level: 4
 ---
 
-# Membership badges
+# SBT Membership badges
 
 With Masa, you can build a membership program using non-transferable, soulbound badges. For example, a web3 gaming platform with active Discord communities can issue a membership badge to their longest-standing community members who will get perks, and access to exclusive offers, and souldrops. In this guide, we cover the steps for setting up a membership program using SBT Badges.
 
