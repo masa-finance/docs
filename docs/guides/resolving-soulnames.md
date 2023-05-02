@@ -1,11 +1,11 @@
 ---
-title: Resolving Soul Names
+title: Resolving Soulnames
 toc_max_heading_level: 4
 ---
 
-# Resolving Soul Names
+# Resolving Soulnames
 
-A soulbound domain name is a human-readable address that resolves to a user’s wallet. It is a combination of letters, numbers, and/or emojis. The Masa Protocol has minted over 200,000 .soul (e.g. vitalik.soul) and .celo (e.g. tothe🪙.celo) domain names. Developers can integrate domain resolving of .soul and .celo names to get access to over 200,000+ unique wallets on Ethereum and Celo mainnets.
+A soulbound domain name is a human-readable address that resolves to a user’s wallet. It is a combination of letters, numbers, and/or emojis. The Masa Protocol has minted over 400,000 .soul (e.g. vitalik.soul), .celo (e.g. tothe🪙.celo), and .base domain names. Developers can integrate domain resolving of .soul, .celo, and .base names to get access to over 400,000+ unique wallets on Ethereum and Celo mainnets, plus Base Testnet.
 
 ## Resolving Soul Names using Masa CLI
 
@@ -33,16 +33,16 @@ Masa supports 10 networks through its CLI and SDK. Masa Green SBT is deployed on
 
 | Network        | Flag         | Contract |
 |----------------|--------------|----------|
-| ETH            | --ethereum   |          |
-| ETH Goerli     | --goerli     |          |
+| ETH            | ethereum   |          |
+| ETH Goerli     | goerli     |          |
 | Base Mainnet   | NA           |          |
-| Base Goerli    | --basegoerli |          |
-| Polygon        | --polygon    |          |
-| Polygon Mumbai | --mumbai     |          |
-| BNB Chain      | --bsc        |          |
-| BNB Testnet    | --bsctestnet |          |
-| Celo           | --celo       |          |
-| Celo Alfajores | --alfajores  |          |
+| Base Goerli    | basegoerli |          |
+| Polygon        | polygon    |          |
+| Polygon Mumbai | mumbai     |          |
+| BNB Chain      | bsc        |          |
+| BNB Testnet    | bsctestnet |          |
+| Celo           | celo       |          |
+| Celo Alfajores | alfajores  |          |
 
 ```bash
 masa settings preset-network <network flag>

@@ -1,9 +1,9 @@
 ---
-title: Soulnames
+title: Custom Soulnames
 ---
 
-# Soulnames
-**_Soulbound domains_**
+# Custom Soulnames
+**Soulnames are handles, usernames, and domains in web3**
 
 With Masa, you can build an engaged a loyal user base around your game or platform by issuing custom human readable domain names, handles, or aliases. A soulbound domain name is a human-readable address that resolves to a user’s wallet and any SBT identifiers associated with it. It is a combination of letters, numbers, and/or emojis. Soulbound domains  are minted as ERC-721 NFTs and through Masa’s SoulLinker contract are linkable to a Masa Identity (MID) and are easily resolvable to any SBT identirifer. Soulbound domains can be sold and traded on OpenSea by your users and are compatible with the OpenSea marketplace. 
 
