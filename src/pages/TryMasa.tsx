@@ -1,29 +1,17 @@
 import React from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import BrowserOnly from "@docusaurus/BrowserOnly";
+import Masa from "@site/src/components/masa/masa";
+import { MasaLogin } from "@site/src/components/masa/masa-login";
 
 const TryMasa = (): JSX.Element => {
   const { siteConfig } = useDocusaurusContext();
 
   return (
     <Layout title={`${siteConfig.title}`}>
-      <BrowserOnly>
-        {() => {
-          require("@masa-finance/masa-react/dist/browser/main.css");
-
-          const { MasaProvider } = require("@masa-finance/masa-react");
-          const {
-            MasaLogin,
-          } = require("@site/src/components/masa-login/masa-login");
-
-          return (
-            <MasaProvider environmentName="production" company="Masa">
-              <MasaLogin/>
-            </MasaProvider>
-          );
-        }}
-      </BrowserOnly>
+      <Masa>
+        <MasaLogin />
+      </Masa>
     </Layout>
   );
 };

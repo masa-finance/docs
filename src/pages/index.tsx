@@ -5,9 +5,7 @@ import Hero from "../components/Hero";
 import "./index.module.css";
 
 const HomepageHeader = () => {
-  return (
-      <Hero />
-  );
+  return <Hero />;
 };
 
 const Home = (): JSX.Element => {
