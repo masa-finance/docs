@@ -341,7 +341,7 @@ Mints a new soulbound identity
 
 | Name | Type | Description |
 |---|---|---|
-| to | address | Address of the admin of the new identity |
+| to | address | Address of the owner of the new identity |
 
 #### Returns
 
@@ -363,7 +363,7 @@ Mints a new soulbound identity with a SoulName associated to it
 
 | Name | Type | Description |
 |---|---|---|
-| to | address | Address of the admin of the new identity |
+| to | address | Address of the owner of the new identity |
 | name | string | Name of the new identity |
 | yearsPeriod | uint256 | Years of validity of the name |
 | _tokenURI | string | URI of the NFT |
