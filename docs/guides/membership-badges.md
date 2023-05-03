@@ -87,6 +87,4 @@ If you’re interested in other use cases, you can dive into our guides:
 
 - [Bot killer](./bot-killer.md)
 - [Achievements](./achievement-badges.md)
-- Quest
 - [Soulnames](./soul-names.md)
-- Credit score

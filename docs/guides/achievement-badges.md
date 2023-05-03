@@ -19,7 +19,7 @@ With Masa, you can track and reward an individuals achievements in your communit
 - **On-chain Achievements:** you can mint a Achievement Badge when a contributor deploys a smart contract 
 
 :::tip
-You need to have the Masa CLI installed, if you have not completed the Quickstart you can do so [here] (#)
+You need to have the Masa CLI installed, if you have not completed the Quickstart you can do so [here](https://developers.masa.finance/docs/quickstart/base)
 :::
 
 ## Create Achievement badges using Masa CLI
@@ -247,6 +247,4 @@ If you’re interested in other use cases, you can dive into our guides:
 
 - [Bot killer](./bot-killer.md)
 - [Membership](./membership-badges.md)
-- Quest
 - [Soulnames](./resolving-soulnames.md)
-- Credit score
