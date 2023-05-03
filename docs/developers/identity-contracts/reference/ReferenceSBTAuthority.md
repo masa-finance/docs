@@ -1,12 +1,12 @@
-# SoulboundIdentity
+# ReferenceSBTAuthority
 
 *Masa Finance*
 
-> Soulbound Identity
+> Soulbound reference Authority SBT
 
-Soulbound token that represents an identity.
+Soulbound token that represents a Authority SBT
 
-*Soulbound identity, that inherits from the SBT contract.*
+*Inherits from the SBT contract.*
 
 ## Methods
 
@@ -138,23 +138,6 @@ Returns true if the token exists
 |---|---|---|
 | _0 | bool | True if the token exists |
 
-### getExtension
-
-```solidity
-function getExtension() external view returns (string)
-```
-
-Returns the extension of the soul name
-
-*This function returns the extension of the soul name*
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | string | Extension of the soul name |
-
 ### getIdentityId
 
 ```solidity
@@ -199,94 +182,6 @@ function getRoleAdmin(bytes32 role) external view returns (bytes32)
 |---|---|---|
 | _0 | bytes32 | undefined |
 
-### getSoulName
-
-```solidity
-function getSoulName() external view returns (contract ISoulName)
-```
-
-Returns the address of the SoulName contract linked to this identity
-
-*This function returns the address of the SoulName contract linked to this identity*
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | contract ISoulName | Address of the SoulName contract |
-
-### getSoulNames
-
-```solidity
-function getSoulNames(uint256 tokenId) external view returns (string[] sbtNames)
-```
-
-Returns all the active soul names of an account
-
-*This function queries all the identity names of the specified identity Id*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| tokenId | uint256 | TokenId of the identity |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| sbtNames | string[] | Array of soul names associated to the identity Id |
-
-### getSoulNames
-
-```solidity
-function getSoulNames(address owner) external view returns (string[] sbtNames)
-```
-
-Returns all the active soul names of an account
-
-*This function queries all the identity names of the specified account*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| owner | address | Address of the owner of the identities |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| sbtNames | string[] | Array of soul names associated to the account |
-
-### getTokenData
-
-```solidity
-function getTokenData(string name) external view returns (string sbtName, bool linked, uint256 identityId, uint256 tokenId, uint256 expirationDate, bool active)
-```
-
-Returns the information of a soul name
-
-*This function queries the information of a soul name*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| name | string | Name of the soul name |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| sbtName | string | Soul name, in upper/lower case and extension |
-| linked | bool | `true` if the soul name is linked, `false` otherwise |
-| identityId | uint256 | Identity id of the soul name |
-| tokenId | uint256 | SoulName id of the soul name |
-| expirationDate | uint256 | Expiration date of the soul name |
-| active | bool | `true` if the soul name is active, `false` otherwise |
-
 ### grantRole
 
 ```solidity
@@ -327,74 +222,49 @@ function hasRole(bytes32 role, address account) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
-### isAvailable
-
-```solidity
-function isAvailable(string name) external view returns (bool available)
-```
-
-Checks if a soul name is available
-
-*This function queries if a soul name already exists and is in the available state*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| name | string | Name of the soul name |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| available | bool | `true` if the soul name is available, `false` otherwise |
-
 ### mint
 
 ```solidity
 function mint(address to) external nonpayable returns (uint256)
 ```
 
-Mints a new soulbound identity
+Mints a new SBT
 
-*The caller can only mint one identity per address*
+*The caller must have the MINTER role*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| to | address | Address of the owner of the new identity |
+| to | address | The address to mint the SBT to |
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256 | undefined |
+| _0 | uint256 | The SBT ID of the newly minted SBT |
 
-### mintIdentityWithName
+### mint
 
 ```solidity
-function mintIdentityWithName(address to, string name, uint256 yearsPeriod, string _tokenURI) external nonpayable returns (uint256)
+function mint(uint256 identityId) external nonpayable returns (uint256)
 ```
 
-Mints a new soulbound identity with a SoulName associated to it
+Mints a new SBT
 
-*The caller can only mint one identity per address, and the name must be unique*
+*The caller must have the MINTER role*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| to | address | Address of the owner of the new identity |
-| name | string | Name of the new identity |
-| yearsPeriod | uint256 | Years of validity of the name |
-| _tokenURI | string | URI of the NFT |
+| identityId | uint256 | TokenId of the identity to mint the NFT to |
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256 | undefined |
+| _0 | uint256 | The SBT ID of the newly minted SBT |
 
 ### name
 
@@ -419,43 +289,21 @@ function name() external view returns (string)
 function ownerOf(uint256 tokenId) external view returns (address)
 ```
 
-Returns the owner address of an identity
 
-*This function returns the owner address of the identity specified by the tokenId*
 
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| tokenId | uint256 | TokenId of the identity |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | Address of the owner of the identity |
-
-### ownerOf
-
-```solidity
-function ownerOf(string name) external view returns (address)
-```
-
-Returns the owner address of a soul name
-
-*This function returns the owner address of the soul name identity specified by the name*
+*See {ISBT-ownerOf}.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| name | string | Name of the soul name |
+| tokenId | uint256 | undefined |
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | address | Address of the owner of the identity |
+| _0 | address | undefined |
 
 ### queryLinkPrice
 
@@ -589,22 +437,6 @@ Sets the price for reading data in SoulLinker in MASA
 |---|---|---|
 | _queryLinkPriceMASA | uint256 | New price for reading data in SoulLinker in MASA |
 
-### setSoulName
-
-```solidity
-function setSoulName(contract ISoulName _soulName) external nonpayable
-```
-
-Sets the SoulName contract address linked to this identity
-
-*The caller must have the admin role to call this function*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _soulName | contract ISoulName | Address of the SoulName contract |
-
 ### setSoulboundIdentity
 
 ```solidity
@@ -620,23 +452,6 @@ Sets the SoulboundIdentity contract address linked to this SBT
 | Name | Type | Description |
 |---|---|---|
 | _soulboundIdentity | address | Address of the SoulboundIdentity contract |
-
-### soulName
-
-```solidity
-function soulName() external view returns (contract ISoulName)
-```
-
-
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | contract ISoulName | undefined |
 
 ### soulboundIdentity
 
@@ -716,28 +531,6 @@ function tokenByIndex(uint256 index) external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
-### tokenOfOwner
-
-```solidity
-function tokenOfOwner(address owner) external view returns (uint256)
-```
-
-Returns the identity id of an account
-
-*This function returns the tokenId of the identity owned by an account*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| owner | address | Address of the owner of the identity |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | TokenId of the identity owned by the account |
-
 ### tokenOfOwnerByIndex
 
 ```solidity
@@ -760,50 +553,6 @@ function tokenOfOwnerByIndex(address owner, uint256 index) external view returns
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | undefined |
-
-### tokenURI
-
-```solidity
-function tokenURI(string name) external view returns (string)
-```
-
-Returns the URI of a soul name
-
-*This function returns the token URI of the soul name identity specified by the name*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| name | string | Name of the soul name |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | string | URI of the identity associated to a soul name |
-
-### tokenURI
-
-```solidity
-function tokenURI(address owner) external view returns (string)
-```
-
-Returns the URI of the owner of an identity
-
-*This function returns the token URI of the identity owned by an account*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| owner | address | Address of the owner of the identity |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | string | URI of the identity owned by the account |
 
 ### tokenURI
 
@@ -882,6 +631,40 @@ event Mint(address indexed _owner, uint256 indexed _tokenId)
 | _owner `indexed` | address | undefined |
 | _tokenId `indexed` | uint256 | undefined |
 
+### MintedToAddress
+
+```solidity
+event MintedToAddress(uint256 tokenId, address to)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId  | uint256 | undefined |
+| to  | address | undefined |
+
+### MintedToIdentity
+
+```solidity
+event MintedToIdentity(uint256 tokenId, uint256 identityId)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId  | uint256 | undefined |
+| identityId  | uint256 | undefined |
+
 ### RoleAdminChanged
 
 ```solidity
@@ -940,10 +723,21 @@ event RoleRevoked(bytes32 indexed role, address indexed account, address indexed
 
 ## Errors
 
-### IdentityAlreadyCreated
+### NotLinkedToAnIdentitySBT
 
 ```solidity
-error IdentityAlreadyCreated(address to)
+error NotLinkedToAnIdentitySBT()
+```
+
+
+
+
+
+
+### SBTAlreadyCreated
+
+```solidity
+error SBTAlreadyCreated(address to)
 ```
 
 
@@ -956,43 +750,10 @@ error IdentityAlreadyCreated(address to)
 |---|---|---|
 | to | address | undefined |
 
-### NotLinkedToAnIdentitySBT
-
-```solidity
-error NotLinkedToAnIdentitySBT()
-```
-
-
-
-
-
-
 ### SameValue
 
 ```solidity
 error SameValue()
-```
-
-
-
-
-
-
-### SoulNameContractNotSet
-
-```solidity
-error SoulNameContractNotSet()
-```
-
-
-
-
-
-
-### ZeroAddress
-
-```solidity
-error ZeroAddress()
 ```
 
 

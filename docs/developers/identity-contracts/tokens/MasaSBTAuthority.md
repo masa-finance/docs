@@ -138,6 +138,28 @@ Returns true if the token exists
 |---|---|---|
 | _0 | bool | True if the token exists |
 
+### getIdentityId
+
+```solidity
+function getIdentityId(uint256 tokenId) external view returns (uint256)
+```
+
+Returns the identityId owned by the given token
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId | uint256 | Id of the token |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | Id of the identity |
+
 ### getRoleAdmin
 
 ```solidity
@@ -371,6 +393,39 @@ Sets the price for reading data in SoulLinker in MASA
 |---|---|---|
 | _queryLinkPriceMASA | uint256 | New price for reading data in SoulLinker in MASA |
 
+### setSoulboundIdentity
+
+```solidity
+function setSoulboundIdentity(address _soulboundIdentity) external nonpayable
+```
+
+Sets the SoulboundIdentity contract address linked to this SBT
+
+*The caller must be the admin to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _soulboundIdentity | address | Address of the SoulboundIdentity contract |
+
+### soulboundIdentity
+
+```solidity
+function soulboundIdentity() external view returns (contract ISoulboundIdentity)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | contract ISoulboundIdentity | undefined |
+
 ### supportsInterface
 
 ```solidity
@@ -589,6 +644,17 @@ event RoleRevoked(bytes32 indexed role, address indexed account, address indexed
 
 
 ## Errors
+
+### NotLinkedToAnIdentitySBT
+
+```solidity
+error NotLinkedToAnIdentitySBT()
+```
+
+
+
+
+
 
 ### SameValue
 
