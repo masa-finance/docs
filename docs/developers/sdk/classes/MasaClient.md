@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.15.1](../README.md) / [Exports](../modules.md) / MasaClient
+ - v1.15.2](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -29,6 +29,12 @@
 ### Accessors
 
 - [cookie](MasaClient.md#cookie)
+
+### Methods
+
+- [get](MasaClient.md#get)
+- [patch](MasaClient.md#patch)
+- [post](MasaClient.md#post)
 
 ## Constructors
 
@@ -145,3 +151,76 @@ ___
 #### Returns
 
 `undefined` \| `string`
+
+## Methods
+
+### get
+
+▸ **get**<`Result`\>(`endpoint`, `silent?`): `Promise`<`undefined` \| `Result`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `Result` |
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `endpoint` | `string` | `undefined` |
+| `silent` | `boolean` | `false` |
+
+#### Returns
+
+`Promise`<`undefined` \| `Result`\>
+
+___
+
+### patch
+
+▸ **patch**<`Payload`, `Result`\>(`endpoint`, `data`, `silent?`): `Promise`<`undefined` \| `Result`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `Payload` |
+| `Result` |
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `endpoint` | `string` | `undefined` |
+| `data` | `Payload` | `undefined` |
+| `silent` | `boolean` | `false` |
+
+#### Returns
+
+`Promise`<`undefined` \| `Result`\>
+
+___
+
+### post
+
+▸ **post**<`Payload`, `Result`\>(`endpoint`, `data`, `silent?`): `Promise`<`undefined` \| `Result`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `Payload` |
+| `Result` |
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `endpoint` | `string` | `undefined` |
+| `data` | `Payload` | `undefined` |
+| `silent` | `boolean` | `false` |
+
+#### Returns
+
+`Promise`<`undefined` \| `Result`\>

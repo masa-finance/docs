@@ -4,7 +4,7 @@
 
 > MasaSBTSelfSovereign
 
-Soulbound token. Non-fungible token that is not transferable. Adds a link to a SoulboundIdentity SC to let minting using the identityId Adds a payment gateway to let minting paying a fee Adds a self-sovereign protocol to let minting using an authority signature
+Soulbound token. Non-fungible token that is not transferable. Adds a payment gateway to let minting paying a fee Adds a self-sovereign protocol to let minting using an authority signature
 
 *Implementation of https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763 Soulbound token.*
 
@@ -680,7 +680,7 @@ Set the reserve wallet
 ### setSoulboundIdentity
 
 ```solidity
-function setSoulboundIdentity(contract ISoulboundIdentity _soulboundIdentity) external nonpayable
+function setSoulboundIdentity(address _soulboundIdentity) external nonpayable
 ```
 
 Sets the SoulboundIdentity contract address linked to this SBT
@@ -691,7 +691,7 @@ Sets the SoulboundIdentity contract address linked to this SBT
 
 | Name | Type | Description |
 |---|---|---|
-| _soulboundIdentity | contract ISoulboundIdentity | Address of the SoulboundIdentity contract |
+| _soulboundIdentity | address | Address of the SoulboundIdentity contract |
 
 ### setStableCoin
 

@@ -155,6 +155,28 @@ Returns the extension of the soul name
 |---|---|---|
 | _0 | string | Extension of the soul name |
 
+### getIdentityId
+
+```solidity
+function getIdentityId(uint256 tokenId) external view returns (uint256)
+```
+
+Returns the identityId owned by the given token
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId | uint256 | Id of the token |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | Id of the identity |
+
 ### getRoleAdmin
 
 ```solidity
@@ -583,6 +605,22 @@ Sets the SoulName contract address linked to this identity
 |---|---|---|
 | _soulName | contract ISoulName | Address of the SoulName contract |
 
+### setSoulboundIdentity
+
+```solidity
+function setSoulboundIdentity(address _soulboundIdentity) external nonpayable
+```
+
+Sets the SoulboundIdentity contract address linked to this SBT
+
+*The caller must be the admin to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _soulboundIdentity | address | Address of the SoulboundIdentity contract |
+
 ### soulName
 
 ```solidity
@@ -599,6 +637,23 @@ function soulName() external view returns (contract ISoulName)
 | Name | Type | Description |
 |---|---|---|
 | _0 | contract ISoulName | undefined |
+
+### soulboundIdentity
+
+```solidity
+function soulboundIdentity() external view returns (contract ISoulboundIdentity)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | contract ISoulboundIdentity | undefined |
 
 ### supportsInterface
 
@@ -900,6 +955,17 @@ error IdentityAlreadyCreated(address to)
 | Name | Type | Description |
 |---|---|---|
 | to | address | undefined |
+
+### NotLinkedToAnIdentitySBT
+
+```solidity
+error NotLinkedToAnIdentitySBT()
+```
+
+
+
+
+
 
 ### SameValue
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.15.1](../README.md) / [Exports](../modules.md) / ContractInfo
+ - v1.15.2](../README.md) / [Exports](../modules.md) / ContractInfo
 
 # Interface: ContractInfo
 
