@@ -27,11 +27,10 @@ export default function Hero() {
           className="flex flex-col justify-center items-center relative font-[ezra]"
           style={{ height: "100%" }}
         >
-          <p className="font-medium py-10 text-[60px]">
-            Masa Soulbound Identity
-          </p>
-          <p className="text-[gray] text-[22px]">
-            The premiere web3 identity and credit protocol
+          <p className="font-medium py-10 text-[60px]">Masa Protocol</p>
+          <p className="text-[white] text-[22px]">
+            Soulbound Identity Infrastructure for Developers Building Web3
+            Communities
           </p>
           <Link to="docs/introduction">
             <p className="py-8 text-xl font-bold">Get Started</p>
