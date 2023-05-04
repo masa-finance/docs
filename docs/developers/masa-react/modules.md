@@ -1,8 +1,8 @@
 [# Masa React
- - v1.1.39](README.md) / Exports
+ - v1.1.40](README.md) / Exports
 
 # # Masa React
- - v1.1.39
+ - v1.1.40
 
 ## Table of contents
 
@@ -417,7 +417,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `provider?` | `Signer` \| `Wallet` |
+| `provider?` | `Wallet` \| `Signer` |
 
 #### Returns
 
@@ -519,7 +519,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `masa?` | `default` |
-| `provider?` | `Signer` \| `Wallet` |
+| `provider?` | `Wallet` \| `Signer` |
 
 #### Returns
 

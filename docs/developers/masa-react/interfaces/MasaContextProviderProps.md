@@ -1,5 +1,5 @@
 [# Masa React
- - v1.1.39](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v1.1.40](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -624,7 +624,7 @@ ___
 
 ### provider
 
-• `Optional` **provider**: `Signer` \| `Wallet`
+• `Optional` **provider**: `Wallet` \| `Signer`
 
 #### Inherited from
 
@@ -764,7 +764,7 @@ ___
 
 ### setProvider
 
-• `Optional` **setProvider**: (`provider?`: `Signer` \| `Wallet`) => `void`
+• `Optional` **setProvider**: (`provider?`: `Wallet` \| `Signer`) => `void`
 
 #### Type declaration
 
@@ -774,7 +774,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `provider?` | `Signer` \| `Wallet` |
+| `provider?` | `Wallet` \| `Signer` |
 
 ##### Returns
 
@@ -788,7 +788,7 @@ ___
 
 ### signer
 
-• `Optional` **signer**: `Signer` \| `Wallet`
+• `Optional` **signer**: `Wallet` \| `Signer`
 
 ___
 
