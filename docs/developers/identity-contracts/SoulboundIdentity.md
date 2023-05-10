@@ -44,6 +44,23 @@ function MINTER_ROLE() external view returns (bytes32)
 |---|---|---|
 | _0 | bytes32 | undefined |
 
+### PROJECT_ADMIN_ROLE
+
+```solidity
+function PROJECT_ADMIN_ROLE() external view returns (bytes32)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bytes32 | undefined |
+
 ### addLinkPrice
 
 ```solidity
@@ -116,6 +133,82 @@ function burn(uint256 tokenId) external nonpayable
 |---|---|---|
 | tokenId | uint256 | undefined |
 
+### disablePaymentMethod
+
+```solidity
+function disablePaymentMethod(address _paymentMethod) external nonpayable
+```
+
+Removes a token as a valid payment method
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _paymentMethod | address | Token to remove |
+
+### enablePaymentMethod
+
+```solidity
+function enablePaymentMethod(address _paymentMethod) external nonpayable
+```
+
+Adds a new token as a valid payment method
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _paymentMethod | address | New token to add |
+
+### enabledPaymentMethod
+
+```solidity
+function enabledPaymentMethod(address) external view returns (bool)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
+### enabledPaymentMethods
+
+```solidity
+function enabledPaymentMethods(uint256) external view returns (address)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
 ### exists
 
 ```solidity
@@ -137,6 +230,23 @@ Returns true if the token exists
 | Name | Type | Description |
 |---|---|---|
 | _0 | bool | True if the token exists |
+
+### getEnabledPaymentMethods
+
+```solidity
+function getEnabledPaymentMethods() external view returns (address[])
+```
+
+Returns all available payment methods
+
+*Returns the address of all available payment methods*
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address[] | Array of all enabled payment methods |
 
 ### getExtension
 
@@ -176,6 +286,29 @@ Returns the identityId owned by the given token
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | Id of the identity |
+
+### getMintPrice
+
+```solidity
+function getMintPrice(address paymentMethod) external view returns (uint256 price, uint256 protocolFee)
+```
+
+Returns the price for minting
+
+*Returns current pricing for minting*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| price | uint256 | Current price for minting in the given payment method |
+| protocolFee | uint256 | Current protocol fee for minting in the given payment method |
 
 ### getRoleAdmin
 
@@ -349,10 +482,27 @@ Checks if a soul name is available
 |---|---|---|
 | available | bool | `true` if the soul name is available, `false` otherwise |
 
+### masaToken
+
+```solidity
+function masaToken() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
 ### mint
 
 ```solidity
-function mint(address to) external nonpayable returns (uint256)
+function mint(address to) external payable returns (uint256)
 ```
 
 Mints a new soulbound identity
@@ -369,12 +519,35 @@ Mints a new soulbound identity
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256 | undefined |
+| _0 | uint256 | The identity ID of the newly minted identity |
+
+### mint
+
+```solidity
+function mint(address paymentMethod, address to) external payable returns (uint256)
+```
+
+Mints a new soulbound identity
+
+*The caller can only mint one identity per address*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of the payment method to use |
+| to | address | Address of the owner of the new identity |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | The identity ID of the newly minted identity |
 
 ### mintIdentityWithName
 
 ```solidity
-function mintIdentityWithName(address to, string name, uint256 yearsPeriod, string _tokenURI) external nonpayable returns (uint256)
+function mintIdentityWithName(address to, string name, uint256 yearsPeriod, string _tokenURI) external payable returns (uint256)
 ```
 
 Mints a new soulbound identity with a SoulName associated to it
@@ -389,6 +562,66 @@ Mints a new soulbound identity with a SoulName associated to it
 | name | string | Name of the new identity |
 | yearsPeriod | uint256 | Years of validity of the name |
 | _tokenURI | string | URI of the NFT |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### mintIdentityWithName
+
+```solidity
+function mintIdentityWithName(address paymentMethod, address to, string name, uint256 yearsPeriod, string _tokenURI) external payable returns (uint256)
+```
+
+Mints a new soulbound identity with a SoulName associated to it
+
+*The caller can only mint one identity per address, and the name must be unique*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of the payment method to use |
+| to | address | Address of the owner of the new identity |
+| name | string | Name of the new identity |
+| yearsPeriod | uint256 | Years of validity of the name |
+| _tokenURI | string | URI of the NFT |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### mintPrice
+
+```solidity
+function mintPrice() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### mintPriceMASA
+
+```solidity
+function mintPriceMASA() external view returns (uint256)
+```
+
+
+
+
+
 
 #### Returns
 
@@ -456,6 +689,74 @@ Returns the owner address of a soul name
 | Name | Type | Description |
 |---|---|---|
 | _0 | address | Address of the owner of the identity |
+
+### projectFeeReceiver
+
+```solidity
+function projectFeeReceiver() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
+### protocolFeeAmount
+
+```solidity
+function protocolFeeAmount() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### protocolFeePercent
+
+```solidity
+function protocolFeePercent() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### protocolFeeReceiver
+
+```solidity
+function protocolFeeReceiver() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
 
 ### queryLinkPrice
 
@@ -533,7 +834,7 @@ function setAddLinkPrice(uint256 _addLinkPrice) external nonpayable
 
 Sets the price for adding the link in SoulLinker in stable coin
 
-*The caller must have the admin role to call this function*
+*The caller must have the admin or project admin role to call this function*
 
 #### Parameters
 
@@ -549,13 +850,125 @@ function setAddLinkPriceMASA(uint256 _addLinkPriceMASA) external nonpayable
 
 Sets the price for adding the link in SoulLinker in MASA
 
-*The caller must have the admin role to call this function*
+*The caller must have the admin or project admin role to call this function*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
 | _addLinkPriceMASA | uint256 | New price for adding the link in SoulLinker in MASA |
+
+### setMasaToken
+
+```solidity
+function setMasaToken(address _masaToken) external nonpayable
+```
+
+Sets the utility token to pay the fee in (MASA)
+
+*The caller must have the admin role to call this function It can be set to address(0) to disable paying in MASA*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _masaToken | address | New utility token to pay the fee in |
+
+### setMintPrice
+
+```solidity
+function setMintPrice(uint256 _mintPrice) external nonpayable
+```
+
+Sets the price of minting in stable coin
+
+*The caller must have the admin or project admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _mintPrice | uint256 | New price of minting in stable coin |
+
+### setMintPriceMASA
+
+```solidity
+function setMintPriceMASA(uint256 _mintPriceMASA) external nonpayable
+```
+
+Sets the price of minting in MASA
+
+*The caller must have the admin or project admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _mintPriceMASA | uint256 | New price of minting in MASA |
+
+### setProjectFeeReceiver
+
+```solidity
+function setProjectFeeReceiver(address _projectFeeReceiver) external nonpayable
+```
+
+Set the project fee receiver wallet
+
+*The caller must have the admin or project admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _projectFeeReceiver | address | New project fee receiver wallet |
+
+### setProtocolFeeAmount
+
+```solidity
+function setProtocolFeeAmount(uint256 _protocolFeeAmount) external nonpayable
+```
+
+Set the protocol fee amount
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _protocolFeeAmount | uint256 | New protocol fee amount |
+
+### setProtocolFeePercent
+
+```solidity
+function setProtocolFeePercent(uint256 _protocolFeePercent) external nonpayable
+```
+
+Set the protocol fee percent
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _protocolFeePercent | uint256 | New protocol fee percent |
+
+### setProtocolFeeReceiver
+
+```solidity
+function setProtocolFeeReceiver(address _protocolFeeReceiver) external nonpayable
+```
+
+Set the protocol fee wallet
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _protocolFeeReceiver | address | New protocol fee wallet |
 
 ### setQueryLinkPrice
 
@@ -565,7 +978,7 @@ function setQueryLinkPrice(uint256 _queryLinkPrice) external nonpayable
 
 Sets the price for reading data in SoulLinker in stable coin
 
-*The caller must have the admin role to call this function*
+*The caller must have the admin or project admin role to call this function*
 
 #### Parameters
 
@@ -581,7 +994,7 @@ function setQueryLinkPriceMASA(uint256 _queryLinkPriceMASA) external nonpayable
 
 Sets the price for reading data in SoulLinker in MASA
 
-*The caller must have the admin role to call this function*
+*The caller must have the admin or project admin role to call this function*
 
 #### Parameters
 
@@ -621,6 +1034,54 @@ Sets the SoulboundIdentity contract address linked to this SBT
 |---|---|---|
 | _soulboundIdentity | address | Address of the SoulboundIdentity contract |
 
+### setStableCoin
+
+```solidity
+function setStableCoin(address _stableCoin) external nonpayable
+```
+
+Sets the stable coin to pay the fee in (USDC)
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _stableCoin | address | New stable coin to pay the fee in |
+
+### setSwapRouter
+
+```solidity
+function setSwapRouter(address _swapRouter) external nonpayable
+```
+
+Sets the swap router address
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _swapRouter | address | New swap router address |
+
+### setWrappedNativeToken
+
+```solidity
+function setWrappedNativeToken(address _wrappedNativeToken) external nonpayable
+```
+
+Sets the wrapped native token address
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _wrappedNativeToken | address | New wrapped native token address |
+
 ### soulName
 
 ```solidity
@@ -655,6 +1116,23 @@ function soulboundIdentity() external view returns (contract ISoulboundIdentity)
 |---|---|---|
 | _0 | contract ISoulboundIdentity | undefined |
 
+### stableCoin
+
+```solidity
+function stableCoin() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
 ### supportsInterface
 
 ```solidity
@@ -676,6 +1154,23 @@ Query if a contract implements an interface
 | Name | Type | Description |
 |---|---|---|
 | _0 | bool | `true` if the contract implements `interfaceId` and  `interfaceId` is not 0xffffffff, `false` otherwise |
+
+### swapRouter
+
+```solidity
+function swapRouter() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
 
 ### symbol
 
@@ -844,6 +1339,23 @@ function totalSupply() external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
+### wrappedNativeToken
+
+```solidity
+function wrappedNativeToken() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
 
 
 ## Events
@@ -940,6 +1452,17 @@ event RoleRevoked(bytes32 indexed role, address indexed account, address indexed
 
 ## Errors
 
+### AlreadyAdded
+
+```solidity
+error AlreadyAdded()
+```
+
+
+
+
+
+
 ### IdentityAlreadyCreated
 
 ```solidity
@@ -956,10 +1479,107 @@ error IdentityAlreadyCreated(address to)
 |---|---|---|
 | to | address | undefined |
 
+### InsufficientEthAmount
+
+```solidity
+error InsufficientEthAmount(uint256 amount)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| amount | uint256 | undefined |
+
+### InvalidPaymentMethod
+
+```solidity
+error InvalidPaymentMethod(address paymentMethod)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | undefined |
+
+### InvalidToken
+
+```solidity
+error InvalidToken(address token)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| token | address | undefined |
+
+### NonExistingErc20Token
+
+```solidity
+error NonExistingErc20Token(address erc20token)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| erc20token | address | undefined |
+
 ### NotLinkedToAnIdentitySBT
 
 ```solidity
 error NotLinkedToAnIdentitySBT()
+```
+
+
+
+
+
+
+### PaymentParamsNotSet
+
+```solidity
+error PaymentParamsNotSet()
+```
+
+
+
+
+
+
+### ProtocolFeeReceiverNotSet
+
+```solidity
+error ProtocolFeeReceiverNotSet()
+```
+
+
+
+
+
+
+### RefundFailed
+
+```solidity
+error RefundFailed()
 ```
 
 
@@ -982,6 +1602,28 @@ error SameValue()
 
 ```solidity
 error SoulNameContractNotSet()
+```
+
+
+
+
+
+
+### TransferFailed
+
+```solidity
+error TransferFailed()
+```
+
+
+
+
+
+
+### UserMustHaveProtocolOrProjectAdminRole
+
+```solidity
+error UserMustHaveProtocolOrProjectAdminRole()
 ```
 
 

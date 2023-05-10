@@ -4,7 +4,7 @@
 
 > Pay using a Decentralized automated market maker (AMM) when needed
 
-Smart contract to call a Dex AMM smart contract to pay to a reserve wallet recipient
+Smart contract to call a Dex AMM smart contract to pay to a project fee receiver wallet recipient
 
 *This smart contract will call the Uniswap Router interface, based on https://github.com/Uniswap/v2-periphery/blob/master/contracts/interfaces/IUniswapV2Router01.sol*
 
@@ -14,6 +14,23 @@ Smart contract to call a Dex AMM smart contract to pay to a reserve wallet recip
 
 ```solidity
 function DEFAULT_ADMIN_ROLE() external view returns (bytes32)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bytes32 | undefined |
+
+### PROJECT_ADMIN_ROLE
+
+```solidity
+function PROJECT_ADMIN_ROLE() external view returns (bytes32)
 ```
 
 
@@ -199,6 +216,74 @@ function masaToken() external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
+### projectFeeReceiver
+
+```solidity
+function projectFeeReceiver() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
+### protocolFeeAmount
+
+```solidity
+function protocolFeeAmount() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### protocolFeePercent
+
+```solidity
+function protocolFeePercent() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### protocolFeeReceiver
+
+```solidity
+function protocolFeeReceiver() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
 ### renounceRole
 
 ```solidity
@@ -215,23 +300,6 @@ function renounceRole(bytes32 role, address account) external nonpayable
 |---|---|---|
 | role | bytes32 | undefined |
 | account | address | undefined |
-
-### reserveWallet
-
-```solidity
-function reserveWallet() external view returns (address)
-```
-
-
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
 
 ### revokeRole
 
@@ -266,13 +334,29 @@ Sets the utility token to pay the fee in (MASA)
 |---|---|---|
 | _masaToken | address | New utility token to pay the fee in |
 
-### setReserveWallet
+### setProjectFeeReceiver
 
 ```solidity
-function setReserveWallet(address _reserveWallet) external nonpayable
+function setProjectFeeReceiver(address _projectFeeReceiver) external nonpayable
 ```
 
-Set the reserve wallet
+Set the project fee receiver wallet
+
+*The caller must have the admin or project admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _projectFeeReceiver | address | New project fee receiver wallet |
+
+### setProtocolFeeAmount
+
+```solidity
+function setProtocolFeeAmount(uint256 _protocolFeeAmount) external nonpayable
+```
+
+Set the protocol fee amount
 
 *The caller must have the admin role to call this function*
 
@@ -280,7 +364,39 @@ Set the reserve wallet
 
 | Name | Type | Description |
 |---|---|---|
-| _reserveWallet | address | New reserve wallet |
+| _protocolFeeAmount | uint256 | New protocol fee amount |
+
+### setProtocolFeePercent
+
+```solidity
+function setProtocolFeePercent(uint256 _protocolFeePercent) external nonpayable
+```
+
+Set the protocol fee percent
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _protocolFeePercent | uint256 | New protocol fee percent |
+
+### setProtocolFeeReceiver
+
+```solidity
+function setProtocolFeeReceiver(address _protocolFeeReceiver) external nonpayable
+```
+
+Set the protocol fee wallet
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _protocolFeeReceiver | address | New protocol fee wallet |
 
 ### setStableCoin
 
@@ -503,10 +619,10 @@ error SameValue()
 
 
 
-### ZeroAddress
+### UserMustHaveProtocolOrProjectAdminRole
 
 ```solidity
-error ZeroAddress()
+error UserMustHaveProtocolOrProjectAdminRole()
 ```
 
 
