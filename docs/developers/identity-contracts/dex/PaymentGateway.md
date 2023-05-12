@@ -137,6 +137,29 @@ Returns all available payment methods
 |---|---|---|
 | _0 | address[] | Array of all enabled payment methods |
 
+### getProtocolFee
+
+```solidity
+function getProtocolFee(address paymentMethod, uint256 amount) external view returns (uint256)
+```
+
+Calculates the protocol fee
+
+*This method will calculate the protocol fee based on the payment method*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
+| amount | uint256 | Price to be paid in the specified payment method |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
 ### getRoleAdmin
 
 ```solidity
@@ -592,6 +615,22 @@ error AlreadyAdded()
 
 
 
+### InvalidToken
+
+```solidity
+error InvalidToken(address token)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| token | address | undefined |
+
 ### NonExistingErc20Token
 
 ```solidity
@@ -607,6 +646,17 @@ error NonExistingErc20Token(address erc20token)
 | Name | Type | Description |
 |---|---|---|
 | erc20token | address | undefined |
+
+### PaymentParamsNotSet
+
+```solidity
+error PaymentParamsNotSet()
+```
+
+
+
+
+
 
 ### SameValue
 

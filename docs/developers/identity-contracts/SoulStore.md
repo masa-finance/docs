@@ -200,7 +200,7 @@ Returns the price of register a name per year in stable coin for an specific len
 ### getPriceForMintingName
 
 ```solidity
-function getPriceForMintingName(address paymentMethod, uint256 nameLength, uint256 yearsPeriod) external view returns (uint256 price, uint256 protocolFee)
+function getPriceForMintingName(address paymentMethod, uint256 nameLength, uint256 yearsPeriod) external view returns (uint256 price)
 ```
 
 Returns the price of the name minting
@@ -220,7 +220,54 @@ Returns the price of the name minting
 | Name | Type | Description |
 |---|---|---|
 | price | uint256 | Current price of the name minting in the given payment method |
+
+### getPriceForMintingNameWithProtocolFee
+
+```solidity
+function getPriceForMintingNameWithProtocolFee(address paymentMethod, uint256 nameLength, uint256 yearsPeriod) external view returns (uint256 price, uint256 protocolFee)
+```
+
+Returns the price of the name minting with protocol fee
+
+*Returns current pricing for name minting for a given name length and years period with protocol fee*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
+| nameLength | uint256 | Length of the name |
+| yearsPeriod | uint256 | Years of validity of the name |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| price | uint256 | Current price of the name minting in the given payment method |
 | protocolFee | uint256 | Current protocol fee of the name minting in the given payment method |
+
+### getProtocolFee
+
+```solidity
+function getProtocolFee(address paymentMethod, uint256 amount) external view returns (uint256)
+```
+
+Calculates the protocol fee
+
+*This method will calculate the protocol fee based on the payment method*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
+| amount | uint256 | Price to be paid in the specified payment method |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
 
 ### getRoleAdmin
 

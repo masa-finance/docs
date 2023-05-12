@@ -258,7 +258,7 @@ Returns the list of link signature dates for a given SBT token and reader
 ### getPriceForAddLink
 
 ```solidity
-function getPriceForAddLink(address paymentMethod, address token) external view returns (uint256 price, uint256 protocolFee)
+function getPriceForAddLink(address paymentMethod, address token) external view returns (uint256 price)
 ```
 
 Returns the price for storing a link
@@ -277,7 +277,53 @@ Returns the price for storing a link
 | Name | Type | Description |
 |---|---|---|
 | price | uint256 | Current price for storing a link |
+
+### getPriceForAddLinkWithProtocolFee
+
+```solidity
+function getPriceForAddLinkWithProtocolFee(address paymentMethod, address token) external view returns (uint256 price, uint256 protocolFee)
+```
+
+Returns the price for storing a link with protocol fee
+
+*Returns the current pricing for storing a link with protocol fee*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
+| token | address | Token that user want to store link |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| price | uint256 | Current price for storing a link |
 | protocolFee | uint256 | Current protocol fee for storing a link |
+
+### getProtocolFee
+
+```solidity
+function getProtocolFee(address paymentMethod, uint256 amount) external view returns (uint256)
+```
+
+Calculates the protocol fee
+
+*This method will calculate the protocol fee based on the payment method*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
+| amount | uint256 | Price to be paid in the specified payment method |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
 
 ### getReaderLinks
 
