@@ -1,8 +1,8 @@
 [# Masa Express
- - v1.0.5](README.md) / Exports
+ - v1.0.14](README.md) / Exports
 
 # # Masa Express
- - v1.0.5
+ - v1.0.14
 
 ## Table of contents
 
@@ -29,7 +29,9 @@
 | `«destructured»` | `Object` |
 | › `domain` | `string` |
 | › `environment` | `string` |
+| › `sameSite?` | ``"none"`` \| ``"lax"`` \| ``"strict"`` |
 | › `secret` | `string` |
+| › `secure?` | `boolean` |
 | › `sessionName` | `string` |
 | › `store?` | `Store` |
 | › `ttl` | `number` |
