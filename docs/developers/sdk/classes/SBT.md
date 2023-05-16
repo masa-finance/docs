@@ -1,5 +1,5 @@
 [# Masa SDK
- - v1.15.2](../README.md) / [Exports](../modules.md) / SBT
+ - v2.0.3](../README.md) / [Exports](../modules.md) / SBT
 
 # Class: SBT
 
@@ -23,11 +23,13 @@
 ### Methods
 
 - [addSlippage](SBT.md#addslippage)
+- [attach](SBT.md#attach)
 - [checkOrGiveAllowance](SBT.md#checkorgiveallowance)
 - [connect](SBT.md#connect)
 - [formatPrice](SBT.md#formatprice)
 - [getPaymentAddress](SBT.md#getpaymentaddress)
 - [verify](SBT.md#verify)
+- [wrapper](SBT.md#wrapper)
 
 ## Constructors
 
@@ -91,6 +93,37 @@ adds a percentage to the price as slippage
 
 ___
 
+### attach
+
+▸ **attach**<`Contract`\>(`contract`): `Object`
+
+attaches the contract function to an existing instances
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `contract` | `Contract` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `getPrice` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `slippage?`: `number`) => `Promise`<`undefined` \| { `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> |
+| `prepareMint` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`, `slippage?`: `number`) => `Promise`<`undefined` \| { `paymentAddress`: `string` ; `price`: `BigNumber`  }\> |
+| `sbtContract?` | `Contract` |
+| `sign` | (`name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\> |
+
+___
+
 ### checkOrGiveAllowance
 
 ▸ `Private` **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`<`undefined` \| `ContractReceipt`\>
@@ -118,7 +151,9 @@ ___
 
 ### connect
 
-▸ **connect**<`Contract`\>(`address`, `factory?`): `Promise`<{ `getPrice`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `slippage`: `undefined` \| `number`) => `Promise`<`undefined` \| { `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> ; `prepareMint`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`undefined` \| { `paymentAddress`: `string` = priceObject.paymentAddress; `price`: `BigNumber` = priceObject.price }\> ; `sbtContract`: `undefined` \| `Contract` ; `sign`: (`name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>  }\>
+▸ **connect**<`Contract`\>(`address`, `factory?`): `Promise`<{ `getPrice`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `slippage?`: `number`) => `Promise`<`undefined` \| { `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> ; `prepareMint`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`, `slippage?`: `number`) => `Promise`<`undefined` \| { `paymentAddress`: `string` ; `price`: `BigNumber`  }\> ; `sbtContract?`: `Contract` ; `sign`: (`name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>  }\>
+
+loads an sbt instance and connects the contract functions to it
 
 #### Type parameters
 
@@ -135,7 +170,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `getPrice`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `slippage`: `undefined` \| `number`) => `Promise`<`undefined` \| { `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> ; `prepareMint`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`, `slippage`: `undefined` \| `number`) => `Promise`<`undefined` \| { `paymentAddress`: `string` = priceObject.paymentAddress; `price`: `BigNumber` = priceObject.price }\> ; `sbtContract`: `undefined` \| `Contract` ; `sign`: (`name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>  }\>
+`Promise`<{ `getPrice`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `slippage?`: `number`) => `Promise`<`undefined` \| { `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> ; `prepareMint`: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`, `slippage?`: `number`) => `Promise`<`undefined` \| { `paymentAddress`: `string` ; `price`: `BigNumber`  }\> ; `sbtContract?`: `Contract` ; `sign`: (`name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>  }\>
 
 ___
 
@@ -207,3 +242,32 @@ verify a signature created during one of the SBT signing flows
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[verify](MasaModuleBase.md#verify)
+
+___
+
+### wrapper
+
+▸ `Protected` **wrapper**<`Contract`\>(`sbtContract?`): `Object`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `sbtContract?` | `Contract` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `getPrice` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `slippage?`: `number`) => `Promise`<`undefined` \| { `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\> |
+| `prepareMint` | (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`, `slippage?`: `number`) => `Promise`<`undefined` \| { `paymentAddress`: `string` ; `price`: `BigNumber`  }\> |
+| `sbtContract?` | `Contract` |
+| `sign` | (`name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\> |

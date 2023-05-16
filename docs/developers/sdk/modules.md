@@ -1,8 +1,8 @@
 [# Masa SDK
- - v1.15.2](README.md) / Exports
+ - v2.0.3](README.md) / Exports
 
 # # Masa SDK
- - v1.15.2
+ - v2.0.3
 
 ## Table of contents
 
@@ -121,6 +121,7 @@
 - [createRandomWallet](modules.md#createrandomwallet)
 - [createSoulName](modules.md#createsoulname)
 - [deployASBT](modules.md#deployasbt)
+- [deploySSSBT](modules.md#deploysssbt)
 - [establishLink](modules.md#establishlink)
 - [establishLinkFromPassport](modules.md#establishlinkfrompassport)
 - [generateGreen](modules.md#generategreen)
@@ -163,6 +164,7 @@
 - [logout](modules.md#logout)
 - [mintASBT](modules.md#mintasbt)
 - [mintGreen](modules.md#mintgreen)
+- [mintSSSBT](modules.md#mintsssbt)
 - [parsePassport](modules.md#parsepassport)
 - [patchMetadataUrl](modules.md#patchmetadataurl)
 - [printSoulName](modules.md#printsoulname)
@@ -177,6 +179,7 @@
 - [sendSoulName](modules.md#sendsoulname)
 - [showIdentity](modules.md#showidentity)
 - [signMessage](modules.md#signmessage)
+- [signSSSBT](modules.md#signsssbt)
 - [signTypedData](modules.md#signtypeddata)
 - [tailSoulNames](modules.md#tailsoulnames)
 - [tailSoulNamesAndPrint](modules.md#tailsoulnamesandprint)
@@ -604,6 +607,27 @@ ___
 | `name` | `string` |
 | `symbol` | `string` |
 | `baseTokenUri` | `string` |
+| `adminAddress?` | `string` |
+
+#### Returns
+
+`Promise`<`undefined` \| `string`\>
+
+___
+
+### deploySSSBT
+
+▸ **deploySSSBT**(`masa`, `name`, `symbol`, `baseTokenUri`, `authorityAddress?`, `adminAddress?`): `Promise`<`undefined` \| `string`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `name` | `string` |
+| `symbol` | `string` |
+| `baseTokenUri` | `string` |
+| `authorityAddress?` | `string` |
 | `adminAddress?` | `string` |
 
 #### Returns
@@ -1305,15 +1329,16 @@ ___
 
 ### mintASBT
 
-▸ **mintASBT**(`masa`, `sbtContract`, `receiver`): `Promise`<`void`\>
+▸ **mintASBT**(`masa`, `sbtContract`, `receiver`, `paymentMethod?`): `Promise`<`void`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `sbtContract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
-| `receiver` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
+| `sbtContract` | `ReferenceSBTAuthority` | `undefined` |
+| `receiver` | `string` | `undefined` |
+| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) | `"ETH"` |
 
 #### Returns
 
@@ -1338,6 +1363,27 @@ ___
 #### Returns
 
 `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+
+___
+
+### mintSSSBT
+
+▸ **mintSSSBT**(`masa`, `sbtContract`, `authorityAddress`, `signatureDate`, `signature`, `paymentMethod?`): `Promise`<`undefined` \| ``true``\>
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
+| `sbtContract` | `ReferenceSBTSelfSovereign` | `undefined` |
+| `authorityAddress` | `string` | `undefined` |
+| `signatureDate` | `number` | `undefined` |
+| `signature` | `string` | `undefined` |
+| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) | `"ETH"` |
+
+#### Returns
+
+`Promise`<`undefined` \| ``true``\>
 
 ___
 
@@ -1597,6 +1643,24 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| `string`\>
+
+___
+
+### signSSSBT
+
+▸ **signSSSBT**(`masa`, `sbtContract`, `receiver`): `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `sbtContract` | `ReferenceSBTSelfSovereign` |
+| `receiver` | `string` |
+
+#### Returns
+
+`Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
 
 ___
 
