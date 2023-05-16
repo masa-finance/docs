@@ -1,67 +1,72 @@
 # Masa CLI
 
 <!-- TOC -->
-* [Masa CLI](#masa-cli)
-  * [Overview](#overview)
-  * [Usage / Installation](#usage--installation)
-    * [npm](#npm)
-    * [yarn](#yarn)
-    * [npx](#npx)
-  * [Commands](#commands)
-    * [`masa login`](#masa-login)
-    * [`masa logout`](#masa-logout)
-    * [`masa account`](#masa-account)
-    * [`masa identity`](#masa-identity)
-      * [`masa identity info`](#masa-identity-info)
-      * [`masa identity create <soulname> <duration>`](#masa-identity-create-soulname-duration)
-      * [`masa identity register`](#masa-identity-register)
-      * [`masa identity show`](#masa-identity-show)
-      * [`masa identity burn`](#masa-identity-burn)
-    * [`masa soul-name`](#masa-soul-name)
-      * [`masa soul-name info`](#masa-soul-name-info)
-      * [`masa soul-name list`](#masa-soul-name-list)
-      * [`masa soul-name tail`](#masa-soul-name-tail)
-      * [`masa soul-name resolve <soulname>`](#masa-soul-name-resolve-soulname)
-      * [`masa soul-name resolve-reverse <soulname>`](#masa-soul-name-resolve-reverse-soulname)
-      * [`masa soul-name create <soulname> <duration>`](#masa-soul-name-create-soulname-duration)
-      * [`masa soul-name burn <soulname>`](#masa-soul-name-burn-soulname)
-      * [`masa soul-name send <soulname> <receiver>`](#masa-soul-name-send-soulname-receiver)
-      * [`masa soul-name show <soulname>`](#masa-soul-name-show-soulname)
-      * [`masa soul-name verify <soulname>`](#masa-soul-name-verify-soulname)
-    * [`masa credit-score`](#masa-credit-score)
-      * [`masa credit-score info`](#masa-credit-score-info)
-      * [`masa credit-score list`](#masa-credit-score-list)
-      * [`masa credit-score create`](#masa-credit-score-create)
-      * [`masa credit-score burn <credit-score-id>`](#masa-credit-score-burn-credit-score-id)
-      * [`masa credit-score load <credit-score-id>`](#masa-credit-score-load-credit-score-id)
-      * [`masa credit-score link`](#masa-credit-score-link)
-        * [`masa credit-score link create <credit-score-id> <reader-identity-id>`](#masa-credit-score-link-create-credit-score-id-reader-identity-id)
-        * [`masa credit-score link establish <passport>`](#masa-credit-score-link-establish-passport)
-        * [`masa credit-score link query <passport>`](#masa-credit-score-link-query-passport)
-        * [`masa credit-score link list <credit-score-id>`](#masa-credit-score-link-list-credit-score-id)
-        * [`masa credit-score link verify <credit-score-id>`](#masa-credit-score-link-verify-credit-score-id)
-        * [`masa credit-score link break <credit-score-id> <reader-identity-id>`](#masa-credit-score-link-break-credit-score-id-reader-identity-id)
-    * [`masa green`](#masa-green)
-      * [`masa green info`](#masa-green-info)
-      * [`masa green list`](#masa-green-list)
-      * [`masa green create <phone-number>`](#masa-green-create-phone-number)
-      * [`masa green burn <green-id>`](#masa-green-burn-green-id)
-    * [`masa sbt`](#masa-sbt)
-      * [`masa sbt info <contract-address>`](#masa-sbt-info-contract-address)
-      * [`masa sbt list <contract-address>`](#masa-sbt-list-contract-address)
-      * [`masa sbt sign <contract-address> <name> <types> <value>`](#masa-sbt-sign-contract-address-name-types-value)
-      * [`masa sbt prepare-mint <contract-address> <name> <types> <value> <authority-address> <signature>`](#masa-sbt-prepare-mint-contract-address-name-types-value-authority-address-signature)
-      * [`masa sbt burn <contract-address> <sbt-id>`](#masa-sbt-burn-contract-address-sbt-id)
-    * [`masa asbt`](#masa-asbt)
-      * [`masa asbt deploy`](#masa-asbt-deploy)
-      * [`masa asbt mint <contract-address> <receiver>`](#masa-asbt-mint-contract-address-receiver)
-    * [`masa settings`](#masa-settings)
-      * [`masa settings set <key> <value>`](#masa-settings-set-key-value)
-      * [`masa settings preset <environment>`](#masa-settings-preset-environment)
-      * [`masa settings preset-network <network-name>`](#masa-settings-preset-network-network-name)
-      * [`masa settings show`](#masa-settings-show)
-  * [Configuration](#configuration)
-<!-- TOC -->
+
+- [Masa CLI](#masa-cli)
+  - [Overview](#overview)
+  - [Usage / Installation](#usage--installation)
+    - [npm](#npm)
+    - [yarn](#yarn)
+    - [npx](#npx)
+  - [Commands](#commands)
+    - [`masa login`](#masa-login)
+    - [`masa logout`](#masa-logout)
+    - [`masa account`](#masa-account)
+    - [`masa identity`](#masa-identity)
+      - [`masa identity info`](#masa-identity-info)
+      - [`masa identity create <soulname> <duration>`](#masa-identity-create-soulname-duration)
+      - [`masa identity register`](#masa-identity-register)
+      - [`masa identity show`](#masa-identity-show)
+      - [`masa identity burn`](#masa-identity-burn)
+    - [`masa soul-name`](#masa-soul-name)
+      - [`masa soul-name info`](#masa-soul-name-info)
+      - [`masa soul-name list`](#masa-soul-name-list)
+      - [`masa soul-name tail`](#masa-soul-name-tail)
+      - [`masa soul-name resolve <soulname>`](#masa-soul-name-resolve-soulname)
+      - [`masa soul-name resolve-reverse <soulname>`](#masa-soul-name-resolve-reverse-soulname)
+      - [`masa soul-name create <soulname> <duration>`](#masa-soul-name-create-soulname-duration)
+      - [`masa soul-name burn <soulname>`](#masa-soul-name-burn-soulname)
+      - [`masa soul-name send <soulname> <receiver>`](#masa-soul-name-send-soulname-receiver)
+      - [`masa soul-name show <soulname>`](#masa-soul-name-show-soulname)
+      - [`masa soul-name verify <soulname>`](#masa-soul-name-verify-soulname)
+    - [`masa credit-score`](#masa-credit-score)
+      - [`masa credit-score info`](#masa-credit-score-info)
+      - [`masa credit-score list`](#masa-credit-score-list)
+      - [`masa credit-score create`](#masa-credit-score-create)
+      - [`masa credit-score burn <credit-score-id>`](#masa-credit-score-burn-credit-score-id)
+      - [`masa credit-score load <credit-score-id>`](#masa-credit-score-load-credit-score-id)
+      - [`masa credit-score link`](#masa-credit-score-link)
+        - [`masa credit-score link create <credit-score-id> <reader-identity-id>`](#masa-credit-score-link-create-credit-score-id-reader-identity-id)
+        - [`masa credit-score link establish <passport>`](#masa-credit-score-link-establish-passport)
+        - [`masa credit-score link query <passport>`](#masa-credit-score-link-query-passport)
+        - [`masa credit-score link list <credit-score-id>`](#masa-credit-score-link-list-credit-score-id)
+        - [`masa credit-score link verify <credit-score-id>`](#masa-credit-score-link-verify-credit-score-id)
+        - [`masa credit-score link break <credit-score-id> <reader-identity-id>`](#masa-credit-score-link-break-credit-score-id-reader-identity-id)
+    - [`masa green`](#masa-green)
+      - [`masa green info`](#masa-green-info)
+      - [`masa green list`](#masa-green-list)
+      - [`masa green create <phone-number>`](#masa-green-create-phone-number)
+      - [`masa green burn <green-id>`](#masa-green-burn-green-id)
+    - [`masa sbt`](#masa-sbt)
+      - [`masa sbt info <contract-address>`](#masa-sbt-info-contract-address)
+      - [`masa sbt list <contract-address>`](#masa-sbt-list-contract-address)
+      - [`masa sbt sign <contract-address> <name> <types> <value>`](#masa-sbt-sign-contract-address-name-types-value)
+      - [`masa sbt prepare-mint <contract-address> <name> <types> <value> <authority-address> <signature>`](#masa-sbt-prepare-mint-contract-address-name-types-value-authority-address-signature)
+      - [`masa sbt burn <contract-address> <sbt-id>`](#masa-sbt-burn-contract-address-sbt-id)
+    - [`masa asbt`](#masa-asbt)
+      - [`masa asbt deploy`](#masa-asbt-deploy)
+      - [`masa asbt mint <contract-address> <receiver>`](#masa-asbt-mint-contract-address-receiver)
+    - [`masa sssbt`](#masa-sssbt)
+      - [`masa sssbt deploy`](#masa-sssbt-deploy)
+      - [`masa sssbt sign <contract-address> <receiver>`](#masa-sssbt-sign-contract-address-receiver)
+      - [`masa sssbt mint <contract-address> <authority-address> <signature-date> <signature>`](#masa-sssbt-mint-contract-address-authority-address-signature-date-signature)
+    - [`masa settings`](#masa-settings)
+      - [`masa settings set <key> <value>`](#masa-settings-set-key-value)
+      - [`masa settings preset <environment>`](#masa-settings-preset-environment)
+      - [`masa settings preset-network <network-name>`](#masa-settings-preset-network-network-name)
+      - [`masa settings show`](#masa-settings-show)
+  - [Configuration](#configuration)
+  <!-- TOC -->
 
 ## Overview
 
@@ -130,6 +135,10 @@ Commands:
   asbt                                                                                        ASBT Commands
   asbt deploy                                                                                 Deploys ASBTs
   asbt mint <contract-address> <receiver>                                                     Mints ASBTs
+  sssbt                                                                                       SSSBT Commands
+  sssbt deploy                                                                                Deploys SSSBTs
+  sssbt sign <contract-address> <receiver>                                                    Signs SSSBTs
+  sssbt mint <contract-address> <authority-address> <signature-date> <signature>              Mints SSSBTs
   settings                                                                                    Set config settings
   settings set <key> <value>                                                                  Changes setting <key> to <value>
   settings preset <environment>                                                               Changes setting <environment> presets
@@ -198,6 +207,9 @@ Logout from the masa infrastructure
 ### `masa account`
 
 Shows information about your account
+
+- `-a, --address <address>`
+  Address override
 
 ### `masa identity`
 
@@ -469,6 +481,30 @@ Mints ASBTs
 - `<contract-address> Address of the SBT to mint on`
 - `<receiver> Address of the SBT receiver`
 
+### `masa sssbt`
+
+SSSBT Commands
+
+#### `masa sssbt deploy`
+
+Deploys SSSBTs
+
+#### `masa sssbt sign <contract-address> <receiver>`
+
+Signs SSSBTs
+
+- `<contract-address> Address of the SBT to mint on`
+- `<receiver> Address of the SBT receiver`
+
+#### `masa sssbt mint <contract-address> <authority-address> <signature-date> <signature>`
+
+Mints SSSBTs
+
+- `<contract-address> Address of the SBT to mint on`
+- `<authority-address> Address of the Authority`
+- `<signature-date> sig date`
+- `<signature> signature`
+
 ### `masa settings`
 
 Set config settings
@@ -505,9 +541,9 @@ $ masa settings set <key> <value>
 ```
 
 | Key              | Type      | Description                                                                           | Default Value                             |
-|------------------|-----------|---------------------------------------------------------------------------------------|-------------------------------------------|
+| ---------------- | --------- | ------------------------------------------------------------------------------------- | ----------------------------------------- |
 | cookie           | `string`  | Stores cookie value. Don't set this manually unless you know what you do!             |                                           |
-| api-url          | `string`  | The API Endpoint of the Masa Infrastructure for `dev`, `test`, `beta` and production. | "https://dev.middleware.masa.finance/"    | 
+| api-url          | `string`  | The API Endpoint of the Masa Infrastructure for `dev`, `test`, `beta` and production. | "https://dev.middleware.masa.finance/"    |
 | environment      | `string`  | The environment to use `dev`, `test`, `beta`, `production`.                           | "dev"                                     |
 | rpc-url          | `string`  | The RPC Endpoint to reach the Blockchain.                                             | "https://rpc.ankr.com/eth_goerli"         |
 | network          | `string`  | The network name ie. "goerli".                                                        | "goerli"                                  |
