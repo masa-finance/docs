@@ -27,6 +27,23 @@ function DEFAULT_ADMIN_ROLE() external view returns (bytes32)
 |---|---|---|
 | _0 | bytes32 | undefined |
 
+### PROJECT_ADMIN_ROLE
+
+```solidity
+function PROJECT_ADMIN_ROLE() external view returns (bytes32)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bytes32 | undefined |
+
 ### addAuthority
 
 ```solidity
@@ -35,7 +52,7 @@ function addAuthority(address _authority) external nonpayable
 
 Adds a new authority to the list of authorities
 
-*The caller must have the admin role to call this function*
+*The caller must have the admin or project admin role to call this function*
 
 #### Parameters
 
@@ -321,7 +338,7 @@ Returns the identityId owned by the given token
 ### getMintPrice
 
 ```solidity
-function getMintPrice(address paymentMethod) external view returns (uint256)
+function getMintPrice(address paymentMethod) external view returns (uint256 price)
 ```
 
 Returns the price for minting
@@ -338,7 +355,53 @@ Returns the price for minting
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256 | Current price for minting in the given payment method |
+| price | uint256 | Current price for minting in the given payment method |
+
+### getMintPriceWithProtocolFee
+
+```solidity
+function getMintPriceWithProtocolFee(address paymentMethod) external view returns (uint256 price, uint256 protocolFee)
+```
+
+Returns the price for minting with protocol fee
+
+*Returns current pricing for minting with protocol fee*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| price | uint256 | Current price for minting in the given payment method |
+| protocolFee | uint256 | Current protocol fee for minting in the given payment method |
+
+### getProtocolFee
+
+```solidity
+function getProtocolFee(address paymentMethod, uint256 amount) external view returns (uint256)
+```
+
+Calculates the protocol fee
+
+*This method will calculate the protocol fee based on the payment method*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
+| amount | uint256 | Price to be paid in the specified payment method |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
 
 ### getRoleAdmin
 
@@ -519,6 +582,74 @@ function ownerOf(uint256 tokenId) external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
+### projectFeeReceiver
+
+```solidity
+function projectFeeReceiver() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
+### protocolFeeAmount
+
+```solidity
+function protocolFeeAmount() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### protocolFeePercent
+
+```solidity
+function protocolFeePercent() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### protocolFeeReceiver
+
+```solidity
+function protocolFeeReceiver() external view returns (address)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
 ### queryLinkPrice
 
 ```solidity
@@ -561,7 +692,7 @@ function removeAuthority(address _authority) external nonpayable
 
 Removes an authority from the list of authorities
 
-*The caller must have the admin role to call this function*
+*The caller must have the admin or project admin role to call this function*
 
 #### Parameters
 
@@ -585,23 +716,6 @@ function renounceRole(bytes32 role, address account) external nonpayable
 |---|---|---|
 | role | bytes32 | undefined |
 | account | address | undefined |
-
-### reserveWallet
-
-```solidity
-function reserveWallet() external view returns (address)
-```
-
-
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
 
 ### revokeRole
 
@@ -651,7 +765,7 @@ function setAddLinkPrice(uint256 _addLinkPrice) external nonpayable
 
 Sets the price for adding the link in SoulLinker in stable coin
 
-*The caller must have the admin role to call this function*
+*The caller must have the admin or project admin role to call this function*
 
 #### Parameters
 
@@ -667,7 +781,7 @@ function setAddLinkPriceMASA(uint256 _addLinkPriceMASA) external nonpayable
 
 Sets the price for adding the link in SoulLinker in MASA
 
-*The caller must have the admin role to call this function*
+*The caller must have the admin or project admin role to call this function*
 
 #### Parameters
 
@@ -699,7 +813,7 @@ function setMintPrice(uint256 _mintPrice) external nonpayable
 
 Sets the price of minting in stable coin
 
-*The caller must have the admin role to call this function*
+*The caller must have the admin or project admin role to call this function*
 
 #### Parameters
 
@@ -715,13 +829,77 @@ function setMintPriceMASA(uint256 _mintPriceMASA) external nonpayable
 
 Sets the price of minting in MASA
 
-*The caller must have the admin role to call this function*
+*The caller must have the admin or project admin role to call this function*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
 | _mintPriceMASA | uint256 | New price of minting in MASA |
+
+### setProjectFeeReceiver
+
+```solidity
+function setProjectFeeReceiver(address _projectFeeReceiver) external nonpayable
+```
+
+Set the project fee receiver wallet
+
+*The caller must have the admin or project admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _projectFeeReceiver | address | New project fee receiver wallet |
+
+### setProtocolFeeAmount
+
+```solidity
+function setProtocolFeeAmount(uint256 _protocolFeeAmount) external nonpayable
+```
+
+Set the protocol fee amount
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _protocolFeeAmount | uint256 | New protocol fee amount |
+
+### setProtocolFeePercent
+
+```solidity
+function setProtocolFeePercent(uint256 _protocolFeePercent) external nonpayable
+```
+
+Set the protocol fee percent
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _protocolFeePercent | uint256 | New protocol fee percent |
+
+### setProtocolFeeReceiver
+
+```solidity
+function setProtocolFeeReceiver(address _protocolFeeReceiver) external nonpayable
+```
+
+Set the protocol fee wallet
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _protocolFeeReceiver | address | New protocol fee wallet |
 
 ### setQueryLinkPrice
 
@@ -731,7 +909,7 @@ function setQueryLinkPrice(uint256 _queryLinkPrice) external nonpayable
 
 Sets the price for reading data in SoulLinker in stable coin
 
-*The caller must have the admin role to call this function*
+*The caller must have the admin or project admin role to call this function*
 
 #### Parameters
 
@@ -747,7 +925,7 @@ function setQueryLinkPriceMASA(uint256 _queryLinkPriceMASA) external nonpayable
 
 Sets the price for reading data in SoulLinker in MASA
 
-*The caller must have the admin role to call this function*
+*The caller must have the admin or project admin role to call this function*
 
 #### Parameters
 
@@ -755,26 +933,10 @@ Sets the price for reading data in SoulLinker in MASA
 |---|---|---|
 | _queryLinkPriceMASA | uint256 | New price for reading data in SoulLinker in MASA |
 
-### setReserveWallet
-
-```solidity
-function setReserveWallet(address _reserveWallet) external nonpayable
-```
-
-Set the reserve wallet
-
-*The caller must have the admin role to call this function*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _reserveWallet | address | New reserve wallet |
-
 ### setSoulboundIdentity
 
 ```solidity
-function setSoulboundIdentity(contract ISoulboundIdentity _soulboundIdentity) external nonpayable
+function setSoulboundIdentity(address _soulboundIdentity) external nonpayable
 ```
 
 Sets the SoulboundIdentity contract address linked to this SBT
@@ -785,7 +947,7 @@ Sets the SoulboundIdentity contract address linked to this SBT
 
 | Name | Type | Description |
 |---|---|---|
-| _soulboundIdentity | contract ISoulboundIdentity | Address of the SoulboundIdentity contract |
+| _soulboundIdentity | address | Address of the SoulboundIdentity contract |
 
 ### setStableCoin
 
@@ -1288,6 +1450,28 @@ error NotLinkedToAnIdentitySBT()
 
 
 
+### PaymentParamsNotSet
+
+```solidity
+error PaymentParamsNotSet()
+```
+
+
+
+
+
+
+### ProtocolFeeReceiverNotSet
+
+```solidity
+error ProtocolFeeReceiverNotSet()
+```
+
+
+
+
+
+
 ### RefundFailed
 
 ```solidity
@@ -1314,6 +1498,17 @@ error SameValue()
 
 ```solidity
 error TransferFailed()
+```
+
+
+
+
+
+
+### UserMustHaveProtocolOrProjectAdminRole
+
+```solidity
+error UserMustHaveProtocolOrProjectAdminRole()
 ```
 
 
