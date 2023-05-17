@@ -483,28 +483,6 @@ Mints a new Soulbound Identity purchasing it
 |---|---|---|
 | _0 | uint256 | TokenId of the new soulbound identity |
 
-### purchaseIdentity
-
-```solidity
-function purchaseIdentity(address paymentMethod) external nonpayable returns (uint256)
-```
-
-Mints a new Soulbound Identity purchasing it
-
-*This function allows the purchase of a soulbound identity for free*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| paymentMethod | address | Address of token that user want to pay |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | TokenId of the new soulbound identity |
-
 ### purchaseIdentityAndName
 
 ```solidity
@@ -709,6 +687,22 @@ Set the protocol fee wallet
 |---|---|---|
 | _protocolFeeReceiver | address | New protocol fee wallet |
 
+### setSoulName
+
+```solidity
+function setSoulName(contract ISoulName _soulName) external nonpayable
+```
+
+Sets the SoulName contract address linked to this store
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _soulName | contract ISoulName | New SoulName contract address |
+
 ### setSoulboundIdentity
 
 ```solidity
@@ -772,6 +766,23 @@ Sets the wrapped native token address
 | Name | Type | Description |
 |---|---|---|
 | _wrappedNativeToken | address | New wrapped native token address |
+
+### soulName
+
+```solidity
+function soulName() external view returns (contract ISoulName)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | contract ISoulName | undefined |
 
 ### soulboundIdentity
 
