@@ -1,5 +1,5 @@
 [# Masa SDK
- - v2.0.3](../README.md) / [Exports](../modules.md) / Addresses
+ - v2.1.1](../README.md) / [Exports](../modules.md) / Addresses
 
 # Interface: Addresses
 
@@ -55,4 +55,4 @@ ___
 
 ### tokens
 
-• `Optional` **tokens**: `Partial`<{ `CELO`: `string` ; `ETH`: `string` ; `G$`: `string` ; `MASA`: `string` ; `USDC`: `string` ; `WETH`: `string` ; `cUSD`: `string`  }\>
+• `Optional` **tokens**: `Partial`<{ `BNB`: `string` ; `CELO`: `string` ; `ETH`: `string` ; `G$`: `string` ; `MASA`: `string` ; `MATIC`: `string` ; `USDC`: `string` ; `WETH`: `string` ; `cUSD`: `string`  }\>

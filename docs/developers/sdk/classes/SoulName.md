@@ -1,5 +1,5 @@
 [# Masa SDK
- - v2.0.3](../README.md) / [Exports](../modules.md) / SoulName
+ - v2.1.1](../README.md) / [Exports](../modules.md) / SoulName
 
 # Class: SoulName
 
@@ -196,7 +196,7 @@ ___
 
 ### getPrice
 
-▸ **getPrice**(`paymentMethod`, `nameLength`, `duration?`, `slippage?`): `Promise`<{ `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
+▸ **getPrice**(`paymentMethod`, `nameLength`, `duration?`, `slippage?`): `Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
 
 Get price for minting a soul name
 
@@ -211,7 +211,7 @@ Get price for minting a soul name
 
 #### Returns
 
-`Promise`<{ `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
+`Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
 
 ___
 

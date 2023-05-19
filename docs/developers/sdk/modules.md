@@ -1,8 +1,8 @@
 [# Masa SDK
- - v2.0.3](README.md) / Exports
+ - v2.1.1](README.md) / Exports
 
 # # Masa SDK
- - v2.0.3
+ - v2.1.1
 
 ## Table of contents
 
@@ -382,7 +382,7 @@ ___
 
 ### nativeCurrencies
 
-• `Const` **nativeCurrencies**: readonly [``"ETH"``, ``"CELO"``]
+• `Const` **nativeCurrencies**: readonly [``"ETH"``, ``"CELO"``, ``"MATIC"``, ``"BNB"``]
 
 ## Functions
 
@@ -716,7 +716,7 @@ ___
 
 ### getBalances
 
-▸ **getBalances**(`masa`, `address?`): `Promise`<`Partial`<{ `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
+▸ **getBalances**(`masa`, `address?`): `Promise`<`Partial`<{ `BNB`: `undefined` \| `number` ; `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `MATIC`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
 
 #### Parameters
 
@@ -727,7 +727,7 @@ ___
 
 #### Returns
 
-`Promise`<`Partial`<{ `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
+`Promise`<`Partial`<{ `BNB`: `undefined` \| `number` ; `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `MATIC`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
 
 ___
 
@@ -829,7 +829,7 @@ ___
 
 ### isNativeCurrency
 
-▸ **isNativeCurrency**(`paymentMethod`): paymentMethod is "CELO" \| "ETH"
+▸ **isNativeCurrency**(`paymentMethod`): paymentMethod is "BNB" \| "CELO" \| "MATIC" \| "ETH"
 
 #### Parameters
 
@@ -839,7 +839,7 @@ ___
 
 #### Returns
 
-paymentMethod is "CELO" \| "ETH"
+paymentMethod is "BNB" \| "CELO" \| "MATIC" \| "ETH"
 
 ___
 
