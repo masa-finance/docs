@@ -1,13 +1,23 @@
 [# Masa SDK
- - v2.1.1](../README.md) / [Exports](../modules.md) / MasaSBT
+ - v2.2.0](../README.md) / [Exports](../modules.md) / MasaSBT
 
-# Class: MasaSBT
+# Class: MasaSBT<Contract\>
+
+## Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `ReferenceSBTAuthority` \| `ReferenceSBTSelfSovereign` \| `MasaSBTContract` |
 
 ## Hierarchy
 
 - `MasaBase`
 
   ↳ **`MasaSBT`**
+
+  ↳↳ [`MasaASBT`](MasaASBT.md)
+
+  ↳↳ [`MasaSSSBT`](MasaSSSBT.md)
 
 ## Table of contents
 
@@ -17,8 +27,6 @@
 
 ### Properties
 
-- [ASBT](MasaSBT.md#asbt)
-- [SSSBT](MasaSBT.md#sssbt)
 - [masa](MasaSBT.md#masa)
 
 ### Methods
@@ -29,7 +37,13 @@
 
 ### constructor
 
-• **new MasaSBT**(`masa`)
+• **new MasaSBT**<`Contract`\>(`masa`)
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `MasaSBT` \| `ReferenceSBTAuthority` \| `ReferenceSBTSelfSovereign` |
 
 #### Parameters
 
@@ -43,33 +57,6 @@ MasaBase.constructor
 
 ## Properties
 
-### ASBT
-
-• **ASBT**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `deploy` | (`name`: `string`, `symbol`: `string`, `baseTokenUri`: `string`, `adminAddress?`: `string`) => `Promise`<`undefined` \| `string`\> |
-| `mint` | (`contract`: `ReferenceSBTAuthority`, `receiver`: `string`) => `Promise`<`void`\> |
-
-___
-
-### SSSBT
-
-• **SSSBT**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `deploy` | (`name`: `string`, `symbol`: `string`, `baseTokenUri`: `string`, `authorityAddress`: `string`, `adminAddress?`: `string`) => `Promise`<`undefined` \| `string`\> |
-| `mint` | (`contract`: `ReferenceSBTSelfSovereign`, `authorityAddress`: `string`, `signatureDate`: `number`, `signature`: `string`) => `Promise`<`undefined` \| ``true``\> |
-| `sign` | (`contract`: `ReferenceSBTSelfSovereign`, `receiver`: `string`) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\> |
-
-___
-
 ### masa
 
 • `Protected` **masa**: [`Masa`](Masa.md)
@@ -82,13 +69,7 @@ MasaBase.masa
 
 ### connect
 
-▸ **connect**<`Contract`\>(`address`, `factory?`): `Promise`<{ `burn`: (`SBTId`: `BigNumber`) => `undefined` \| `Promise`<`boolean`\> ; `links`: `undefined` \| [`MasaSoulLinker`](MasaSoulLinker.md) ; `list`: (`address?`: `string`) => `undefined` \| `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> ; `sbtContract`: `undefined` \| `Contract`  }\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+▸ **connect**(`address`, `factory?`): `Promise`<{ `burn`: (`SBTId`: `BigNumber`) => `undefined` \| `Promise`<`boolean`\> ; `links`: `undefined` \| [`MasaSoulLinker`](MasaSoulLinker.md) ; `list`: (`address?`: `string`) => `undefined` \| `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> ; `sbtContract`: `undefined` \| `Contract`  }\>
 
 #### Parameters
 

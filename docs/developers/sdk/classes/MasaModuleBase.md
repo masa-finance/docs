@@ -1,5 +1,5 @@
 [# Masa SDK
- - v2.1.1](../README.md) / [Exports](../modules.md) / MasaModuleBase
+ - v2.2.0](../README.md) / [Exports](../modules.md) / MasaModuleBase
 
 # Class: MasaModuleBase
 
@@ -37,7 +37,9 @@
 - [addSlippage](MasaModuleBase.md#addslippage)
 - [checkOrGiveAllowance](MasaModuleBase.md#checkorgiveallowance)
 - [formatPrice](MasaModuleBase.md#formatprice)
+- [getMintPrice](MasaModuleBase.md#getmintprice)
 - [getPaymentAddress](MasaModuleBase.md#getpaymentaddress)
+- [loadSBTContract](MasaModuleBase.md#loadsbtcontract)
 - [verify](MasaModuleBase.md#verify)
 
 ## Constructors
@@ -132,6 +134,24 @@ ___
 
 ___
 
+### getMintPrice
+
+▸ `Protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
+| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` | `undefined` |
+| `slippage` | `undefined` \| `number` | `250` |
+
+#### Returns
+
+`Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
+
+___
+
 ### getPaymentAddress
 
 ▸ `Private` **getPaymentAddress**(`paymentMethod`): `string`
@@ -150,6 +170,30 @@ Gets the payment address for a given payment method
 
 ___
 
+### loadSBTContract
+
+▸ `Protected` **loadSBTContract**<`Contract`\>(`masaConfig`, `address`, `factory?`): `Promise`<`undefined` \| `Contract`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) | `undefined` |
+| `address` | `string` | `undefined` |
+| `factory` | [`ContractFactory`](ContractFactory.md) | `MasaSBTSelfSovereign__factory` |
+
+#### Returns
+
+`Promise`<`undefined` \| `Contract`\>
+
+___
+
 ### verify
 
 ▸ `Protected` **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`<`void`\>
@@ -161,7 +205,7 @@ verify a signature created during one of the SBT signing flows
 | Name | Type |
 | :------ | :------ |
 | `errorMessage` | `string` |
-| `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `SoulLinker` \| `SoulStore` |
 | `domain` | `TypedDataDomain` |
 | `types` | `Record`<`string`, `TypedDataField`[]\> |
 | `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |

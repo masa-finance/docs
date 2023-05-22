@@ -1,5 +1,5 @@
 [# Masa SDK
- - v2.1.1](../README.md) / [Exports](../modules.md) / Masa
+ - v2.2.0](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -13,6 +13,7 @@
 
 - [account](Masa.md#account)
 - [arweave](Masa.md#arweave)
+- [asbt](Masa.md#asbt)
 - [client](Masa.md#client)
 - [config](Masa.md#config)
 - [contracts](Masa.md#contracts)
@@ -22,6 +23,7 @@
 - [sbt](Masa.md#sbt)
 - [session](Masa.md#session)
 - [soulName](Masa.md#soulname)
+- [sssbt](Masa.md#sssbt)
 - [utils](Masa.md#utils)
 
 ## Constructors
@@ -47,6 +49,12 @@ ___
 ### arweave
 
 • `Readonly` **arweave**: [`MasaArweave`](MasaArweave.md)
+
+___
+
+### asbt
+
+• `Readonly` **asbt**: [`MasaASBT`](MasaASBT.md)<`ReferenceSBTAuthority`\>
 
 ___
 
@@ -88,7 +96,7 @@ ___
 
 ### sbt
 
-• `Readonly` **sbt**: [`MasaSBT`](MasaSBT.md)
+• `Readonly` **sbt**: [`MasaSBT`](MasaSBT.md)<`MasaSBT`\>
 
 ___
 
@@ -101,6 +109,12 @@ ___
 ### soulName
 
 • `Readonly` **soulName**: [`MasaSoulName`](MasaSoulName.md)
+
+___
+
+### sssbt
+
+• `Readonly` **sssbt**: [`MasaSSSBT`](MasaSSSBT.md)<`ReferenceSBTSelfSovereign`\>
 
 ___
 

@@ -1,8 +1,8 @@
 [# Masa SDK
- - v2.1.1](README.md) / Exports
+ - v2.2.0](README.md) / Exports
 
 # # Masa SDK
- - v2.1.1
+ - v2.2.0
 
 ## Table of contents
 
@@ -18,6 +18,7 @@
 - [Green](classes/Green.md)
 - [Identity](classes/Identity.md)
 - [Masa](classes/Masa.md)
+- [MasaASBT](classes/MasaASBT.md)
 - [MasaAccount](classes/MasaAccount.md)
 - [MasaArweave](classes/MasaArweave.md)
 - [MasaClient](classes/MasaClient.md)
@@ -27,6 +28,7 @@
 - [MasaIdentity](classes/MasaIdentity.md)
 - [MasaModuleBase](classes/MasaModuleBase.md)
 - [MasaSBT](classes/MasaSBT.md)
+- [MasaSSSBT](classes/MasaSSSBT.md)
 - [MasaSession](classes/MasaSession.md)
 - [MasaSoulLinker](classes/MasaSoulLinker.md)
 - [MasaSoulName](classes/MasaSoulName.md)
@@ -132,7 +134,6 @@
 - [getSoulNameMetadataPrefix](modules.md#getsoulnamemetadataprefix)
 - [isBigNumber](modules.md#isbignumber)
 - [isERC20Currency](modules.md#iserc20currency)
-- [isMasaSBTSelfSovereign](modules.md#ismasasbtselfsovereign)
 - [isNativeCurrency](modules.md#isnativecurrency)
 - [isSoulNameMetadataStoreResult](modules.md#issoulnamemetadatastoreresult)
 - [listCreditScores](modules.md#listcreditscores)
@@ -152,7 +153,6 @@
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
 - [loadIdentityDetails](modules.md#loadidentitydetails)
 - [loadLinks](modules.md#loadlinks)
-- [loadSBTContract](modules.md#loadsbtcontract)
 - [loadSBTIDs](modules.md#loadsbtids)
 - [loadSBTs](modules.md#loadsbts)
 - [loadSoulNameByName](modules.md#loadsoulnamebyname)
@@ -411,7 +411,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
 | `SBTId` | `BigNumber` |
 
 #### Returns
@@ -811,25 +811,9 @@ paymentMethod is "MASA" \| "WETH" \| "G$" \| "USDC" \| "cUSD"
 
 ___
 
-### isMasaSBTSelfSovereign
-
-▸ **isMasaSBTSelfSovereign**(`contract`): contract is MasaSBTSelfSovereign
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `contract` | `unknown` |
-
-#### Returns
-
-contract is MasaSBTSelfSovereign
-
-___
-
 ### isNativeCurrency
 
-▸ **isNativeCurrency**(`paymentMethod`): paymentMethod is "BNB" \| "CELO" \| "MATIC" \| "ETH"
+▸ **isNativeCurrency**(`paymentMethod`): paymentMethod is "ETH" \| "CELO" \| "MATIC" \| "BNB"
 
 #### Parameters
 
@@ -839,7 +823,7 @@ ___
 
 #### Returns
 
-paymentMethod is "BNB" \| "CELO" \| "MATIC" \| "ETH"
+paymentMethod is "ETH" \| "CELO" \| "MATIC" \| "BNB"
 
 ___
 
@@ -954,7 +938,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
 | `address?` | `string` |
 
 #### Returns
@@ -1150,30 +1134,6 @@ ___
 
 ___
 
-### loadSBTContract
-
-▸ **loadSBTContract**<`Contract`\>(`masaConfig`, `address`, `factory?`): `Promise`<`undefined` \| `Contract`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `masaConfig` | [`MasaConfig`](interfaces/MasaConfig.md) | `undefined` |
-| `address` | `string` | `undefined` |
-| `factory` | [`ContractFactory`](classes/ContractFactory.md) | `MasaSBTSelfSovereign__factory` |
-
-#### Returns
-
-`Promise`<`undefined` \| `Contract`\>
-
-___
-
 ### loadSBTIDs
 
 ▸ **loadSBTIDs**(`masa`, `contract`, `sbtIDs`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
@@ -1183,7 +1143,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
 | `sbtIDs` | `BigNumber`[] |
 
 #### Returns
@@ -1201,7 +1161,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
 | `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns

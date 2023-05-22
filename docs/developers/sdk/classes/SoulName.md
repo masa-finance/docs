@@ -1,5 +1,5 @@
 [# Masa SDK
- - v2.1.1](../README.md) / [Exports](../modules.md) / SoulName
+ - v2.2.0](../README.md) / [Exports](../modules.md) / SoulName
 
 # Class: SoulName
 
@@ -27,10 +27,12 @@
 - [burn](SoulName.md#burn)
 - [checkOrGiveAllowance](SoulName.md#checkorgiveallowance)
 - [formatPrice](SoulName.md#formatprice)
+- [getMintPrice](SoulName.md#getmintprice)
 - [getPaymentAddress](SoulName.md#getpaymentaddress)
 - [getPrice](SoulName.md#getprice)
 - [getSoulnameData](SoulName.md#getsoulnamedata)
 - [isAvailable](SoulName.md#isavailable)
+- [loadSBTContract](SoulName.md#loadsbtcontract)
 - [purchase](SoulName.md#purchase)
 - [sign](SoulName.md#sign)
 - [transfer](SoulName.md#transfer)
@@ -172,6 +174,28 @@ ___
 
 ___
 
+### getMintPrice
+
+▸ `Protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
+| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` | `undefined` |
+| `slippage` | `undefined` \| `number` | `250` |
+
+#### Returns
+
+`Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
+
+#### Inherited from
+
+[MasaModuleBase](MasaModuleBase.md).[getMintPrice](MasaModuleBase.md#getmintprice)
+
+___
+
 ### getPaymentAddress
 
 ▸ `Private` **getPaymentAddress**(`paymentMethod`): `string`
@@ -251,6 +275,34 @@ Check if a soul name is available
 
 ___
 
+### loadSBTContract
+
+▸ `Protected` **loadSBTContract**<`Contract`\>(`masaConfig`, `address`, `factory?`): `Promise`<`undefined` \| `Contract`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) | `undefined` |
+| `address` | `string` | `undefined` |
+| `factory` | [`ContractFactory`](ContractFactory.md) | `MasaSBTSelfSovereign__factory` |
+
+#### Returns
+
+`Promise`<`undefined` \| `Contract`\>
+
+#### Inherited from
+
+[MasaModuleBase](MasaModuleBase.md).[loadSBTContract](MasaModuleBase.md#loadsbtcontract)
+
+___
+
 ### purchase
 
 ▸ **purchase**(`paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`, `receiver?`): `Promise`<`ContractTransaction`\>
@@ -326,7 +378,7 @@ verify a signature created during one of the SBT signing flows
 | Name | Type |
 | :------ | :------ |
 | `errorMessage` | `string` |
-| `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `SoulLinker` \| `SoulStore` |
 | `domain` | `TypedDataDomain` |
 | `types` | `Record`<`string`, `TypedDataField`[]\> |
 | `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |
