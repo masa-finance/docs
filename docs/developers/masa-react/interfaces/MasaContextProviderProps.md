@@ -1,5 +1,5 @@
 [# Masa React
- - v1.2.2-alpha-2](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v1.6.0](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -15,8 +15,10 @@
 
 - [SupportedNetworks](MasaContextProviderProps.md#supportednetworks)
 - [accountAddress](MasaContextProviderProps.md#accountaddress)
+- [apiUrl](MasaContextProviderProps.md#apiurl)
 - [areScopesFullfiled](MasaContextProviderProps.md#arescopesfullfiled)
 - [arweaveConfig](MasaContextProviderProps.md#arweaveconfig)
+- [badges](MasaContextProviderProps.md#badges)
 - [chainsToUse](MasaContextProviderProps.md#chainstouse)
 - [children](MasaContextProviderProps.md#children)
 - [closeModal](MasaContextProviderProps.md#closemodal)
@@ -25,10 +27,14 @@
 - [creditScores](MasaContextProviderProps.md#creditscores)
 - [currentNetwork](MasaContextProviderProps.md#currentnetwork)
 - [currentNetworkNew](MasaContextProviderProps.md#currentnetworknew)
+- [customGallerySBT](MasaContextProviderProps.md#customgallerysbt)
+- [customSBTs](MasaContextProviderProps.md#customsbts)
 - [environmentName](MasaContextProviderProps.md#environmentname)
 - [forceNetwork](MasaContextProviderProps.md#forcenetwork)
 - [forcedPage](MasaContextProviderProps.md#forcedpage)
+- [fullScreenGallery](MasaContextProviderProps.md#fullscreengallery)
 - [greens](MasaContextProviderProps.md#greens)
+- [handleAddSBT](MasaContextProviderProps.md#handleaddsbt)
 - [handleCreateCreditScore](MasaContextProviderProps.md#handlecreatecreditscore)
 - [handleCreateGreen](MasaContextProviderProps.md#handlecreategreen)
 - [handleGenerateGreen](MasaContextProviderProps.md#handlegenerategreen)
@@ -45,6 +51,7 @@
 - [isGreensLoading](MasaContextProviderProps.md#isgreensloading)
 - [isIdentityLoading](MasaContextProviderProps.md#isidentityloading)
 - [isLoading](MasaContextProviderProps.md#isloading)
+- [isLoadingCustomSBTs](MasaContextProviderProps.md#isloadingcustomsbts)
 - [isLoggedIn](MasaContextProviderProps.md#isloggedin)
 - [isModalOpen](MasaContextProviderProps.md#ismodalopen)
 - [isSessionLoading](MasaContextProviderProps.md#issessionloading)
@@ -62,12 +69,14 @@
 - [openCreateCreditScoreModal](MasaContextProviderProps.md#opencreatecreditscoremodal)
 - [openCreateIdentityModal](MasaContextProviderProps.md#opencreateidentitymodal)
 - [openCreateSoulnameModal](MasaContextProviderProps.md#opencreatesoulnamemodal)
+- [openGallery](MasaContextProviderProps.md#opengallery)
 - [openInterfaceMasaGreen](MasaContextProviderProps.md#openinterfacemasagreen)
 - [openMintMasaGreen](MasaContextProviderProps.md#openmintmasagreen)
 - [openMintSoulnameModal](MasaContextProviderProps.md#openmintsoulnamemodal)
 - [openModal](MasaContextProviderProps.md#openmodal)
 - [openSuccessCreateIdentityModal](MasaContextProviderProps.md#opensuccesscreateidentitymodal)
 - [openSwitchChainModal](MasaContextProviderProps.md#openswitchchainmodal)
+- [refetchContracts](MasaContextProviderProps.md#refetchcontracts)
 - [reloadCreditScores](MasaContextProviderProps.md#reloadcreditscores)
 - [reloadGreens](MasaContextProviderProps.md#reloadgreens)
 - [reloadIdentity](MasaContextProviderProps.md#reloadidentity)
@@ -110,6 +119,12 @@ ___
 
 ___
 
+### apiUrl
+
+• `Optional` **apiUrl**: `string`
+
+___
+
 ### areScopesFullfiled
 
 • `Optional` **areScopesFullfiled**: `boolean`
@@ -123,6 +138,16 @@ ___
 ### arweaveConfig
 
 • `Optional` **arweaveConfig**: [`ArweaveConfig`](ArweaveConfig.md)
+
+___
+
+### badges
+
+• `Optional` **badges**: `any`[]
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[badges](MasaShape.md#badges)
 
 ___
 
@@ -232,6 +257,26 @@ ___
 
 ___
 
+### customGallerySBT
+
+• `Optional` **customGallerySBT**: `CustomGallerySBT`[]
+
+#### Overrides
+
+[MasaShape](MasaShape.md).[customGallerySBT](MasaShape.md#customgallerysbt)
+
+___
+
+### customSBTs
+
+• `Optional` **customSBTs**: `any`[]
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[customSBTs](MasaShape.md#customsbts)
+
+___
+
 ### environmentName
 
 • `Optional` **environmentName**: `undefined`
@@ -258,6 +303,16 @@ ___
 
 ___
 
+### fullScreenGallery
+
+• `Optional` **fullScreenGallery**: `boolean`
+
+#### Overrides
+
+[MasaShape](MasaShape.md).[fullScreenGallery](MasaShape.md#fullscreengallery)
+
+___
+
 ### greens
 
 • `Optional` **greens**: { `metadata?`: `IGreen` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]
@@ -265,6 +320,32 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[greens](MasaShape.md#greens)
+
+___
+
+### handleAddSBT
+
+• `Optional` **handleAddSBT**: (`isCollection`: `boolean`, `name`: `string`, `address`: `string`) => `void`
+
+#### Type declaration
+
+▸ (`isCollection`, `name`, `address`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `isCollection` | `boolean` |
+| `name` | `string` |
+| `address` | `string` |
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[handleAddSBT](MasaShape.md#handleaddsbt)
 
 ___
 
@@ -518,6 +599,16 @@ ___
 
 ___
 
+### isLoadingCustomSBTs
+
+• `Optional` **isLoadingCustomSBTs**: `boolean`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[isLoadingCustomSBTs](MasaShape.md#isloadingcustomsbts)
+
+___
+
 ### isLoggedIn
 
 • `Optional` **isLoggedIn**: `boolean`
@@ -756,6 +847,30 @@ ___
 
 ___
 
+### openGallery
+
+• `Optional` **openGallery**: (`callback?`: () => `void`) => `void`
+
+#### Type declaration
+
+▸ (`callback?`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback?` | () => `void` |
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[openGallery](MasaShape.md#opengallery)
+
+___
+
 ### openInterfaceMasaGreen
 
 • `Optional` **openInterfaceMasaGreen**: () => `void`
@@ -883,6 +998,24 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[openSwitchChainModal](MasaShape.md#openswitchchainmodal)
+
+___
+
+### refetchContracts
+
+• `Optional` **refetchContracts**: () => `void`
+
+#### Type declaration
+
+▸ (): `void`
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[refetchContracts](MasaShape.md#refetchcontracts)
 
 ___
 

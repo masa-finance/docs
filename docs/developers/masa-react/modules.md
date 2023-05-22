@@ -1,8 +1,8 @@
 [# Masa React
- - v1.2.2-alpha-2](README.md) / Exports
+ - v1.6.0](README.md) / Exports
 
 # # Masa React
- - v1.2.2-alpha-2
+ - v1.6.0
 
 ## Table of contents
 
@@ -360,6 +360,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
+| › `apiUrl?` | `string` |
 | › `arweaveConfig?` | [`ArweaveConfig`](interfaces/ArweaveConfig.md) |
 | › `environmentName` | `string` |
 | › `networkName?` | `NetworkName` |
@@ -788,6 +789,7 @@ ___
 | `forcedPage` | ``null`` \| `string` |
 | `isModalOpen` | `boolean` |
 | `modalSize` | ``null`` \| { `height`: `number` ; `width`: `number`  } |
+| `openGallery` | (`callback?`: () => `void`) => `void` |
 | `openMintMasaGreen` | (`mintCallback?`: () => `void`) => `void` |
 | `openMintSoulnameModal` | (`mintCallback?`: () => `void`) => `void` |
 | `setForcedPage?` | (`page`: ``null`` \| `string`) => `void` |

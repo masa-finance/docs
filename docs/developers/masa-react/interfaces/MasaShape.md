@@ -1,5 +1,5 @@
 [# Masa React
- - v1.2.2-alpha-2](../README.md) / [Exports](../modules.md) / MasaShape
+ - v1.6.0](../README.md) / [Exports](../modules.md) / MasaShape
 
 # Interface: MasaShape
 
@@ -16,6 +16,7 @@
 - [SupportedNetworks](MasaShape.md#supportednetworks)
 - [accountAddress](MasaShape.md#accountaddress)
 - [areScopesFullfiled](MasaShape.md#arescopesfullfiled)
+- [badges](MasaShape.md#badges)
 - [children](MasaShape.md#children)
 - [closeModal](MasaShape.md#closemodal)
 - [company](MasaShape.md#company)
@@ -23,9 +24,13 @@
 - [creditScores](MasaShape.md#creditscores)
 - [currentNetwork](MasaShape.md#currentnetwork)
 - [currentNetworkNew](MasaShape.md#currentnetworknew)
+- [customGallerySBT](MasaShape.md#customgallerysbt)
+- [customSBTs](MasaShape.md#customsbts)
 - [forceNetwork](MasaShape.md#forcenetwork)
 - [forcedPage](MasaShape.md#forcedpage)
+- [fullScreenGallery](MasaShape.md#fullscreengallery)
 - [greens](MasaShape.md#greens)
+- [handleAddSBT](MasaShape.md#handleaddsbt)
 - [handleCreateCreditScore](MasaShape.md#handlecreatecreditscore)
 - [handleCreateGreen](MasaShape.md#handlecreategreen)
 - [handleGenerateGreen](MasaShape.md#handlegenerategreen)
@@ -42,6 +47,7 @@
 - [isGreensLoading](MasaShape.md#isgreensloading)
 - [isIdentityLoading](MasaShape.md#isidentityloading)
 - [isLoading](MasaShape.md#isloading)
+- [isLoadingCustomSBTs](MasaShape.md#isloadingcustomsbts)
 - [isLoggedIn](MasaShape.md#isloggedin)
 - [isModalOpen](MasaShape.md#ismodalopen)
 - [isSessionLoading](MasaShape.md#issessionloading)
@@ -58,12 +64,14 @@
 - [openCreateCreditScoreModal](MasaShape.md#opencreatecreditscoremodal)
 - [openCreateIdentityModal](MasaShape.md#opencreateidentitymodal)
 - [openCreateSoulnameModal](MasaShape.md#opencreatesoulnamemodal)
+- [openGallery](MasaShape.md#opengallery)
 - [openInterfaceMasaGreen](MasaShape.md#openinterfacemasagreen)
 - [openMintMasaGreen](MasaShape.md#openmintmasagreen)
 - [openMintSoulnameModal](MasaShape.md#openmintsoulnamemodal)
 - [openModal](MasaShape.md#openmodal)
 - [openSuccessCreateIdentityModal](MasaShape.md#opensuccesscreateidentitymodal)
 - [openSwitchChainModal](MasaShape.md#openswitchchainmodal)
+- [refetchContracts](MasaShape.md#refetchcontracts)
 - [reloadCreditScores](MasaShape.md#reloadcreditscores)
 - [reloadGreens](MasaShape.md#reloadgreens)
 - [reloadIdentity](MasaShape.md#reloadidentity)
@@ -99,6 +107,12 @@ ___
 ### areScopesFullfiled
 
 • `Optional` **areScopesFullfiled**: `boolean`
+
+___
+
+### badges
+
+• `Optional` **badges**: `any`[]
 
 ___
 
@@ -174,6 +188,18 @@ ___
 
 ___
 
+### customGallerySBT
+
+• `Optional` **customGallerySBT**: `CustomGallerySBT`[]
+
+___
+
+### customSBTs
+
+• `Optional` **customSBTs**: `any`[]
+
+___
+
 ### forceNetwork
 
 • `Optional` **forceNetwork**: `NetworkName`
@@ -186,9 +212,37 @@ ___
 
 ___
 
+### fullScreenGallery
+
+• `Optional` **fullScreenGallery**: `boolean`
+
+___
+
 ### greens
 
 • `Optional` **greens**: { `metadata?`: `IGreen` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]
+
+___
+
+### handleAddSBT
+
+• `Optional` **handleAddSBT**: (`isCollection`: `boolean`, `name`: `string`, `address`: `string`) => `void`
+
+#### Type declaration
+
+▸ (`isCollection`, `name`, `address`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `isCollection` | `boolean` |
+| `name` | `string` |
+| `address` | `string` |
+
+##### Returns
+
+`void`
 
 ___
 
@@ -378,6 +432,12 @@ ___
 
 ___
 
+### isLoadingCustomSBTs
+
+• `Optional` **isLoadingCustomSBTs**: `boolean`
+
+___
+
 ### isLoggedIn
 
 • `Optional` **isLoggedIn**: `boolean`
@@ -546,6 +606,26 @@ ___
 
 ___
 
+### openGallery
+
+• `Optional` **openGallery**: (`callback?`: () => `void`) => `void`
+
+#### Type declaration
+
+▸ (`callback?`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback?` | () => `void` |
+
+##### Returns
+
+`void`
+
+___
+
 ### openInterfaceMasaGreen
 
 • `Optional` **openInterfaceMasaGreen**: () => `void`
@@ -641,6 +721,20 @@ ___
 ### openSwitchChainModal
 
 • `Optional` **openSwitchChainModal**: () => `void`
+
+#### Type declaration
+
+▸ (): `void`
+
+##### Returns
+
+`void`
+
+___
+
+### refetchContracts
+
+• `Optional` **refetchContracts**: () => `void`
 
 #### Type declaration
 
