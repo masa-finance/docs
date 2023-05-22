@@ -2290,23 +2290,23 @@
   dependencies:
     "@lit-labs/ssr-dom-shim" "^1.0.0"
 
-"@masa-finance/masa-contracts-identity@^1.5.3":
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-contracts-identity/-/masa-contracts-identity-1.5.3.tgz#2a2995fa1d12a52cba9047180ebe60bf7484e428"
-  integrity sha512-pEa5T7gCt6tp4HiPoM0nwa5IeNEXHQFbZMvGkn2SumPgHNUwHzsTG2eu6wm+3TKEeAR3qlpBVrPJSjewjqTy8g==
+"@masa-finance/masa-contracts-identity@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-contracts-identity/-/masa-contracts-identity-1.7.0.tgz#4248d1eae9d90a6e558be716b1a864358d44a48d"
+  integrity sha512-XewBQzADlZJ2tkxrXS9DSbPvwd9An0kBbLg12DpGtHWr4mxNQz8Gg+o0SebajYGAcMmJxvd+K6fsWUEr26l/ow==
   dependencies:
     ethers "~5.7.2"
 
-"@masa-finance/masa-react@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-react/-/masa-react-1.2.1.tgz#34f67c15d97aee8c58eb6d27de9728d3ecbc13fd"
-  integrity sha512-waAXKHovvUgRv5FZyaIDGyP+3PA3tqSzeZ/j1Mf4A/F+s/dcwMsiCe2jdJ3ynXxHnVudcL02jcZ8edHi9La/Gg==
+"@masa-finance/masa-react@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-react/-/masa-react-1.5.1.tgz#8e4adcaf9e385b256a54ee650b01cdfbd7eeba29"
+  integrity sha512-GaVPop05xnkOY198gJfB4cRnIe+cpRRZm0ZDGXyY7KP0MH+ugDGC88761fLOx/1o9ZEN9e9gez/V7Binc2v3hg==
   dependencies:
     "@acusti/react-code-input" "^3.11.0"
     "@babel/preset-typescript" "^7.21.5"
     "@celo/rainbowkit-celo" "^0.11.1"
-    "@masa-finance/masa-sdk" "^1.15.3"
-    "@metamask/providers" "^10.2.1"
+    "@masa-finance/masa-sdk" "^2.1.0"
+    "@metamask/providers" "^11.0.0"
     "@rainbow-me/rainbowkit" "^0.12.12"
     babel-loader "^9.1.2"
     babel-plugin-import "^1.13.6"
@@ -2327,12 +2327,12 @@
     storybook-addon-sass-postcss "^0.1.3"
     wagmi "^0.12.10"
 
-"@masa-finance/masa-sdk@^1.15.3":
-  version "1.15.4"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-1.15.4.tgz#daede3ea9a3faea007a57f8ec653766fc34889e2"
-  integrity sha512-sZ3sjZJbMPM4Pl0Ed4JtgdJxn05k20bLb8jhw6JSQoPWXkHsolSCBjsgkz1vtC28HV7x8zUS5iwVDOpzqVV9mA==
+"@masa-finance/masa-sdk@^2.1.0":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-2.1.1.tgz#d95816a6c63531b8a72771b8befd39a429998348"
+  integrity sha512-vUYebzVFLTGcSX6AcIXTucppoxEGAloeoY6lmc6BWEE4FxIS4NY0JwfRB6//2/CICURvL0eEBFGMtENSKcyPcQ==
   dependencies:
-    "@masa-finance/masa-contracts-identity" "^1.5.3"
+    "@masa-finance/masa-contracts-identity" "^1.7.0"
     "@masa-finance/masa-token" "^2.0.0"
     arweave "1.11.8"
     axios "^1.3.2"
@@ -2389,14 +2389,13 @@
     once "^1.4.0"
     readable-stream "^2.3.3"
 
-"@metamask/providers@^10.2.1":
-  version "10.2.1"
-  resolved "https://registry.yarnpkg.com/@metamask/providers/-/providers-10.2.1.tgz#61304940adeccc7421dcda30ffd1d834273cc77b"
-  integrity sha512-p2TXw2a1Nb8czntDGfeIYQnk4LLVbd5vlcb3GY//lylYlKdSqp+uUTegCvxiFblRDOT68jsY8Ib1VEEzVUOolA==
+"@metamask/providers@^11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@metamask/providers/-/providers-11.0.0.tgz#3df64510d472a4011f500d1f4a98daf8e498507f"
+  integrity sha512-UPX8rdOPTQrZv04TR06tqbid63SlI172a1xAqEj0C5UZ5/RkloQxVJ0ZpA5AnS2xpsHPyQfUEYIESAExn/yhJg==
   dependencies:
     "@metamask/object-multiplex" "^1.1.0"
-    "@metamask/safe-event-emitter" "^2.0.0"
-    "@types/chrome" "^0.0.136"
+    "@metamask/safe-event-emitter" "^3.0.0"
     detect-browser "^5.2.0"
     eth-rpc-errors "^4.0.2"
     extension-port-stream "^2.0.1"
@@ -2405,12 +2404,17 @@
     json-rpc-engine "^6.1.0"
     json-rpc-middleware-stream "^4.2.1"
     pump "^3.0.0"
-    webextension-polyfill-ts "^0.25.0"
+    webextension-polyfill "^0.10.0"
 
 "@metamask/safe-event-emitter@2.0.0", "@metamask/safe-event-emitter@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@metamask/safe-event-emitter/-/safe-event-emitter-2.0.0.tgz#af577b477c683fad17c619a78208cede06f9605c"
   integrity sha512-/kSXhY692qiV1MXu6EeOZvg5nECLclxNXcKCxJ3cXQgYuRymRHpdx/t7JXfsK+JLjwA1e1c1/SBrlQYpusC29Q==
+
+"@metamask/safe-event-emitter@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@metamask/safe-event-emitter/-/safe-event-emitter-3.0.0.tgz#8c2b9073fe0722d48693143b0dc8448840daa3bd"
+  integrity sha512-j6Z47VOmVyGMlnKXZmL0fyvWfEYtKWCA9yGZkU3FCsGZUT5lHGmvaV9JA5F2Y+010y7+ROtR3WMXIkvl/nVzqQ==
 
 "@metamask/utils@^3.0.1":
   version "3.6.0"
@@ -3004,14 +3008,6 @@
   dependencies:
     "@types/node" "*"
 
-"@types/chrome@^0.0.136":
-  version "0.0.136"
-  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.136.tgz#7c011b9f997b0156f25a140188a0c5689d3f368f"
-  integrity sha512-XDEiRhLkMd+SB7Iw3ZUIj/fov3wLd4HyTdLltVszkgl1dBfc3Rb7oPMVZ2Mz2TLqnF7Ow+StbR8E7r9lqpb4DA==
-  dependencies:
-    "@types/filesystem" "*"
-    "@types/har-format" "*"
-
 "@types/connect-history-api-fallback@^1.3.5":
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/@types/connect-history-api-fallback/-/connect-history-api-fallback-1.3.5.tgz#d1f7a8a09d0ed5a57aee5ae9c18ab9b803205dae"
@@ -3079,18 +3075,6 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
-"@types/filesystem@*":
-  version "0.0.32"
-  resolved "https://registry.yarnpkg.com/@types/filesystem/-/filesystem-0.0.32.tgz#307df7cc084a2293c3c1a31151b178063e0a8edf"
-  integrity sha512-Yuf4jR5YYMR2DVgwuCiP11s0xuVRyPKmz8vo6HBY3CGdeMj8af93CFZX+T82+VD1+UqHOxTq31lO7MI7lepBtQ==
-  dependencies:
-    "@types/filewriter" "*"
-
-"@types/filewriter@*":
-  version "0.0.29"
-  resolved "https://registry.yarnpkg.com/@types/filewriter/-/filewriter-0.0.29.tgz#a48795ecadf957f6c0d10e0c34af86c098fa5bee"
-  integrity sha512-BsPXH/irW0ht0Ji6iw/jJaK8Lj3FJemon2gvEqHKpCdDCeemHa+rI3WBGq5z7cDMZgoLjY40oninGxqk+8NzNQ==
-
 "@types/glob@^7.1.1":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@types/glob/-/glob-7.2.0.tgz#bc1b5bf3aa92f25bd5dd39f35c57361bdce5b2eb"
@@ -3098,11 +3082,6 @@
   dependencies:
     "@types/minimatch" "*"
     "@types/node" "*"
-
-"@types/har-format@*":
-  version "1.2.10"
-  resolved "https://registry.yarnpkg.com/@types/har-format/-/har-format-1.2.10.tgz#7b4e1e0ada4d17684ac3b05d601a4871cfab11fc"
-  integrity sha512-o0J30wqycjF5miWDKYKKzzOU1ZTLuA42HZ4HE7/zqTOc/jTLdQ5NhYWvsRQo45Nfi1KHoRdNhteSI4BAxTF1Pg==
 
 "@types/hast@^2.0.0":
   version "2.3.4"
@@ -12244,12 +12223,10 @@ webextension-polyfill-ts@^0.22.0:
   dependencies:
     webextension-polyfill "^0.7.0"
 
-webextension-polyfill-ts@^0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/webextension-polyfill-ts/-/webextension-polyfill-ts-0.25.0.tgz#fff041626365dbd0e29c40b197e989a55ec221ca"
-  integrity sha512-ikQhwwHYkpBu00pFaUzIKY26I6L87DeRI+Q6jBT1daZUNuu8dSrg5U9l/ZbqdaQ1M/TTSPKeAa3kolP5liuedw==
-  dependencies:
-    webextension-polyfill "^0.7.0"
+webextension-polyfill@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/webextension-polyfill/-/webextension-polyfill-0.10.0.tgz#ccb28101c910ba8cf955f7e6a263e662d744dbb8"
+  integrity sha512-c5s35LgVa5tFaHhrZDnr3FpQpjj1BB+RXhLTYUxGqBVN460HkbM8TBtEqdXWbpTKfzwCcjAZVF7zXCYSKtcp9g==
 
 webextension-polyfill@^0.7.0:
   version "0.7.0"
