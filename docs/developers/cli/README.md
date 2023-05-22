@@ -50,8 +50,6 @@
     - [`masa sbt`](#masa-sbt)
       - [`masa sbt info <contract-address>`](#masa-sbt-info-contract-address)
       - [`masa sbt list <contract-address>`](#masa-sbt-list-contract-address)
-      - [`masa sbt sign <contract-address> <name> <types> <value>`](#masa-sbt-sign-contract-address-name-types-value)
-      - [`masa sbt prepare-mint <contract-address> <name> <types> <value> <authority-address> <signature>`](#masa-sbt-prepare-mint-contract-address-name-types-value-authority-address-signature)
       - [`masa sbt burn <contract-address> <sbt-id>`](#masa-sbt-burn-contract-address-sbt-id)
     - [`masa asbt`](#masa-asbt)
       - [`masa asbt deploy`](#masa-asbt-deploy)
@@ -129,8 +127,6 @@ Commands:
   sbt                                                                                         SBT Commands
   sbt info <contract-address>                                                                 Shows info about an SBT
   sbt list [options] <contract-address>                                                       Lists your SBTs
-  sbt sign <contract-address> <name> <types> <value>                                          Signs an SBT
-  sbt prepare-mint <contract-address> <name> <types> <value> <authority-address> <signature>  Prepares an SBT mint operation
   sbt burn <contract-address> <sbt-id>                                                        Burns an SBT
   asbt                                                                                        ASBT Commands
   asbt deploy                                                                                 Deploys ASBTs
@@ -438,26 +434,6 @@ Lists your SBTs
   Options:
 - `-a, --address <address>`
   Address override
-
-#### `masa sbt sign <contract-address> <name> <types> <value>`
-
-Signs an SBT
-
-- `<contract-address> Address of the SBT to sign`
-- `<name> Name of the contract`
-- `<types> Types structure to sign`
-- `<value> Values of the structure`
-
-#### `masa sbt prepare-mint <contract-address> <name> <types> <value> <authority-address> <signature>`
-
-Prepares an SBT mint operation
-
-- `<contract-address> Address of the SBT to sign`
-- `<name> Name of the contract`
-- `<types> Types structure to sign`
-- `<value> Values of the structure`
-- `<authority-address> Authority address used for signing`
-- `<signature> Signature from the signing step`
 
 #### `masa sbt burn <contract-address> <sbt-id>`
 
