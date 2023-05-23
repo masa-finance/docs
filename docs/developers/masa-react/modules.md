@@ -1,8 +1,8 @@
 [# Masa React
- - v1.6.0](README.md) / Exports
+ - v2.0.0](README.md) / Exports
 
 # # Masa React
- - v1.6.0
+ - v2.0.0
 
 ## Table of contents
 
@@ -138,7 +138,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `provider?` | `Wallet` \| `Signer` |
+| `provider?` | `Signer` |
 | `useRainbowKitWalletConnect?` | `boolean` |
 
 ___
@@ -364,8 +364,8 @@ ___
 | › `arweaveConfig?` | [`ArweaveConfig`](interfaces/ArweaveConfig.md) |
 | › `environmentName` | `string` |
 | › `networkName?` | `NetworkName` |
+| › `signer` | `Signer` |
 | › `verbose` | `boolean` |
-| › `wallet` | `Signer` \| `Wallet` |
 
 #### Returns
 
@@ -989,7 +989,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `masa?` | `default` |
-| `signer?` | `Signer` \| `Wallet` |
+| `signer?` | `Signer` |
 
 #### Returns
 

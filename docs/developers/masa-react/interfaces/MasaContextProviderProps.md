@@ -1,5 +1,5 @@
 [# Masa React
- - v1.6.0](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v2.0.0](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -101,7 +101,7 @@
 
 ### SupportedNetworks
 
-• `Optional` **SupportedNetworks**: `Partial`<{ `alfajores`: `Network` ; `basegoerli`: `Network` ; `bsc`: `Network` ; `bsctest`: `Network` ; `celo`: `Network` ; `ethereum`: `Network` ; `goerli`: `Network` ; `mainnet`: `Network` ; `mumbai`: `Network` ; `polygon`: `Network` ; `unknown`: `Network`  }\>
+• `Optional` **SupportedNetworks**: `Partial`<{ `alfajores`: `Network` ; `basegoerli`: `Network` ; `bsc`: `Network` ; `bsctest`: `Network` ; `celo`: `Network` ; `ethereum`: `Network` ; `goerli`: `Network` ; `mumbai`: `Network` ; `polygon`: `Network` ; `unknown`: `Network`  }\>
 
 #### Inherited from
 
@@ -153,7 +153,7 @@ ___
 
 ### chainsToUse
 
-• `Optional` **chainsToUse**: (``"goerli"`` \| ``"ethereum"`` \| ``"mainnet"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``)[]
+• `Optional` **chainsToUse**: (``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``)[]
 
 ___
 
@@ -1185,7 +1185,7 @@ ___
 
 ### signer
 
-• `Optional` **signer**: `Signer` \| `Wallet`
+• `Optional` **signer**: `Signer`
 
 #### Overrides
 
