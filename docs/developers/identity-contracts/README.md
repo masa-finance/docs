@@ -16,11 +16,9 @@
 
 ## Contract Deployments
 
-### Goerli test network
+### Addresses of the deployed contracts
 
-You can see the deployment address of the smart contracts in the [deployments/goerli](deployments/goerli) folder. For
-every deployed smart contract you will find a `<smart_contract>.json` JSON file with the address in the `"address"`
-field.
+You can see the deployment address of the smart contracts in the [addresses.json](addresses.json) file. For every deployed smart contract you will find a `<network>.<contract>` value.
 
 #### Configuration
 
