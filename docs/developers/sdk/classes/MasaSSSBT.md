@@ -1,5 +1,5 @@
 [# Masa SDK
- - v2.2.0](../README.md) / [Exports](../modules.md) / MasaSSSBT
+ - v3.0.1](../README.md) / [Exports](../modules.md) / MasaSSSBT
 
 # Class: MasaSSSBT<Contract\>
 
@@ -66,7 +66,7 @@
 
 ### connect
 
-▸ **connect**(`address`): `Promise`<{ `burn`: (`SBTId`: `BigNumber`) => `undefined` \| `Promise`<`boolean`\> ; `links`: `undefined` \| [`MasaSoulLinker`](MasaSoulLinker.md) ; `list`: (`address?`: `string`) => `undefined` \| `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> ; `mint`: (`authorityAddress`: `string`, `signatureDate`: `number`, `signature`: `string`) => `Promise`<`undefined` \| ``true``\> ; `sbtContract`: `undefined` \| `Contract` ; `sign`: (`receiver`: `string`) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>  }\>
+▸ **connect**(`address`): `Promise`<[`SSSBTWrapper`](SSSBTWrapper.md)<`Contract`\>\>
 
 #### Parameters
 
@@ -76,7 +76,7 @@
 
 #### Returns
 
-`Promise`<{ `burn`: (`SBTId`: `BigNumber`) => `undefined` \| `Promise`<`boolean`\> ; `links`: `undefined` \| [`MasaSoulLinker`](MasaSoulLinker.md) ; `list`: (`address?`: `string`) => `undefined` \| `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> ; `mint`: (`authorityAddress`: `string`, `signatureDate`: `number`, `signature`: `string`) => `Promise`<`undefined` \| ``true``\> ; `sbtContract`: `undefined` \| `Contract` ; `sign`: (`receiver`: `string`) => `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>  }\>
+`Promise`<[`SSSBTWrapper`](SSSBTWrapper.md)<`Contract`\>\>
 
 #### Overrides
 

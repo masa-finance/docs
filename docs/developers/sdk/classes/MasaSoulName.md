@@ -1,11 +1,11 @@
 [# Masa SDK
- - v2.2.0](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v3.0.1](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
 ## Hierarchy
 
-- `MasaBase`
+- [`MasaBase`](MasaBase.md)
 
   ↳ **`MasaSoulName`**
 
@@ -48,7 +48,7 @@
 
 #### Inherited from
 
-MasaBase.constructor
+[MasaBase](MasaBase.md).[constructor](MasaBase.md#constructor)
 
 ## Properties
 
@@ -58,7 +58,7 @@ MasaBase.constructor
 
 #### Inherited from
 
-MasaBase.masa
+[MasaBase](MasaBase.md).[masa](MasaBase.md#masa)
 
 ## Methods
 

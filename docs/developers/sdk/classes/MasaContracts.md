@@ -1,11 +1,11 @@
 [# Masa SDK
- - v2.2.0](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v3.0.1](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
 ## Hierarchy
 
-- `MasaBase`
+- [`MasaBase`](MasaBase.md)
 
   ↳ **`MasaContracts`**
 
@@ -45,7 +45,7 @@
 
 #### Overrides
 
-MasaBase.constructor
+[MasaBase](MasaBase.md).[constructor](MasaBase.md#constructor)
 
 ## Properties
 
@@ -79,7 +79,7 @@ ___
 
 #### Inherited from
 
-MasaBase.masa
+[MasaBase](MasaBase.md).[masa](MasaBase.md#masa)
 
 ___
 

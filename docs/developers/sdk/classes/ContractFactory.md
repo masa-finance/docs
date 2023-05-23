@@ -1,5 +1,5 @@
 [# Masa SDK
- - v2.2.0](../README.md) / [Exports](../modules.md) / ContractFactory
+ - v3.0.1](../README.md) / [Exports](../modules.md) / ContractFactory
 
 # Class: ContractFactory
 
@@ -23,7 +23,7 @@
 
 ### connect
 
-▪ `Static` **connect**: <Contract\>(`address`: `string`, `signerOrProvider`: `Signer` \| `Wallet`) => `Contract`
+▪ `Static` **connect**: <Contract\>(`address`: `string`, `signerOrProvider`: `Signer`) => `Contract`
 
 #### Type declaration
 
@@ -40,7 +40,7 @@
 | Name | Type |
 | :------ | :------ |
 | `address` | `string` |
-| `signerOrProvider` | `Signer` \| `Wallet` |
+| `signerOrProvider` | `Signer` |
 
 ##### Returns
 

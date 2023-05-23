@@ -1,11 +1,11 @@
 [# Masa SDK
- - v2.2.0](../README.md) / [Exports](../modules.md) / MasaCreditScore
+ - v3.0.1](../README.md) / [Exports](../modules.md) / MasaCreditScore
 
 # Class: MasaCreditScore
 
 ## Hierarchy
 
-- `MasaBase`
+- [`MasaLinkable`](MasaLinkable.md)
 
   ↳ **`MasaCreditScore`**
 
@@ -17,6 +17,7 @@
 
 ### Properties
 
+- [contract](MasaCreditScore.md#contract)
 - [links](MasaCreditScore.md#links)
 - [masa](MasaCreditScore.md#masa)
 
@@ -41,13 +42,27 @@
 
 #### Overrides
 
-MasaBase.constructor
+[MasaLinkable](MasaLinkable.md).[constructor](MasaLinkable.md#constructor)
 
 ## Properties
+
+### contract
+
+• `Protected` **contract**: `Contract`
+
+#### Inherited from
+
+[MasaLinkable](MasaLinkable.md).[contract](MasaLinkable.md#contract)
+
+___
 
 ### links
 
 • `Readonly` **links**: [`MasaSoulLinker`](MasaSoulLinker.md)
+
+#### Inherited from
+
+[MasaLinkable](MasaLinkable.md).[links](MasaLinkable.md#links)
 
 ___
 
@@ -57,7 +72,7 @@ ___
 
 #### Inherited from
 
-MasaBase.masa
+[MasaLinkable](MasaLinkable.md).[masa](MasaLinkable.md#masa)
 
 ## Methods
 

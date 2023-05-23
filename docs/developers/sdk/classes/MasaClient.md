@@ -1,11 +1,11 @@
 [# Masa SDK
- - v2.2.0](../README.md) / [Exports](../modules.md) / MasaClient
+ - v3.0.1](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
 ## Hierarchy
 
-- `MasaBase`
+- [`MasaBase`](MasaBase.md)
 
   ↳ **`MasaClient`**
 
@@ -53,7 +53,7 @@
 
 #### Overrides
 
-MasaBase.constructor
+[MasaBase](MasaBase.md).[constructor](MasaBase.md#constructor)
 
 ## Properties
 
@@ -101,7 +101,7 @@ ___
 
 #### Inherited from
 
-MasaBase.masa
+[MasaBase](MasaBase.md).[masa](MasaBase.md#masa)
 
 ___
 

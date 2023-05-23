@@ -1,5 +1,5 @@
 [# Masa SDK
- - v2.2.0](../README.md) / [Exports](../modules.md) / MasaConfig
+ - v3.0.1](../README.md) / [Exports](../modules.md) / MasaConfig
 
 # Interface: MasaConfig
 
@@ -11,8 +11,8 @@
 - [environment](MasaConfig.md#environment)
 - [network](MasaConfig.md#network)
 - [networkName](MasaConfig.md#networkname)
+- [signer](MasaConfig.md#signer)
 - [verbose](MasaConfig.md#verbose)
-- [wallet](MasaConfig.md#wallet)
 
 ## Properties
 
@@ -40,12 +40,12 @@ ___
 
 ___
 
-### verbose
+### signer
 
-• `Readonly` **verbose**: `boolean`
+• `Readonly` **signer**: `Signer`
 
 ___
 
-### wallet
+### verbose
 
-• `Readonly` **wallet**: `Signer` \| `Wallet`
+• `Readonly` **verbose**: `boolean`

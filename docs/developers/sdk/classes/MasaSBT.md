@@ -1,5 +1,5 @@
 [# Masa SDK
- - v2.2.0](../README.md) / [Exports](../modules.md) / MasaSBT
+ - v3.0.1](../README.md) / [Exports](../modules.md) / MasaSBT
 
 # Class: MasaSBT<Contract\>
 
@@ -11,7 +11,7 @@
 
 ## Hierarchy
 
-- `MasaBase`
+- [`MasaBase`](MasaBase.md)
 
   ↳ **`MasaSBT`**
 
@@ -53,7 +53,7 @@
 
 #### Inherited from
 
-MasaBase.constructor
+[MasaBase](MasaBase.md).[constructor](MasaBase.md#constructor)
 
 ## Properties
 
@@ -63,21 +63,21 @@ MasaBase.constructor
 
 #### Inherited from
 
-MasaBase.masa
+[MasaBase](MasaBase.md).[masa](MasaBase.md#masa)
 
 ## Methods
 
 ### connect
 
-▸ **connect**(`address`, `factory?`): `Promise`<{ `burn`: (`SBTId`: `BigNumber`) => `undefined` \| `Promise`<`boolean`\> ; `links`: `undefined` \| [`MasaSoulLinker`](MasaSoulLinker.md) ; `list`: (`address?`: `string`) => `undefined` \| `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> ; `sbtContract`: `undefined` \| `Contract`  }\>
+▸ **connect**(`address`, `factory?`): `Promise`<[`SBTWrapper`](SBTWrapper.md)<`Contract`\>\>
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `address` | `string` | `undefined` |
-| `factory` | [`ContractFactory`](ContractFactory.md) | `MasaSBTSelfSovereign__factory` |
+| `factory` | [`ContractFactory`](ContractFactory.md) | `MasaSBT__factory` |
 
 #### Returns
 
-`Promise`<{ `burn`: (`SBTId`: `BigNumber`) => `undefined` \| `Promise`<`boolean`\> ; `links`: `undefined` \| [`MasaSoulLinker`](MasaSoulLinker.md) ; `list`: (`address?`: `string`) => `undefined` \| `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\> ; `sbtContract`: `undefined` \| `Contract`  }\>
+`Promise`<[`SBTWrapper`](SBTWrapper.md)<`Contract`\>\>

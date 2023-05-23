@@ -1,11 +1,11 @@
 [# Masa SDK
- - v2.2.0](../README.md) / [Exports](../modules.md) / MasaSession
+ - v3.0.1](../README.md) / [Exports](../modules.md) / MasaSession
 
 # Class: MasaSession
 
 ## Hierarchy
 
-- `MasaBase`
+- [`MasaBase`](MasaBase.md)
 
   ↳ **`MasaSession`**
 
@@ -41,7 +41,7 @@
 
 #### Inherited from
 
-MasaBase.constructor
+[MasaBase](MasaBase.md).[constructor](MasaBase.md#constructor)
 
 ## Properties
 
@@ -51,7 +51,7 @@ MasaBase.constructor
 
 #### Inherited from
 
-MasaBase.masa
+[MasaBase](MasaBase.md).[masa](MasaBase.md#masa)
 
 ## Methods
 

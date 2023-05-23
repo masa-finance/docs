@@ -1,8 +1,8 @@
 [# Masa SDK
- - v2.2.0](README.md) / Exports
+ - v3.0.1](README.md) / Exports
 
 # # Masa SDK
- - v2.2.0
+ - v3.0.1
 
 ## Table of contents
 
@@ -12,6 +12,7 @@
 
 ### Classes
 
+- [ASBTWrapper](classes/ASBTWrapper.md)
 - [ContractFactory](classes/ContractFactory.md)
 - [CreditScore](classes/CreditScore.md)
 - [ERC20\_\_factory](classes/ERC20__factory.md)
@@ -21,11 +22,13 @@
 - [MasaASBT](classes/MasaASBT.md)
 - [MasaAccount](classes/MasaAccount.md)
 - [MasaArweave](classes/MasaArweave.md)
+- [MasaBase](classes/MasaBase.md)
 - [MasaClient](classes/MasaClient.md)
 - [MasaContracts](classes/MasaContracts.md)
 - [MasaCreditScore](classes/MasaCreditScore.md)
 - [MasaGreen](classes/MasaGreen.md)
 - [MasaIdentity](classes/MasaIdentity.md)
+- [MasaLinkable](classes/MasaLinkable.md)
 - [MasaModuleBase](classes/MasaModuleBase.md)
 - [MasaSBT](classes/MasaSBT.md)
 - [MasaSSSBT](classes/MasaSSSBT.md)
@@ -33,6 +36,8 @@
 - [MasaSoulLinker](classes/MasaSoulLinker.md)
 - [MasaSoulName](classes/MasaSoulName.md)
 - [SBT](classes/SBT.md)
+- [SBTWrapper](classes/SBTWrapper.md)
+- [SSSBTWrapper](classes/SSSBTWrapper.md)
 - [SoulLinker](classes/SoulLinker.md)
 - [SoulName](classes/SoulName.md)
 
@@ -120,7 +125,6 @@
 - [createIdentity](modules.md#createidentity)
 - [createIdentityWithSoulName](modules.md#createidentitywithsoulname)
 - [createLink](modules.md#createlink)
-- [createRandomWallet](modules.md#createrandomwallet)
 - [createSoulName](modules.md#createsoulname)
 - [deployASBT](modules.md#deployasbt)
 - [deploySSSBT](modules.md#deploysssbt)
@@ -236,7 +240,7 @@ ___
 
 ### Environment
 
-Ƭ **Environment**: { `name`: ``"local"`` \| ``"dev"`` \| ``"test"`` \| ``"stage"`` \| ``"production"`` ; `wallet?`: `Signer` \| `Wallet`  } & [`MasaArgs`](interfaces/MasaArgs.md)
+Ƭ **Environment**: { `name`: ``"local"`` \| ``"dev"`` \| ``"test"`` \| ``"stage"`` \| ``"production"`` ; `wallet?`: `Signer`  } & [`MasaArgs`](interfaces/MasaArgs.md)
 
 ___
 
@@ -283,7 +287,7 @@ ___
 
 ### NetworkName
 
-Ƭ **NetworkName**: ``"goerli"`` \| ``"ethereum"`` \| ``"mainnet"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``
+Ƭ **NetworkName**: ``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``
 
 ___
 
@@ -559,22 +563,6 @@ ___
 
 ___
 
-### createRandomWallet
-
-▸ **createRandomWallet**(`provider?`): `Wallet`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `provider?` | `Provider` |
-
-#### Returns
-
-`Wallet`
-
-___
-
 ### createSoulName
 
 ▸ **createSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`, `receiver?`): `Promise`<[`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
@@ -597,17 +585,18 @@ ___
 
 ### deployASBT
 
-▸ **deployASBT**(`masa`, `name`, `symbol`, `baseTokenUri`, `adminAddress?`): `Promise`<`undefined` \| `string`\>
+▸ **deployASBT**(`masa`, `name`, `symbol`, `baseTokenUri`, `limit?`, `adminAddress?`): `Promise`<`undefined` \| `string`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `name` | `string` |
-| `symbol` | `string` |
-| `baseTokenUri` | `string` |
-| `adminAddress?` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
+| `name` | `string` | `undefined` |
+| `symbol` | `string` | `undefined` |
+| `baseTokenUri` | `string` | `undefined` |
+| `limit` | `number` | `1` |
+| `adminAddress?` | `string` | `undefined` |
 
 #### Returns
 
@@ -703,7 +692,7 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `wallet` | `Wallet` | `undefined` |
+| `wallet` | `Signer` | `undefined` |
 | `name` | `string` | `undefined` |
 | `verifyingContract` | `string` | `undefined` |
 | `version` | `string` | `"1.0.0"` |
@@ -1289,7 +1278,7 @@ ___
 
 ### mintASBT
 
-▸ **mintASBT**(`masa`, `sbtContract`, `receiver`, `paymentMethod?`): `Promise`<`void`\>
+▸ **mintASBT**(`masa`, `sbtContract`, `receiver`, `paymentMethod?`): `Promise`<`boolean`\>
 
 #### Parameters
 
@@ -1302,7 +1291,7 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`<`boolean`\>
 
 ___
 
@@ -1597,7 +1586,7 @@ ___
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `msg` | `string` | `undefined` |
-| `wallet` | `Signer` \| `Wallet` | `undefined` |
+| `wallet` | `Signer` | `undefined` |
 | `doHash` | `boolean` | `false` |
 
 #### Returns
@@ -1633,7 +1622,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `contract` | `BaseContract` |
-| `wallet` | `Wallet` |
+| `wallet` | `Signer` |
 | `name` | `string` |
 | `types` | `Record`<`string`, `TypedDataField`[]\> |
 | `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |

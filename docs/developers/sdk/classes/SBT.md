@@ -1,5 +1,5 @@
 [# Masa SDK
- - v2.2.0](../README.md) / [Exports](../modules.md) / SBT
+ - v3.0.1](../README.md) / [Exports](../modules.md) / SBT
 
 # Class: SBT
 
@@ -146,7 +146,7 @@ ___
 
 ### connect
 
-▸ **connect**<`Contract`\>(`address`, `factory?`): `Promise`<`undefined` \| `ContractWrapper`<`Contract`\>\>
+▸ **connect**<`Contract`\>(`address`, `factory?`): `Promise`<`ContractWrapper`<`Contract`\>\>
 
 loads an sbt instance and connects the contract functions to it
 
@@ -161,11 +161,11 @@ loads an sbt instance and connects the contract functions to it
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `address` | `string` | `undefined` |
-| `factory` | [`ContractFactory`](ContractFactory.md) | `MasaSBTSelfSovereign__factory` |
+| `factory` | [`ContractFactory`](ContractFactory.md) | `MasaSBT__factory` |
 
 #### Returns
 
-`Promise`<`undefined` \| `ContractWrapper`<`Contract`\>\>
+`Promise`<`ContractWrapper`<`Contract`\>\>
 
 ___
 
@@ -236,7 +236,7 @@ ___
 
 ### loadSBTContract
 
-▸ `Protected` **loadSBTContract**<`Contract`\>(`masaConfig`, `address`, `factory?`): `Promise`<`undefined` \| `Contract`\>
+▸ `Protected` **loadSBTContract**<`Contract`\>(`masaConfig`, `address`, `factory`): `Promise`<`Contract`\>
 
 #### Type parameters
 
@@ -246,15 +246,15 @@ ___
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) | `undefined` |
-| `address` | `string` | `undefined` |
-| `factory` | [`ContractFactory`](ContractFactory.md) | `MasaSBTSelfSovereign__factory` |
+| Name | Type |
+| :------ | :------ |
+| `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) |
+| `address` | `string` |
+| `factory` | [`ContractFactory`](ContractFactory.md) |
 
 #### Returns
 
-`Promise`<`undefined` \| `Contract`\>
+`Promise`<`Contract`\>
 
 #### Inherited from
 

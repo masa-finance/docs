@@ -1,5 +1,5 @@
 [# Masa SDK
- - v2.2.0](../README.md) / [Exports](../modules.md) / Identity
+ - v3.0.1](../README.md) / [Exports](../modules.md) / Identity
 
 # Class: Identity
 
@@ -203,7 +203,7 @@ ___
 
 ### loadSBTContract
 
-▸ `Protected` **loadSBTContract**<`Contract`\>(`masaConfig`, `address`, `factory?`): `Promise`<`undefined` \| `Contract`\>
+▸ `Protected` **loadSBTContract**<`Contract`\>(`masaConfig`, `address`, `factory`): `Promise`<`Contract`\>
 
 #### Type parameters
 
@@ -213,15 +213,15 @@ ___
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) | `undefined` |
-| `address` | `string` | `undefined` |
-| `factory` | [`ContractFactory`](ContractFactory.md) | `MasaSBTSelfSovereign__factory` |
+| Name | Type |
+| :------ | :------ |
+| `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) |
+| `address` | `string` |
+| `factory` | [`ContractFactory`](ContractFactory.md) |
 
 #### Returns
 
-`Promise`<`undefined` \| `Contract`\>
+`Promise`<`Contract`\>
 
 #### Inherited from
 
