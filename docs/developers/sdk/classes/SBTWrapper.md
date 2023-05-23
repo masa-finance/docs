@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.0.1](../README.md) / [Exports](../modules.md) / SBTWrapper
+ - v3.0.2](../README.md) / [Exports](../modules.md) / SBTWrapper
 
 # Class: SBTWrapper<Contract\>
 
@@ -11,7 +11,7 @@
 
 ## Hierarchy
 
-- [`MasaLinkable`](MasaLinkable.md)
+- [`MasaLinkable`](MasaLinkable.md)<`Contract`\>
 
   ↳ **`SBTWrapper`**
 
@@ -30,7 +30,6 @@
 - [contract](SBTWrapper.md#contract)
 - [links](SBTWrapper.md#links)
 - [masa](SBTWrapper.md#masa)
-- [sbtContract](SBTWrapper.md#sbtcontract)
 
 ### Methods
 
@@ -41,7 +40,7 @@
 
 ### constructor
 
-• **new SBTWrapper**<`Contract`\>(`masa`, `sbtContract`)
+• **new SBTWrapper**<`Contract`\>(`masa`, `contract`)
 
 #### Type parameters
 
@@ -54,9 +53,9 @@
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](Masa.md) |
-| `sbtContract` | `Contract` |
+| `contract` | `Contract` |
 
-#### Overrides
+#### Inherited from
 
 [MasaLinkable](MasaLinkable.md).[constructor](MasaLinkable.md#constructor)
 
@@ -64,7 +63,7 @@
 
 ### contract
 
-• `Protected` **contract**: `Contract`
+• `Readonly` **contract**: `Contract`
 
 #### Inherited from
 
@@ -84,17 +83,11 @@ ___
 
 ### masa
 
-• `Protected` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
 
 #### Inherited from
 
 [MasaLinkable](MasaLinkable.md).[masa](MasaLinkable.md#masa)
-
-___
-
-### sbtContract
-
-• `Readonly` **sbtContract**: `Contract`
 
 ## Methods
 

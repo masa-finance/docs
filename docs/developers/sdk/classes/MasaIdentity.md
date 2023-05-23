@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.0.1](../README.md) / [Exports](../modules.md) / MasaIdentity
+ - v3.0.2](../README.md) / [Exports](../modules.md) / MasaIdentity
 
 # Class: MasaIdentity
 
 ## Hierarchy
 
-- [`MasaLinkable`](MasaLinkable.md)
+- [`MasaLinkable`](MasaLinkable.md)<`SoulboundIdentity`\>
 
   ↳ **`MasaIdentity`**
 
@@ -49,7 +49,7 @@
 
 ### contract
 
-• `Protected` **contract**: `Contract`
+• `Readonly` **contract**: `SoulboundIdentity`
 
 #### Inherited from
 
@@ -69,7 +69,7 @@ ___
 
 ### masa
 
-• `Protected` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
 
 #### Inherited from
 

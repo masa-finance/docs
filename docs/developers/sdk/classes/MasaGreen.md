@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.0.1](../README.md) / [Exports](../modules.md) / MasaGreen
+ - v3.0.2](../README.md) / [Exports](../modules.md) / MasaGreen
 
 # Class: MasaGreen
 
 ## Hierarchy
 
-- [`MasaLinkable`](MasaLinkable.md)
+- [`MasaLinkable`](MasaLinkable.md)<`SoulboundGreen`\>
 
   ↳ **`MasaGreen`**
 
@@ -51,7 +51,7 @@
 
 ### contract
 
-• `Protected` **contract**: `Contract`
+• `Readonly` **contract**: `SoulboundGreen`
 
 #### Inherited from
 
@@ -71,7 +71,7 @@ ___
 
 ### masa
 
-• `Protected` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
 
 #### Inherited from
 

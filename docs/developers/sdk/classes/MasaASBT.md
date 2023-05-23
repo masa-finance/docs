@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.0.1](../README.md) / [Exports](../modules.md) / MasaASBT
+ - v3.0.2](../README.md) / [Exports](../modules.md) / MasaASBT
 
 # Class: MasaASBT<Contract\>
 
@@ -56,7 +56,7 @@
 
 ### masa
 
-• `Protected` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
 
 #### Inherited from
 

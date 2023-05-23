@@ -1,7 +1,13 @@
 [# Masa SDK
- - v3.0.1](../README.md) / [Exports](../modules.md) / MasaLinkable
+ - v3.0.2](../README.md) / [Exports](../modules.md) / MasaLinkable
 
-# Class: MasaLinkable
+# Class: MasaLinkable<LinkContract\>
+
+## Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `LinkContract` | extends `Contract` |
 
 ## Hierarchy
 
@@ -33,14 +39,20 @@
 
 ### constructor
 
-• **new MasaLinkable**(`masa`, `contract`)
+• **new MasaLinkable**<`LinkContract`\>(`masa`, `contract`)
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `LinkContract` | extends `Contract`<`LinkContract`\> |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](Masa.md) |
-| `contract` | `Contract` |
+| `contract` | `LinkContract` |
 
 #### Overrides
 
@@ -50,7 +62,7 @@
 
 ### contract
 
-• `Protected` **contract**: `Contract`
+• `Readonly` **contract**: `LinkContract`
 
 ___
 
@@ -62,7 +74,7 @@ ___
 
 ### masa
 
-• `Protected` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
 
 #### Inherited from
 

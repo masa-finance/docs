@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.0.1](../README.md) / [Exports](../modules.md) / MasaCreditScore
+ - v3.0.2](../README.md) / [Exports](../modules.md) / MasaCreditScore
 
 # Class: MasaCreditScore
 
 ## Hierarchy
 
-- [`MasaLinkable`](MasaLinkable.md)
+- [`MasaLinkable`](MasaLinkable.md)<`SoulboundCreditScore`\>
 
   ↳ **`MasaCreditScore`**
 
@@ -48,7 +48,7 @@
 
 ### contract
 
-• `Protected` **contract**: `Contract`
+• `Readonly` **contract**: `SoulboundCreditScore`
 
 #### Inherited from
 
@@ -68,7 +68,7 @@ ___
 
 ### masa
 
-• `Protected` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
 
 #### Inherited from
 
