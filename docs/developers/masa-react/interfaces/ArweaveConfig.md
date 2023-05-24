@@ -1,5 +1,5 @@
 [# Masa React
- - v2.0.2](../README.md) / [Exports](../modules.md) / ArweaveConfig
+ - v2.0.4](../README.md) / [Exports](../modules.md) / ArweaveConfig
 
 # Interface: ArweaveConfig
 
