@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.0.5](../README.md) / [Exports](../modules.md) / MasaSBT
+ - v3.0.7](../README.md) / [Exports](../modules.md) / MasaSBT
 
 # Class: MasaSBT<Contract\>
 
@@ -37,7 +37,7 @@
 
 ### constructor
 
-• **new MasaSBT**<`Contract`\>(`masa`)
+• **new MasaSBT**<`Contract`\>(`mass`)
 
 #### Type parameters
 
@@ -49,9 +49,9 @@
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](Masa.md) |
+| `mass` | [`Masa`](Masa.md) |
 
-#### Inherited from
+#### Overrides
 
 [MasaBase](MasaBase.md).[constructor](MasaBase.md#constructor)
 
