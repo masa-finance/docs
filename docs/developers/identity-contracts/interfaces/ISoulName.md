@@ -167,6 +167,29 @@ function mint(address to, string name, uint256 yearsPeriod, string _tokenURI) ex
 |---|---|---|
 | _0 | uint256 | undefined |
 
+### tokenData
+
+```solidity
+function tokenData(uint256 tokenId) external view returns (string name, uint256 expirationDate)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId | uint256 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| name | string | undefined |
+| expirationDate | uint256 | undefined |
+
 
 
 
