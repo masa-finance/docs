@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.0.3](README.md) / Exports
+ - v3.0.5](README.md) / Exports
 
 # # Masa SDK
- - v3.0.3
+ - v3.0.5
 
 ## Table of contents
 
@@ -606,18 +606,19 @@ ___
 
 ### deploySSSBT
 
-▸ **deploySSSBT**(`masa`, `name`, `symbol`, `baseTokenUri`, `authorityAddress?`, `adminAddress?`): `Promise`<`undefined` \| `string`\>
+▸ **deploySSSBT**(`masa`, `name`, `symbol`, `baseTokenUri`, `limit?`, `authorityAddress?`, `adminAddress?`): `Promise`<`undefined` \| `string`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `name` | `string` |
-| `symbol` | `string` |
-| `baseTokenUri` | `string` |
-| `authorityAddress?` | `string` |
-| `adminAddress?` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
+| `name` | `string` | `undefined` |
+| `symbol` | `string` | `undefined` |
+| `baseTokenUri` | `string` | `undefined` |
+| `limit` | `number` | `1` |
+| `authorityAddress?` | `string` | `undefined` |
+| `adminAddress?` | `string` | `undefined` |
 
 #### Returns
 

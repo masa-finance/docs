@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.0.3](../README.md) / [Exports](../modules.md) / CreateSoulNameResult
+ - v3.0.5](../README.md) / [Exports](../modules.md) / CreateSoulNameResult
 
 # Interface: CreateSoulNameResult
 

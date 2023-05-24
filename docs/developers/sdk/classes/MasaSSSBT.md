@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.0.3](../README.md) / [Exports](../modules.md) / MasaSSSBT
+ - v3.0.5](../README.md) / [Exports](../modules.md) / MasaSSSBT
 
 # Class: MasaSSSBT<Contract\>
 
@@ -86,17 +86,18 @@ ___
 
 ### deploy
 
-▸ **deploy**(`name`, `symbol`, `baseTokenUri`, `authorityAddress`, `adminAddress?`): `Promise`<`undefined` \| `string`\>
+▸ **deploy**(`name`, `symbol`, `baseTokenUri`, `limit?`, `authorityAddress`, `adminAddress?`): `Promise`<`undefined` \| `string`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `symbol` | `string` |
-| `baseTokenUri` | `string` |
-| `authorityAddress` | `string` |
-| `adminAddress?` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `name` | `string` | `undefined` |
+| `symbol` | `string` | `undefined` |
+| `baseTokenUri` | `string` | `undefined` |
+| `limit` | `number` | `1` |
+| `authorityAddress` | `string` | `undefined` |
+| `adminAddress?` | `string` | `undefined` |
 
 #### Returns
 
