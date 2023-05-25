@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.0.7](../README.md) / [Exports](../modules.md) / MasaClient
+ - v3.1.0](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -140,7 +140,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`) => `Promise`<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md) \| [`SoulNameResultBase`](../interfaces/SoulNameResultBase.md)\> |
+| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`, `style?`: `string`) => `Promise`<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md) \| [`SoulNameResultBase`](../interfaces/SoulNameResultBase.md)\> |
 
 ## Accessors
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.0.7](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v3.1.0](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
@@ -80,7 +80,7 @@ ___
 
 ### create
 
-▸ **create**(`paymentMethod?`, `soulName`, `duration`, `receiver?`): `Promise`<[`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
+▸ **create**(`paymentMethod?`, `soulName`, `duration`, `receiver?`, `style?`): `Promise`<[`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
 
 #### Parameters
 
@@ -90,6 +90,7 @@ ___
 | `soulName` | `string` | `undefined` |
 | `duration` | `number` | `undefined` |
 | `receiver?` | `string` | `undefined` |
+| `style?` | `string` | `undefined` |
 
 #### Returns
 

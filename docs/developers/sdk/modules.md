@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.0.7](README.md) / Exports
+ - v3.1.0](README.md) / Exports
 
 # # Masa SDK
- - v3.0.7
+ - v3.1.0
 
 ## Table of contents
 
@@ -527,7 +527,7 @@ ___
 
 ### createIdentityWithSoulName
 
-▸ **createIdentityWithSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`): `Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
+▸ **createIdentityWithSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`, `style?`): `Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 #### Parameters
 
@@ -537,6 +537,7 @@ ___
 | `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 | `soulName` | `string` |
 | `duration` | `number` |
+| `style?` | `string` |
 
 #### Returns
 
@@ -565,7 +566,7 @@ ___
 
 ### createSoulName
 
-▸ **createSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`, `receiver?`): `Promise`<[`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
+▸ **createSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`, `receiver?`, `style?`): `Promise`<[`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 #### Parameters
 
@@ -576,6 +577,7 @@ ___
 | `soulName` | `string` |
 | `duration` | `number` |
 | `receiver?` | `string` |
+| `style?` | `string` |
 
 #### Returns
 
@@ -1410,7 +1412,7 @@ ___
 
 ### purchaseIdentityWithSoulName
 
-▸ **purchaseIdentityWithSoulName**(`masa`, `soulName`, `soulNameLength`, `duration`, `paymentMethod`): `Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
+▸ **purchaseIdentityWithSoulName**(`masa`, `soulName`, `soulNameLength`, `duration`, `paymentMethod`, `style?`): `Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 Identity with soul name
 
@@ -1423,6 +1425,7 @@ Identity with soul name
 | `soulNameLength` | `number` |
 | `duration` | `number` |
 | `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
+| `style?` | `string` |
 
 #### Returns
 
