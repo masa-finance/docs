@@ -83,6 +83,9 @@ The Masa CLI
 Options:
   -v, --version                                                                               output the version number
   --verbose                                                                                   output with verbose logging
+  -n, --network <network>                                                                     Address override
+  -pk, --privateKey <private-key>                                                             Private Key override
+  -r, --rpcUrl <rpc-url>                                                                      RPC URL override
   -h, --help                                                                                  display help for command
 
 Commands:
