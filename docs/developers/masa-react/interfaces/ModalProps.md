@@ -1,5 +1,5 @@
 [# Masa React
- - v2.0.6](../README.md) / [Exports](../modules.md) / ModalProps
+ - v2.2.1](../README.md) / [Exports](../modules.md) / ModalProps
 
 # Interface: ModalProps
 

@@ -1,5 +1,5 @@
 [# Masa React
- - v2.0.6](../README.md) / [Exports](../modules.md) / MasaShape
+ - v2.2.1](../README.md) / [Exports](../modules.md) / MasaShape
 
 # Interface: MasaShape
 
@@ -17,6 +17,7 @@
 - [accountAddress](MasaShape.md#accountaddress)
 - [areScopesFullfiled](MasaShape.md#arescopesfullfiled)
 - [badges](MasaShape.md#badges)
+- [canProgramaticallySwitchNetwork](MasaShape.md#canprogramaticallyswitchnetwork)
 - [children](MasaShape.md#children)
 - [closeModal](MasaShape.md#closemodal)
 - [company](MasaShape.md#company)
@@ -82,6 +83,7 @@
 - [setRainbowkKitModalCallback](MasaShape.md#setrainbowkkitmodalcallback)
 - [setSigner](MasaShape.md#setsigner)
 - [signer](MasaShape.md#signer)
+- [soulNameStyle](MasaShape.md#soulnamestyle)
 - [soulnames](MasaShape.md#soulnames)
 - [switchNetwork](MasaShape.md#switchnetwork)
 - [switchNetworkNew](MasaShape.md#switchnetworknew)
@@ -89,6 +91,7 @@
 - [useRainbowKit](MasaShape.md#userainbowkit)
 - [verbose](MasaShape.md#verbose)
 - [walletAddress](MasaShape.md#walletaddress)
+- [walletName](MasaShape.md#walletname)
 
 ## Properties
 
@@ -113,6 +116,12 @@ ___
 ### badges
 
 • `Optional` **badges**: `any`[]
+
+___
+
+### canProgramaticallySwitchNetwork
+
+• `Optional` **canProgramaticallySwitchNetwork**: `boolean`
 
 ___
 
@@ -351,11 +360,11 @@ ___
 
 ### handlePurchaseIdentityWithSoulname
 
-• `Optional` **handlePurchaseIdentityWithSoulname**: (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPrice`: `number`) => `Promise`<`boolean`\>
+• `Optional` **handlePurchaseIdentityWithSoulname**: (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPrice`: `number`, `style?`: `string`) => `Promise`<`boolean`\>
 
 #### Type declaration
 
-▸ (`paymentMethod`, `soulname`, `registrationPrice`): `Promise`<`boolean`\>
+▸ (`paymentMethod`, `soulname`, `registrationPrice`, `style?`): `Promise`<`boolean`\>
 
 ##### Parameters
 
@@ -364,6 +373,7 @@ ___
 | `paymentMethod` | `PaymentMethod` |
 | `soulname` | `string` |
 | `registrationPrice` | `number` |
+| `style?` | `string` |
 
 ##### Returns
 
@@ -880,6 +890,12 @@ ___
 
 ___
 
+### soulNameStyle
+
+• `Optional` **soulNameStyle**: `string`
+
+___
+
 ### soulnames
 
 • `Optional` **soulnames**: `SoulNameDetails`[]
@@ -963,3 +979,9 @@ ___
 ### walletAddress
 
 • `Optional` **walletAddress**: `string`
+
+___
+
+### walletName
+
+• `Optional` **walletName**: `string`

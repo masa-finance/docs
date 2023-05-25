@@ -1,8 +1,8 @@
 [# Masa React
- - v2.0.6](README.md) / Exports
+ - v2.2.1](README.md) / Exports
 
 # # Masa React
- - v2.0.6
+ - v2.2.1
 
 ## Table of contents
 
@@ -23,11 +23,11 @@
 
 - [EnvironmentNameEx](modules.md#environmentnameex)
 - [ModalName](modules.md#modalname)
+- [OnSuccessInput](modules.md#onsuccessinput)
 - [UseCreditScoresReturnType](modules.md#usecreditscoresreturntype)
 - [UseGreenReturnValue](modules.md#usegreenreturnvalue)
 - [UseNetworkInputValue](modules.md#usenetworkinputvalue)
 - [UseNetworkReturnValue](modules.md#usenetworkreturnvalue)
-- [UseSessionReturnType](modules.md#usesessionreturntype)
 - [UseWalletReturnType](modules.md#usewalletreturntype)
 
 ### Variables
@@ -89,7 +89,19 @@ ___
 
 ### ModalName
 
-Ƭ **ModalName**: ``"AuthenticateModal"`` \| ``"ConnectedModal"`` \| ``"CreateCreditScoreModal"`` \| ``"CreateIdentityModal"`` \| ``"CreateSoulnameModal"`` \| ``"SuccessCreateIdentityModal"`` \| ``"SwitchChainModal"`` \| ``"InterfaceMasaGreen"``
+Ƭ **ModalName**: ``"AuthenticateModal"`` \| ``"ConnectedModal"`` \| ``"CreateCreditScoreModal"`` \| ``"CreateIdentityModal"`` \| ``"CreateSoulnameModal"`` \| ``"SuccessCreateIdentityModal"`` \| ``"SwitchChainModal"`` \| ``"InterfaceMasaGreen"`` \| ``"Default"``
+
+___
+
+### OnSuccessInput
+
+Ƭ **OnSuccessInput**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `creditScores?` | { `metadata?`: `ICreditScore` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] |
 
 ___
 
@@ -157,25 +169,6 @@ ___
 
 ___
 
-### UseSessionReturnType
-
-Ƭ **UseSessionReturnType**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `error` | `unknown` |
-| `handleLogin` | () => `void` |
-| `handleLogout` | (`logoutCallback?`: () => `void`) => `Promise`<`void`\> |
-| `isLoggedIn?` | `boolean` |
-| `isSessionLoading` | `boolean` |
-| `reloadSession` | () => `void` |
-| `reloadSessionData` | () => `void` |
-| `status` | `string` |
-
-___
-
 ### UseWalletReturnType
 
 Ƭ **UseWalletReturnType**: `Object`
@@ -212,6 +205,7 @@ ___
 | `CreateCreditScoreModal` | () => `Element` |
 | `CreateIdentityModal` | () => `Element` |
 | `CreateSoulnameModal` | () => `Element` |
+| `Default` | () => `Element` |
 | `InterfaceMasaGreen` | () => `Element` |
 | `SuccessCreateIdentityModal` | () => `Element` |
 | `SwitchChainModal` | () => `Element` |
@@ -295,7 +289,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) |
+| `«destructured»` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) & { `chainsToUse?`: (``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``)[] ; `walletsToUse?`: (``"metamask"`` \| ``"valora"`` \| ``"walletconnect"``)[]  } |
 
 #### Returns
 
@@ -362,6 +356,9 @@ ___
 | `«destructured»` | `Object` |
 | › `apiUrl?` | `string` |
 | › `arweaveConfig?` | [`ArweaveConfig`](interfaces/ArweaveConfig.md) |
+| › `contractAddressOverrides?` | `Object` |
+| › `contractAddressOverrides.SoulNameAddress` | `string` |
+| › `contractAddressOverrides.SoulStoreAddress` | `string` |
 | › `environmentName` | `string` |
 | › `networkName?` | `NetworkName` |
 | › `signer` | `Signer` |
@@ -682,7 +679,7 @@ ___
 | :------ | :------ |
 | `error` | `unknown` |
 | `handlePurchaseIdentity` | () => `Promise`<`boolean`\> |
-| `handlePurchaseIdentityWithSoulname` | (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`) => `Promise`<`boolean`\> |
+| `handlePurchaseIdentityWithSoulname` | (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`, `style?`: `string`) => `Promise`<`boolean`\> |
 | `identity?` | { `address?`: `string` ; `identityId?`: `BigNumber`  } |
 | `identity.address?` | `string` |
 | `identity.identityId?` | `BigNumber` |
@@ -826,6 +823,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
+| `canProgramaticallySwitchNetwork` | `boolean` |
 | `currentNetwork` | `GetNetworkResult` |
 | `switchNetwork` | (`forcedNetworkParam`: `NetworkName`) => `void` |
 
@@ -860,7 +858,7 @@ ___
 
 ### useSession
 
-▸ **useSession**(`masa?`, `walletAddress?`): [`UseSessionReturnType`](modules.md#usesessionreturntype)
+▸ **useSession**(`masa?`, `walletAddress?`): `Object`
 
 #### Parameters
 
@@ -871,7 +869,18 @@ ___
 
 #### Returns
 
-[`UseSessionReturnType`](modules.md#usesessionreturntype)
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `error` | `unknown` |
+| `handleLogin` | () => `Promise`<`void`\> |
+| `handleLogout` | (`logoutCallback?`: () => `void`) => `Promise`<`void`\> |
+| `isLoggedIn` | `undefined` \| `boolean` |
+| `isSessionLoading` | `boolean` |
+| `reloadSession` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `boolean`, `unknown`\>\> |
+| `reloadSessionData` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `ISession`, `unknown`\>\> |
+| `status` | ``"idle"`` \| ``"error"`` \| ``"loading"`` \| ``"success"`` |
 
 ___
 
@@ -945,7 +954,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `error` | `unknown` |
-| `handlePurchaseSoulname` | (`soulname`: `string`, `registrationPeriod`: `number`, `paymentMethod`: `PaymentMethod`) => `Promise`<`boolean`\> |
+| `handlePurchaseSoulname` | (`soulname`: `string`, `registrationPeriod`: `number`, `paymentMethod`: `PaymentMethod`, `style?`: `string`) => `Promise`<`boolean`\> |
 | `isSoulnamesLoading` | `boolean` |
 | `reloadSoulnames` | () => `void` |
 | `soulnames?` | `SoulNameDetails`[] |

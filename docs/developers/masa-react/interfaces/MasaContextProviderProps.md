@@ -1,5 +1,5 @@
 [# Masa React
- - v2.0.6](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v2.2.1](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -19,11 +19,12 @@
 - [areScopesFullfiled](MasaContextProviderProps.md#arescopesfullfiled)
 - [arweaveConfig](MasaContextProviderProps.md#arweaveconfig)
 - [badges](MasaContextProviderProps.md#badges)
-- [chainsToUse](MasaContextProviderProps.md#chainstouse)
+- [canProgramaticallySwitchNetwork](MasaContextProviderProps.md#canprogramaticallyswitchnetwork)
 - [children](MasaContextProviderProps.md#children)
 - [closeModal](MasaContextProviderProps.md#closemodal)
 - [company](MasaContextProviderProps.md#company)
 - [connect](MasaContextProviderProps.md#connect)
+- [contractAddressOverrides](MasaContextProviderProps.md#contractaddressoverrides)
 - [creditScores](MasaContextProviderProps.md#creditscores)
 - [currentNetwork](MasaContextProviderProps.md#currentnetwork)
 - [currentNetworkNew](MasaContextProviderProps.md#currentnetworknew)
@@ -60,7 +61,6 @@
 - [logout](MasaContextProviderProps.md#logout)
 - [masa](MasaContextProviderProps.md#masa)
 - [modalSize](MasaContextProviderProps.md#modalsize)
-- [noWallet](MasaContextProviderProps.md#nowallet)
 - [openAccountModal](MasaContextProviderProps.md#openaccountmodal)
 - [openAuthenticateModal](MasaContextProviderProps.md#openauthenticatemodal)
 - [openChainModal](MasaContextProviderProps.md#openchainmodal)
@@ -87,6 +87,7 @@
 - [setRainbowkKitModalCallback](MasaContextProviderProps.md#setrainbowkkitmodalcallback)
 - [setSigner](MasaContextProviderProps.md#setsigner)
 - [signer](MasaContextProviderProps.md#signer)
+- [soulNameStyle](MasaContextProviderProps.md#soulnamestyle)
 - [soulnames](MasaContextProviderProps.md#soulnames)
 - [switchNetwork](MasaContextProviderProps.md#switchnetwork)
 - [switchNetworkNew](MasaContextProviderProps.md#switchnetworknew)
@@ -95,7 +96,7 @@
 - [useRainbowKitWalletConnect](MasaContextProviderProps.md#userainbowkitwalletconnect)
 - [verbose](MasaContextProviderProps.md#verbose)
 - [walletAddress](MasaContextProviderProps.md#walletaddress)
-- [walletsToUse](MasaContextProviderProps.md#walletstouse)
+- [walletName](MasaContextProviderProps.md#walletname)
 
 ## Properties
 
@@ -151,9 +152,13 @@ ___
 
 ___
 
-### chainsToUse
+### canProgramaticallySwitchNetwork
 
-• `Optional` **chainsToUse**: (``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``)[]
+• `Optional` **canProgramaticallySwitchNetwork**: `boolean`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[canProgramaticallySwitchNetwork](MasaShape.md#canprogramaticallyswitchnetwork)
 
 ___
 
@@ -224,6 +229,19 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[connect](MasaShape.md#connect)
+
+___
+
+### contractAddressOverrides
+
+• `Optional` **contractAddressOverrides**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `SoulNameAddress` | `string` |
+| `SoulStoreAddress` | `string` |
 
 ___
 
@@ -478,11 +496,11 @@ ___
 
 ### handlePurchaseIdentityWithSoulname
 
-• `Optional` **handlePurchaseIdentityWithSoulname**: (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPrice`: `number`) => `Promise`<`boolean`\>
+• `Optional` **handlePurchaseIdentityWithSoulname**: (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPrice`: `number`, `style?`: `string`) => `Promise`<`boolean`\>
 
 #### Type declaration
 
-▸ (`paymentMethod`, `soulname`, `registrationPrice`): `Promise`<`boolean`\>
+▸ (`paymentMethod`, `soulname`, `registrationPrice`, `style?`): `Promise`<`boolean`\>
 
 ##### Parameters
 
@@ -491,6 +509,7 @@ ___
 | `paymentMethod` | `PaymentMethod` |
 | `soulname` | `string` |
 | `registrationPrice` | `number` |
+| `style?` | `string` |
 
 ##### Returns
 
@@ -694,12 +713,6 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[modalSize](MasaShape.md#modalsize)
-
-___
-
-### noWallet
-
-• `Optional` **noWallet**: `boolean`
 
 ___
 
@@ -1187,9 +1200,19 @@ ___
 
 • `Optional` **signer**: `Signer`
 
-#### Overrides
+#### Inherited from
 
 [MasaShape](MasaShape.md).[signer](MasaShape.md#signer)
+
+___
+
+### soulNameStyle
+
+• `Optional` **soulNameStyle**: `string`
+
+#### Overrides
+
+[MasaShape](MasaShape.md).[soulNameStyle](MasaShape.md#soulnamestyle)
 
 ___
 
@@ -1313,6 +1336,10 @@ ___
 
 ___
 
-### walletsToUse
+### walletName
 
-• `Optional` **walletsToUse**: `string`[]
+• `Optional` **walletName**: `string`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[walletName](MasaShape.md#walletname)
