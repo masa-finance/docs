@@ -178,7 +178,7 @@ function safeTransferFrom(address from, address to, uint256 tokenId, bytes data)
 ### setApprovalForAll
 
 ```solidity
-function setApprovalForAll(address operator, bool _approved) external nonpayable
+function setApprovalForAll(address operator, bool approved) external nonpayable
 ```
 
 
@@ -190,7 +190,7 @@ function setApprovalForAll(address operator, bool _approved) external nonpayable
 | Name | Type | Description |
 |---|---|---|
 | operator | address | undefined |
-| _approved | bool | undefined |
+| approved | bool | undefined |
 
 ### supportsInterface
 
