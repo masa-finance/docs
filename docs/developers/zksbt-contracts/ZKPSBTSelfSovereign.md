@@ -295,7 +295,7 @@ Returns all available payment methods
 ### getEncryptedData
 
 ```solidity
-function getEncryptedData(uint256 tokenId) external view returns (struct ZKPSBT.EncryptedData)
+function getEncryptedData(uint256 tokenId) external view returns (struct ZKPSBT.EncryptedData, struct ZKPSBT.EncryptedData, struct ZKPSBT.EncryptedData)
 ```
 
 
@@ -313,6 +313,8 @@ function getEncryptedData(uint256 tokenId) external view returns (struct ZKPSBT.
 | Name | Type | Description |
 |---|---|---|
 | _0 | ZKPSBT.EncryptedData | undefined |
+| _1 | ZKPSBT.EncryptedData | undefined |
+| _2 | ZKPSBT.EncryptedData | undefined |
 
 ### getHashData
 
@@ -508,7 +510,7 @@ function masaToken() external view returns (address)
 ### mint
 
 ```solidity
-function mint(address to, address authorityAddress, uint256 signatureDate, bytes hashData, ZKPSBT.EncryptedData encryptedData, bytes signature) external payable returns (uint256)
+function mint(address to, address authorityAddress, uint256 signatureDate, bytes hashData, ZKPSBT.EncryptedData encryptedCreditScore, ZKPSBT.EncryptedData encryptedIncome, ZKPSBT.EncryptedData encryptedReportDate, bytes signature) external payable returns (uint256)
 ```
 
 
@@ -523,7 +525,9 @@ function mint(address to, address authorityAddress, uint256 signatureDate, bytes
 | authorityAddress | address | undefined |
 | signatureDate | uint256 | undefined |
 | hashData | bytes | undefined |
-| encryptedData | ZKPSBT.EncryptedData | undefined |
+| encryptedCreditScore | ZKPSBT.EncryptedData | undefined |
+| encryptedIncome | ZKPSBT.EncryptedData | undefined |
+| encryptedReportDate | ZKPSBT.EncryptedData | undefined |
 | signature | bytes | undefined |
 
 #### Returns
@@ -760,7 +764,7 @@ function revokeRole(bytes32 role, address account) external nonpayable
 ### sbtData
 
 ```solidity
-function sbtData(uint256) external view returns (bytes hashData, struct ZKPSBT.EncryptedData encryptedData)
+function sbtData(uint256) external view returns (bytes hashData, struct ZKPSBT.EncryptedData encryptedCreditScore, struct ZKPSBT.EncryptedData encryptedIncome, struct ZKPSBT.EncryptedData encryptedReportDate)
 ```
 
 
@@ -778,7 +782,9 @@ function sbtData(uint256) external view returns (bytes hashData, struct ZKPSBT.E
 | Name | Type | Description |
 |---|---|---|
 | hashData | bytes | undefined |
-| encryptedData | ZKPSBT.EncryptedData | undefined |
+| encryptedCreditScore | ZKPSBT.EncryptedData | undefined |
+| encryptedIncome | ZKPSBT.EncryptedData | undefined |
+| encryptedReportDate | ZKPSBT.EncryptedData | undefined |
 
 ### setAddLinkPrice
 

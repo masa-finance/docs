@@ -96,10 +96,12 @@ snarkjs zkey export verificationkey creditScoreConstraint_0001.zkey verification
 Add the input in the file `input.json` file:
 ```
 {
-  "hashData": "0x2ea94e39eedb45eb122224c1dc25809816ea2c29343466c861aa09d1b3936672",
+  "hashData": "0x20630d227f9c346b4c6f52a21a4085fb061d8b9eba3ed155b6061ae6d177b693",
   "ownerAddress": "0x14B2Bab4d1068e742BAf05F908D7b5A00773B0dd",
   "threshold": 40,
-  "creditScore": 45
+  "creditScore": 45,
+  "income": 3100,
+  "reportDate": 1675196581804
 }
 ```
 
