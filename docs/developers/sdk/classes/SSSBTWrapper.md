@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.1.0](../README.md) / [Exports](../modules.md) / SSSBTWrapper
+ - v3.1.2](../README.md) / [Exports](../modules.md) / SSSBTWrapper
 
 # Class: SSSBTWrapper<Contract\>
 
@@ -29,6 +29,7 @@
 
 ### Methods
 
+- [addAuthority](SSSBTWrapper.md#addauthority)
 - [burn](SSSBTWrapper.md#burn)
 - [list](SSSBTWrapper.md#list)
 - [mint](SSSBTWrapper.md#mint)
@@ -88,6 +89,22 @@ ___
 [SBTWrapper](SBTWrapper.md).[masa](SBTWrapper.md#masa)
 
 ## Methods
+
+### addAuthority
+
+▸ **addAuthority**(`authorityAddress`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `authorityAddress` | `string` |
+
+#### Returns
+
+`Promise`<`void`\>
+
+___
 
 ### burn
 

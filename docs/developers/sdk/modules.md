@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.1.0](README.md) / Exports
+ - v3.1.2](README.md) / Exports
 
 # # Masa SDK
- - v3.1.0
+ - v3.1.2
 
 ## Table of contents
 
@@ -115,6 +115,7 @@
 
 ### Functions
 
+- [addAuthority](modules.md#addauthority)
 - [burnIdentity](modules.md#burnidentity)
 - [burnSBT](modules.md#burnsbt)
 - [burnSoulName](modules.md#burnsoulname)
@@ -389,6 +390,24 @@ ___
 • `Const` **nativeCurrencies**: readonly [``"ETH"``, ``"CELO"``, ``"MATIC"``, ``"BNB"``]
 
 ## Functions
+
+### addAuthority
+
+▸ **addAuthority**(`masa`, `contract`, `authorityAddress`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`Masa`](classes/Masa.md) |
+| `contract` | `MasaSBTSelfSovereign` |
+| `authorityAddress` | `string` |
+
+#### Returns
+
+`Promise`<`void`\>
+
+___
 
 ### burnIdentity
 
@@ -1320,14 +1339,14 @@ ___
 
 ### mintSSSBT
 
-▸ **mintSSSBT**(`masa`, `sbtContract`, `authorityAddress`, `signatureDate`, `signature`, `paymentMethod?`): `Promise`<`undefined` \| ``true``\>
+▸ **mintSSSBT**(`masa`, `contract`, `authorityAddress`, `signatureDate`, `signature`, `paymentMethod?`): `Promise`<`undefined` \| ``true``\>
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) | `undefined` |
-| `sbtContract` | `ReferenceSBTSelfSovereign` | `undefined` |
+| `contract` | `ReferenceSBTSelfSovereign` | `undefined` |
 | `authorityAddress` | `string` | `undefined` |
 | `signatureDate` | `number` | `undefined` |
 | `signature` | `string` | `undefined` |
@@ -1601,14 +1620,14 @@ ___
 
 ### signSSSBT
 
-▸ **signSSSBT**(`masa`, `sbtContract`, `receiver`): `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
+▸ **signSSSBT**(`masa`, `contract`, `receiver`): `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`Masa`](classes/Masa.md) |
-| `sbtContract` | `ReferenceSBTSelfSovereign` |
+| `contract` | `ReferenceSBTSelfSovereign` |
 | `receiver` | `string` |
 
 #### Returns
