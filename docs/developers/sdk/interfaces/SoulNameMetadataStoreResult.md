@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.1.3](../README.md) / [Exports](../modules.md) / SoulNameMetadataStoreResult
+ - v3.2.1](../README.md) / [Exports](../modules.md) / SoulNameMetadataStoreResult
 
 # Interface: SoulNameMetadataStoreResult
 
@@ -15,10 +15,8 @@
 
 - [authorityAddress](SoulNameMetadataStoreResult.md#authorityaddress)
 - [errorCode](SoulNameMetadataStoreResult.md#errorcode)
-- [imageResponse](SoulNameMetadataStoreResult.md#imageresponse)
 - [imageTransaction](SoulNameMetadataStoreResult.md#imagetransaction)
 - [message](SoulNameMetadataStoreResult.md#message)
-- [metadataResponse](SoulNameMetadataStoreResult.md#metadataresponse)
 - [metadataTransaction](SoulNameMetadataStoreResult.md#metadatatransaction)
 - [signature](SoulNameMetadataStoreResult.md#signature)
 - [success](SoulNameMetadataStoreResult.md#success)
@@ -42,23 +40,15 @@ ___
 
 ___
 
-### imageResponse
+### imageTransaction
 
-• **imageResponse**: `Object`
+• **imageTransaction**: `Object`
 
 #### Type declaration
 
 | Name | Type |
 | :------ | :------ |
-| `data` | `unknown` |
-| `status` | `number` |
-| `statusText` | `string` |
-
-___
-
-### imageTransaction
-
-• **imageTransaction**: `default`
+| `id` | `string` |
 
 ___
 
@@ -72,23 +62,15 @@ ___
 
 ___
 
-### metadataResponse
+### metadataTransaction
 
-• **metadataResponse**: `Object`
+• **metadataTransaction**: `Object`
 
 #### Type declaration
 
 | Name | Type |
 | :------ | :------ |
-| `data` | `unknown` |
-| `status` | `number` |
-| `statusText` | `string` |
-
-___
-
-### metadataTransaction
-
-• **metadataTransaction**: `default`
+| `id` | `string` |
 
 ___
 

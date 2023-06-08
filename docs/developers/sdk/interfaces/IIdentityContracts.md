@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.1.3](../README.md) / [Exports](../modules.md) / IIdentityContracts
+ - v3.2.1](../README.md) / [Exports](../modules.md) / IIdentityContracts
 
 # Interface: IIdentityContracts
 
