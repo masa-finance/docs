@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.2.1](README.md) / Exports
+ - v3.2.3](README.md) / Exports
 
 # # Masa SDK
- - v3.2.1
+ - v3.2.3
 
 ## Table of contents
 
@@ -964,6 +964,8 @@ ___
 
 ▸ **listSoulNames**(`masa`, `address?`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
+list soul names
+
 #### Parameters
 
 | Name | Type |
@@ -980,6 +982,8 @@ ___
 ### listSoulNamesAndPrint
 
 ▸ **listSoulNamesAndPrint**(`masa`, `address?`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+
+list soul names and print them
 
 #### Parameters
 
