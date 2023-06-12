@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.3.0](README.md) / Exports
+ - v3.3.2](README.md) / Exports
 
 # # Masa SDK
- - v3.3.0
+ - v3.3.2
 
 ## Table of contents
 
@@ -12,7 +12,7 @@
 
 ### Classes
 
-- [ASBT](classes/ASBT.md)
+- [ASBTContract](classes/ASBTContract.md)
 - [ASBTWrapper](classes/ASBTWrapper.md)
 - [ContractFactory](classes/ContractFactory.md)
 - [CreditScore](classes/CreditScore.md)
@@ -36,9 +36,9 @@
 - [MasaSession](classes/MasaSession.md)
 - [MasaSoulLinker](classes/MasaSoulLinker.md)
 - [MasaSoulName](classes/MasaSoulName.md)
-- [SBT](classes/SBT.md)
+- [SBTContract](classes/SBTContract.md)
 - [SBTWrapper](classes/SBTWrapper.md)
-- [SSSBT](classes/SSSBT.md)
+- [SSSBTContract](classes/SSSBTContract.md)
 - [SSSBTWrapper](classes/SSSBTWrapper.md)
 - [SoulLinker](classes/SoulLinker.md)
 - [SoulName](classes/SoulName.md)

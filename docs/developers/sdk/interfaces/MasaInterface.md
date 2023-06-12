@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.3.0](../README.md) / [Exports](../modules.md) / MasaInterface
+ - v3.3.2](../README.md) / [Exports](../modules.md) / MasaInterface
 
 # Interface: MasaInterface
 
