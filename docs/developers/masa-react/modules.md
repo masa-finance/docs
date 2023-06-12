@@ -1,8 +1,8 @@
 [# Masa React
- - v2.3.15](README.md) / Exports
+ - v2.4.1](README.md) / Exports
 
 # # Masa React
- - v2.3.15
+ - v2.4.1
 
 ## Table of contents
 
@@ -347,7 +347,7 @@ ___
 
 ### createNewMasa
 
-▸ **createNewMasa**(`«destructured»`): `undefined` \| `default`
+▸ **createNewMasa**(`«destructured»`): `undefined` \| `Masa`
 
 #### Parameters
 
@@ -366,7 +366,7 @@ ___
 
 #### Returns
 
-`undefined` \| `default`
+`undefined` \| `Masa`
 
 ___
 
@@ -379,7 +379,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `signer?` | `Signer` |
 | › `walletAddress?` | `string` |
 
@@ -398,7 +398,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `signer?` | `any` |
 | › `walletAddress?` | `string` |
 
@@ -417,7 +417,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `signer?` | `any` |
 | › `walletAddress?` | `string` |
 
@@ -436,7 +436,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `signer?` | `any` |
 | › `walletAddress?` | `string` |
 
@@ -455,7 +455,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `signer?` | `any` |
 | › `walletAddress?` | `string` |
 
@@ -474,7 +474,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `signer?` | `any` |
 | › `walletAddress?` | `string` |
 
@@ -493,7 +493,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `signer?` | `Signer` |
 | › `walletAddress?` | `string` |
 
@@ -521,7 +521,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa?` | `default` |
+| `masa?` | `Masa` |
 | `walletAddress?` | `string` |
 | `identity?` | `Object` |
 | `identity.address?` | `string` |
@@ -545,7 +545,7 @@ ___
 | › `identity?` | `Object` |
 | › `identity.address?` | `string` |
 | › `identity.identityId?` | `BigNumber` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `walletAddress?` | `string` |
 
 #### Returns
@@ -623,7 +623,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa?` | `default` |
+| `masa?` | `Masa` |
 | `walletAddress?` | `string` |
 
 #### Returns
@@ -641,7 +641,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `walletAddress?` | `string` |
 
 #### Returns
@@ -668,7 +668,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa?` | `default` |
+| `masa?` | `Masa` |
 | `walletAddress?` | `string` |
 
 #### Returns
@@ -698,7 +698,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `walletAddress?` | `string` |
 
 #### Returns
@@ -838,7 +838,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `tokenAddress` | `string` |
 | › `walletAddress?` | `string` |
 
@@ -864,7 +864,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa?` | `default` |
+| `masa?` | `Masa` |
 | `walletAddress?` | `string` |
 
 #### Returns
@@ -893,7 +893,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `walletAddress?` | `string` |
 
 #### Returns
@@ -918,7 +918,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `walletAddress?` | `string` |
 
 #### Returns
@@ -944,7 +944,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa?` | `default` |
+| `masa?` | `Masa` |
 | `walletAddress?` | `string` |
 
 #### Returns
@@ -971,7 +971,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `walletAddress?` | `string` |
 
 #### Returns
@@ -997,7 +997,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa?` | `default` |
+| `masa?` | `Masa` |
 | `signer?` | `Signer` |
 
 #### Returns
@@ -1015,7 +1015,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `default` |
+| › `masa?` | `Masa` |
 | › `signer?` | `Signer` |
 | › `walletAddress?` | `string` |
 

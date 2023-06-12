@@ -1,5 +1,5 @@
 [# Masa React
- - v2.3.15](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v2.4.1](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -698,7 +698,7 @@ ___
 
 ### masa
 
-• `Optional` **masa**: `default`
+• `Optional` **masa**: `Masa`
 
 #### Inherited from
 
