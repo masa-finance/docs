@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.2.3](../README.md) / [Exports](../modules.md) / MasaBase
+ - v3.3.0](../README.md) / [Exports](../modules.md) / MasaBase
 
 # Class: MasaBase
 
@@ -7,11 +7,15 @@
 
 - **`MasaBase`**
 
-  ↳ [`MasaContracts`](MasaContracts.md)
+  ↳ [`MasaLinkable`](MasaLinkable.md)
 
   ↳ [`MasaModuleBase`](MasaModuleBase.md)
 
-  ↳ [`MasaClient`](MasaClient.md)
+  ↳ [`MasaContracts`](MasaContracts.md)
+
+  ↳ [`MasaAccount`](MasaAccount.md)
+
+  ↳ [`MasaSBTs`](MasaSBTs.md)
 
   ↳ [`MasaSession`](MasaSession.md)
 
@@ -19,11 +23,7 @@
 
   ↳ [`MasaSoulName`](MasaSoulName.md)
 
-  ↳ [`MasaAccount`](MasaAccount.md)
-
-  ↳ [`MasaSBT`](MasaSBT.md)
-
-  ↳ [`MasaLinkable`](MasaLinkable.md)
+  ↳ [`MasaClient`](MasaClient.md)
 
 ## Table of contents
 
@@ -45,10 +45,10 @@
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](Masa.md) |
+| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 
 ## Properties
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)

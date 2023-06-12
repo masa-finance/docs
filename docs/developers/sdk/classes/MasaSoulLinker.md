@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.2.3](../README.md) / [Exports](../modules.md) / MasaSoulLinker
+ - v3.3.0](../README.md) / [Exports](../modules.md) / MasaSoulLinker
 
 # Class: MasaSoulLinker
 
@@ -39,7 +39,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](Masa.md) |
+| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 | `contract` | `Contract` |
 
 #### Overrides
@@ -56,7 +56,7 @@ ___
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 

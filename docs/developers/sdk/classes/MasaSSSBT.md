@@ -1,17 +1,11 @@
 [# Masa SDK
- - v3.2.3](../README.md) / [Exports](../modules.md) / MasaSSSBT
+ - v3.3.0](../README.md) / [Exports](../modules.md) / MasaSSSBT
 
-# Class: MasaSSSBT<Contract\>
-
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `ReferenceSBTSelfSovereign` |
+# Class: MasaSSSBT
 
 ## Hierarchy
 
-- [`MasaSBT`](MasaSBT.md)<`Contract`\>
+- [`MasaSBTs`](MasaSBTs.md)
 
   ↳ **`MasaSSSBT`**
 
@@ -34,39 +28,33 @@
 
 ### constructor
 
-• **new MasaSSSBT**<`Contract`\>(`masa`)
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `ReferenceSBTSelfSovereign`<`Contract`\> |
+• **new MasaSSSBT**(`masa`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](Masa.md) |
+| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 
-#### Overrides
+#### Inherited from
 
-[MasaSBT](MasaSBT.md).[constructor](MasaSBT.md#constructor)
+[MasaSBTs](MasaSBTs.md).[constructor](MasaSBTs.md#constructor)
 
 ## Properties
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-[MasaSBT](MasaSBT.md).[masa](MasaSBT.md#masa)
+[MasaSBTs](MasaSBTs.md).[masa](MasaSBTs.md#masa)
 
 ## Methods
 
 ### connect
 
-▸ **connect**(`address`): `Promise`<[`SSSBTWrapper`](SSSBTWrapper.md)<`Contract`\>\>
+▸ **connect**(`address`): `Promise`<[`SSSBTWrapper`](SSSBTWrapper.md)\>
 
 #### Parameters
 
@@ -76,11 +64,11 @@
 
 #### Returns
 
-`Promise`<[`SSSBTWrapper`](SSSBTWrapper.md)<`Contract`\>\>
+`Promise`<[`SSSBTWrapper`](SSSBTWrapper.md)\>
 
 #### Overrides
 
-[MasaSBT](MasaSBT.md).[connect](MasaSBT.md#connect)
+[MasaSBTs](MasaSBTs.md).[connect](MasaSBTs.md#connect)
 
 ___
 

@@ -1,7 +1,11 @@
 [# Masa SDK
- - v3.2.3](../README.md) / [Exports](../modules.md) / Masa
+ - v3.3.0](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
+
+## Implements
+
+- [`MasaInterface`](../interfaces/MasaInterface.md)
 
 ## Table of contents
 
@@ -44,17 +48,29 @@
 
 • `Readonly` **account**: [`MasaAccount`](MasaAccount.md)
 
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[account](../interfaces/MasaInterface.md#account)
+
 ___
 
 ### arweave
 
 • `Readonly` **arweave**: [`MasaArweave`](MasaArweave.md)
 
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[arweave](../interfaces/MasaInterface.md#arweave)
+
 ___
 
 ### asbt
 
-• `Readonly` **asbt**: [`MasaASBT`](MasaASBT.md)<`ReferenceSBTAuthority`\>
+• `Readonly` **asbt**: [`MasaASBT`](MasaASBT.md)
+
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[asbt](../interfaces/MasaInterface.md#asbt)
 
 ___
 
@@ -62,11 +78,19 @@ ___
 
 • `Readonly` **client**: [`MasaClient`](MasaClient.md)
 
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[client](../interfaces/MasaInterface.md#client)
+
 ___
 
 ### config
 
 • `Readonly` **config**: [`MasaConfig`](../interfaces/MasaConfig.md)
+
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[config](../interfaces/MasaInterface.md#config)
 
 ___
 
@@ -74,11 +98,19 @@ ___
 
 • `Readonly` **contracts**: [`MasaContracts`](MasaContracts.md)
 
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[contracts](../interfaces/MasaInterface.md#contracts)
+
 ___
 
 ### creditScore
 
 • `Readonly` **creditScore**: [`MasaCreditScore`](MasaCreditScore.md)
+
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[creditScore](../interfaces/MasaInterface.md#creditscore)
 
 ___
 
@@ -86,17 +118,29 @@ ___
 
 • `Readonly` **green**: [`MasaGreen`](MasaGreen.md)
 
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[green](../interfaces/MasaInterface.md#green)
+
 ___
 
 ### identity
 
 • `Readonly` **identity**: [`MasaIdentity`](MasaIdentity.md)
 
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[identity](../interfaces/MasaInterface.md#identity)
+
 ___
 
 ### sbt
 
-• `Readonly` **sbt**: [`MasaSBT`](MasaSBT.md)<`MasaSBT`\>
+• `Readonly` **sbt**: [`MasaSBTs`](MasaSBTs.md)
+
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[sbt](../interfaces/MasaInterface.md#sbt)
 
 ___
 
@@ -104,17 +148,29 @@ ___
 
 • `Readonly` **session**: [`MasaSession`](MasaSession.md)
 
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[session](../interfaces/MasaInterface.md#session)
+
 ___
 
 ### soulName
 
 • `Readonly` **soulName**: [`MasaSoulName`](MasaSoulName.md)
 
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[soulName](../interfaces/MasaInterface.md#soulname)
+
 ___
 
 ### sssbt
 
-• `Readonly` **sssbt**: [`MasaSSSBT`](MasaSSSBT.md)<`ReferenceSBTSelfSovereign`\>
+• `Readonly` **sssbt**: [`MasaSSSBT`](MasaSSSBT.md)
+
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[sssbt](../interfaces/MasaInterface.md#sssbt)
 
 ___
 
@@ -127,3 +183,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `version` | () => { `contractsVersion`: `string` ; `sdkVersion`: `string`  } |
+
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[utils](../interfaces/MasaInterface.md#utils)

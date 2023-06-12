@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.2.3](../README.md) / [Exports](../modules.md) / SBTWrapper
+ - v3.3.0](../README.md) / [Exports](../modules.md) / SBTWrapper
 
 # Class: SBTWrapper<Contract\>
 
@@ -7,7 +7,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `ReferenceSBTAuthority` \| `ReferenceSBTSelfSovereign` \| `MasaSBTContract` |
+| `Contract` | extends `MasaSBT` |
 
 ## Hierarchy
 
@@ -46,13 +46,13 @@
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `MasaSBT` \| `ReferenceSBTAuthority` \| `ReferenceSBTSelfSovereign` |
+| `Contract` | extends `MasaSBT`<`Contract`\> |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](Masa.md) |
+| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 | `contract` | `Contract` |
 
 #### Inherited from
@@ -83,7 +83,7 @@ ___
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.2.3](../README.md) / [Exports](../modules.md) / IGreen
+ - v3.3.0](../README.md) / [Exports](../modules.md) / IGreen
 
 # Interface: IGreen
 

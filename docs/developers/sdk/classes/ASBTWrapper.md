@@ -1,17 +1,11 @@
 [# Masa SDK
- - v3.2.3](../README.md) / [Exports](../modules.md) / ASBTWrapper
+ - v3.3.0](../README.md) / [Exports](../modules.md) / ASBTWrapper
 
-# Class: ASBTWrapper<Contract\>
-
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `ReferenceSBTAuthority` |
+# Class: ASBTWrapper
 
 ## Hierarchy
 
-- [`SBTWrapper`](SBTWrapper.md)<`Contract`\>
+- [`SBTWrapper`](SBTWrapper.md)<`ReferenceSBTAuthority`\>
 
   ↳ **`ASBTWrapper`**
 
@@ -37,20 +31,14 @@
 
 ### constructor
 
-• **new ASBTWrapper**<`Contract`\>(`masa`, `contract`)
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `ReferenceSBTAuthority`<`Contract`\> |
+• **new ASBTWrapper**(`masa`, `contract`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](Masa.md) |
-| `contract` | `Contract` |
+| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+| `contract` | `ReferenceSBTAuthority` |
 
 #### Inherited from
 
@@ -60,7 +48,7 @@
 
 ### contract
 
-• `Readonly` **contract**: `Contract`
+• `Readonly` **contract**: `ReferenceSBTAuthority`
 
 #### Inherited from
 
@@ -80,7 +68,7 @@ ___
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 

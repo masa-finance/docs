@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.2.3](../README.md) / [Exports](../modules.md) / MasaModuleBase
+ - v3.3.0](../README.md) / [Exports](../modules.md) / MasaModuleBase
 
 # Class: MasaModuleBase
 
@@ -34,13 +34,13 @@
 
 ### Methods
 
-- [addSlippage](MasaModuleBase.md#addslippage)
 - [checkOrGiveAllowance](MasaModuleBase.md#checkorgiveallowance)
 - [formatPrice](MasaModuleBase.md#formatprice)
 - [getMintPrice](MasaModuleBase.md#getmintprice)
 - [getPaymentAddress](MasaModuleBase.md#getpaymentaddress)
-- [loadSBTContract](MasaModuleBase.md#loadsbtcontract)
 - [verify](MasaModuleBase.md#verify)
+- [addSlippage](MasaModuleBase.md#addslippage)
+- [loadSBTContract](MasaModuleBase.md#loadsbtcontract)
 
 ## Constructors
 
@@ -52,7 +52,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](Masa.md) |
+| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 | `instances` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) |
 
 #### Overrides
@@ -69,32 +69,13 @@ ___
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
 [MasaBase](MasaBase.md).[masa](MasaBase.md#masa)
 
 ## Methods
-
-### addSlippage
-
-▸ `Protected` **addSlippage**(`price`, `slippage`): `BigNumber`
-
-adds a percentage to the price as slippage
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `price` | `BigNumber` |
-| `slippage` | `number` |
-
-#### Returns
-
-`BigNumber`
-
-___
 
 ### checkOrGiveAllowance
 
@@ -143,7 +124,7 @@ ___
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` | `undefined` |
+| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` | `undefined` |
 | `slippage` | `undefined` \| `number` | `250` |
 
 #### Returns
@@ -170,15 +151,58 @@ Gets the payment address for a given payment method
 
 ___
 
+### verify
+
+▸ `Protected` **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`<`void`\>
+
+verify a signature created during one of the SBT signing flows
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `errorMessage` | `string` |
+| `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
+| `domain` | `TypedDataDomain` |
+| `types` | `Record`<`string`, `TypedDataField`[]\> |
+| `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |
+| `signature` | `string` |
+| `authorityAddress` | `string` |
+
+#### Returns
+
+`Promise`<`void`\>
+
+___
+
+### addSlippage
+
+▸ `Static` `Protected` **addSlippage**(`price`, `slippage`): `BigNumber`
+
+adds a percentage to the price as slippage
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `price` | `BigNumber` |
+| `slippage` | `number` |
+
+#### Returns
+
+`BigNumber`
+
+___
+
 ### loadSBTContract
 
-▸ `Protected` **loadSBTContract**<`Contract`\>(`masaConfig`, `address`, `factory`): `Promise`<`Contract`\>
+▸ `Static` `Protected` **loadSBTContract**<`Contract`\>(`masaConfig`, `address`, `factory`): `Promise`<`Contract`\>
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `Contract` | extends `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
 
 #### Parameters
 
@@ -191,27 +215,3 @@ ___
 #### Returns
 
 `Promise`<`Contract`\>
-
-___
-
-### verify
-
-▸ `Protected` **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`<`void`\>
-
-verify a signature created during one of the SBT signing flows
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `errorMessage` | `string` |
-| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `SoulLinker` \| `SoulStore` |
-| `domain` | `TypedDataDomain` |
-| `types` | `Record`<`string`, `TypedDataField`[]\> |
-| `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |
-| `signature` | `string` |
-| `authorityAddress` | `string` |
-
-#### Returns
-
-`Promise`<`void`\>

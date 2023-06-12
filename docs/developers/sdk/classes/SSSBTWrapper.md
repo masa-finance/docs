@@ -1,17 +1,11 @@
 [# Masa SDK
- - v3.2.3](../README.md) / [Exports](../modules.md) / SSSBTWrapper
+ - v3.3.0](../README.md) / [Exports](../modules.md) / SSSBTWrapper
 
-# Class: SSSBTWrapper<Contract\>
-
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `ReferenceSBTSelfSovereign` |
+# Class: SSSBTWrapper
 
 ## Hierarchy
 
-- [`SBTWrapper`](SBTWrapper.md)<`Contract`\>
+- [`SBTWrapper`](SBTWrapper.md)<`ReferenceSBTSelfSovereign`\>
 
   ↳ **`SSSBTWrapper`**
 
@@ -39,20 +33,14 @@
 
 ### constructor
 
-• **new SSSBTWrapper**<`Contract`\>(`masa`, `contract`)
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `ReferenceSBTSelfSovereign`<`Contract`\> |
+• **new SSSBTWrapper**(`masa`, `contract`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](Masa.md) |
-| `contract` | `Contract` |
+| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+| `contract` | `ReferenceSBTSelfSovereign` |
 
 #### Inherited from
 
@@ -62,7 +50,7 @@
 
 ### contract
 
-• `Readonly` **contract**: `Contract`
+• `Readonly` **contract**: `ReferenceSBTSelfSovereign`
 
 #### Inherited from
 
@@ -82,7 +70,7 @@ ___
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
@@ -148,7 +136,7 @@ ___
 
 ### mint
 
-▸ **mint**(`authorityAddress`, `signatureDate`, `signature`): `Promise`<`undefined` \| ``true``\>
+▸ **mint**(`authorityAddress`, `signatureDate`, `signature`): `Promise`<`boolean`\>
 
 #### Parameters
 
@@ -160,7 +148,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| ``true``\>
+`Promise`<`boolean`\>
 
 ___
 

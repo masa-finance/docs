@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.2.3](../README.md) / [Exports](../modules.md) / MasaLinkable
+ - v3.3.0](../README.md) / [Exports](../modules.md) / MasaLinkable
 
 # Class: MasaLinkable<LinkContract\>
 
@@ -15,13 +15,17 @@
 
   ↳ **`MasaLinkable`**
 
-  ↳↳ [`MasaIdentity`](MasaIdentity.md)
-
   ↳↳ [`MasaCreditScore`](MasaCreditScore.md)
 
   ↳↳ [`MasaGreen`](MasaGreen.md)
 
+  ↳↳ [`MasaIdentity`](MasaIdentity.md)
+
   ↳↳ [`SBTWrapper`](SBTWrapper.md)
+
+## Implements
+
+- `d`
 
 ## Table of contents
 
@@ -51,7 +55,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](Masa.md) |
+| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 | `contract` | `LinkContract` |
 
 #### Overrides
@@ -70,11 +74,15 @@ ___
 
 • `Readonly` **links**: [`MasaSoulLinker`](MasaSoulLinker.md)
 
+#### Implementation of
+
+d.links
+
 ___
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 

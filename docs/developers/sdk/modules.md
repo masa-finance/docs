@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.2.3](README.md) / Exports
+ - v3.3.0](README.md) / Exports
 
 # # Masa SDK
- - v3.2.3
+ - v3.3.0
 
 ## Table of contents
 
@@ -12,6 +12,7 @@
 
 ### Classes
 
+- [ASBT](classes/ASBT.md)
 - [ASBTWrapper](classes/ASBTWrapper.md)
 - [ContractFactory](classes/ContractFactory.md)
 - [CreditScore](classes/CreditScore.md)
@@ -30,19 +31,21 @@
 - [MasaIdentity](classes/MasaIdentity.md)
 - [MasaLinkable](classes/MasaLinkable.md)
 - [MasaModuleBase](classes/MasaModuleBase.md)
-- [MasaSBT](classes/MasaSBT.md)
+- [MasaSBTs](classes/MasaSBTs.md)
 - [MasaSSSBT](classes/MasaSSSBT.md)
 - [MasaSession](classes/MasaSession.md)
 - [MasaSoulLinker](classes/MasaSoulLinker.md)
 - [MasaSoulName](classes/MasaSoulName.md)
 - [SBT](classes/SBT.md)
 - [SBTWrapper](classes/SBTWrapper.md)
+- [SSSBT](classes/SSSBT.md)
 - [SSSBTWrapper](classes/SSSBTWrapper.md)
 - [SoulLinker](classes/SoulLinker.md)
 - [SoulName](classes/SoulName.md)
 
 ### Interfaces
 
+- [ASBTContractWrapper](interfaces/ASBTContractWrapper.md)
 - [Addresses](interfaces/Addresses.md)
 - [ApprovalEventObject](interfaces/ApprovalEventObject.md)
 - [Attribute](interfaces/Attribute.md)
@@ -69,7 +72,10 @@
 - [LogoutResult](interfaces/LogoutResult.md)
 - [MasaArgs](interfaces/MasaArgs.md)
 - [MasaConfig](interfaces/MasaConfig.md)
+- [MasaInterface](interfaces/MasaInterface.md)
 - [Network](interfaces/Network.md)
+- [SBTContractWrapper](interfaces/SBTContractWrapper.md)
+- [SSSBTContractWrapper](interfaces/SSSBTContractWrapper.md)
 - [SessionUser](interfaces/SessionUser.md)
 - [SoulNameDetails](interfaces/SoulNameDetails.md)
 - [SoulNameMetadataStoreResult](interfaces/SoulNameMetadataStoreResult.md)
@@ -109,9 +115,18 @@
 - [SupportedNetworks](modules.md#supportednetworks)
 - [Templates](modules.md#templates)
 - [addresses](modules.md#addresses)
+- [alfajores](modules.md#alfajores)
+- [basegoerli](modules.md#basegoerli)
+- [bsc](modules.md#bsc)
+- [bsctest](modules.md#bsctest)
+- [celo](modules.md#celo)
 - [environments](modules.md#environments)
 - [erc20Currencies](modules.md#erc20currencies-1)
+- [ethereum](modules.md#ethereum)
+- [goerli](modules.md#goerli)
+- [mumbai](modules.md#mumbai)
 - [nativeCurrencies](modules.md#nativecurrencies-1)
+- [polygon](modules.md#polygon)
 
 ### Functions
 
@@ -373,6 +388,36 @@ ___
 
 ___
 
+### alfajores
+
+• `Const` **alfajores**: [`Addresses`](interfaces/Addresses.md)
+
+___
+
+### basegoerli
+
+• `Const` **basegoerli**: [`Addresses`](interfaces/Addresses.md)
+
+___
+
+### bsc
+
+• `Const` **bsc**: [`Addresses`](interfaces/Addresses.md)
+
+___
+
+### bsctest
+
+• `Const` **bsctest**: [`Addresses`](interfaces/Addresses.md)
+
+___
+
+### celo
+
+• `Const` **celo**: [`Addresses`](interfaces/Addresses.md)
+
+___
+
 ### environments
 
 • `Const` **environments**: [`Environment`](modules.md#environment)[]
@@ -385,9 +430,33 @@ ___
 
 ___
 
+### ethereum
+
+• `Const` **ethereum**: [`Addresses`](interfaces/Addresses.md)
+
+___
+
+### goerli
+
+• `Const` **goerli**: [`Addresses`](interfaces/Addresses.md)
+
+___
+
+### mumbai
+
+• `Const` **mumbai**: [`Addresses`](interfaces/Addresses.md)
+
+___
+
 ### nativeCurrencies
 
 • `Const` **nativeCurrencies**: readonly [``"ETH"``, ``"CELO"``, ``"MATIC"``, ``"BNB"``]
+
+___
+
+### polygon
+
+• `Const` **polygon**: [`Addresses`](interfaces/Addresses.md)
 
 ## Functions
 
@@ -399,7 +468,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `contract` | `MasaSBTSelfSovereign` |
 | `authorityAddress` | `string` |
 
@@ -417,7 +486,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 
 #### Returns
 
@@ -433,8 +502,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
 | `SBTId` | `BigNumber` |
 
 #### Returns
@@ -451,7 +520,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `soulName` | `string` |
 
 #### Returns
@@ -484,7 +553,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 
 #### Returns
 
@@ -500,7 +569,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 
 #### Returns
@@ -517,7 +586,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 | `phoneNumber` | `string` |
 | `code` | `string` |
@@ -536,7 +605,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 
 #### Returns
 
@@ -552,7 +621,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 | `soulName` | `string` |
 | `duration` | `number` |
@@ -572,7 +641,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `contract` | `Contract` |
 | `tokenId` | `BigNumber` |
 | `readerIdentityId` | `BigNumber` |
@@ -591,7 +660,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 | `soulName` | `string` |
 | `duration` | `number` |
@@ -612,7 +681,7 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
 | `name` | `string` | `undefined` |
 | `symbol` | `string` | `undefined` |
 | `baseTokenUri` | `string` | `undefined` |
@@ -633,7 +702,7 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
 | `name` | `string` | `undefined` |
 | `symbol` | `string` | `undefined` |
 | `baseTokenUri` | `string` | `undefined` |
@@ -655,7 +724,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 | `contract` | `Contract` |
 | `tokenId` | `BigNumber` |
@@ -678,7 +747,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 | `contract` | `Contract` |
 | `passport` | `string` |
@@ -697,7 +766,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `phoneNumber` | `string` |
 
 #### Returns
@@ -733,7 +802,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `address?` | `string` |
 
 #### Returns
@@ -766,7 +835,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 
 #### Returns
 
@@ -784,7 +853,7 @@ try to evaluate the right prefix
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 
 #### Returns
 
@@ -864,7 +933,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `address?` | `string` |
 
 #### Returns
@@ -881,7 +950,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `address?` | `string` |
 
 #### Returns
@@ -898,7 +967,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `address?` | `string` |
 
 #### Returns
@@ -915,7 +984,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `address?` | `string` |
 
 #### Returns
@@ -932,7 +1001,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `contract` | `Contract` |
 | `tokenId` | `BigNumber` |
 
@@ -950,8 +1019,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
 | `address?` | `string` |
 
 #### Returns
@@ -970,7 +1039,7 @@ list soul names
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `address?` | `string` |
 
 #### Returns
@@ -989,7 +1058,7 @@ list soul names and print them
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `address?` | `string` |
 
 #### Returns
@@ -1006,7 +1075,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `creditScoreIds` | `BigNumber`[] |
 
 #### Returns
@@ -1023,7 +1092,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns
@@ -1040,7 +1109,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `greenIds` | `BigNumber`[] |
 
 #### Returns
@@ -1057,7 +1126,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns
@@ -1074,7 +1143,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `address?` | `string` |
 
 #### Returns
@@ -1091,7 +1160,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `address?` | `string` |
 
 #### Returns
@@ -1124,7 +1193,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns
@@ -1141,7 +1210,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `contract` | `Contract` |
 | `tokenId` | `BigNumber` |
 
@@ -1159,8 +1228,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
 | `sbtIDs` | `BigNumber`[] |
 
 #### Returns
@@ -1177,8 +1246,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
-| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
 | `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns
@@ -1195,7 +1264,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `soulName` | `string` |
 
 #### Returns
@@ -1212,7 +1281,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `tokenId` | `string` \| `BigNumber` |
 
 #### Returns
@@ -1229,7 +1298,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `address` | `string` |
 
 #### Returns
@@ -1246,7 +1315,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns
@@ -1263,7 +1332,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `soulNames` | `string`[] |
 
 #### Returns
@@ -1280,7 +1349,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 
 #### Returns
 
@@ -1296,7 +1365,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 
 #### Returns
 
@@ -1312,7 +1381,7 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
 | `sbtContract` | `ReferenceSBTAuthority` | `undefined` |
 | `receiver` | `string` | `undefined` |
 | `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) | `"ETH"` |
@@ -1331,7 +1400,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 | `authorityAddress` | `string` |
 | `signatureDate` | `number` |
@@ -1345,13 +1414,13 @@ ___
 
 ### mintSSSBT
 
-▸ **mintSSSBT**(`masa`, `contract`, `authorityAddress`, `signatureDate`, `signature`, `paymentMethod?`): `Promise`<`undefined` \| ``true``\>
+▸ **mintSSSBT**(`masa`, `contract`, `authorityAddress`, `signatureDate`, `signature`, `paymentMethod?`): `Promise`<`boolean`\>
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
 | `contract` | `ReferenceSBTSelfSovereign` | `undefined` |
 | `authorityAddress` | `string` | `undefined` |
 | `signatureDate` | `number` | `undefined` |
@@ -1360,7 +1429,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| ``true``\>
+`Promise`<`boolean`\>
 
 ___
 
@@ -1390,7 +1459,7 @@ todo: fix this thing, its not good
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `metadataUrl` | `string` |
 
 #### Returns
@@ -1427,7 +1496,7 @@ Identity only
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 
 #### Returns
 
@@ -1445,7 +1514,7 @@ Identity with soul name
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `soulName` | `string` |
 | `soulNameLength` | `number` |
 | `duration` | `number` |
@@ -1466,7 +1535,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `contract` | `Contract` |
 | `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 | `tokenId` | `BigNumber` |
@@ -1489,7 +1558,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) |
 | `contract` | `Contract` |
 | `passport` | `string` |
@@ -1528,7 +1597,7 @@ Resolves identity id into address
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `identityId` | `BigNumber` |
 
 #### Returns
@@ -1545,7 +1614,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `address` | `string` |
 
 #### Returns
@@ -1562,7 +1631,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `soulName` | `string` |
 
 #### Returns
@@ -1579,7 +1648,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `soulName` | `string` |
 | `receiver` | `string` |
 
@@ -1597,7 +1666,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `address?` | `string` |
 
 #### Returns
@@ -1632,7 +1701,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `contract` | `ReferenceSBTSelfSovereign` |
 | `receiver` | `string` |
 
@@ -1670,7 +1739,7 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
 | `limit` | `number` | `5` |
 
 #### Returns
@@ -1687,7 +1756,7 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) | `undefined` |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
 | `limit` | `number` | `5` |
 
 #### Returns
@@ -1720,7 +1789,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `soulName` | `string` |
 | `verbose?` | `boolean` |
 
@@ -1744,7 +1813,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `soulName` | `string` |
 
 #### Returns
@@ -1761,7 +1830,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `phoneNumber` | `string` |
 | `code` | `string` |
 
@@ -1779,7 +1848,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](classes/Masa.md) |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
 | `contract` | `Contract` |
 | `tokenId` | `BigNumber` |
 | `readerIdentityId?` | `BigNumber` |

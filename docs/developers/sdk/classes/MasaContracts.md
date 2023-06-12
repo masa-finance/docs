@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.2.3](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v3.3.0](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -17,6 +17,7 @@
 
 ### Properties
 
+- [asbt](MasaContracts.md#asbt)
 - [creditScore](MasaContracts.md#creditscore)
 - [green](MasaContracts.md#green)
 - [identity](MasaContracts.md#identity)
@@ -25,6 +26,7 @@
 - [sbt](MasaContracts.md#sbt)
 - [soulLinker](MasaContracts.md#soullinker)
 - [soulName](MasaContracts.md#soulname)
+- [sssbt](MasaContracts.md#sssbt)
 
 ### Methods
 
@@ -40,7 +42,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](Masa.md) |
+| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 | `contractOverrides?` | `Partial`<[`IIdentityContracts`](../interfaces/IIdentityContracts.md)\> |
 
 #### Overrides
@@ -49,9 +51,17 @@
 
 ## Properties
 
+### asbt
+
+• **asbt**: [`ASBT`](ASBT.md)<`ReferenceSBTAuthority`\>
+
+___
+
 ### creditScore
 
 • **creditScore**: [`CreditScore`](CreditScore.md)
+
+Credit Score
 
 ___
 
@@ -59,11 +69,15 @@ ___
 
 • **green**: [`Green`](Green.md)
 
+Green
+
 ___
 
 ### identity
 
 • **identity**: [`Identity`](Identity.md)
+
+Identity
 
 ___
 
@@ -71,11 +85,13 @@ ___
 
 • **instances**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
 
+direct contract access
+
 ___
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
@@ -85,7 +101,9 @@ ___
 
 ### sbt
 
-• **sbt**: [`SBT`](SBT.md)
+• **sbt**: [`SBT`](SBT.md)<`MasaSBT`\>
+
+SBTs
 
 ___
 
@@ -93,11 +111,21 @@ ___
 
 • **soulLinker**: [`SoulLinker`](SoulLinker.md)
 
+Soul Linker
+
 ___
 
 ### soulName
 
 • **soulName**: [`SoulName`](SoulName.md)
+
+Soul Name
+
+___
+
+### sssbt
+
+• **sssbt**: [`SSSBT`](SSSBT.md)<`ReferenceSBTSelfSovereign`\>
 
 ## Methods
 

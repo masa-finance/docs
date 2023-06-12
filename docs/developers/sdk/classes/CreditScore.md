@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.2.3](../README.md) / [Exports](../modules.md) / CreditScore
+ - v3.3.0](../README.md) / [Exports](../modules.md) / CreditScore
 
 # Class: CreditScore
 
@@ -23,17 +23,17 @@
 
 ### Methods
 
-- [addSlippage](CreditScore.md#addslippage)
 - [burn](CreditScore.md#burn)
 - [checkOrGiveAllowance](CreditScore.md#checkorgiveallowance)
 - [formatPrice](CreditScore.md#formatprice)
 - [getMintPrice](CreditScore.md#getmintprice)
 - [getPaymentAddress](CreditScore.md#getpaymentaddress)
 - [getPrice](CreditScore.md#getprice)
-- [loadSBTContract](CreditScore.md#loadsbtcontract)
 - [mint](CreditScore.md#mint)
 - [sign](CreditScore.md#sign)
 - [verify](CreditScore.md#verify)
+- [addSlippage](CreditScore.md#addslippage)
+- [loadSBTContract](CreditScore.md#loadsbtcontract)
 
 ## Constructors
 
@@ -45,7 +45,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`Masa`](Masa.md) |
+| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 | `instances` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) |
 
 #### Inherited from
@@ -66,7 +66,7 @@ ___
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
@@ -85,29 +85,6 @@ ___
 | `MintCreditScore` | { `name`: `string` = "identityId"; `type`: `string` = "uint256" }[] |
 
 ## Methods
-
-### addSlippage
-
-▸ `Protected` **addSlippage**(`price`, `slippage`): `BigNumber`
-
-adds a percentage to the price as slippage
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `price` | `BigNumber` |
-| `slippage` | `number` |
-
-#### Returns
-
-`BigNumber`
-
-#### Inherited from
-
-[MasaModuleBase](MasaModuleBase.md).[addSlippage](MasaModuleBase.md#addslippage)
-
-___
 
 ### burn
 
@@ -180,7 +157,7 @@ ___
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` | `undefined` |
+| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` | `undefined` |
 | `slippage` | `undefined` \| `number` | `250` |
 
 #### Returns
@@ -231,34 +208,6 @@ gets the price for a credit score
 #### Returns
 
 `Promise`<{ `formattedPrice`: `string` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
-
-___
-
-### loadSBTContract
-
-▸ `Protected` **loadSBTContract**<`Contract`\>(`masaConfig`, `address`, `factory`): `Promise`<`Contract`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) |
-| `address` | `string` |
-| `factory` | [`ContractFactory`](ContractFactory.md) |
-
-#### Returns
-
-`Promise`<`Contract`\>
-
-#### Inherited from
-
-[MasaModuleBase](MasaModuleBase.md).[loadSBTContract](MasaModuleBase.md#loadsbtcontract)
 
 ___
 
@@ -314,7 +263,7 @@ verify a signature created during one of the SBT signing flows
 | Name | Type |
 | :------ | :------ |
 | `errorMessage` | `string` |
-| `contract` | `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `SoulLinker` \| `SoulStore` |
+| `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
 | `domain` | `TypedDataDomain` |
 | `types` | `Record`<`string`, `TypedDataField`[]\> |
 | `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |
@@ -328,3 +277,54 @@ verify a signature created during one of the SBT signing flows
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[verify](MasaModuleBase.md#verify)
+
+___
+
+### addSlippage
+
+▸ `Static` `Protected` **addSlippage**(`price`, `slippage`): `BigNumber`
+
+adds a percentage to the price as slippage
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `price` | `BigNumber` |
+| `slippage` | `number` |
+
+#### Returns
+
+`BigNumber`
+
+#### Inherited from
+
+[MasaModuleBase](MasaModuleBase.md).[addSlippage](MasaModuleBase.md#addslippage)
+
+___
+
+### loadSBTContract
+
+▸ `Static` `Protected` **loadSBTContract**<`Contract`\>(`masaConfig`, `address`, `factory`): `Promise`<`Contract`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) |
+| `address` | `string` |
+| `factory` | [`ContractFactory`](ContractFactory.md) |
+
+#### Returns
+
+`Promise`<`Contract`\>
+
+#### Inherited from
+
+[MasaModuleBase](MasaModuleBase.md).[loadSBTContract](MasaModuleBase.md#loadsbtcontract)

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.2.3](../README.md) / [Exports](../modules.md) / MasaClient
+ - v3.3.0](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -49,7 +49,7 @@
 | `«destructured»` | `Object` |
 | › `apiUrl` | `string` |
 | › `cookie?` | `string` |
-| › `masa` | [`Masa`](Masa.md) |
+| › `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 
 #### Overrides
 
@@ -97,7 +97,7 @@ ___
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`Masa`](Masa.md)
+• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
