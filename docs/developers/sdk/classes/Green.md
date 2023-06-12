@@ -27,6 +27,7 @@
 - [checkOrGiveAllowance](Green.md#checkorgiveallowance)
 - [formatPrice](Green.md#formatprice)
 - [getMintPrice](Green.md#getmintprice)
+- [getNetworkParameters](Green.md#getnetworkparameters)
 - [getPaymentAddress](Green.md#getpaymentaddress)
 - [getPrice](Green.md#getprice)
 - [mint](Green.md#mint)
@@ -167,6 +168,20 @@ ___
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[getMintPrice](MasaModuleBase.md#getmintprice)
+
+___
+
+### getNetworkParameters
+
+▸ `Protected` **getNetworkParameters**(): `Promise`<`undefined` \| `FeeData`\>
+
+#### Returns
+
+`Promise`<`undefined` \| `FeeData`\>
+
+#### Inherited from
+
+[MasaModuleBase](MasaModuleBase.md).[getNetworkParameters](MasaModuleBase.md#getnetworkparameters)
 
 ___
 

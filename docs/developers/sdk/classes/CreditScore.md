@@ -27,6 +27,7 @@
 - [checkOrGiveAllowance](CreditScore.md#checkorgiveallowance)
 - [formatPrice](CreditScore.md#formatprice)
 - [getMintPrice](CreditScore.md#getmintprice)
+- [getNetworkParameters](CreditScore.md#getnetworkparameters)
 - [getPaymentAddress](CreditScore.md#getpaymentaddress)
 - [getPrice](CreditScore.md#getprice)
 - [mint](CreditScore.md#mint)
@@ -167,6 +168,20 @@ ___
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[getMintPrice](MasaModuleBase.md#getmintprice)
+
+___
+
+### getNetworkParameters
+
+▸ `Protected` **getNetworkParameters**(): `Promise`<`undefined` \| `FeeData`\>
+
+#### Returns
+
+`Promise`<`undefined` \| `FeeData`\>
+
+#### Inherited from
+
+[MasaModuleBase](MasaModuleBase.md).[getNetworkParameters](MasaModuleBase.md#getnetworkparameters)
 
 ___
 

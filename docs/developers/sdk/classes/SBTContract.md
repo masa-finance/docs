@@ -1,46 +1,59 @@
 [# Masa SDK
- - v3.3.2](../README.md) / [Exports](../modules.md) / SoulLinker
+ - v3.3.2](../README.md) / [Exports](../modules.md) / SBTContract
 
-# Class: SoulLinker
+# Class: SBTContract<Contract\>
+
+## Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `MasaSBT` |
 
 ## Hierarchy
 
 - [`MasaModuleBase`](MasaModuleBase.md)
 
-  ↳ **`SoulLinker`**
+  ↳ **`SBTContract`**
+
+  ↳↳ [`ASBTContract`](ASBTContract.md)
+
+  ↳↳ [`SSSBTContract`](SSSBTContract.md)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](SoulLinker.md#constructor)
+- [constructor](SBTContract.md#constructor)
 
 ### Properties
 
-- [instances](SoulLinker.md#instances)
-- [masa](SoulLinker.md#masa)
-- [types](SoulLinker.md#types)
+- [instances](SBTContract.md#instances)
+- [masa](SBTContract.md#masa)
 
 ### Methods
 
-- [addLink](SoulLinker.md#addlink)
-- [breakLink](SoulLinker.md#breaklink)
-- [checkOrGiveAllowance](SoulLinker.md#checkorgiveallowance)
-- [formatPrice](SoulLinker.md#formatprice)
-- [getMintPrice](SoulLinker.md#getmintprice)
-- [getNetworkParameters](SoulLinker.md#getnetworkparameters)
-- [getPaymentAddress](SoulLinker.md#getpaymentaddress)
-- [getPrice](SoulLinker.md#getprice)
-- [signLink](SoulLinker.md#signlink)
-- [verify](SoulLinker.md#verify)
-- [addSlippage](SoulLinker.md#addslippage)
-- [loadSBTContract](SoulLinker.md#loadsbtcontract)
+- [attach](SBTContract.md#attach)
+- [checkOrGiveAllowance](SBTContract.md#checkorgiveallowance)
+- [connect](SBTContract.md#connect)
+- [formatPrice](SBTContract.md#formatprice)
+- [getMintPrice](SBTContract.md#getmintprice)
+- [getNetworkParameters](SBTContract.md#getnetworkparameters)
+- [getPaymentAddress](SBTContract.md#getpaymentaddress)
+- [verify](SBTContract.md#verify)
+- [addSlippage](SBTContract.md#addslippage)
+- [loadSBTContract](SBTContract.md#loadsbtcontract)
 
 ## Constructors
 
 ### constructor
 
-• **new SoulLinker**(`masa`, `instances`)
+• **new SBTContract**<`Contract`\>(`masa`, `instances`)
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `MasaSBT`<`Contract`\> |
 
 #### Parameters
 
@@ -73,61 +86,21 @@ ___
 
 [MasaModuleBase](MasaModuleBase.md).[masa](MasaModuleBase.md#masa)
 
-___
-
-### types
-
-• **types**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `Link` | { `name`: `string` = "readerIdentityId"; `type`: `string` = "uint256" }[] |
-
 ## Methods
 
-### addLink
+### attach
 
-▸ **addLink**(`tokenAddress`, `paymentMethod`, `readerIdentityId`, `ownerIdentityId`, `tokenId`, `signatureDate`, `expirationDate`, `signature`, `slippage?`): `Promise`<`boolean`\>
-
-Adds a link to the soullinker
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `tokenAddress` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `readerIdentityId` | `BigNumber` | `undefined` |
-| `ownerIdentityId` | `BigNumber` | `undefined` |
-| `tokenId` | `BigNumber` | `undefined` |
-| `signatureDate` | `number` | `undefined` |
-| `expirationDate` | `number` | `undefined` |
-| `signature` | `string` | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
-___
-
-### breakLink
-
-▸ **breakLink**(`contract`, `tokenId`, `readerIdentityId`): `Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+▸ **attach**(`sbtContract`): [`SBTContractWrapper`](../interfaces/SBTContractWrapper.md)<`Contract`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `contract` | `Contract` |
-| `tokenId` | `BigNumber` |
-| `readerIdentityId` | `BigNumber` |
+| `sbtContract` | `Contract` |
 
 #### Returns
 
-`Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+[`SBTContractWrapper`](../interfaces/SBTContractWrapper.md)<`Contract`\>
 
 ___
 
@@ -153,6 +126,25 @@ Checks or gives allowance on ERC20 tokens
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[checkOrGiveAllowance](MasaModuleBase.md#checkorgiveallowance)
+
+___
+
+### connect
+
+▸ **connect**(`address`, `factory?`): `Promise`<[`SBTContractWrapper`](../interfaces/SBTContractWrapper.md)<`Contract`\>\>
+
+loads an sbt instance and connects the contract functions to it
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `address` | `string` | `undefined` |
+| `factory` | [`ContractFactory`](ContractFactory.md) | `MasaSBT__factory` |
+
+#### Returns
+
+`Promise`<[`SBTContractWrapper`](../interfaces/SBTContractWrapper.md)<`Contract`\>\>
 
 ___
 
@@ -232,49 +224,6 @@ Gets the payment address for a given payment method
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[getPaymentAddress](MasaModuleBase.md#getpaymentaddress)
-
-___
-
-### getPrice
-
-▸ **getPrice**(`tokenAddress`, `paymentMethod`, `slippage?`): `Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
-
-Gets price for establishing a link
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `tokenAddress` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
-
-#### Returns
-
-`Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
-
-___
-
-### signLink
-
-▸ **signLink**(`readerIdentityId`, `ownerIdentityId`, `tokenAddress`, `tokenId`, `signatureDate?`, `expirationOffset?`): `Promise`<{ `expirationDate`: `number` ; `signature`: `string` ; `signatureDate`: `number`  }\>
-
-Signs a soul linker link
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `readerIdentityId` | `BigNumber` |
-| `ownerIdentityId` | `BigNumber` |
-| `tokenAddress` | `string` |
-| `tokenId` | `BigNumber` |
-| `signatureDate` | `number` |
-| `expirationOffset` | `number` |
-
-#### Returns
-
-`Promise`<{ `expirationDate`: `number` ; `signature`: `string` ; `signatureDate`: `number`  }\>
 
 ___
 

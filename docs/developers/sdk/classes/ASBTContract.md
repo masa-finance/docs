@@ -1,53 +1,55 @@
 [# Masa SDK
- - v3.3.2](../README.md) / [Exports](../modules.md) / MasaModuleBase
+ - v3.3.2](../README.md) / [Exports](../modules.md) / ASBTContract
 
-# Class: MasaModuleBase
+# Class: ASBTContract<Contract\>
+
+## Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `ReferenceSBTAuthority` |
 
 ## Hierarchy
 
-- [`MasaBase`](MasaBase.md)
+- [`SBTContract`](SBTContract.md)<`Contract`\>
 
-  ↳ **`MasaModuleBase`**
-
-  ↳↳ [`CreditScore`](CreditScore.md)
-
-  ↳↳ [`Green`](Green.md)
-
-  ↳↳ [`Identity`](Identity.md)
-
-  ↳↳ [`SBTContract`](SBTContract.md)
-
-  ↳↳ [`SoulLinker`](SoulLinker.md)
-
-  ↳↳ [`SoulName`](SoulName.md)
+  ↳ **`ASBTContract`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](MasaModuleBase.md#constructor)
+- [constructor](ASBTContract.md#constructor)
 
 ### Properties
 
-- [instances](MasaModuleBase.md#instances)
-- [masa](MasaModuleBase.md#masa)
+- [instances](ASBTContract.md#instances)
+- [masa](ASBTContract.md#masa)
 
 ### Methods
 
-- [checkOrGiveAllowance](MasaModuleBase.md#checkorgiveallowance)
-- [formatPrice](MasaModuleBase.md#formatprice)
-- [getMintPrice](MasaModuleBase.md#getmintprice)
-- [getNetworkParameters](MasaModuleBase.md#getnetworkparameters)
-- [getPaymentAddress](MasaModuleBase.md#getpaymentaddress)
-- [verify](MasaModuleBase.md#verify)
-- [addSlippage](MasaModuleBase.md#addslippage)
-- [loadSBTContract](MasaModuleBase.md#loadsbtcontract)
+- [attach](ASBTContract.md#attach)
+- [checkOrGiveAllowance](ASBTContract.md#checkorgiveallowance)
+- [connect](ASBTContract.md#connect)
+- [formatPrice](ASBTContract.md#formatprice)
+- [getMintPrice](ASBTContract.md#getmintprice)
+- [getNetworkParameters](ASBTContract.md#getnetworkparameters)
+- [getPaymentAddress](ASBTContract.md#getpaymentaddress)
+- [verify](ASBTContract.md#verify)
+- [addSlippage](ASBTContract.md#addslippage)
+- [loadSBTContract](ASBTContract.md#loadsbtcontract)
 
 ## Constructors
 
 ### constructor
 
-• **new MasaModuleBase**(`masa`, `instances`)
+• **new ASBTContract**<`Contract`\>(`masa`, `instances`)
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `ReferenceSBTAuthority`<`Contract`\> |
 
 #### Parameters
 
@@ -58,13 +60,17 @@
 
 #### Overrides
 
-[MasaBase](MasaBase.md).[constructor](MasaBase.md#constructor)
+[SBTContract](SBTContract.md).[constructor](SBTContract.md#constructor)
 
 ## Properties
 
 ### instances
 
 • `Protected` **instances**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
+
+#### Inherited from
+
+[SBTContract](SBTContract.md).[instances](SBTContract.md#instances)
 
 ___
 
@@ -74,9 +80,29 @@ ___
 
 #### Inherited from
 
-[MasaBase](MasaBase.md).[masa](MasaBase.md#masa)
+[SBTContract](SBTContract.md).[masa](SBTContract.md#masa)
 
 ## Methods
+
+### attach
+
+▸ **attach**(`sbtContract`): [`ASBTContractWrapper`](../interfaces/ASBTContractWrapper.md)<`Contract`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `sbtContract` | `Contract` |
+
+#### Returns
+
+[`ASBTContractWrapper`](../interfaces/ASBTContractWrapper.md)<`Contract`\>
+
+#### Overrides
+
+[SBTContract](SBTContract.md).[attach](SBTContract.md#attach)
+
+___
 
 ### checkOrGiveAllowance
 
@@ -97,6 +123,33 @@ Checks or gives allowance on ERC20 tokens
 
 `Promise`<`undefined` \| `ContractReceipt`\>
 
+#### Inherited from
+
+[SBTContract](SBTContract.md).[checkOrGiveAllowance](SBTContract.md#checkorgiveallowance)
+
+___
+
+### connect
+
+▸ **connect**(`address`, `factory?`): `Promise`<[`SBTContractWrapper`](../interfaces/SBTContractWrapper.md)<`Contract`\>\>
+
+loads an sbt instance and connects the contract functions to it
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `address` | `string` | `undefined` |
+| `factory` | [`ContractFactory`](ContractFactory.md) | `MasaSBT__factory` |
+
+#### Returns
+
+`Promise`<[`SBTContractWrapper`](../interfaces/SBTContractWrapper.md)<`Contract`\>\>
+
+#### Inherited from
+
+[SBTContract](SBTContract.md).[connect](SBTContract.md#connect)
+
 ___
 
 ### formatPrice
@@ -113,6 +166,10 @@ ___
 #### Returns
 
 `Promise`<`string`\>
+
+#### Inherited from
+
+[SBTContract](SBTContract.md).[formatPrice](SBTContract.md#formatprice)
 
 ___
 
@@ -132,6 +189,10 @@ ___
 
 `Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
 
+#### Inherited from
+
+[SBTContract](SBTContract.md).[getMintPrice](SBTContract.md#getmintprice)
+
 ___
 
 ### getNetworkParameters
@@ -141,6 +202,10 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| `FeeData`\>
+
+#### Inherited from
+
+[SBTContract](SBTContract.md).[getNetworkParameters](SBTContract.md#getnetworkparameters)
 
 ___
 
@@ -159,6 +224,10 @@ Gets the payment address for a given payment method
 #### Returns
 
 `string`
+
+#### Inherited from
+
+[SBTContract](SBTContract.md).[getPaymentAddress](SBTContract.md#getpaymentaddress)
 
 ___
 
@@ -184,6 +253,10 @@ verify a signature created during one of the SBT signing flows
 
 `Promise`<`void`\>
 
+#### Inherited from
+
+[SBTContract](SBTContract.md).[verify](SBTContract.md#verify)
+
 ___
 
 ### addSlippage
@@ -202,6 +275,10 @@ adds a percentage to the price as slippage
 #### Returns
 
 `BigNumber`
+
+#### Inherited from
+
+[SBTContract](SBTContract.md).[addSlippage](SBTContract.md#addslippage)
 
 ___
 
@@ -226,3 +303,7 @@ ___
 #### Returns
 
 `Promise`<`Contract`\>
+
+#### Inherited from
+
+[SBTContract](SBTContract.md).[loadSBTContract](SBTContract.md#loadsbtcontract)
