@@ -437,6 +437,29 @@ function maxSBTToMint() external view returns (uint256)
 ### mint
 
 ```solidity
+function mint(address paymentMethod, address[] to) external nonpayable returns (uint256[] tokenIds)
+```
+
+Bulk mint of new SBTs
+
+*The caller must have the MINTER role*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
+| to | address[] | Addresses array to mint the SBT to |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| tokenIds | uint256[] | The SBT IDs of the newly minted SBTs |
+
+### mint
+
+```solidity
 function mint(address paymentMethod, uint256 identityId) external nonpayable returns (uint256)
 ```
 
@@ -456,6 +479,29 @@ Mints a new SBT
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | The SBT ID of the newly minted SBT |
+
+### mint
+
+```solidity
+function mint(address paymentMethod, uint256[] identityId) external nonpayable returns (uint256[] tokenIds)
+```
+
+Bulk mint of new SBTs
+
+*The caller must have the MINTER role*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod | address | Address of token that user want to pay |
+| identityId | uint256[] | TokenIds array of the identity to mint the NFT to |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| tokenIds | uint256[] | The SBT IDs of the newly minted SBTs |
 
 ### mint
 
