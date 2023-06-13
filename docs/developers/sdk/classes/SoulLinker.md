@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.3.2](../README.md) / [Exports](../modules.md) / SoulLinker
+ - v3.3.7](../README.md) / [Exports](../modules.md) / SoulLinker
 
 # Class: SoulLinker
 
@@ -28,7 +28,7 @@
 - [checkOrGiveAllowance](SoulLinker.md#checkorgiveallowance)
 - [formatPrice](SoulLinker.md#formatprice)
 - [getMintPrice](SoulLinker.md#getmintprice)
-- [getNetworkParameters](SoulLinker.md#getnetworkparameters)
+- [getNetworkFeeInformation](SoulLinker.md#getnetworkfeeinformation)
 - [getPaymentAddress](SoulLinker.md#getpaymentaddress)
 - [getPrice](SoulLinker.md#getprice)
 - [signLink](SoulLinker.md#signlink)
@@ -199,9 +199,9 @@ ___
 
 ___
 
-### getNetworkParameters
+### getNetworkFeeInformation
 
-▸ `Protected` **getNetworkParameters**(): `Promise`<`undefined` \| `FeeData`\>
+▸ `Protected` **getNetworkFeeInformation**(): `Promise`<`undefined` \| `FeeData`\>
 
 #### Returns
 
@@ -209,7 +209,7 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[getNetworkParameters](MasaModuleBase.md#getnetworkparameters)
+[MasaModuleBase](MasaModuleBase.md).[getNetworkFeeInformation](MasaModuleBase.md#getnetworkfeeinformation)
 
 ___
 

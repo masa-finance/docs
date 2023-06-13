@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.3.2](../README.md) / [Exports](../modules.md) / Green
+ - v3.3.7](../README.md) / [Exports](../modules.md) / Green
 
 # Class: Green
 
@@ -27,7 +27,7 @@
 - [checkOrGiveAllowance](Green.md#checkorgiveallowance)
 - [formatPrice](Green.md#formatprice)
 - [getMintPrice](Green.md#getmintprice)
-- [getNetworkParameters](Green.md#getnetworkparameters)
+- [getNetworkFeeInformation](Green.md#getnetworkfeeinformation)
 - [getPaymentAddress](Green.md#getpaymentaddress)
 - [getPrice](Green.md#getprice)
 - [mint](Green.md#mint)
@@ -171,9 +171,9 @@ ___
 
 ___
 
-### getNetworkParameters
+### getNetworkFeeInformation
 
-▸ `Protected` **getNetworkParameters**(): `Promise`<`undefined` \| `FeeData`\>
+▸ `Protected` **getNetworkFeeInformation**(): `Promise`<`undefined` \| `FeeData`\>
 
 #### Returns
 
@@ -181,7 +181,7 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[getNetworkParameters](MasaModuleBase.md#getnetworkparameters)
+[MasaModuleBase](MasaModuleBase.md).[getNetworkFeeInformation](MasaModuleBase.md#getnetworkfeeinformation)
 
 ___
 

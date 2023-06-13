@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.3.2](../README.md) / [Exports](../modules.md) / MasaModuleBase
+ - v3.3.7](../README.md) / [Exports](../modules.md) / MasaModuleBase
 
 # Class: MasaModuleBase
 
@@ -37,7 +37,7 @@
 - [checkOrGiveAllowance](MasaModuleBase.md#checkorgiveallowance)
 - [formatPrice](MasaModuleBase.md#formatprice)
 - [getMintPrice](MasaModuleBase.md#getmintprice)
-- [getNetworkParameters](MasaModuleBase.md#getnetworkparameters)
+- [getNetworkFeeInformation](MasaModuleBase.md#getnetworkfeeinformation)
 - [getPaymentAddress](MasaModuleBase.md#getpaymentaddress)
 - [verify](MasaModuleBase.md#verify)
 - [addSlippage](MasaModuleBase.md#addslippage)
@@ -134,9 +134,9 @@ ___
 
 ___
 
-### getNetworkParameters
+### getNetworkFeeInformation
 
-▸ `Protected` **getNetworkParameters**(): `Promise`<`undefined` \| `FeeData`\>
+▸ `Protected` **getNetworkFeeInformation**(): `Promise`<`undefined` \| `FeeData`\>
 
 #### Returns
 

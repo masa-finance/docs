@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.3.2](../README.md) / [Exports](../modules.md) / CreditScore
+ - v3.3.7](../README.md) / [Exports](../modules.md) / CreditScore
 
 # Class: CreditScore
 
@@ -27,7 +27,7 @@
 - [checkOrGiveAllowance](CreditScore.md#checkorgiveallowance)
 - [formatPrice](CreditScore.md#formatprice)
 - [getMintPrice](CreditScore.md#getmintprice)
-- [getNetworkParameters](CreditScore.md#getnetworkparameters)
+- [getNetworkFeeInformation](CreditScore.md#getnetworkfeeinformation)
 - [getPaymentAddress](CreditScore.md#getpaymentaddress)
 - [getPrice](CreditScore.md#getprice)
 - [mint](CreditScore.md#mint)
@@ -171,9 +171,9 @@ ___
 
 ___
 
-### getNetworkParameters
+### getNetworkFeeInformation
 
-▸ `Protected` **getNetworkParameters**(): `Promise`<`undefined` \| `FeeData`\>
+▸ `Protected` **getNetworkFeeInformation**(): `Promise`<`undefined` \| `FeeData`\>
 
 #### Returns
 
@@ -181,7 +181,7 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[getNetworkParameters](MasaModuleBase.md#getnetworkparameters)
+[MasaModuleBase](MasaModuleBase.md).[getNetworkFeeInformation](MasaModuleBase.md#getnetworkfeeinformation)
 
 ___
 

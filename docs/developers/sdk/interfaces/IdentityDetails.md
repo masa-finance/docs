@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.3.2](../README.md) / [Exports](../modules.md) / IdentityDetails
+ - v3.3.7](../README.md) / [Exports](../modules.md) / IdentityDetails
 
 # Interface: IdentityDetails
 

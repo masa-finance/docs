@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.3.2](../README.md) / [Exports](../modules.md) / Identity
+ - v3.3.7](../README.md) / [Exports](../modules.md) / Identity
 
 # Class: Identity
 
@@ -26,7 +26,7 @@
 - [checkOrGiveAllowance](Identity.md#checkorgiveallowance)
 - [formatPrice](Identity.md#formatprice)
 - [getMintPrice](Identity.md#getmintprice)
-- [getNetworkParameters](Identity.md#getnetworkparameters)
+- [getNetworkFeeInformation](Identity.md#getnetworkfeeinformation)
 - [getPaymentAddress](Identity.md#getpaymentaddress)
 - [purchase](Identity.md#purchase)
 - [purchaseIdentityAndName](Identity.md#purchaseidentityandname)
@@ -157,9 +157,9 @@ ___
 
 ___
 
-### getNetworkParameters
+### getNetworkFeeInformation
 
-▸ `Protected` **getNetworkParameters**(): `Promise`<`undefined` \| `FeeData`\>
+▸ `Protected` **getNetworkFeeInformation**(): `Promise`<`undefined` \| `FeeData`\>
 
 #### Returns
 
@@ -167,7 +167,7 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[getNetworkParameters](MasaModuleBase.md#getnetworkparameters)
+[MasaModuleBase](MasaModuleBase.md).[getNetworkFeeInformation](MasaModuleBase.md#getnetworkfeeinformation)
 
 ___
 

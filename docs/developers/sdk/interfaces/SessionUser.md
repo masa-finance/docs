@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.3.2](../README.md) / [Exports](../modules.md) / SessionUser
+ - v3.3.7](../README.md) / [Exports](../modules.md) / SessionUser
 
 # Interface: SessionUser
 

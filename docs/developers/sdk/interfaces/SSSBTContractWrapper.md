@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.3.2](../README.md) / [Exports](../modules.md) / SSSBTContractWrapper
+ - v3.3.7](../README.md) / [Exports](../modules.md) / SSSBTContractWrapper
 
 # Interface: SSSBTContractWrapper<Contract\>
 
@@ -78,11 +78,11 @@ ___
 
 ### prepareMint
 
-• **prepareMint**: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`, `slippage?`: `number`) => `Promise`<{ `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
+• **prepareMint**: (`paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod), `name`: `string`, `types`: `Record`<`string`, `TypedDataField`[]\>, `value`: `Record`<`string`, `string` \| `number` \| `BigNumber`\>, `signature`: `string`, `authorityAddress`: `string`, `slippage?`: `number`) => `Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
 
 #### Type declaration
 
-▸ (`paymentMethod`, `name`, `types`, `value`, `signature`, `authorityAddress`, `slippage?`): `Promise`<{ `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
+▸ (`paymentMethod`, `name`, `types`, `value`, `signature`, `authorityAddress`, `slippage?`): `Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
 
 ##### Parameters
 
@@ -98,7 +98,7 @@ ___
 
 ##### Returns
 
-`Promise`<{ `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
+`Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
 
 ___
 

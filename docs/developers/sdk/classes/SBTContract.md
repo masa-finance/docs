@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.3.2](../README.md) / [Exports](../modules.md) / SBTContract
+ - v3.3.7](../README.md) / [Exports](../modules.md) / SBTContract
 
 # Class: SBTContract<Contract\>
 
@@ -37,7 +37,7 @@
 - [connect](SBTContract.md#connect)
 - [formatPrice](SBTContract.md#formatprice)
 - [getMintPrice](SBTContract.md#getmintprice)
-- [getNetworkParameters](SBTContract.md#getnetworkparameters)
+- [getNetworkFeeInformation](SBTContract.md#getnetworkfeeinformation)
 - [getPaymentAddress](SBTContract.md#getpaymentaddress)
 - [verify](SBTContract.md#verify)
 - [addSlippage](SBTContract.md#addslippage)
@@ -191,9 +191,9 @@ ___
 
 ___
 
-### getNetworkParameters
+### getNetworkFeeInformation
 
-▸ `Protected` **getNetworkParameters**(): `Promise`<`undefined` \| `FeeData`\>
+▸ `Protected` **getNetworkFeeInformation**(): `Promise`<`undefined` \| `FeeData`\>
 
 #### Returns
 
@@ -201,7 +201,7 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[getNetworkParameters](MasaModuleBase.md#getnetworkparameters)
+[MasaModuleBase](MasaModuleBase.md).[getNetworkFeeInformation](MasaModuleBase.md#getnetworkfeeinformation)
 
 ___
 

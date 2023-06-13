@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.3.2](../README.md) / [Exports](../modules.md) / SoulName
+ - v3.3.7](../README.md) / [Exports](../modules.md) / SoulName
 
 # Class: SoulName
 
@@ -27,7 +27,7 @@
 - [checkOrGiveAllowance](SoulName.md#checkorgiveallowance)
 - [formatPrice](SoulName.md#formatprice)
 - [getMintPrice](SoulName.md#getmintprice)
-- [getNetworkParameters](SoulName.md#getnetworkparameters)
+- [getNetworkFeeInformation](SoulName.md#getnetworkfeeinformation)
 - [getPaymentAddress](SoulName.md#getpaymentaddress)
 - [getPrice](SoulName.md#getprice)
 - [getSoulnameData](SoulName.md#getsoulnamedata)
@@ -174,9 +174,9 @@ ___
 
 ___
 
-### getNetworkParameters
+### getNetworkFeeInformation
 
-▸ `Protected` **getNetworkParameters**(): `Promise`<`undefined` \| `FeeData`\>
+▸ `Protected` **getNetworkFeeInformation**(): `Promise`<`undefined` \| `FeeData`\>
 
 #### Returns
 
@@ -184,7 +184,7 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[getNetworkParameters](MasaModuleBase.md#getnetworkparameters)
+[MasaModuleBase](MasaModuleBase.md).[getNetworkFeeInformation](MasaModuleBase.md#getnetworkfeeinformation)
 
 ___
 
