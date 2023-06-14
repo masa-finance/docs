@@ -54,8 +54,11 @@
     - [`masa asbt`](#masa-asbt)
       - [`masa asbt deploy`](#masa-asbt-deploy)
       - [`masa asbt mint <contract-address> <receiver>`](#masa-asbt-mint-contract-address-receiver)
+      - [`masa asbt bulk-mint <contract-address> <csv>`](#masa-asbt-bulk-mint-contract-address-csv)
+      - [`masa asbt mint-to-soulname <contract-address> <soulname>`](#masa-asbt-mint-to-soulname-contract-address-soulname)
     - [`masa sssbt`](#masa-sssbt)
       - [`masa sssbt deploy`](#masa-sssbt-deploy)
+      - [`masa sssbt add-authority <contract-address> <authority-address>`](#masa-sssbt-add-authority-contract-address-authority-address)
       - [`masa sssbt sign <contract-address> <receiver>`](#masa-sssbt-sign-contract-address-receiver)
       - [`masa sssbt mint <contract-address> <authority-address> <signature-date> <signature>`](#masa-sssbt-mint-contract-address-authority-address-signature-date-signature)
     - [`masa settings`](#masa-settings)
@@ -245,6 +248,9 @@ Burns your masa identity
 ### `masa soul-name`
 
 Soul Name Commands
+
+- `-c, --contract <contract>`
+  Contract address override
 
 #### `masa soul-name info`
 
@@ -453,12 +459,31 @@ ASBT Commands
 
 Deploys ASBTs
 
+Options:
+
+- `-e, --etherscan-key <etherscan-key>`
+  Etherscan API Key
+
 #### `masa asbt mint <contract-address> <receiver>`
 
 Mints ASBTs
 
 - `<contract-address> Address of the SBT to mint on`
 - `<receiver> Address of the SBT receiver`
+
+#### `masa asbt bulk-mint <contract-address> <csv>`
+
+Mints ASBTs from CSV files
+
+- `<contract-address> Address of the SBT to mint on`
+- `<csv> Address of the SBT receiver`
+
+#### `masa asbt mint-to-soulname <contract-address> <soulname>`
+
+Mints ASBTs from soulname
+
+- `<contract-address> Address of the SBT to mint on`
+- `<soulname> Address of the SBT receiver`
 
 ### `masa sssbt`
 
@@ -467,6 +492,18 @@ SSSBT Commands
 #### `masa sssbt deploy`
 
 Deploys SSSBTs
+
+Options:
+
+- `-e, --etherscan-key <etherscan-key>`
+  Etherscan API Key
+
+#### `masa sssbt add-authority <contract-address> <authority-address>`
+
+Adds an Authority to the SSSBT
+
+- `<contract-address> Address of the SBT to add the authority to`
+- `<authority-address> Address of the Authority`
 
 #### `masa sssbt sign <contract-address> <receiver>`
 
