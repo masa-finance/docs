@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.3.7](README.md) / Exports
+ - v3.4.1](README.md) / Exports
 
 # # Masa SDK
- - v3.3.7
+ - v3.4.1
 
 ## Table of contents
 
@@ -55,6 +55,7 @@
 - [ContractInfo](interfaces/ContractInfo.md)
 - [CreateSoulNameResult](interfaces/CreateSoulNameResult.md)
 - [CreditScoreDetails](interfaces/CreditScoreDetails.md)
+- [DeployResult](interfaces/DeployResult.md)
 - [ERC20](interfaces/ERC20.md)
 - [ERC20Interface](interfaces/ERC20Interface.md)
 - [GenerateCreditScoreResult](interfaces/GenerateCreditScoreResult.md)
@@ -360,7 +361,7 @@ ___
 | `ContractNotDeployed` | (`networkName`: [`NetworkName`](modules.md#networkname)) => `string` |
 | `NoIdentity` | (`address?`: `string`) => `string` |
 | `NotLoggedIn` | () => `string` |
-| `WaitingToFinalize` | (`txHash`: `string`) => `string` |
+| `WaitingToFinalize` | (`txHash`: `string`, `explorerUrl?`: `string`) => `string` |
 
 ___
 
@@ -675,44 +676,50 @@ ___
 
 ### deployASBT
 
-▸ **deployASBT**(`masa`, `name`, `symbol`, `baseTokenUri`, `limit?`, `adminAddress?`): `Promise`<`undefined` \| `string`\>
+▸ **deployASBT**(`«destructured»`): `Promise`<`undefined` \| [`DeployResult`](interfaces/DeployResult.md)<`PaymentParamsStruct`\>\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
-| `name` | `string` | `undefined` |
-| `symbol` | `string` | `undefined` |
-| `baseTokenUri` | `string` | `undefined` |
-| `limit` | `number` | `1` |
-| `adminAddress?` | `string` | `undefined` |
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `Object` |
+| › `adminAddress?` | `string` |
+| › `baseTokenUri` | `string` |
+| › `limit?` | `number` |
+| › `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| › `name` | `string` |
+| › `paymentOptions?` | `Object` |
+| › `paymentOptions.projectFeeReceiver` | `string` |
+| › `symbol` | `string` |
 
 #### Returns
 
-`Promise`<`undefined` \| `string`\>
+`Promise`<`undefined` \| [`DeployResult`](interfaces/DeployResult.md)<`PaymentParamsStruct`\>\>
 
 ___
 
 ### deploySSSBT
 
-▸ **deploySSSBT**(`masa`, `name`, `symbol`, `baseTokenUri`, `limit?`, `authorityAddress?`, `adminAddress?`): `Promise`<`undefined` \| `string`\>
+▸ **deploySSSBT**(`«destructured»`): `Promise`<`undefined` \| [`DeployResult`](interfaces/DeployResult.md)<`PaymentParamsStruct`\>\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
-| `name` | `string` | `undefined` |
-| `symbol` | `string` | `undefined` |
-| `baseTokenUri` | `string` | `undefined` |
-| `limit` | `number` | `1` |
-| `authorityAddress?` | `string` | `undefined` |
-| `adminAddress?` | `string` | `undefined` |
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `Object` |
+| › `adminAddress?` | `string` |
+| › `authorityAddress?` | `string` |
+| › `baseTokenUri` | `string` |
+| › `limit` | `number` |
+| › `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| › `name` | `string` |
+| › `paymentOptions?` | `Object` |
+| › `paymentOptions.projectFeeReceiver` | `string` |
+| › `symbol` | `string` |
 
 #### Returns
 
-`Promise`<`undefined` \| `string`\>
+`Promise`<`undefined` \| [`DeployResult`](interfaces/DeployResult.md)<`PaymentParamsStruct`\>\>
 
 ___
 

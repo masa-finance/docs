@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.3.7](../README.md) / [Exports](../modules.md) / MasaSSSBT
+ - v3.4.1](../README.md) / [Exports](../modules.md) / MasaSSSBT
 
 # Class: MasaSSSBT
 
@@ -74,19 +74,20 @@ ___
 
 ### deploy
 
-▸ **deploy**(`name`, `symbol`, `baseTokenUri`, `limit?`, `authorityAddress`, `adminAddress?`): `Promise`<`undefined` \| `string`\>
+▸ **deploy**(`«destructured»`): `Promise`<`undefined` \| [`DeployResult`](../interfaces/DeployResult.md)<`PaymentParamsStruct`\>\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `name` | `string` | `undefined` |
-| `symbol` | `string` | `undefined` |
-| `baseTokenUri` | `string` | `undefined` |
-| `limit` | `number` | `1` |
-| `authorityAddress` | `string` | `undefined` |
-| `adminAddress?` | `string` | `undefined` |
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `Object` |
+| › `adminAddress?` | `string` |
+| › `authorityAddress` | `string` |
+| › `baseTokenUri` | `string` |
+| › `limit?` | `number` |
+| › `name` | `string` |
+| › `symbol` | `string` |
 
 #### Returns
 
-`Promise`<`undefined` \| `string`\>
+`Promise`<`undefined` \| [`DeployResult`](../interfaces/DeployResult.md)<`PaymentParamsStruct`\>\>

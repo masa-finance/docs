@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.3.7](../README.md) / [Exports](../modules.md) / Network
+ - v3.4.1](../README.md) / [Exports](../modules.md) / Network
 
 # Interface: Network
 
@@ -8,6 +8,7 @@
 ### Properties
 
 - [addresses](Network.md#addresses)
+- [blockExplorerApiUrls](Network.md#blockexplorerapiurls)
 - [blockExplorerUrls](Network.md#blockexplorerurls)
 - [chainId](Network.md#chainid)
 - [chainName](Network.md#chainname)
@@ -24,6 +25,14 @@
 • **addresses**: [`Addresses`](Addresses.md)
 
 Masa Curated known Addresses of Contracts like Business logic and tokens
+
+___
+
+### blockExplorerApiUrls
+
+• `Optional` **blockExplorerApiUrls**: `string`[]
+
+set of block explorer api urls
 
 ___
 
