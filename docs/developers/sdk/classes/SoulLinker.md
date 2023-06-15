@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.3](../README.md) / [Exports](../modules.md) / SoulLinker
+ - v3.4.6](../README.md) / [Exports](../modules.md) / SoulLinker
 
 # Class: SoulLinker
 
@@ -31,10 +31,10 @@
 - [getNetworkFeeInformation](SoulLinker.md#getnetworkfeeinformation)
 - [getPaymentAddress](SoulLinker.md#getpaymentaddress)
 - [getPrice](SoulLinker.md#getprice)
+- [loadSBTContract](SoulLinker.md#loadsbtcontract)
 - [signLink](SoulLinker.md#signlink)
 - [verify](SoulLinker.md#verify)
 - [addSlippage](SoulLinker.md#addslippage)
-- [loadSBTContract](SoulLinker.md#loadsbtcontract)
 
 ## Constructors
 
@@ -186,7 +186,7 @@ ___
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` | `undefined` |
+| `contract` | `MasaSBT` | `undefined` |
 | `slippage` | `undefined` \| `number` | `250` |
 
 #### Returns
@@ -255,6 +255,33 @@ Gets price for establishing a link
 
 ___
 
+### loadSBTContract
+
+▸ `Protected` **loadSBTContract**<`Contract`\>(`address`, `factory`): `Promise`<`Contract`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `MasaSBT`<`Contract`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `address` | `string` |
+| `factory` | [`ContractFactory`](ContractFactory.md) |
+
+#### Returns
+
+`Promise`<`Contract`\>
+
+#### Inherited from
+
+[MasaModuleBase](MasaModuleBase.md).[loadSBTContract](MasaModuleBase.md#loadsbtcontract)
+
+___
+
 ### signLink
 
 ▸ **signLink**(`readerIdentityId`, `ownerIdentityId`, `tokenAddress`, `tokenId`, `signatureDate?`, `expirationOffset?`): `Promise`<{ `expirationDate`: `number` ; `signature`: `string` ; `signatureDate`: `number`  }\>
@@ -289,7 +316,7 @@ verify a signature created during one of the SBT signing flows
 | Name | Type |
 | :------ | :------ |
 | `errorMessage` | `string` |
-| `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
+| `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
 | `domain` | `TypedDataDomain` |
 | `types` | `Record`<`string`, `TypedDataField`[]\> |
 | `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |
@@ -326,31 +353,3 @@ adds a percentage to the price as slippage
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[addSlippage](MasaModuleBase.md#addslippage)
-
-___
-
-### loadSBTContract
-
-▸ `Static` `Protected` **loadSBTContract**<`Contract`\>(`masaConfig`, `address`, `factory`): `Promise`<`Contract`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) |
-| `address` | `string` |
-| `factory` | [`ContractFactory`](ContractFactory.md) |
-
-#### Returns
-
-`Promise`<`Contract`\>
-
-#### Inherited from
-
-[MasaModuleBase](MasaModuleBase.md).[loadSBTContract](MasaModuleBase.md#loadsbtcontract)

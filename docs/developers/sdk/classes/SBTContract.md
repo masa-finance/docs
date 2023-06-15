@@ -1,23 +1,13 @@
 [# Masa SDK
- - v3.4.3](../README.md) / [Exports](../modules.md) / SBTContract
+ - v3.4.6](../README.md) / [Exports](../modules.md) / SBTContract
 
-# Class: SBTContract<Contract\>
-
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBT` |
+# Class: SBTContract
 
 ## Hierarchy
 
 - [`MasaModuleBase`](MasaModuleBase.md)
 
   ↳ **`SBTContract`**
-
-  ↳↳ [`ASBTContract`](ASBTContract.md)
-
-  ↳↳ [`SSSBTContract`](SSSBTContract.md)
 
 ## Table of contents
 
@@ -39,21 +29,15 @@
 - [getMintPrice](SBTContract.md#getmintprice)
 - [getNetworkFeeInformation](SBTContract.md#getnetworkfeeinformation)
 - [getPaymentAddress](SBTContract.md#getpaymentaddress)
+- [loadSBTContract](SBTContract.md#loadsbtcontract)
 - [verify](SBTContract.md#verify)
 - [addSlippage](SBTContract.md#addslippage)
-- [loadSBTContract](SBTContract.md#loadsbtcontract)
 
 ## Constructors
 
 ### constructor
 
-• **new SBTContract**<`Contract`\>(`masa`, `instances`)
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBT`<`Contract`\> |
+• **new SBTContract**(`masa`, `instances`)
 
 #### Parameters
 
@@ -90,17 +74,23 @@ ___
 
 ### attach
 
-▸ **attach**(`sbtContract`): [`SBTContractWrapper`](../interfaces/SBTContractWrapper.md)<`Contract`\>
+▸ **attach**<`Contract`\>(`contract`): [`SBTContractWrapper`](SBTContractWrapper.md)<`Contract`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `MasaSBT`<`Contract`\> |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `sbtContract` | `Contract` |
+| `contract` | `Contract` |
 
 #### Returns
 
-[`SBTContractWrapper`](../interfaces/SBTContractWrapper.md)<`Contract`\>
+[`SBTContractWrapper`](SBTContractWrapper.md)<`Contract`\>
 
 ___
 
@@ -131,9 +121,15 @@ ___
 
 ### connect
 
-▸ **connect**(`address`, `factory?`): `Promise`<[`SBTContractWrapper`](../interfaces/SBTContractWrapper.md)<`Contract`\>\>
+▸ **connect**<`Contract`\>(`address`, `factory?`): `Promise`<[`SBTContractWrapper`](SBTContractWrapper.md)<`Contract`\>\>
 
 loads an sbt instance and connects the contract functions to it
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `MasaSBT`<`Contract`\> |
 
 #### Parameters
 
@@ -144,7 +140,7 @@ loads an sbt instance and connects the contract functions to it
 
 #### Returns
 
-`Promise`<[`SBTContractWrapper`](../interfaces/SBTContractWrapper.md)<`Contract`\>\>
+`Promise`<[`SBTContractWrapper`](SBTContractWrapper.md)<`Contract`\>\>
 
 ___
 
@@ -178,7 +174,7 @@ ___
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` | `undefined` |
+| `contract` | `MasaSBT` | `undefined` |
 | `slippage` | `undefined` \| `number` | `250` |
 
 #### Returns
@@ -227,6 +223,33 @@ Gets the payment address for a given payment method
 
 ___
 
+### loadSBTContract
+
+▸ `Protected` **loadSBTContract**<`Contract`\>(`address`, `factory`): `Promise`<`Contract`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `MasaSBT`<`Contract`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `address` | `string` |
+| `factory` | [`ContractFactory`](ContractFactory.md) |
+
+#### Returns
+
+`Promise`<`Contract`\>
+
+#### Inherited from
+
+[MasaModuleBase](MasaModuleBase.md).[loadSBTContract](MasaModuleBase.md#loadsbtcontract)
+
+___
+
 ### verify
 
 ▸ `Protected` **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`<`void`\>
@@ -238,7 +261,7 @@ verify a signature created during one of the SBT signing flows
 | Name | Type |
 | :------ | :------ |
 | `errorMessage` | `string` |
-| `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
+| `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
 | `domain` | `TypedDataDomain` |
 | `types` | `Record`<`string`, `TypedDataField`[]\> |
 | `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |
@@ -275,31 +298,3 @@ adds a percentage to the price as slippage
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[addSlippage](MasaModuleBase.md#addslippage)
-
-___
-
-### loadSBTContract
-
-▸ `Static` `Protected` **loadSBTContract**<`Contract`\>(`masaConfig`, `address`, `factory`): `Promise`<`Contract`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) |
-| `address` | `string` |
-| `factory` | [`ContractFactory`](ContractFactory.md) |
-
-#### Returns
-
-`Promise`<`Contract`\>
-
-#### Inherited from
-
-[MasaModuleBase](MasaModuleBase.md).[loadSBTContract](MasaModuleBase.md#loadsbtcontract)

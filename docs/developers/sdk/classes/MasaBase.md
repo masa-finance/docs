@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.3](../README.md) / [Exports](../modules.md) / MasaBase
+ - v3.4.6](../README.md) / [Exports](../modules.md) / MasaBase
 
 # Class: MasaBase
 
@@ -15,7 +15,11 @@
 
   ↳ [`MasaAccount`](MasaAccount.md)
 
-  ↳ [`MasaSBTs`](MasaSBTs.md)
+  ↳ [`MasaASBT`](MasaASBT.md)
+
+  ↳ [`MasaSBTBase`](MasaSBTBase.md)
+
+  ↳ [`MasaSSSBT`](MasaSSSBT.md)
 
   ↳ [`MasaSession`](MasaSession.md)
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.3](../README.md) / [Exports](../modules.md) / Masa
+ - v3.4.6](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -140,7 +140,7 @@ ___
 
 ### sbt
 
-• `Readonly` **sbt**: [`MasaSBTs`](MasaSBTs.md)
+• `Readonly` **sbt**: [`MasaSBTBase`](MasaSBTBase.md)
 
 #### Implementation of
 

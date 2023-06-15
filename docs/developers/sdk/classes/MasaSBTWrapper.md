@@ -1,7 +1,7 @@
 [# Masa SDK
- - v3.4.3](../README.md) / [Exports](../modules.md) / SBTWrapper
+ - v3.4.6](../README.md) / [Exports](../modules.md) / MasaSBTWrapper
 
-# Class: SBTWrapper<Contract\>
+# Class: MasaSBTWrapper<Contract\>
 
 ## Type parameters
 
@@ -13,34 +13,36 @@
 
 - [`MasaLinkable`](MasaLinkable.md)<`Contract`\>
 
-  ↳ **`SBTWrapper`**
+  ↳ **`MasaSBTWrapper`**
 
-  ↳↳ [`ASBTWrapper`](ASBTWrapper.md)
+  ↳↳ [`MasaASBTWrapper`](MasaASBTWrapper.md)
 
-  ↳↳ [`SSSBTWrapper`](SSSBTWrapper.md)
+  ↳↳ [`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](SBTWrapper.md#constructor)
+- [constructor](MasaSBTWrapper.md#constructor)
 
 ### Properties
 
-- [contract](SBTWrapper.md#contract)
-- [links](SBTWrapper.md#links)
-- [masa](SBTWrapper.md#masa)
+- [contract](MasaSBTWrapper.md#contract)
+- [links](MasaSBTWrapper.md#links)
+- [masa](MasaSBTWrapper.md#masa)
 
 ### Methods
 
-- [burn](SBTWrapper.md#burn)
-- [list](SBTWrapper.md#list)
+- [burn](MasaSBTWrapper.md#burn)
+- [list](MasaSBTWrapper.md#list)
+- [loadSBTIDs](MasaSBTWrapper.md#loadsbtids)
+- [loadSBTs](MasaSBTWrapper.md#loadsbts)
 
 ## Constructors
 
 ### constructor
 
-• **new SBTWrapper**<`Contract`\>(`masa`, `contract`)
+• **new MasaSBTWrapper**<`Contract`\>(`masa`, `contract`)
 
 #### Type parameters
 
@@ -116,6 +118,38 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `address?` | `string` |
+
+#### Returns
+
+`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+___
+
+### loadSBTIDs
+
+▸ **loadSBTIDs**(`sbtIDs`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `sbtIDs` | `BigNumber`[] |
+
+#### Returns
+
+`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+___
+
+### loadSBTs
+
+▸ **loadSBTs**(`identityIdOrAddress`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `identityIdOrAddress` | `string` \| `BigNumber` |
 
 #### Returns
 

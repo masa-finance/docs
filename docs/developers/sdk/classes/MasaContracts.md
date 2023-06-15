@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.3](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v3.4.6](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -53,7 +53,7 @@
 
 ### asbt
 
-• **asbt**: [`ASBTContract`](ASBTContract.md)<`ReferenceSBTAuthority`\>
+• **asbt**: [`ASBTContract`](ASBTContract.md)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 ### sbt
 
-• **sbt**: [`SBTContract`](SBTContract.md)<`MasaSBT`\>
+• **sbt**: [`SBTContract`](SBTContract.md)
 
 SBTs
 
@@ -125,7 +125,7 @@ ___
 
 ### sssbt
 
-• **sssbt**: [`SSSBTContract`](SSSBTContract.md)<`ReferenceSBTSelfSovereign`\>
+• **sssbt**: [`SSSBTContract`](SSSBTContract.md)
 
 ## Methods
 

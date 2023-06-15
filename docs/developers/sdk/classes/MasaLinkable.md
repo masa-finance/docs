@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.3](../README.md) / [Exports](../modules.md) / MasaLinkable
+ - v3.4.6](../README.md) / [Exports](../modules.md) / MasaLinkable
 
 # Class: MasaLinkable<LinkContract\>
 
@@ -21,11 +21,7 @@
 
   ↳↳ [`MasaIdentity`](MasaIdentity.md)
 
-  ↳↳ [`SBTWrapper`](SBTWrapper.md)
-
-## Implements
-
-- `d`
+  ↳↳ [`MasaSBTWrapper`](MasaSBTWrapper.md)
 
 ## Table of contents
 
@@ -73,10 +69,6 @@ ___
 ### links
 
 • `Readonly` **links**: [`MasaSoulLinker`](MasaSoulLinker.md)
-
-#### Implementation of
-
-d.links
 
 ___
 

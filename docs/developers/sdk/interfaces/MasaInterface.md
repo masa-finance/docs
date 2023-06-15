@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.3](../README.md) / [Exports](../modules.md) / MasaInterface
+ - v3.4.6](../README.md) / [Exports](../modules.md) / MasaInterface
 
 # Interface: MasaInterface
 
@@ -84,7 +84,7 @@ ___
 
 ### sbt
 
-• `Readonly` **sbt**: [`MasaSBTs`](../classes/MasaSBTs.md)
+• `Readonly` **sbt**: [`MasaSBTBase`](../classes/MasaSBTBase.md)
 
 ___
 

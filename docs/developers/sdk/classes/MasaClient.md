@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.3](../README.md) / [Exports](../modules.md) / MasaClient
+ - v3.4.6](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 

@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.4.3](README.md) / Exports
+ - v3.4.6](README.md) / Exports
 
 # # Masa SDK
- - v3.4.3
+ - v3.4.6
 
 ## Table of contents
 
@@ -13,7 +13,7 @@
 ### Classes
 
 - [ASBTContract](classes/ASBTContract.md)
-- [ASBTWrapper](classes/ASBTWrapper.md)
+- [ASBTContractWrapper](classes/ASBTContractWrapper.md)
 - [ContractFactory](classes/ContractFactory.md)
 - [CreditScore](classes/CreditScore.md)
 - [ERC20\_\_factory](classes/ERC20__factory.md)
@@ -21,6 +21,7 @@
 - [Identity](classes/Identity.md)
 - [Masa](classes/Masa.md)
 - [MasaASBT](classes/MasaASBT.md)
+- [MasaASBTWrapper](classes/MasaASBTWrapper.md)
 - [MasaAccount](classes/MasaAccount.md)
 - [MasaArweave](classes/MasaArweave.md)
 - [MasaBase](classes/MasaBase.md)
@@ -31,21 +32,22 @@
 - [MasaIdentity](classes/MasaIdentity.md)
 - [MasaLinkable](classes/MasaLinkable.md)
 - [MasaModuleBase](classes/MasaModuleBase.md)
-- [MasaSBTs](classes/MasaSBTs.md)
+- [MasaSBTBase](classes/MasaSBTBase.md)
+- [MasaSBTWrapper](classes/MasaSBTWrapper.md)
 - [MasaSSSBT](classes/MasaSSSBT.md)
+- [MasaSSSBTWrapper](classes/MasaSSSBTWrapper.md)
 - [MasaSession](classes/MasaSession.md)
 - [MasaSoulLinker](classes/MasaSoulLinker.md)
 - [MasaSoulName](classes/MasaSoulName.md)
 - [SBTContract](classes/SBTContract.md)
-- [SBTWrapper](classes/SBTWrapper.md)
+- [SBTContractWrapper](classes/SBTContractWrapper.md)
 - [SSSBTContract](classes/SSSBTContract.md)
-- [SSSBTWrapper](classes/SSSBTWrapper.md)
+- [SSSBTContractWrapper](classes/SSSBTContractWrapper.md)
 - [SoulLinker](classes/SoulLinker.md)
 - [SoulName](classes/SoulName.md)
 
 ### Interfaces
 
-- [ASBTContractWrapper](interfaces/ASBTContractWrapper.md)
 - [Addresses](interfaces/Addresses.md)
 - [ApprovalEventObject](interfaces/ApprovalEventObject.md)
 - [Attribute](interfaces/Attribute.md)
@@ -75,8 +77,6 @@
 - [MasaConfig](interfaces/MasaConfig.md)
 - [MasaInterface](interfaces/MasaInterface.md)
 - [Network](interfaces/Network.md)
-- [SBTContractWrapper](interfaces/SBTContractWrapper.md)
-- [SSSBTContractWrapper](interfaces/SSSBTContractWrapper.md)
 - [SessionUser](interfaces/SessionUser.md)
 - [SoulNameDetails](interfaces/SoulNameDetails.md)
 - [SoulNameMetadataStoreResult](interfaces/SoulNameMetadataStoreResult.md)
@@ -131,9 +131,7 @@
 
 ### Functions
 
-- [addAuthority](modules.md#addauthority)
 - [burnIdentity](modules.md#burnidentity)
-- [burnSBT](modules.md#burnsbt)
 - [burnSoulName](modules.md#burnsoulname)
 - [calculateSoulNameLength](modules.md#calculatesoulnamelength)
 - [checkLogin](modules.md#checklogin)
@@ -162,7 +160,6 @@
 - [listGreens](modules.md#listgreens)
 - [listGreensAndPrint](modules.md#listgreensandprint)
 - [listLinks](modules.md#listlinks)
-- [listSBTs](modules.md#listsbts)
 - [listSoulNames](modules.md#listsoulnames)
 - [listSoulNamesAndPrint](modules.md#listsoulnamesandprint)
 - [loadCreditScoreDetails](modules.md#loadcreditscoredetails)
@@ -174,8 +171,6 @@
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
 - [loadIdentityDetails](modules.md#loadidentitydetails)
 - [loadLinks](modules.md#loadlinks)
-- [loadSBTIDs](modules.md#loadsbtids)
-- [loadSBTs](modules.md#loadsbts)
 - [loadSoulNameByName](modules.md#loadsoulnamebyname)
 - [loadSoulNameByTokenId](modules.md#loadsoulnamebytokenid)
 - [loadSoulNameDetailsByAddress](modules.md#loadsoulnamedetailsbyaddress)
@@ -183,9 +178,7 @@
 - [loadSoulNamesByNames](modules.md#loadsoulnamesbynames)
 - [login](modules.md#login)
 - [logout](modules.md#logout)
-- [mintASBT](modules.md#mintasbt)
 - [mintGreen](modules.md#mintgreen)
-- [mintSSSBT](modules.md#mintsssbt)
 - [parsePassport](modules.md#parsepassport)
 - [patchMetadataUrl](modules.md#patchmetadataurl)
 - [printSoulName](modules.md#printsoulname)
@@ -200,7 +193,6 @@
 - [sendSoulName](modules.md#sendsoulname)
 - [showIdentity](modules.md#showidentity)
 - [signMessage](modules.md#signmessage)
-- [signSSSBT](modules.md#signsssbt)
 - [signTypedData](modules.md#signtypeddata)
 - [tailSoulNames](modules.md#tailsoulnames)
 - [tailSoulNamesAndPrint](modules.md#tailsoulnamesandprint)
@@ -461,24 +453,6 @@ ___
 
 ## Functions
 
-### addAuthority
-
-▸ **addAuthority**(`masa`, `contract`, `authorityAddress`): `Promise`<`void`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
-| `contract` | `MasaSBTSelfSovereign` |
-| `authorityAddress` | `string` |
-
-#### Returns
-
-`Promise`<`void`\>
-
-___
-
 ### burnIdentity
 
 ▸ **burnIdentity**(`masa`): `Promise`<`boolean`\>
@@ -488,24 +462,6 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
-___
-
-### burnSBT
-
-▸ **burnSBT**(`masa`, `contract`, `SBTId`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
-| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
-| `SBTId` | `BigNumber` |
 
 #### Returns
 
@@ -1018,24 +974,6 @@ ___
 
 ___
 
-### listSBTs
-
-▸ **listSBTs**(`masa`, `contract`, `address?`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
-| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
-| `address?` | `string` |
-
-#### Returns
-
-`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
-
-___
-
 ### listSoulNames
 
 ▸ **listSoulNames**(`masa`, `address?`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
@@ -1227,42 +1165,6 @@ ___
 
 ___
 
-### loadSBTIDs
-
-▸ **loadSBTIDs**(`masa`, `contract`, `sbtIDs`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
-| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
-| `sbtIDs` | `BigNumber`[] |
-
-#### Returns
-
-`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
-
-___
-
-### loadSBTs
-
-▸ **loadSBTs**(`masa`, `contract`, `identityIdOrAddress`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
-| `contract` | `MasaSBTSelfSovereign` \| `MasaSBTAuthority` \| `MasaSBT` |
-| `identityIdOrAddress` | `string` \| `BigNumber` |
-
-#### Returns
-
-`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
-
-___
-
 ### loadSoulNameByName
 
 ▸ **loadSoulNameByName**(`masa`, `soulName`): `Promise`<`undefined` \| [`SoulNameDetails`](interfaces/SoulNameDetails.md)\>
@@ -1380,25 +1282,6 @@ ___
 
 ___
 
-### mintASBT
-
-▸ **mintASBT**(`masa`, `sbtContract`, `receiver`, `paymentMethod?`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
-| `sbtContract` | `ReferenceSBTAuthority` | `undefined` |
-| `receiver` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) | `"ETH"` |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
-___
-
 ### mintGreen
 
 ▸ **mintGreen**(`masa`, `paymentMethod`, `authorityAddress`, `signatureDate`, `signature`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
@@ -1416,27 +1299,6 @@ ___
 #### Returns
 
 `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
-
-___
-
-### mintSSSBT
-
-▸ **mintSSSBT**(`masa`, `contract`, `authorityAddress`, `signatureDate`, `signature`, `paymentMethod?`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
-| `contract` | `ReferenceSBTSelfSovereign` | `undefined` |
-| `authorityAddress` | `string` | `undefined` |
-| `signatureDate` | `number` | `undefined` |
-| `signature` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](modules.md#paymentmethod) | `"ETH"` |
-
-#### Returns
-
-`Promise`<`boolean`\>
 
 ___
 
@@ -1697,24 +1559,6 @@ ___
 #### Returns
 
 `Promise`<`undefined` \| `string`\>
-
-___
-
-### signSSSBT
-
-▸ **signSSSBT**(`masa`, `contract`, `receiver`): `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
-| `contract` | `ReferenceSBTSelfSovereign` |
-| `receiver` | `string` |
-
-#### Returns
-
-`Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
 
 ___
 

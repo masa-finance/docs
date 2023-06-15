@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.4.3](../README.md) / [Exports](../modules.md) / MasaASBT
+ - v3.4.6](../README.md) / [Exports](../modules.md) / MasaASBT
 
 # Class: MasaASBT
 
 ## Hierarchy
 
-- [`MasaSBTs`](MasaSBTs.md)
+- [`MasaBase`](MasaBase.md)
 
   ↳ **`MasaASBT`**
 
@@ -21,6 +21,7 @@
 
 ### Methods
 
+- [attach](MasaASBT.md#attach)
 - [connect](MasaASBT.md#connect)
 - [deploy](MasaASBT.md#deploy)
 
@@ -38,7 +39,7 @@
 
 #### Inherited from
 
-[MasaSBTs](MasaSBTs.md).[constructor](MasaSBTs.md#constructor)
+[MasaBase](MasaBase.md).[constructor](MasaBase.md#constructor)
 
 ## Properties
 
@@ -48,27 +49,52 @@
 
 #### Inherited from
 
-[MasaSBTs](MasaSBTs.md).[masa](MasaSBTs.md#masa)
+[MasaBase](MasaBase.md).[masa](MasaBase.md#masa)
 
 ## Methods
 
-### connect
+### attach
 
-▸ **connect**(`address`): `Promise`<[`ASBTWrapper`](ASBTWrapper.md)\>
+▸ **attach**<`Contract`\>(`contract`): [`MasaASBTWrapper`](MasaASBTWrapper.md)<`Contract`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `ReferenceSBTAuthority`<`Contract`\> |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `address` | `string` |
+| `contract` | `Contract` |
 
 #### Returns
 
-`Promise`<[`ASBTWrapper`](ASBTWrapper.md)\>
+[`MasaASBTWrapper`](MasaASBTWrapper.md)<`Contract`\>
 
-#### Overrides
+___
 
-[MasaSBTs](MasaSBTs.md).[connect](MasaSBTs.md#connect)
+### connect
+
+▸ **connect**<`Contract`\>(`address`, `factory?`): `Promise`<[`MasaASBTWrapper`](MasaASBTWrapper.md)<`Contract`\>\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Contract` | extends `ReferenceSBTAuthority`<`Contract`\> |
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `address` | `string` | `undefined` |
+| `factory` | [`ContractFactory`](ContractFactory.md) | `ReferenceSBTAuthority__factory` |
+
+#### Returns
+
+`Promise`<[`MasaASBTWrapper`](MasaASBTWrapper.md)<`Contract`\>\>
 
 ___
 
