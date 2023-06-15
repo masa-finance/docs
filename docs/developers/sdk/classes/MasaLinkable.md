@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.1](../README.md) / [Exports](../modules.md) / MasaLinkable
+ - v3.4.2](../README.md) / [Exports](../modules.md) / MasaLinkable
 
 # Class: MasaLinkable<LinkContract\>
 
