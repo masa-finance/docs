@@ -14,9 +14,10 @@ With Masa, you can track and reward an individuals achievements in your communit
 - Soulbound achievement badges as unique identifiers, you can reward and market to a specific group of users with achievement badge SBTs in their wallets.
 
 **For example:**
+
 - **Reward / Quest Program:** a user incentive pool which qualification is based on completion of specific quests, identified via quest achievement SBT badges
 - **Off-chain Achievements:** you can mint a Achievement Badge when a user joins your Discord channel
-- **On-chain Achievements:** you can mint a Achievement Badge when a contributor deploys a smart contract 
+- **On-chain Achievements:** you can mint a Achievement Badge when a contributor deploys a smart contract
 
 :::tip
 You need to have the Masa CLI installed, if you have not completed the Quickstart you can do so [here](https://developers.masa.finance/docs/quickstart/base)
@@ -46,18 +47,20 @@ npm i -g @masa-finance/masa-cli
 
 Masa supports 10 networks through its CLI and SDK. Masa Green SBT is deployed on all of the following networks:
 
-| Network        | Flag         | Contract |
-|----------------|--------------|----------|
-| ETH            | ethereum   |          |
-| ETH Goerli     | goerli     |          |
-| Base Mainnet   | NA           |          |
-| Base Goerli    | basegoerli |          |
-| Polygon        | polygon    |          |
-| Polygon Mumbai | mumbai     |          |
-| BNB Chain      | bsc        |          |
-| BNB Testnet    | bsctestnet |          |
-| Celo           | elo       |          |
-| Celo Alfajores | alfajores  |          |
+| Network        | Flag       |
+| -------------- | ---------- |
+| ETH            | ethereum   |
+| ETH Goerli     | goerli     |
+| Base Mainnet   |            |
+| Base Goerli    | basegoerli |
+| Polygon        | polygon    |
+| Polygon Mumbai | mumbai     |
+| BNB Chain      | bsc        |
+| BNB Testnet    | bsctest    |
+| Celo           | celo       |
+| Celo Alfajores | alfajores  |
+
+Contract addresses can be found [here](https://github.com/masa-finance/masa-contracts-identity/blob/main/addresses.json)
 
 ```bash
 masa settings preset-network <network flag>
@@ -70,12 +73,12 @@ masa settings preset-network basegoerli
 ```
 
 ```bash
-  __  __                            ____   _       ___ 
+  __  __                            ____   _       ___
  |  \/  |   __ _   ___    __ _     / ___| | |     |_ _|
- | |\/| |  / _` | / __|  / _` |   | |     | |      | | 
- | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | | 
+ | |\/| |  / _` | / __|  / _` |   | |     | |      | |
+ | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | |
  |_|  |_|  \__,_| |___/  \__,_|    \____| |_____| |___|
-                                                       
+
 Preset network 'basegoerli' set!
 bash ~ %
 ```
@@ -91,12 +94,12 @@ masa account
 ```
 
 ```bash
-  __  __                            ____   _       ___ 
+  __  __                            ____   _       ___
  |  \/  |   __ _   ___    __ _     / ___| | |     |_ _|
- | |\/| |  / _` | / __|  / _` |   | |     | |      | | 
- | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | | 
+ | |\/| |  / _` | / __|  / _` |   | |     | |      | |
+ | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | |
  |_|  |_|  \__,_| |___/  \__,_|    \____| |_____| |___|
-                                                       
+
 Address: '0xb3EAE0c0d3e09241a48485D7fDE226587A4E4461'
 
 Network: 'basegoerli'
@@ -121,30 +124,30 @@ Transfer some Base Goerli ETH into the account address listed in the CLI.
 In this guide we will use an _Authority SBT_ that can be minted (dropped) directly to a users wallet without any user interaction with web3.
 
 :::caution
-You will need a *minimum of 0.10* of your testnet asset to deploy a contract. This will either be _Goerli ETH_, _Base ETH_, _Mumbai MATIC_, _Alfajores Celo_, or _Testnet BNB_.
+You will need a _minimum of 0.10_ of your testnet asset to deploy a contract. This will either be _Goerli ETH_, _Base ETH_, _Mumbai MATIC_, _Alfajores Celo_, or _Testnet BNB_.
 :::
 
 ```bash
 masa asbt deploy --network basegoerli
 ```
 
- ```bash
-  __  __                            ____   _       ___ 
- |  \/  |   __ _   ___    __ _     / ___| | |     |_ _|
- | |\/| |  / _` | / __|  / _` |   | |     | |      | | 
- | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | | 
- |_|  |_|  \__,_| |___/  \__,_|    \____| |_____| |___|
-                                                       
+```bash
+ __  __                            ____   _       ___
+|  \/  |   __ _   ___    __ _     / ___| | |     |_ _|
+| |\/| |  / _` | / __|  / _` |   | |     | |      | |
+| |  | | | (_| | \__ \ | (_| |   | |___  | |___   | |
+|_|  |_|  \__,_| |___/  \__,_|    \____| |_____| |___|
+
 Deploying ASBT contract
 
-Enter the name of the SBT: Base Test SBT 
+Enter the name of the SBT: Base Test SBT
 Enter the ticker of the SBT: BTS
 Enter the URL for the metadata image: https:test.img
-Admin address (leave empty to use: '0xb3EAE0c0d3e09241a48485D7fDE226587A4E4461'): 
+Admin address (leave empty to use: '0xb3EAE0c0d3e09241a48485D7fDE226587A4E4461'):
 Deploying ASBT to network 'basegoerli'
 Waiting for transaction '0xf9707485c442b23bc45da03ccf16c048eb73c00be137ab01fc70824149b4d4a7' to finalize!
 ASBT successfully deployed to 'basegoerli' with contract address: '0x4d527F3eFD9dCf5fF44284FfB9fe22C6bdc2Da20'
-bash ~ % 
+bash ~ %
 ```
 
 :::tip
@@ -160,12 +163,12 @@ masa asbt mint 0x4d527F3eFD9dCf5fF44284FfB9fe22C6bdc2Da20 0xb3EAE0c0d3e09241a484
 ```
 
 ```bash
-  __  __                            ____   _       ___ 
+  __  __                            ____   _       ___
  |  \/  |   __ _   ___    __ _     / ___| | |     |_ _|
- | |\/| |  / _` | / __|  / _` |   | |     | |      | | 
- | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | | 
+ | |\/| |  / _` | / __|  / _` |   | |     | |      | |
+ | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | |
  |_|  |_|  \__,_| |___/  \__,_|    \____| |_____| |___|
-                                                       
+
 Minting SBT on:
 Contract Name: 'Base Test SBT '
 Contract Symbol: 'BTS'
@@ -207,7 +210,7 @@ A guide how to set up the Masa SDK can be found here: [Masa SDK](../developers/s
 In this guide we will use an _Authority SBT_ that can be minted (dropped) directly to a users wallet without any user interaction with web3.
 
 :::caution
-You will need a *minimum of 0.10* of your testnet asset to deploy a contract. This will either be _Goerli ETH_, _Base ETH_, _Mumbai MATIC_, _Alfajores Celo_, or _Testnet BNB_.
+You will need a _minimum of 0.10_ of your testnet asset to deploy a contract. This will either be _Goerli ETH_, _Base ETH_, _Mumbai MATIC_, _Alfajores Celo_, or _Testnet BNB_.
 :::
 
 ```typescript

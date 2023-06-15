@@ -31,18 +31,20 @@ npm i -g @masa-finance/masa-cli
 
 Masa supports 10 networks through its CLI and SDK. Masa Green SBT is deployed on all of the following networks:
 
-| Network        | Flag         | Contract |
-|----------------|--------------|----------|
-| ETH            | ethereum   |          |
-| ETH Goerli     | goerli     |          |
-| Base Mainnet   | NA           |          |
-| Base Goerli    | basegoerli |          |
-| Polygon        | polygon    |          |
-| Polygon Mumbai | mumbai     |          |
-| BNB Chain      | bsc        |          |
-| BNB Testnet    | bsctestnet |          |
-| Celo           | celo       |          |
-| Celo Alfajores | alfajores  |          |
+| Network        | Flag       | Extension |
+| -------------- | ---------- | --------- |
+| ETH            | ethereum   | .soul     |
+| ETH Goerli     | goerli     | .soul     |
+| Base Mainnet   |            |           |
+| Base Goerli    | basegoerli | .base     |
+| Polygon        | polygon    |           |
+| Polygon Mumbai | mumbai     |           |
+| BNB Chain      | bsc        |           |
+| BNB Testnet    | bsctest    |           |
+| Celo           | celo       | .celo     |
+| Celo Alfajores | alfajores  | .celo     |
+
+Contract addresses can be found [here](https://github.com/masa-finance/masa-contracts-identity/blob/main/addresses.json)
 
 ```bash
 masa settings preset-network <network flag>
@@ -55,12 +57,12 @@ masa settings preset-network basegoerli
 ```
 
 ```bash
-  __  __                            ____   _       ___ 
+  __  __                            ____   _       ___
  |  \/  |   __ _   ___    __ _     / ___| | |     |_ _|
- | |\/| |  / _` | / __|  / _` |   | |     | |      | | 
- | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | | 
+ | |\/| |  / _` | / __|  / _` |   | |     | |      | |
+ | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | |
  |_|  |_|  \__,_| |___/  \__,_|    \____| |_____| |___|
-                                                       
+
 Preset network 'basegoerli' set!
 bash ~ %
 ```
@@ -76,12 +78,12 @@ masa account
 ```
 
 ```bash
-  __  __                            ____   _       ___ 
+  __  __                            ____   _       ___
  |  \/  |   __ _   ___    __ _     / ___| | |     |_ _|
- | |\/| |  / _` | / __|  / _` |   | |     | |      | | 
- | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | | 
+ | |\/| |  / _` | / __|  / _` |   | |     | |      | |
+ | |  | | | (_| | \__ \ | (_| |   | |___  | |___   | |
  |_|  |_|  \__,_| |___/  \__,_|    \____| |_____| |___|
-                                                       
+
 Address: '0xb3EAE0c0d3e09241a48485D7fDE226587A4E4461'
 
 Network: 'basegoerli'
