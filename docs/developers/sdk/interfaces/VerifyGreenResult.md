@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.4.6](../README.md) / [Exports](../modules.md) / VerifyGreenResult
+ - v3.4.7](../README.md) / [Exports](../modules.md) / VerifyGreenResult
 
 # Interface: VerifyGreenResult
 
 ## Hierarchy
 
-- `GreenBaseResult`
+- [`GreenBaseResult`](GreenBaseResult.md)
 
   ↳ **`VerifyGreenResult`**
 
@@ -36,7 +36,7 @@ ___
 
 #### Inherited from
 
-GreenBaseResult.errorCode
+[GreenBaseResult](GreenBaseResult.md).[errorCode](GreenBaseResult.md#errorcode)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Inherited from
 
-GreenBaseResult.message
+[GreenBaseResult](GreenBaseResult.md).[message](GreenBaseResult.md#message)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Inherited from
 
-GreenBaseResult.status
+[GreenBaseResult](GreenBaseResult.md).[status](GreenBaseResult.md#status)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Inherited from
 
-GreenBaseResult.success
+[GreenBaseResult](GreenBaseResult.md).[success](GreenBaseResult.md#success)
 
 ___
 
@@ -88,4 +88,4 @@ ___
 
 #### Inherited from
 
-GreenBaseResult.tokenId
+[GreenBaseResult](GreenBaseResult.md).[tokenId](GreenBaseResult.md#tokenid)

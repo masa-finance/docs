@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.6](../README.md) / [Exports](../modules.md) / Green
+ - v3.4.7](../README.md) / [Exports](../modules.md) / Green
 
 # Class: Green
 
@@ -151,7 +151,7 @@ ___
 
 ### getMintPrice
 
-▸ `Protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
+▸ `Protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Parameters
 
@@ -163,7 +163,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
+`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Inherited from
 
@@ -209,7 +209,7 @@ ___
 
 ### getPrice
 
-▸ **getPrice**(`paymentMethod`, `slippage?`): `Promise`<{ `formattedMintTransactionFee`: `string` ; `formattedPrice`: `string` ; `mintTransactionEstimatedGas`: `BigNumber` ; `mintTransactionFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
+▸ **getPrice**(`paymentMethod`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md) & { `formattedMintTransactionFee`: `string` ; `mintTransactionEstimatedGas`: `BigNumber` ; `mintTransactionFee`: `BigNumber`  }\>
 
 Gets the price for a masa green
 
@@ -222,7 +222,7 @@ Gets the price for a masa green
 
 #### Returns
 
-`Promise`<{ `formattedMintTransactionFee`: `string` ; `formattedPrice`: `string` ; `mintTransactionEstimatedGas`: `BigNumber` ; `mintTransactionFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber`  }\>
+`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md) & { `formattedMintTransactionFee`: `string` ; `mintTransactionEstimatedGas`: `BigNumber` ; `mintTransactionFee`: `BigNumber`  }\>
 
 ___
 

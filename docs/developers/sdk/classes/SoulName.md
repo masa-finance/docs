@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.6](../README.md) / [Exports](../modules.md) / SoulName
+ - v3.4.7](../README.md) / [Exports](../modules.md) / SoulName
 
 # Class: SoulName
 
@@ -154,7 +154,7 @@ ___
 
 ### getMintPrice
 
-▸ `Protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
+▸ `Protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Parameters
 
@@ -166,7 +166,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
+`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Inherited from
 
@@ -212,7 +212,7 @@ ___
 
 ### getPrice
 
-▸ **getPrice**(`paymentMethod`, `nameLength`, `duration?`, `slippage?`): `Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
+▸ **getPrice**(`paymentMethod`, `nameLength`, `duration?`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 Get price for minting a soul name
 
@@ -227,7 +227,7 @@ Get price for minting a soul name
 
 #### Returns
 
-`Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
+`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 ___
 

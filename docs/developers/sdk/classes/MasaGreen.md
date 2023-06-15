@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.6](../README.md) / [Exports](../modules.md) / MasaGreen
+ - v3.4.7](../README.md) / [Exports](../modules.md) / MasaGreen
 
 # Class: MasaGreen
 
@@ -99,7 +99,7 @@ ___
 
 ### create
 
-▸ **create**(`paymentMethod?`, `phoneNumber`, `code`): `Promise`<[`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\>
+▸ **create**(`paymentMethod?`, `phoneNumber`, `code`): `Promise`<[`GreenBaseResult`](../interfaces/GreenBaseResult.md)\>
 
 Does the verification and mint step in one go
 
@@ -113,7 +113,7 @@ Does the verification and mint step in one go
 
 #### Returns
 
-`Promise`<[`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\>
+`Promise`<[`GreenBaseResult`](../interfaces/GreenBaseResult.md)\>
 
 ___
 
@@ -194,7 +194,7 @@ ___
 
 ### verify
 
-▸ **verify**(`phoneNumber`, `code`): `Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `authorityAddress?`: `string` ; `errorCode?`: `number` ; `signature?`: `string` ; `signatureDate?`: `number` ; `status?`: `string`  }\>
+▸ **verify**(`phoneNumber`, `code`): `Promise`<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\>
 
 Tries to verify the current verification attempt
 
@@ -207,4 +207,4 @@ Tries to verify the current verification attempt
 
 #### Returns
 
-`Promise`<`undefined` \| [`BaseResult`](../interfaces/BaseResult.md) & { `authorityAddress?`: `string` ; `errorCode?`: `number` ; `signature?`: `string` ; `signatureDate?`: `number` ; `status?`: `string`  }\>
+`Promise`<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\>

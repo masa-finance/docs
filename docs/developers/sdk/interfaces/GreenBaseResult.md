@@ -1,25 +1,35 @@
 [# Masa SDK
- - v3.4.7](../README.md) / [Exports](../modules.md) / UpdateCreditScoreResult
+ - v3.4.7](../README.md) / [Exports](../modules.md) / GreenBaseResult
 
-# Interface: UpdateCreditScoreResult
+# Interface: GreenBaseResult
 
 ## Hierarchy
 
 - [`BaseResult`](BaseResult.md)
 
-  ↳ **`UpdateCreditScoreResult`**
+  ↳ **`GreenBaseResult`**
+
+  ↳↳ [`GenerateGreenResult`](GenerateGreenResult.md)
+
+  ↳↳ [`VerifyGreenResult`](VerifyGreenResult.md)
 
 ## Table of contents
 
 ### Properties
 
-- [message](UpdateCreditScoreResult.md#message)
-- [signature](UpdateCreditScoreResult.md#signature)
-- [status](UpdateCreditScoreResult.md#status)
-- [success](UpdateCreditScoreResult.md#success)
-- [tokenId](UpdateCreditScoreResult.md#tokenid)
+- [errorCode](GreenBaseResult.md#errorcode)
+- [message](GreenBaseResult.md#message)
+- [status](GreenBaseResult.md#status)
+- [success](GreenBaseResult.md#success)
+- [tokenId](GreenBaseResult.md#tokenid)
 
 ## Properties
+
+### errorCode
+
+• `Optional` **errorCode**: `number`
+
+___
 
 ### message
 
@@ -28,12 +38,6 @@
 #### Inherited from
 
 [BaseResult](BaseResult.md).[message](BaseResult.md#message)
-
-___
-
-### signature
-
-• `Optional` **signature**: `string`
 
 ___
 

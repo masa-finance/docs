@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.6](../README.md) / [Exports](../modules.md) / SBTContractWrapper
+ - v3.4.7](../README.md) / [Exports](../modules.md) / SBTContractWrapper
 
 # Class: SBTContractWrapper<Contract\>
 
@@ -143,7 +143,7 @@ ___
 
 ### getMintPrice
 
-▸ `Protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
+▸ `Protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Parameters
 
@@ -155,7 +155,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
+`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Inherited from
 
@@ -201,7 +201,7 @@ ___
 
 ### getPrice
 
-▸ **getPrice**(`paymentMethod`, `slippage?`): `Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
+▸ **getPrice**(`paymentMethod`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Parameters
 
@@ -212,7 +212,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `formattedMintFee`: `string` ; `formattedPrice`: `string` ; `formattedProtocolFee`: `string` ; `mintFee`: `BigNumber` ; `paymentAddress`: `string` ; `price`: `BigNumber` ; `protocolFee`: `BigNumber`  }\>
+`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 ___
 

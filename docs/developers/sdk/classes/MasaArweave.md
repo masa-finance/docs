@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.6](../README.md) / [Exports](../modules.md) / MasaArweave
+ - v3.4.7](../README.md) / [Exports](../modules.md) / MasaArweave
 
 # Class: MasaArweave
 

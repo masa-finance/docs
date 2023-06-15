@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.4.6](README.md) / Exports
+ - v3.4.7](README.md) / Exports
 
 # # Masa SDK
- - v3.4.6
+ - v3.4.7
 
 ## Table of contents
 
@@ -62,6 +62,7 @@
 - [ERC20Interface](interfaces/ERC20Interface.md)
 - [GenerateCreditScoreResult](interfaces/GenerateCreditScoreResult.md)
 - [GenerateGreenResult](interfaces/GenerateGreenResult.md)
+- [GreenBaseResult](interfaces/GreenBaseResult.md)
 - [GreenDetails](interfaces/GreenDetails.md)
 - [ICreditScore](interfaces/ICreditScore.md)
 - [IGreen](interfaces/IGreen.md)
@@ -77,6 +78,7 @@
 - [MasaConfig](interfaces/MasaConfig.md)
 - [MasaInterface](interfaces/MasaInterface.md)
 - [Network](interfaces/Network.md)
+- [PriceInformation](interfaces/PriceInformation.md)
 - [SessionUser](interfaces/SessionUser.md)
 - [SoulNameDetails](interfaces/SoulNameDetails.md)
 - [SoulNameMetadataStoreResult](interfaces/SoulNameMetadataStoreResult.md)
@@ -537,7 +539,7 @@ ___
 
 ### createGreen
 
-▸ **createGreen**(`masa`, `paymentMethod`, `phoneNumber`, `code`): `Promise`<[`VerifyGreenResult`](interfaces/VerifyGreenResult.md)\>
+▸ **createGreen**(`masa`, `paymentMethod`, `phoneNumber`, `code`): `Promise`<[`GreenBaseResult`](interfaces/GreenBaseResult.md)\>
 
 #### Parameters
 
@@ -550,7 +552,7 @@ ___
 
 #### Returns
 
-`Promise`<[`VerifyGreenResult`](interfaces/VerifyGreenResult.md)\>
+`Promise`<[`GreenBaseResult`](interfaces/GreenBaseResult.md)\>
 
 ___
 
@@ -1675,7 +1677,7 @@ ___
 
 ### verifyGreen
 
-▸ **verifyGreen**(`masa`, `phoneNumber`, `code`): `Promise`<`undefined` \| [`BaseResult`](interfaces/BaseResult.md) & { `authorityAddress?`: `string` ; `errorCode?`: `number` ; `signature?`: `string` ; `signatureDate?`: `number` ; `status?`: `string`  }\>
+▸ **verifyGreen**(`masa`, `phoneNumber`, `code`): `Promise`<`undefined` \| [`VerifyGreenResult`](interfaces/VerifyGreenResult.md)\>
 
 #### Parameters
 
@@ -1687,7 +1689,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`BaseResult`](interfaces/BaseResult.md) & { `authorityAddress?`: `string` ; `errorCode?`: `number` ; `signature?`: `string` ; `signatureDate?`: `number` ; `status?`: `string`  }\>
+`Promise`<`undefined` \| [`VerifyGreenResult`](interfaces/VerifyGreenResult.md)\>
 
 ___
 
