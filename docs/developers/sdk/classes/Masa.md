@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.2](../README.md) / [Exports](../modules.md) / Masa
+ - v3.4.3](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -29,6 +29,10 @@
 - [soulName](Masa.md#soulname)
 - [sssbt](Masa.md#sssbt)
 - [utils](Masa.md#utils)
+
+### Methods
+
+- [create](Masa.md#create)
 
 ## Constructors
 
@@ -187,3 +191,19 @@ ___
 #### Implementation of
 
 [MasaInterface](../interfaces/MasaInterface.md).[utils](../interfaces/MasaInterface.md#utils)
+
+## Methods
+
+### create
+
+▸ `Static` **create**(`args`): `Promise`<[`Masa`](Masa.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | [`MasaArgs`](../interfaces/MasaArgs.md) |
+
+#### Returns
+
+`Promise`<[`Masa`](Masa.md)\>

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.2](../README.md) / [Exports](../modules.md) / MasaArgs
+ - v3.4.3](../README.md) / [Exports](../modules.md) / MasaArgs
 
 # Interface: MasaArgs
 
@@ -20,46 +20,46 @@
 
 ### apiUrl
 
-• `Optional` **apiUrl**: `string`
+• `Optional` `Readonly` **apiUrl**: `string`
 
 ___
 
 ### arweave
 
-• `Optional` **arweave**: `ApiConfig`
+• `Optional` `Readonly` **arweave**: `ApiConfig`
 
 ___
 
 ### contractOverrides
 
-• `Optional` **contractOverrides**: `Partial`<[`IIdentityContracts`](IIdentityContracts.md)\>
+• `Optional` `Readonly` **contractOverrides**: `Partial`<[`IIdentityContracts`](IIdentityContracts.md)\>
 
 ___
 
 ### cookie
 
-• `Optional` **cookie**: `string`
+• `Optional` `Readonly` **cookie**: `string`
 
 ___
 
 ### environment
 
-• `Optional` **environment**: [`EnvironmentName`](../modules.md#environmentname)
+• `Optional` `Readonly` **environment**: [`EnvironmentName`](../modules.md#environmentname)
 
 ___
 
 ### networkName
 
-• `Optional` **networkName**: [`NetworkName`](../modules.md#networkname)
+• `Optional` `Readonly` **networkName**: [`NetworkName`](../modules.md#networkname)
 
 ___
 
 ### signer
 
-• **signer**: `Signer`
+• `Readonly` **signer**: `Signer`
 
 ___
 
 ### verbose
 
-• `Optional` **verbose**: `boolean`
+• `Optional` `Readonly` **verbose**: `boolean`

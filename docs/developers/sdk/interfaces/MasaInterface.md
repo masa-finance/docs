@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.2](../README.md) / [Exports](../modules.md) / MasaInterface
+ - v3.4.3](../README.md) / [Exports](../modules.md) / MasaInterface
 
 # Interface: MasaInterface
 
@@ -30,85 +30,85 @@
 
 ### account
 
-• **account**: [`MasaAccount`](../classes/MasaAccount.md)
+• `Readonly` **account**: [`MasaAccount`](../classes/MasaAccount.md)
 
 ___
 
 ### arweave
 
-• **arweave**: [`MasaArweave`](../classes/MasaArweave.md)
+• `Readonly` **arweave**: [`MasaArweave`](../classes/MasaArweave.md)
 
 ___
 
 ### asbt
 
-• **asbt**: [`MasaASBT`](../classes/MasaASBT.md)
+• `Readonly` **asbt**: [`MasaASBT`](../classes/MasaASBT.md)
 
 ___
 
 ### client
 
-• **client**: [`MasaClient`](../classes/MasaClient.md)
+• `Readonly` **client**: [`MasaClient`](../classes/MasaClient.md)
 
 ___
 
 ### config
 
-• **config**: [`MasaConfig`](MasaConfig.md)
+• `Readonly` **config**: [`MasaConfig`](MasaConfig.md)
 
 ___
 
 ### contracts
 
-• **contracts**: [`MasaContracts`](../classes/MasaContracts.md)
+• `Readonly` **contracts**: [`MasaContracts`](../classes/MasaContracts.md)
 
 ___
 
 ### creditScore
 
-• **creditScore**: [`MasaCreditScore`](../classes/MasaCreditScore.md)
+• `Readonly` **creditScore**: [`MasaCreditScore`](../classes/MasaCreditScore.md)
 
 ___
 
 ### green
 
-• **green**: [`MasaGreen`](../classes/MasaGreen.md)
+• `Readonly` **green**: [`MasaGreen`](../classes/MasaGreen.md)
 
 ___
 
 ### identity
 
-• **identity**: [`MasaIdentity`](../classes/MasaIdentity.md)
+• `Readonly` **identity**: [`MasaIdentity`](../classes/MasaIdentity.md)
 
 ___
 
 ### sbt
 
-• **sbt**: [`MasaSBTs`](../classes/MasaSBTs.md)
+• `Readonly` **sbt**: [`MasaSBTs`](../classes/MasaSBTs.md)
 
 ___
 
 ### session
 
-• **session**: [`MasaSession`](../classes/MasaSession.md)
+• `Readonly` **session**: [`MasaSession`](../classes/MasaSession.md)
 
 ___
 
 ### soulName
 
-• **soulName**: [`MasaSoulName`](../classes/MasaSoulName.md)
+• `Readonly` **soulName**: [`MasaSoulName`](../classes/MasaSoulName.md)
 
 ___
 
 ### sssbt
 
-• **sssbt**: [`MasaSSSBT`](../classes/MasaSSSBT.md)
+• `Readonly` **sssbt**: [`MasaSSSBT`](../classes/MasaSSSBT.md)
 
 ___
 
 ### utils
 
-• **utils**: `Object`
+• `Readonly` **utils**: `Object`
 
 #### Type declaration
 
