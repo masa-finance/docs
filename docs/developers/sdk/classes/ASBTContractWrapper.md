@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.7](../README.md) / [Exports](../modules.md) / ASBTContractWrapper
+ - v3.4.9](../README.md) / [Exports](../modules.md) / ASBTContractWrapper
 
 # Class: ASBTContractWrapper<Contract\>
 
@@ -31,6 +31,7 @@
 
 - [bulkMint](ASBTContractWrapper.md#bulkmint)
 - [checkOrGiveAllowance](ASBTContractWrapper.md#checkorgiveallowance)
+- [createOverrides](ASBTContractWrapper.md#createoverrides)
 - [formatPrice](ASBTContractWrapper.md#formatprice)
 - [getMintPrice](ASBTContractWrapper.md#getmintprice)
 - [getNetworkFeeInformation](ASBTContractWrapper.md#getnetworkfeeinformation)
@@ -136,6 +137,26 @@ Checks or gives allowance on ERC20 tokens
 #### Inherited from
 
 [SBTContractWrapper](SBTContractWrapper.md).[checkOrGiveAllowance](SBTContractWrapper.md#checkorgiveallowance)
+
+___
+
+### createOverrides
+
+▸ `Protected` **createOverrides**(`value?`): `Promise`<`PayableOverrides`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value?` | `BigNumber` |
+
+#### Returns
+
+`Promise`<`PayableOverrides`\>
+
+#### Inherited from
+
+[SBTContractWrapper](SBTContractWrapper.md).[createOverrides](SBTContractWrapper.md#createoverrides)
 
 ___
 

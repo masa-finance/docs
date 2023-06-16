@@ -1,44 +1,56 @@
 [# Masa SDK
- - v3.4.9](../README.md) / [Exports](../modules.md) / SBTContract
+ - v3.4.9](../README.md) / [Exports](../modules.md) / MasaSBTModuleBase
 
-# Class: SBTContract
+# Class: MasaSBTModuleBase
 
 ## Hierarchy
 
-- [`MasaSBTModuleBase`](MasaSBTModuleBase.md)
+- [`MasaModuleBase`](MasaModuleBase.md)
 
-  ↳ **`SBTContract`**
+  ↳ **`MasaSBTModuleBase`**
+
+  ↳↳ [`CreditScore`](CreditScore.md)
+
+  ↳↳ [`Green`](Green.md)
+
+  ↳↳ [`Identity`](Identity.md)
+
+  ↳↳ [`ASBTContract`](ASBTContract.md)
+
+  ↳↳ [`SBTContract`](SBTContract.md)
+
+  ↳↳ [`SBTContractWrapper`](SBTContractWrapper.md)
+
+  ↳↳ [`SSSBTContract`](SSSBTContract.md)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](SBTContract.md#constructor)
+- [constructor](MasaSBTModuleBase.md#constructor)
 
 ### Properties
 
-- [instances](SBTContract.md#instances)
-- [masa](SBTContract.md#masa)
+- [instances](MasaSBTModuleBase.md#instances)
+- [masa](MasaSBTModuleBase.md#masa)
 
 ### Methods
 
-- [attach](SBTContract.md#attach)
-- [checkOrGiveAllowance](SBTContract.md#checkorgiveallowance)
-- [connect](SBTContract.md#connect)
-- [createOverrides](SBTContract.md#createoverrides)
-- [formatPrice](SBTContract.md#formatprice)
-- [getMintPrice](SBTContract.md#getmintprice)
-- [getNetworkFeeInformation](SBTContract.md#getnetworkfeeinformation)
-- [getPaymentAddress](SBTContract.md#getpaymentaddress)
-- [loadSBTContract](SBTContract.md#loadsbtcontract)
-- [verify](SBTContract.md#verify)
-- [addSlippage](SBTContract.md#addslippage)
+- [checkOrGiveAllowance](MasaSBTModuleBase.md#checkorgiveallowance)
+- [createOverrides](MasaSBTModuleBase.md#createoverrides)
+- [formatPrice](MasaSBTModuleBase.md#formatprice)
+- [getMintPrice](MasaSBTModuleBase.md#getmintprice)
+- [getNetworkFeeInformation](MasaSBTModuleBase.md#getnetworkfeeinformation)
+- [getPaymentAddress](MasaSBTModuleBase.md#getpaymentaddress)
+- [loadSBTContract](MasaSBTModuleBase.md#loadsbtcontract)
+- [verify](MasaSBTModuleBase.md#verify)
+- [addSlippage](MasaSBTModuleBase.md#addslippage)
 
 ## Constructors
 
 ### constructor
 
-• **new SBTContract**(`masa`, `instances`)
+• **new MasaSBTModuleBase**(`masa`, `instances`)
 
 #### Parameters
 
@@ -49,7 +61,7 @@
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[constructor](MasaSBTModuleBase.md#constructor)
+[MasaModuleBase](MasaModuleBase.md).[constructor](MasaModuleBase.md#constructor)
 
 ## Properties
 
@@ -59,7 +71,7 @@
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[instances](MasaSBTModuleBase.md#instances)
+[MasaModuleBase](MasaModuleBase.md).[instances](MasaModuleBase.md#instances)
 
 ___
 
@@ -69,31 +81,9 @@ ___
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[masa](MasaSBTModuleBase.md#masa)
+[MasaModuleBase](MasaModuleBase.md).[masa](MasaModuleBase.md#masa)
 
 ## Methods
-
-### attach
-
-▸ **attach**<`Contract`\>(`contract`): [`SBTContractWrapper`](SBTContractWrapper.md)<`Contract`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBT`<`Contract`\> |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `contract` | `Contract` |
-
-#### Returns
-
-[`SBTContractWrapper`](SBTContractWrapper.md)<`Contract`\>
-
-___
 
 ### checkOrGiveAllowance
 
@@ -116,32 +106,7 @@ Checks or gives allowance on ERC20 tokens
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[checkOrGiveAllowance](MasaSBTModuleBase.md#checkorgiveallowance)
-
-___
-
-### connect
-
-▸ **connect**<`Contract`\>(`address`, `factory?`): `Promise`<[`SBTContractWrapper`](SBTContractWrapper.md)<`Contract`\>\>
-
-loads an sbt instance and connects the contract functions to it
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBT`<`Contract`\> |
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `address` | `string` | `undefined` |
-| `factory` | [`ContractFactory`](ContractFactory.md) | `MasaSBT__factory` |
-
-#### Returns
-
-`Promise`<[`SBTContractWrapper`](SBTContractWrapper.md)<`Contract`\>\>
+[MasaModuleBase](MasaModuleBase.md).[checkOrGiveAllowance](MasaModuleBase.md#checkorgiveallowance)
 
 ___
 
@@ -161,7 +126,7 @@ ___
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[createOverrides](MasaSBTModuleBase.md#createoverrides)
+[MasaModuleBase](MasaModuleBase.md).[createOverrides](MasaModuleBase.md#createoverrides)
 
 ___
 
@@ -182,7 +147,7 @@ ___
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[formatPrice](MasaSBTModuleBase.md#formatprice)
+[MasaModuleBase](MasaModuleBase.md).[formatPrice](MasaModuleBase.md#formatprice)
 
 ___
 
@@ -202,10 +167,6 @@ ___
 
 `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
-#### Inherited from
-
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[getMintPrice](MasaSBTModuleBase.md#getmintprice)
-
 ___
 
 ### getNetworkFeeInformation
@@ -218,7 +179,7 @@ ___
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[getNetworkFeeInformation](MasaSBTModuleBase.md#getnetworkfeeinformation)
+[MasaModuleBase](MasaModuleBase.md).[getNetworkFeeInformation](MasaModuleBase.md#getnetworkfeeinformation)
 
 ___
 
@@ -240,7 +201,7 @@ Gets the payment address for a given payment method
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[getPaymentAddress](MasaSBTModuleBase.md#getpaymentaddress)
+[MasaModuleBase](MasaModuleBase.md).[getPaymentAddress](MasaModuleBase.md#getpaymentaddress)
 
 ___
 
@@ -264,10 +225,6 @@ ___
 #### Returns
 
 `Promise`<`Contract`\>
-
-#### Inherited from
-
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[loadSBTContract](MasaSBTModuleBase.md#loadsbtcontract)
 
 ___
 
@@ -295,7 +252,7 @@ verify a signature created during one of the SBT signing flows
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[verify](MasaSBTModuleBase.md#verify)
+[MasaModuleBase](MasaModuleBase.md).[verify](MasaModuleBase.md#verify)
 
 ___
 
@@ -318,4 +275,4 @@ adds a percentage to the price as slippage
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[addSlippage](MasaSBTModuleBase.md#addslippage)
+[MasaModuleBase](MasaModuleBase.md).[addSlippage](MasaModuleBase.md#addslippage)

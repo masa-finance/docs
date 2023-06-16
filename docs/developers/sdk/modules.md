@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.4.7](README.md) / Exports
+ - v3.4.9](README.md) / Exports
 
 # # Masa SDK
- - v3.4.7
+ - v3.4.9
 
 ## Table of contents
 
@@ -33,6 +33,7 @@
 - [MasaLinkable](classes/MasaLinkable.md)
 - [MasaModuleBase](classes/MasaModuleBase.md)
 - [MasaSBTBase](classes/MasaSBTBase.md)
+- [MasaSBTModuleBase](classes/MasaSBTModuleBase.md)
 - [MasaSBTWrapper](classes/MasaSBTWrapper.md)
 - [MasaSSSBT](classes/MasaSSSBT.md)
 - [MasaSSSBTWrapper](classes/MasaSSSBTWrapper.md)

@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.4.7](../README.md) / [Exports](../modules.md) / CreditScore
+ - v3.4.9](../README.md) / [Exports](../modules.md) / CreditScore
 
 # Class: CreditScore
 
 ## Hierarchy
 
-- [`MasaModuleBase`](MasaModuleBase.md)
+- [`MasaSBTModuleBase`](MasaSBTModuleBase.md)
 
   ↳ **`CreditScore`**
 
@@ -25,6 +25,7 @@
 
 - [burn](CreditScore.md#burn)
 - [checkOrGiveAllowance](CreditScore.md#checkorgiveallowance)
+- [createOverrides](CreditScore.md#createoverrides)
 - [formatPrice](CreditScore.md#formatprice)
 - [getMintPrice](CreditScore.md#getmintprice)
 - [getNetworkFeeInformation](CreditScore.md#getnetworkfeeinformation)
@@ -51,7 +52,7 @@
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[constructor](MasaModuleBase.md#constructor)
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[constructor](MasaSBTModuleBase.md#constructor)
 
 ## Properties
 
@@ -61,7 +62,7 @@
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[instances](MasaModuleBase.md#instances)
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[instances](MasaSBTModuleBase.md#instances)
 
 ___
 
@@ -71,13 +72,13 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[masa](MasaModuleBase.md#masa)
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[masa](MasaSBTModuleBase.md#masa)
 
 ___
 
 ### types
 
-• **types**: `Object`
+• `Readonly` **types**: `Object`
 
 #### Type declaration
 
@@ -124,7 +125,27 @@ Checks or gives allowance on ERC20 tokens
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[checkOrGiveAllowance](MasaModuleBase.md#checkorgiveallowance)
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[checkOrGiveAllowance](MasaSBTModuleBase.md#checkorgiveallowance)
+
+___
+
+### createOverrides
+
+▸ `Protected` **createOverrides**(`value?`): `Promise`<`PayableOverrides`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value?` | `BigNumber` |
+
+#### Returns
+
+`Promise`<`PayableOverrides`\>
+
+#### Inherited from
+
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[createOverrides](MasaSBTModuleBase.md#createoverrides)
 
 ___
 
@@ -145,7 +166,7 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[formatPrice](MasaModuleBase.md#formatprice)
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[formatPrice](MasaSBTModuleBase.md#formatprice)
 
 ___
 
@@ -167,7 +188,7 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[getMintPrice](MasaModuleBase.md#getmintprice)
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[getMintPrice](MasaSBTModuleBase.md#getmintprice)
 
 ___
 
@@ -181,7 +202,7 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[getNetworkFeeInformation](MasaModuleBase.md#getnetworkfeeinformation)
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[getNetworkFeeInformation](MasaSBTModuleBase.md#getnetworkfeeinformation)
 
 ___
 
@@ -203,7 +224,7 @@ Gets the payment address for a given payment method
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[getPaymentAddress](MasaModuleBase.md#getpaymentaddress)
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[getPaymentAddress](MasaSBTModuleBase.md#getpaymentaddress)
 
 ___
 
@@ -249,7 +270,7 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[loadSBTContract](MasaModuleBase.md#loadsbtcontract)
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[loadSBTContract](MasaSBTModuleBase.md#loadsbtcontract)
 
 ___
 
@@ -318,7 +339,7 @@ verify a signature created during one of the SBT signing flows
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[verify](MasaModuleBase.md#verify)
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[verify](MasaSBTModuleBase.md#verify)
 
 ___
 
@@ -341,4 +362,4 @@ adds a percentage to the price as slippage
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[addSlippage](MasaModuleBase.md#addslippage)
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[addSlippage](MasaSBTModuleBase.md#addslippage)

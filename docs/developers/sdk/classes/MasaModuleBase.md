@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.7](../README.md) / [Exports](../modules.md) / MasaModuleBase
+ - v3.4.9](../README.md) / [Exports](../modules.md) / MasaModuleBase
 
 # Class: MasaModuleBase
 
@@ -9,19 +9,7 @@
 
   ↳ **`MasaModuleBase`**
 
-  ↳↳ [`CreditScore`](CreditScore.md)
-
-  ↳↳ [`Green`](Green.md)
-
-  ↳↳ [`Identity`](Identity.md)
-
-  ↳↳ [`ASBTContract`](ASBTContract.md)
-
-  ↳↳ [`SBTContract`](SBTContract.md)
-
-  ↳↳ [`SBTContractWrapper`](SBTContractWrapper.md)
-
-  ↳↳ [`SSSBTContract`](SSSBTContract.md)
+  ↳↳ [`MasaSBTModuleBase`](MasaSBTModuleBase.md)
 
   ↳↳ [`SoulLinker`](SoulLinker.md)
 
@@ -41,11 +29,10 @@
 ### Methods
 
 - [checkOrGiveAllowance](MasaModuleBase.md#checkorgiveallowance)
+- [createOverrides](MasaModuleBase.md#createoverrides)
 - [formatPrice](MasaModuleBase.md#formatprice)
-- [getMintPrice](MasaModuleBase.md#getmintprice)
 - [getNetworkFeeInformation](MasaModuleBase.md#getnetworkfeeinformation)
 - [getPaymentAddress](MasaModuleBase.md#getpaymentaddress)
-- [loadSBTContract](MasaModuleBase.md#loadsbtcontract)
 - [verify](MasaModuleBase.md#verify)
 - [addSlippage](MasaModuleBase.md#addslippage)
 
@@ -105,6 +92,22 @@ Checks or gives allowance on ERC20 tokens
 
 ___
 
+### createOverrides
+
+▸ `Protected` **createOverrides**(`value?`): `Promise`<`PayableOverrides`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value?` | `BigNumber` |
+
+#### Returns
+
+`Promise`<`PayableOverrides`\>
+
+___
+
 ### formatPrice
 
 ▸ `Protected` **formatPrice**(`paymentAddress`, `price`): `Promise`<`string`\>
@@ -119,24 +122,6 @@ ___
 #### Returns
 
 `Promise`<`string`\>
-
-___
-
-### getMintPrice
-
-▸ `Protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `contract` | `MasaSBT` | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
-
-#### Returns
-
-`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 ___
 
@@ -165,29 +150,6 @@ Gets the payment address for a given payment method
 #### Returns
 
 `string`
-
-___
-
-### loadSBTContract
-
-▸ `Protected` **loadSBTContract**<`Contract`\>(`address`, `factory`): `Promise`<`Contract`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBT`<`Contract`\> |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `factory` | [`ContractFactory`](ContractFactory.md) |
-
-#### Returns
-
-`Promise`<`Contract`\>
 
 ___
 

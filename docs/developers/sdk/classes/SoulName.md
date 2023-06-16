@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.7](../README.md) / [Exports](../modules.md) / SoulName
+ - v3.4.9](../README.md) / [Exports](../modules.md) / SoulName
 
 # Class: SoulName
 
@@ -25,14 +25,13 @@
 
 - [burn](SoulName.md#burn)
 - [checkOrGiveAllowance](SoulName.md#checkorgiveallowance)
+- [createOverrides](SoulName.md#createoverrides)
 - [formatPrice](SoulName.md#formatprice)
-- [getMintPrice](SoulName.md#getmintprice)
 - [getNetworkFeeInformation](SoulName.md#getnetworkfeeinformation)
 - [getPaymentAddress](SoulName.md#getpaymentaddress)
 - [getPrice](SoulName.md#getprice)
 - [getSoulnameData](SoulName.md#getsoulnamedata)
 - [isAvailable](SoulName.md#isavailable)
-- [loadSBTContract](SoulName.md#loadsbtcontract)
 - [purchase](SoulName.md#purchase)
 - [sign](SoulName.md#sign)
 - [transfer](SoulName.md#transfer)
@@ -80,7 +79,7 @@ ___
 
 ### types
 
-• **types**: `Object`
+• `Readonly` **types**: `Object`
 
 #### Type declaration
 
@@ -131,6 +130,26 @@ Checks or gives allowance on ERC20 tokens
 
 ___
 
+### createOverrides
+
+▸ `Protected` **createOverrides**(`value?`): `Promise`<`PayableOverrides`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value?` | `BigNumber` |
+
+#### Returns
+
+`Promise`<`PayableOverrides`\>
+
+#### Inherited from
+
+[MasaModuleBase](MasaModuleBase.md).[createOverrides](MasaModuleBase.md#createoverrides)
+
+___
+
 ### formatPrice
 
 ▸ `Protected` **formatPrice**(`paymentAddress`, `price`): `Promise`<`string`\>
@@ -149,28 +168,6 @@ ___
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[formatPrice](MasaModuleBase.md#formatprice)
-
-___
-
-### getMintPrice
-
-▸ `Protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `contract` | `MasaSBT` | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
-
-#### Returns
-
-`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
-
-#### Inherited from
-
-[MasaModuleBase](MasaModuleBase.md).[getMintPrice](MasaModuleBase.md#getmintprice)
 
 ___
 
@@ -264,33 +261,6 @@ Check if a soul name is available
 #### Returns
 
 `Promise`<`boolean`\>
-
-___
-
-### loadSBTContract
-
-▸ `Protected` **loadSBTContract**<`Contract`\>(`address`, `factory`): `Promise`<`Contract`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBT`<`Contract`\> |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `factory` | [`ContractFactory`](ContractFactory.md) |
-
-#### Returns
-
-`Promise`<`Contract`\>
-
-#### Inherited from
-
-[MasaModuleBase](MasaModuleBase.md).[loadSBTContract](MasaModuleBase.md#loadsbtcontract)
 
 ___
 

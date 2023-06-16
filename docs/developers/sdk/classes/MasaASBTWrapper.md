@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.7](../README.md) / [Exports](../modules.md) / MasaASBTWrapper
+ - v3.4.9](../README.md) / [Exports](../modules.md) / MasaASBTWrapper
 
 # Class: MasaASBTWrapper<Contract\>
 
@@ -150,7 +150,7 @@ ___
 
 ### loadSBTIDs
 
-▸ **loadSBTIDs**(`sbtIDs`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ `Protected` **loadSBTIDs**(`sbtIDs`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Parameters
 
@@ -170,7 +170,7 @@ ___
 
 ### loadSBTs
 
-▸ **loadSBTs**(`identityIdOrAddress`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ `Protected` **loadSBTs**(`identityIdOrAddress`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Parameters
 

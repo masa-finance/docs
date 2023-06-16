@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.7](../README.md) / [Exports](../modules.md) / SoulLinker
+ - v3.4.9](../README.md) / [Exports](../modules.md) / SoulLinker
 
 # Class: SoulLinker
 
@@ -26,12 +26,11 @@
 - [addLink](SoulLinker.md#addlink)
 - [breakLink](SoulLinker.md#breaklink)
 - [checkOrGiveAllowance](SoulLinker.md#checkorgiveallowance)
+- [createOverrides](SoulLinker.md#createoverrides)
 - [formatPrice](SoulLinker.md#formatprice)
-- [getMintPrice](SoulLinker.md#getmintprice)
 - [getNetworkFeeInformation](SoulLinker.md#getnetworkfeeinformation)
 - [getPaymentAddress](SoulLinker.md#getpaymentaddress)
 - [getPrice](SoulLinker.md#getprice)
-- [loadSBTContract](SoulLinker.md#loadsbtcontract)
 - [signLink](SoulLinker.md#signlink)
 - [verify](SoulLinker.md#verify)
 - [addSlippage](SoulLinker.md#addslippage)
@@ -77,7 +76,7 @@ ___
 
 ### types
 
-• **types**: `Object`
+• `Readonly` **types**: `Object`
 
 #### Type declaration
 
@@ -156,6 +155,26 @@ Checks or gives allowance on ERC20 tokens
 
 ___
 
+### createOverrides
+
+▸ `Protected` **createOverrides**(`value?`): `Promise`<`PayableOverrides`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value?` | `BigNumber` |
+
+#### Returns
+
+`Promise`<`PayableOverrides`\>
+
+#### Inherited from
+
+[MasaModuleBase](MasaModuleBase.md).[createOverrides](MasaModuleBase.md#createoverrides)
+
+___
+
 ### formatPrice
 
 ▸ `Protected` **formatPrice**(`paymentAddress`, `price`): `Promise`<`string`\>
@@ -174,28 +193,6 @@ ___
 #### Inherited from
 
 [MasaModuleBase](MasaModuleBase.md).[formatPrice](MasaModuleBase.md#formatprice)
-
-___
-
-### getMintPrice
-
-▸ `Protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `contract` | `MasaSBT` | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
-
-#### Returns
-
-`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
-
-#### Inherited from
-
-[MasaModuleBase](MasaModuleBase.md).[getMintPrice](MasaModuleBase.md#getmintprice)
 
 ___
 
@@ -252,33 +249,6 @@ Gets price for establishing a link
 #### Returns
 
 `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
-
-___
-
-### loadSBTContract
-
-▸ `Protected` **loadSBTContract**<`Contract`\>(`address`, `factory`): `Promise`<`Contract`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBT`<`Contract`\> |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `factory` | [`ContractFactory`](ContractFactory.md) |
-
-#### Returns
-
-`Promise`<`Contract`\>
-
-#### Inherited from
-
-[MasaModuleBase](MasaModuleBase.md).[loadSBTContract](MasaModuleBase.md#loadsbtcontract)
 
 ___
 
