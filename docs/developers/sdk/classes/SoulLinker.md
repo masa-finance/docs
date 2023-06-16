@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.4.9](../README.md) / [Exports](../modules.md) / SoulLinker
+ - v3.4.10](../README.md) / [Exports](../modules.md) / SoulLinker
 
 # Class: SoulLinker
 
 ## Hierarchy
 
-- [`MasaModuleBase`](MasaModuleBase.md)
+- `MasaModuleBase`
 
   ↳ **`SoulLinker`**
 
@@ -50,7 +50,7 @@
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[constructor](MasaModuleBase.md#constructor)
+MasaModuleBase.constructor
 
 ## Properties
 
@@ -60,7 +60,7 @@
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[instances](MasaModuleBase.md#instances)
+MasaModuleBase.instances
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[masa](MasaModuleBase.md#masa)
+MasaModuleBase.masa
 
 ___
 
@@ -151,7 +151,7 @@ Checks or gives allowance on ERC20 tokens
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[checkOrGiveAllowance](MasaModuleBase.md#checkorgiveallowance)
+MasaModuleBase.checkOrGiveAllowance
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[createOverrides](MasaModuleBase.md#createoverrides)
+MasaModuleBase.createOverrides
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[formatPrice](MasaModuleBase.md#formatprice)
+MasaModuleBase.formatPrice
 
 ___
 
@@ -206,7 +206,7 @@ ___
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[getNetworkFeeInformation](MasaModuleBase.md#getnetworkfeeinformation)
+MasaModuleBase.getNetworkFeeInformation
 
 ___
 
@@ -228,7 +228,7 @@ Gets the payment address for a given payment method
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[getPaymentAddress](MasaModuleBase.md#getpaymentaddress)
+MasaModuleBase.getPaymentAddress
 
 ___
 
@@ -299,7 +299,7 @@ verify a signature created during one of the SBT signing flows
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[verify](MasaModuleBase.md#verify)
+MasaModuleBase.verify
 
 ___
 
@@ -322,4 +322,4 @@ adds a percentage to the price as slippage
 
 #### Inherited from
 
-[MasaModuleBase](MasaModuleBase.md).[addSlippage](MasaModuleBase.md#addslippage)
+MasaModuleBase.addSlippage

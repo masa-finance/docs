@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.4.9](../README.md) / [Exports](../modules.md) / MasaASBT
+ - v3.4.10](../README.md) / [Exports](../modules.md) / MasaASBT
 
 # Class: MasaASBT
 
 ## Hierarchy
 
-- [`MasaBase`](MasaBase.md)
+- `MasaBase`
 
   ↳ **`MasaASBT`**
 
@@ -39,7 +39,7 @@
 
 #### Inherited from
 
-[MasaBase](MasaBase.md).[constructor](MasaBase.md#constructor)
+MasaBase.constructor
 
 ## Properties
 
@@ -49,7 +49,7 @@
 
 #### Inherited from
 
-[MasaBase](MasaBase.md).[masa](MasaBase.md#masa)
+MasaBase.masa
 
 ## Methods
 

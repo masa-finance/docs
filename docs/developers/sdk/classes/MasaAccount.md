@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.4.9](../README.md) / [Exports](../modules.md) / MasaAccount
+ - v3.4.10](../README.md) / [Exports](../modules.md) / MasaAccount
 
 # Class: MasaAccount
 
 ## Hierarchy
 
-- [`MasaBase`](MasaBase.md)
+- `MasaBase`
 
   ↳ **`MasaAccount`**
 
@@ -37,7 +37,7 @@
 
 #### Inherited from
 
-[MasaBase](MasaBase.md).[constructor](MasaBase.md#constructor)
+MasaBase.constructor
 
 ## Properties
 
@@ -47,7 +47,7 @@
 
 #### Inherited from
 
-[MasaBase](MasaBase.md).[masa](MasaBase.md#masa)
+MasaBase.masa
 
 ## Methods
 

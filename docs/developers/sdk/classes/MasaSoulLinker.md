@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.4.9](../README.md) / [Exports](../modules.md) / MasaSoulLinker
+ - v3.4.10](../README.md) / [Exports](../modules.md) / MasaSoulLinker
 
 # Class: MasaSoulLinker
 
 ## Hierarchy
 
-- [`MasaBase`](MasaBase.md)
+- `MasaBase`
 
   ↳ **`MasaSoulLinker`**
 
@@ -44,7 +44,7 @@
 
 #### Overrides
 
-[MasaBase](MasaBase.md).[constructor](MasaBase.md#constructor)
+MasaBase.constructor
 
 ## Properties
 
@@ -60,7 +60,7 @@ ___
 
 #### Inherited from
 
-[MasaBase](MasaBase.md).[masa](MasaBase.md#masa)
+MasaBase.masa
 
 ## Methods
 

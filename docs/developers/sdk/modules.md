@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.4.9](README.md) / Exports
+ - v3.4.10](README.md) / Exports
 
 # # Masa SDK
- - v3.4.9
+ - v3.4.10
 
 ## Table of contents
 
@@ -24,16 +24,12 @@
 - [MasaASBTWrapper](classes/MasaASBTWrapper.md)
 - [MasaAccount](classes/MasaAccount.md)
 - [MasaArweave](classes/MasaArweave.md)
-- [MasaBase](classes/MasaBase.md)
 - [MasaClient](classes/MasaClient.md)
 - [MasaContracts](classes/MasaContracts.md)
 - [MasaCreditScore](classes/MasaCreditScore.md)
 - [MasaGreen](classes/MasaGreen.md)
 - [MasaIdentity](classes/MasaIdentity.md)
-- [MasaLinkable](classes/MasaLinkable.md)
-- [MasaModuleBase](classes/MasaModuleBase.md)
 - [MasaSBTBase](classes/MasaSBTBase.md)
-- [MasaSBTModuleBase](classes/MasaSBTModuleBase.md)
 - [MasaSBTWrapper](classes/MasaSBTWrapper.md)
 - [MasaSSSBT](classes/MasaSSSBT.md)
 - [MasaSSSBTWrapper](classes/MasaSSSBTWrapper.md)

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.9](../README.md) / [Exports](../modules.md) / ERC20\_\_factory
+ - v3.4.10](../README.md) / [Exports](../modules.md) / ERC20\_\_factory
 
 # Class: ERC20\_\_factory
 
