@@ -2257,22 +2257,22 @@
   dependencies:
     "@lit-labs/ssr-dom-shim" "^1.0.0"
 
-"@masa-finance/masa-contracts-identity@^1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-contracts-identity/-/masa-contracts-identity-1.8.0.tgz#d32b9416a377a736b567a6bcbbedcf973314b269"
-  integrity sha512-cpUVyWmlOP3683MiSTYKlTOAgmYpGhOIsnCNpU/nq2nP4hUOzCX4O3lpFTUMHIZEY6yX36Y1Rg/bonc3ELLk5A==
+"@masa-finance/masa-contracts-identity@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-contracts-identity/-/masa-contracts-identity-1.8.2.tgz#3818bc44ffd9307417e6c294c2d438b09adc3efd"
+  integrity sha512-gH3LlZdFqjVk2JUL3tm6B/StYqs0kSJK5XhnIFWq4iIC3l3/U9D45yT3Yhx/7uFDDr9Zu23UHrs/gFzNg4OU2w==
   dependencies:
     ethers "~5.7.2"
 
-"@masa-finance/masa-react@^2.3.13":
-  version "2.3.13"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-react/-/masa-react-2.3.13.tgz#c9501b6870b5ddad4ab26978e18efe1eaed8f5ec"
-  integrity sha512-/BEnw/mI9JqIz1KniDHiXEVJdT+S0L4dGNmn/v5bPXQmvHiXoFwFpK28nJPL/dSA7pUeOV/PyAMwDB7ZOLiw0g==
+"@masa-finance/masa-react@^2.4.13":
+  version "2.4.13"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-react/-/masa-react-2.4.13.tgz#f725aa356f6b61d30c1447cf28caedc7122d083e"
+  integrity sha512-QvHOyxOis7BD9zvDQ1ecUlx4zczQ4IT948fZFTYV3rEdbBvi/TCFs+5BnTWl3GvG/0+EZ7i3F/whUEXXAsVgYA==
   dependencies:
     "@acusti/react-code-input" "^3.11.0"
     "@babel/preset-typescript" "^7.21.5"
     "@celo/rainbowkit-celo" "^0.11.1"
-    "@masa-finance/masa-sdk" "^3.1.3"
+    "@masa-finance/masa-sdk" "^3.4.10"
     "@metamask/providers" "^11.0.0"
     "@rainbow-me/rainbowkit" "0.12.14"
     "@wagmi/core" "0.10.11"
@@ -2295,12 +2295,12 @@
     storybook-addon-sass-postcss "^0.1.3"
     wagmi "0.12.13"
 
-"@masa-finance/masa-sdk@^3.1.3":
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-3.1.3.tgz#6218003407733739f2ade8feb4138f06cdbe9cf2"
-  integrity sha512-LUV8yTwOlqTkpWmi1IgLEoEvAQm+WPNv16oM4LKAoTAikF3RC+1NMAoBiLPMyxCL8QPRsvHs0LPpOSJvq35AuQ==
+"@masa-finance/masa-sdk@^3.4.10":
+  version "3.4.10"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-sdk/-/masa-sdk-3.4.10.tgz#8a3dff09c74431651aa44bde426d21df6241d140"
+  integrity sha512-sj/W+yC5kVkrQ86c51tKQpYm/6k6+Bk7Owqe5ws+zRV5jXnnoILFTXfmp4qsRm5KqXgm+XHHx/dNZCjxWkS5BQ==
   dependencies:
-    "@masa-finance/masa-contracts-identity" "^1.8.0"
+    "@masa-finance/masa-contracts-identity" "^1.8.2"
     "@masa-finance/masa-token" "^2.0.0"
     arweave "1.11.8"
     axios "^1.3.2"
