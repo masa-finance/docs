@@ -1,8 +1,8 @@
 [# Masa React
- - v2.4.13](README.md) / Exports
+ - v2.4.14](README.md) / Exports
 
 # # Masa React
- - v2.4.13
+ - v2.4.14
 
 ## Table of contents
 
@@ -289,7 +289,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) & { `chainsToUse?`: (``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``)[] ; `rainbowKitModalSize?`: ``"compact"`` \| ``"wide"`` ; `walletsToUse?`: (``"metamask"`` \| ``"valora"`` \| ``"walletconnect"``)[]  } |
+| `«destructured»` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) & { `chainsToUse?`: (``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``)[] ; `rainbowKitModalSize?`: ``"compact"`` \| ``"wide"`` ; `walletsToUse?`: (``"walletconnect"`` \| ``"metamask"`` \| ``"valora"``)[]  } |
 
 #### Returns
 
