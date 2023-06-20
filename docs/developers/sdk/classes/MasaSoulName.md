@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.10](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v3.4.11](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
