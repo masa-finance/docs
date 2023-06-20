@@ -289,7 +289,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) & { `chainsToUse?`: (``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``)[] ; `rainbowKitModalSize?`: ``"compact"`` \| ``"wide"`` ; `walletsToUse?`: (``"walletconnect"`` \| ``"metamask"`` \| ``"valora"``)[]  } |
+| `«destructured»` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) & { `chainsToUse?`: (``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``)[] ; `rainbowKitModalSize?`: ``"compact"`` \| ``"wide"`` ; `walletsToUse?`: (``"metamask"`` \| ``"valora"`` \| ``"walletconnect"``)[]  } |
 
 #### Returns
 
