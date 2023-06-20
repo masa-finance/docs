@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.11](../README.md) / [Exports](../modules.md) / ERC20Interface
+ - v3.4.12](../README.md) / [Exports](../modules.md) / ERC20Interface
 
 # Interface: ERC20Interface
 

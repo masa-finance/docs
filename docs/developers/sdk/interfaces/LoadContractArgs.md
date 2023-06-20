@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.11](../README.md) / [Exports](../modules.md) / LoadContractArgs
+ - v3.4.12](../README.md) / [Exports](../modules.md) / LoadContractArgs
 
 # Interface: LoadContractArgs
 
@@ -14,7 +14,7 @@
 
 ### networkName
 
-• **networkName**: [`NetworkName`](../modules.md#networkname)
+• `Optional` **networkName**: [`NetworkName`](../modules.md#networkname)
 
 ___
 
