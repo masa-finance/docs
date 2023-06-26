@@ -1313,7 +1313,7 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@celo/rainbowkit-celo@^0.11.2":
+"@celo/rainbowkit-celo@^0.11.1":
   version "0.11.2"
   resolved "https://registry.yarnpkg.com/@celo/rainbowkit-celo/-/rainbowkit-celo-0.11.2.tgz#9e9f5435964585cb6dfa94a6766341bb5075cf42"
   integrity sha512-pgHPe/2vhLc2+BPsqQtdqnqA+jORhxUo6qs4Br/o/65SOANixF6p5v5iVBObtClRtp5O0Ou+rzaN+VUfh/PvmA==
@@ -2257,28 +2257,24 @@
   dependencies:
     "@lit-labs/ssr-dom-shim" "^1.0.0"
 
-"@masa-finance/masa-contracts-identity@^1.8.0", "@masa-finance/masa-contracts-identity@^1.8.2":
+"@masa-finance/masa-contracts-identity@^1.8.2":
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/@masa-finance/masa-contracts-identity/-/masa-contracts-identity-1.8.2.tgz#3818bc44ffd9307417e6c294c2d438b09adc3efd"
   integrity sha512-gH3LlZdFqjVk2JUL3tm6B/StYqs0kSJK5XhnIFWq4iIC3l3/U9D45yT3Yhx/7uFDDr9Zu23UHrs/gFzNg4OU2w==
   dependencies:
     ethers "~5.7.2"
 
-"@masa-finance/masa-react@^2.4.17":
-  version "2.4.17"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-react/-/masa-react-2.4.17.tgz#53bc9b2422c313df49c7acb86b15c7141a0d8a1c"
-  integrity sha512-REpec6Eq9qYwtovDsPP6EQfYYJlF2jB+hExJ9O3r8nPK8Rsh0i+Pxek85xXxerfyxGUBpfGtr7g4hd3QDANtwQ==
+"@masa-finance/masa-react@2.4.14":
+  version "2.4.14"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-react/-/masa-react-2.4.14.tgz#5a340bba9f27a41bb0b5043867e56500963735bb"
+  integrity sha512-lB5XbhAC383aoEP6j6hmhoclV76Quhu1hx5R7LlH7xAVYVdE8+6vSAiA6c6lEbxEvepuSPpggnEAIUm6NtnhBA==
   dependencies:
     "@acusti/react-code-input" "^3.11.0"
     "@babel/preset-typescript" "^7.21.5"
-    "@celo/rainbowkit-celo" "^0.11.2"
-    "@masa-finance/masa-contracts-identity" "^1.8.0"
+    "@celo/rainbowkit-celo" "^0.11.1"
     "@masa-finance/masa-sdk" "^3.4.11"
     "@metamask/providers" "^11.0.0"
     "@rainbow-me/rainbowkit" "0.12.14"
-    "@tanstack/query-sync-storage-persister" "^4.27.1"
-    "@tanstack/react-query" "^4.28.0"
-    "@tanstack/react-query-persist-client" "^4.28.0"
     "@wagmi/core" "0.10.11"
     babel-loader "^9.1.2"
     babel-plugin-import "^1.13.6"
@@ -2288,7 +2284,6 @@
     ethers "^5"
     html-webpack-plugin "^5.5.0"
     node-sass "^9.0.0"
-    normalize.css "^8.0.1"
     react "^18.2.0"
     react-phone-number-input "^3.2.23"
     react-query "^3.39.3"
@@ -8720,11 +8715,6 @@ normalize-url@^6.0.1:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-6.1.0.tgz#40d0885b535deffe3f3147bec877d05fe4c5668a"
   integrity sha512-DlL+XwOy3NxAQ8xuC0okPgK46iuVNAK01YN7RueYBqqFeGsBjV9XmCAzAdgt+667bCl5kPh9EqKKDwnaPG1I7A==
-
-normalize.css@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
-  integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
 
 npm-run-path@^4.0.1:
   version "4.0.1"
