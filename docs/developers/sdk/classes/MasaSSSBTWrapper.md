@@ -46,7 +46,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `ReferenceSBTSelfSovereign`<`Contract`\> |
+| `Contract` | extends `ReferenceSBTSelfSovereign` |
 
 #### Parameters
 

@@ -46,7 +46,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `ReferenceSBTAuthority`<`Contract`\> |
+| `Contract` | extends `ReferenceSBTAuthority` |
 
 #### Parameters
 

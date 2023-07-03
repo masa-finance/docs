@@ -52,7 +52,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `ReferenceSBTAuthority`<`Contract`\> |
+| `Contract` | extends `ReferenceSBTAuthority` |
 
 #### Parameters
 
@@ -268,7 +268,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `MasaSBT`<`Contract`\> |
+| `Contract` | extends `MasaSBT` |
 
 #### Parameters
 
