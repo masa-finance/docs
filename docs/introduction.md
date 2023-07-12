@@ -32,9 +32,9 @@ Here's the complete data journey, from start to finish:
 
 ### Step 1: Loading our cookie-free script or npm package
 
-The Masa script or SDK is loaded from our global content delivery network (CDN). This means the file loads rapidly from a server closest to you, typically within about 30 milliseconds.
+The Masa script or SDK is loaded rapidly, typically within about 30 milliseconds.
 
-Once the script or package is loaded, a transaction request is sent to either our EU-owned servers via EU Isolation (if the participant is in the EU) or to our servers in the United States if they're outside of the EU. The request will contain details about the transaction you're conducting and the referring network node. The network node will also send our servers your IP Address and User-Agent (which contains details about the browser you're using and device type). Our technology doesn't use cookies, so you won't need an annoying cookie consent banner.
+Once the script or package is loaded, a transaction request is sent to our EU-owned servers. The request will contain details about the transaction you're conducting and the referring network node. The network node will also send our servers your IP Address and User-Agent (which contains details about the browser you're using and device type). Our technology doesn't use cookies, so you won't need an annoying cookie consent banner.
 
 ### Step 2: Establishing if you're a new participant
 
