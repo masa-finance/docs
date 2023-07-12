@@ -47,7 +47,7 @@ Your IP: "111.22.333.444"
 Your User Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36"
 ```
 
-In order to preseve privacy we do store your raw data (IP and User-Agent) alongside your event activity, as that wouldn't be as privacy-friendly, so we need to create a “Device Hash” that we can use to identify you on your next interaction. It is critical to note that IP addresses and User-Agent data are not stored on our servers for any period of time longer than is necessary to generate a device hash.
+In order to preseve privacy we **do not** store your raw data (IP and User-Agent) alongside your event activity, as that wouldn't be as privacy-friendly, so we need to create a “Device Hash” that we can use to identify you on your next interaction. It is critical to note that IP addresses and User-Agent data are not stored on our servers for any period of time longer than is necessary to generate a device hash.
 
 #### User Device Hash
 
