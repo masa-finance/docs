@@ -1,5 +1,5 @@
 [# Masa React
- - v2.5.4](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v2.7.0](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -102,7 +102,7 @@
 
 ### SupportedNetworks
 
-• `Optional` **SupportedNetworks**: `Partial`<{ `alfajores`: `Network` ; `basegoerli`: `Network` ; `bsc`: `Network` ; `bsctest`: `Network` ; `celo`: `Network` ; `ethereum`: `Network` ; `goerli`: `Network` ; `mumbai`: `Network` ; `polygon`: `Network` ; `unknown`: `Network`  }\>
+• `Optional` **SupportedNetworks**: `Partial`<{ `alfajores`: `Network` ; `base`: `Network` ; `basegoerli`: `Network` ; `bsc`: `Network` ; `bsctest`: `Network` ; `celo`: `Network` ; `ethereum`: `Network` ; `goerli`: `Network` ; `mumbai`: `Network` ; `polygon`: `Network` ; `unknown`: `Network`  }\>
 
 #### Inherited from
 

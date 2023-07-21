@@ -1,5 +1,5 @@
 [# Masa React
- - v2.5.4](../README.md) / [Exports](../modules.md) / WrapperModalProps
+ - v2.7.0](../README.md) / [Exports](../modules.md) / WrapperModalProps
 
 # Interface: WrapperModalProps
 
