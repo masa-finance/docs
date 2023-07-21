@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.12](../README.md) / [Exports](../modules.md) / MasaASBTWrapper
+ - v3.5.1](../README.md) / [Exports](../modules.md) / MasaASBTWrapper
 
 # Class: MasaASBTWrapper<Contract\>
 
@@ -46,7 +46,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `ReferenceSBTAuthority` |
+| `Contract` | extends `ReferenceSBTAuthority`<`Contract`\> |
 
 #### Parameters
 

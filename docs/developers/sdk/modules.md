@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.4.12](README.md) / Exports
+ - v3.5.1](README.md) / Exports
 
 # # Masa SDK
- - v3.4.12
+ - v3.5.1
 
 ## Table of contents
 
@@ -116,6 +116,7 @@
 - [Templates](modules.md#templates)
 - [addresses](modules.md#addresses)
 - [alfajores](modules.md#alfajores)
+- [base](modules.md#base)
 - [basegoerli](modules.md#basegoerli)
 - [bsc](modules.md#bsc)
 - [bsctest](modules.md#bsctest)
@@ -295,7 +296,7 @@ ___
 
 ### NetworkName
 
-Ƭ **NetworkName**: ``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``
+Ƭ **NetworkName**: ``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"base"`` \| ``"unknown"``
 
 ___
 
@@ -383,6 +384,12 @@ ___
 ### alfajores
 
 • `Const` **alfajores**: [`Addresses`](interfaces/Addresses.md)
+
+___
+
+### base
+
+• `Const` **base**: [`Addresses`](interfaces/Addresses.md) = `{}`
 
 ___
 

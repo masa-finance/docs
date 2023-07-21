@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.4.12](../README.md) / [Exports](../modules.md) / SBTContract
+ - v3.5.1](../README.md) / [Exports](../modules.md) / SBTContract
 
 # Class: SBTContract
 
@@ -81,7 +81,7 @@ MasaSBTModuleBase.masa
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `MasaSBT` |
+| `Contract` | extends `MasaSBT`<`Contract`\> |
 
 #### Parameters
 
@@ -130,7 +130,7 @@ loads an sbt instance and connects the contract functions to it
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `MasaSBT` |
+| `Contract` | extends `MasaSBT`<`Contract`\> |
 
 #### Parameters
 
@@ -252,7 +252,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `MasaSBT` |
+| `Contract` | extends `MasaSBT`<`Contract`\> |
 
 #### Parameters
 
