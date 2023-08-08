@@ -170,29 +170,6 @@ Removes a token as a valid payment method
 |---|---|---|
 | _paymentMethod | address | Token to remove |
 
-### eip712Domain
-
-```solidity
-function eip712Domain() external view returns (bytes1 fields, string name, string version, uint256 chainId, address verifyingContract, bytes32 salt, uint256[] extensions)
-```
-
-
-
-*See {EIP-5267}. _Available since v4.9._*
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| fields | bytes1 | undefined |
-| name | string | undefined |
-| version | string | undefined |
-| chainId | uint256 | undefined |
-| verifyingContract | address | undefined |
-| salt | bytes32 | undefined |
-| extensions | uint256[] | undefined |
-
 ### enablePaymentMethod
 
 ```solidity
@@ -1190,17 +1167,6 @@ event Burn(address indexed _owner, uint256 indexed _tokenId)
 | _owner `indexed` | address | undefined |
 | _tokenId `indexed` | uint256 | undefined |
 
-### EIP712DomainChanged
-
-```solidity
-event EIP712DomainChanged()
-```
-
-
-
-
-
-
 ### Mint
 
 ```solidity
@@ -1409,17 +1375,6 @@ error InvalidPaymentMethod(address paymentMethod)
 |---|---|---|
 | paymentMethod | address | undefined |
 
-### InvalidShortString
-
-```solidity
-error InvalidShortString()
-```
-
-
-
-
-
-
 ### InvalidSignature
 
 ```solidity
@@ -1533,22 +1488,6 @@ error SameValue()
 
 
 
-
-### StringTooLong
-
-```solidity
-error StringTooLong(string str)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| str | string | undefined |
 
 ### TransferFailed
 
