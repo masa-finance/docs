@@ -962,7 +962,7 @@ event RoleRevoked(bytes32 indexed role, address indexed account, address indexed
 ### SoulNamePurchased
 
 ```solidity
-event SoulNamePurchased(address indexed account, uint256 tokenId, string indexed name, uint256 yearsPeriod)
+event SoulNamePurchased(address indexed account, uint256 tokenId, string indexed name, uint256 yearsPeriod, address indexed paymentMethod, uint256 price, uint256 protocolFee)
 ```
 
 
@@ -977,11 +977,14 @@ event SoulNamePurchased(address indexed account, uint256 tokenId, string indexed
 | tokenId  | uint256 | undefined |
 | name `indexed` | string | undefined |
 | yearsPeriod  | uint256 | undefined |
+| paymentMethod `indexed` | address | undefined |
+| price  | uint256 | undefined |
+| protocolFee  | uint256 | undefined |
 
 ### SoulboundIdentityAndNamePurchased
 
 ```solidity
-event SoulboundIdentityAndNamePurchased(address indexed account, uint256 tokenId, string indexed name, uint256 yearsPeriod)
+event SoulboundIdentityAndNamePurchased(address indexed account, uint256 tokenId, string indexed name, uint256 yearsPeriod, address indexed paymentMethod, uint256 price, uint256 protocolFee)
 ```
 
 
@@ -996,6 +999,9 @@ event SoulboundIdentityAndNamePurchased(address indexed account, uint256 tokenId
 | tokenId  | uint256 | undefined |
 | name `indexed` | string | undefined |
 | yearsPeriod  | uint256 | undefined |
+| paymentMethod `indexed` | address | undefined |
+| price  | uint256 | undefined |
+| protocolFee  | uint256 | undefined |
 
 ### SoulboundIdentityPurchased
 
