@@ -1,8 +1,8 @@
 ---
-title: Introduction
+title: Masa's data journey
 ---
 
-# Our Data Journey at Masa
+# The Data Journey at Masa
 
 ## Privacy Philosophy
 

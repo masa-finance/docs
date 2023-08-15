@@ -15,7 +15,21 @@
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   docs: [
-    "introduction",
+    {
+      type: "category",
+      label: "Introduction",
+      link: {
+        type: "generated-index",
+        title: "Introduction overview",
+      },
+      items: [
+        "introduction/overview",
+        "introduction/js-script-installation",
+        "introduction/react-sdk-installation",
+        "introduction/data-journey",
+        // ... and any other pages you want to add in a specific order
+      ],
+    },
     {
       type: "category",
       label: "Quickstart",
@@ -72,7 +86,7 @@ const sidebars = {
         },
       ],
     },
-  ],
+  ],  
 };
 
 module.exports = sidebars;
