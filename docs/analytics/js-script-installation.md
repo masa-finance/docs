@@ -1,10 +1,10 @@
 ---
-title: JS Script installation
+title: JS Script Installation
 ---
 
-# Masa Analytics Integration Guide
+## Masa Analytics Integration Guide
 
-## Step 1: Track `pageViews` With Masa Analytics Tracking Script 
+### Step 1: Track `pageViews` With Masa Analytics Tracking Script 
 
 Copy and paste the Masa Analytics initialization script into the `<head>` section of your website's HTML. This script will load the CDN-hosted tracking code and set up the basic page view tracking.
 
@@ -34,11 +34,11 @@ Copy and paste the Masa Analytics initialization script into the `<head>` sectio
 </script>
 ```
 
-## Step 2: Tracking `connectWallet` Event
+### Step 2: Tracking `connectWallet` Event
 
 To track the `connectWallet` event, you'll need to extract the Ethereum address from the connected wallet.
 
-### Using `web3.js`
+#### Using `web3.js`
 
 Include `web3.js` and use the following code to track the `connectWallet` event:
 
@@ -54,7 +54,7 @@ Include `web3.js` and use the following code to track the `connectWallet` event:
 </script>
 ```
 
-### Using `ethers.js`
+#### Using `ethers.js`
 
 Include `ethers.js` and use the following code:
 
@@ -70,7 +70,7 @@ Include `ethers.js` and use the following code:
 </script>
 ```
 
-## Step 3: Tracking `login` Event
+### Step 3: Tracking `login` Event
 
 Track user login events using the following code snippet:
 
@@ -79,7 +79,7 @@ Track user login events using the following code snippet:
 MasaAnalytics.trackLogin(clientId, address, clientApp, clientName, "metamask", "celo");
 ```
 
-## Step 4: Tracking `mint` Event
+### Step 4: Tracking `mint` Event
 
 To track a `mint` event, use the following code snippet:
 
@@ -98,6 +98,6 @@ var mintEventData = {
 MasaAnalytics.trackMint(clientId, address, mintEventData);
 ```
 
-## Conclusion
+### Conclusion
 
 By following this guide, you'll be able to fully integrate Masa Analytics into your website to track `pageView`, `connectWallet`, `login`, and `mint` events. Make sure to replace placeholders with actual values and customize the tracking according to your specific needs.

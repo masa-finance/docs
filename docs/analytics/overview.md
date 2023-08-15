@@ -2,7 +2,7 @@
 title: Overview
 ---
 
-## Welcome to the Masa developer documentation!
+## Welcome to the Masa Analytics developer documentation!
 
 ---
 
@@ -23,13 +23,13 @@ Collect comprehensive insights on user behavior, including:
 
 In this developer documentation, you'll find everything you need to integrate Masa into your project:
 
-- **[Script Installation](./script-installation)**: Quickly install the Masa tracking JS script.
-- **[SDK Installatio](./react-sdk-installation)**: Quickly install the Masa tracking SDK in React.
-- **[Tracking](./tracking)**: Anonymously track page views, wallet interactions, custom events, and more.
-- **[Analytics](./analytics)**: Access real-time analytics through our APIs and decentralized data layer.
-- **[Customization](./customization)**: Customize analytics to fit your specific needs.
-- **[AI Training](./ai-training)**: Train AI agents and models on anonymized web2 and web3 behavioral data.
-- **[Data Journey](./datajourney)**: Understand the data journey at Masa.
+- **[Script Installation](./js-script-installation)**: Quickly install the Masa tracking JS script.
+- **[Analytics React SDK Installatio](./react-sdk-installation)**: Quickly install the Masa tracking SDK in React.
+- **[Tracking](./overview)**: Anonymously track page views, wallet interactions, custom events, and more.
+- **[Analytics](./overview)**: Access real-time analytics through our APIs and decentralized data layer.
+- **[Customization](./overview)**: Customize analytics to fit your specific needs.
+- **[AI Training](./overview)**: Train AI agents and models on anonymized web2 and web3 behavioral data.
+- **[Data Journey](./data-journey)**: Understand the data journey at Masa.
 
 ---
 
