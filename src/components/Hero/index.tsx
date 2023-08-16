@@ -32,7 +32,7 @@ export default function Hero() {
             Soulbound Identity Infrastructure for Developers Building Web3
             Communities
           </p>
-          <Link to="docs/introduction">
+          <Link to="docs/analytics/overview">
             <p className="py-8 text-xl font-bold">Get Started</p>
           </Link>
           <p className="font-bold">Build with Masa</p>

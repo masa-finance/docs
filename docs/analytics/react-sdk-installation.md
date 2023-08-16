@@ -1,8 +1,8 @@
 ---
-title: Analytics React SDK Installation
+title: React SDK Installation
 ---
 
-## Masa Analytics React
+## Masa Analytics for React
 
 Welcome to Masa Analytics React! This library offers a customizable, easy-to-use React component for connecting to Masa Analytics, all crafted in TypeScript.
 
