@@ -24,8 +24,8 @@ const sidebars = {
       },
       items: [
         "analytics/overview",
-        "analytics/js-script-installation",
         "analytics/react-sdk-installation",
+        "analytics/js-script-installation",
         "analytics/data-journey",
         // ... and any other pages you want to add in a specific order
       ],
