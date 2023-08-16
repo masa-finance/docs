@@ -20,6 +20,10 @@ This guide will walk you through integrating Masa Analytics React into your proj
 
 To get started with Masa Analytics React, you can install the package using either npm or yarn.
 
+:::tip
+Ensure you have either `npm` or `yarn` installed in your development environment before proceeding.
+:::
+
 #### Using npm
 
 ```bash
@@ -32,8 +36,10 @@ npm install @masa-finance/analytics-react
 yarn add @masa-finance/analytics-react
 ```
 
-:::tip
-Ensure you have either npm or yarn installed in your development environment before proceeding.
+### Get a `client_id`
+
+:::info
+A `client_id` will be provided to you during your onboarding to Masa Analytics, please reach out to **help@masa.finance** or reach out to us on **Discord** if you need a ClientID
 :::
 
 ### Events Tracking and Usage
@@ -55,6 +61,26 @@ const { firePageViewEvent } = useMasaAnalyticsReact({
 const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
 const page = "https://your-site.example.com/page1";
 void firePageViewEvent(page, user_address);
+```
+
+#### Connect Wallet Event
+To send a connect wallet event:
+
+```typescript
+import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
+
+const { fireConnectWalletEvent } =
+  useMasaAnalyticsReact({
+    clientApp: 'My App',
+    clientName: 'My Company Name',
+  });
+
+
+// Track a wallet connect event
+const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
+const connector = "metamask"
+
+void fireConnectWalletEvent(user_address, connector);
 ```
 
 #### Login Event
@@ -101,6 +127,7 @@ void fireMintEvent(
   token_type
 );
 ```
+<br/>
 
 :::warning
 Ensure you handle sensitive data, like user addresses, with care. Always prioritize user privacy and adhere to best practices for data handling.

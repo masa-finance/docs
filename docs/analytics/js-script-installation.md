@@ -8,6 +8,12 @@ title: JS Script Installation
 This guide will walk you through integrating Masa Analytics React into your website using our JS Script and CDN with Google Tag Manager. It's designed to get you up and running quickly and smoothly.
 :::
 
+### Get a `client_id`
+
+:::info
+A `client_id` will be provided to you during your onboarding to Masa Analytics, please reach out to **help@masa.finance** or reach out to us on **Discord** if you need a ClientID
+:::
+
 ### Step 1: Track `pageViews` With Masa Analytics Tracking Script 
 
 Copy and paste the Masa Analytics initialization script into the `<head>` section of your website's HTML. This script will load the CDN-hosted tracking code and set up basic page view tracking.
@@ -53,6 +59,8 @@ If you are using Google Tag Manager you do not need to do **Step 1** start from 
    - **All Pages**: To track all page views.
    - **Page Views**: For tracking specific page views.
    - **History Changes**: Useful for Single Page Applications (SPAs) to track route changes.
+
+<br/>
 
 :::warning
 We strongly recommend using the React SDK to track `connectWallet`, `login`, `mint`, and `custom` events in your React app

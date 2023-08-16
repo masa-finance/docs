@@ -1,9 +1,9 @@
 ---
-title: SBT Achievement badges
+title: SBT Achievement Badges
 toc_max_heading_level: 4
 ---
 
-# SBT Achievement badges
+# SBT Achievement Badges
 
 With Masa, you can track and reward an individuals achievements in your community by using non-transferable, soulbound Achievement badges. For example, a web3 quest platform with active members participating in quests can issue an Achievement SBT to the participants who were in the top 5% of the number of completed quests in a week. Having an achievement SBT would unlock priority access to future quests and grant allow list spots in partner souldrops (airdrops). In this guide, we cover the steps for launching an Achievement SBT using Masa.
 

@@ -1,5 +1,5 @@
 ---
-title: Masa's data journey
+title: Masa's Data Journey
 ---
 
 # The Data Journey at Masa
