@@ -1,8 +1,8 @@
 [# Masa React
- - v2.7.0](README.md) / Exports
+ - v3.0.19](README.md) / Exports
 
 # # Masa React
- - v2.7.0
+ - v3.0.19
 
 ## Table of contents
 
@@ -43,6 +43,7 @@
 - [MasaInterface](modules.md#masainterface)
 - [MasaLoading](modules.md#masaloading)
 - [MasaProvider](modules.md#masaprovider)
+- [MasaRefactorProvider](modules.md#masarefactorprovider)
 - [ModalComponent](modules.md#modalcomponent)
 - [ModalWrapper](modules.md#modalwrapper)
 - [Spinner](modules.md#spinner)
@@ -55,6 +56,8 @@
 - [getSoulnamesQueryKey](modules.md#getsoulnamesquerykey)
 - [getWalletQueryKey](modules.md#getwalletquerykey)
 - [getWeb3Provider](modules.md#getweb3provider)
+- [openAuthenticateModal](modules.md#openauthenticatemodal)
+- [openCreateSoulnameModal](modules.md#opencreatesoulnamemodal)
 - [useCreditScores](modules.md#usecreditscores)
 - [useCreditScoresQuery](modules.md#usecreditscoresquery)
 - [useDebounce](modules.md#usedebounce)
@@ -264,6 +267,7 @@ ___
 | :------ | :------ |
 | `«destructured»` | `Object` |
 | › `disableMetamask?` | `boolean` |
+| › `hideLegacyModal?` | `boolean` |
 
 #### Returns
 
@@ -289,7 +293,26 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) & { `chainsToUse?`: (``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``)[] ; `rainbowKitModalSize?`: ``"compact"`` \| ``"wide"`` ; `walletsToUse?`: (``"metamask"`` \| ``"valora"`` \| ``"walletconnect"``)[]  } |
+| `«destructured»` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) & { `chainsToUse?`: (``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``)[] ; `contractAddressOverrides?`: { `SoulNameAddress`: `string` ; `SoulStoreAddress`: `string`  } ; `rainbowKitModalSize?`: ``"compact"`` \| ``"wide"`` ; `walletsToUse?`: (``"metamask"`` \| ``"valora"`` \| ``"walletconnect"``)[]  } |
+
+#### Returns
+
+`Element`
+
+___
+
+### MasaRefactorProvider
+
+▸ **MasaRefactorProvider**(`«destructured»`): `Element`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `Object` |
+| › `children` | `ReactNode` |
+| › `config` | `MasaReactConfig` |
+| › `verbose?` | `boolean` |
 
 #### Returns
 
@@ -510,6 +533,44 @@ ___
 #### Returns
 
 `undefined` \| `Web3Provider`
+
+___
+
+### openAuthenticateModal
+
+▸ **openAuthenticateModal**(`«destructured»`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `AuthenticateProps` |
+
+#### Returns
+
+`any`
+
+___
+
+### openCreateSoulnameModal
+
+▸ **openCreateSoulnameModal**(`«destructured»`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `Object` |
+| › `closeOnSuccess?` | `boolean` |
+| › `onError?` | () => `void` |
+| › `onMintError?` | () => `void` |
+| › `onMintSuccess?` | (`result`: `CreateSoulNameResult`) => `void` |
+| › `onRegisterFinish?` | () => `void` |
+| › `onSuccess?` | () => `void` |
+
+#### Returns
+
+`any`
 
 ___
 
@@ -785,6 +846,7 @@ ___
 | `closeModal` | (`forceCallback?`: `boolean`) => `void` |
 | `forcedPage` | ``null`` \| `string` |
 | `isModalOpen` | `boolean` |
+| `modalCallback` | ``null`` \| () => `void` |
 | `modalSize` | ``null`` \| { `height`: `number` ; `width`: `number`  } |
 | `openGallery` | (`callback?`: () => `void`) => `void` |
 | `openMintMasaGreen` | (`mintCallback?`: () => `void`) => `void` |

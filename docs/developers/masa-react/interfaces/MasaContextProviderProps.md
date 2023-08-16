@@ -1,5 +1,5 @@
 [# Masa React
- - v2.7.0](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v3.0.19](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -15,7 +15,6 @@
 
 - [SupportedNetworks](MasaContextProviderProps.md#supportednetworks)
 - [accountAddress](MasaContextProviderProps.md#accountaddress)
-- [apiUrl](MasaContextProviderProps.md#apiurl)
 - [areScopesFullfiled](MasaContextProviderProps.md#arescopesfullfiled)
 - [arweaveConfig](MasaContextProviderProps.md#arweaveconfig)
 - [badges](MasaContextProviderProps.md#badges)
@@ -24,7 +23,6 @@
 - [closeModal](MasaContextProviderProps.md#closemodal)
 - [company](MasaContextProviderProps.md#company)
 - [connect](MasaContextProviderProps.md#connect)
-- [contractAddressOverrides](MasaContextProviderProps.md#contractaddressoverrides)
 - [creditScores](MasaContextProviderProps.md#creditscores)
 - [currentNetwork](MasaContextProviderProps.md#currentnetwork)
 - [currentNetworkNew](MasaContextProviderProps.md#currentnetworknew)
@@ -45,6 +43,7 @@
 - [handlePurchaseIdentityWithSoulname](MasaContextProviderProps.md#handlepurchaseidentitywithsoulname)
 - [hasAccountAddress](MasaContextProviderProps.md#hasaccountaddress)
 - [hasWalletAddress](MasaContextProviderProps.md#haswalletaddress)
+- [hideLegacyModal](MasaContextProviderProps.md#hidelegacymodal)
 - [identity](MasaContextProviderProps.md#identity)
 - [isConnected](MasaContextProviderProps.md#isconnected)
 - [isCreditScoresLoading](MasaContextProviderProps.md#iscreditscoresloading)
@@ -60,6 +59,7 @@
 - [isWalletLoading](MasaContextProviderProps.md#iswalletloading)
 - [logout](MasaContextProviderProps.md#logout)
 - [masa](MasaContextProviderProps.md#masa)
+- [modalCallback](MasaContextProviderProps.md#modalcallback)
 - [modalSize](MasaContextProviderProps.md#modalsize)
 - [openAccountModal](MasaContextProviderProps.md#openaccountmodal)
 - [openAuthenticateModal](MasaContextProviderProps.md#openauthenticatemodal)
@@ -76,6 +76,7 @@
 - [openModal](MasaContextProviderProps.md#openmodal)
 - [openSuccessCreateIdentityModal](MasaContextProviderProps.md#opensuccesscreateidentitymodal)
 - [openSwitchChainModal](MasaContextProviderProps.md#openswitchchainmodal)
+- [purchaseSoulName](MasaContextProviderProps.md#purchasesoulname)
 - [refetchContracts](MasaContextProviderProps.md#refetchcontracts)
 - [reloadCreditScores](MasaContextProviderProps.md#reloadcreditscores)
 - [reloadGreens](MasaContextProviderProps.md#reloadgreens)
@@ -117,12 +118,6 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[accountAddress](MasaShape.md#accountaddress)
-
-___
-
-### apiUrl
-
-• `Optional` **apiUrl**: `string`
 
 ___
 
@@ -229,19 +224,6 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[connect](MasaShape.md#connect)
-
-___
-
-### contractAddressOverrides
-
-• `Optional` **contractAddressOverrides**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `SoulNameAddress` | `string` |
-| `SoulStoreAddress` | `string` |
 
 ___
 
@@ -478,15 +460,15 @@ ___
 
 ### handlePurchaseIdentity
 
-• `Optional` **handlePurchaseIdentity**: () => `Promise`<`undefined` \| `boolean`\>
+• `Optional` **handlePurchaseIdentity**: () => `Promise`<`undefined` \| `boolean` \| `Error`\>
 
 #### Type declaration
 
-▸ (): `Promise`<`undefined` \| `boolean`\>
+▸ (): `Promise`<`undefined` \| `boolean` \| `Error`\>
 
 ##### Returns
 
-`Promise`<`undefined` \| `boolean`\>
+`Promise`<`undefined` \| `boolean` \| `Error`\>
 
 #### Inherited from
 
@@ -496,11 +478,11 @@ ___
 
 ### handlePurchaseIdentityWithSoulname
 
-• `Optional` **handlePurchaseIdentityWithSoulname**: (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPrice`: `number`, `style?`: `string`) => `Promise`<`boolean`\>
+• `Optional` **handlePurchaseIdentityWithSoulname**: (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`, `style?`: `string`) => `Promise`<`undefined` \| `Error` \| { `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult`\>
 
 #### Type declaration
 
-▸ (`paymentMethod`, `soulname`, `registrationPrice`, `style?`): `Promise`<`boolean`\>
+▸ (`paymentMethod`, `soulname`, `registrationPeriod`, `style?`): `Promise`<`undefined` \| `Error` \| { `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult`\>
 
 ##### Parameters
 
@@ -508,12 +490,12 @@ ___
 | :------ | :------ |
 | `paymentMethod` | `PaymentMethod` |
 | `soulname` | `string` |
-| `registrationPrice` | `number` |
+| `registrationPeriod` | `number` |
 | `style?` | `string` |
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`<`undefined` \| `Error` \| { `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult`\>
 
 #### Inherited from
 
@@ -538,6 +520,16 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[hasWalletAddress](MasaShape.md#haswalletaddress)
+
+___
+
+### hideLegacyModal
+
+• `Optional` **hideLegacyModal**: `boolean`
+
+#### Overrides
+
+[MasaShape](MasaShape.md).[hideLegacyModal](MasaShape.md#hidelegacymodal)
 
 ___
 
@@ -703,6 +695,16 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[masa](MasaShape.md#masa)
+
+___
+
+### modalCallback
+
+• `Optional` **modalCallback**: ``null`` \| () => `void`
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[modalCallback](MasaShape.md#modalcallback)
 
 ___
 
@@ -1011,6 +1013,33 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[openSwitchChainModal](MasaShape.md#openswitchchainmodal)
+
+___
+
+### purchaseSoulName
+
+• `Optional` **purchaseSoulName**: (`soulname`: `string`, `registrationPeriod`: `number`, `paymentMethod`: `PaymentMethod`, `style?`: `string`) => `Promise`<`undefined` \| `CreateSoulNameResult` \| `Error` & { `code?`: `string`  }\>
+
+#### Type declaration
+
+▸ (`soulname`, `registrationPeriod`, `paymentMethod`, `style?`): `Promise`<`undefined` \| `CreateSoulNameResult` \| `Error` & { `code?`: `string`  }\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `soulname` | `string` |
+| `registrationPeriod` | `number` |
+| `paymentMethod` | `PaymentMethod` |
+| `style?` | `string` |
+
+##### Returns
+
+`Promise`<`undefined` \| `CreateSoulNameResult` \| `Error` & { `code?`: `string`  }\>
+
+#### Inherited from
+
+[MasaShape](MasaShape.md).[purchaseSoulName](MasaShape.md#purchasesoulname)
 
 ___
 

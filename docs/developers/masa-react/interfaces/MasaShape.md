@@ -1,5 +1,5 @@
 [# Masa React
- - v2.7.0](../README.md) / [Exports](../modules.md) / MasaShape
+ - v3.0.19](../README.md) / [Exports](../modules.md) / MasaShape
 
 # Interface: MasaShape
 
@@ -41,6 +41,7 @@
 - [handlePurchaseIdentityWithSoulname](MasaShape.md#handlepurchaseidentitywithsoulname)
 - [hasAccountAddress](MasaShape.md#hasaccountaddress)
 - [hasWalletAddress](MasaShape.md#haswalletaddress)
+- [hideLegacyModal](MasaShape.md#hidelegacymodal)
 - [identity](MasaShape.md#identity)
 - [isConnected](MasaShape.md#isconnected)
 - [isCreditScoresLoading](MasaShape.md#iscreditscoresloading)
@@ -56,6 +57,7 @@
 - [isWalletLoading](MasaShape.md#iswalletloading)
 - [logout](MasaShape.md#logout)
 - [masa](MasaShape.md#masa)
+- [modalCallback](MasaShape.md#modalcallback)
 - [modalSize](MasaShape.md#modalsize)
 - [openAccountModal](MasaShape.md#openaccountmodal)
 - [openAuthenticateModal](MasaShape.md#openauthenticatemodal)
@@ -72,6 +74,7 @@
 - [openModal](MasaShape.md#openmodal)
 - [openSuccessCreateIdentityModal](MasaShape.md#opensuccesscreateidentitymodal)
 - [openSwitchChainModal](MasaShape.md#openswitchchainmodal)
+- [purchaseSoulName](MasaShape.md#purchasesoulname)
 - [refetchContracts](MasaShape.md#refetchcontracts)
 - [reloadCreditScores](MasaShape.md#reloadcreditscores)
 - [reloadGreens](MasaShape.md#reloadgreens)
@@ -346,25 +349,25 @@ ___
 
 ### handlePurchaseIdentity
 
-• `Optional` **handlePurchaseIdentity**: () => `Promise`<`undefined` \| `boolean`\>
+• `Optional` **handlePurchaseIdentity**: () => `Promise`<`undefined` \| `boolean` \| `Error`\>
 
 #### Type declaration
 
-▸ (): `Promise`<`undefined` \| `boolean`\>
+▸ (): `Promise`<`undefined` \| `boolean` \| `Error`\>
 
 ##### Returns
 
-`Promise`<`undefined` \| `boolean`\>
+`Promise`<`undefined` \| `boolean` \| `Error`\>
 
 ___
 
 ### handlePurchaseIdentityWithSoulname
 
-• `Optional` **handlePurchaseIdentityWithSoulname**: (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPrice`: `number`, `style?`: `string`) => `Promise`<`boolean`\>
+• `Optional` **handlePurchaseIdentityWithSoulname**: (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`, `style?`: `string`) => `Promise`<`undefined` \| `Error` \| { `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult`\>
 
 #### Type declaration
 
-▸ (`paymentMethod`, `soulname`, `registrationPrice`, `style?`): `Promise`<`boolean`\>
+▸ (`paymentMethod`, `soulname`, `registrationPeriod`, `style?`): `Promise`<`undefined` \| `Error` \| { `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult`\>
 
 ##### Parameters
 
@@ -372,12 +375,12 @@ ___
 | :------ | :------ |
 | `paymentMethod` | `PaymentMethod` |
 | `soulname` | `string` |
-| `registrationPrice` | `number` |
+| `registrationPeriod` | `number` |
 | `style?` | `string` |
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`<`undefined` \| `Error` \| { `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult`\>
 
 ___
 
@@ -390,6 +393,12 @@ ___
 ### hasWalletAddress
 
 • `Optional` **hasWalletAddress**: `boolean`
+
+___
+
+### hideLegacyModal
+
+• `Optional` **hideLegacyModal**: `boolean`
 
 ___
 
@@ -495,6 +504,12 @@ ___
 ### masa
 
 • `Optional` **masa**: `Masa`
+
+___
+
+### modalCallback
+
+• `Optional` **modalCallback**: ``null`` \| () => `void`
 
 ___
 
@@ -739,6 +754,29 @@ ___
 ##### Returns
 
 `void`
+
+___
+
+### purchaseSoulName
+
+• `Optional` **purchaseSoulName**: (`soulname`: `string`, `registrationPeriod`: `number`, `paymentMethod`: `PaymentMethod`, `style?`: `string`) => `Promise`<`undefined` \| `CreateSoulNameResult` \| `Error` & { `code?`: `string`  }\>
+
+#### Type declaration
+
+▸ (`soulname`, `registrationPeriod`, `paymentMethod`, `style?`): `Promise`<`undefined` \| `CreateSoulNameResult` \| `Error` & { `code?`: `string`  }\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `soulname` | `string` |
+| `registrationPeriod` | `number` |
+| `paymentMethod` | `PaymentMethod` |
+| `style?` | `string` |
+
+##### Returns
+
+`Promise`<`undefined` \| `CreateSoulNameResult` \| `Error` & { `code?`: `string`  }\>
 
 ___
 
