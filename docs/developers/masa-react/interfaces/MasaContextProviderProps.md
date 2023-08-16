@@ -1,5 +1,5 @@
 [# Masa React
- - v3.0.19](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v3.0.20](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -73,7 +73,6 @@
 - [openInterfaceMasaGreen](MasaContextProviderProps.md#openinterfacemasagreen)
 - [openMintMasaGreen](MasaContextProviderProps.md#openmintmasagreen)
 - [openMintSoulnameModal](MasaContextProviderProps.md#openmintsoulnamemodal)
-- [openModal](MasaContextProviderProps.md#openmodal)
 - [openSuccessCreateIdentityModal](MasaContextProviderProps.md#opensuccesscreateidentitymodal)
 - [openSwitchChainModal](MasaContextProviderProps.md#openswitchchainmodal)
 - [purchaseSoulName](MasaContextProviderProps.md#purchasesoulname)
@@ -949,34 +948,6 @@ ___
 #### Inherited from
 
 [MasaShape](MasaShape.md).[openMintSoulnameModal](MasaShape.md#openmintsoulnamemodal)
-
-___
-
-### openModal
-
-• `Optional` **openModal**: (`__namedParameters`: { `contentProps`: `any` ; `name`: [`ModalName`](../modules.md#modalname) ; `title?`: `ReactNode` ; `wrapperProps?`: [`WrapperModalProps`](WrapperModalProps.md)  }) => `void`
-
-#### Type declaration
-
-▸ (`«destructured»`): `void`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `contentProps` | `any` |
-| › `name` | [`ModalName`](../modules.md#modalname) |
-| › `title?` | `ReactNode` |
-| › `wrapperProps?` | [`WrapperModalProps`](WrapperModalProps.md) |
-
-##### Returns
-
-`void`
-
-#### Inherited from
-
-[MasaShape](MasaShape.md).[openModal](MasaShape.md#openmodal)
 
 ___
 

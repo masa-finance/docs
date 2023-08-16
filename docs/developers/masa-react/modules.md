@@ -1,8 +1,8 @@
 [# Masa React
- - v3.0.19](README.md) / Exports
+ - v3.0.20](README.md) / Exports
 
 # # Masa React
- - v3.0.19
+ - v3.0.20
 
 ## Table of contents
 
@@ -17,12 +17,10 @@
 - [MasaShape](interfaces/MasaShape.md)
 - [ModalProps](interfaces/ModalProps.md)
 - [SpinnerProps](interfaces/SpinnerProps.md)
-- [WrapperModalProps](interfaces/WrapperModalProps.md)
 
 ### Type Aliases
 
 - [EnvironmentNameEx](modules.md#environmentnameex)
-- [ModalName](modules.md#modalname)
 - [OnSuccessInput](modules.md#onsuccessinput)
 - [UseCreditScoresReturnType](modules.md#usecreditscoresreturntype)
 - [UseGreenReturnValue](modules.md#usegreenreturnvalue)
@@ -33,8 +31,6 @@
 ### Variables
 
 - [MasaContext](modules.md#masacontext)
-- [ModalContent](modules.md#modalcontent)
-- [Modals](modules.md#modals)
 - [queryClient](modules.md#queryclient)
 
 ### Functions
@@ -45,7 +41,6 @@
 - [MasaProvider](modules.md#masaprovider)
 - [MasaRefactorProvider](modules.md#masarefactorprovider)
 - [ModalComponent](modules.md#modalcomponent)
-- [ModalWrapper](modules.md#modalwrapper)
 - [Spinner](modules.md#spinner)
 - [createNewMasa](modules.md#createnewmasa)
 - [getCreditScoresQueryKey](modules.md#getcreditscoresquerykey)
@@ -87,12 +82,6 @@
 ### EnvironmentNameEx
 
 Ƭ **EnvironmentNameEx**: `EnvironmentName` & ``"local"`` \| ``"stage"``
-
-___
-
-### ModalName
-
-Ƭ **ModalName**: ``"AuthenticateModal"`` \| ``"ConnectedModal"`` \| ``"CreateCreditScoreModal"`` \| ``"CreateIdentityModal"`` \| ``"CreateSoulnameModal"`` \| ``"SuccessCreateIdentityModal"`` \| ``"SwitchChainModal"`` \| ``"InterfaceMasaGreen"`` \| ``"Default"``
 
 ___
 
@@ -195,46 +184,6 @@ ___
 
 ___
 
-### ModalContent
-
-• `Const` **ModalContent**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `AuthenticateModal` | () => `Element` |
-| `ConnectedModal` | () => `Element` |
-| `CreateCreditScoreModal` | () => `Element` |
-| `CreateIdentityModal` | () => `Element` |
-| `CreateSoulnameModal` | () => `Element` |
-| `Default` | () => `Element` |
-| `InterfaceMasaGreen` | () => `Element` |
-| `SuccessCreateIdentityModal` | () => `Element` |
-| `SwitchChainModal` | () => `Element` |
-
-___
-
-### Modals
-
-• `Const` **Modals**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `AuthenticateModal` | () => `Element` |
-| `Backdrop` | (`__namedParameters`: { `children`: `ReactNode` ; `className?`: `string` ; `onClose`: () => `void`  }) => `Element` |
-| `ConnectedModal` | () => `Element` |
-| `CreateCreditScoreModal` | () => `Element` |
-| `CreateIdentityModal` | () => `Element` |
-| `CreateSoulnameModal` | () => `Element` |
-| `ModalWrapper` | (`__namedParameters`: [`WrapperModalProps`](interfaces/WrapperModalProps.md)) => `any` |
-| `SuccessCreateIdentityModal` | () => `Element` |
-| `SwitchChainModal` | () => `Element` |
-
-___
-
 ### queryClient
 
 • `Const` **queryClient**: `QueryClient`
@@ -333,22 +282,6 @@ ___
 #### Returns
 
 `Element`
-
-___
-
-### ModalWrapper
-
-▸ **ModalWrapper**(`«destructured»`): `any`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | [`WrapperModalProps`](interfaces/WrapperModalProps.md) |
-
-#### Returns
-
-`any`
 
 ___
 
@@ -538,7 +471,7 @@ ___
 
 ### openAuthenticateModal
 
-▸ **openAuthenticateModal**(`«destructured»`): `any`
+▸ **openAuthenticateModal**(`«destructured»`): `Promise`<`unknown`\>
 
 #### Parameters
 
@@ -548,13 +481,13 @@ ___
 
 #### Returns
 
-`any`
+`Promise`<`unknown`\>
 
 ___
 
 ### openCreateSoulnameModal
 
-▸ **openCreateSoulnameModal**(`«destructured»`): `any`
+▸ **openCreateSoulnameModal**(`«destructured»`): `Promise`<`unknown`\>
 
 #### Parameters
 
@@ -570,7 +503,7 @@ ___
 
 #### Returns
 
-`any`
+`Promise`<`unknown`\>
 
 ___
 
@@ -621,7 +554,7 @@ ___
 | `isFetching` | `boolean` |
 | `isLoading` | `boolean` |
 | `reloadCreditScores` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| { `metadata?`: `ICreditScore` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[], `unknown`\>\> |
-| `status` | ``"idle"`` \| ``"error"`` \| ``"loading"`` \| ``"success"`` |
+| `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
 
 ___
 
@@ -717,7 +650,7 @@ ___
 | `isFetching` | `boolean` |
 | `isLoading` | `boolean` |
 | `reloadGreens` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| { `metadata?`: `IGreen` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[], `unknown`\>\> |
-| `status` | ``"idle"`` \| ``"error"`` \| ``"loading"`` \| ``"success"`` |
+| `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
 
 ___
 
@@ -775,7 +708,7 @@ ___
 | `isFetching` | `boolean` |
 | `isLoading` | `boolean` |
 | `reloadIdentity` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| { `address?`: `string` ; `identityId?`: `BigNumber`  }, `unknown`\>\> |
-| `status` | ``"idle"`` \| ``"error"`` \| ``"loading"`` \| ``"success"`` |
+| `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
 
 ___
 
@@ -942,7 +875,7 @@ ___
 | `isSessionLoading` | `boolean` |
 | `reloadSession` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `boolean`, `unknown`\>\> |
 | `reloadSessionData` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `ISession`, `unknown`\>\> |
-| `status` | ``"idle"`` \| ``"error"`` \| ``"loading"`` \| ``"success"`` |
+| `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
 
 ___
 
@@ -994,7 +927,7 @@ ___
 | `isSessionCheckFetching` | `boolean` |
 | `isSessionCheckLoading` | `boolean` |
 | `reloadSession` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `boolean`, `unknown`\>\> |
-| `status` | ``"idle"`` \| ``"error"`` \| ``"loading"`` \| ``"success"`` |
+| `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
 
 ___
 
@@ -1047,7 +980,7 @@ ___
 | `isLoading` | `boolean` |
 | `reloadSoulnames` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `SoulNameDetails`[], `unknown`\>\> |
 | `soulnames` | `undefined` \| `SoulNameDetails`[] |
-| `status` | ``"idle"`` \| ``"error"`` \| ``"loading"`` \| ``"success"`` |
+| `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
 
 ___
 
@@ -1092,5 +1025,5 @@ ___
 | `isFetching` | `boolean` |
 | `isLoading` | `boolean` |
 | `refetch` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `string`, `unknown`\>\> |
-| `status` | ``"idle"`` \| ``"error"`` \| ``"loading"`` \| ``"success"`` |
+| `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
 | `walletAddress` | `undefined` \| `string` |
