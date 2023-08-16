@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.5.1](../README.md) / [Exports](../modules.md) / MasaArweave
+ - v3.5.8](../README.md) / [Exports](../modules.md) / MasaArweave
 
 # Class: MasaArweave
 
@@ -196,11 +196,11 @@ Arweave.utils
 
 • `get` **crypto**(): `default`
 
-**`Deprecated`**
-
 #### Returns
 
 `default`
+
+**`Deprecated`**
 
 #### Inherited from
 
@@ -212,11 +212,11 @@ ___
 
 • `get` **utils**(): `__module`
 
-**`Deprecated`**
-
 #### Returns
 
 `__module`
+
+**`Deprecated`**
 
 #### Inherited from
 

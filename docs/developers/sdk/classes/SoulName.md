@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.5.1](../README.md) / [Exports](../modules.md) / SoulName
+ - v3.5.8](../README.md) / [Exports](../modules.md) / SoulName
 
 # Class: SoulName
 
@@ -266,7 +266,7 @@ ___
 
 ### purchase
 
-▸ **purchase**(`paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`, `receiver?`): `Promise`<`ContractTransaction`\>
+▸ **purchase**(`paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`, `receiver?`): `Promise`<`ContractTransaction` & { `price`: `BigNumber`  }\>
 
 purchase only name
 
@@ -285,7 +285,7 @@ purchase only name
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
+`Promise`<`ContractTransaction` & { `price`: `BigNumber`  }\>
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.5.1](../README.md) / [Exports](../modules.md) / CreateSoulNameResult
+ - v3.5.8](../README.md) / [Exports](../modules.md) / CreateSoulNameResult
 
 # Interface: CreateSoulNameResult
 
@@ -15,6 +15,7 @@
 
 - [errorCode](CreateSoulNameResult.md#errorcode)
 - [message](CreateSoulNameResult.md#message)
+- [metadata](CreateSoulNameResult.md#metadata)
 - [soulName](CreateSoulNameResult.md#soulname)
 - [success](CreateSoulNameResult.md#success)
 - [tokenId](CreateSoulNameResult.md#tokenid)
@@ -38,6 +39,12 @@ ___
 #### Inherited from
 
 [SoulNameResultBase](SoulNameResultBase.md).[message](SoulNameResultBase.md#message)
+
+___
+
+### metadata
+
+• `Optional` **metadata**: `any`
 
 ___
 

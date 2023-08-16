@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.5.1](README.md) / Exports
+ - v3.5.8](README.md) / Exports
 
 # # Masa SDK
- - v3.5.1
+ - v3.5.8
 
 ## Table of contents
 
@@ -389,7 +389,7 @@ ___
 
 ### base
 
-• `Const` **base**: [`Addresses`](interfaces/Addresses.md) = `{}`
+• `Const` **base**: [`Addresses`](interfaces/Addresses.md)
 
 ___
 

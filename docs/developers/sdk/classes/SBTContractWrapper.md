@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.5.1](../README.md) / [Exports](../modules.md) / SBTContractWrapper
+ - v3.5.8](../README.md) / [Exports](../modules.md) / SBTContractWrapper
 
 # Class: SBTContractWrapper<Contract\>
 
@@ -54,7 +54,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `MasaSBT`<`Contract`\> |
+| `Contract` | extends `MasaSBT` |
 
 #### Parameters
 
@@ -245,7 +245,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `MasaSBT`<`Contract`\> |
+| `Contract` | extends `MasaSBT` |
 
 #### Parameters
 

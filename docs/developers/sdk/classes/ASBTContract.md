@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.5.1](../README.md) / [Exports](../modules.md) / ASBTContract
+ - v3.5.8](../README.md) / [Exports](../modules.md) / ASBTContract
 
 # Class: ASBTContract
 
@@ -81,7 +81,7 @@ MasaSBTModuleBase.masa
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `ReferenceSBTAuthority`<`Contract`\> |
+| `Contract` | extends `ReferenceSBTAuthority` |
 
 #### Parameters
 
@@ -128,7 +128,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `ReferenceSBTAuthority`<`Contract`\> |
+| `Contract` | extends `ReferenceSBTAuthority` |
 
 #### Parameters
 
@@ -250,7 +250,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `MasaSBT`<`Contract`\> |
+| `Contract` | extends `MasaSBT` |
 
 #### Parameters
 

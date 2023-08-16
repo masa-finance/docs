@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.5.1](../README.md) / [Exports](../modules.md) / SSSBTContract
+ - v3.5.8](../README.md) / [Exports](../modules.md) / SSSBTContract
 
 # Class: SSSBTContract
 
@@ -81,7 +81,7 @@ MasaSBTModuleBase.masa
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `ReferenceSBTSelfSovereign`<`Contract`\> |
+| `Contract` | extends `ReferenceSBTSelfSovereign` |
 
 #### Parameters
 
@@ -128,7 +128,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `ReferenceSBTSelfSovereign`<`Contract`\> |
+| `Contract` | extends `ReferenceSBTSelfSovereign` |
 
 #### Parameters
 
@@ -250,7 +250,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `MasaSBT`<`Contract`\> |
+| `Contract` | extends `MasaSBT` |
 
 #### Parameters
 
