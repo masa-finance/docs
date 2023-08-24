@@ -304,7 +304,7 @@ Returns the price for minting with protocol fee
 function getProtocolFee(address paymentMethod, uint256 amount) external view returns (uint256)
 ```
 
-Calculates the protocol fee
+Calculates the protocol fee added to the project fee
 
 *This method will calculate the protocol fee based on the payment method*
 
@@ -313,6 +313,28 @@ Calculates the protocol fee
 | Name | Type | Description |
 |---|---|---|
 | paymentMethod | address | Address of token that user want to pay |
+| amount | uint256 | Price to be paid in the specified payment method |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### getProtocolFeeSub
+
+```solidity
+function getProtocolFeeSub(uint256 amount) external view returns (uint256)
+```
+
+Calculates the protocol fee substracted from the amount
+
+*This method will calculate the protocol fee based on the payment method*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
 | amount | uint256 | Price to be paid in the specified payment method |
 
 #### Returns
@@ -511,6 +533,23 @@ function protocolFeeAmount() external view returns (uint256)
 
 ```solidity
 function protocolFeePercent() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### protocolFeePercentSub
+
+```solidity
+function protocolFeePercentSub() external view returns (uint256)
 ```
 
 
@@ -727,7 +766,7 @@ Set the protocol fee amount
 function setProtocolFeePercent(uint256 _protocolFeePercent) external nonpayable
 ```
 
-Set the protocol fee percent
+Set the protocol fee percent added to the project fee
 
 *The caller must have the admin role to call this function*
 
@@ -735,7 +774,23 @@ Set the protocol fee percent
 
 | Name | Type | Description |
 |---|---|---|
-| _protocolFeePercent | uint256 | New protocol fee percent |
+| _protocolFeePercent | uint256 | New protocol fee percent added to the project fee |
+
+### setProtocolFeePercentSub
+
+```solidity
+function setProtocolFeePercentSub(uint256 _protocolFeePercentSub) external nonpayable
+```
+
+Set the protocol fee percent substracted from the amount
+
+*The caller must have the admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _protocolFeePercentSub | uint256 | New protocol fee percent substracted from the amount |
 
 ### setProtocolFeeReceiver
 

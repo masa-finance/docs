@@ -459,7 +459,7 @@ function maxSBTToMint() external view returns (uint256)
 ### mint
 
 ```solidity
-function mint(address paymentMethod, address[] to) external nonpayable returns (uint256[] tokenIds)
+function mint(address paymentMethod, address[] to) external payable returns (uint256[] tokenIds)
 ```
 
 Bulk mint of new SBTs
@@ -482,7 +482,7 @@ Bulk mint of new SBTs
 ### mint
 
 ```solidity
-function mint(address paymentMethod, uint256 identityId) external nonpayable returns (uint256)
+function mint(address paymentMethod, uint256 identityId) external payable returns (uint256)
 ```
 
 Mints a new SBT
@@ -505,7 +505,7 @@ Mints a new SBT
 ### mint
 
 ```solidity
-function mint(address paymentMethod, uint256[] identityId) external nonpayable returns (uint256[] tokenIds)
+function mint(address paymentMethod, uint256[] identityId) external payable returns (uint256[] tokenIds)
 ```
 
 Bulk mint of new SBTs
@@ -528,7 +528,7 @@ Bulk mint of new SBTs
 ### mint
 
 ```solidity
-function mint(address paymentMethod, address to) external nonpayable returns (uint256)
+function mint(address paymentMethod, address to) external payable returns (uint256)
 ```
 
 Mints a new SBT
