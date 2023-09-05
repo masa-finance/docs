@@ -2335,10 +2335,10 @@
   dependencies:
     ethers "~5.7.2"
 
-"@masa-finance/masa-react@3.0.30":
-  version "3.0.30"
-  resolved "https://registry.yarnpkg.com/@masa-finance/masa-react/-/masa-react-3.0.30.tgz#dedca48a8d26d4c507bdcb2eb5beffb3e8df2778"
-  integrity sha512-b75zXLyny6e8U639qqYVK4OPMvbCKdHUMbB2rTBxbGzETQrZQ38evivIYzBn42aJ4SNzF7mebH7jeoCEA/YRaw==
+"@masa-finance/masa-react@3.0.34":
+  version "3.0.34"
+  resolved "https://registry.yarnpkg.com/@masa-finance/masa-react/-/masa-react-3.0.34.tgz#206f38ba0ca497123dc031a03263044822caaf63"
+  integrity sha512-IkoDRXy8Oaz3EryxKgM5g0uQkURo0URZykA2OQQyM1S4dwQSriCd98pJXGlj8DTwAQ0nKyTguErsgs8KdWal5w==
   dependencies:
     "@acusti/react-code-input" "^3.11.0"
     "@celo/rainbowkit-celo" "^1.0.2"
