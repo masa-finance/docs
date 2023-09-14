@@ -1,5 +1,5 @@
 [# Masa React
- - v3.0.20](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
+ - v3.1.4](../README.md) / [Exports](../modules.md) / MasaContextProviderProps
 
 # Interface: MasaContextProviderProps
 
@@ -102,7 +102,7 @@
 
 ### SupportedNetworks
 
-• `Optional` **SupportedNetworks**: `Partial`<{ `alfajores`: `Network` ; `base`: `Network` ; `basegoerli`: `Network` ; `bsc`: `Network` ; `bsctest`: `Network` ; `celo`: `Network` ; `ethereum`: `Network` ; `goerli`: `Network` ; `mumbai`: `Network` ; `polygon`: `Network` ; `unknown`: `Network`  }\>
+• `Optional` **SupportedNetworks**: `Partial`<{ `alfajores`: `Network` ; `base`: `Network` ; `basegoerli`: `Network` ; `bsc`: `Network` ; `bsctest`: `Network` ; `celo`: `Network` ; `ethereum`: `Network` ; `goerli`: `Network` ; `mumbai`: `Network` ; `opbnb`: `Network` ; `opbnbtest`: `Network` ; `polygon`: `Network` ; `unknown`: `Network`  }\>
 
 #### Inherited from
 
@@ -138,7 +138,7 @@ ___
 
 ### badges
 
-• `Optional` **badges**: `any`[]
+• `Optional` **badges**: `unknown`[]
 
 #### Inherited from
 
@@ -268,7 +268,7 @@ ___
 
 ### customSBTs
 
-• `Optional` **customSBTs**: `any`[]
+• `Optional` **customSBTs**: `CustomGallerySBT` & `MasaSBTWrapper`<`MasaSBT`\> & { `tokens`: { `metadata?`: { `description`: `string` ; `image`: `string` ; `name`: `string`  } ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]  }[]
 
 #### Inherited from
 

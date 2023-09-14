@@ -1,8 +1,8 @@
 [# Masa React
- - v3.0.20](README.md) / Exports
+ - v3.1.4](README.md) / Exports
 
 # # Masa React
- - v3.0.20
+ - v3.1.4
 
 ## Table of contents
 
@@ -355,7 +355,7 @@ ___
 | :------ | :------ |
 | `«destructured»` | `Object` |
 | › `masa?` | `Masa` |
-| › `signer?` | `any` |
+| › `signer?` | `Signer` |
 | › `walletAddress?` | `string` |
 
 #### Returns
@@ -374,7 +374,7 @@ ___
 | :------ | :------ |
 | `«destructured»` | `Object` |
 | › `masa?` | `Masa` |
-| › `signer?` | `any` |
+| › `signer?` | `Signer` |
 | › `walletAddress?` | `string` |
 
 #### Returns
@@ -393,7 +393,7 @@ ___
 | :------ | :------ |
 | `«destructured»` | `Object` |
 | › `masa?` | `Masa` |
-| › `signer?` | `any` |
+| › `signer?` | `Signer` |
 | › `walletAddress?` | `string` |
 
 #### Returns
@@ -412,7 +412,7 @@ ___
 | :------ | :------ |
 | `«destructured»` | `Object` |
 | › `masa?` | `Masa` |
-| › `signer?` | `any` |
+| › `signer?` | `Signer` |
 | › `walletAddress?` | `string` |
 
 #### Returns
@@ -431,7 +431,7 @@ ___
 | :------ | :------ |
 | `«destructured»` | `Object` |
 | › `masa?` | `Masa` |
-| › `signer?` | `any` |
+| › `signer?` | `Signer` |
 | › `walletAddress?` | `string` |
 
 #### Returns
