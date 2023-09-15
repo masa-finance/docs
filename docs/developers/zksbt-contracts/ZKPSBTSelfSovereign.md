@@ -316,28 +316,6 @@ function getEncryptedData(uint256 tokenId) external view returns (struct ZKPSBT.
 | _1 | ZKPSBT.EncryptedData | undefined |
 | _2 | ZKPSBT.EncryptedData | undefined |
 
-### getHashData
-
-```solidity
-function getHashData(uint256 tokenId) external view returns (bytes)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| tokenId | uint256 | undefined |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | bytes | undefined |
-
 ### getIdentityId
 
 ```solidity
@@ -472,6 +450,28 @@ function getRoleAdmin(bytes32 role) external view returns (bytes32)
 |---|---|---|
 | _0 | bytes32 | undefined |
 
+### getRoot
+
+```solidity
+function getRoot(uint256 tokenId) external view returns (bytes)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId | uint256 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bytes | undefined |
+
 ### grantRole
 
 ```solidity
@@ -532,7 +532,7 @@ function masaToken() external view returns (address)
 ### mint
 
 ```solidity
-function mint(address to, address authorityAddress, uint256 signatureDate, bytes hashData, ZKPSBT.EncryptedData encryptedCreditScore, ZKPSBT.EncryptedData encryptedIncome, ZKPSBT.EncryptedData encryptedReportDate, bytes signature) external payable returns (uint256)
+function mint(address to, address authorityAddress, uint256 signatureDate, bytes root, ZKPSBT.EncryptedData encryptedCreditScore, ZKPSBT.EncryptedData encryptedIncome, ZKPSBT.EncryptedData encryptedReportDate, bytes signature) external payable returns (uint256)
 ```
 
 
@@ -546,7 +546,7 @@ function mint(address to, address authorityAddress, uint256 signatureDate, bytes
 | to | address | undefined |
 | authorityAddress | address | undefined |
 | signatureDate | uint256 | undefined |
-| hashData | bytes | undefined |
+| root | bytes | undefined |
 | encryptedCreditScore | ZKPSBT.EncryptedData | undefined |
 | encryptedIncome | ZKPSBT.EncryptedData | undefined |
 | encryptedReportDate | ZKPSBT.EncryptedData | undefined |
@@ -803,7 +803,7 @@ function revokeRole(bytes32 role, address account) external nonpayable
 ### sbtData
 
 ```solidity
-function sbtData(uint256) external view returns (bytes hashData, struct ZKPSBT.EncryptedData encryptedCreditScore, struct ZKPSBT.EncryptedData encryptedIncome, struct ZKPSBT.EncryptedData encryptedReportDate)
+function sbtData(uint256) external view returns (bytes root, struct ZKPSBT.EncryptedData encryptedCreditScore, struct ZKPSBT.EncryptedData encryptedIncome, struct ZKPSBT.EncryptedData encryptedReportDate)
 ```
 
 
@@ -820,7 +820,7 @@ function sbtData(uint256) external view returns (bytes hashData, struct ZKPSBT.E
 
 | Name | Type | Description |
 |---|---|---|
-| hashData | bytes | undefined |
+| root | bytes | undefined |
 | encryptedCreditScore | ZKPSBT.EncryptedData | undefined |
 | encryptedIncome | ZKPSBT.EncryptedData | undefined |
 | encryptedReportDate | ZKPSBT.EncryptedData | undefined |

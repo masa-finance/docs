@@ -35,7 +35,7 @@ function isElegibleForLoan(address) external view returns (uint256)
 ### loanEligible
 
 ```solidity
-function loanEligible(uint256[2] a, uint256[2][2] b, uint256[2] c, uint256[4] publicValues, contract IZKPSBT zkpSBT, uint256 sbtTokenId) external nonpayable
+function loanEligible(uint256[2] a, uint256[2][2] b, uint256[2] c, uint256[5] publicValues, contract IZKPSBT zkpSBT, uint256 sbtTokenId) external nonpayable
 ```
 
 
@@ -49,7 +49,7 @@ function loanEligible(uint256[2] a, uint256[2][2] b, uint256[2] c, uint256[4] pu
 | a | uint256[2] | undefined |
 | b | uint256[2][2] | undefined |
 | c | uint256[2] | undefined |
-| publicValues | uint256[4] | undefined |
+| publicValues | uint256[5] | undefined |
 | zkpSBT | contract IZKPSBT | undefined |
 | sbtTokenId | uint256 | undefined |
 

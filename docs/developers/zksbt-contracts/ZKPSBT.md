@@ -34,10 +34,10 @@ function getEncryptedData(uint256 tokenId) external view returns (struct ZKPSBT.
 | _1 | ZKPSBT.EncryptedData | undefined |
 | _2 | ZKPSBT.EncryptedData | undefined |
 
-### getHashData
+### getRoot
 
 ```solidity
-function getHashData(uint256 tokenId) external view returns (bytes)
+function getRoot(uint256 tokenId) external view returns (bytes)
 ```
 
 
@@ -59,7 +59,7 @@ function getHashData(uint256 tokenId) external view returns (bytes)
 ### sbtData
 
 ```solidity
-function sbtData(uint256) external view returns (bytes hashData, struct ZKPSBT.EncryptedData encryptedCreditScore, struct ZKPSBT.EncryptedData encryptedIncome, struct ZKPSBT.EncryptedData encryptedReportDate)
+function sbtData(uint256) external view returns (bytes root, struct ZKPSBT.EncryptedData encryptedCreditScore, struct ZKPSBT.EncryptedData encryptedIncome, struct ZKPSBT.EncryptedData encryptedReportDate)
 ```
 
 
@@ -76,7 +76,7 @@ function sbtData(uint256) external view returns (bytes hashData, struct ZKPSBT.E
 
 | Name | Type | Description |
 |---|---|---|
-| hashData | bytes | undefined |
+| root | bytes | undefined |
 | encryptedCreditScore | ZKPSBT.EncryptedData | undefined |
 | encryptedIncome | ZKPSBT.EncryptedData | undefined |
 | encryptedReportDate | ZKPSBT.EncryptedData | undefined |

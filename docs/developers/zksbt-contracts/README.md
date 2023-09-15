@@ -72,7 +72,7 @@ npm install -g snarkjs
 
 ```
 cd circuits
-circom creditScoreConstraint.circom --r1cs --wasm --sym --c
+circom verifyCreditScore.circom --r1cs --wasm --sym --c
 ```
 
 ### Run circuit trusted setup
@@ -86,9 +86,9 @@ snarkjs powersoftau contribute pot12_0000.ptau pot12_0001.ptau --name="First con
 Phase 2, which depends on the circuit:
 ```
 snarkjs powersoftau prepare phase2 pot12_0001.ptau pot12_final.ptau -v
-snarkjs groth16 setup creditScoreConstraint.r1cs pot12_final.ptau creditScoreConstraint_0000.zkey
-snarkjs zkey contribute creditScoreConstraint_0000.zkey creditScoreConstraint_0001.zkey --name="1st Contributor Name" -v
-snarkjs zkey export verificationkey creditScoreConstraint_0001.zkey verification_key.json
+snarkjs groth16 setup verifyCreditScore.r1cs pot12_final.ptau verifyCreditScore_0000.zkey
+snarkjs zkey contribute verifyCreditScore_0000.zkey verifyCreditScore_0001.zkey --name="1st Contributor Name" -v
+snarkjs zkey export verificationkey verifyCreditScore_0001.zkey verification_key.json
 ```
 
 ### Compute the witness
@@ -96,25 +96,25 @@ snarkjs zkey export verificationkey creditScoreConstraint_0001.zkey verification
 Add the input in the file `input.json` file:
 ```
 {
-  "hashData": "0x20630d227f9c346b4c6f52a21a4085fb061d8b9eba3ed155b6061ae6d177b693",
-  "ownerAddress": "0x14B2Bab4d1068e742BAf05F908D7b5A00773B0dd",
+  "root": "0x20630d227f9c346b4c6f52a21a4085fb061d8b9eba3ed155b6061ae6d177b693",
+  "owner": "0x14B2Bab4d1068e742BAf05F908D7b5A00773B0dd",
   "threshold": 40,
-  "creditScore": 45,
-  "income": 3100,
-  "reportDate": 1675196581804
+  "operator": 4,
+  "value": 45,
+  "data": ["0x14B2Bab4d1068e742BAf05F908D7b5A00773B0dd", 45, 3100, 1675196581804]
 }
 ```
 
 Then execute:
 ```
-node creditScoreConstraint_js/generate_witness.js creditScoreConstraint_js/creditScoreConstraint.wasm input.json witness.wtns
+node verifyCreditScore_js/generate_witness.js verifyCreditScore_js/verifyCreditScore.wasm input.json witness.wtns
 ```
 
 ### Generate a proof
 
 Generate a zk-proof associated to the circuit and the witness:
 ```
-snarkjs groth16 prove creditScoreConstraint_0001.zkey witness.wtns proof.json public.json
+snarkjs groth16 prove verifyCreditScore_0001.zkey witness.wtns proof.json public.json
 ```
 
 ### Verifying a Proof
@@ -128,7 +128,7 @@ snarkjs groth16 verify verification_key.json public.json proof.json
 
 We need to generate the Solidity code using the command:
 ```
-snarkjs zkey export solidityverifier creditScoreConstraint_0001.zkey ../contracts/verifier.sol
+snarkjs zkey export solidityverifier verifyCreditScore_0001.zkey ../contracts/verifier.sol
 ```
 
 The `Verifier` has a `view` function called `verifyProof` that returns `TRUE` if and only if the proof and the inputs are valid. To facilitate the call, you can use `snarkJS` to generate the parameters of the call by typing:

@@ -71,10 +71,10 @@ function getApproved(uint256 tokenId) external view returns (address operator)
 |---|---|---|
 | operator | address | undefined |
 
-### getHashData
+### getRoot
 
 ```solidity
-function getHashData(uint256 tokenId) external view returns (bytes)
+function getRoot(uint256 tokenId) external view returns (bytes)
 ```
 
 
