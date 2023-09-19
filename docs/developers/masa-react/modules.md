@@ -1,8 +1,8 @@
 [# Masa React
- - v3.1.4](README.md) / Exports
+ - v3.2.0](README.md) / Exports
 
 # # Masa React
- - v3.1.4
+ - v3.2.0
 
 ## Table of contents
 
@@ -952,7 +952,7 @@ ___
 | `handlePurchaseSoulname` | (`soulname`: `string`, `registrationPeriod`: `number`, `paymentMethod`: `PaymentMethod`, `style?`: `string`) => `Promise`<`boolean`\> |
 | `isSoulnamesLoading` | `boolean` |
 | `reloadSoulnames` | () => `void` |
-| `soulnames?` | `SoulNameDetails`[] |
+| `soulnames?` | `string`[] |
 | `status` | `string` |
 
 ___
@@ -978,8 +978,8 @@ ___
 | `error` | `unknown` |
 | `isFetching` | `boolean` |
 | `isLoading` | `boolean` |
-| `reloadSoulnames` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `SoulNameDetails`[], `unknown`\>\> |
-| `soulnames` | `undefined` \| `SoulNameDetails`[] |
+| `reloadSoulnames` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `string`[], `unknown`\>\> |
+| `soulnames` | `undefined` \| `string`[] |
 | `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
 
 ___
