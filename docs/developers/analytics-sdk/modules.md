@@ -1,8 +1,8 @@
 [# Masa Analytics SDK
- - v0.0.3](README.md) / Exports
+ - v0.0.8](README.md) / Exports
 
 # # Masa Analytics SDK
- - v0.0.3
+ - v0.0.8
 
 ## Table of contents
 
@@ -28,6 +28,7 @@
 
 ### Functions
 
+- [analyticsClient](modules.md#analyticsclient)
 - [generateSignature](modules.md#generatesignature)
 - [logEvent](modules.md#logevent)
 
@@ -39,9 +40,54 @@
 
 ## Functions
 
+### analyticsClient
+
+▸ **analyticsClient**<`T`, `R`, `D`\>(`config`): `Promise`<`R`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | `any` |
+| `R` | `AxiosResponse`<`T`, `any`\> |
+| `D` | `any` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `config` | `AxiosRequestConfig`<`D`\> |
+
+#### Returns
+
+`Promise`<`R`\>
+
+▸ **analyticsClient**<`T`, `R`, `D`\>(`url`, `config?`): `Promise`<`R`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | `any` |
+| `R` | `AxiosResponse`<`T`, `any`\> |
+| `D` | `any` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `url` | `string` |
+| `config?` | `AxiosRequestConfig`<`D`\> |
+
+#### Returns
+
+`Promise`<`R`\>
+
+___
+
 ### generateSignature
 
-▸ **generateSignature**(`wallet`, `client_app`, `client_name`): `Promise`<{ `message`: `string` ; `signature`: `string`  }\>
+▸ **generateSignature**(`wallet`, `client_app`, `client_name`): `Promise`<{ `message`: `string` ; `nonce`: `string` ; `signature`: `string`  }\>
 
 #### Parameters
 
@@ -53,7 +99,7 @@
 
 #### Returns
 
-`Promise`<{ `message`: `string` ; `signature`: `string`  }\>
+`Promise`<{ `message`: `string` ; `nonce`: `string` ; `signature`: `string`  }\>
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.0.3](../README.md) / [Exports](../modules.md) / ConnectWalletEventData
+ - v0.0.8](../README.md) / [Exports](../modules.md) / ConnectWalletEventData
 
 # Interface: ConnectWalletEventData
 
