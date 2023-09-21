@@ -1,14 +1,15 @@
 [# Masa Analytics SDK
- - v0.2.0](README.md) / Exports
+ - v0.2.1](README.md) / Exports
 
 # # Masa Analytics SDK
- - v0.2.0
+ - v0.2.1
 
 ## Table of contents
 
 ### Classes
 
 - [MasaAnalytics](classes/MasaAnalytics.md)
+- [MasaAnalyticsClient](classes/MasaAnalyticsClient.md)
 
 ### Interfaces
 

@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.2.0](../README.md) / [Exports](../modules.md) / MasaAnalytics
+ - v0.2.1](../README.md) / [Exports](../modules.md) / MasaAnalytics
 
 # Class: MasaAnalytics
 
@@ -46,7 +46,7 @@
 
 ### \_client
 
-• `Private` **\_client**: `AxiosInstance`
+• `Private` `Readonly` **\_client**: [`MasaAnalyticsClient`](MasaAnalyticsClient.md)
 
 ___
 
@@ -67,11 +67,11 @@ ___
 
 ### client
 
-• `get` **client**(): `AxiosInstance`
+• `get` **client**(): [`MasaAnalyticsClient`](MasaAnalyticsClient.md)
 
 #### Returns
 
-`AxiosInstance`
+[`MasaAnalyticsClient`](MasaAnalyticsClient.md)
 
 ## Methods
 
