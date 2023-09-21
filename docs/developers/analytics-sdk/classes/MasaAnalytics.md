@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.0.8](../README.md) / [Exports](../modules.md) / MasaAnalytics
+ - v0.2.0](../README.md) / [Exports](../modules.md) / MasaAnalytics
 
 # Class: MasaAnalytics
 
@@ -11,7 +11,12 @@
 
 ### Properties
 
+- [\_client](MasaAnalytics.md#_client)
 - [config](MasaAnalytics.md#config)
+
+### Accessors
+
+- [client](MasaAnalytics.md#client)
 
 ### Methods
 
@@ -32,11 +37,18 @@
 | Name | Type |
 | :------ | :------ |
 | `config` | `Object` |
+| `config.apiUrl?` | `string` |
 | `config.clientApp` | `string` |
 | `config.clientId` | `string` |
 | `config.clientName` | `string` |
 
 ## Properties
+
+### \_client
+
+• `Private` **\_client**: `AxiosInstance`
+
+___
 
 ### config
 
@@ -46,9 +58,20 @@
 
 | Name | Type |
 | :------ | :------ |
+| `apiUrl?` | `string` |
 | `clientApp` | `string` |
 | `clientId` | `string` |
 | `clientName` | `string` |
+
+## Accessors
+
+### client
+
+• `get` **client**(): `AxiosInstance`
+
+#### Returns
+
+`AxiosInstance`
 
 ## Methods
 
