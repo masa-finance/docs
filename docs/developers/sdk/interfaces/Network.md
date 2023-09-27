@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.7.0](../README.md) / [Exports](../modules.md) / Network
+ - v3.9.0](../README.md) / [Exports](../modules.md) / Network
 
 # Interface: Network
 
@@ -14,6 +14,7 @@
 - [chainName](Network.md#chainname)
 - [chainNameShort](Network.md#chainnameshort)
 - [gasSlippagePercentage](Network.md#gasslippagepercentage)
+- [isTestnet](Network.md#istestnet)
 - [nativeCurrency](Network.md#nativecurrency)
 - [networkName](Network.md#networkname)
 - [rpcUrls](Network.md#rpcurls)
@@ -75,6 +76,14 @@ ___
 • `Optional` **gasSlippagePercentage**: `number`
 
 the default gas slippage percentage used on some testnets
+
+___
+
+### isTestnet
+
+• **isTestnet**: `boolean`
+
+is this network a test network or not?
 
 ___
 

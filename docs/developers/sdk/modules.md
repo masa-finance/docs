@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.7.0](README.md) / Exports
+ - v3.9.0](README.md) / Exports
 
 # # Masa SDK
- - v3.7.0
+ - v3.9.0
 
 ## Table of contents
 
@@ -69,7 +69,7 @@
 - [ISession](interfaces/ISession.md)
 - [ISoulName](interfaces/ISoulName.md)
 - [IdentityDetails](interfaces/IdentityDetails.md)
-- [LoadContractArgs](interfaces/LoadContractArgs.md)
+- [LoadIdentityContractsArgs](interfaces/LoadIdentityContractsArgs.md)
 - [LogoutResult](interfaces/LogoutResult.md)
 - [MasaArgs](interfaces/MasaArgs.md)
 - [MasaConfig](interfaces/MasaConfig.md)
@@ -296,7 +296,7 @@ ___
 
 ### NetworkName
 
-Ƭ **NetworkName**: ``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"base"`` \| ``"unknown"``
+Ƭ **NetworkName**: ``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"opbnbtest"`` \| ``"opbnb"`` \| ``"basegoerli"`` \| ``"base"`` \| ``"unknown"``
 
 ___
 
@@ -1128,7 +1128,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | [`LoadContractArgs`](interfaces/LoadContractArgs.md) |
+| `«destructured»` | [`LoadIdentityContractsArgs`](interfaces/LoadIdentityContractsArgs.md) |
 
 #### Returns
 

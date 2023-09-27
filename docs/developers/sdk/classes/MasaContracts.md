@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.7.0](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v3.9.0](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -36,14 +36,16 @@
 
 ### constructor
 
-• **new MasaContracts**(`masa`, `contractOverrides?`)
+• **new MasaContracts**(`«destructured»`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
-| `contractOverrides?` | `Partial`<[`IIdentityContracts`](../interfaces/IIdentityContracts.md)\> |
+| `«destructured»` | `Object` |
+| › `contractOverrides?` | `Partial`<[`IIdentityContracts`](../interfaces/IIdentityContracts.md)\> |
+| › `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+| › `skipLoadingContracts?` | `boolean` |
 
 #### Overrides
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.7.0](../README.md) / [Exports](../modules.md) / MasaSBTWrapper
+ - v3.9.0](../README.md) / [Exports](../modules.md) / MasaSBTWrapper
 
 # Class: MasaSBTWrapper<Contract\>
 

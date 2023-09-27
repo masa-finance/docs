@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.7.0](../README.md) / [Exports](../modules.md) / CreateSoulNameResult
+ - v3.9.0](../README.md) / [Exports](../modules.md) / CreateSoulNameResult
 
 # Interface: CreateSoulNameResult
 
@@ -44,7 +44,7 @@ ___
 
 ### metadata
 
-• `Optional` **metadata**: `any`
+• `Optional` **metadata**: `ContractTransaction` & { `paymentMethod`: [`PaymentMethod`](../modules.md#paymentmethod) ; `price?`: `BigNumber`  }
 
 ___
 
