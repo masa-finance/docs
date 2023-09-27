@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.9.0](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v3.9.1](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -45,7 +45,6 @@
 | `«destructured»` | `Object` |
 | › `contractOverrides?` | `Partial`<[`IIdentityContracts`](../interfaces/IIdentityContracts.md)\> |
 | › `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
-| › `skipLoadingContracts?` | `boolean` |
 
 #### Overrides
 

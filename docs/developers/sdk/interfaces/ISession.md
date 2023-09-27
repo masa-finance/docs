@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.9.0](../README.md) / [Exports](../modules.md) / ISession
+ - v3.9.1](../README.md) / [Exports](../modules.md) / ISession
 
 # Interface: ISession
 
