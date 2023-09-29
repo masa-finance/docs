@@ -26,6 +26,7 @@
       - [`masa soul-name resolve-reverse <soulname>`](#masa-soul-name-resolve-reverse-soulname)
       - [`masa soul-name create <soulname> <duration>`](#masa-soul-name-create-soulname-duration)
       - [`masa soul-name burn <soulname>`](#masa-soul-name-burn-soulname)
+      - [`masa soul-name renew <soulname> <years>`](#masa-soul-name-renew-soulname-years)
       - [`masa soul-name send <soulname> <receiver>`](#masa-soul-name-send-soulname-receiver)
       - [`masa soul-name show <soulname>`](#masa-soul-name-show-soulname)
       - [`masa soul-name verify <soulname>`](#masa-soul-name-verify-soulname)
@@ -109,6 +110,7 @@ Commands:
   soul-name resolve-reverse <soulname>                                                        Resolves an address to soul names
   soul-name create <soulname> <duration>                                                      Creates a new soul name
   soul-name burn <soulname>                                                                   Burns soul name that you own
+  soul-name renew <soulname> <years>                                                          Renews a soul name that you own
   soul-name send <soulname> <receiver>                                                        Sends a soul name to that you own to a receiver
   soul-name show <soulname>                                                                   Shows info about a Soul Name
   soul-name verify <soulname>                                                                 Verifies a Soul Name
@@ -298,6 +300,13 @@ Creates a new soul name
 Burns soul name that you own
 
 - `<soulname> Soul Name to burn`
+
+#### `masa soul-name renew <soulname> <years>`
+
+Renews a soul name that you own
+
+- `<soulname> Soul Name to burn`
+- `<years> Years to renew for`
 
 #### `masa soul-name send <soulname> <receiver>`
 
