@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.9.1](../README.md) / [Exports](../modules.md) / MasaConfig
+ - v3.9.3](../README.md) / [Exports](../modules.md) / MasaConfig
 
 # Interface: MasaConfig
 
@@ -12,7 +12,6 @@
 - [network](MasaConfig.md#network)
 - [networkName](MasaConfig.md#networkname)
 - [signer](MasaConfig.md#signer)
-- [skipLoadingContracts](MasaConfig.md#skiploadingcontracts)
 - [verbose](MasaConfig.md#verbose)
 
 ## Properties
@@ -44,12 +43,6 @@ ___
 ### signer
 
 • `Readonly` **signer**: `Signer`
-
-___
-
-### skipLoadingContracts
-
-• `Readonly` **skipLoadingContracts**: `boolean`
 
 ___
 

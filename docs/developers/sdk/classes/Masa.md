@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.9.1](../README.md) / [Exports](../modules.md) / Masa
+ - v3.9.3](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -196,13 +196,13 @@ ___
 
 ### create
 
-▸ `Static` **create**(`args`): `Promise`<[`Masa`](Masa.md)\>
+▸ `Static` **create**(`masaArgs`): `Promise`<[`Masa`](Masa.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `args` | [`MasaArgs`](../interfaces/MasaArgs.md) |
+| `masaArgs` | [`MasaArgs`](../interfaces/MasaArgs.md) |
 
 #### Returns
 

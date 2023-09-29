@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.9.1](../README.md) / [Exports](../modules.md) / LoadIdentityContractsArgs
+ - v3.9.3](../README.md) / [Exports](../modules.md) / LoadIdentityContractsArgs
 
 # Interface: LoadIdentityContractsArgs
 
@@ -9,7 +9,6 @@
 
 - [networkName](LoadIdentityContractsArgs.md#networkname)
 - [signer](LoadIdentityContractsArgs.md#signer)
-- [skipLoadingContracts](LoadIdentityContractsArgs.md#skiploadingcontracts)
 
 ## Properties
 
@@ -22,9 +21,3 @@ ___
 ### signer
 
 • **signer**: `Signer`
-
-___
-
-### skipLoadingContracts
-
-• `Optional` **skipLoadingContracts**: `boolean`

@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.9.1](README.md) / Exports
+ - v3.9.3](README.md) / Exports
 
 # # Masa SDK
- - v3.9.1
+ - v3.9.3
 
 ## Table of contents
 
@@ -42,6 +42,7 @@
 - [SSSBTContractWrapper](classes/SSSBTContractWrapper.md)
 - [SoulLinker](classes/SoulLinker.md)
 - [SoulName](classes/SoulName.md)
+- [StaticJsonRpcProvider](classes/StaticJsonRpcProvider.md)
 
 ### Interfaces
 
@@ -187,6 +188,7 @@
 - [queryLink](modules.md#querylink)
 - [queryLinkFromPassport](modules.md#querylinkfrompassport)
 - [recoverAddress](modules.md#recoveraddress)
+- [renewSoulName](modules.md#renewsoulname)
 - [resolveIdentity](modules.md#resolveidentity)
 - [resolveReverseIdentity](modules.md#resolvereverseidentity)
 - [resolveSoulName](modules.md#resolvesoulname)
@@ -1459,6 +1461,24 @@ ___
 #### Returns
 
 `undefined` \| `string`
+
+___
+
+### renewSoulName
+
+▸ **renewSoulName**(`masa`, `soulName`, `years`): `Promise`<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `soulName` | `string` |
+| `years` | `number` |
+
+#### Returns
+
+`Promise`<`boolean`\>
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.9.1](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v3.9.3](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
@@ -28,6 +28,7 @@
 - [loadSoulNameByName](MasaSoulName.md#loadsoulnamebyname)
 - [loadSoulNameByTokenId](MasaSoulName.md#loadsoulnamebytokenid)
 - [loadSoulNames](MasaSoulName.md#loadsoulnames)
+- [renew](MasaSoulName.md#renew)
 - [resolve](MasaSoulName.md#resolve)
 - [send](MasaSoulName.md#send)
 - [tail](MasaSoulName.md#tail)
@@ -169,6 +170,23 @@ ___
 #### Returns
 
 `Promise`<`string`[]\>
+
+___
+
+### renew
+
+▸ **renew**(`soulName`, `years`): `Promise`<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `soulName` | `string` |
+| `years` | `number` |
+
+#### Returns
+
+`Promise`<`boolean`\>
 
 ___
 
