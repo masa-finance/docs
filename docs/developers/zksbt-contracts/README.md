@@ -99,7 +99,7 @@ Add the input in the file `input.json` file:
   "root": "0x20630d227f9c346b4c6f52a21a4085fb061d8b9eba3ed155b6061ae6d177b693",
   "owner": "0x14B2Bab4d1068e742BAf05F908D7b5A00773B0dd",
   "threshold": 40,
-  "operator": 4,
+  "operator": 3,
   "value": 45,
   "data": ["0x14B2Bab4d1068e742BAf05F908D7b5A00773B0dd", 45, 3100, 1675196581804]
 }
