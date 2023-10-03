@@ -1,4 +1,4 @@
-# Masa SBT ZKP
+# Masa ZKSBT
 
 A template for creating new SBTs inheriting from the Masa SBT smart contracts, using ZKP.
 

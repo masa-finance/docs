@@ -1,8 +1,8 @@
-# ZKPSBTAuthority
+# ZKSBTSelfSovereign
 
 *Masa Finance*
 
-> Test ZKP SBT Authority
+> Test ZKP SBT Self-Sovereign
 
 Test Soulbound token
 
@@ -14,23 +14,6 @@ Test Soulbound token
 
 ```solidity
 function DEFAULT_ADMIN_ROLE() external view returns (bytes32)
-```
-
-
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | bytes32 | undefined |
-
-### MINTER_ROLE
-
-```solidity
-function MINTER_ROLE() external view returns (bytes32)
 ```
 
 
@@ -60,6 +43,22 @@ function PROJECT_ADMIN_ROLE() external view returns (bytes32)
 | Name | Type | Description |
 |---|---|---|
 | _0 | bytes32 | undefined |
+
+### addAuthority
+
+```solidity
+function addAuthority(address _authority) external nonpayable
+```
+
+Adds a new authority to the list of authorities
+
+*The caller must have the admin or project admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _authority | address | New authority to add |
 
 ### addLinkPrice
 
@@ -94,6 +93,28 @@ function addLinkPriceMASA() external view returns (uint256)
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | undefined |
+
+### authorities
+
+```solidity
+function authorities(address) external view returns (bool)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
 
 ### balanceOf
 
@@ -148,6 +169,29 @@ Removes a token as a valid payment method
 | Name | Type | Description |
 |---|---|---|
 | _paymentMethod | address | Token to remove |
+
+### eip712Domain
+
+```solidity
+function eip712Domain() external view returns (bytes1 fields, string name, string version, uint256 chainId, address verifyingContract, bytes32 salt, uint256[] extensions)
+```
+
+
+
+*See {EIP-5267}. _Available since v4.9._*
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| fields | bytes1 | undefined |
+| name | string | undefined |
+| version | string | undefined |
+| chainId | uint256 | undefined |
+| verifyingContract | address | undefined |
+| salt | bytes32 | undefined |
+| extensions | uint256[] | undefined |
 
 ### enablePaymentMethod
 
@@ -251,7 +295,7 @@ Returns all available payment methods
 ### getEncryptedData
 
 ```solidity
-function getEncryptedData(uint256 tokenId) external view returns (struct ZKPSBT.EncryptedData, struct ZKPSBT.EncryptedData, struct ZKPSBT.EncryptedData)
+function getEncryptedData(uint256 tokenId) external view returns (struct ZKSBT.EncryptedData, struct ZKSBT.EncryptedData, struct ZKSBT.EncryptedData)
 ```
 
 
@@ -268,9 +312,9 @@ function getEncryptedData(uint256 tokenId) external view returns (struct ZKPSBT.
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | ZKPSBT.EncryptedData | undefined |
-| _1 | ZKPSBT.EncryptedData | undefined |
-| _2 | ZKPSBT.EncryptedData | undefined |
+| _0 | ZKSBT.EncryptedData | undefined |
+| _1 | ZKSBT.EncryptedData | undefined |
+| _2 | ZKSBT.EncryptedData | undefined |
 
 ### getIdentityId
 
@@ -488,7 +532,7 @@ function masaToken() external view returns (address)
 ### mint
 
 ```solidity
-function mint(address to, bytes root, ZKPSBT.EncryptedData encryptedCreditScore, ZKPSBT.EncryptedData encryptedIncome, ZKPSBT.EncryptedData encryptedReportDate) external payable returns (uint256)
+function mint(address to, address authorityAddress, uint256 signatureDate, bytes root, ZKSBT.EncryptedData encryptedCreditScore, ZKSBT.EncryptedData encryptedIncome, ZKSBT.EncryptedData encryptedReportDate, bytes signature) external payable returns (uint256)
 ```
 
 
@@ -500,10 +544,13 @@ function mint(address to, bytes root, ZKPSBT.EncryptedData encryptedCreditScore,
 | Name | Type | Description |
 |---|---|---|
 | to | address | undefined |
+| authorityAddress | address | undefined |
+| signatureDate | uint256 | undefined |
 | root | bytes | undefined |
-| encryptedCreditScore | ZKPSBT.EncryptedData | undefined |
-| encryptedIncome | ZKPSBT.EncryptedData | undefined |
-| encryptedReportDate | ZKPSBT.EncryptedData | undefined |
+| encryptedCreditScore | ZKSBT.EncryptedData | undefined |
+| encryptedIncome | ZKSBT.EncryptedData | undefined |
+| encryptedReportDate | ZKSBT.EncryptedData | undefined |
+| signature | bytes | undefined |
 
 #### Returns
 
@@ -703,6 +750,22 @@ function queryLinkPriceMASA() external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
+### removeAuthority
+
+```solidity
+function removeAuthority(address _authority) external nonpayable
+```
+
+Removes an authority from the list of authorities
+
+*The caller must have the admin or project admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _authority | address | Authority to remove |
+
 ### renounceRole
 
 ```solidity
@@ -740,7 +803,7 @@ function revokeRole(bytes32 role, address account) external nonpayable
 ### sbtData
 
 ```solidity
-function sbtData(uint256) external view returns (bytes root, struct ZKPSBT.EncryptedData encryptedCreditScore, struct ZKPSBT.EncryptedData encryptedIncome, struct ZKPSBT.EncryptedData encryptedReportDate)
+function sbtData(uint256) external view returns (bytes root, struct ZKSBT.EncryptedData encryptedCreditScore, struct ZKSBT.EncryptedData encryptedIncome, struct ZKSBT.EncryptedData encryptedReportDate)
 ```
 
 
@@ -758,9 +821,9 @@ function sbtData(uint256) external view returns (bytes root, struct ZKPSBT.Encry
 | Name | Type | Description |
 |---|---|---|
 | root | bytes | undefined |
-| encryptedCreditScore | ZKPSBT.EncryptedData | undefined |
-| encryptedIncome | ZKPSBT.EncryptedData | undefined |
-| encryptedReportDate | ZKPSBT.EncryptedData | undefined |
+| encryptedCreditScore | ZKSBT.EncryptedData | undefined |
+| encryptedIncome | ZKSBT.EncryptedData | undefined |
+| encryptedReportDate | ZKSBT.EncryptedData | undefined |
 
 ### setAddLinkPrice
 
@@ -1230,6 +1293,17 @@ event Burn(address indexed _owner, uint256 indexed _tokenId)
 | _owner `indexed` | address | undefined |
 | _tokenId `indexed` | uint256 | undefined |
 
+### EIP712DomainChanged
+
+```solidity
+event EIP712DomainChanged()
+```
+
+
+
+
+
+
 ### Mint
 
 ```solidity
@@ -1250,7 +1324,7 @@ event Mint(address indexed _owner, uint256 indexed _tokenId)
 ### MintedToAddress
 
 ```solidity
-event MintedToAddress(uint256 tokenId, address to)
+event MintedToAddress(uint256 tokenId, address to, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
 ```
 
 
@@ -1263,6 +1337,10 @@ event MintedToAddress(uint256 tokenId, address to)
 |---|---|---|
 | tokenId  | uint256 | undefined |
 | to  | address | undefined |
+| authorityAddress  | address | undefined |
+| signatureDate  | uint256 | undefined |
+| paymentMethod  | address | undefined |
+| mintPrice  | uint256 | undefined |
 
 ### RoleAdminChanged
 
@@ -1333,6 +1411,38 @@ error AlreadyAdded()
 
 
 
+### AuthorityNotExists
+
+```solidity
+error AuthorityNotExists(address authority)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| authority | address | undefined |
+
+### CallerNotOwner
+
+```solidity
+error CallerNotOwner(address caller)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| caller | address | undefined |
+
 ### InsufficientEthAmount
 
 ```solidity
@@ -1365,6 +1475,28 @@ error InvalidPaymentMethod(address paymentMethod)
 |---|---|---|
 | paymentMethod | address | undefined |
 
+### InvalidShortString
+
+```solidity
+error InvalidShortString()
+```
+
+
+
+
+
+
+### InvalidSignature
+
+```solidity
+error InvalidSignature()
+```
+
+
+
+
+
+
 ### InvalidToken
 
 ```solidity
@@ -1396,6 +1528,22 @@ error NonExistingErc20Token(address erc20token)
 | Name | Type | Description |
 |---|---|---|
 | erc20token | address | undefined |
+
+### NotAuthorized
+
+```solidity
+error NotAuthorized(address signer)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| signer | address | undefined |
 
 ### NotLinkedToAnIdentitySBT
 
@@ -1452,6 +1600,22 @@ error SameValue()
 
 
 
+### StringTooLong
+
+```solidity
+error StringTooLong(string str)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| str | string | undefined |
+
 ### TransferFailed
 
 ```solidity
@@ -1467,6 +1631,17 @@ error TransferFailed()
 
 ```solidity
 error UserMustHaveProtocolOrProjectAdminRole()
+```
+
+
+
+
+
+
+### ZeroAddress
+
+```solidity
+error ZeroAddress()
 ```
 
 
