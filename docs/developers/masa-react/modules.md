@@ -1,204 +1,111 @@
 [# Masa React
- - v3.2.0](README.md) / Exports
+ - v3.4.4](README.md) / Exports
 
 # # Masa React
- - v3.2.0
+ - v3.4.4
 
 ## Table of contents
 
-### Enumerations
-
-- [SoulNameErrorCodes](enums/SoulNameErrorCodes.md)
-
 ### Interfaces
 
-- [ArweaveConfig](interfaces/ArweaveConfig.md)
-- [MasaContextProviderProps](interfaces/MasaContextProviderProps.md)
-- [MasaShape](interfaces/MasaShape.md)
-- [ModalProps](interfaces/ModalProps.md)
-- [SpinnerProps](interfaces/SpinnerProps.md)
-
-### Type Aliases
-
-- [EnvironmentNameEx](modules.md#environmentnameex)
-- [OnSuccessInput](modules.md#onsuccessinput)
-- [UseCreditScoresReturnType](modules.md#usecreditscoresreturntype)
-- [UseGreenReturnValue](modules.md#usegreenreturnvalue)
-- [UseNetworkInputValue](modules.md#usenetworkinputvalue)
-- [UseNetworkReturnValue](modules.md#usenetworkreturnvalue)
-- [UseWalletReturnType](modules.md#usewalletreturntype)
+- [CustomGallerySBT](interfaces/CustomGallerySBT.md)
+- [FullContract](interfaces/FullContract.md)
+- [FullContractWithTokens](interfaces/FullContractWithTokens.md)
+- [GalleryMetadata](interfaces/GalleryMetadata.md)
+- [HydratedContract](interfaces/HydratedContract.md)
+- [MasaProviderValue](interfaces/MasaProviderValue.md)
+- [Metadata](interfaces/Metadata.md)
+- [TabsInterface](interfaces/TabsInterface.md)
+- [Token](interfaces/Token.md)
+- [TokenWithMetadata](interfaces/TokenWithMetadata.md)
 
 ### Variables
 
-- [MasaContext](modules.md#masacontext)
-- [queryClient](modules.md#queryclient)
+- [MasaQueryClientContext](modules.md#masaqueryclientcontext)
 
 ### Functions
 
-- [MasaContextProvider](modules.md#masacontextprovider)
-- [MasaInterface](modules.md#masainterface)
-- [MasaLoading](modules.md#masaloading)
+- [AuthenticateModal](modules.md#authenticatemodal)
+- [Button](modules.md#button)
+- [CreateSoulnameModal](modules.md#createsoulnamemodal)
+- [GalleryModalWrapper](modules.md#gallerymodalwrapper)
 - [MasaProvider](modules.md#masaprovider)
-- [MasaRefactorProvider](modules.md#masarefactorprovider)
-- [ModalComponent](modules.md#modalcomponent)
-- [Spinner](modules.md#spinner)
-- [createNewMasa](modules.md#createnewmasa)
-- [getCreditScoresQueryKey](modules.md#getcreditscoresquerykey)
-- [getGreenQueryKey](modules.md#getgreenquerykey)
-- [getIdentityQueryKey](modules.md#getidentityquerykey)
-- [getSessionDataQueryKey](modules.md#getsessiondataquerykey)
-- [getSessionQueryKey](modules.md#getsessionquerykey)
-- [getSoulnamesQueryKey](modules.md#getsoulnamesquerykey)
-- [getWalletQueryKey](modules.md#getwalletquerykey)
-- [getWeb3Provider](modules.md#getweb3provider)
+- [Modal](modules.md#modal)
+- [ModalError](modules.md#modalerror)
+- [ModalLoading](modules.md#modalloading)
+- [fetchContractsAndTokens](modules.md#fetchcontractsandtokens)
+- [hydrateTokensWithMetadata](modules.md#hydratetokenswithmetadata)
+- [isIdentityContractAvailible](modules.md#isidentitycontractavailible)
 - [openAuthenticateModal](modules.md#openauthenticatemodal)
 - [openCreateSoulnameModal](modules.md#opencreatesoulnamemodal)
+- [openGalleryModal](modules.md#opengallerymodal)
+- [useAuthenticate](modules.md#useauthenticate)
+- [useAuthenticateModal](modules.md#useauthenticatemodal)
+- [useCanQuery](modules.md#usecanquery)
+- [useCreditScoreCreate](modules.md#usecreditscorecreate)
 - [useCreditScores](modules.md#usecreditscores)
-- [useCreditScoresQuery](modules.md#usecreditscoresquery)
+- [useCustomGallerySBT](modules.md#usecustomgallerysbt)
+- [useCustomSBTs](modules.md#usecustomsbts)
 - [useDebounce](modules.md#usedebounce)
 - [useDebounceIfValue](modules.md#usedebounceifvalue)
-- [useErrors](modules.md#useerrors)
+- [useDebug](modules.md#usedebug)
 - [useGreen](modules.md#usegreen)
-- [useGreenQuery](modules.md#usegreenquery)
+- [useGreenGenerate](modules.md#usegreengenerate)
 - [useIdentity](modules.md#useidentity)
-- [useIdentityQuery](modules.md#useidentityquery)
-- [useLocalStorage](modules.md#uselocalstorage)
-- [useMasa](modules.md#usemasa)
-- [useMetamask](modules.md#usemetamask)
-- [useModal](modules.md#usemodal)
+- [useIdentityListen](modules.md#useidentitylisten)
+- [useIdentityPurchase](modules.md#useidentitypurchase)
+- [useMasaClient](modules.md#usemasaclient)
+- [useMasaLoading](modules.md#usemasaloading)
+- [useMasaQueryClient](modules.md#usemasaqueryclient)
+- [useMasaSDK](modules.md#usemasasdk)
 - [useNetwork](modules.md#usenetwork)
-- [useNetworkSwitch](modules.md#usenetworkswitch)
+- [useNetworkSwitchListen](modules.md#usenetworkswitchlisten)
+- [useRegisterSoulname](modules.md#useregistersoulname)
 - [useSBT](modules.md#usesbt)
 - [useSession](modules.md#usesession)
-- [useSessionDataQuery](modules.md#usesessiondataquery)
-- [useSessionQuery](modules.md#usesessionquery)
-- [useSoulnames](modules.md#usesoulnames)
-- [useSoulnamesQuery](modules.md#usesoulnamesquery)
+- [useSessionConnect](modules.md#usesessionconnect)
+- [useSessionListen](modules.md#usesessionlisten)
+- [useSoulNames](modules.md#usesoulnames)
+- [useSoulNamesPurchase](modules.md#usesoulnamespurchase)
+- [useSoulnameInterface](modules.md#usesoulnameinterface)
+- [useSoulnameModal](modules.md#usesoulnamemodal)
+- [useTabs](modules.md#usetabs)
 - [useWallet](modules.md#usewallet)
-- [useWalletQuery](modules.md#usewalletquery)
-
-## Type Aliases
-
-### EnvironmentNameEx
-
-Ƭ **EnvironmentNameEx**: `EnvironmentName` & ``"local"`` \| ``"stage"``
-
-___
-
-### OnSuccessInput
-
-Ƭ **OnSuccessInput**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `creditScores?` | { `metadata?`: `ICreditScore` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] |
-
-___
-
-### UseCreditScoresReturnType
-
-Ƭ **UseCreditScoresReturnType**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `creditScores?` | { `metadata?`: `ICreditScore` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] |
-| `error` | `unknown` |
-| `handleCreateCreditScore` | () => `Promise`<`boolean` \| `undefined`\> |
-| `invalidateCreditScores` | () => `void` |
-| `isCreditScoresLoading` | `boolean` |
-| `reloadCreditScores` | () => `void` |
-| `status` | `string` |
-
-___
-
-### UseGreenReturnValue
-
-Ƭ **UseGreenReturnValue**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `error` | `unknown` |
-| `greens?` | { `metadata?`: `IGreen` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] |
-| `handleCreateGreen` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`VerifyGreenResult` \| `undefined`\> |
-| `handleGenerateGreen` | (`phoneNumber`: `string`) => `Promise`<`GenerateGreenResult` \| `undefined`\> |
-| `invalidateGreen` | () => `void` |
-| `isGreensLoading` | `boolean` |
-| `reloadGreens` | () => `void` |
-| `status` | `string` |
-
-___
-
-### UseNetworkInputValue
-
-Ƭ **UseNetworkInputValue**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `provider?` | `Signer` |
-| `useRainbowKitWalletConnect?` | `boolean` |
-
-___
-
-### UseNetworkReturnValue
-
-Ƭ **UseNetworkReturnValue**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `addNetwork` | (`networkDetails`: `Network`) => `void` |
-| `currentNetwork?` | `Network` |
-| `switchNetwork` | (`networkName`: `NetworkName`) => `void` |
-
-___
-
-### UseWalletReturnType
-
-Ƭ **UseWalletReturnType**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `error` | `unknown` |
-| `hasWalletAddress` | `boolean` |
-| `isWalletLoading` | `boolean` |
-| `reloadWallet` | () => `Promise`<`unknown`\> |
-| `status` | `string` |
-| `walletAddress?` | `string` |
 
 ## Variables
 
-### MasaContext
+### MasaQueryClientContext
 
-• `Const` **MasaContext**: `Context`<[`MasaShape`](interfaces/MasaShape.md)\>
-
-___
-
-### queryClient
-
-• `Const` **queryClient**: `QueryClient`
+• `Const` **MasaQueryClientContext**: `Context`<`undefined` \| `QueryClient`\>
 
 ## Functions
 
-### MasaContextProvider
+### AuthenticateModal
 
-▸ **MasaContextProvider**(`«destructured»`): `Element`
+▸ **AuthenticateModal**(`props`, `context?`): `ReactNode`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) |
+| `props` | `AuthenticateProps` & `NiceModalHocProps` |
+| `context?` | `any` |
+
+#### Returns
+
+`ReactNode`
+
+___
+
+### Button
+
+▸ **Button**(`«destructured»`): `Element`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `ButtonProps` |
 
 #### Returns
 
@@ -206,53 +113,43 @@ ___
 
 ___
 
-### MasaInterface
+### CreateSoulnameModal
 
-▸ **MasaInterface**(`«destructured»`): `Element`
+▸ **CreateSoulnameModal**(`props`, `context?`): `ReactNode`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `Object` |
-| › `disableMetamask?` | `boolean` |
-| › `hideLegacyModal?` | `boolean` |
+| `props` | { `closeOnSuccess?`: `boolean` ; `onError?`: () => `void` ; `onMintError?`: () => `void` ; `onMintSuccess?`: (`result`: `CreateSoulNameResult`) => `void` ; `onRegisterFinish?`: () => `void` ; `onSuccess?`: () => `void`  } & `NiceModalHocProps` |
+| `context?` | `any` |
 
 #### Returns
 
-`Element`
+`ReactNode`
 
 ___
 
-### MasaLoading
+### GalleryModalWrapper
 
-▸ **MasaLoading**(): `Element`
+▸ **GalleryModalWrapper**(`props`, `context?`): `ReactNode`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `props` | `NiceModalHocProps` |
+| `context?` | `any` |
 
 #### Returns
 
-`Element`
+`ReactNode`
 
 ___
 
 ### MasaProvider
 
 ▸ **MasaProvider**(`«destructured»`): `Element`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | [`MasaContextProviderProps`](interfaces/MasaContextProviderProps.md) & { `chainsToUse?`: (``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"basegoerli"`` \| ``"unknown"``)[] ; `contractAddressOverrides?`: { `SoulNameAddress`: `string` ; `SoulStoreAddress`: `string`  } ; `rainbowKitModalSize?`: ``"compact"`` \| ``"wide"`` ; `walletsToUse?`: (``"metamask"`` \| ``"valora"`` \| ``"walletconnect"``)[]  } |
-
-#### Returns
-
-`Element`
-
-___
-
-### MasaRefactorProvider
-
-▸ **MasaRefactorProvider**(`«destructured»`): `Element`
 
 #### Parameters
 
@@ -269,15 +166,17 @@ ___
 
 ___
 
-### ModalComponent
+### Modal
 
-▸ **ModalComponent**(`«destructured»`): `Element`
+▸ **Modal**(`«destructured»`): `Element`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | [`ModalProps`](interfaces/ModalProps.md) |
+| `«destructured»` | `Object` |
+| › `children` | `ReactNode` |
+| › `onClose?` | () => `unknown` |
 
 #### Returns
 
@@ -285,15 +184,19 @@ ___
 
 ___
 
-### Spinner
+### ModalError
 
-▸ **Spinner**(`«destructured»`): `Element`
+▸ **ModalError**(`«destructured»`): `Element`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | [`SpinnerProps`](interfaces/SpinnerProps.md) |
+| `«destructured»` | `Object` |
+| › `buttonText?` | `string` |
+| › `isLoading?` | `boolean` |
+| › `onComplete?` | () => `void` |
+| › `subtitle?` | `string` |
 
 #### Returns
 
@@ -301,171 +204,68 @@ ___
 
 ___
 
-### createNewMasa
+### ModalLoading
 
-▸ **createNewMasa**(`«destructured»`): `undefined` \| `Masa`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `apiUrl?` | `string` |
-| › `arweaveConfig?` | [`ArweaveConfig`](interfaces/ArweaveConfig.md) |
-| › `contractAddressOverrides?` | `Object` |
-| › `contractAddressOverrides.SoulNameAddress` | `string` |
-| › `contractAddressOverrides.SoulStoreAddress` | `string` |
-| › `environmentName` | `string` |
-| › `networkName?` | `NetworkName` |
-| › `signer` | `Signer` |
-| › `verbose` | `boolean` |
-
-#### Returns
-
-`undefined` \| `Masa`
-
-___
-
-### getCreditScoresQueryKey
-
-▸ **getCreditScoresQueryKey**(`«destructured»`): (`undefined` \| `string`)[]
+▸ **ModalLoading**(`«destructured»`): `Element`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `Masa` |
-| › `signer?` | `Signer` |
-| › `walletAddress?` | `string` |
+| › `titleText?` | `ReactNode` |
 
 #### Returns
 
-(`undefined` \| `string`)[]
+`Element`
 
 ___
 
-### getGreenQueryKey
+### fetchContractsAndTokens
 
-▸ **getGreenQueryKey**(`«destructured»`): (`undefined` \| `string`)[]
+▸ **fetchContractsAndTokens**(`customContracts`): `Promise`<[`FullContractWithTokens`](interfaces/FullContractWithTokens.md)[]\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `Object` |
-| › `masa?` | `Masa` |
-| › `signer?` | `Signer` |
-| › `walletAddress?` | `string` |
+| `customContracts` | [`FullContract`](interfaces/FullContract.md)[] |
 
 #### Returns
 
-(`undefined` \| `string`)[]
+`Promise`<[`FullContractWithTokens`](interfaces/FullContractWithTokens.md)[]\>
 
 ___
 
-### getIdentityQueryKey
+### hydrateTokensWithMetadata
 
-▸ **getIdentityQueryKey**(`«destructured»`): (`undefined` \| `string`)[]
+▸ **hydrateTokensWithMetadata**(`contractsAndTokens`): `Promise`<[`HydratedContract`](interfaces/HydratedContract.md)[]\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `Object` |
-| › `masa?` | `Masa` |
-| › `signer?` | `Signer` |
-| › `walletAddress?` | `string` |
+| `contractsAndTokens` | [`FullContractWithTokens`](interfaces/FullContractWithTokens.md)[] |
 
 #### Returns
 
-(`undefined` \| `string`)[]
+`Promise`<[`HydratedContract`](interfaces/HydratedContract.md)[]\>
 
 ___
 
-### getSessionDataQueryKey
+### isIdentityContractAvailible
 
-▸ **getSessionDataQueryKey**(`«destructured»`): (`undefined` \| `string`)[]
+▸ **isIdentityContractAvailible**(`masa?`): `undefined` \| `boolean`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `Object` |
-| › `masa?` | `Masa` |
-| › `signer?` | `Signer` |
-| › `walletAddress?` | `string` |
+| `masa?` | `Masa` |
 
 #### Returns
 
-(`undefined` \| `string`)[]
-
-___
-
-### getSessionQueryKey
-
-▸ **getSessionQueryKey**(`«destructured»`): (`undefined` \| `string`)[]
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `masa?` | `Masa` |
-| › `signer?` | `Signer` |
-| › `walletAddress?` | `string` |
-
-#### Returns
-
-(`undefined` \| `string`)[]
-
-___
-
-### getSoulnamesQueryKey
-
-▸ **getSoulnamesQueryKey**(`«destructured»`): (`undefined` \| `string`)[]
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `masa?` | `Masa` |
-| › `signer?` | `Signer` |
-| › `walletAddress?` | `string` |
-
-#### Returns
-
-(`undefined` \| `string`)[]
-
-___
-
-### getWalletQueryKey
-
-▸ **getWalletQueryKey**(`«destructured»`): (`undefined` \| `string`)[]
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `masa?` | `Masa` |
-| › `signer?` | `Signer` |
-| › `walletAddress?` | `string` |
-
-#### Returns
-
-(`undefined` \| `string`)[]
-
-___
-
-### getWeb3Provider
-
-▸ **getWeb3Provider**(): `undefined` \| `Web3Provider`
-
-#### Returns
-
-`undefined` \| `Web3Provider`
+`undefined` \| `boolean`
 
 ___
 
@@ -507,40 +307,32 @@ ___
 
 ___
 
-### useCreditScores
+### openGalleryModal
 
-▸ **useCreditScores**(`masa?`, `walletAddress?`, `identity?`): [`UseCreditScoresReturnType`](modules.md#usecreditscoresreturntype)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa?` | `Masa` |
-| `walletAddress?` | `string` |
-| `identity?` | `Object` |
-| `identity.address?` | `string` |
-| `identity.identityId?` | `BigNumber` |
+▸ **openGalleryModal**(): `Promise`<`unknown`\>
 
 #### Returns
 
-[`UseCreditScoresReturnType`](modules.md#usecreditscoresreturntype)
+`Promise`<`unknown`\>
 
 ___
 
-### useCreditScoresQuery
+### useAuthenticate
 
-▸ **useCreditScoresQuery**(`«destructured»`): `Object`
+▸ **useAuthenticate**(`«destructured»?`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `identity?` | `Object` |
-| › `identity.address?` | `string` |
-| › `identity.identityId?` | `BigNumber` |
-| › `masa?` | `Masa` |
-| › `walletAddress?` | `string` |
+| › `onAuthenticateError?` | () => `void` |
+| › `onAuthenticateSuccess?` | (`payload`: { `address?`: `string` ; `walletType?`: `string`  }) => `void` |
+| › `onError?` | () => `void` |
+| › `onMintError?` | () => `void` |
+| › `onMintSuccess?` | () => `void` |
+| › `onRegisterFinish?` | () => `void` |
+| › `onSuccess?` | () => `void` |
 
 #### Returns
 
@@ -548,13 +340,132 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `creditScores` | `undefined` \| { `metadata?`: `ICreditScore` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] |
+| `isAuthenticateModalOpen` | `boolean` |
+| `openAuthModal` | (`config?`: { `disableSoulnamePurchase?`: `boolean`  }) => `Promise`<`void`\> |
+
+___
+
+### useAuthenticateModal
+
+▸ **useAuthenticateModal**(`«destructured»`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `Object` |
+| › `onAuthenticateError?` | () => `void` |
+| › `onAuthenticateSuccess?` | (`payload`: { `address?`: `string` ; `walletType?`: `string`  }) => `void` |
+| › `onClose?` | () => `void` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `isAuthenticating` | `boolean` |
+| `needsWalletConnection` | `boolean` |
+| `onAuthenticateStart` | () => `Promise`<``null`` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\> |
+| `showAuthenticateView` | `undefined` \| `boolean` |
+| `showConnectedView` | `undefined` \| ``null`` \| `boolean` |
+| `showSwitchWalletButton` | `undefined` \| `boolean` |
+| `successMessage` | `string` |
+
+___
+
+### useCanQuery
+
+▸ **useCanQuery**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+___
+
+### useCreditScoreCreate
+
+▸ **useCreditScoreCreate**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `createCreditScore` | () => `Promise`<`undefined` \| `boolean`\> |
+| `handleCreateCreditScore` | () => `Promise`<`undefined` \| `boolean`\> |
+| `isCreatingCreditScore` | `boolean` |
+
+___
+
+### useCreditScores
+
+▸ **useCreditScores**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `creditScores` | `undefined` \| ``null`` \| `CreditScoreDetails`[] |
+| `getCreditScores` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| `CreditScoreDetails`[], `unknown`\>\> |
+| `isCreditScoresLoading` | `boolean` |
+| `isLoadingCreditScores` | `boolean` |
+| `reloadCreditScores` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| `CreditScoreDetails`[], `unknown`\>\> |
+
+___
+
+### useCustomGallerySBT
+
+▸ **useCustomGallerySBT**(`«destructured»`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `Object` |
+| › `overrideCustomSBTs?` | [`CustomGallerySBT`](interfaces/CustomGallerySBT.md)[] |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `customContracts` | [`FullContract`](interfaces/FullContract.md)[] |
 | `error` | `unknown` |
-| `invalidateCreditScores` | () => `Promise`<`void`\> |
 | `isFetching` | `boolean` |
 | `isLoading` | `boolean` |
-| `reloadCreditScores` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| { `metadata?`: `ICreditScore` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[], `unknown`\>\> |
-| `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
+| `refetchContracts` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| [`FullContract`](interfaces/FullContract.md)[], `unknown`\>\> |
+| `status` | ``"error"`` \| ``"loading"`` \| ``"success"`` |
+
+___
+
+### useCustomSBTs
+
+▸ **useCustomSBTs**(`overrideCustomSBTs?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `overrideCustomSBTs?` | [`CustomGallerySBT`](interfaces/CustomGallerySBT.md)[] |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `customSBTs` | `undefined` \| ``null`` \| [`HydratedContract`](interfaces/HydratedContract.md)[] |
+| `error` | `unknown` |
+| `isFetching` | `boolean` |
+| `isLoading` | `boolean` |
+| `reloadCustomSBTs` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| [`HydratedContract`](interfaces/HydratedContract.md)[], `unknown`\>\> |
+| `status` | ``"error"`` \| ``"loading"`` \| ``"success"`` |
 
 ___
 
@@ -593,50 +504,28 @@ ___
 
 ___
 
-### useErrors
+### useDebug
 
-▸ **useErrors**(): `Object`
+▸ **useDebug**(`values`, `deps?`): `void`
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `values` | `Object` | `undefined` |
+| `values.name` | `string` | `undefined` |
+| `values.value` | `unknown` | `undefined` |
+| `deps` | `DependencyList` | `[]` |
 
 #### Returns
 
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `SoulNameErrorCodes` | typeof [`SoulNameErrorCodes`](enums/SoulNameErrorCodes.md) |
-| `error` | ``null`` \| `ErrorType` |
-| `handleErrors` | (`errorCode`: [`SoulNameErrorCodes`](enums/SoulNameErrorCodes.md)) => `void` |
+`void`
 
 ___
 
 ### useGreen
 
-▸ **useGreen**(`masa?`, `walletAddress?`): [`UseGreenReturnValue`](modules.md#usegreenreturnvalue)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa?` | `Masa` |
-| `walletAddress?` | `string` |
-
-#### Returns
-
-[`UseGreenReturnValue`](modules.md#usegreenreturnvalue)
-
-___
-
-### useGreenQuery
-
-▸ **useGreenQuery**(`«destructured»`): `Object`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `masa?` | `Masa` |
-| › `walletAddress?` | `string` |
+▸ **useGreen**(): `Object`
 
 #### Returns
 
@@ -644,26 +533,36 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `error` | `unknown` |
-| `greens` | `undefined` \| { `metadata?`: `IGreen` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] |
-| `invalidateGreen` | () => `Promise`<`void`\> |
-| `isFetching` | `boolean` |
-| `isLoading` | `boolean` |
-| `reloadGreens` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| { `metadata?`: `IGreen` ; `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[], `unknown`\>\> |
-| `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
+| `getGreens` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| `GreenDetails`[], `unknown`\>\> |
+| `greens` | `undefined` \| ``null`` \| `GreenDetails`[] |
+| `isGreensLoading` | `boolean` |
+| `isLoadingGreens` | `boolean` |
+| `reloadGreens` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| `GreenDetails`[], `unknown`\>\> |
+
+___
+
+### useGreenGenerate
+
+▸ **useGreenGenerate**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `createGreen` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<``null`` \| `GreenBaseResult`\> |
+| `generateGreen` | (`phoneNumber`: `string`) => `Promise`<``null`` \| `GenerateGreenResult`\> |
+| `handleCreateGreen` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<``null`` \| `GreenBaseResult`\> |
+| `handleGenerateGreen` | (`phoneNumber`: `string`) => `Promise`<``null`` \| `GenerateGreenResult`\> |
+| `isCreatingGreen` | `boolean` |
+| `isGeneratingGreen` | `boolean` |
 
 ___
 
 ### useIdentity
 
-▸ **useIdentity**(`masa?`, `walletAddress?`): `Object`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa?` | `Masa` |
-| `walletAddress?` | `string` |
+▸ **useIdentity**(): `Object`
 
 #### Returns
 
@@ -671,29 +570,39 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `error` | `unknown` |
-| `handlePurchaseIdentity` | () => `Promise`<`boolean`\> |
-| `handlePurchaseIdentityWithSoulname` | (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`, `style?`: `string`) => `Promise`<`boolean`\> |
-| `identity?` | { `address?`: `string` ; `identityId?`: `BigNumber`  } |
-| `identity.address?` | `string` |
-| `identity.identityId?` | `BigNumber` |
+| `getIdentity` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| ``null`` \| { `address`: `string` ; `identityId?`: `BigNumber`  }, `unknown`\>\> |
+| `hasIdentity` | `undefined` \| ``false`` \| `BigNumber` |
+| `identity` | `undefined` \| ``null`` \| { `address`: `string` ; `identityId?`: `BigNumber`  } |
+| `isFetchingIdentity` | `boolean` |
+| `isIdentityAvailibleInNetwork` | `undefined` \| `boolean` |
 | `isIdentityLoading` | `boolean` |
-| `reloadIdentity` | () => `Promise`<`unknown`\> |
-| `status` | `string` |
+| `isLoadingIdentity` | `boolean` |
+| `reloadIdentity` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| ``null`` \| { `address`: `string` ; `identityId?`: `BigNumber`  }, `unknown`\>\> |
 
 ___
 
-### useIdentityQuery
+### useIdentityListen
 
-▸ **useIdentityQuery**(`«destructured»`): `Object`
+▸ **useIdentityListen**(`«destructured»`): `AsyncState`<`undefined`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `Masa` |
-| › `walletAddress?` | `string` |
+| › `getIdentity` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| ``null`` \| { `address`: `string` ; `identityId?`: `BigNumber`  }, `unknown`\>\> |
+| › `identity?` | ``null`` \| { `address`: `string` ; `identityId?`: `BigNumber`  } |
+| › `sessionAddress?` | `string` |
+
+#### Returns
+
+`AsyncState`<`undefined`\>
+
+___
+
+### useIdentityPurchase
+
+▸ **useIdentityPurchase**(): `Object`
 
 #### Returns
 
@@ -701,116 +610,68 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `error` | `unknown` |
-| `identity` | `undefined` \| { `address?`: `string` ; `identityId?`: `BigNumber`  } |
-| `invalidateIdentity` | () => `Promise`<`void`\> |
-| `invalidateSoulnames` | () => `Promise`<`void`\> |
-| `isFetching` | `boolean` |
-| `isLoading` | `boolean` |
-| `reloadIdentity` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| { `address?`: `string` ; `identityId?`: `BigNumber`  }, `unknown`\>\> |
-| `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
+| `handlePurchaseIdentity` | () => `Promise`<`undefined` \| `boolean` \| `Error` & { `code?`: `string`  }\> |
+| `handlePurchaseIdentityWithSoulname` | (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`, `style?`: `string`) => `Promise`<`undefined` \| { `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult` \| `Error` & { `code?`: `string`  }\> |
+| `hasPurchasedIdentity` | `undefined` \| `boolean` \| `Error` & { `code?`: `string`  } |
+| `hasPurchasedIdentityWithSoulName` | `undefined` \| { `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult` \| `Error` & { `code?`: `string`  } |
+| `isPurchasingIdentity` | `boolean` |
+| `isPurchasingIdentityWithSoulName` | `boolean` |
+| `purchaseIdentity` | () => `Promise`<`undefined` \| `boolean` \| `Error` & { `code?`: `string`  }\> |
+| `purchaseIdentityError` | `undefined` \| `Error` |
+| `purchaseIdentityWithSoulName` | (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`, `style?`: `string`) => `Promise`<`undefined` \| { `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult` \| `Error` & { `code?`: `string`  }\> |
 
 ___
 
-### useLocalStorage
+### useMasaClient
 
-▸ **useLocalStorage**(): `Object`
+▸ **useMasaClient**(): { `isLoadingMasa?`: `undefined` ; `masa`: `undefined` = undefined; `masaAddress`: `undefined` \| \`0x${string}\` ; `masaChainId`: `undefined` \| `number` ; `masaNetwork`: `undefined` ; `sdk`: `undefined` = undefined } \| { `isLoadingMasa`: `boolean` ; `masa`: `undefined` \| `Masa` ; `masaAddress`: `undefined` \| \`0x${string}\` ; `masaChainId`: `undefined` \| `number` ; `masaNetwork`: `undefined` \| `NetworkName` ; `sdk`: `undefined` \| `Masa` = masa }
 
 #### Returns
 
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `localStorageGet` | <T\>(`key`: `string`) => `undefined` \| `T` |
-| `localStorageSet` | <T\>(`key`: `string`, `value`: `T`) => `void` |
+{ `isLoadingMasa?`: `undefined` ; `masa`: `undefined` = undefined; `masaAddress`: `undefined` \| \`0x${string}\` ; `masaChainId`: `undefined` \| `number` ; `masaNetwork`: `undefined` ; `sdk`: `undefined` = undefined } \| { `isLoadingMasa`: `boolean` ; `masa`: `undefined` \| `Masa` ; `masaAddress`: `undefined` \| \`0x${string}\` ; `masaChainId`: `undefined` \| `number` ; `masaNetwork`: `undefined` \| `NetworkName` ; `sdk`: `undefined` \| `Masa` = masa }
 
 ___
 
-### useMasa
+### useMasaLoading
 
-▸ **useMasa**(): [`MasaShape`](interfaces/MasaShape.md)
+▸ **useMasaLoading**(): `undefined` \| `boolean`
 
 #### Returns
 
-[`MasaShape`](interfaces/MasaShape.md)
+`undefined` \| `boolean`
 
 ___
 
-### useMetamask
+### useMasaQueryClient
 
-▸ **useMetamask**(`«destructured»`): `Object`
+▸ **useMasaQueryClient**(): `QueryClient`
+
+#### Returns
+
+`QueryClient`
+
+___
+
+### useMasaSDK
+
+▸ **useMasaSDK**(`«destructured»`, `deps`): `undefined` \| `Masa`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `Object` |
-| › `disabled?` | `boolean` |
+| `«destructured»` | `UseMasaSdkArgs` & { `address`: `undefined` \| \`0x${string}\`  } |
+| `deps` | `unknown`[] |
 
 #### Returns
 
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `connectMetamask` | () => `void` |
-
-___
-
-### useModal
-
-▸ **useModal**(`isLoggedIn?`, `isConnected?`, `areScopesFullfiled?`): `Object`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `isLoggedIn?` | `boolean` |
-| `isConnected?` | `boolean` |
-| `areScopesFullfiled?` | `boolean` |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `closeModal` | (`forceCallback?`: `boolean`) => `void` |
-| `forcedPage` | ``null`` \| `string` |
-| `isModalOpen` | `boolean` |
-| `modalCallback` | ``null`` \| () => `void` |
-| `modalSize` | ``null`` \| { `height`: `number` ; `width`: `number`  } |
-| `openGallery` | (`callback?`: () => `void`) => `void` |
-| `openMintMasaGreen` | (`mintCallback?`: () => `void`) => `void` |
-| `openMintSoulnameModal` | (`mintCallback?`: () => `void`) => `void` |
-| `setForcedPage?` | (`page`: ``null`` \| `string`) => `void` |
-| `setModalCallback` | (`callback`: () => `void`) => `void` |
-| `setModalOpen` | (`modalOpen`: `boolean`) => `void` |
-| `setModalSize` | (`size`: { `height`: `number` ; `width`: `number`  }) => `void` |
-| `useModalSize` | (`size`: { `height`: `number` ; `width`: `number`  }) => `void` |
+`undefined` \| `Masa`
 
 ___
 
 ### useNetwork
 
-▸ **useNetwork**(`«destructured»`): [`UseNetworkReturnValue`](modules.md#usenetworkreturnvalue)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | [`UseNetworkInputValue`](modules.md#usenetworkinputvalue) |
-
-#### Returns
-
-[`UseNetworkReturnValue`](modules.md#usenetworkreturnvalue)
-
-___
-
-### useNetworkSwitch
-
-▸ **useNetworkSwitch**(): `Object`
+▸ **useNetwork**(): `Object`
 
 #### Returns
 
@@ -818,9 +679,66 @@ ___
 
 | Name | Type |
 | :------ | :------ |
+| `activeChain` | `undefined` \| `Chain` & { `unsupported?`: `boolean`  } |
+| `activeChainId` | `number` |
+| `activeNetwork` | `string` |
+| `availableChains` | `Chain`[] |
 | `canProgramaticallySwitchNetwork` | `boolean` |
-| `currentNetwork` | `GetNetworkResult` |
-| `switchNetwork` | (`forcedNetworkParam`: `NetworkName`) => `void` |
+| `chains` | `Chain`[] |
+| `connectors?` | `Connector`<`any`, `any`\>[] |
+| `currentNetwork` | `undefined` \| `Network` |
+| `currentNetworkNew` | `GetNetworkResult` |
+| `isActiveChainUnsupported` | `boolean` |
+| `isSwitchingChain` | `boolean` |
+| `networkError` | ``null`` \| `Error` |
+| `pendingConnector?` | `Connector`<`any`, `any`\> |
+| `stopSwitching` | () => `void` |
+| `switchNetwork?` | (`chainId?`: `number`) => `void` |
+| `switchNetworkAsync?` | (`chainId_?`: `number`) => `Promise`<`Chain`\> |
+| `switchNetworkByName` | (`forcedNetworkParam`: `NetworkName`) => `void` |
+| `switchingToChain` | `undefined` \| ``null`` \| `number` |
+
+___
+
+### useNetworkSwitchListen
+
+▸ **useNetworkSwitchListen**(`«destructured»`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `Object` |
+| › `activeConnector?` | `Connector`<`any`, `any`\> |
+| › `networkError` | ``null`` \| `Error` |
+| › `stopSwitching` | () => `void` |
+
+#### Returns
+
+`void`
+
+___
+
+### useRegisterSoulname
+
+▸ **useRegisterSoulname**(`«destructured»`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `Partial`<{ `onMintError?`: () => `void` ; `onMintSuccess?`: (`result`: `CreateSoulNameResult`) => `void` ; `onRegisterFinish?`: () => `void`  }\> |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `errorRegisterSoulname` | `undefined` \| `Error` |
+| `hasRegisteredSoulname` | `undefined` \| `CreateSoulNameResult` |
+| `isRegisteringSoulname` | `boolean` |
+| `onRegisterSoulname` | () => `Promise`<`CreateSoulNameResult`\> |
 
 ___
 
@@ -833,9 +751,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `Masa` |
 | › `tokenAddress` | `string` |
-| › `walletAddress?` | `string` |
 
 #### Returns
 
@@ -843,24 +759,16 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `SBTs?` | { `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] |
-| `error` | `unknown` |
-| `isSBTLoading` | `boolean` |
-| `reloadSBTs` | () => `void` |
-| `status` | `string` |
+| `SBTs` | `undefined` \| ``null`` \| { `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] \| { `message`: `string` = err.message }[] |
+| `currentTokenAddress` | `string` |
+| `getSBTs` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| { `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] \| { `message`: `string` = err.message }[], `unknown`\>\> |
+| `isLoadingSBTs` | `boolean` |
 
 ___
 
 ### useSession
 
-▸ **useSession**(`masa?`, `walletAddress?`): `Object`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa?` | `Masa` |
-| `walletAddress?` | `string` |
+▸ **useSession**(): `Object`
 
 #### Returns
 
@@ -868,28 +776,56 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `error` | `unknown` |
-| `handleLogin` | () => `Promise`<`void`\> |
+| `checkLogin` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| `boolean`, `unknown`\>\> |
+| `getSession` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| `ISession`, `unknown`\>\> |
+| `handleLogin` | () => `Promise`<``null`` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\> |
 | `handleLogout` | (`logoutCallback?`: () => `void`) => `Promise`<`void`\> |
-| `isLoggedIn` | `undefined` \| `boolean` |
+| `hasSession` | `undefined` \| ``null`` \| `boolean` |
+| `isCheckingLogin` | `boolean` |
+| `isFetchingSession` | `boolean` |
+| `isLoadingSession` | `boolean` |
+| `isLoggedIn` | `undefined` \| ``null`` \| `boolean` |
+| `isLoggingIn` | `boolean` |
+| `isLoggingOut` | `boolean` |
 | `isSessionLoading` | `boolean` |
-| `reloadSession` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `boolean`, `unknown`\>\> |
-| `reloadSessionData` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `ISession`, `unknown`\>\> |
-| `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
+| `loginSession` | () => `Promise`<``null`` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\> |
+| `loginSessionAsync` | () => `Promise`<``null`` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\> |
+| `logoutSession` | () => `Promise`<`undefined` \| { `status`: `string`  }\> |
+| `session` | `undefined` \| ``null`` \| `ISession` |
+| `sessionAddress` | `undefined` \| `string` |
 
 ___
 
-### useSessionDataQuery
+### useSessionConnect
 
-▸ **useSessionDataQuery**(`«destructured»`): `Object`
+▸ **useSessionConnect**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `isLoggingIn` | `boolean` |
+| `isLoggingOut` | `boolean` |
+| `loginSessionAsync` | () => `Promise`<``null`` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\> |
+| `logoutSession` | () => `Promise`<`undefined` \| { `status`: `string`  }\> |
+
+___
+
+### useSessionListen
+
+▸ **useSessionListen**(`«destructured»`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `masa?` | `Masa` |
-| › `walletAddress?` | `string` |
+| › `checkLogin` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| `boolean`, `unknown`\>\> |
+| › `hasSession?` | ``null`` \| `boolean` |
+| › `logoutSession` | () => `Promise`<`undefined` \| { `status`: `string`  }\> |
+| › `sessionAddress?` | `string` |
 
 #### Returns
 
@@ -897,24 +833,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `isSessionDataFetching` | `boolean` |
-| `isSessionDataLoading` | `boolean` |
-| `reloadSessionData` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `ISession`, `unknown`\>\> |
-| `sessionData` | `undefined` \| `ISession` |
+| `isUpdatingSession` | `boolean` |
 
 ___
 
-### useSessionQuery
+### useSoulNames
 
-▸ **useSessionQuery**(`«destructured»`): `Object`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `masa?` | `Masa` |
-| › `walletAddress?` | `string` |
+▸ **useSoulNames**(): `Object`
 
 #### Returns
 
@@ -922,108 +847,93 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `error` | `unknown` |
-| `isLoggedIn` | `undefined` \| `boolean` |
-| `isSessionCheckFetching` | `boolean` |
-| `isSessionCheckLoading` | `boolean` |
-| `reloadSession` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `boolean`, `unknown`\>\> |
-| `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
-
-___
-
-### useSoulnames
-
-▸ **useSoulnames**(`masa?`, `walletAddress?`): `Object`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa?` | `Masa` |
-| `walletAddress?` | `string` |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `error` | `unknown` |
-| `handlePurchaseSoulname` | (`soulname`: `string`, `registrationPeriod`: `number`, `paymentMethod`: `PaymentMethod`, `style?`: `string`) => `Promise`<`boolean`\> |
+| `getSoulnames` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `string`[], `unknown`\>\> |
+| `isLoadingSoulnames` | `boolean` |
 | `isSoulnamesLoading` | `boolean` |
-| `reloadSoulnames` | () => `void` |
-| `soulnames?` | `string`[] |
-| `status` | `string` |
-
-___
-
-### useSoulnamesQuery
-
-▸ **useSoulnamesQuery**(`«destructured»`): `Object`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `masa?` | `Masa` |
-| › `walletAddress?` | `string` |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `error` | `unknown` |
-| `isFetching` | `boolean` |
-| `isLoading` | `boolean` |
 | `reloadSoulnames` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `string`[], `unknown`\>\> |
 | `soulnames` | `undefined` \| `string`[] |
-| `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
+
+___
+
+### useSoulNamesPurchase
+
+▸ **useSoulNamesPurchase**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `errorPurchaseSoulName` | `undefined` \| `Error` |
+| `hasPurchasedSoulName` | `undefined` \| `CreateSoulNameResult` \| `Error` & { `code?`: `string`  } |
+| `isPurchasingSoulName` | `boolean` |
+| `purchaseSoulName` | (`soulname`: `string`, `registrationPeriod`: `number`, `paymentMethod`: `PaymentMethod`, `style?`: `string`) => `Promise`<`undefined` \| `CreateSoulNameResult` \| `Error` & { `code?`: `string`  }\> |
+
+___
+
+### useSoulnameInterface
+
+▸ **useSoulnameInterface**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `handleChangeSoulname` | (`event`: `ChangeEvent`<`HTMLInputElement`\>) => `void` |
+| `isAvailable` | `undefined` \| `boolean` |
+| `isLoadingAvailability` | `boolean` |
+| `isLoadingRegistrationPrice` | `boolean` |
+| `paymentMethod` | `PaymentMethod` |
+| `registrationPeriod` | `number` |
+| `registrationPrice` | `undefined` \| `string` |
+| `setSoulname` | `Dispatch`<`SetStateAction`<`string`\>\> |
+| `soulNameError` | `undefined` \| `string` |
+| `soulname` | `string` |
+| `updatePaymentMethod` | (`e`: `unknown`) => `void` |
+| `updatePeriod` | (`num`: `number`) => `void` |
+
+___
+
+### useSoulnameModal
+
+▸ **useSoulnameModal**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `enabledMethods` | `undefined` \| `string`[] |
+| `extension` | `undefined` \| `string` |
+| `isLoadingEnabledMethods` | `boolean` |
+| `isLoadingExtension` | `boolean` |
+| `paymentMethods` | { `name`: `PaymentMethod` ; `value`: `string`  }[] |
+
+___
+
+### useTabs
+
+▸ **useTabs**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `isLoading` | `boolean` |
+| `tabs` | [`TabsInterface`](interfaces/TabsInterface.md)[] |
 
 ___
 
 ### useWallet
 
-▸ **useWallet**(`masa?`, `signer?`): [`UseWalletReturnType`](modules.md#usewalletreturntype)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa?` | `Masa` |
-| `signer?` | `Signer` |
+▸ **useWallet**(): `UseWalletReturn`
 
 #### Returns
 
-[`UseWalletReturnType`](modules.md#usewalletreturntype)
-
-___
-
-### useWalletQuery
-
-▸ **useWalletQuery**(`«destructured»`): `Object`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `masa?` | `Masa` |
-| › `signer?` | `Signer` |
-| › `walletAddress?` | `string` |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `error` | `unknown` |
-| `invalidateIdentity` | () => `Promise`<`void`\> |
-| `isFetching` | `boolean` |
-| `isLoading` | `boolean` |
-| `refetch` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `string`, `unknown`\>\> |
-| `status` | ``"error"`` \| ``"idle"`` \| ``"loading"`` \| ``"success"`` |
-| `walletAddress` | `undefined` \| `string` |
+`UseWalletReturn`
