@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.9.3](../README.md) / [Exports](../modules.md) / Network
+ - v3.11.1](../README.md) / [Exports](../modules.md) / Network
 
 # Interface: Network
 
@@ -113,7 +113,7 @@ ___
 
 ### rpcUrls
 
-• **rpcUrls**: `string`[]
+• **rpcUrls**: (`undefined` \| `string`)[]
 
 The list of available rpc urls, required for adding the network
 to the wallet
