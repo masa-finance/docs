@@ -1,8 +1,8 @@
 [# Masa React
- - v3.4.4](README.md) / Exports
+ - v3.4.6](README.md) / Exports
 
 # # Masa React
- - v3.4.4
+ - v3.4.6
 
 ## Table of contents
 
@@ -28,7 +28,6 @@
 - [AuthenticateModal](modules.md#authenticatemodal)
 - [Button](modules.md#button)
 - [CreateSoulnameModal](modules.md#createsoulnamemodal)
-- [GalleryModalWrapper](modules.md#gallerymodalwrapper)
 - [MasaProvider](modules.md#masaprovider)
 - [Modal](modules.md#modal)
 - [ModalError](modules.md#modalerror)
@@ -38,7 +37,6 @@
 - [isIdentityContractAvailible](modules.md#isidentitycontractavailible)
 - [openAuthenticateModal](modules.md#openauthenticatemodal)
 - [openCreateSoulnameModal](modules.md#opencreatesoulnamemodal)
-- [openGalleryModal](modules.md#opengallerymodal)
 - [useAuthenticate](modules.md#useauthenticate)
 - [useAuthenticateModal](modules.md#useauthenticatemodal)
 - [useCanQuery](modules.md#usecanquery)
@@ -69,7 +67,6 @@
 - [useSoulNamesPurchase](modules.md#usesoulnamespurchase)
 - [useSoulnameInterface](modules.md#usesoulnameinterface)
 - [useSoulnameModal](modules.md#usesoulnamemodal)
-- [useTabs](modules.md#usetabs)
 - [useWallet](modules.md#usewallet)
 
 ## Variables
@@ -122,23 +119,6 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `props` | { `closeOnSuccess?`: `boolean` ; `onError?`: () => `void` ; `onMintError?`: () => `void` ; `onMintSuccess?`: (`result`: `CreateSoulNameResult`) => `void` ; `onRegisterFinish?`: () => `void` ; `onSuccess?`: () => `void`  } & `NiceModalHocProps` |
-| `context?` | `any` |
-
-#### Returns
-
-`ReactNode`
-
-___
-
-### GalleryModalWrapper
-
-▸ **GalleryModalWrapper**(`props`, `context?`): `ReactNode`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `props` | `NiceModalHocProps` |
 | `context?` | `any` |
 
 #### Returns
@@ -307,16 +287,6 @@ ___
 
 ___
 
-### openGalleryModal
-
-▸ **openGalleryModal**(): `Promise`<`unknown`\>
-
-#### Returns
-
-`Promise`<`unknown`\>
-
-___
-
 ### useAuthenticate
 
 ▸ **useAuthenticate**(`«destructured»?`): `Object`
@@ -329,8 +299,6 @@ ___
 | › `onAuthenticateError?` | () => `void` |
 | › `onAuthenticateSuccess?` | (`payload`: { `address?`: `string` ; `walletType?`: `string`  }) => `void` |
 | › `onError?` | () => `void` |
-| › `onMintError?` | () => `void` |
-| › `onMintSuccess?` | () => `void` |
 | › `onRegisterFinish?` | () => `void` |
 | › `onSuccess?` | () => `void` |
 
@@ -341,7 +309,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `isAuthenticateModalOpen` | `boolean` |
-| `openAuthModal` | (`config?`: { `disableSoulnamePurchase?`: `boolean`  }) => `Promise`<`void`\> |
+| `openAuthModal` | () => `Promise`<`void`\> |
 
 ___
 
@@ -440,7 +408,7 @@ ___
 | `isFetching` | `boolean` |
 | `isLoading` | `boolean` |
 | `refetchContracts` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| [`FullContract`](interfaces/FullContract.md)[], `unknown`\>\> |
-| `status` | ``"error"`` \| ``"loading"`` \| ``"success"`` |
+| `status` | ``"loading"`` \| ``"error"`` \| ``"success"`` |
 
 ___
 
@@ -465,7 +433,7 @@ ___
 | `isFetching` | `boolean` |
 | `isLoading` | `boolean` |
 | `reloadCustomSBTs` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| [`HydratedContract`](interfaces/HydratedContract.md)[], `unknown`\>\> |
-| `status` | ``"error"`` \| ``"loading"`` \| ``"success"`` |
+| `status` | ``"loading"`` \| ``"error"`` \| ``"success"`` |
 
 ___
 
@@ -912,21 +880,6 @@ ___
 | `isLoadingEnabledMethods` | `boolean` |
 | `isLoadingExtension` | `boolean` |
 | `paymentMethods` | { `name`: `PaymentMethod` ; `value`: `string`  }[] |
-
-___
-
-### useTabs
-
-▸ **useTabs**(): `Object`
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `isLoading` | `boolean` |
-| `tabs` | [`TabsInterface`](interfaces/TabsInterface.md)[] |
 
 ___
 

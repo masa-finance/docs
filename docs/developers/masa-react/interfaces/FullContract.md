@@ -1,5 +1,5 @@
 [# Masa React
- - v3.4.4](../README.md) / [Exports](../modules.md) / FullContract
+ - v3.4.6](../README.md) / [Exports](../modules.md) / FullContract
 
 # Interface: FullContract
 

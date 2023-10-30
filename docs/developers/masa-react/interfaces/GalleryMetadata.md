@@ -1,5 +1,5 @@
 [# Masa React
- - v3.4.4](../README.md) / [Exports](../modules.md) / GalleryMetadata
+ - v3.4.6](../README.md) / [Exports](../modules.md) / GalleryMetadata
 
 # Interface: GalleryMetadata
 
