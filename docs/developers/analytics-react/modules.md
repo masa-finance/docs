@@ -1,10 +1,15 @@
 [# Masa Analytics React
- - v0.9.5](README.md) / Exports
+ - v0.12.6](README.md) / Exports
 
 # # Masa Analytics React
- - v0.9.5
+ - v0.12.6
 
 ## Table of contents
+
+### Classes
+
+- [MasaAnalytics](classes/MasaAnalytics.md)
+- [MasaAnalyticsClient](classes/MasaAnalyticsClient.md)
 
 ### Type Aliases
 
@@ -12,6 +17,7 @@
 
 ### Functions
 
+- [generateSignature](modules.md#generatesignature)
 - [useEventLogger](modules.md#useeventlogger)
 - [useMasaAnalyticsReact](modules.md#usemasaanalyticsreact)
 
@@ -22,6 +28,24 @@
 Ƭ **EventType**: ``"pageView"`` \| ``"login"`` \| ``"mint"`` \| ``"connectWallet"`` \| ``"swap"`` \| ``"bridge"`` \| ``"addLiquidity"`` \| ``"farm"`` \| ``"trade"`` \| ``"claim"``
 
 ## Functions
+
+### generateSignature
+
+▸ **generateSignature**(`wallet`, `client_app`, `client_name`): `Promise`<{ `message`: `string` ; `nonce`: `string` ; `signature`: `string`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `wallet` | `Signer` |
+| `client_app` | `string` |
+| `client_name` | `string` |
+
+#### Returns
+
+`Promise`<{ `message`: `string` ; `nonce`: `string` ; `signature`: `string`  }\>
+
+___
 
 ### useEventLogger
 
@@ -57,7 +81,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `fireConnectWalletEvent` | (`__namedParameters`: { `user_address`: `string` ; `wallet_type`: `string`  }) => `Promise`<`void`\> |
-| `fireEvent` | (`type`: [`EventType`](modules.md#eventtype), `__namedParameters`: `FireEventArgs`) => `Promise`<`void`\> |
+| `fireEvent` | (`type`: `string`, `__namedParameters`: `FireEventArgs`) => `Promise`<`void`\> |
 | `fireLoginEvent` | (`__namedParameters`: { `user_address`: `string`  }) => `Promise`<`void`\> |
 | `fireMintEvent` | (`__namedParameters`: `FireMintEventArgs`) => `Promise`<`void`\> |
 | `firePageViewEvent` | (`__namedParameters`: { `page`: `string` ; `user_address?`: `string`  }) => `Promise`<`void`\> |
