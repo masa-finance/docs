@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.2.1](../README.md) / [Exports](../modules.md) / MasaAnalyticsClient
+ - v0.2.5](../README.md) / [Exports](../modules.md) / MasaAnalyticsClient
 
 # Class: MasaAnalyticsClient
 
@@ -21,7 +21,7 @@
 
 ### constructor
 
-• **new MasaAnalyticsClient**(`«destructured»`)
+• **new MasaAnalyticsClient**(`«destructured»`): [`MasaAnalyticsClient`](MasaAnalyticsClient.md)
 
 #### Parameters
 
@@ -29,6 +29,10 @@
 | :------ | :------ |
 | `«destructured»` | `Object` |
 | › `apiUrl?` | `string` |
+
+#### Returns
+
+[`MasaAnalyticsClient`](MasaAnalyticsClient.md)
 
 ## Properties
 

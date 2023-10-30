@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.2.1](../README.md) / [Exports](../modules.md) / Event
+ - v0.2.5](../README.md) / [Exports](../modules.md) / Event
 
 # Interface: Event
 
@@ -23,7 +23,7 @@ ___
 
 ### event\_data
 
-• **event\_data**: ``null`` \| [`BaseEventData`](BaseEventData.md)
+• **event\_data**: [`BaseEventData`](BaseEventData.md)
 
 ___
 

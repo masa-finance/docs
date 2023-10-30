@@ -1,8 +1,8 @@
 [# Masa Analytics SDK
- - v0.2.1](README.md) / Exports
+ - v0.2.5](README.md) / Exports
 
 # # Masa Analytics SDK
- - v0.2.1
+ - v0.2.5
 
 ## Table of contents
 
@@ -22,6 +22,8 @@
 - [LoginEventData](interfaces/LoginEventData.md)
 - [MintEventData](interfaces/MintEventData.md)
 - [PageViewEventData](interfaces/PageViewEventData.md)
+- [ReferrerInfo](interfaces/ReferrerInfo.md)
+- [UTMParams](interfaces/UTMParams.md)
 
 ### Type Aliases
 

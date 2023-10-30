@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.2.1](../README.md) / [Exports](../modules.md) / MasaAnalytics
+ - v0.2.5](../README.md) / [Exports](../modules.md) / MasaAnalytics
 
 # Class: MasaAnalytics
 
@@ -30,7 +30,7 @@
 
 ### constructor
 
-• **new MasaAnalytics**(`config`)
+• **new MasaAnalytics**(`config`): [`MasaAnalytics`](MasaAnalytics.md)
 
 #### Parameters
 
@@ -41,6 +41,10 @@
 | `config.clientApp` | `string` |
 | `config.clientId` | `string` |
 | `config.clientName` | `string` |
+
+#### Returns
+
+[`MasaAnalytics`](MasaAnalytics.md)
 
 ## Properties
 
