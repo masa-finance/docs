@@ -16,7 +16,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "~2.4.3",
+    "@docusaurus/core": "~3.0.0",
     "@docusaurus/preset-classic": "~2.4.3",
     "@masa-finance/masa-react": "~2.7.5",
     "@mdx-js/react": "^1.6.22",
