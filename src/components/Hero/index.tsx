@@ -33,12 +33,12 @@ export default function Hero() {
       <img
         src="img/hero-wave.svg"
         className="absolute bottom-0 left-0"
-        alt="decorative"
+        alt=""
       />
       <img
         src="img/hero-planet.png"
         className="absolute right-10 bottom-20 max-w-[20vw]"
-        role="decorative"
+        alt=""
       />
       <div className={wrapper}>
         <h1 className={heading1}>
