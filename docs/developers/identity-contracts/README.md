@@ -39,8 +39,8 @@ The base url for the Metadata url that is beeing generated from the contract
 
 ## Interface
 
-- [Abstract Soulbound Token Definition](docs/tokens/SBT.md)
-- [Abstract Non-Fungible Token Definition](docs/tokens/NFT.md)
+- [Abstract Soulbound Token Definition](docs/tokens/MasaSBT.md)
+- [Abstract Non-Fungible Token Definition](docs/tokens/MasaNFT.md)
 - [Soulbound Identity Definition](docs/SoulboundIdentity.md)
 - [Soulbound Credit Score Definition](docs/SoulboundCreditScore.md)
 - [Soulbound Green Definition](docs/SoulboundGreen.md)
