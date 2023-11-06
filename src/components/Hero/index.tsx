@@ -11,7 +11,6 @@ export const StartNowBtn = () => {
           <img
             src="img/chevron-right.svg"
             alt="down-arrow"
-            className=""
             width="10"
             height="10"
           />
@@ -34,12 +33,12 @@ export default function Hero() {
       <img
         src="img/hero-wave.svg"
         className="absolute bottom-0 left-0"
-        role="presentation"
+        alt="decorative"
       />
       <img
         src="img/hero-planet.png"
         className="absolute right-10 bottom-20 max-w-[20vw]"
-        role="presentation"
+        role="decorative"
       />
       <div className={wrapper}>
         <h1 className={heading1}>
