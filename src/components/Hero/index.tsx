@@ -1,43 +1,57 @@
 import React from "react";
 import Link from "@docusaurus/Link";
 
-export default function Hero() {
-  return (
-    <>
-      <section
-        className="relative bg-gradient-to-t from-lightPeach to-white"
-        style={{ height: "80vh", width: "auto" }}
-      >
-        <img
-          src="img/astronaut-moon.svg"
-          alt="moon"
-          className="absolute bottom-0 left-0"
-        />
-        <img
-          src="img/moon-sun.svg"
-          alt="sun"
-          className="absolute right-5 top-40"
-        />
-        <img
-          src="img/bush.png"
-          alt="bush"
-          className="absolute right-0 bottom-0"
-        />
-        <div
-          className="flex flex-col justify-center items-center relative font-[ezra]"
-          style={{ height: "100%" }}
-        >
-          <p className="font-medium py-10 text-[60px]">Masa Protocol</p>
-          <p className="text-[white] text-[22px]">
-            Soulbound Identity Infrastructure for Developers Building Web3
-            Communities
-          </p>
-          <Link to="docs/analytics/overview">
-            <p className="py-8 text-xl font-bold">Get Started</p>
-          </Link>
-          <p className="font-bold">Build with Masa</p>
+export const StartNowBtn = () => {
+    const strtText = "text-[10px] text-white text-opacity-1 xl:text-sm"
+    const wrapper = "flex flex-row items-center gap-2 cursor-pointer mt-4"
+
+    return (
+      <div className={wrapper}>
+        <div className={"bg-[#F3BF6C] rounded-full w-[16px] h-[16px] flex justify-center items-center"}>
+          <img
+            src="img/chevron-right.svg"
+            alt="down-arrow"
+            className=""
+            width="10"
+            height="10"
+          />
         </div>
-      </section>
-    </>
+        <p className={strtText}>START NOW</p>
+      </div>
+    )
+}
+
+export default function Hero() {
+  // calc height based on nav height
+  const section = "relative bg-black flex h-[calc(100vh-3.5rem)]"
+  const wrapper = "relative w-full md:w-2/3 max-w-[750px] px-4 pb-[20vh] mx-auto flex flex-col justify-center items-center text-center"
+  
+  const heading1 = "text-[15px] sm:text-[30px] lg:text-[55px] leading-[1] font-medium pb-8"
+  const heading2 = "text-[12px] sm:text-[16px] lg:text-[20px] leading-[1.8] pb-8"
+
+  return (
+    <section className={section}>
+      <img
+        src="img/hero-wave.svg"
+        className="absolute bottom-0 left-0"
+        role="presentation"
+      />
+      <img
+        src="img/hero-planet.png"
+        className="absolute right-10 bottom-20 max-w-[20vw]"
+        role="presentation"
+      />
+      <div className={wrapper}>
+        <h1 className={heading1}>
+          Building the leading <span className='text-gold'>zk-data</span> marketplace & network
+        </h1>
+        <p className={heading2}>
+          Build hyper-personalized applications, train AI models and more utilizing the largest zk-data network in the world.
+        </p>
+        <Link to="docs/analytics/overview">
+          <StartNowBtn />
+        </Link>
+      </div>
+    </section>
   );
 }
