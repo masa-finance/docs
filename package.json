@@ -16,19 +16,19 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "2.4.3",
-    "@docusaurus/preset-classic": "2.4.3",
-    "@masa-finance/masa-react": "3.4.6",
+    "@docusaurus/core": "~2.4.3",
+    "@docusaurus/preset-classic": "~2.4.3",
+    "@masa-finance/masa-react": "~2.7.5",
     "@mdx-js/react": "^1.6.22",
     "autoprefixer": "^10.4.16",
     "clsx": "^2.0.0",
     "postcss": "^8.4.31",
-    "prism-react-renderer": "^1.3.5",
+    "prism-react-renderer": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.4.3",
+    "@docusaurus/module-type-aliases": "~2.4.3",
     "@tsconfig/docusaurus": "^2.0.2",
     "docusaurus-node-polyfills": "^1.0.0",
     "tailwindcss": "^3.3.5",

@@ -7,13 +7,13 @@ export const MasaLogin = (): JSX.Element => {
       {() => {
         const { useMasa } = require("@masa-finance/masa-react");
 
-        const { connect, handleLogout, walletAddress, isLoggedIn } = useMasa();
+        const { connect, handleLogout, accountAddress, isLoggedIn } = useMasa();
 
         return (
           <div style={{ textAlign: "center" }}>
             {isLoggedIn ? (
               <button className="button" onClick={() => handleLogout?.()}>
-                {walletAddress}
+                {accountAddress}
               </button>
             ) : (
               <button className="button" onClick={() => connect?.()}>
