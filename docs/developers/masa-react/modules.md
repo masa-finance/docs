@@ -34,7 +34,7 @@
 - [ModalLoading](modules.md#modalloading)
 - [fetchContractsAndTokens](modules.md#fetchcontractsandtokens)
 - [hydrateTokensWithMetadata](modules.md#hydratetokenswithmetadata)
-- [isIdentityContractAvailible](modules.md#isidentitycontractavailible)
+- [isIdentityContractAvailable](modules.md#isidentitycontractavailible)
 - [openAuthenticateModal](modules.md#openauthenticatemodal)
 - [openCreateSoulnameModal](modules.md#opencreatesoulnamemodal)
 - [useAuthenticate](modules.md#useauthenticate)
@@ -233,9 +233,9 @@ ___
 
 ___
 
-### isIdentityContractAvailible
+### isIdentityContractAvailable
 
-▸ **isIdentityContractAvailible**(`masa?`): `undefined` \| `boolean`
+▸ **isIdentityContractAvailable**(`masa?`): `undefined` \| `boolean`
 
 #### Parameters
 
@@ -542,7 +542,7 @@ ___
 | `hasIdentity` | `undefined` \| ``false`` \| `BigNumber` |
 | `identity` | `undefined` \| ``null`` \| { `address`: `string` ; `identityId?`: `BigNumber`  } |
 | `isFetchingIdentity` | `boolean` |
-| `isIdentityAvailibleInNetwork` | `undefined` \| `boolean` |
+| `isIdentityAvailableInNetwork` | `undefined` \| `boolean` |
 | `isIdentityLoading` | `boolean` |
 | `isLoadingIdentity` | `boolean` |
 | `reloadIdentity` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| ``null`` \| { `address`: `string` ; `identityId?`: `BigNumber`  }, `unknown`\>\> |
@@ -651,7 +651,7 @@ ___
 | `activeChainId` | `number` |
 | `activeNetwork` | `string` |
 | `availableChains` | `Chain`[] |
-| `canProgramaticallySwitchNetwork` | `boolean` |
+| `canProgrammaticallySwitchNetwork` | `boolean` |
 | `chains` | `Chain`[] |
 | `connectors?` | `Connector`<`any`, `any`\>[] |
 | `currentNetwork` | `undefined` \| `Network` |
