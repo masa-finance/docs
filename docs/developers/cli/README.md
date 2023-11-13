@@ -62,6 +62,11 @@
       - [`masa sssbt add-authority <contract-address> <authority-address>`](#masa-sssbt-add-authority-contract-address-authority-address)
       - [`masa sssbt sign <contract-address> <receiver>`](#masa-sssbt-sign-contract-address-receiver)
       - [`masa sssbt mint <contract-address> <authority-address> <signature-date> <signature>`](#masa-sssbt-mint-contract-address-authority-address-signature-date-signature)
+    - [`masa dynamic-sssbt`](#masa-dynamic-sssbt)
+      - [`masa dynamic-sssbt add-authority <contract-address> <authority-address>`](#masa-dynamic-sssbt-add-authority-contract-address-authority-address)
+      - [`masa dynamic-sssbt set-state <contract-address> <state> <state-value> <authority-address> <signature-date> <signature>`](#masa-dynamic-sssbt-set-state-contract-address-state-state-value-authority-address-signature-date-signature)
+      - [`masa dynamic-sssbt sign-set-state <contract-address> <receiver> <state> <state-value>`](#masa-dynamic-sssbt-sign-set-state-contract-address-receiver-state-state-value)
+      - [`masa dynamic-sssbt mint <contract-address>`](#masa-dynamic-sssbt-mint-contract-address)
     - [`masa settings`](#masa-settings)
       - [`masa settings set <key> <value>`](#masa-settings-set-key-value)
       - [`masa settings preset <environment>`](#masa-settings-preset-environment)
@@ -529,6 +534,43 @@ Mints SSSBTs
 - `<authority-address> Address of the Authority`
 - `<signature-date> sig date`
 - `<signature> signature`
+
+### `masa dynamic-sssbt`
+
+Dynamic SSSBT Commands
+
+#### `masa dynamic-sssbt add-authority <contract-address> <authority-address>`
+
+Adds an Authority to the SSSBT
+
+- `<contract-address> Address of the SBT to add the authority to`
+- `<authority-address> Address of the Authority`
+
+#### `masa dynamic-sssbt set-state <contract-address> <state> <state-value> <authority-address> <signature-date> <signature>`
+
+Sets a state on a dynamic SSSBTs
+
+- `<contract-address> Address of the SBT to mint on`
+- `<state> State`
+- `<state-value> State value`
+- `<authority-address> Address of the Authority`
+- `<signature-date> sig date`
+- `<signature> signature`
+
+#### `masa dynamic-sssbt sign-set-state <contract-address> <receiver> <state> <state-value>`
+
+Signs a Set State operation on a Dynamic SSSBTs
+
+- `<contract-address> Address of the SBT to mint on`
+- `<receiver> Address of the SBT receiver`
+- `<state> State`
+- `<state-value> State value`
+
+#### `masa dynamic-sssbt mint <contract-address>`
+
+Mints Dynamic SSSBTs
+
+- `<contract-address> Address of the SBT to mint on`
 
 ### `masa settings`
 
