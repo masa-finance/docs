@@ -540,8 +540,8 @@ Mints SSSBTs
 
 - `<contract-address> Address of the SBT to mint on`
 - `<authority-address> Address of the Authority`
-- `<signature-date> sig date`
-- `<signature> signature`
+- `<signature-date> Signature date`
+- `<signature> Signature`
 
 ### `masa dynamic-sssbt`
 
@@ -562,8 +562,8 @@ Sets a state on a dynamic SSSBTs
 - `<state> State`
 - `<state-value> State value`
 - `<authority-address> Address of the Authority`
-- `<signature-date> sig date`
-- `<signature> signature`
+- `<signature-date> Signature date`
+- `<signature> Signature`
 
 #### `masa dynamic-sssbt sign-set-state <contract-address> <receiver> <state> <state-value>`
 
