@@ -142,10 +142,13 @@ Commands:
   sbt list [options] <contract-address>                                                                              Lists your SBTs
   sbt burn <contract-address> <sbt-id>                                                                               Burns an SBT
   asbt                                                                                                               ASBT Commands
-  asbt deploy                                                                                                        Deploys ASBTs
+  asbt deploy [options]                                                                                              Deploys ASBTs
   asbt mint <contract-address> <receiver>                                                                            Mints ASBTs
+  asbt bulk-mint <contract-address> <csv>                                                                            Mints ASBTs from CSV files
+  asbt mint-to-soulname <contract-address> <soulname>                                                                Mints ASBTs from soulname
   sssbt                                                                                                              SSSBT Commands
-  sssbt deploy                                                                                                       Deploys SSSBTs
+  sssbt deploy [options]                                                                                             Deploys SSSBTs
+  sssbt add-authority <contract-address> <authority-address>                                                         Adds an Authority to the SSSBT
   sssbt sign <contract-address> <receiver>                                                                           Signs SSSBTs
   sssbt mint <contract-address> <authority-address> <signature-date> <signature>                                     Mints SSSBTs
   dynamic-sssbt                                                                                                      Dynamic SSSBT Commands
