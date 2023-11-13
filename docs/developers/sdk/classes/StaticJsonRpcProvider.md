@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / StaticJsonRpcProvider
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / StaticJsonRpcProvider
 
 # Class: StaticJsonRpcProvider
 
@@ -120,7 +120,7 @@
 
 ### constructor
 
-• **new StaticJsonRpcProvider**(`url?`, `network?`)
+• **new StaticJsonRpcProvider**(`url?`, `network?`): [`StaticJsonRpcProvider`](StaticJsonRpcProvider.md)
 
 #### Parameters
 
@@ -128,6 +128,10 @@
 | :------ | :------ |
 | `url?` | `string` \| `ConnectionInfo` |
 | `network?` | `Networkish` |
+
+#### Returns
+
+[`StaticJsonRpcProvider`](StaticJsonRpcProvider.md)
 
 #### Inherited from
 
@@ -161,7 +165,7 @@ ___
 
 ### \_eventLoopCache
 
-• **\_eventLoopCache**: `Record`<`string`, `Promise`<`any`\>\>
+• **\_eventLoopCache**: `Record`\<`string`, `Promise`\<`any`\>\>
 
 #### Inherited from
 
@@ -191,7 +195,7 @@ ___
 
 ### \_fastBlockNumberPromise
 
-• **\_fastBlockNumberPromise**: `Promise`<`number`\>
+• **\_fastBlockNumberPromise**: `Promise`\<`number`\>
 
 #### Inherited from
 
@@ -211,7 +215,7 @@ ___
 
 ### \_internalBlockNumber
 
-• **\_internalBlockNumber**: `Promise`<{ `blockNumber`: `number` ; `reqTime`: `number` ; `respTime`: `number`  }\>
+• **\_internalBlockNumber**: `Promise`\<\{ `blockNumber`: `number` ; `reqTime`: `number` ; `respTime`: `number`  }\>
 
 #### Inherited from
 
@@ -271,7 +275,7 @@ ___
 
 ### \_networkPromise
 
-• **\_networkPromise**: `Promise`<`Network`\>
+• **\_networkPromise**: `Promise`\<`Network`\>
 
 #### Inherited from
 
@@ -291,7 +295,7 @@ ___
 
 ### \_pendingFilter
 
-• **\_pendingFilter**: `Promise`<`number`\>
+• **\_pendingFilter**: `Promise`\<`number`\>
 
 #### Inherited from
 
@@ -361,11 +365,11 @@ providers.JsonRpcProvider.formatter
 
 ### \_cache
 
-• `get` **_cache**(): `Record`<`string`, `Promise`<`any`\>\>
+• `get` **_cache**(): `Record`\<`string`, `Promise`\<`any`\>\>
 
 #### Returns
 
-`Record`<`string`, `Promise`<`any`\>\>
+`Record`\<`string`, `Promise`\<`any`\>\>
 
 #### Inherited from
 
@@ -463,11 +467,11 @@ ___
 
 ### ready
 
-• `get` **ready**(): `Promise`<`Network`\>
+• `get` **ready**(): `Promise`\<`Network`\>
 
 #### Returns
 
-`Promise`<`Network`\>
+`Promise`\<`Network`\>
 
 #### Inherited from
 
@@ -499,7 +503,7 @@ ___
 
 ### \_call
 
-▸ **_call**(`transaction`, `blockTag`, `attempt`): `Promise`<`string`\>
+▸ **_call**(`transaction`, `blockTag`, `attempt`): `Promise`\<`string`\>
 
 #### Parameters
 
@@ -511,7 +515,7 @@ ___
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Inherited from
 
@@ -521,17 +525,17 @@ ___
 
 ### \_getAddress
 
-▸ **_getAddress**(`addressOrName`): `Promise`<`string`\>
+▸ **_getAddress**(`addressOrName`): `Promise`\<`string`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `addressOrName` | `string` \| `Promise`<`string`\> |
+| `addressOrName` | `string` \| `Promise`\<`string`\> |
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Inherited from
 
@@ -541,18 +545,18 @@ ___
 
 ### \_getBlock
 
-▸ **_getBlock**(`blockHashOrBlockTag`, `includeTransactions?`): `Promise`<`Block` \| `BlockWithTransactions`\>
+▸ **_getBlock**(`blockHashOrBlockTag`, `includeTransactions?`): `Promise`\<`Block` \| `BlockWithTransactions`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `blockHashOrBlockTag` | `BlockTag` \| `Promise`<`BlockTag`\> |
+| `blockHashOrBlockTag` | `BlockTag` \| `Promise`\<`BlockTag`\> |
 | `includeTransactions?` | `boolean` |
 
 #### Returns
 
-`Promise`<`Block` \| `BlockWithTransactions`\>
+`Promise`\<`Block` \| `BlockWithTransactions`\>
 
 #### Inherited from
 
@@ -562,17 +566,17 @@ ___
 
 ### \_getBlockTag
 
-▸ **_getBlockTag**(`blockTag`): `Promise`<`BlockTag`\>
+▸ **_getBlockTag**(`blockTag`): `Promise`\<`BlockTag`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `blockTag` | `BlockTag` \| `Promise`<`BlockTag`\> |
+| `blockTag` | `BlockTag` \| `Promise`\<`BlockTag`\> |
 
 #### Returns
 
-`Promise`<`BlockTag`\>
+`Promise`\<`BlockTag`\>
 
 #### Inherited from
 
@@ -582,11 +586,11 @@ ___
 
 ### \_getFastBlockNumber
 
-▸ **_getFastBlockNumber**(): `Promise`<`number`\>
+▸ **_getFastBlockNumber**(): `Promise`\<`number`\>
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
 #### Inherited from
 
@@ -596,17 +600,17 @@ ___
 
 ### \_getFilter
 
-▸ **_getFilter**(`filter`): `Promise`<`Filter` \| `FilterByBlockHash`\>
+▸ **_getFilter**(`filter`): `Promise`\<`Filter` \| `FilterByBlockHash`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `filter` | `Filter` \| `FilterByBlockHash` \| `Promise`<`Filter` \| `FilterByBlockHash`\> |
+| `filter` | `Filter` \| `FilterByBlockHash` \| `Promise`\<`Filter` \| `FilterByBlockHash`\> |
 
 #### Returns
 
-`Promise`<`Filter` \| `FilterByBlockHash`\>
+`Promise`\<`Filter` \| `FilterByBlockHash`\>
 
 #### Inherited from
 
@@ -616,7 +620,7 @@ ___
 
 ### \_getInternalBlockNumber
 
-▸ **_getInternalBlockNumber**(`maxAge`): `Promise`<`number`\>
+▸ **_getInternalBlockNumber**(`maxAge`): `Promise`\<`number`\>
 
 #### Parameters
 
@@ -626,7 +630,7 @@ ___
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
 #### Inherited from
 
@@ -636,7 +640,7 @@ ___
 
 ### \_getResolver
 
-▸ **_getResolver**(`name`, `operation?`): `Promise`<`string`\>
+▸ **_getResolver**(`name`, `operation?`): `Promise`\<`string`\>
 
 #### Parameters
 
@@ -647,7 +651,7 @@ ___
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Inherited from
 
@@ -657,17 +661,17 @@ ___
 
 ### \_getTransactionRequest
 
-▸ **_getTransactionRequest**(`transaction`): `Promise`<`Transaction`\>
+▸ **_getTransactionRequest**(`transaction`): `Promise`\<`Transaction`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `transaction` | `Deferrable`<`TransactionRequest`\> |
+| `transaction` | `Deferrable`\<`TransactionRequest`\> |
 
 #### Returns
 
-`Promise`<`Transaction`\>
+`Promise`\<`Transaction`\>
 
 #### Inherited from
 
@@ -677,11 +681,11 @@ ___
 
 ### \_ready
 
-▸ **_ready**(): `Promise`<`Network`\>
+▸ **_ready**(): `Promise`\<`Network`\>
 
 #### Returns
 
-`Promise`<`Network`\>
+`Promise`\<`Network`\>
 
 #### Inherited from
 
@@ -765,11 +769,11 @@ ___
 
 ### \_uncachedDetectNetwork
 
-▸ **_uncachedDetectNetwork**(): `Promise`<`Network`\>
+▸ **_uncachedDetectNetwork**(): `Promise`\<`Network`\>
 
 #### Returns
 
-`Promise`<`Network`\>
+`Promise`\<`Network`\>
 
 #### Inherited from
 
@@ -779,7 +783,7 @@ ___
 
 ### \_waitForTransaction
 
-▸ **_waitForTransaction**(`transactionHash`, `confirmations`, `timeout`, `replaceable`): `Promise`<`TransactionReceipt`\>
+▸ **_waitForTransaction**(`transactionHash`, `confirmations`, `timeout`, `replaceable`): `Promise`\<`TransactionReceipt`\>
 
 #### Parameters
 
@@ -798,7 +802,7 @@ ___
 
 #### Returns
 
-`Promise`<`TransactionReceipt`\>
+`Promise`\<`TransactionReceipt`\>
 
 #### Inherited from
 
@@ -851,18 +855,18 @@ ___
 
 ### call
 
-▸ **call**(`transaction`, `blockTag?`): `Promise`<`string`\>
+▸ **call**(`transaction`, `blockTag?`): `Promise`\<`string`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `transaction` | `Deferrable`<`TransactionRequest`\> |
-| `blockTag?` | `BlockTag` \| `Promise`<`BlockTag`\> |
+| `transaction` | `Deferrable`\<`TransactionRequest`\> |
+| `blockTag?` | `BlockTag` \| `Promise`\<`BlockTag`\> |
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Inherited from
 
@@ -872,7 +876,7 @@ ___
 
 ### ccipReadFetch
 
-▸ **ccipReadFetch**(`tx`, `calldata`, `urls`): `Promise`<``null`` \| `string`\>
+▸ **ccipReadFetch**(`tx`, `calldata`, `urls`): `Promise`\<``null`` \| `string`\>
 
 #### Parameters
 
@@ -884,7 +888,7 @@ ___
 
 #### Returns
 
-`Promise`<``null`` \| `string`\>
+`Promise`\<``null`` \| `string`\>
 
 #### Inherited from
 
@@ -894,11 +898,11 @@ ___
 
 ### detectNetwork
 
-▸ **detectNetwork**(): `Promise`<`Network`\>
+▸ **detectNetwork**(): `Promise`\<`Network`\>
 
 #### Returns
 
-`Promise`<`Network`\>
+`Promise`\<`Network`\>
 
 #### Inherited from
 
@@ -929,17 +933,17 @@ ___
 
 ### estimateGas
 
-▸ **estimateGas**(`transaction`): `Promise`<`BigNumber`\>
+▸ **estimateGas**(`transaction`): `Promise`\<`BigNumber`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `transaction` | `Deferrable`<`TransactionRequest`\> |
+| `transaction` | `Deferrable`\<`TransactionRequest`\> |
 
 #### Returns
 
-`Promise`<`BigNumber`\>
+`Promise`\<`BigNumber`\>
 
 #### Inherited from
 
@@ -949,7 +953,7 @@ ___
 
 ### getAvatar
 
-▸ **getAvatar**(`nameOrAddress`): `Promise`<``null`` \| `string`\>
+▸ **getAvatar**(`nameOrAddress`): `Promise`\<``null`` \| `string`\>
 
 #### Parameters
 
@@ -959,7 +963,7 @@ ___
 
 #### Returns
 
-`Promise`<``null`` \| `string`\>
+`Promise`\<``null`` \| `string`\>
 
 #### Inherited from
 
@@ -969,18 +973,18 @@ ___
 
 ### getBalance
 
-▸ **getBalance**(`addressOrName`, `blockTag?`): `Promise`<`BigNumber`\>
+▸ **getBalance**(`addressOrName`, `blockTag?`): `Promise`\<`BigNumber`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `addressOrName` | `string` \| `Promise`<`string`\> |
-| `blockTag?` | `BlockTag` \| `Promise`<`BlockTag`\> |
+| `addressOrName` | `string` \| `Promise`\<`string`\> |
+| `blockTag?` | `BlockTag` \| `Promise`\<`BlockTag`\> |
 
 #### Returns
 
-`Promise`<`BigNumber`\>
+`Promise`\<`BigNumber`\>
 
 #### Inherited from
 
@@ -990,17 +994,17 @@ ___
 
 ### getBlock
 
-▸ **getBlock**(`blockHashOrBlockTag`): `Promise`<`Block`\>
+▸ **getBlock**(`blockHashOrBlockTag`): `Promise`\<`Block`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `blockHashOrBlockTag` | `BlockTag` \| `Promise`<`BlockTag`\> |
+| `blockHashOrBlockTag` | `BlockTag` \| `Promise`\<`BlockTag`\> |
 
 #### Returns
 
-`Promise`<`Block`\>
+`Promise`\<`Block`\>
 
 #### Inherited from
 
@@ -1010,11 +1014,11 @@ ___
 
 ### getBlockNumber
 
-▸ **getBlockNumber**(): `Promise`<`number`\>
+▸ **getBlockNumber**(): `Promise`\<`number`\>
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
 #### Inherited from
 
@@ -1024,17 +1028,17 @@ ___
 
 ### getBlockWithTransactions
 
-▸ **getBlockWithTransactions**(`blockHashOrBlockTag`): `Promise`<`BlockWithTransactions`\>
+▸ **getBlockWithTransactions**(`blockHashOrBlockTag`): `Promise`\<`BlockWithTransactions`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `blockHashOrBlockTag` | `BlockTag` \| `Promise`<`BlockTag`\> |
+| `blockHashOrBlockTag` | `BlockTag` \| `Promise`\<`BlockTag`\> |
 
 #### Returns
 
-`Promise`<`BlockWithTransactions`\>
+`Promise`\<`BlockWithTransactions`\>
 
 #### Inherited from
 
@@ -1044,18 +1048,18 @@ ___
 
 ### getCode
 
-▸ **getCode**(`addressOrName`, `blockTag?`): `Promise`<`string`\>
+▸ **getCode**(`addressOrName`, `blockTag?`): `Promise`\<`string`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `addressOrName` | `string` \| `Promise`<`string`\> |
-| `blockTag?` | `BlockTag` \| `Promise`<`BlockTag`\> |
+| `addressOrName` | `string` \| `Promise`\<`string`\> |
+| `blockTag?` | `BlockTag` \| `Promise`\<`BlockTag`\> |
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Inherited from
 
@@ -1065,11 +1069,11 @@ ___
 
 ### getEtherPrice
 
-▸ **getEtherPrice**(): `Promise`<`number`\>
+▸ **getEtherPrice**(): `Promise`\<`number`\>
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
 #### Inherited from
 
@@ -1079,11 +1083,11 @@ ___
 
 ### getFeeData
 
-▸ **getFeeData**(): `Promise`<`FeeData`\>
+▸ **getFeeData**(): `Promise`\<`FeeData`\>
 
 #### Returns
 
-`Promise`<`FeeData`\>
+`Promise`\<`FeeData`\>
 
 #### Inherited from
 
@@ -1093,11 +1097,11 @@ ___
 
 ### getGasPrice
 
-▸ **getGasPrice**(): `Promise`<`BigNumber`\>
+▸ **getGasPrice**(): `Promise`\<`BigNumber`\>
 
 #### Returns
 
-`Promise`<`BigNumber`\>
+`Promise`\<`BigNumber`\>
 
 #### Inherited from
 
@@ -1107,17 +1111,17 @@ ___
 
 ### getLogs
 
-▸ **getLogs**(`filter`): `Promise`<`Log`[]\>
+▸ **getLogs**(`filter`): `Promise`\<`Log`[]\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `filter` | `Filter` \| `FilterByBlockHash` \| `Promise`<`Filter` \| `FilterByBlockHash`\> |
+| `filter` | `Filter` \| `FilterByBlockHash` \| `Promise`\<`Filter` \| `FilterByBlockHash`\> |
 
 #### Returns
 
-`Promise`<`Log`[]\>
+`Promise`\<`Log`[]\>
 
 #### Inherited from
 
@@ -1127,11 +1131,11 @@ ___
 
 ### getNetwork
 
-▸ **getNetwork**(): `Promise`<`Network`\>
+▸ **getNetwork**(): `Promise`\<`Network`\>
 
 #### Returns
 
-`Promise`<`Network`\>
+`Promise`\<`Network`\>
 
 #### Overrides
 
@@ -1141,7 +1145,7 @@ ___
 
 ### getResolver
 
-▸ **getResolver**(`name`): `Promise`<``null`` \| `Resolver`\>
+▸ **getResolver**(`name`): `Promise`\<``null`` \| `Resolver`\>
 
 #### Parameters
 
@@ -1151,7 +1155,7 @@ ___
 
 #### Returns
 
-`Promise`<``null`` \| `Resolver`\>
+`Promise`\<``null`` \| `Resolver`\>
 
 #### Inherited from
 
@@ -1181,19 +1185,19 @@ ___
 
 ### getStorageAt
 
-▸ **getStorageAt**(`addressOrName`, `position`, `blockTag?`): `Promise`<`string`\>
+▸ **getStorageAt**(`addressOrName`, `position`, `blockTag?`): `Promise`\<`string`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `addressOrName` | `string` \| `Promise`<`string`\> |
-| `position` | `BigNumberish` \| `Promise`<`BigNumberish`\> |
-| `blockTag?` | `BlockTag` \| `Promise`<`BlockTag`\> |
+| `addressOrName` | `string` \| `Promise`\<`string`\> |
+| `position` | `BigNumberish` \| `Promise`\<`BigNumberish`\> |
+| `blockTag?` | `BlockTag` \| `Promise`\<`BlockTag`\> |
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Inherited from
 
@@ -1203,17 +1207,17 @@ ___
 
 ### getTransaction
 
-▸ **getTransaction**(`transactionHash`): `Promise`<`TransactionResponse`\>
+▸ **getTransaction**(`transactionHash`): `Promise`\<`TransactionResponse`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `transactionHash` | `string` \| `Promise`<`string`\> |
+| `transactionHash` | `string` \| `Promise`\<`string`\> |
 
 #### Returns
 
-`Promise`<`TransactionResponse`\>
+`Promise`\<`TransactionResponse`\>
 
 #### Inherited from
 
@@ -1223,18 +1227,18 @@ ___
 
 ### getTransactionCount
 
-▸ **getTransactionCount**(`addressOrName`, `blockTag?`): `Promise`<`number`\>
+▸ **getTransactionCount**(`addressOrName`, `blockTag?`): `Promise`\<`number`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `addressOrName` | `string` \| `Promise`<`string`\> |
-| `blockTag?` | `BlockTag` \| `Promise`<`BlockTag`\> |
+| `addressOrName` | `string` \| `Promise`\<`string`\> |
+| `blockTag?` | `BlockTag` \| `Promise`\<`BlockTag`\> |
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
 #### Inherited from
 
@@ -1244,17 +1248,17 @@ ___
 
 ### getTransactionReceipt
 
-▸ **getTransactionReceipt**(`transactionHash`): `Promise`<`TransactionReceipt`\>
+▸ **getTransactionReceipt**(`transactionHash`): `Promise`\<`TransactionReceipt`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `transactionHash` | `string` \| `Promise`<`string`\> |
+| `transactionHash` | `string` \| `Promise`\<`string`\> |
 
 #### Returns
 
-`Promise`<`TransactionReceipt`\>
+`Promise`\<`TransactionReceipt`\>
 
 #### Inherited from
 
@@ -1284,11 +1288,11 @@ ___
 
 ### listAccounts
 
-▸ **listAccounts**(): `Promise`<`string`[]\>
+▸ **listAccounts**(): `Promise`\<`string`[]\>
 
 #### Returns
 
-`Promise`<`string`[]\>
+`Promise`\<`string`[]\>
 
 #### Inherited from
 
@@ -1338,17 +1342,17 @@ ___
 
 ### lookupAddress
 
-▸ **lookupAddress**(`address`): `Promise`<``null`` \| `string`\>
+▸ **lookupAddress**(`address`): `Promise`\<``null`` \| `string`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `address` | `string` \| `Promise`<`string`\> |
+| `address` | `string` \| `Promise`\<`string`\> |
 
 #### Returns
 
-`Promise`<``null`` \| `string`\>
+`Promise`\<``null`` \| `string`\>
 
 #### Inherited from
 
@@ -1421,7 +1425,7 @@ ___
 
 ### perform
 
-▸ **perform**(`method`, `params`): `Promise`<`any`\>
+▸ **perform**(`method`, `params`): `Promise`\<`any`\>
 
 #### Parameters
 
@@ -1432,7 +1436,7 @@ ___
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
 #### Inherited from
 
@@ -1442,11 +1446,11 @@ ___
 
 ### poll
 
-▸ **poll**(): `Promise`<`void`\>
+▸ **poll**(): `Promise`\<`void`\>
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Inherited from
 
@@ -1538,17 +1542,17 @@ ___
 
 ### resolveName
 
-▸ **resolveName**(`name`): `Promise`<``null`` \| `string`\>
+▸ **resolveName**(`name`): `Promise`\<``null`` \| `string`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `name` | `string` \| `Promise`<`string`\> |
+| `name` | `string` \| `Promise`\<`string`\> |
 
 #### Returns
 
-`Promise`<``null`` \| `string`\>
+`Promise`\<``null`` \| `string`\>
 
 #### Inherited from
 
@@ -1558,7 +1562,7 @@ ___
 
 ### send
 
-▸ **send**(`method`, `params`): `Promise`<`any`\>
+▸ **send**(`method`, `params`): `Promise`\<`any`\>
 
 #### Parameters
 
@@ -1569,7 +1573,7 @@ ___
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
 #### Inherited from
 
@@ -1579,17 +1583,17 @@ ___
 
 ### sendTransaction
 
-▸ **sendTransaction**(`signedTransaction`): `Promise`<`TransactionResponse`\>
+▸ **sendTransaction**(`signedTransaction`): `Promise`\<`TransactionResponse`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `signedTransaction` | `string` \| `Promise`<`string`\> |
+| `signedTransaction` | `string` \| `Promise`\<`string`\> |
 
 #### Returns
 
-`Promise`<`TransactionResponse`\>
+`Promise`\<`TransactionResponse`\>
 
 #### Inherited from
 
@@ -1599,7 +1603,7 @@ ___
 
 ### waitForTransaction
 
-▸ **waitForTransaction**(`transactionHash`, `confirmations?`, `timeout?`): `Promise`<`TransactionReceipt`\>
+▸ **waitForTransaction**(`transactionHash`, `confirmations?`, `timeout?`): `Promise`\<`TransactionReceipt`\>
 
 #### Parameters
 
@@ -1611,7 +1615,7 @@ ___
 
 #### Returns
 
-`Promise`<`TransactionReceipt`\>
+`Promise`\<`TransactionReceipt`\>
 
 #### Inherited from
 
@@ -1621,7 +1625,7 @@ ___
 
 ### defaultUrl
 
-▸ `Static` **defaultUrl**(): `string`
+▸ **defaultUrl**(): `string`
 
 #### Returns
 
@@ -1635,7 +1639,7 @@ ___
 
 ### getFormatter
 
-▸ `Static` **getFormatter**(): `Formatter`
+▸ **getFormatter**(): `Formatter`
 
 #### Returns
 
@@ -1649,7 +1653,7 @@ ___
 
 ### getNetwork
 
-▸ `Static` **getNetwork**(`network`): `Network`
+▸ **getNetwork**(`network`): `Network`
 
 #### Parameters
 
@@ -1669,7 +1673,7 @@ ___
 
 ### hexlifyTransaction
 
-▸ `Static` **hexlifyTransaction**(`transaction`, `allowExtra?`): `Object`
+▸ **hexlifyTransaction**(`transaction`, `allowExtra?`): `Object`
 
 #### Parameters
 
@@ -1690,7 +1694,7 @@ ___
 
 ### isProvider
 
-▸ `Static` **isProvider**(`value`): value is Provider
+▸ **isProvider**(`value`): value is Provider
 
 #### Parameters
 

@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaCreditScore
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaCreditScore
 
 # Class: MasaCreditScore
 
 ## Hierarchy
 
-- `MasaLinkable`<`SoulboundCreditScore`\>
+- `MasaLinkable`\<`SoulboundCreditScore`\>
 
   ↳ **`MasaCreditScore`**
 
@@ -32,7 +32,7 @@
 
 ### constructor
 
-• **new MasaCreditScore**(`masa`)
+• **new MasaCreditScore**(`masa`): [`MasaCreditScore`](MasaCreditScore.md)
 
 #### Parameters
 
@@ -40,9 +40,13 @@
 | :------ | :------ |
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 
+#### Returns
+
+[`MasaCreditScore`](MasaCreditScore.md)
+
 #### Overrides
 
-MasaLinkable&lt;SoulboundCreditScore\&gt;.constructor
+MasaLinkable\&lt;SoulboundCreditScore\&gt;.constructor
 
 ## Properties
 
@@ -78,7 +82,7 @@ MasaLinkable.masa
 
 ### burn
 
-▸ **burn**(`creditScoreId`): `Promise`<`boolean`\>
+▸ **burn**(`creditScoreId`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -88,13 +92,13 @@ MasaLinkable.masa
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### create
 
-▸ **create**(`paymentMethod?`): `Promise`<[`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\>
+▸ **create**(`paymentMethod?`): `Promise`\<[`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\>
 
 #### Parameters
 
@@ -104,13 +108,13 @@ ___
 
 #### Returns
 
-`Promise`<[`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\>
+`Promise`\<[`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\>
 
 ___
 
 ### list
 
-▸ **list**(`address?`): `Promise`<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
+▸ **list**(`address?`): `Promise`\<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
 
 #### Parameters
 
@@ -120,13 +124,13 @@ ___
 
 #### Returns
 
-`Promise`<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
+`Promise`\<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
 
 ___
 
 ### load
 
-▸ **load**(`identityIdOrAddress`): `Promise`<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
+▸ **load**(`identityIdOrAddress`): `Promise`\<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
 
 #### Parameters
 
@@ -136,4 +140,4 @@ ___
 
 #### Returns
 
-`Promise`<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
+`Promise`\<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>

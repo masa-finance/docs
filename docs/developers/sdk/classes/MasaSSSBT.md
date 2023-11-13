@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaSSSBT
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaSSSBT
 
 # Class: MasaSSSBT
 
@@ -29,13 +29,17 @@
 
 ### constructor
 
-• **new MasaSSSBT**(`masa`)
+• **new MasaSSSBT**(`masa`): [`MasaSSSBT`](MasaSSSBT.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+
+#### Returns
+
+[`MasaSSSBT`](MasaSSSBT.md)
 
 #### Inherited from
 
@@ -55,7 +59,7 @@ MasaBase.masa
 
 ### attach
 
-▸ **attach**<`Contract`\>(`contract`): [`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)<`Contract`\>
+▸ **attach**\<`Contract`\>(`contract`): [`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)\<`Contract`\>
 
 #### Type parameters
 
@@ -71,13 +75,13 @@ MasaBase.masa
 
 #### Returns
 
-[`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)<`Contract`\>
+[`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)\<`Contract`\>
 
 ___
 
 ### connect
 
-▸ **connect**<`Contract`\>(`address`, `factory?`): `Promise`<[`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)<`Contract`\>\>
+▸ **connect**\<`Contract`\>(`address`, `factory?`): `Promise`\<[`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)\<`Contract`\>\>
 
 #### Type parameters
 
@@ -94,13 +98,13 @@ ___
 
 #### Returns
 
-`Promise`<[`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)<`Contract`\>\>
+`Promise`\<[`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)\<`Contract`\>\>
 
 ___
 
 ### deploy
 
-▸ **deploy**(`«destructured»`): `Promise`<`undefined` \| [`DeployResult`](../interfaces/DeployResult.md)<`PaymentParamsStruct`\>\>
+▸ **deploy**(`«destructured»`): `Promise`\<`undefined` \| [`DeployResult`](../interfaces/DeployResult.md)\<`PaymentParamsStruct`\>\>
 
 #### Parameters
 
@@ -116,4 +120,4 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`DeployResult`](../interfaces/DeployResult.md)<`PaymentParamsStruct`\>\>
+`Promise`\<`undefined` \| [`DeployResult`](../interfaces/DeployResult.md)\<`PaymentParamsStruct`\>\>

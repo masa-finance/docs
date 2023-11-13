@@ -1,7 +1,7 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / SSSBTContractWrapper
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / SSSBTContractWrapper
 
-# Class: SSSBTContractWrapper<Contract\>
+# Class: SSSBTContractWrapper\<Contract\>
 
 ## Type parameters
 
@@ -11,7 +11,7 @@
 
 ## Hierarchy
 
-- [`SBTContractWrapper`](SBTContractWrapper.md)<`Contract`\>
+- [`SBTContractWrapper`](SBTContractWrapper.md)\<`Contract`\>
 
   ↳ **`SSSBTContractWrapper`**
 
@@ -26,6 +26,7 @@
 - [contract](SSSBTContractWrapper.md#contract)
 - [instances](SSSBTContractWrapper.md#instances)
 - [masa](SSSBTContractWrapper.md#masa)
+- [types](SSSBTContractWrapper.md#types)
 
 ### Methods
 
@@ -47,7 +48,7 @@
 
 ### constructor
 
-• **new SSSBTContractWrapper**<`Contract`\>(`masa`, `instances`, `contract`)
+• **new SSSBTContractWrapper**\<`Contract`\>(`masa`, `instances`, `contract`): [`SSSBTContractWrapper`](SSSBTContractWrapper.md)\<`Contract`\>
 
 #### Type parameters
 
@@ -62,6 +63,10 @@
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 | `instances` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) |
 | `contract` | `Contract` |
+
+#### Returns
+
+[`SSSBTContractWrapper`](SSSBTContractWrapper.md)\<`Contract`\>
 
 #### Inherited from
 
@@ -97,11 +102,17 @@ ___
 
 [SBTContractWrapper](SBTContractWrapper.md).[masa](SBTContractWrapper.md#masa)
 
+___
+
+### types
+
+• `Readonly` **types**: `Record`\<`string`, `TypedDataField`[]\>
+
 ## Methods
 
 ### checkOrGiveAllowance
 
-▸ `Private` **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`<`undefined` \| `ContractReceipt`\>
+▸ **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`\<`undefined` \| `ContractReceipt`\>
 
 Checks or gives allowance on ERC20 tokens
 
@@ -116,7 +127,7 @@ Checks or gives allowance on ERC20 tokens
 
 #### Returns
 
-`Promise`<`undefined` \| `ContractReceipt`\>
+`Promise`\<`undefined` \| `ContractReceipt`\>
 
 #### Inherited from
 
@@ -126,7 +137,7 @@ ___
 
 ### createOverrides
 
-▸ `Protected` **createOverrides**(`value?`): `Promise`<`PayableOverrides`\>
+▸ **createOverrides**(`value?`): `Promise`\<`PayableOverrides`\>
 
 #### Parameters
 
@@ -136,7 +147,7 @@ ___
 
 #### Returns
 
-`Promise`<`PayableOverrides`\>
+`Promise`\<`PayableOverrides`\>
 
 #### Inherited from
 
@@ -146,7 +157,7 @@ ___
 
 ### formatPrice
 
-▸ `Protected` **formatPrice**(`paymentAddress`, `price`): `Promise`<`string`\>
+▸ **formatPrice**(`paymentAddress`, `price`): `Promise`\<`string`\>
 
 #### Parameters
 
@@ -157,7 +168,7 @@ ___
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Inherited from
 
@@ -167,7 +178,7 @@ ___
 
 ### getMintPrice
 
-▸ `Protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+▸ **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Parameters
 
@@ -179,7 +190,7 @@ ___
 
 #### Returns
 
-`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+`Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Inherited from
 
@@ -189,11 +200,11 @@ ___
 
 ### getNetworkFeeInformation
 
-▸ `Protected` **getNetworkFeeInformation**(): `Promise`<`undefined` \| `FeeData`\>
+▸ **getNetworkFeeInformation**(): `Promise`\<`undefined` \| `FeeData`\>
 
 #### Returns
 
-`Promise`<`undefined` \| `FeeData`\>
+`Promise`\<`undefined` \| `FeeData`\>
 
 #### Inherited from
 
@@ -203,7 +214,7 @@ ___
 
 ### getPaymentAddress
 
-▸ `Private` **getPaymentAddress**(`paymentMethod`): `string`
+▸ **getPaymentAddress**(`paymentMethod`): `string`
 
 Gets the payment address for a given payment method
 
@@ -225,7 +236,7 @@ ___
 
 ### getPrice
 
-▸ **getPrice**(`paymentMethod`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+▸ **getPrice**(`paymentMethod`, `slippage?`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Parameters
 
@@ -236,7 +247,7 @@ ___
 
 #### Returns
 
-`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+`Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Inherited from
 
@@ -246,7 +257,7 @@ ___
 
 ### loadSBTContract
 
-▸ `Protected` **loadSBTContract**<`Contract`\>(`address`, `factory`): `Promise`<`Contract`\>
+▸ **loadSBTContract**\<`Contract`\>(`address`, `factory`): `Promise`\<`Contract`\>
 
 #### Type parameters
 
@@ -263,7 +274,7 @@ ___
 
 #### Returns
 
-`Promise`<`Contract`\>
+`Promise`\<`Contract`\>
 
 #### Inherited from
 
@@ -273,7 +284,7 @@ ___
 
 ### mint
 
-▸ **mint**(`paymentMethod`, `receiver`, `signature`, `signatureDate`, `authorityAddress`): `Promise`<`boolean`\>
+▸ **mint**(`paymentMethod`, `receiver`, `signature`, `signatureDate`, `authorityAddress`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -287,13 +298,13 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### prepareMint
 
-▸ **prepareMint**(`paymentMethod`, `name`, `types`, `value`, `signature`, `authorityAddress`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+▸ **prepareMint**(`paymentMethod`, `name`, `types`, `value`, `signature`, `authorityAddress`, `slippage?`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Parameters
 
@@ -301,21 +312,21 @@ ___
 | :------ | :------ | :------ |
 | `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
 | `name` | `string` | `undefined` |
-| `types` | `Record`<`string`, `TypedDataField`[]\> | `undefined` |
-| `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> | `undefined` |
+| `types` | `Record`\<`string`, `TypedDataField`[]\> | `undefined` |
+| `value` | `Record`\<`string`, `string` \| `number` \| `BigNumber`\> | `undefined` |
 | `signature` | `string` | `undefined` |
 | `authorityAddress` | `string` | `undefined` |
 | `slippage` | `undefined` \| `number` | `250` |
 
 #### Returns
 
-`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+`Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 ___
 
 ### sign
 
-▸ **sign**(`name`, `types`, `value`): `Promise`<{ `authorityAddress`: `string` ; `signature`: `string`  }\>
+▸ **sign**(`name`, `types`, `value`): `Promise`\<\{ `authorityAddress`: `string` ; `signature`: `string`  }\>
 
 Signs an SBT based on its address
 
@@ -324,18 +335,18 @@ Signs an SBT based on its address
 | Name | Type |
 | :------ | :------ |
 | `name` | `string` |
-| `types` | `Record`<`string`, `TypedDataField`[]\> |
-| `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |
+| `types` | `Record`\<`string`, `TypedDataField`[]\> |
+| `value` | `Record`\<`string`, `string` \| `number` \| `BigNumber`\> |
 
 #### Returns
 
-`Promise`<{ `authorityAddress`: `string` ; `signature`: `string`  }\>
+`Promise`\<\{ `authorityAddress`: `string` ; `signature`: `string`  }\>
 
 ___
 
 ### verify
 
-▸ `Protected` **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`<`void`\>
+▸ **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`\<`void`\>
 
 verify a signature created during one of the SBT signing flows
 
@@ -346,14 +357,14 @@ verify a signature created during one of the SBT signing flows
 | `errorMessage` | `string` |
 | `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
 | `domain` | `TypedDataDomain` |
-| `types` | `Record`<`string`, `TypedDataField`[]\> |
-| `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |
+| `types` | `Record`\<`string`, `TypedDataField`[]\> |
+| `value` | `Record`\<`string`, `string` \| `number` \| `boolean` \| `BigNumber`\> |
 | `signature` | `string` |
 | `authorityAddress` | `string` |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Inherited from
 
@@ -363,7 +374,7 @@ ___
 
 ### addSlippage
 
-▸ `Static` `Protected` **addSlippage**(`price`, `slippage`): `BigNumber`
+▸ **addSlippage**(`price`, `slippage`): `BigNumber`
 
 adds a percentage to the price as slippage
 

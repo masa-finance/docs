@@ -1,34 +1,34 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaSBTBase
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaDynamicSBTBase
 
-# Class: MasaSBTBase
+# Class: MasaDynamicSBTBase
 
 ## Hierarchy
 
 - `MasaBase`
 
-  ↳ **`MasaSBTBase`**
+  ↳ **`MasaDynamicSBTBase`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](MasaSBTBase.md#constructor)
+- [constructor](MasaDynamicSBTBase.md#constructor)
 
 ### Properties
 
-- [masa](MasaSBTBase.md#masa)
+- [masa](MasaDynamicSBTBase.md#masa)
 
 ### Methods
 
-- [attach](MasaSBTBase.md#attach)
-- [connect](MasaSBTBase.md#connect)
+- [attach](MasaDynamicSBTBase.md#attach)
+- [connect](MasaDynamicSBTBase.md#connect)
 
 ## Constructors
 
 ### constructor
 
-• **new MasaSBTBase**(`masa`): [`MasaSBTBase`](MasaSBTBase.md)
+• **new MasaDynamicSBTBase**(`masa`): [`MasaDynamicSBTBase`](MasaDynamicSBTBase.md)
 
 #### Parameters
 
@@ -38,7 +38,7 @@
 
 #### Returns
 
-[`MasaSBTBase`](MasaSBTBase.md)
+[`MasaDynamicSBTBase`](MasaDynamicSBTBase.md)
 
 #### Inherited from
 
@@ -58,13 +58,13 @@ MasaBase.masa
 
 ### attach
 
-▸ **attach**\<`Contract`\>(`contract`): [`MasaSBTWrapper`](MasaSBTWrapper.md)\<`Contract`\>
+▸ **attach**\<`Contract`\>(`contract`): [`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md)\<`Contract`\>
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `MasaSBT` |
+| `Contract` | extends `MasaSBTDynamic` |
 
 #### Parameters
 
@@ -74,19 +74,19 @@ MasaBase.masa
 
 #### Returns
 
-[`MasaSBTWrapper`](MasaSBTWrapper.md)\<`Contract`\>
+[`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md)\<`Contract`\>
 
 ___
 
 ### connect
 
-▸ **connect**\<`Contract`\>(`address`, `factory?`): `Promise`\<[`MasaSBTWrapper`](MasaSBTWrapper.md)\<`Contract`\>\>
+▸ **connect**\<`Contract`\>(`address`, `factory?`): `Promise`\<[`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md)\<`Contract`\>\>
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `MasaSBT` |
+| `Contract` | extends `MasaSBTDynamic` |
 
 #### Parameters
 
@@ -97,4 +97,4 @@ ___
 
 #### Returns
 
-`Promise`\<[`MasaSBTWrapper`](MasaSBTWrapper.md)\<`Contract`\>\>
+`Promise`\<[`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md)\<`Contract`\>\>

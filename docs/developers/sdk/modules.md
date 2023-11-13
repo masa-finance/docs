@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.11.1](README.md) / Exports
+ - v3.12.0-alpha.5](README.md) / Exports
 
 # # Masa SDK
- - v3.11.1
+ - v3.12.0-alpha.5
 
 ## Table of contents
 
@@ -27,6 +27,10 @@
 - [MasaClient](classes/MasaClient.md)
 - [MasaContracts](classes/MasaContracts.md)
 - [MasaCreditScore](classes/MasaCreditScore.md)
+- [MasaDynamicSBTBase](classes/MasaDynamicSBTBase.md)
+- [MasaDynamicSBTWrapper](classes/MasaDynamicSBTWrapper.md)
+- [MasaDynamicSSSBT](classes/MasaDynamicSSSBT.md)
+- [MasaDynamicSSSBTWrapper](classes/MasaDynamicSSSBTWrapper.md)
 - [MasaGreen](classes/MasaGreen.md)
 - [MasaIdentity](classes/MasaIdentity.md)
 - [MasaSBTBase](classes/MasaSBTBase.md)
@@ -209,13 +213,13 @@
 
 ### ApprovalEvent
 
-Ƭ **ApprovalEvent**: `TypedEvent`<[`string`, `string`, `BigNumber`], [`ApprovalEventObject`](interfaces/ApprovalEventObject.md)\>
+Ƭ **ApprovalEvent**: `TypedEvent`\<[`string`, `string`, `BigNumber`], [`ApprovalEventObject`](interfaces/ApprovalEventObject.md)\>
 
 ___
 
 ### ApprovalEventFilter
 
-Ƭ **ApprovalEventFilter**: `TypedEventFilter`<[`ApprovalEvent`](modules.md#approvalevent)\>
+Ƭ **ApprovalEventFilter**: `TypedEventFilter`\<[`ApprovalEvent`](modules.md#approvalevent)\>
 
 ___
 
@@ -227,7 +231,7 @@ ___
 
 ### Balances
 
-Ƭ **Balances**: `Partial`<{ [index in BalanceTypes]: number \| undefined }\>
+Ƭ **Balances**: `Partial`\<\{ [index in BalanceTypes]: number \| undefined }\>
 
 ___
 
@@ -239,7 +243,7 @@ ___
 
 ### CreateLinkResult
 
-Ƭ **CreateLinkResult**: [`BaseResult`](interfaces/BaseResult.md) & { `passport?`: `string`  }
+Ƭ **CreateLinkResult**: [`BaseResult`](interfaces/BaseResult.md) & \{ `passport?`: `string`  }
 
 ___
 
@@ -251,7 +255,7 @@ ___
 
 ### Environment
 
-Ƭ **Environment**: { `name`: ``"local"`` \| ``"dev"`` \| ``"test"`` \| ``"stage"`` \| ``"production"`` ; `wallet?`: `Signer`  } & [`MasaArgs`](interfaces/MasaArgs.md)
+Ƭ **Environment**: \{ `name`: ``"local"`` \| ``"dev"`` \| ``"test"`` \| ``"stage"`` \| ``"production"`` ; `wallet?`: `Signer`  } & [`MasaArgs`](interfaces/MasaArgs.md)
 
 ___
 
@@ -286,7 +290,7 @@ ___
 
 ### ListLinksResult
 
-Ƭ **ListLinksResult**: [`BaseResult`](interfaces/BaseResult.md) & { `links`: [`Link`](modules.md#link)[]  }
+Ƭ **ListLinksResult**: [`BaseResult`](interfaces/BaseResult.md) & \{ `links`: [`Link`](modules.md#link)[]  }
 
 ___
 
@@ -322,25 +326,25 @@ ___
 
 ### Tokens
 
-Ƭ **Tokens**: `Partial`<{ [key in PaymentMethod]: string }\>
+Ƭ **Tokens**: `Partial`\<\{ [key in PaymentMethod]: string }\>
 
 ___
 
 ### TransferEvent
 
-Ƭ **TransferEvent**: `TypedEvent`<[`string`, `string`, `BigNumber`], [`TransferEventObject`](interfaces/TransferEventObject.md)\>
+Ƭ **TransferEvent**: `TypedEvent`\<[`string`, `string`, `BigNumber`], [`TransferEventObject`](interfaces/TransferEventObject.md)\>
 
 ___
 
 ### TransferEventFilter
 
-Ƭ **TransferEventFilter**: `TypedEventFilter`<[`TransferEvent`](modules.md#transferevent)\>
+Ƭ **TransferEventFilter**: `TypedEventFilter`\<[`TransferEvent`](modules.md#transferevent)\>
 
 ___
 
 ### VerifyLinkResult
 
-Ƭ **VerifyLinkResult**: [`BaseResult`](interfaces/BaseResult.md) & { `verified?`: `boolean`  }
+Ƭ **VerifyLinkResult**: [`BaseResult`](interfaces/BaseResult.md) & \{ `verified?`: `boolean`  }
 
 ## Variables
 
@@ -361,7 +365,7 @@ ___
 
 ### SupportedNetworks
 
-• `Const` **SupportedNetworks**: `Partial`<{ [key in NetworkName]: Network }\>
+• `Const` **SupportedNetworks**: `Partial`\<\{ [key in NetworkName]: Network }\>
 
 ___
 
@@ -379,7 +383,7 @@ ___
 
 ### addresses
 
-• `Const` **addresses**: `Partial`<{ [key in NetworkName]: Addresses }\>
+• `Const` **addresses**: `Partial`\<\{ [key in NetworkName]: Addresses }\>
 
 ___
 
@@ -463,7 +467,7 @@ ___
 
 ### burnIdentity
 
-▸ **burnIdentity**(`masa`): `Promise`<`boolean`\>
+▸ **burnIdentity**(`masa`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -473,13 +477,13 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### burnSoulName
 
-▸ **burnSoulName**(`masa`, `soulName`): `Promise`<`boolean`\>
+▸ **burnSoulName**(`masa`, `soulName`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -490,7 +494,7 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
@@ -512,7 +516,7 @@ ___
 
 ### checkLogin
 
-▸ **checkLogin**(`masa`): `Promise`<`boolean`\>
+▸ **checkLogin**(`masa`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -522,13 +526,13 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### createCreditScore
 
-▸ **createCreditScore**(`masa`, `paymentMethod`): `Promise`<[`GenerateCreditScoreResult`](interfaces/GenerateCreditScoreResult.md)\>
+▸ **createCreditScore**(`masa`, `paymentMethod`): `Promise`\<[`GenerateCreditScoreResult`](interfaces/GenerateCreditScoreResult.md)\>
 
 #### Parameters
 
@@ -539,13 +543,13 @@ ___
 
 #### Returns
 
-`Promise`<[`GenerateCreditScoreResult`](interfaces/GenerateCreditScoreResult.md)\>
+`Promise`\<[`GenerateCreditScoreResult`](interfaces/GenerateCreditScoreResult.md)\>
 
 ___
 
 ### createGreen
 
-▸ **createGreen**(`masa`, `paymentMethod`, `phoneNumber`, `code`): `Promise`<[`GreenBaseResult`](interfaces/GreenBaseResult.md)\>
+▸ **createGreen**(`masa`, `paymentMethod`, `phoneNumber`, `code`): `Promise`\<[`GreenBaseResult`](interfaces/GreenBaseResult.md)\>
 
 #### Parameters
 
@@ -558,13 +562,13 @@ ___
 
 #### Returns
 
-`Promise`<[`GreenBaseResult`](interfaces/GreenBaseResult.md)\>
+`Promise`\<[`GreenBaseResult`](interfaces/GreenBaseResult.md)\>
 
 ___
 
 ### createIdentity
 
-▸ **createIdentity**(`masa`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+▸ **createIdentity**(`masa`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -574,13 +578,13 @@ ___
 
 #### Returns
 
-`Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
 ### createIdentityWithSoulName
 
-▸ **createIdentityWithSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`, `style?`): `Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
+▸ **createIdentityWithSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`, `style?`): `Promise`\<\{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 #### Parameters
 
@@ -594,13 +598,13 @@ ___
 
 #### Returns
 
-`Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
+`Promise`\<\{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 ___
 
 ### createLink
 
-▸ **createLink**(`masa`, `contract`, `tokenId`, `readerIdentityId`): `Promise`<[`CreateLinkResult`](modules.md#createlinkresult)\>
+▸ **createLink**(`masa`, `contract`, `tokenId`, `readerIdentityId`): `Promise`\<[`CreateLinkResult`](modules.md#createlinkresult)\>
 
 #### Parameters
 
@@ -613,13 +617,13 @@ ___
 
 #### Returns
 
-`Promise`<[`CreateLinkResult`](modules.md#createlinkresult)\>
+`Promise`\<[`CreateLinkResult`](modules.md#createlinkresult)\>
 
 ___
 
 ### createSoulName
 
-▸ **createSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`, `receiver?`, `style?`): `Promise`<[`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
+▸ **createSoulName**(`masa`, `paymentMethod`, `soulName`, `duration`, `receiver?`, `style?`): `Promise`\<[`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 #### Parameters
 
@@ -634,13 +638,13 @@ ___
 
 #### Returns
 
-`Promise`<[`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
+`Promise`\<[`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 ___
 
 ### deployASBT
 
-▸ **deployASBT**(`«destructured»`): `Promise`<`undefined` \| [`DeployResult`](interfaces/DeployResult.md)<`PaymentParamsStruct`\>\>
+▸ **deployASBT**(`«destructured»`): `Promise`\<`undefined` \| [`DeployResult`](interfaces/DeployResult.md)\<`PaymentParamsStruct`\>\>
 
 #### Parameters
 
@@ -658,13 +662,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`DeployResult`](interfaces/DeployResult.md)<`PaymentParamsStruct`\>\>
+`Promise`\<`undefined` \| [`DeployResult`](interfaces/DeployResult.md)\<`PaymentParamsStruct`\>\>
 
 ___
 
 ### deploySSSBT
 
-▸ **deploySSSBT**(`«destructured»`): `Promise`<`undefined` \| [`DeployResult`](interfaces/DeployResult.md)<`PaymentParamsStruct`\>\>
+▸ **deploySSSBT**(`«destructured»`): `Promise`\<`undefined` \| [`DeployResult`](interfaces/DeployResult.md)\<`PaymentParamsStruct`\>\>
 
 #### Parameters
 
@@ -683,13 +687,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`DeployResult`](interfaces/DeployResult.md)<`PaymentParamsStruct`\>\>
+`Promise`\<`undefined` \| [`DeployResult`](interfaces/DeployResult.md)\<`PaymentParamsStruct`\>\>
 
 ___
 
 ### establishLink
 
-▸ **establishLink**(`masa`, `paymentMethod`, `contract`, `tokenId`, `readerIdentityId`, `signature`, `signatureDate`, `expirationDate`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+▸ **establishLink**(`masa`, `paymentMethod`, `contract`, `tokenId`, `readerIdentityId`, `signature`, `signatureDate`, `expirationDate`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -706,13 +710,13 @@ ___
 
 #### Returns
 
-`Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
 ### establishLinkFromPassport
 
-▸ **establishLinkFromPassport**(`masa`, `paymentMethod`, `contract`, `passport`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+▸ **establishLinkFromPassport**(`masa`, `paymentMethod`, `contract`, `passport`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -725,13 +729,13 @@ ___
 
 #### Returns
 
-`Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
 ### generateGreen
 
-▸ **generateGreen**(`masa`, `phoneNumber`): `Promise`<[`GenerateGreenResult`](interfaces/GenerateGreenResult.md)\>
+▸ **generateGreen**(`masa`, `phoneNumber`): `Promise`\<[`GenerateGreenResult`](interfaces/GenerateGreenResult.md)\>
 
 #### Parameters
 
@@ -742,32 +746,32 @@ ___
 
 #### Returns
 
-`Promise`<[`GenerateGreenResult`](interfaces/GenerateGreenResult.md)\>
+`Promise`\<[`GenerateGreenResult`](interfaces/GenerateGreenResult.md)\>
 
 ___
 
 ### generateSignatureDomain
 
-▸ **generateSignatureDomain**(`wallet`, `name`, `verifyingContract`, `version?`): `Promise`<`TypedDataDomain`\>
+▸ **generateSignatureDomain**(`signer`, `name`, `verifyingContract`, `version?`): `Promise`\<`TypedDataDomain`\>
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `wallet` | `Signer` | `undefined` |
+| `signer` | `Signer` | `undefined` |
 | `name` | `string` | `undefined` |
 | `verifyingContract` | `string` | `undefined` |
 | `version` | `string` | `"1.0.0"` |
 
 #### Returns
 
-`Promise`<`TypedDataDomain`\>
+`Promise`\<`TypedDataDomain`\>
 
 ___
 
 ### getBalances
 
-▸ **getBalances**(`masa`, `address?`): `Promise`<`Partial`<{ `BNB`: `undefined` \| `number` ; `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `MATIC`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
+▸ **getBalances**(`masa`, `address?`): `Promise`\<`Partial`\<\{ `BNB`: `undefined` \| `number` ; `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `MATIC`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
 
 #### Parameters
 
@@ -778,7 +782,7 @@ ___
 
 #### Returns
 
-`Promise`<`Partial`<{ `BNB`: `undefined` \| `number` ; `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `MATIC`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
+`Promise`\<`Partial`\<\{ `BNB`: `undefined` \| `number` ; `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `MATIC`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
 
 ___
 
@@ -800,7 +804,7 @@ ___
 
 ### getSession
 
-▸ **getSession**(`masa`): `Promise`<`undefined` \| [`ISession`](interfaces/ISession.md)\>
+▸ **getSession**(`masa`): `Promise`\<`undefined` \| [`ISession`](interfaces/ISession.md)\>
 
 #### Parameters
 
@@ -810,7 +814,7 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`ISession`](interfaces/ISession.md)\>
+`Promise`\<`undefined` \| [`ISession`](interfaces/ISession.md)\>
 
 ___
 
@@ -898,7 +902,7 @@ ___
 
 ### listCreditScores
 
-▸ **listCreditScores**(`masa`, `address?`): `Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
+▸ **listCreditScores**(`masa`, `address?`): `Promise`\<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 #### Parameters
 
@@ -909,13 +913,13 @@ ___
 
 #### Returns
 
-`Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
+`Promise`\<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 ___
 
 ### listCreditScoresAndPrint
 
-▸ **listCreditScoresAndPrint**(`masa`, `address?`): `Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
+▸ **listCreditScoresAndPrint**(`masa`, `address?`): `Promise`\<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 #### Parameters
 
@@ -926,13 +930,13 @@ ___
 
 #### Returns
 
-`Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
+`Promise`\<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 ___
 
 ### listGreens
 
-▸ **listGreens**(`masa`, `address?`): `Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
+▸ **listGreens**(`masa`, `address?`): `Promise`\<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 #### Parameters
 
@@ -943,13 +947,13 @@ ___
 
 #### Returns
 
-`Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
+`Promise`\<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 ___
 
 ### listGreensAndPrint
 
-▸ **listGreensAndPrint**(`masa`, `address?`): `Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
+▸ **listGreensAndPrint**(`masa`, `address?`): `Promise`\<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 #### Parameters
 
@@ -960,13 +964,13 @@ ___
 
 #### Returns
 
-`Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
+`Promise`\<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 ___
 
 ### listLinks
 
-▸ **listLinks**(`masa`, `contract`, `tokenId`): `Promise`<[`ListLinksResult`](modules.md#listlinksresult)\>
+▸ **listLinks**(`masa`, `contract`, `tokenId`): `Promise`\<[`ListLinksResult`](modules.md#listlinksresult)\>
 
 #### Parameters
 
@@ -978,13 +982,13 @@ ___
 
 #### Returns
 
-`Promise`<[`ListLinksResult`](modules.md#listlinksresult)\>
+`Promise`\<[`ListLinksResult`](modules.md#listlinksresult)\>
 
 ___
 
 ### listSoulNames
 
-▸ **listSoulNames**(`masa`, `address?`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+▸ **listSoulNames**(`masa`, `address?`): `Promise`\<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 list soul names
 
@@ -997,13 +1001,13 @@ list soul names
 
 #### Returns
 
-`Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+`Promise`\<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 ___
 
 ### listSoulNamesAndPrint
 
-▸ **listSoulNamesAndPrint**(`masa`, `address?`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+▸ **listSoulNamesAndPrint**(`masa`, `address?`): `Promise`\<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 list soul names and print them
 
@@ -1016,13 +1020,13 @@ list soul names and print them
 
 #### Returns
 
-`Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+`Promise`\<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 ___
 
 ### loadCreditScoreDetails
 
-▸ **loadCreditScoreDetails**(`masa`, `creditScoreIds`): `Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
+▸ **loadCreditScoreDetails**(`masa`, `creditScoreIds`): `Promise`\<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 #### Parameters
 
@@ -1033,13 +1037,13 @@ ___
 
 #### Returns
 
-`Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
+`Promise`\<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 ___
 
 ### loadCreditScores
 
-▸ **loadCreditScores**(`masa`, `identityIdOrAddress`): `Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
+▸ **loadCreditScores**(`masa`, `identityIdOrAddress`): `Promise`\<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 #### Parameters
 
@@ -1050,13 +1054,13 @@ ___
 
 #### Returns
 
-`Promise`<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
+`Promise`\<[`CreditScoreDetails`](interfaces/CreditScoreDetails.md)[]\>
 
 ___
 
 ### loadGreenDetails
 
-▸ **loadGreenDetails**(`masa`, `greenIds`): `Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
+▸ **loadGreenDetails**(`masa`, `greenIds`): `Promise`\<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 #### Parameters
 
@@ -1067,13 +1071,13 @@ ___
 
 #### Returns
 
-`Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
+`Promise`\<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 ___
 
 ### loadGreens
 
-▸ **loadGreens**(`masa`, `identityIdOrAddress`): `Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
+▸ **loadGreens**(`masa`, `identityIdOrAddress`): `Promise`\<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 #### Parameters
 
@@ -1084,13 +1088,13 @@ ___
 
 #### Returns
 
-`Promise`<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
+`Promise`\<[`GreenDetails`](interfaces/GreenDetails.md)[]\>
 
 ___
 
 ### loadIdentity
 
-▸ **loadIdentity**(`masa`, `address?`): `Promise`<`undefined` \| [`IdentityDetails`](interfaces/IdentityDetails.md)\>
+▸ **loadIdentity**(`masa`, `address?`): `Promise`\<`undefined` \| [`IdentityDetails`](interfaces/IdentityDetails.md)\>
 
 #### Parameters
 
@@ -1101,13 +1105,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`IdentityDetails`](interfaces/IdentityDetails.md)\>
+`Promise`\<`undefined` \| [`IdentityDetails`](interfaces/IdentityDetails.md)\>
 
 ___
 
 ### loadIdentityByAddress
 
-▸ **loadIdentityByAddress**(`masa`, `address?`): `Promise`<{ `address`: `string` ; `identityId?`: `BigNumber`  }\>
+▸ **loadIdentityByAddress**(`masa`, `address?`): `Promise`\<\{ `address`: `string` ; `identityId?`: `BigNumber`  }\>
 
 #### Parameters
 
@@ -1118,7 +1122,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `address`: `string` ; `identityId?`: `BigNumber`  }\>
+`Promise`\<\{ `address`: `string` ; `identityId?`: `BigNumber`  }\>
 
 ___
 
@@ -1140,7 +1144,7 @@ ___
 
 ### loadIdentityDetails
 
-▸ **loadIdentityDetails**(`masa`, `identityIdOrAddress`): `Promise`<[`IdentityDetails`](interfaces/IdentityDetails.md)\>
+▸ **loadIdentityDetails**(`masa`, `identityIdOrAddress`): `Promise`\<[`IdentityDetails`](interfaces/IdentityDetails.md)\>
 
 #### Parameters
 
@@ -1151,13 +1155,13 @@ ___
 
 #### Returns
 
-`Promise`<[`IdentityDetails`](interfaces/IdentityDetails.md)\>
+`Promise`\<[`IdentityDetails`](interfaces/IdentityDetails.md)\>
 
 ___
 
 ### loadLinks
 
-▸ **loadLinks**(`masa`, `contract`, `tokenId`): `Promise`<[`Link`](modules.md#link)[]\>
+▸ **loadLinks**(`masa`, `contract`, `tokenId`): `Promise`\<[`Link`](modules.md#link)[]\>
 
 #### Parameters
 
@@ -1169,13 +1173,13 @@ ___
 
 #### Returns
 
-`Promise`<[`Link`](modules.md#link)[]\>
+`Promise`\<[`Link`](modules.md#link)[]\>
 
 ___
 
 ### loadSoulNameByName
 
-▸ **loadSoulNameByName**(`masa`, `soulName`): `Promise`<`undefined` \| [`SoulNameDetails`](interfaces/SoulNameDetails.md)\>
+▸ **loadSoulNameByName**(`masa`, `soulName`): `Promise`\<`undefined` \| [`SoulNameDetails`](interfaces/SoulNameDetails.md)\>
 
 #### Parameters
 
@@ -1186,13 +1190,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`SoulNameDetails`](interfaces/SoulNameDetails.md)\>
+`Promise`\<`undefined` \| [`SoulNameDetails`](interfaces/SoulNameDetails.md)\>
 
 ___
 
 ### loadSoulNameByTokenId
 
-▸ **loadSoulNameByTokenId**(`masa`, `tokenId`): `Promise`<`undefined` \| [`SoulNameDetails`](interfaces/SoulNameDetails.md)\>
+▸ **loadSoulNameByTokenId**(`masa`, `tokenId`): `Promise`\<`undefined` \| [`SoulNameDetails`](interfaces/SoulNameDetails.md)\>
 
 #### Parameters
 
@@ -1203,13 +1207,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`SoulNameDetails`](interfaces/SoulNameDetails.md)\>
+`Promise`\<`undefined` \| [`SoulNameDetails`](interfaces/SoulNameDetails.md)\>
 
 ___
 
 ### loadSoulNameDetailsByAddress
 
-▸ **loadSoulNameDetailsByAddress**(`masa`, `address`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+▸ **loadSoulNameDetailsByAddress**(`masa`, `address`): `Promise`\<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
@@ -1220,13 +1224,13 @@ ___
 
 #### Returns
 
-`Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+`Promise`\<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 ___
 
 ### loadSoulNames
 
-▸ **loadSoulNames**(`masa`, `identityIdOrAddress`): `Promise`<`string`[]\>
+▸ **loadSoulNames**(`masa`, `identityIdOrAddress`): `Promise`\<`string`[]\>
 
 #### Parameters
 
@@ -1237,13 +1241,13 @@ ___
 
 #### Returns
 
-`Promise`<`string`[]\>
+`Promise`\<`string`[]\>
 
 ___
 
 ### loadSoulNamesByNames
 
-▸ **loadSoulNamesByNames**(`masa`, `soulNames`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+▸ **loadSoulNamesByNames**(`masa`, `soulNames`): `Promise`\<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
@@ -1254,13 +1258,13 @@ ___
 
 #### Returns
 
-`Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+`Promise`\<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 ___
 
 ### login
 
-▸ **login**(`masa`): `Promise`<`undefined` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\>
+▸ **login**(`masa`): `Promise`\<`undefined` \| \{ `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\>
 
 #### Parameters
 
@@ -1270,13 +1274,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\>
+`Promise`\<`undefined` \| \{ `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\>
 
 ___
 
 ### logout
 
-▸ **logout**(`masa`): `Promise`<`undefined` \| { `status`: `string`  }\>
+▸ **logout**(`masa`): `Promise`\<`undefined` \| \{ `status`: `string`  }\>
 
 #### Parameters
 
@@ -1286,13 +1290,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `status`: `string`  }\>
+`Promise`\<`undefined` \| \{ `status`: `string`  }\>
 
 ___
 
 ### mintGreen
 
-▸ **mintGreen**(`masa`, `paymentMethod`, `authorityAddress`, `signatureDate`, `signature`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+▸ **mintGreen**(`masa`, `paymentMethod`, `authorityAddress`, `signatureDate`, `signature`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -1306,7 +1310,7 @@ ___
 
 #### Returns
 
-`Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
@@ -1365,7 +1369,7 @@ ___
 
 ### purchaseIdentity
 
-▸ **purchaseIdentity**(`masa`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+▸ **purchaseIdentity**(`masa`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 Identity only
 
@@ -1377,13 +1381,13 @@ Identity only
 
 #### Returns
 
-`Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
 ### purchaseIdentityWithSoulName
 
-▸ **purchaseIdentityWithSoulName**(`masa`, `soulName`, `soulNameLength`, `duration`, `paymentMethod`, `style?`): `Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
+▸ **purchaseIdentityWithSoulName**(`masa`, `soulName`, `soulNameLength`, `duration`, `paymentMethod`, `style?`): `Promise`\<\{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 Identity with soul name
 
@@ -1400,13 +1404,13 @@ Identity with soul name
 
 #### Returns
 
-`Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
+`Promise`\<\{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](interfaces/CreateSoulNameResult.md)\>
 
 ___
 
 ### queryLink
 
-▸ **queryLink**(`masa`, `contract`, `paymentMethod`, `tokenId`, `readerIdentityId`, `signature`, `signatureDate`, `expirationDate`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+▸ **queryLink**(`masa`, `contract`, `paymentMethod`, `tokenId`, `readerIdentityId`, `signature`, `signatureDate`, `expirationDate`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -1423,13 +1427,13 @@ ___
 
 #### Returns
 
-`Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
 ### queryLinkFromPassport
 
-▸ **queryLinkFromPassport**(`masa`, `paymentMethod`, `contract`, `passport`): `Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+▸ **queryLinkFromPassport**(`masa`, `paymentMethod`, `contract`, `passport`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -1442,7 +1446,7 @@ ___
 
 #### Returns
 
-`Promise`<[`BaseResult`](interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
@@ -1466,7 +1470,7 @@ ___
 
 ### renewSoulName
 
-▸ **renewSoulName**(`masa`, `soulName`, `years`): `Promise`<`boolean`\>
+▸ **renewSoulName**(`masa`, `soulName`, `years`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -1478,13 +1482,13 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### resolveIdentity
 
-▸ **resolveIdentity**(`masa`, `identityId`): `Promise`<`undefined` \| `string`\>
+▸ **resolveIdentity**(`masa`, `identityId`): `Promise`\<`undefined` \| `string`\>
 
 Resolves identity id into address
 
@@ -1497,13 +1501,13 @@ Resolves identity id into address
 
 #### Returns
 
-`Promise`<`undefined` \| `string`\>
+`Promise`\<`undefined` \| `string`\>
 
 ___
 
 ### resolveReverseIdentity
 
-▸ **resolveReverseIdentity**(`masa`, `address`): `Promise`<`undefined` \| `BigNumber`\>
+▸ **resolveReverseIdentity**(`masa`, `address`): `Promise`\<`undefined` \| `BigNumber`\>
 
 #### Parameters
 
@@ -1514,13 +1518,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| `BigNumber`\>
+`Promise`\<`undefined` \| `BigNumber`\>
 
 ___
 
 ### resolveSoulName
 
-▸ **resolveSoulName**(`masa`, `soulName`): `Promise`<`undefined` \| `string`\>
+▸ **resolveSoulName**(`masa`, `soulName`): `Promise`\<`undefined` \| `string`\>
 
 #### Parameters
 
@@ -1531,13 +1535,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| `string`\>
+`Promise`\<`undefined` \| `string`\>
 
 ___
 
 ### sendSoulName
 
-▸ **sendSoulName**(`masa`, `soulName`, `receiver`): `Promise`<`boolean`\>
+▸ **sendSoulName**(`masa`, `soulName`, `receiver`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -1549,13 +1553,13 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### showIdentity
 
-▸ **showIdentity**(`masa`, `address?`): `Promise`<`undefined` \| [`IdentityDetails`](interfaces/IdentityDetails.md)\>
+▸ **showIdentity**(`masa`, `address?`): `Promise`\<`undefined` \| [`IdentityDetails`](interfaces/IdentityDetails.md)\>
 
 #### Parameters
 
@@ -1566,51 +1570,52 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`IdentityDetails`](interfaces/IdentityDetails.md)\>
+`Promise`\<`undefined` \| [`IdentityDetails`](interfaces/IdentityDetails.md)\>
 
 ___
 
 ### signMessage
 
-▸ **signMessage**(`msg`, `wallet`, `doHash?`): `Promise`<`undefined` \| `string`\>
+▸ **signMessage**(`msg`, `signer`, `doHash?`): `Promise`\<`undefined` \| `string`\>
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `msg` | `string` | `undefined` |
-| `wallet` | `Signer` | `undefined` |
+| `signer` | `Signer` | `undefined` |
 | `doHash` | `boolean` | `false` |
 
 #### Returns
 
-`Promise`<`undefined` \| `string`\>
+`Promise`\<`undefined` \| `string`\>
 
 ___
 
 ### signTypedData
 
-▸ **signTypedData**(`contract`, `wallet`, `name`, `types`, `value`): `Promise`<{ `domain`: `TypedDataDomain` ; `signature`: `string`  }\>
+▸ **signTypedData**(`«destructured»`): `Promise`\<\{ `domain`: `TypedDataDomain` ; `signature`: `string`  }\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `contract` | `BaseContract` |
-| `wallet` | `Signer` |
-| `name` | `string` |
-| `types` | `Record`<`string`, `TypedDataField`[]\> |
-| `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |
+| `«destructured»` | `Object` |
+| › `contract` | `BaseContract` \| `EIP712` |
+| › `name?` | `string` |
+| › `signer` | `Signer` |
+| › `types` | `Record`\<`string`, `TypedDataField`[]\> |
+| › `value` | `Record`\<`string`, `string` \| `number` \| `boolean` \| `BigNumber`\> |
 
 #### Returns
 
-`Promise`<{ `domain`: `TypedDataDomain` ; `signature`: `string`  }\>
+`Promise`\<\{ `domain`: `TypedDataDomain` ; `signature`: `string`  }\>
 
 ___
 
 ### tailSoulNames
 
-▸ **tailSoulNames**(`masa`, `limit?`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+▸ **tailSoulNames**(`masa`, `limit?`): `Promise`\<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
@@ -1621,13 +1626,13 @@ ___
 
 #### Returns
 
-`Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+`Promise`\<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 ___
 
 ### tailSoulNamesAndPrint
 
-▸ **tailSoulNamesAndPrint**(`masa`, `limit?`): `Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+▸ **tailSoulNamesAndPrint**(`masa`, `limit?`): `Promise`\<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
@@ -1638,7 +1643,7 @@ ___
 
 #### Returns
 
-`Promise`<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+`Promise`\<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
 
 ___
 
@@ -1684,7 +1689,7 @@ ___
 
 ### verifyByName
 
-▸ **verifyByName**(`masa`, `soulName`): `Promise`<{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\>
+▸ **verifyByName**(`masa`, `soulName`): `Promise`\<\{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\>
 
 #### Parameters
 
@@ -1695,13 +1700,13 @@ ___
 
 #### Returns
 
-`Promise`<{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\>
+`Promise`\<\{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\>
 
 ___
 
 ### verifyGreen
 
-▸ **verifyGreen**(`masa`, `phoneNumber`, `code`): `Promise`<`undefined` \| [`VerifyGreenResult`](interfaces/VerifyGreenResult.md)\>
+▸ **verifyGreen**(`masa`, `phoneNumber`, `code`): `Promise`\<`undefined` \| [`VerifyGreenResult`](interfaces/VerifyGreenResult.md)\>
 
 #### Parameters
 
@@ -1713,13 +1718,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`VerifyGreenResult`](interfaces/VerifyGreenResult.md)\>
+`Promise`\<`undefined` \| [`VerifyGreenResult`](interfaces/VerifyGreenResult.md)\>
 
 ___
 
 ### verifyLink
 
-▸ **verifyLink**(`masa`, `contract`, `tokenId`, `readerIdentityId?`): `Promise`<[`VerifyLinkResult`](modules.md#verifylinkresult)\>
+▸ **verifyLink**(`masa`, `contract`, `tokenId`, `readerIdentityId?`): `Promise`\<[`VerifyLinkResult`](modules.md#verifylinkresult)\>
 
 #### Parameters
 
@@ -1732,7 +1737,7 @@ ___
 
 #### Returns
 
-`Promise`<[`VerifyLinkResult`](modules.md#verifylinkresult)\>
+`Promise`\<[`VerifyLinkResult`](modules.md#verifylinkresult)\>
 
 ___
 

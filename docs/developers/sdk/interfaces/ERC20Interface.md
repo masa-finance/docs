@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / ERC20Interface
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / ERC20Interface
 
 # Interface: ERC20Interface
 
@@ -553,7 +553,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `functionFragment` | ``"allowance"`` |
-| `values` | [`PromiseOrValue`<`string`\>, `PromiseOrValue`<`string`\>] |
+| `values` | [`string`, `string`] |
 
 #### Returns
 
@@ -570,7 +570,7 @@ utils.Interface.encodeFunctionData
 | Name | Type |
 | :------ | :------ |
 | `functionFragment` | ``"approve"`` |
-| `values` | [`PromiseOrValue`<`string`\>, `PromiseOrValue`<`BigNumberish`\>] |
+| `values` | [`string`, `BigNumberish`] |
 
 #### Returns
 
@@ -587,7 +587,7 @@ utils.Interface.encodeFunctionData
 | Name | Type |
 | :------ | :------ |
 | `functionFragment` | ``"balanceOf"`` |
-| `values` | [`PromiseOrValue`<`string`\>] |
+| `values` | [`string`] |
 
 #### Returns
 
@@ -621,7 +621,7 @@ utils.Interface.encodeFunctionData
 | Name | Type |
 | :------ | :------ |
 | `functionFragment` | ``"decreaseAllowance"`` |
-| `values` | [`PromiseOrValue`<`string`\>, `PromiseOrValue`<`BigNumberish`\>] |
+| `values` | [`string`, `BigNumberish`] |
 
 #### Returns
 
@@ -638,7 +638,7 @@ utils.Interface.encodeFunctionData
 | Name | Type |
 | :------ | :------ |
 | `functionFragment` | ``"increaseAllowance"`` |
-| `values` | [`PromiseOrValue`<`string`\>, `PromiseOrValue`<`BigNumberish`\>] |
+| `values` | [`string`, `BigNumberish`] |
 
 #### Returns
 
@@ -706,7 +706,7 @@ utils.Interface.encodeFunctionData
 | Name | Type |
 | :------ | :------ |
 | `functionFragment` | ``"transfer"`` |
-| `values` | [`PromiseOrValue`<`string`\>, `PromiseOrValue`<`BigNumberish`\>] |
+| `values` | [`string`, `BigNumberish`] |
 
 #### Returns
 
@@ -723,7 +723,7 @@ utils.Interface.encodeFunctionData
 | Name | Type |
 | :------ | :------ |
 | `functionFragment` | ``"transferFrom"`` |
-| `values` | [`PromiseOrValue`<`string`\>, `PromiseOrValue`<`string`\>, `PromiseOrValue`<`BigNumberish`\>] |
+| `values` | [`string`, `string`, `BigNumberish`] |
 
 #### Returns
 
@@ -860,7 +860,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `nameOrSignatureOrTopic` | ``"symbol"`` \| ``"allowance"`` \| ``"approve"`` \| ``"balanceOf"`` \| ``"decimals"`` \| ``"decreaseAllowance"`` \| ``"increaseAllowance"`` \| ``"name"`` \| ``"totalSupply"`` \| ``"transfer"`` \| ``"transferFrom"`` |
+| `nameOrSignatureOrTopic` | ``"symbol"`` \| ``"name"`` \| ``"allowance"`` \| ``"approve"`` \| ``"balanceOf"`` \| ``"decimals"`` \| ``"decreaseAllowance"`` \| ``"increaseAllowance"`` \| ``"totalSupply"`` \| ``"transfer"`` \| ``"transferFrom"`` |
 
 #### Returns
 

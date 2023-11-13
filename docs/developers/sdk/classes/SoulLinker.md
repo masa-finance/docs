@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / SoulLinker
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / SoulLinker
 
 # Class: SoulLinker
 
@@ -39,7 +39,7 @@
 
 ### constructor
 
-• **new SoulLinker**(`masa`, `instances`)
+• **new SoulLinker**(`masa`, `instances`): [`SoulLinker`](SoulLinker.md)
 
 #### Parameters
 
@@ -47,6 +47,10 @@
 | :------ | :------ |
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 | `instances` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) |
+
+#### Returns
+
+[`SoulLinker`](SoulLinker.md)
 
 #### Inherited from
 
@@ -76,19 +80,13 @@ ___
 
 ### types
 
-• `Readonly` **types**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `Link` | { `name`: `string` = "readerIdentityId"; `type`: `string` = "uint256" }[] |
+• `Readonly` **types**: `Record`\<`string`, `TypedDataField`[]\>
 
 ## Methods
 
 ### addLink
 
-▸ **addLink**(`tokenAddress`, `paymentMethod`, `readerIdentityId`, `ownerIdentityId`, `tokenId`, `signatureDate`, `expirationDate`, `signature`, `slippage?`): `Promise`<`boolean`\>
+▸ **addLink**(`tokenAddress`, `paymentMethod`, `readerIdentityId`, `ownerIdentityId`, `tokenId`, `signatureDate`, `expirationDate`, `signature`, `slippage?`): `Promise`\<`boolean`\>
 
 Adds a link to the soullinker
 
@@ -108,13 +106,13 @@ Adds a link to the soullinker
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### breakLink
 
-▸ **breakLink**(`contract`, `tokenId`, `readerIdentityId`): `Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+▸ **breakLink**(`contract`, `tokenId`, `readerIdentityId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -126,13 +124,13 @@ ___
 
 #### Returns
 
-`Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
 ### checkOrGiveAllowance
 
-▸ `Private` **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`<`undefined` \| `ContractReceipt`\>
+▸ **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`\<`undefined` \| `ContractReceipt`\>
 
 Checks or gives allowance on ERC20 tokens
 
@@ -147,7 +145,7 @@ Checks or gives allowance on ERC20 tokens
 
 #### Returns
 
-`Promise`<`undefined` \| `ContractReceipt`\>
+`Promise`\<`undefined` \| `ContractReceipt`\>
 
 #### Inherited from
 
@@ -157,7 +155,7 @@ ___
 
 ### createOverrides
 
-▸ `Protected` **createOverrides**(`value?`): `Promise`<`PayableOverrides`\>
+▸ **createOverrides**(`value?`): `Promise`\<`PayableOverrides`\>
 
 #### Parameters
 
@@ -167,7 +165,7 @@ ___
 
 #### Returns
 
-`Promise`<`PayableOverrides`\>
+`Promise`\<`PayableOverrides`\>
 
 #### Inherited from
 
@@ -177,7 +175,7 @@ ___
 
 ### formatPrice
 
-▸ `Protected` **formatPrice**(`paymentAddress`, `price`): `Promise`<`string`\>
+▸ **formatPrice**(`paymentAddress`, `price`): `Promise`\<`string`\>
 
 #### Parameters
 
@@ -188,7 +186,7 @@ ___
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Inherited from
 
@@ -198,11 +196,11 @@ ___
 
 ### getNetworkFeeInformation
 
-▸ `Protected` **getNetworkFeeInformation**(): `Promise`<`undefined` \| `FeeData`\>
+▸ **getNetworkFeeInformation**(): `Promise`\<`undefined` \| `FeeData`\>
 
 #### Returns
 
-`Promise`<`undefined` \| `FeeData`\>
+`Promise`\<`undefined` \| `FeeData`\>
 
 #### Inherited from
 
@@ -212,7 +210,7 @@ ___
 
 ### getPaymentAddress
 
-▸ `Private` **getPaymentAddress**(`paymentMethod`): `string`
+▸ **getPaymentAddress**(`paymentMethod`): `string`
 
 Gets the payment address for a given payment method
 
@@ -234,7 +232,7 @@ ___
 
 ### getPrice
 
-▸ **getPrice**(`tokenAddress`, `paymentMethod`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+▸ **getPrice**(`tokenAddress`, `paymentMethod`, `slippage?`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 Gets price for establishing a link
 
@@ -248,13 +246,13 @@ Gets price for establishing a link
 
 #### Returns
 
-`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+`Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 ___
 
 ### signLink
 
-▸ **signLink**(`readerIdentityId`, `ownerIdentityId`, `tokenAddress`, `tokenId`, `signatureDate?`, `expirationOffset?`): `Promise`<{ `expirationDate`: `number` ; `signature`: `string` ; `signatureDate`: `number`  }\>
+▸ **signLink**(`readerIdentityId`, `ownerIdentityId`, `tokenAddress`, `tokenId`, `signatureDate?`, `expirationOffset?`): `Promise`\<\{ `expirationDate`: `number` ; `signature`: `string` ; `signatureDate`: `number`  }\>
 
 Signs a soul linker link
 
@@ -271,13 +269,13 @@ Signs a soul linker link
 
 #### Returns
 
-`Promise`<{ `expirationDate`: `number` ; `signature`: `string` ; `signatureDate`: `number`  }\>
+`Promise`\<\{ `expirationDate`: `number` ; `signature`: `string` ; `signatureDate`: `number`  }\>
 
 ___
 
 ### verify
 
-▸ `Protected` **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`<`void`\>
+▸ **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`\<`void`\>
 
 verify a signature created during one of the SBT signing flows
 
@@ -288,14 +286,14 @@ verify a signature created during one of the SBT signing flows
 | `errorMessage` | `string` |
 | `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
 | `domain` | `TypedDataDomain` |
-| `types` | `Record`<`string`, `TypedDataField`[]\> |
-| `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |
+| `types` | `Record`\<`string`, `TypedDataField`[]\> |
+| `value` | `Record`\<`string`, `string` \| `number` \| `boolean` \| `BigNumber`\> |
 | `signature` | `string` |
 | `authorityAddress` | `string` |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Inherited from
 
@@ -305,7 +303,7 @@ ___
 
 ### addSlippage
 
-▸ `Static` `Protected` **addSlippage**(`price`, `slippage`): `BigNumber`
+▸ **addSlippage**(`price`, `slippage`): `BigNumber`
 
 adds a percentage to the price as slippage
 

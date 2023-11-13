@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / Masa
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -22,6 +22,8 @@
 - [config](Masa.md#config)
 - [contracts](Masa.md#contracts)
 - [creditScore](Masa.md#creditscore)
+- [dynamic-sbt](Masa.md#dynamic-sbt)
+- [dynamic-sssbt](Masa.md#dynamic-sssbt)
 - [green](Masa.md#green)
 - [identity](Masa.md#identity)
 - [sbt](Masa.md#sbt)
@@ -38,13 +40,17 @@
 
 ### constructor
 
-• **new Masa**(`«destructured»`)
+• **new Masa**(`«destructured»`): [`Masa`](Masa.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | [`MasaArgs`](../interfaces/MasaArgs.md) |
+
+#### Returns
+
+[`Masa`](Masa.md)
 
 ## Properties
 
@@ -118,6 +124,18 @@ ___
 
 ___
 
+### dynamic-sbt
+
+• `Readonly` **dynamic-sbt**: [`MasaDynamicSBTBase`](MasaDynamicSBTBase.md)
+
+___
+
+### dynamic-sssbt
+
+• `Readonly` **dynamic-sssbt**: [`MasaDynamicSSSBT`](MasaDynamicSSSBT.md)
+
+___
+
 ### green
 
 • `Readonly` **green**: [`MasaGreen`](MasaGreen.md)
@@ -186,7 +204,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `version` | () => { `contractsVersion`: `string` ; `sdkVersion`: `string`  } |
+| `version` | () => \{ `contractsVersion`: `string` ; `sdkVersion`: `string`  } |
 
 #### Implementation of
 
@@ -196,7 +214,7 @@ ___
 
 ### create
 
-▸ `Static` **create**(`masaArgs`): `Promise`<[`Masa`](Masa.md)\>
+▸ **create**(`masaArgs`): `Promise`\<[`Masa`](Masa.md)\>
 
 #### Parameters
 
@@ -206,4 +224,4 @@ ___
 
 #### Returns
 
-`Promise`<[`Masa`](Masa.md)\>
+`Promise`\<[`Masa`](Masa.md)\>

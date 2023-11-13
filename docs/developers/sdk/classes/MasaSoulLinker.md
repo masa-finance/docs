@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaSoulLinker
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaSoulLinker
 
 # Class: MasaSoulLinker
 
@@ -33,7 +33,7 @@
 
 ### constructor
 
-• **new MasaSoulLinker**(`masa`, `contract`)
+• **new MasaSoulLinker**(`masa`, `contract`): [`MasaSoulLinker`](MasaSoulLinker.md)
 
 #### Parameters
 
@@ -41,6 +41,10 @@
 | :------ | :------ |
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 | `contract` | `Contract` |
+
+#### Returns
+
+[`MasaSoulLinker`](MasaSoulLinker.md)
 
 #### Overrides
 
@@ -66,7 +70,7 @@ MasaBase.masa
 
 ### break
 
-▸ **break**(`tokenId`, `readerIdentityId`): `Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+▸ **break**(`tokenId`, `readerIdentityId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -77,13 +81,13 @@ MasaBase.masa
 
 #### Returns
 
-`Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
 ### create
 
-▸ **create**(`tokenId`, `readerIdentityId`): `Promise`<[`CreateLinkResult`](../modules.md#createlinkresult)\>
+▸ **create**(`tokenId`, `readerIdentityId`): `Promise`\<[`CreateLinkResult`](../modules.md#createlinkresult)\>
 
 #### Parameters
 
@@ -94,13 +98,13 @@ ___
 
 #### Returns
 
-`Promise`<[`CreateLinkResult`](../modules.md#createlinkresult)\>
+`Promise`\<[`CreateLinkResult`](../modules.md#createlinkresult)\>
 
 ___
 
 ### establish
 
-▸ **establish**(`paymentMethod?`, `passport`): `Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+▸ **establish**(`paymentMethod?`, `passport`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -111,13 +115,13 @@ ___
 
 #### Returns
 
-`Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
 ### list
 
-▸ **list**(`tokenId`): `Promise`<[`ListLinksResult`](../modules.md#listlinksresult)\>
+▸ **list**(`tokenId`): `Promise`\<[`ListLinksResult`](../modules.md#listlinksresult)\>
 
 #### Parameters
 
@@ -127,13 +131,13 @@ ___
 
 #### Returns
 
-`Promise`<[`ListLinksResult`](../modules.md#listlinksresult)\>
+`Promise`\<[`ListLinksResult`](../modules.md#listlinksresult)\>
 
 ___
 
 ### query
 
-▸ **query**(`paymentMethod`, `passport`): `Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+▸ **query**(`paymentMethod`, `passport`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -144,13 +148,13 @@ ___
 
 #### Returns
 
-`Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
 ### verify
 
-▸ **verify**(`tokenId`, `readerIdentityId?`): `Promise`<[`VerifyLinkResult`](../modules.md#verifylinkresult)\>
+▸ **verify**(`tokenId`, `readerIdentityId?`): `Promise`\<[`VerifyLinkResult`](../modules.md#verifylinkresult)\>
 
 #### Parameters
 
@@ -161,4 +165,4 @@ ___
 
 #### Returns
 
-`Promise`<[`VerifyLinkResult`](../modules.md#verifylinkresult)\>
+`Promise`\<[`VerifyLinkResult`](../modules.md#verifylinkresult)\>

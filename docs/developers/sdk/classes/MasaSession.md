@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaSession
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaSession
 
 # Class: MasaSession
 
@@ -31,13 +31,17 @@
 
 ### constructor
 
-• **new MasaSession**(`masa`)
+• **new MasaSession**(`masa`): [`MasaSession`](MasaSession.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+
+#### Returns
+
+[`MasaSession`](MasaSession.md)
 
 #### Inherited from
 
@@ -57,48 +61,48 @@ MasaBase.masa
 
 ### checkLogin
 
-▸ **checkLogin**(): `Promise`<`boolean`\>
+▸ **checkLogin**(): `Promise`\<`boolean`\>
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### getSession
 
-▸ **getSession**(): `Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\>
+▸ **getSession**(): `Promise`\<`undefined` \| [`ISession`](../interfaces/ISession.md)\>
 
 #### Returns
 
-`Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\>
+`Promise`\<`undefined` \| [`ISession`](../interfaces/ISession.md)\>
 
 ___
 
 ### login
 
-▸ **login**(): `Promise`<`undefined` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\>
+▸ **login**(): `Promise`\<`undefined` \| \{ `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\>
 
 #### Returns
 
-`Promise`<`undefined` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\>
+`Promise`\<`undefined` \| \{ `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\>
 
 ___
 
 ### logout
 
-▸ **logout**(): `Promise`<`undefined` \| { `status`: `string`  }\>
+▸ **logout**(): `Promise`\<`undefined` \| \{ `status`: `string`  }\>
 
 #### Returns
 
-`Promise`<`undefined` \| { `status`: `string`  }\>
+`Promise`\<`undefined` \| \{ `status`: `string`  }\>
 
 ___
 
 ### sessionLogout
 
-▸ **sessionLogout**(): `Promise`<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\>
+▸ **sessionLogout**(): `Promise`\<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\>
 
 #### Returns
 
-`Promise`<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\>
+`Promise`\<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\>

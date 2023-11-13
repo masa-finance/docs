@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaGreen
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaGreen
 
 # Class: MasaGreen
 
 ## Hierarchy
 
-- `MasaLinkable`<`SoulboundGreen`\>
+- `MasaLinkable`\<`SoulboundGreen`\>
 
   ↳ **`MasaGreen`**
 
@@ -35,7 +35,7 @@
 
 ### constructor
 
-• **new MasaGreen**(`masa`)
+• **new MasaGreen**(`masa`): [`MasaGreen`](MasaGreen.md)
 
 #### Parameters
 
@@ -43,9 +43,13 @@
 | :------ | :------ |
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 
+#### Returns
+
+[`MasaGreen`](MasaGreen.md)
+
 #### Overrides
 
-MasaLinkable&lt;SoulboundGreen\&gt;.constructor
+MasaLinkable\&lt;SoulboundGreen\&gt;.constructor
 
 ## Properties
 
@@ -81,7 +85,7 @@ MasaLinkable.masa
 
 ### burn
 
-▸ **burn**(`greenId`): `Promise`<`boolean`\>
+▸ **burn**(`greenId`): `Promise`\<`boolean`\>
 
 Burns a green
 
@@ -93,13 +97,13 @@ Burns a green
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### create
 
-▸ **create**(`paymentMethod?`, `phoneNumber`, `code`): `Promise`<[`GreenBaseResult`](../interfaces/GreenBaseResult.md)\>
+▸ **create**(`paymentMethod?`, `phoneNumber`, `code`): `Promise`\<[`GreenBaseResult`](../interfaces/GreenBaseResult.md)\>
 
 Does the verification and mint step in one go
 
@@ -113,13 +117,13 @@ Does the verification and mint step in one go
 
 #### Returns
 
-`Promise`<[`GreenBaseResult`](../interfaces/GreenBaseResult.md)\>
+`Promise`\<[`GreenBaseResult`](../interfaces/GreenBaseResult.md)\>
 
 ___
 
 ### generate
 
-▸ **generate**(`phoneNumber`): `Promise`<[`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\>
+▸ **generate**(`phoneNumber`): `Promise`\<[`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\>
 
 Generates a new verification attempt
 
@@ -131,13 +135,13 @@ Generates a new verification attempt
 
 #### Returns
 
-`Promise`<[`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\>
+`Promise`\<[`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\>
 
 ___
 
 ### list
 
-▸ **list**(`address?`): `Promise`<[`GreenDetails`](../interfaces/GreenDetails.md)[]\>
+▸ **list**(`address?`): `Promise`\<[`GreenDetails`](../interfaces/GreenDetails.md)[]\>
 
 Lits all greens on the current network
 
@@ -149,13 +153,13 @@ Lits all greens on the current network
 
 #### Returns
 
-`Promise`<[`GreenDetails`](../interfaces/GreenDetails.md)[]\>
+`Promise`\<[`GreenDetails`](../interfaces/GreenDetails.md)[]\>
 
 ___
 
 ### load
 
-▸ **load**(`identityIdOrAddress`): `Promise`<[`GreenDetails`](../interfaces/GreenDetails.md)[]\>
+▸ **load**(`identityIdOrAddress`): `Promise`\<[`GreenDetails`](../interfaces/GreenDetails.md)[]\>
 
 Loads all greens for an identity on the current network
 
@@ -167,13 +171,13 @@ Loads all greens for an identity on the current network
 
 #### Returns
 
-`Promise`<[`GreenDetails`](../interfaces/GreenDetails.md)[]\>
+`Promise`\<[`GreenDetails`](../interfaces/GreenDetails.md)[]\>
 
 ___
 
 ### mint
 
-▸ **mint**(`paymentMethod?`, `authorityAddress`, `signatureDate`, `signature`): `Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+▸ **mint**(`paymentMethod?`, `authorityAddress`, `signatureDate`, `signature`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 Mints a green based on the previously made verification result
 
@@ -188,13 +192,13 @@ Mints a green based on the previously made verification result
 
 #### Returns
 
-`Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
 ### verify
 
-▸ **verify**(`phoneNumber`, `code`): `Promise`<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\>
+▸ **verify**(`phoneNumber`, `code`): `Promise`\<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\>
 
 Tries to verify the current verification attempt
 
@@ -207,4 +211,4 @@ Tries to verify the current verification attempt
 
 #### Returns
 
-`Promise`<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\>
+`Promise`\<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\>

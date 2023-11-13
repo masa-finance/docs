@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
@@ -39,13 +39,17 @@
 
 ### constructor
 
-• **new MasaSoulName**(`masa`)
+• **new MasaSoulName**(`masa`): [`MasaSoulName`](MasaSoulName.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+
+#### Returns
+
+[`MasaSoulName`](MasaSoulName.md)
 
 #### Inherited from
 
@@ -65,7 +69,7 @@ MasaBase.masa
 
 ### burn
 
-▸ **burn**(`soulName`): `Promise`<`boolean`\>
+▸ **burn**(`soulName`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -75,13 +79,13 @@ MasaBase.masa
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### create
 
-▸ **create**(`paymentMethod?`, `soulName`, `duration`, `receiver?`, `style?`): `Promise`<[`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
+▸ **create**(`paymentMethod?`, `soulName`, `duration`, `receiver?`, `style?`): `Promise`\<[`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
 
 #### Parameters
 
@@ -95,7 +99,7 @@ ___
 
 #### Returns
 
-`Promise`<[`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
+`Promise`\<[`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
 
 ___
 
@@ -111,7 +115,7 @@ ___
 
 ### list
 
-▸ **list**(`address?`): `Promise`<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
+▸ **list**(`address?`): `Promise`\<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
@@ -121,13 +125,13 @@ ___
 
 #### Returns
 
-`Promise`<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
+`Promise`\<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
 
 ___
 
 ### loadSoulNameByName
 
-▸ **loadSoulNameByName**(`soulName`): `Promise`<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
+▸ **loadSoulNameByName**(`soulName`): `Promise`\<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
 
 #### Parameters
 
@@ -137,13 +141,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
+`Promise`\<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
 
 ___
 
 ### loadSoulNameByTokenId
 
-▸ **loadSoulNameByTokenId**(`tokenId`): `Promise`<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
+▸ **loadSoulNameByTokenId**(`tokenId`): `Promise`\<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
 
 #### Parameters
 
@@ -153,13 +157,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
+`Promise`\<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
 
 ___
 
 ### loadSoulNames
 
-▸ **loadSoulNames**(`identityIdOrAddress`): `Promise`<`string`[]\>
+▸ **loadSoulNames**(`identityIdOrAddress`): `Promise`\<`string`[]\>
 
 #### Parameters
 
@@ -169,13 +173,13 @@ ___
 
 #### Returns
 
-`Promise`<`string`[]\>
+`Promise`\<`string`[]\>
 
 ___
 
 ### renew
 
-▸ **renew**(`soulName`, `years`): `Promise`<`boolean`\>
+▸ **renew**(`soulName`, `years`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -186,13 +190,13 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### resolve
 
-▸ **resolve**(`soulName`): `Promise`<`undefined` \| `string`\>
+▸ **resolve**(`soulName`): `Promise`\<`undefined` \| `string`\>
 
 #### Parameters
 
@@ -202,13 +206,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| `string`\>
+`Promise`\<`undefined` \| `string`\>
 
 ___
 
 ### send
 
-▸ **send**(`soulName`, `receiver`): `Promise`<`boolean`\>
+▸ **send**(`soulName`, `receiver`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -219,13 +223,13 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### tail
 
-▸ **tail**(`limit?`): `Promise`<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
+▸ **tail**(`limit?`): `Promise`\<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
@@ -235,7 +239,7 @@ ___
 
 #### Returns
 
-`Promise`<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
+`Promise`\<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
 
 ___
 
@@ -263,7 +267,7 @@ ___
 
 ### verify
 
-▸ **verify**(`soulName`): `Promise`<{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\>
+▸ **verify**(`soulName`): `Promise`\<\{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\>
 
 #### Parameters
 
@@ -273,4 +277,4 @@ ___
 
 #### Returns
 
-`Promise`<{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\>
+`Promise`\<\{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\>

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / SoulName
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / SoulName
 
 # Class: SoulName
 
@@ -42,7 +42,7 @@
 
 ### constructor
 
-• **new SoulName**(`masa`, `instances`)
+• **new SoulName**(`masa`, `instances`): [`SoulName`](SoulName.md)
 
 #### Parameters
 
@@ -50,6 +50,10 @@
 | :------ | :------ |
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 | `instances` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) |
+
+#### Returns
+
+[`SoulName`](SoulName.md)
 
 #### Inherited from
 
@@ -79,19 +83,13 @@ ___
 
 ### types
 
-• `Readonly` **types**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `MintSoulName` | { `name`: `string` = "to"; `type`: `string` = "address" }[] |
+• `Readonly` **types**: `Record`\<`string`, `TypedDataField`[]\>
 
 ## Methods
 
 ### burn
 
-▸ **burn**(`soulName`): `Promise`<`boolean`\>
+▸ **burn**(`soulName`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -101,13 +99,13 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### checkOrGiveAllowance
 
-▸ `Private` **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`<`undefined` \| `ContractReceipt`\>
+▸ **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`\<`undefined` \| `ContractReceipt`\>
 
 Checks or gives allowance on ERC20 tokens
 
@@ -122,7 +120,7 @@ Checks or gives allowance on ERC20 tokens
 
 #### Returns
 
-`Promise`<`undefined` \| `ContractReceipt`\>
+`Promise`\<`undefined` \| `ContractReceipt`\>
 
 #### Inherited from
 
@@ -132,7 +130,7 @@ ___
 
 ### createOverrides
 
-▸ `Protected` **createOverrides**(`value?`): `Promise`<`PayableOverrides`\>
+▸ **createOverrides**(`value?`): `Promise`\<`PayableOverrides`\>
 
 #### Parameters
 
@@ -142,7 +140,7 @@ ___
 
 #### Returns
 
-`Promise`<`PayableOverrides`\>
+`Promise`\<`PayableOverrides`\>
 
 #### Inherited from
 
@@ -152,7 +150,7 @@ ___
 
 ### formatPrice
 
-▸ `Protected` **formatPrice**(`paymentAddress`, `price`): `Promise`<`string`\>
+▸ **formatPrice**(`paymentAddress`, `price`): `Promise`\<`string`\>
 
 #### Parameters
 
@@ -163,7 +161,7 @@ ___
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Inherited from
 
@@ -173,11 +171,11 @@ ___
 
 ### getNetworkFeeInformation
 
-▸ `Protected` **getNetworkFeeInformation**(): `Promise`<`undefined` \| `FeeData`\>
+▸ **getNetworkFeeInformation**(): `Promise`\<`undefined` \| `FeeData`\>
 
 #### Returns
 
-`Promise`<`undefined` \| `FeeData`\>
+`Promise`\<`undefined` \| `FeeData`\>
 
 #### Inherited from
 
@@ -187,7 +185,7 @@ ___
 
 ### getPaymentAddress
 
-▸ `Private` **getPaymentAddress**(`paymentMethod`): `string`
+▸ **getPaymentAddress**(`paymentMethod`): `string`
 
 Gets the payment address for a given payment method
 
@@ -209,7 +207,7 @@ ___
 
 ### getPrice
 
-▸ **getPrice**(`paymentMethod`, `nameLength`, `duration?`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+▸ **getPrice**(`paymentMethod`, `nameLength`, `duration?`, `slippage?`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 Get price for minting a soul name
 
@@ -224,13 +222,13 @@ Get price for minting a soul name
 
 #### Returns
 
-`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+`Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 ___
 
 ### getSoulnameData
 
-▸ **getSoulnameData**(`soulName`): `Promise`<{ `exists`: `boolean` ; `tokenId`: `BigNumber`  }\>
+▸ **getSoulnameData**(`soulName`): `Promise`\<\{ `exists`: `boolean` ; `tokenId`: `BigNumber`  }\>
 
 Returns detailed information for a soul name
 
@@ -242,13 +240,13 @@ Returns detailed information for a soul name
 
 #### Returns
 
-`Promise`<{ `exists`: `boolean` ; `tokenId`: `BigNumber`  }\>
+`Promise`\<\{ `exists`: `boolean` ; `tokenId`: `BigNumber`  }\>
 
 ___
 
 ### isAvailable
 
-▸ **isAvailable**(`soulName`): `Promise`<`boolean`\>
+▸ **isAvailable**(`soulName`): `Promise`\<`boolean`\>
 
 Check if a soul name is available
 
@@ -260,13 +258,13 @@ Check if a soul name is available
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### purchase
 
-▸ **purchase**(`paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`, `receiver?`): `Promise`<`ContractTransaction` & { `price`: `BigNumber`  }\>
+▸ **purchase**(`paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`, `receiver?`): `Promise`\<`ContractTransaction`\>
 
 purchase only name
 
@@ -285,13 +283,13 @@ purchase only name
 
 #### Returns
 
-`Promise`<`ContractTransaction` & { `price`: `BigNumber`  }\>
+`Promise`\<`ContractTransaction`\>
 
 ___
 
 ### sign
 
-▸ **sign**(`soulName`, `soulNameLength`, `duration`, `metadataUrl`, `receiver`): `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>
+▸ **sign**(`soulName`, `soulNameLength`, `duration`, `metadataUrl`, `receiver`): `Promise`\<`undefined` \| \{ `authorityAddress`: `string` ; `signature`: `string`  }\>
 
 signs a soul name
 
@@ -307,13 +305,13 @@ signs a soul name
 
 #### Returns
 
-`Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string`  }\>
+`Promise`\<`undefined` \| \{ `authorityAddress`: `string` ; `signature`: `string`  }\>
 
 ___
 
 ### transfer
 
-▸ **transfer**(`soulName`, `receiver`): `Promise`<`boolean`\>
+▸ **transfer**(`soulName`, `receiver`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -324,13 +322,13 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### verify
 
-▸ `Protected` **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`<`void`\>
+▸ **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`\<`void`\>
 
 verify a signature created during one of the SBT signing flows
 
@@ -341,14 +339,14 @@ verify a signature created during one of the SBT signing flows
 | `errorMessage` | `string` |
 | `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
 | `domain` | `TypedDataDomain` |
-| `types` | `Record`<`string`, `TypedDataField`[]\> |
-| `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |
+| `types` | `Record`\<`string`, `TypedDataField`[]\> |
+| `value` | `Record`\<`string`, `string` \| `number` \| `boolean` \| `BigNumber`\> |
 | `signature` | `string` |
 | `authorityAddress` | `string` |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Inherited from
 
@@ -358,7 +356,7 @@ ___
 
 ### addSlippage
 
-▸ `Static` `Protected` **addSlippage**(`price`, `slippage`): `BigNumber`
+▸ **addSlippage**(`price`, `slippage`): `BigNumber`
 
 adds a percentage to the price as slippage
 

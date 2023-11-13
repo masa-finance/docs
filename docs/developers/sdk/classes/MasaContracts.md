@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -19,6 +19,8 @@
 
 - [asbt](MasaContracts.md#asbt)
 - [creditScore](MasaContracts.md#creditscore)
+- [dynamic-sbt](MasaContracts.md#dynamic-sbt)
+- [dynamic-sssbt](MasaContracts.md#dynamic-sssbt)
 - [green](MasaContracts.md#green)
 - [identity](MasaContracts.md#identity)
 - [instances](MasaContracts.md#instances)
@@ -36,15 +38,19 @@
 
 ### constructor
 
-• **new MasaContracts**(`«destructured»`)
+• **new MasaContracts**(`«destructured»`): [`MasaContracts`](MasaContracts.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `contractOverrides?` | `Partial`<[`IIdentityContracts`](../interfaces/IIdentityContracts.md)\> |
+| › `contractOverrides?` | `Partial`\<[`IIdentityContracts`](../interfaces/IIdentityContracts.md)\> |
 | › `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+
+#### Returns
+
+[`MasaContracts`](MasaContracts.md)
 
 #### Overrides
 
@@ -63,6 +69,18 @@ ___
 • **creditScore**: [`CreditScore`](CreditScore.md)
 
 Credit Score
+
+___
+
+### dynamic-sbt
+
+• **dynamic-sbt**: `DynamicSBTContract`
+
+___
+
+### dynamic-sssbt
+
+• **dynamic-sssbt**: `DynamicSSSBTContract`
 
 ___
 

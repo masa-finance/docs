@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaArgs
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaArgs
 
 # Interface: MasaArgs
 
@@ -12,6 +12,7 @@
 - [contractOverrides](MasaArgs.md#contractoverrides)
 - [cookie](MasaArgs.md#cookie)
 - [environment](MasaArgs.md#environment)
+- [force](MasaArgs.md#force)
 - [networkName](MasaArgs.md#networkname)
 - [signer](MasaArgs.md#signer)
 - [verbose](MasaArgs.md#verbose)
@@ -32,7 +33,7 @@ ___
 
 ### contractOverrides
 
-• `Optional` `Readonly` **contractOverrides**: `Partial`<[`IIdentityContracts`](IIdentityContracts.md)\>
+• `Optional` `Readonly` **contractOverrides**: `Partial`\<[`IIdentityContracts`](IIdentityContracts.md)\>
 
 ___
 
@@ -45,6 +46,12 @@ ___
 ### environment
 
 • `Optional` `Readonly` **environment**: [`EnvironmentName`](../modules.md#environmentname)
+
+___
+
+### force
+
+• `Optional` `Readonly` **force**: `boolean`
 
 ___
 

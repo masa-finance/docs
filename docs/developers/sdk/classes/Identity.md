@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / Identity
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / Identity
 
 # Class: Identity
 
@@ -39,7 +39,7 @@
 
 ### constructor
 
-• **new Identity**(`masa`, `instances`)
+• **new Identity**(`masa`, `instances`): [`Identity`](Identity.md)
 
 #### Parameters
 
@@ -47,6 +47,10 @@
 | :------ | :------ |
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 | `instances` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) |
+
+#### Returns
+
+[`Identity`](Identity.md)
 
 #### Inherited from
 
@@ -76,7 +80,7 @@ MasaSBTModuleBase.masa
 
 ### burn
 
-▸ **burn**(`identityId`): `Promise`<`boolean`\>
+▸ **burn**(`identityId`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -86,13 +90,13 @@ MasaSBTModuleBase.masa
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### checkOrGiveAllowance
 
-▸ `Private` **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`<`undefined` \| `ContractReceipt`\>
+▸ **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`\<`undefined` \| `ContractReceipt`\>
 
 Checks or gives allowance on ERC20 tokens
 
@@ -107,7 +111,7 @@ Checks or gives allowance on ERC20 tokens
 
 #### Returns
 
-`Promise`<`undefined` \| `ContractReceipt`\>
+`Promise`\<`undefined` \| `ContractReceipt`\>
 
 #### Inherited from
 
@@ -117,7 +121,7 @@ ___
 
 ### createOverrides
 
-▸ `Protected` **createOverrides**(`value?`): `Promise`<`PayableOverrides`\>
+▸ **createOverrides**(`value?`): `Promise`\<`PayableOverrides`\>
 
 #### Parameters
 
@@ -127,7 +131,7 @@ ___
 
 #### Returns
 
-`Promise`<`PayableOverrides`\>
+`Promise`\<`PayableOverrides`\>
 
 #### Inherited from
 
@@ -137,7 +141,7 @@ ___
 
 ### formatPrice
 
-▸ `Protected` **formatPrice**(`paymentAddress`, `price`): `Promise`<`string`\>
+▸ **formatPrice**(`paymentAddress`, `price`): `Promise`\<`string`\>
 
 #### Parameters
 
@@ -148,7 +152,7 @@ ___
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Inherited from
 
@@ -158,7 +162,7 @@ ___
 
 ### getMintPrice
 
-▸ `Protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+▸ **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Parameters
 
@@ -170,7 +174,7 @@ ___
 
 #### Returns
 
-`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+`Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Inherited from
 
@@ -180,11 +184,11 @@ ___
 
 ### getNetworkFeeInformation
 
-▸ `Protected` **getNetworkFeeInformation**(): `Promise`<`undefined` \| `FeeData`\>
+▸ **getNetworkFeeInformation**(): `Promise`\<`undefined` \| `FeeData`\>
 
 #### Returns
 
-`Promise`<`undefined` \| `FeeData`\>
+`Promise`\<`undefined` \| `FeeData`\>
 
 #### Inherited from
 
@@ -194,7 +198,7 @@ ___
 
 ### getPaymentAddress
 
-▸ `Private` **getPaymentAddress**(`paymentMethod`): `string`
+▸ **getPaymentAddress**(`paymentMethod`): `string`
 
 Gets the payment address for a given payment method
 
@@ -216,7 +220,7 @@ ___
 
 ### loadSBTContract
 
-▸ `Protected` **loadSBTContract**<`Contract`\>(`address`, `factory`): `Promise`<`Contract`\>
+▸ **loadSBTContract**\<`Contract`\>(`address`, `factory`): `Promise`\<`Contract`\>
 
 #### Type parameters
 
@@ -233,7 +237,7 @@ ___
 
 #### Returns
 
-`Promise`<`Contract`\>
+`Promise`\<`Contract`\>
 
 #### Inherited from
 
@@ -243,19 +247,19 @@ ___
 
 ### purchase
 
-▸ **purchase**(): `Promise`<`ContractTransaction`\>
+▸ **purchase**(): `Promise`\<`ContractTransaction`\>
 
 purchase only identity
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
+`Promise`\<`ContractTransaction`\>
 
 ___
 
 ### purchaseIdentityAndName
 
-▸ **purchaseIdentityAndName**(`paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`): `Promise`<`ContractTransaction`\>
+▸ **purchaseIdentityAndName**(`paymentMethod`, `name`, `nameLength`, `duration?`, `metadataURL`, `authorityAddress`, `signature`): `Promise`\<`ContractTransaction`\>
 
 purchase identity with name
 
@@ -273,13 +277,13 @@ purchase identity with name
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
+`Promise`\<`ContractTransaction`\>
 
 ___
 
 ### verify
 
-▸ `Protected` **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`<`void`\>
+▸ **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`\<`void`\>
 
 verify a signature created during one of the SBT signing flows
 
@@ -290,14 +294,14 @@ verify a signature created during one of the SBT signing flows
 | `errorMessage` | `string` |
 | `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
 | `domain` | `TypedDataDomain` |
-| `types` | `Record`<`string`, `TypedDataField`[]\> |
-| `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |
+| `types` | `Record`\<`string`, `TypedDataField`[]\> |
+| `value` | `Record`\<`string`, `string` \| `number` \| `boolean` \| `BigNumber`\> |
 | `signature` | `string` |
 | `authorityAddress` | `string` |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Inherited from
 
@@ -307,7 +311,7 @@ ___
 
 ### addSlippage
 
-▸ `Static` `Protected` **addSlippage**(`price`, `slippage`): `BigNumber`
+▸ **addSlippage**(`price`, `slippage`): `BigNumber`
 
 adds a percentage to the price as slippage
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / ContractFactory
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / ContractFactory
 
 # Class: ContractFactory
 
@@ -17,17 +17,21 @@
 
 ### constructor
 
-• **new ContractFactory**()
+• **new ContractFactory**(): [`ContractFactory`](ContractFactory.md)
+
+#### Returns
+
+[`ContractFactory`](ContractFactory.md)
 
 ## Properties
 
 ### connect
 
-▪ `Static` **connect**: <Contract\>(`address`: `string`, `signerOrProvider`: `Signer`) => `Contract`
+▪ `Static` **connect**: \<Contract\>(`address`: `string`, `signerOrProvider`: `Signer`) => `Contract`
 
 #### Type declaration
 
-▸ <`Contract`\>(`address`, `signerOrProvider`): `Contract`
+▸ \<`Contract`\>(`address`, `signerOrProvider`): `Contract`
 
 ##### Type parameters
 

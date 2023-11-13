@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaClient
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -40,7 +40,7 @@
 
 ### constructor
 
-• **new MasaClient**(`«destructured»`)
+• **new MasaClient**(`«destructured»`): [`MasaClient`](MasaClient.md)
 
 #### Parameters
 
@@ -50,6 +50,10 @@
 | › `apiUrl` | `string` |
 | › `cookie?` | `string` |
 | › `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+
+#### Returns
+
+[`MasaClient`](MasaClient.md)
 
 #### Overrides
 
@@ -77,8 +81,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `generate` | () => `Promise`<`undefined` \| [`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\> |
-| `update` | (`transactionHash`: `string`) => `Promise`<`undefined` \| [`UpdateCreditScoreResult`](../interfaces/UpdateCreditScoreResult.md)\> |
+| `generate` | () => `Promise`\<`undefined` \| [`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\> |
+| `update` | (`transactionHash`: `string`) => `Promise`\<`undefined` \| [`UpdateCreditScoreResult`](../interfaces/UpdateCreditScoreResult.md)\> |
 
 ___
 
@@ -90,8 +94,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `generate` | (`phoneNumber`: `string`) => `Promise`<[`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\> |
-| `verify` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\> |
+| `generate` | (`phoneNumber`: `string`) => `Promise`\<[`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\> |
+| `verify` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`\<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\> |
 
 ___
 
@@ -113,7 +117,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`uri`: `string`, `additionalHeaders?`: `Record`<`string`, `string`\>) => `Promise`<`undefined` \| [`IIdentity`](../interfaces/IIdentity.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IGreen`](../interfaces/IGreen.md)\> |
+| `get` | (`uri`: `string`, `additionalHeaders?`: `Record`\<`string`, `string`\>) => `Promise`\<`undefined` \| [`IIdentity`](../interfaces/IIdentity.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IGreen`](../interfaces/IGreen.md)\> |
 
 ___
 
@@ -125,10 +129,10 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `check` | () => `Promise`<`undefined` \| [`ISession`](../interfaces/ISession.md)\> |
-| `checkSignature` | (`address`: `string`, `signature`: `string`, `cookie?`: `string`) => `Promise`<`undefined` \| [`SessionUser`](../interfaces/SessionUser.md)\> |
-| `getChallenge` | () => `Promise`<`undefined` \| [`ChallengeResultWithCookie`](../interfaces/ChallengeResultWithCookie.md)\> |
-| `logout` | () => `Promise`<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\> |
+| `check` | () => `Promise`\<`undefined` \| [`ISession`](../interfaces/ISession.md)\> |
+| `checkSignature` | (`address`: `string`, `signature`: `string`, `cookie?`: `string`) => `Promise`\<`undefined` \| [`SessionUser`](../interfaces/SessionUser.md)\> |
+| `getChallenge` | () => `Promise`\<`undefined` \| [`ChallengeResultWithCookie`](../interfaces/ChallengeResultWithCookie.md)\> |
+| `logout` | () => `Promise`\<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\> |
 
 ___
 
@@ -140,7 +144,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`, `style?`: `string`) => `Promise`<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md) \| [`SoulNameResultBase`](../interfaces/SoulNameResultBase.md)\> |
+| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`, `style?`: `string`) => `Promise`\<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md) \| [`SoulNameResultBase`](../interfaces/SoulNameResultBase.md)\> |
 
 ## Accessors
 
@@ -156,7 +160,7 @@ ___
 
 ### get
 
-▸ **get**<`Result`\>(`endpoint`, `silent?`): `Promise`<`undefined` \| `Result`\>
+▸ **get**\<`Result`\>(`endpoint`, `silent?`): `Promise`\<`undefined` \| `Result`\>
 
 #### Type parameters
 
@@ -173,13 +177,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| `Result`\>
+`Promise`\<`undefined` \| `Result`\>
 
 ___
 
 ### patch
 
-▸ **patch**<`Payload`, `Result`\>(`endpoint`, `data`, `silent?`): `Promise`<`undefined` \| `Result`\>
+▸ **patch**\<`Payload`, `Result`\>(`endpoint`, `data`, `silent?`): `Promise`\<`undefined` \| `Result`\>
 
 #### Type parameters
 
@@ -198,13 +202,13 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| `Result`\>
+`Promise`\<`undefined` \| `Result`\>
 
 ___
 
 ### post
 
-▸ **post**<`Payload`, `Result`\>(`endpoint`, `data`, `silent?`): `Promise`<`undefined` \| `Result`\>
+▸ **post**\<`Payload`, `Result`\>(`endpoint`, `data`, `silent?`): `Promise`\<`undefined` \| `Result`\>
 
 #### Type parameters
 
@@ -223,4 +227,4 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| `Result`\>
+`Promise`\<`undefined` \| `Result`\>

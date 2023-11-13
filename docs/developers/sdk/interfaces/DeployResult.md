@@ -1,7 +1,7 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / DeployResult
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / DeployResult
 
-# Interface: DeployResult<Tuple\>
+# Interface: DeployResult\<Tuple\>
 
 ## Type parameters
 

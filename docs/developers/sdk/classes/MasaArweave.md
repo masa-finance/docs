@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaArweave
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaArweave
 
 # Class: MasaArweave
 
@@ -47,7 +47,7 @@
 
 ### constructor
 
-• **new MasaArweave**(`config`, `masaConfig`)
+• **new MasaArweave**(`config`, `masaConfig`): [`MasaArweave`](MasaArweave.md)
 
 #### Parameters
 
@@ -55,6 +55,10 @@
 | :------ | :------ |
 | `config` | `ApiConfig` |
 | `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) |
+
+#### Returns
+
+[`MasaArweave`](MasaArweave.md)
 
 #### Overrides
 
@@ -226,7 +230,7 @@ Arweave.utils
 
 ### arql
 
-▸ **arql**(`query`): `Promise`<`string`[]\>
+▸ **arql**(`query`): `Promise`\<`string`[]\>
 
 #### Parameters
 
@@ -236,7 +240,7 @@ Arweave.utils
 
 #### Returns
 
-`Promise`<`string`[]\>
+`Promise`\<`string`[]\>
 
 #### Inherited from
 
@@ -246,19 +250,19 @@ ___
 
 ### createSiloTransaction
 
-▸ **createSiloTransaction**(`attributes`, `jwk`, `siloUri`): `Promise`<`default`\>
+▸ **createSiloTransaction**(`attributes`, `jwk`, `siloUri`): `Promise`\<`default`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `attributes` | `Partial`<`CreateTransactionInterface`\> |
+| `attributes` | `Partial`\<`CreateTransactionInterface`\> |
 | `jwk` | `JWKInterface` |
 | `siloUri` | `string` |
 
 #### Returns
 
-`Promise`<`default`\>
+`Promise`\<`default`\>
 
 #### Inherited from
 
@@ -268,18 +272,18 @@ ___
 
 ### createTransaction
 
-▸ **createTransaction**(`attributes`, `jwk?`): `Promise`<`default`\>
+▸ **createTransaction**(`attributes`, `jwk?`): `Promise`\<`default`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `attributes` | `Partial`<`CreateTransactionInterface`\> |
+| `attributes` | `Partial`\<`CreateTransactionInterface`\> |
 | `jwk?` | `JWKInterface` \| ``"use_wallet"`` |
 
 #### Returns
 
-`Promise`<`default`\>
+`Promise`\<`default`\>
 
 #### Inherited from
 
@@ -303,7 +307,7 @@ ___
 
 ### loadTransactionData
 
-▸ **loadTransactionData**(`txId`, `isString?`): `Promise`<`undefined` \| `object` \| `Uint8Array`\>
+▸ **loadTransactionData**(`txId`, `isString?`): `Promise`\<`undefined` \| `object` \| `Uint8Array`\>
 
 #### Parameters
 
@@ -314,4 +318,4 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| `object` \| `Uint8Array`\>
+`Promise`\<`undefined` \| `object` \| `Uint8Array`\>

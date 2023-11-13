@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaAccount
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaAccount
 
 # Class: MasaAccount
 
@@ -27,13 +27,17 @@
 
 ### constructor
 
-• **new MasaAccount**(`masa`)
+• **new MasaAccount**(`masa`): [`MasaAccount`](MasaAccount.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+
+#### Returns
+
+[`MasaAccount`](MasaAccount.md)
 
 #### Inherited from
 
@@ -53,7 +57,7 @@ MasaBase.masa
 
 ### getBalances
 
-▸ **getBalances**(`address?`): `Promise`<`Partial`<{ `BNB`: `undefined` \| `number` ; `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `MATIC`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
+▸ **getBalances**(`address?`): `Promise`\<`Partial`\<\{ `BNB`: `undefined` \| `number` ; `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `MATIC`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
 
 #### Parameters
 
@@ -63,4 +67,4 @@ MasaBase.masa
 
 #### Returns
 
-`Promise`<`Partial`<{ `BNB`: `undefined` \| `number` ; `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `MATIC`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
+`Promise`\<`Partial`\<\{ `BNB`: `undefined` \| `number` ; `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `MATIC`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / CreditScore
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / CreditScore
 
 # Class: CreditScore
 
@@ -41,7 +41,7 @@
 
 ### constructor
 
-• **new CreditScore**(`masa`, `instances`)
+• **new CreditScore**(`masa`, `instances`): [`CreditScore`](CreditScore.md)
 
 #### Parameters
 
@@ -49,6 +49,10 @@
 | :------ | :------ |
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 | `instances` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) |
+
+#### Returns
+
+[`CreditScore`](CreditScore.md)
 
 #### Inherited from
 
@@ -78,19 +82,13 @@ ___
 
 ### types
 
-• `Readonly` **types**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `MintCreditScore` | { `name`: `string` = "identityId"; `type`: `string` = "uint256" }[] |
+• `Readonly` **types**: `Record`\<`string`, `TypedDataField`[]\>
 
 ## Methods
 
 ### burn
 
-▸ **burn**(`creditScoreId`): `Promise`<`boolean`\>
+▸ **burn**(`creditScoreId`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -100,13 +98,13 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### checkOrGiveAllowance
 
-▸ `Private` **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`<`undefined` \| `ContractReceipt`\>
+▸ **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`\<`undefined` \| `ContractReceipt`\>
 
 Checks or gives allowance on ERC20 tokens
 
@@ -121,7 +119,7 @@ Checks or gives allowance on ERC20 tokens
 
 #### Returns
 
-`Promise`<`undefined` \| `ContractReceipt`\>
+`Promise`\<`undefined` \| `ContractReceipt`\>
 
 #### Inherited from
 
@@ -131,7 +129,7 @@ ___
 
 ### createOverrides
 
-▸ `Protected` **createOverrides**(`value?`): `Promise`<`PayableOverrides`\>
+▸ **createOverrides**(`value?`): `Promise`\<`PayableOverrides`\>
 
 #### Parameters
 
@@ -141,7 +139,7 @@ ___
 
 #### Returns
 
-`Promise`<`PayableOverrides`\>
+`Promise`\<`PayableOverrides`\>
 
 #### Inherited from
 
@@ -151,7 +149,7 @@ ___
 
 ### formatPrice
 
-▸ `Protected` **formatPrice**(`paymentAddress`, `price`): `Promise`<`string`\>
+▸ **formatPrice**(`paymentAddress`, `price`): `Promise`\<`string`\>
 
 #### Parameters
 
@@ -162,7 +160,7 @@ ___
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Inherited from
 
@@ -172,7 +170,7 @@ ___
 
 ### getMintPrice
 
-▸ `Protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+▸ **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Parameters
 
@@ -184,7 +182,7 @@ ___
 
 #### Returns
 
-`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+`Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Inherited from
 
@@ -194,11 +192,11 @@ ___
 
 ### getNetworkFeeInformation
 
-▸ `Protected` **getNetworkFeeInformation**(): `Promise`<`undefined` \| `FeeData`\>
+▸ **getNetworkFeeInformation**(): `Promise`\<`undefined` \| `FeeData`\>
 
 #### Returns
 
-`Promise`<`undefined` \| `FeeData`\>
+`Promise`\<`undefined` \| `FeeData`\>
 
 #### Inherited from
 
@@ -208,7 +206,7 @@ ___
 
 ### getPaymentAddress
 
-▸ `Private` **getPaymentAddress**(`paymentMethod`): `string`
+▸ **getPaymentAddress**(`paymentMethod`): `string`
 
 Gets the payment address for a given payment method
 
@@ -230,7 +228,7 @@ ___
 
 ### getPrice
 
-▸ **getPrice**(`paymentMethod`, `slippage?`): `Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+▸ **getPrice**(`paymentMethod`, `slippage?`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 gets the price for a credit score
 
@@ -243,13 +241,13 @@ gets the price for a credit score
 
 #### Returns
 
-`Promise`<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+`Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 ___
 
 ### loadSBTContract
 
-▸ `Protected` **loadSBTContract**<`Contract`\>(`address`, `factory`): `Promise`<`Contract`\>
+▸ **loadSBTContract**\<`Contract`\>(`address`, `factory`): `Promise`\<`Contract`\>
 
 #### Type parameters
 
@@ -266,7 +264,7 @@ ___
 
 #### Returns
 
-`Promise`<`Contract`\>
+`Promise`\<`Contract`\>
 
 #### Inherited from
 
@@ -276,7 +274,7 @@ ___
 
 ### mint
 
-▸ **mint**(`paymentMethod`, `identityId`, `authorityAddress`, `signatureDate`, `signature`, `slippage?`): `Promise`<`ContractTransaction`\>
+▸ **mint**(`paymentMethod`, `identityId`, `authorityAddress`, `signatureDate`, `signature`, `slippage?`): `Promise`\<`ContractTransaction`\>
 
 purchase credit score
 
@@ -293,13 +291,13 @@ purchase credit score
 
 #### Returns
 
-`Promise`<`ContractTransaction`\>
+`Promise`\<`ContractTransaction`\>
 
 ___
 
 ### sign
 
-▸ **sign**(`identityId`): `Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
+▸ **sign**(`identityId`): `Promise`\<`undefined` \| \{ `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
 
 Signs a credit score
 
@@ -311,13 +309,13 @@ Signs a credit score
 
 #### Returns
 
-`Promise`<`undefined` \| { `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
+`Promise`\<`undefined` \| \{ `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
 
 ___
 
 ### verify
 
-▸ `Protected` **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`<`void`\>
+▸ **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`\<`void`\>
 
 verify a signature created during one of the SBT signing flows
 
@@ -328,14 +326,14 @@ verify a signature created during one of the SBT signing flows
 | `errorMessage` | `string` |
 | `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
 | `domain` | `TypedDataDomain` |
-| `types` | `Record`<`string`, `TypedDataField`[]\> |
-| `value` | `Record`<`string`, `string` \| `number` \| `BigNumber`\> |
+| `types` | `Record`\<`string`, `TypedDataField`[]\> |
+| `value` | `Record`\<`string`, `string` \| `number` \| `boolean` \| `BigNumber`\> |
 | `signature` | `string` |
 | `authorityAddress` | `string` |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Inherited from
 
@@ -345,7 +343,7 @@ ___
 
 ### addSlippage
 
-▸ `Static` `Protected` **addSlippage**(`price`, `slippage`): `BigNumber`
+▸ **addSlippage**(`price`, `slippage`): `BigNumber`
 
 adds a percentage to the price as slippage
 

@@ -1,7 +1,7 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaASBTWrapper
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaASBTWrapper
 
-# Class: MasaASBTWrapper<Contract\>
+# Class: MasaASBTWrapper\<Contract\>
 
 ## Type parameters
 
@@ -11,7 +11,7 @@
 
 ## Hierarchy
 
-- [`MasaSBTWrapper`](MasaSBTWrapper.md)<`Contract`\>
+- [`MasaSBTWrapper`](MasaSBTWrapper.md)\<`Contract`\>
 
   ↳ **`MasaASBTWrapper`**
 
@@ -40,7 +40,7 @@
 
 ### constructor
 
-• **new MasaASBTWrapper**<`Contract`\>(`masa`, `contract`)
+• **new MasaASBTWrapper**\<`Contract`\>(`masa`, `contract`): [`MasaASBTWrapper`](MasaASBTWrapper.md)\<`Contract`\>
 
 #### Type parameters
 
@@ -54,6 +54,10 @@
 | :------ | :------ |
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 | `contract` | `Contract` |
+
+#### Returns
+
+[`MasaASBTWrapper`](MasaASBTWrapper.md)\<`Contract`\>
 
 #### Inherited from
 
@@ -93,7 +97,7 @@ ___
 
 ### bulkMint
 
-▸ **bulkMint**(`receivers`, `paymentMethod?`): `Promise`<`boolean`[]\>
+▸ **bulkMint**(`receivers`, `paymentMethod?`): `Promise`\<`boolean`[]\>
 
 #### Parameters
 
@@ -104,13 +108,13 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`[]\>
+`Promise`\<`boolean`[]\>
 
 ___
 
 ### burn
 
-▸ **burn**(`SBTId`): `Promise`<`boolean`\>
+▸ **burn**(`SBTId`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -120,7 +124,7 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Inherited from
 
@@ -130,7 +134,7 @@ ___
 
 ### list
 
-▸ **list**(`address?`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **list**(`address?`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Parameters
 
@@ -140,7 +144,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Inherited from
 
@@ -150,7 +154,7 @@ ___
 
 ### loadSBTIDs
 
-▸ `Protected` **loadSBTIDs**(`sbtIDs`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **loadSBTIDs**(`sbtIDs`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Parameters
 
@@ -160,7 +164,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Inherited from
 
@@ -170,7 +174,7 @@ ___
 
 ### loadSBTs
 
-▸ `Protected` **loadSBTs**(`identityIdOrAddress`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **loadSBTs**(`identityIdOrAddress`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Parameters
 
@@ -180,7 +184,7 @@ ___
 
 #### Returns
 
-`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Inherited from
 
@@ -190,7 +194,7 @@ ___
 
 ### mint
 
-▸ **mint**(`receiver`, `paymentMethod?`): `Promise`<`boolean`\>
+▸ **mint**(`receiver`, `paymentMethod?`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -201,4 +205,4 @@ ___
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>

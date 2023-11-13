@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaInterface
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaInterface
 
 # Interface: MasaInterface
 
@@ -114,4 +114,4 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `version` | () => { `contractsVersion`: `string` ; `sdkVersion`: `string`  } |
+| `version` | () => \{ `contractsVersion`: `string` ; `sdkVersion`: `string`  } |

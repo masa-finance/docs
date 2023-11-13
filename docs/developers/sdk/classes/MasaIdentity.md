@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaIdentity
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaIdentity
 
 # Class: MasaIdentity
 
 ## Hierarchy
 
-- `MasaLinkable`<`SoulboundIdentity`\>
+- `MasaLinkable`\<`SoulboundIdentity`\>
 
   ↳ **`MasaIdentity`**
 
@@ -33,7 +33,7 @@
 
 ### constructor
 
-• **new MasaIdentity**(`masa`)
+• **new MasaIdentity**(`masa`): [`MasaIdentity`](MasaIdentity.md)
 
 #### Parameters
 
@@ -41,9 +41,13 @@
 | :------ | :------ |
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 
+#### Returns
+
+[`MasaIdentity`](MasaIdentity.md)
+
 #### Overrides
 
-MasaLinkable&lt;SoulboundIdentity\&gt;.constructor
+MasaLinkable\&lt;SoulboundIdentity\&gt;.constructor
 
 ## Properties
 
@@ -79,27 +83,27 @@ MasaLinkable.masa
 
 ### burn
 
-▸ **burn**(): `Promise`<`boolean`\>
+▸ **burn**(): `Promise`\<`boolean`\>
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### create
 
-▸ **create**(): `Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+▸ **create**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Returns
 
-`Promise`<[`BaseResult`](../interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
 ### createWithSoulName
 
-▸ **createWithSoulName**(`paymentMethod`, `soulName`, `duration`, `style?`): `Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
+▸ **createWithSoulName**(`paymentMethod`, `soulName`, `duration`, `style?`): `Promise`\<\{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
 
 #### Parameters
 
@@ -112,13 +116,13 @@ ___
 
 #### Returns
 
-`Promise`<{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
+`Promise`\<\{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
 
 ___
 
 ### load
 
-▸ **load**(`address?`): `Promise`<{ `address`: `string` ; `identityId?`: `BigNumber`  }\>
+▸ **load**(`address?`): `Promise`\<\{ `address`: `string` ; `identityId?`: `BigNumber`  }\>
 
 #### Parameters
 
@@ -128,13 +132,13 @@ ___
 
 #### Returns
 
-`Promise`<{ `address`: `string` ; `identityId?`: `BigNumber`  }\>
+`Promise`\<\{ `address`: `string` ; `identityId?`: `BigNumber`  }\>
 
 ___
 
 ### show
 
-▸ **show**(`address?`): `Promise`<`undefined` \| [`IdentityDetails`](../interfaces/IdentityDetails.md)\>
+▸ **show**(`address?`): `Promise`\<`undefined` \| [`IdentityDetails`](../interfaces/IdentityDetails.md)\>
 
 #### Parameters
 
@@ -144,4 +148,4 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`IdentityDetails`](../interfaces/IdentityDetails.md)\>
+`Promise`\<`undefined` \| [`IdentityDetails`](../interfaces/IdentityDetails.md)\>

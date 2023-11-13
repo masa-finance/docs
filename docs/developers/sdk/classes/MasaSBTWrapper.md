@@ -1,7 +1,7 @@
 [# Masa SDK
- - v3.11.1](../README.md) / [Exports](../modules.md) / MasaSBTWrapper
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaSBTWrapper
 
-# Class: MasaSBTWrapper<Contract\>
+# Class: MasaSBTWrapper\<Contract\>
 
 ## Type parameters
 
@@ -11,11 +11,13 @@
 
 ## Hierarchy
 
-- `MasaLinkable`<`Contract`\>
+- `MasaLinkable`\<`Contract`\>
 
   ↳ **`MasaSBTWrapper`**
 
   ↳↳ [`MasaASBTWrapper`](MasaASBTWrapper.md)
+
+  ↳↳ [`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md)
 
   ↳↳ [`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)
 
@@ -42,7 +44,7 @@
 
 ### constructor
 
-• **new MasaSBTWrapper**<`Contract`\>(`masa`, `contract`)
+• **new MasaSBTWrapper**\<`Contract`\>(`masa`, `contract`): [`MasaSBTWrapper`](MasaSBTWrapper.md)\<`Contract`\>
 
 #### Type parameters
 
@@ -57,9 +59,13 @@
 | `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
 | `contract` | `Contract` |
 
+#### Returns
+
+[`MasaSBTWrapper`](MasaSBTWrapper.md)\<`Contract`\>
+
 #### Inherited from
 
-MasaLinkable<Contract\>.constructor
+MasaLinkable\<Contract\>.constructor
 
 ## Properties
 
@@ -95,7 +101,7 @@ MasaLinkable.masa
 
 ### burn
 
-▸ **burn**(`SBTId`): `Promise`<`boolean`\>
+▸ **burn**(`SBTId`): `Promise`\<`boolean`\>
 
 #### Parameters
 
@@ -105,13 +111,13 @@ MasaLinkable.masa
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 ___
 
 ### list
 
-▸ **list**(`address?`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **list**(`address?`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Parameters
 
@@ -121,13 +127,13 @@ ___
 
 #### Returns
 
-`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 ___
 
 ### loadSBTIDs
 
-▸ `Protected` **loadSBTIDs**(`sbtIDs`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **loadSBTIDs**(`sbtIDs`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Parameters
 
@@ -137,13 +143,13 @@ ___
 
 #### Returns
 
-`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 ___
 
 ### loadSBTs
 
-▸ `Protected` **loadSBTs**(`identityIdOrAddress`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ **loadSBTs**(`identityIdOrAddress`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Parameters
 
@@ -153,4 +159,4 @@ ___
 
 #### Returns
 
-`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>

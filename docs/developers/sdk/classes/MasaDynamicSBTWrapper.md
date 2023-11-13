@@ -1,52 +1,52 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaSSSBTWrapper
+ - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaDynamicSBTWrapper
 
-# Class: MasaSSSBTWrapper\<Contract\>
+# Class: MasaDynamicSBTWrapper\<Contract\>
 
 ## Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `ReferenceSBTSelfSovereign` |
+| `Contract` | extends `MasaSBTDynamic` |
 
 ## Hierarchy
 
 - [`MasaSBTWrapper`](MasaSBTWrapper.md)\<`Contract`\>
 
-  ↳ **`MasaSSSBTWrapper`**
+  ↳ **`MasaDynamicSBTWrapper`**
+
+  ↳↳ [`MasaDynamicSSSBTWrapper`](MasaDynamicSSSBTWrapper.md)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](MasaSSSBTWrapper.md#constructor)
+- [constructor](MasaDynamicSBTWrapper.md#constructor)
 
 ### Properties
 
-- [contract](MasaSSSBTWrapper.md#contract)
-- [links](MasaSSSBTWrapper.md#links)
-- [masa](MasaSSSBTWrapper.md#masa)
+- [contract](MasaDynamicSBTWrapper.md#contract)
+- [links](MasaDynamicSBTWrapper.md#links)
+- [masa](MasaDynamicSBTWrapper.md#masa)
 
 ### Methods
 
-- [burn](MasaSSSBTWrapper.md#burn)
-- [list](MasaSSSBTWrapper.md#list)
-- [loadSBTIDs](MasaSSSBTWrapper.md#loadsbtids)
-- [loadSBTs](MasaSSSBTWrapper.md#loadsbts)
-- [mint](MasaSSSBTWrapper.md#mint)
-- [sign](MasaSSSBTWrapper.md#sign)
+- [burn](MasaDynamicSBTWrapper.md#burn)
+- [list](MasaDynamicSBTWrapper.md#list)
+- [loadSBTIDs](MasaDynamicSBTWrapper.md#loadsbtids)
+- [loadSBTs](MasaDynamicSBTWrapper.md#loadsbts)
 
 ## Constructors
 
 ### constructor
 
-• **new MasaSSSBTWrapper**\<`Contract`\>(`masa`, `contract`): [`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)\<`Contract`\>
+• **new MasaDynamicSBTWrapper**\<`Contract`\>(`masa`, `contract`): [`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md)\<`Contract`\>
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `Contract` | extends `ReferenceSBTSelfSovereign` |
+| `Contract` | extends `MasaSBTDynamic` |
 
 #### Parameters
 
@@ -57,7 +57,7 @@
 
 #### Returns
 
-[`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)\<`Contract`\>
+[`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md)\<`Contract`\>
 
 #### Inherited from
 
@@ -172,38 +172,3 @@ ___
 #### Inherited from
 
 [MasaSBTWrapper](MasaSBTWrapper.md).[loadSBTs](MasaSBTWrapper.md#loadsbts)
-
-___
-
-### mint
-
-▸ **mint**(`authorityAddress`, `signatureDate`, `signature`, `paymentMethod?`): `Promise`\<`boolean`\>
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `authorityAddress` | `string` | `undefined` |
-| `signatureDate` | `number` | `undefined` |
-| `signature` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"ETH"` |
-
-#### Returns
-
-`Promise`\<`boolean`\>
-
-___
-
-### sign
-
-▸ **sign**(`receiver`): `Promise`\<`undefined` \| \{ `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `receiver` | `string` |
-
-#### Returns
-
-`Promise`\<`undefined` \| \{ `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
