@@ -483,6 +483,23 @@ function masaToken() external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
+### maxSBTToMint
+
+```solidity
+function maxSBTToMint() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
 ### mint
 
 ```solidity
@@ -507,7 +524,7 @@ Mints a new SBT
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256 | The NFT ID of the newly minted SBT |
+| _0 | uint256 | The SBT ID of the newly minted SBT |
 
 ### mint
 
@@ -1236,7 +1253,7 @@ event Burn(address indexed _owner, uint256 indexed _tokenId)
 
 
 
-
+*This emits when an SBT is burned  This event emits when SBTs are destroyed*
 
 #### Parameters
 
@@ -1253,7 +1270,7 @@ event EIP712DomainChanged()
 
 
 
-
+*MAY be emitted to signal that the domain could have changed.*
 
 
 ### Mint
@@ -1264,7 +1281,7 @@ event Mint(address indexed _owner, uint256 indexed _tokenId)
 
 
 
-
+*This emits when an SBT is newly minted.  This event emits when SBTs are created*
 
 #### Parameters
 
@@ -1273,64 +1290,10 @@ event Mint(address indexed _owner, uint256 indexed _tokenId)
 | _owner `indexed` | address | undefined |
 | _tokenId `indexed` | uint256 | undefined |
 
-### RoleAdminChanged
+### MintedToAddress
 
 ```solidity
-event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| role `indexed` | bytes32 | undefined |
-| previousAdminRole `indexed` | bytes32 | undefined |
-| newAdminRole `indexed` | bytes32 | undefined |
-
-### RoleGranted
-
-```solidity
-event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| role `indexed` | bytes32 | undefined |
-| account `indexed` | address | undefined |
-| sender `indexed` | address | undefined |
-
-### RoleRevoked
-
-```solidity
-event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| role `indexed` | bytes32 | undefined |
-| account `indexed` | address | undefined |
-| sender `indexed` | address | undefined |
-
-### SoulboundCreditScoreMintedToAddress
-
-```solidity
-event SoulboundCreditScoreMintedToAddress(uint256 tokenId, address to, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
+event MintedToAddress(uint256 tokenId, address to, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
 ```
 
 
@@ -1348,10 +1311,10 @@ event SoulboundCreditScoreMintedToAddress(uint256 tokenId, address to, address a
 | paymentMethod  | address | undefined |
 | mintPrice  | uint256 | undefined |
 
-### SoulboundCreditScoreMintedToIdentity
+### MintedToIdentity
 
 ```solidity
-event SoulboundCreditScoreMintedToIdentity(uint256 tokenId, uint256 identityId, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
+event MintedToIdentity(uint256 tokenId, uint256 identityId, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
 ```
 
 
@@ -1368,6 +1331,78 @@ event SoulboundCreditScoreMintedToIdentity(uint256 tokenId, uint256 identityId, 
 | signatureDate  | uint256 | undefined |
 | paymentMethod  | address | undefined |
 | mintPrice  | uint256 | undefined |
+
+### Pay
+
+```solidity
+event Pay(address indexed paymentMethod, uint256 amount, uint256 protocolFee)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod `indexed` | address | undefined |
+| amount  | uint256 | undefined |
+| protocolFee  | uint256 | undefined |
+
+### RoleAdminChanged
+
+```solidity
+event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
+```
+
+
+
+*Emitted when `newAdminRole` is set as ``role``&#39;s admin role, replacing `previousAdminRole` `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite {RoleAdminChanged} not being emitted signaling this. _Available since v3.1._*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role `indexed` | bytes32 | undefined |
+| previousAdminRole `indexed` | bytes32 | undefined |
+| newAdminRole `indexed` | bytes32 | undefined |
+
+### RoleGranted
+
+```solidity
+event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
+```
+
+
+
+*Emitted when `account` is granted `role`. `sender` is the account that originated the contract call, an admin role bearer except when using {AccessControl-_setupRole}.*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role `indexed` | bytes32 | undefined |
+| account `indexed` | address | undefined |
+| sender `indexed` | address | undefined |
+
+### RoleRevoked
+
+```solidity
+event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)
+```
+
+
+
+*Emitted when `account` is revoked `role`. `sender` is the account that originated the contract call:   - if using `revokeRole`, it is the admin role bearer   - if using `renounceRole`, it is the role bearer (i.e. `account`)*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role `indexed` | bytes32 | undefined |
+| account `indexed` | address | undefined |
+| sender `indexed` | address | undefined |
 
 
 
@@ -1415,22 +1450,6 @@ error CallerNotOwner(address caller)
 | Name | Type | Description |
 |---|---|---|
 | caller | address | undefined |
-
-### CreditScoreAlreadyCreated
-
-```solidity
-error CreditScoreAlreadyCreated(address to)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| to | address | undefined |
 
 ### InsufficientEthAmount
 
@@ -1501,6 +1520,23 @@ error InvalidToken(address token)
 | Name | Type | Description |
 |---|---|---|
 | token | address | undefined |
+
+### MaxSBTMinted
+
+```solidity
+error MaxSBTMinted(address to, uint256 maximum)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| to | address | undefined |
+| maximum | uint256 | undefined |
 
 ### NonExistingErc20Token
 

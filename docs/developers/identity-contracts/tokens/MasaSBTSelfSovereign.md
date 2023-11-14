@@ -483,6 +483,23 @@ function masaToken() external view returns (address)
 |---|---|---|
 | _0 | address | undefined |
 
+### maxSBTToMint
+
+```solidity
+function maxSBTToMint() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
 ### mintPrice
 
 ```solidity
@@ -1184,7 +1201,7 @@ event Burn(address indexed _owner, uint256 indexed _tokenId)
 
 
 
-
+*This emits when an SBT is burned  This event emits when SBTs are destroyed*
 
 #### Parameters
 
@@ -1201,7 +1218,7 @@ event EIP712DomainChanged()
 
 
 
-
+*MAY be emitted to signal that the domain could have changed.*
 
 
 ### Mint
@@ -1212,7 +1229,7 @@ event Mint(address indexed _owner, uint256 indexed _tokenId)
 
 
 
-
+*This emits when an SBT is newly minted.  This event emits when SBTs are created*
 
 #### Parameters
 
@@ -1220,6 +1237,66 @@ event Mint(address indexed _owner, uint256 indexed _tokenId)
 |---|---|---|
 | _owner `indexed` | address | undefined |
 | _tokenId `indexed` | uint256 | undefined |
+
+### MintedToAddress
+
+```solidity
+event MintedToAddress(uint256 tokenId, address to, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId  | uint256 | undefined |
+| to  | address | undefined |
+| authorityAddress  | address | undefined |
+| signatureDate  | uint256 | undefined |
+| paymentMethod  | address | undefined |
+| mintPrice  | uint256 | undefined |
+
+### MintedToIdentity
+
+```solidity
+event MintedToIdentity(uint256 tokenId, uint256 identityId, address authorityAddress, uint256 signatureDate, address paymentMethod, uint256 mintPrice)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId  | uint256 | undefined |
+| identityId  | uint256 | undefined |
+| authorityAddress  | address | undefined |
+| signatureDate  | uint256 | undefined |
+| paymentMethod  | address | undefined |
+| mintPrice  | uint256 | undefined |
+
+### Pay
+
+```solidity
+event Pay(address indexed paymentMethod, uint256 amount, uint256 protocolFee)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| paymentMethod `indexed` | address | undefined |
+| amount  | uint256 | undefined |
+| protocolFee  | uint256 | undefined |
 
 ### RoleAdminChanged
 
@@ -1229,7 +1306,7 @@ event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, 
 
 
 
-
+*Emitted when `newAdminRole` is set as ``role``&#39;s admin role, replacing `previousAdminRole` `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite {RoleAdminChanged} not being emitted signaling this. _Available since v3.1._*
 
 #### Parameters
 
@@ -1247,7 +1324,7 @@ event RoleGranted(bytes32 indexed role, address indexed account, address indexed
 
 
 
-
+*Emitted when `account` is granted `role`. `sender` is the account that originated the contract call, an admin role bearer except when using {AccessControl-_setupRole}.*
 
 #### Parameters
 
@@ -1265,7 +1342,7 @@ event RoleRevoked(bytes32 indexed role, address indexed account, address indexed
 
 
 
-
+*Emitted when `account` is revoked `role`. `sender` is the account that originated the contract call:   - if using `revokeRole`, it is the admin role bearer   - if using `renounceRole`, it is the role bearer (i.e. `account`)*
 
 #### Parameters
 

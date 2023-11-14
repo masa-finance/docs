@@ -1,12 +1,12 @@
-# ReferenceSBTAuthority
+# MasaSBTDynamic
 
 *Masa Finance*
 
-> Soulbound reference Authority SBT
+> MasaSBTDynamic
 
-Soulbound token that represents a Authority SBT
+MasaSBTDynamic. SBT with states
 
-*Inherits from the SBT contract.*
+*Adds states to SBTs*
 
 ## Methods
 
@@ -14,23 +14,6 @@ Soulbound token that represents a Authority SBT
 
 ```solidity
 function DEFAULT_ADMIN_ROLE() external view returns (bytes32)
-```
-
-
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | bytes32 | undefined |
-
-### MINTER_ROLE
-
-```solidity
-function MINTER_ROLE() external view returns (bytes32)
 ```
 
 
@@ -60,6 +43,38 @@ function PROJECT_ADMIN_ROLE() external view returns (bytes32)
 | Name | Type | Description |
 |---|---|---|
 | _0 | bytes32 | undefined |
+
+### addAfterMintState
+
+```solidity
+function addAfterMintState(string state) external nonpayable
+```
+
+Adds a afterMintState
+
+*The caller must have the admin or project admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| state | string | New afterMintState to add |
+
+### addBeforeMintState
+
+```solidity
+function addBeforeMintState(string state) external nonpayable
+```
+
+Adds a beforeMintState
+
+*The caller must have the admin or project admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| state | string | New beforeMintState to add |
 
 ### addLinkPrice
 
@@ -95,6 +110,73 @@ function addLinkPriceMASA() external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
+### afterMintState
+
+```solidity
+function afterMintState(uint256, string) external view returns (bool)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+| _1 | string | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
+### allAfterMintStatesSet
+
+```solidity
+function allAfterMintStatesSet(uint256 tokenId) external view returns (bool)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId | uint256 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
+### allBeforeMintStatesSet
+
+```solidity
+function allBeforeMintStatesSet(address account) external view returns (bool)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| account | address | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
 ### balanceOf
 
 ```solidity
@@ -116,6 +198,29 @@ function balanceOf(address owner) external view returns (uint256)
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | undefined |
+
+### beforeMintState
+
+```solidity
+function beforeMintState(address, string) external view returns (bool)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+| _1 | string | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
 
 ### burn
 
@@ -230,6 +335,40 @@ Returns true if the token exists
 | Name | Type | Description |
 |---|---|---|
 | _0 | bool | True if the token exists |
+
+### getAfterMintStates
+
+```solidity
+function getAfterMintStates() external view returns (string[])
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string[] | undefined |
+
+### getBeforeMintStates
+
+```solidity
+function getBeforeMintStates() external view returns (string[])
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string[] | undefined |
 
 ### getEnabledPaymentMethods
 
@@ -456,142 +595,6 @@ function maxSBTToMint() external view returns (uint256)
 |---|---|---|
 | _0 | uint256 | undefined |
 
-### mint
-
-```solidity
-function mint(address paymentMethod, address[] to) external payable returns (uint256[] tokenIds)
-```
-
-Bulk mint of new SBTs
-
-*The caller must have the MINTER role*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| paymentMethod | address | Address of token that user want to pay |
-| to | address[] | Addresses array to mint the SBT to |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| tokenIds | uint256[] | The SBT IDs of the newly minted SBTs |
-
-### mint
-
-```solidity
-function mint(address paymentMethod, uint256 identityId) external payable returns (uint256)
-```
-
-Mints a new SBT
-
-*The caller must have the MINTER role*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| paymentMethod | address | Address of token that user want to pay |
-| identityId | uint256 | TokenId of the identity to mint the NFT to |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | The SBT ID of the newly minted SBT |
-
-### mint
-
-```solidity
-function mint(address to) external payable returns (uint256)
-```
-
-Mints a new SBT
-
-*The caller must have the MINTER role*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| to | address | The address to mint the SBT to |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | The SBT ID of the newly minted SBT |
-
-### mint
-
-```solidity
-function mint(uint256 identityId) external payable returns (uint256)
-```
-
-Mints a new SBT
-
-*The caller must have the MINTER role*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| identityId | uint256 | TokenId of the identity to mint the NFT to |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | The SBT ID of the newly minted SBT |
-
-### mint
-
-```solidity
-function mint(address paymentMethod, uint256[] identityId) external payable returns (uint256[] tokenIds)
-```
-
-Bulk mint of new SBTs
-
-*The caller must have the MINTER role*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| paymentMethod | address | Address of token that user want to pay |
-| identityId | uint256[] | TokenIds array of the identity to mint the NFT to |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| tokenIds | uint256[] | The SBT IDs of the newly minted SBTs |
-
-### mint
-
-```solidity
-function mint(address paymentMethod, address to) external payable returns (uint256)
-```
-
-Mints a new SBT
-
-*The caller must have the MINTER role*
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| paymentMethod | address | Address of token that user want to pay |
-| to | address | The address to mint the SBT to |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | The SBT ID of the newly minted SBT |
-
 ### mintPrice
 
 ```solidity
@@ -783,6 +786,38 @@ function queryLinkPriceMASA() external view returns (uint256)
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | undefined |
+
+### removeAfterMintState
+
+```solidity
+function removeAfterMintState(string state) external nonpayable
+```
+
+Removes a afterMintState
+
+*The caller must have the admin or project admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| state | string | afterMintState to remove |
+
+### removeBeforeMintState
+
+```solidity
+function removeBeforeMintState(string state) external nonpayable
+```
+
+Removes a beforeMintState
+
+*The caller must have the admin or project admin role to call this function*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| state | string | beforeMintState to remove |
 
 ### renounceRole
 
@@ -1269,6 +1304,42 @@ function wrappedNativeToken() external view returns (address)
 
 ## Events
 
+### AfterMintStateSet
+
+```solidity
+event AfterMintStateSet(uint256 tokenId, string state, bool value)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId  | uint256 | undefined |
+| state  | string | undefined |
+| value  | bool | undefined |
+
+### BeforeMintStateSet
+
+```solidity
+event BeforeMintStateSet(address account, string state, bool value)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| account  | address | undefined |
+| state  | string | undefined |
+| value  | bool | undefined |
+
 ### Burn
 
 ```solidity
@@ -1302,40 +1373,6 @@ event Mint(address indexed _owner, uint256 indexed _tokenId)
 |---|---|---|
 | _owner `indexed` | address | undefined |
 | _tokenId `indexed` | uint256 | undefined |
-
-### MintedToAddress
-
-```solidity
-event MintedToAddress(uint256 tokenId, address to)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| tokenId  | uint256 | undefined |
-| to  | address | undefined |
-
-### MintedToIdentity
-
-```solidity
-event MintedToIdentity(uint256 tokenId, uint256 identityId)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| tokenId  | uint256 | undefined |
-| identityId  | uint256 | undefined |
 
 ### Pay
 
@@ -1424,22 +1461,6 @@ error AlreadyAdded()
 
 
 
-### InsufficientEthAmount
-
-```solidity
-error InsufficientEthAmount(uint256 amount)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| amount | uint256 | undefined |
-
 ### InvalidPaymentMethod
 
 ```solidity
@@ -1455,6 +1476,22 @@ error InvalidPaymentMethod(address paymentMethod)
 | Name | Type | Description |
 |---|---|---|
 | paymentMethod | address | undefined |
+
+### InvalidState
+
+```solidity
+error InvalidState(string state)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| state | string | undefined |
 
 ### InvalidToken
 
@@ -1472,23 +1509,6 @@ error InvalidToken(address token)
 |---|---|---|
 | token | address | undefined |
 
-### MaxSBTMinted
-
-```solidity
-error MaxSBTMinted(address to, uint256 maximum)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| to | address | undefined |
-| maximum | uint256 | undefined |
-
 ### NonExistingErc20Token
 
 ```solidity
@@ -1504,6 +1524,17 @@ error NonExistingErc20Token(address erc20token)
 | Name | Type | Description |
 |---|---|---|
 | erc20token | address | undefined |
+
+### NotAllBeforeMintStatesSet
+
+```solidity
+error NotAllBeforeMintStatesSet()
+```
+
+
+
+
+
 
 ### NotLinkedToAnIdentitySBT
 
@@ -1527,28 +1558,6 @@ error PaymentParamsNotSet()
 
 
 
-### ProtocolFeeReceiverNotSet
-
-```solidity
-error ProtocolFeeReceiverNotSet()
-```
-
-
-
-
-
-
-### RefundFailed
-
-```solidity
-error RefundFailed()
-```
-
-
-
-
-
-
 ### SameValue
 
 ```solidity
@@ -1560,10 +1569,10 @@ error SameValue()
 
 
 
-### TransferFailed
+### UserMustHaveProtocolOrProjectAdminRole
 
 ```solidity
-error TransferFailed()
+error UserMustHaveProtocolOrProjectAdminRole()
 ```
 
 
@@ -1571,10 +1580,10 @@ error TransferFailed()
 
 
 
-### UserMustHaveProtocolOrProjectAdminRole
+### WithoutBeforeMintStates
 
 ```solidity
-error UserMustHaveProtocolOrProjectAdminRole()
+error WithoutBeforeMintStates()
 ```
 
 

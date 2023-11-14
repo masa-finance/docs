@@ -160,7 +160,7 @@ event Burn(address indexed _owner, uint256 indexed _tokenId)
 
 
 
-
+*This emits when an SBT is burned  This event emits when SBTs are destroyed*
 
 #### Parameters
 
@@ -177,7 +177,7 @@ event Mint(address indexed _owner, uint256 indexed _tokenId)
 
 
 
-
+*This emits when an SBT is newly minted.  This event emits when SBTs are created*
 
 #### Parameters
 
