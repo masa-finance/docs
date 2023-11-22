@@ -251,10 +251,10 @@ Returns all available payment methods
 ### getEncryptedData
 
 ```solidity
-function getEncryptedData(uint256 tokenId) external view returns (struct ZKSBT.EncryptedData, struct ZKSBT.EncryptedData, struct ZKSBT.EncryptedData)
+function getEncryptedData(uint256 tokenId) external view returns (bytes[])
 ```
 
-
+Returns the encrypted data with the public key of the owner of the SBT
 
 
 
@@ -262,15 +262,13 @@ function getEncryptedData(uint256 tokenId) external view returns (struct ZKSBT.E
 
 | Name | Type | Description |
 |---|---|---|
-| tokenId | uint256 | undefined |
+| tokenId | uint256 | The SBT ID |
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | ZKSBT.EncryptedData | undefined |
-| _1 | ZKSBT.EncryptedData | undefined |
-| _2 | ZKSBT.EncryptedData | undefined |
+| _0 | bytes[] | The encrypted data with the public key of the owner of the SBT |
 
 ### getIdentityId
 
@@ -412,7 +410,7 @@ function getRoleAdmin(bytes32 role) external view returns (bytes32)
 function getRoot(uint256 tokenId) external view returns (bytes)
 ```
 
-
+Returns the root of the Merkle Tree&#39;s data without encryption, used to verify the data
 
 
 
@@ -420,13 +418,30 @@ function getRoot(uint256 tokenId) external view returns (bytes)
 
 | Name | Type | Description |
 |---|---|---|
-| tokenId | uint256 | undefined |
+| tokenId | uint256 | The SBT ID |
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | bytes | undefined |
+| _0 | bytes | The root of the Merkle Tree&#39;s data without encryption, used to verify the data |
+
+### getVerifier
+
+```solidity
+function getVerifier() external view returns (contract IVerifier)
+```
+
+Returns the verifier smart contract
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | contract IVerifier | The verifier smart contract |
 
 ### grantRole
 
@@ -505,28 +520,26 @@ function maxSBTToMint() external view returns (uint256)
 ### mint
 
 ```solidity
-function mint(address to, bytes root, ZKSBT.EncryptedData encryptedCreditScore, ZKSBT.EncryptedData encryptedIncome, ZKSBT.EncryptedData encryptedReportDate) external payable returns (uint256)
+function mint(address to, bytes root, bytes[] encryptedData) external payable returns (uint256)
 ```
 
+Mints a new SBT
 
-
-
+*The caller must have the MINTER role*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| to | address | undefined |
-| root | bytes | undefined |
-| encryptedCreditScore | ZKSBT.EncryptedData | undefined |
-| encryptedIncome | ZKSBT.EncryptedData | undefined |
-| encryptedReportDate | ZKSBT.EncryptedData | undefined |
+| to | address | The address to mint the SBT to |
+| root | bytes | Root of the Merkle Tree&#39;s data without encryption, used to verify the data |
+| encryptedData | bytes[] | Encrypted data |
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256 | undefined |
+| _0 | uint256 | The SBT ID of the newly minted SBT |
 
 ### mintPrice
 
@@ -753,31 +766,6 @@ function revokeRole(bytes32 role, address account) external nonpayable
 |---|---|---|
 | role | bytes32 | undefined |
 | account | address | undefined |
-
-### sbtData
-
-```solidity
-function sbtData(uint256) external view returns (bytes root, struct ZKSBT.EncryptedData encryptedCreditScore, struct ZKSBT.EncryptedData encryptedIncome, struct ZKSBT.EncryptedData encryptedReportDate)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| root | bytes | undefined |
-| encryptedCreditScore | ZKSBT.EncryptedData | undefined |
-| encryptedIncome | ZKSBT.EncryptedData | undefined |
-| encryptedReportDate | ZKSBT.EncryptedData | undefined |
 
 ### setAddLinkPrice
 
@@ -1208,6 +1196,30 @@ function totalSupply() external view returns (uint256)
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | undefined |
+
+### verifyProof
+
+```solidity
+function verifyProof(uint256 tokenId, uint256[] proof, uint256[] publicValues) external view returns (bool)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| tokenId | uint256 | undefined |
+| proof | uint256[] | undefined |
+| publicValues | uint256[] | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
 
 ### wrappedNativeToken
 
