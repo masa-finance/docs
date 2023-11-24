@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaCreditScore
+ - v3.13.0](../README.md) / [Exports](../modules.md) / MasaCreditScore
 
 # Class: MasaCreditScore
 
@@ -82,7 +82,7 @@ MasaLinkable.masa
 
 ### burn
 
-▸ **burn**(`creditScoreId`): `Promise`\<`boolean`\>
+▸ **burn**(`creditScoreId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -92,7 +92,7 @@ MasaLinkable.masa
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 

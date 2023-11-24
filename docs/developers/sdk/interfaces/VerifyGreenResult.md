@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / VerifyGreenResult
+ - v3.13.0](../README.md) / [Exports](../modules.md) / VerifyGreenResult
 
 # Interface: VerifyGreenResult
 
@@ -42,7 +42,7 @@ ___
 
 ### message
 
-• **message**: `string`
+• `Optional` **message**: `string`
 
 #### Inherited from
 

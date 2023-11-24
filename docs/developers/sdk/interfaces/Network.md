@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / Network
+ - v3.13.0](../README.md) / [Exports](../modules.md) / Network
 
 # Interface: Network
 
@@ -18,6 +18,7 @@
 - [nativeCurrency](Network.md#nativecurrency)
 - [networkName](Network.md#networkname)
 - [rpcUrls](Network.md#rpcurls)
+- [skipEip1559](Network.md#skipeip1559)
 
 ## Properties
 
@@ -117,3 +118,11 @@ ___
 
 The list of available rpc urls, required for adding the network
 to the wallet
+
+___
+
+### skipEip1559
+
+• `Optional` **skipEip1559**: `boolean`
+
+skip eip1559 gas price calculation for this network

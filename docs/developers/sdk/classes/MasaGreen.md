@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaGreen
+ - v3.13.0](../README.md) / [Exports](../modules.md) / MasaGreen
 
 # Class: MasaGreen
 
@@ -85,7 +85,7 @@ MasaLinkable.masa
 
 ### burn
 
-▸ **burn**(`greenId`): `Promise`\<`boolean`\>
+▸ **burn**(`greenId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 Burns a green
 
@@ -97,7 +97,7 @@ Burns a green
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 ### mint
 
-▸ **mint**(`paymentMethod?`, `authorityAddress`, `signatureDate`, `signature`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+▸ **mint**(`paymentMethod?`, `authorityAddress`, `signatureDate`, `signature`): `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
 Mints a green based on the previously made verification result
 
@@ -192,7 +192,7 @@ Mints a green based on the previously made verification result
 
 #### Returns
 
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
 ___
 

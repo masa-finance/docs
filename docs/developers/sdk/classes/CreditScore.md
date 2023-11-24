@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / CreditScore
+ - v3.13.0](../README.md) / [Exports](../modules.md) / CreditScore
 
 # Class: CreditScore
 
@@ -26,6 +26,7 @@
 - [burn](CreditScore.md#burn)
 - [checkOrGiveAllowance](CreditScore.md#checkorgiveallowance)
 - [createOverrides](CreditScore.md#createoverrides)
+- [estimateGasWithSlippage](CreditScore.md#estimategaswithslippage)
 - [formatPrice](CreditScore.md#formatprice)
 - [getMintPrice](CreditScore.md#getmintprice)
 - [getNetworkFeeInformation](CreditScore.md#getnetworkfeeinformation)
@@ -88,7 +89,7 @@ ___
 
 ### burn
 
-▸ **burn**(`creditScoreId`): `Promise`\<`boolean`\>
+▸ **burn**(`creditScoreId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -98,7 +99,7 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
@@ -144,6 +145,28 @@ ___
 #### Inherited from
 
 MasaSBTModuleBase.createOverrides
+
+___
+
+### estimateGasWithSlippage
+
+▸ **estimateGasWithSlippage**(`estimateGas`, `args?`, `overrides?`): `Promise`\<`BigNumber`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `estimateGas` | (...`estimateGasArgAndOverrides`: `never`[]) => `Promise`\<`BigNumber`\> |
+| `args?` | `unknown`[] |
+| `overrides?` | `PayableOverrides` |
+
+#### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### Inherited from
+
+MasaSBTModuleBase.estimateGasWithSlippage
 
 ___
 

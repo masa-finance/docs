@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaASBTWrapper
+ - v3.13.0](../README.md) / [Exports](../modules.md) / MasaASBTWrapper
 
 # Class: MasaASBTWrapper\<Contract\>
 
@@ -97,7 +97,7 @@ ___
 
 ### bulkMint
 
-▸ **bulkMint**(`receivers`, `paymentMethod?`): `Promise`\<`boolean`[]\>
+▸ **bulkMint**(`receivers`, `paymentMethod?`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
 
 #### Parameters
 
@@ -108,13 +108,13 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`[]\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
 
 ___
 
 ### burn
 
-▸ **burn**(`SBTId`): `Promise`\<`boolean`\>
+▸ **burn**(`SBTId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -124,7 +124,7 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Inherited from
 
@@ -194,7 +194,7 @@ ___
 
 ### mint
 
-▸ **mint**(`receiver`, `paymentMethod?`): `Promise`\<`boolean`\>
+▸ **mint**(`receiver`, `paymentMethod?`): `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
 #### Parameters
 
@@ -205,4 +205,4 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>

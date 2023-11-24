@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / SSSBTContractWrapper
+ - v3.13.0](../README.md) / [Exports](../modules.md) / SSSBTContractWrapper
 
 # Class: SSSBTContractWrapper\<Contract\>
 
@@ -30,8 +30,10 @@
 
 ### Methods
 
+- [burn](SSSBTContractWrapper.md#burn)
 - [checkOrGiveAllowance](SSSBTContractWrapper.md#checkorgiveallowance)
 - [createOverrides](SSSBTContractWrapper.md#createoverrides)
+- [estimateGasWithSlippage](SSSBTContractWrapper.md#estimategaswithslippage)
 - [formatPrice](SSSBTContractWrapper.md#formatprice)
 - [getMintPrice](SSSBTContractWrapper.md#getmintprice)
 - [getNetworkFeeInformation](SSSBTContractWrapper.md#getnetworkfeeinformation)
@@ -110,6 +112,26 @@ ___
 
 ## Methods
 
+### burn
+
+▸ **burn**(`tokenId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `tokenId` | `BigNumber` |
+
+#### Returns
+
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+#### Inherited from
+
+[SBTContractWrapper](SBTContractWrapper.md).[burn](SBTContractWrapper.md#burn)
+
+___
+
 ### checkOrGiveAllowance
 
 ▸ **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`\<`undefined` \| `ContractReceipt`\>
@@ -152,6 +174,28 @@ ___
 #### Inherited from
 
 [SBTContractWrapper](SBTContractWrapper.md).[createOverrides](SBTContractWrapper.md#createoverrides)
+
+___
+
+### estimateGasWithSlippage
+
+▸ **estimateGasWithSlippage**(`estimateGas`, `args?`, `overrides?`): `Promise`\<`BigNumber`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `estimateGas` | (...`estimateGasArgAndOverrides`: `never`[]) => `Promise`\<`BigNumber`\> |
+| `args?` | `unknown`[] |
+| `overrides?` | `PayableOverrides` |
+
+#### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### Inherited from
+
+[SBTContractWrapper](SBTContractWrapper.md).[estimateGasWithSlippage](SBTContractWrapper.md#estimategaswithslippage)
 
 ___
 
@@ -284,7 +328,7 @@ ___
 
 ### mint
 
-▸ **mint**(`paymentMethod`, `receiver`, `signature`, `signatureDate`, `authorityAddress`): `Promise`\<`boolean`\>
+▸ **mint**(`paymentMethod`, `receiver`, `signature`, `signatureDate`, `authorityAddress`): `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
 #### Parameters
 
@@ -298,7 +342,7 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
 ___
 

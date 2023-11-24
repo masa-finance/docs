@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / SoulNameMetadataStoreResult
+ - v3.13.0](../README.md) / [Exports](../modules.md) / SoulNameMetadataStoreResult
 
 # Interface: SoulNameMetadataStoreResult
 
@@ -54,7 +54,7 @@ ___
 
 ### message
 
-• **message**: `string`
+• `Optional` **message**: `string`
 
 #### Inherited from
 

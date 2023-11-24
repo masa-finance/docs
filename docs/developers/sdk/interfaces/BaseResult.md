@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / BaseResult
+ - v3.13.0](../README.md) / [Exports](../modules.md) / BaseResult
 
 # Interface: BaseResult
 
@@ -7,13 +7,11 @@
 
 - **`BaseResult`**
 
+  ↳ [`BaseResultWithTokenId`](BaseResultWithTokenId.md)
+
   ↳ [`GenerateCreditScoreResult`](GenerateCreditScoreResult.md)
 
-  ↳ [`UpdateCreditScoreResult`](UpdateCreditScoreResult.md)
-
-  ↳ [`GreenBaseResult`](GreenBaseResult.md)
-
-  ↳ [`SoulNameResultBase`](SoulNameResultBase.md)
+  ↳ [`LoginResult`](LoginResult.md)
 
 ## Table of contents
 
@@ -21,22 +19,15 @@
 
 - [message](BaseResult.md#message)
 - [success](BaseResult.md#success)
-- [tokenId](BaseResult.md#tokenid)
 
 ## Properties
 
 ### message
 
-• **message**: `string`
+• `Optional` **message**: `string`
 
 ___
 
 ### success
 
 • **success**: `boolean`
-
-___
-
-### tokenId
-
-• `Optional` **tokenId**: `string` \| `BigNumber`

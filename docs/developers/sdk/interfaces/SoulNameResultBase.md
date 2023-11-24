@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / SoulNameResultBase
+ - v3.13.0](../README.md) / [Exports](../modules.md) / SoulNameResultBase
 
 # Interface: SoulNameResultBase
 
 ## Hierarchy
 
-- [`BaseResult`](BaseResult.md)
+- [`BaseResultWithTokenId`](BaseResultWithTokenId.md)
 
   ↳ **`SoulNameResultBase`**
 
@@ -32,11 +32,11 @@ ___
 
 ### message
 
-• **message**: `string`
+• `Optional` **message**: `string`
 
 #### Inherited from
 
-[BaseResult](BaseResult.md).[message](BaseResult.md#message)
+[BaseResultWithTokenId](BaseResultWithTokenId.md).[message](BaseResultWithTokenId.md#message)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Inherited from
 
-[BaseResult](BaseResult.md).[success](BaseResult.md#success)
+[BaseResultWithTokenId](BaseResultWithTokenId.md).[success](BaseResultWithTokenId.md#success)
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 #### Inherited from
 
-[BaseResult](BaseResult.md).[tokenId](BaseResult.md#tokenid)
+[BaseResultWithTokenId](BaseResultWithTokenId.md).[tokenId](BaseResultWithTokenId.md#tokenid)

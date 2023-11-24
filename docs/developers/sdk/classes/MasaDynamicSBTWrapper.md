@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaDynamicSBTWrapper
+ - v3.13.0](../README.md) / [Exports](../modules.md) / MasaDynamicSBTWrapper
 
 # Class: MasaDynamicSBTWrapper\<Contract\>
 
@@ -97,7 +97,7 @@ ___
 
 ### burn
 
-▸ **burn**(`SBTId`): `Promise`\<`boolean`\>
+▸ **burn**(`SBTId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -107,7 +107,7 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Inherited from
 

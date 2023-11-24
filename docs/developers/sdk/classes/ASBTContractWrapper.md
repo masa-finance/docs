@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / ASBTContractWrapper
+ - v3.13.0](../README.md) / [Exports](../modules.md) / ASBTContractWrapper
 
 # Class: ASBTContractWrapper\<Contract\>
 
@@ -30,8 +30,10 @@
 ### Methods
 
 - [bulkMint](ASBTContractWrapper.md#bulkmint)
+- [burn](ASBTContractWrapper.md#burn)
 - [checkOrGiveAllowance](ASBTContractWrapper.md#checkorgiveallowance)
 - [createOverrides](ASBTContractWrapper.md#createoverrides)
+- [estimateGasWithSlippage](ASBTContractWrapper.md#estimategaswithslippage)
 - [formatPrice](ASBTContractWrapper.md#formatprice)
 - [getMintPrice](ASBTContractWrapper.md#getmintprice)
 - [getNetworkFeeInformation](ASBTContractWrapper.md#getnetworkfeeinformation)
@@ -104,7 +106,7 @@ ___
 
 ### bulkMint
 
-▸ **bulkMint**(`paymentMethod`, `receivers`): `Promise`\<`boolean`[]\>
+▸ **bulkMint**(`paymentMethod`, `receivers`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
 
 #### Parameters
 
@@ -115,7 +117,27 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`[]\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
+
+___
+
+### burn
+
+▸ **burn**(`tokenId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `tokenId` | `BigNumber` |
+
+#### Returns
+
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+#### Inherited from
+
+[SBTContractWrapper](SBTContractWrapper.md).[burn](SBTContractWrapper.md#burn)
 
 ___
 
@@ -161,6 +183,28 @@ ___
 #### Inherited from
 
 [SBTContractWrapper](SBTContractWrapper.md).[createOverrides](SBTContractWrapper.md#createoverrides)
+
+___
+
+### estimateGasWithSlippage
+
+▸ **estimateGasWithSlippage**(`estimateGas`, `args?`, `overrides?`): `Promise`\<`BigNumber`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `estimateGas` | (...`estimateGasArgAndOverrides`: `never`[]) => `Promise`\<`BigNumber`\> |
+| `args?` | `unknown`[] |
+| `overrides?` | `PayableOverrides` |
+
+#### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### Inherited from
+
+[SBTContractWrapper](SBTContractWrapper.md).[estimateGasWithSlippage](SBTContractWrapper.md#estimategaswithslippage)
 
 ___
 
@@ -293,7 +337,7 @@ ___
 
 ### mint
 
-▸ **mint**(`paymentMethod`, `receiver`): `Promise`\<`boolean`\>
+▸ **mint**(`paymentMethod`, `receiver`): `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
 #### Parameters
 
@@ -304,7 +348,7 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / SoulLinker
+ - v3.13.0](../README.md) / [Exports](../modules.md) / SoulLinker
 
 # Class: SoulLinker
 
@@ -27,6 +27,7 @@
 - [breakLink](SoulLinker.md#breaklink)
 - [checkOrGiveAllowance](SoulLinker.md#checkorgiveallowance)
 - [createOverrides](SoulLinker.md#createoverrides)
+- [estimateGasWithSlippage](SoulLinker.md#estimategaswithslippage)
 - [formatPrice](SoulLinker.md#formatprice)
 - [getNetworkFeeInformation](SoulLinker.md#getnetworkfeeinformation)
 - [getPaymentAddress](SoulLinker.md#getpaymentaddress)
@@ -86,7 +87,7 @@ ___
 
 ### addLink
 
-▸ **addLink**(`tokenAddress`, `paymentMethod`, `readerIdentityId`, `ownerIdentityId`, `tokenId`, `signatureDate`, `expirationDate`, `signature`, `slippage?`): `Promise`\<`boolean`\>
+▸ **addLink**(`tokenAddress`, `paymentMethod`, `readerIdentityId`, `ownerIdentityId`, `tokenId`, `signatureDate`, `expirationDate`, `signature`, `slippage?`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 Adds a link to the soullinker
 
@@ -106,7 +107,7 @@ Adds a link to the soullinker
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
@@ -170,6 +171,28 @@ ___
 #### Inherited from
 
 MasaModuleBase.createOverrides
+
+___
+
+### estimateGasWithSlippage
+
+▸ **estimateGasWithSlippage**(`estimateGas`, `args?`, `overrides?`): `Promise`\<`BigNumber`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `estimateGas` | (...`estimateGasArgAndOverrides`: `never`[]) => `Promise`\<`BigNumber`\> |
+| `args?` | `unknown`[] |
+| `overrides?` | `PayableOverrides` |
+
+#### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### Inherited from
+
+MasaModuleBase.estimateGasWithSlippage
 
 ___
 

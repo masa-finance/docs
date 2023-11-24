@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / ASBTContract
+ - v3.13.0](../README.md) / [Exports](../modules.md) / ASBTContract
 
 # Class: ASBTContract
 
@@ -26,6 +26,7 @@
 - [checkOrGiveAllowance](ASBTContract.md#checkorgiveallowance)
 - [connect](ASBTContract.md#connect)
 - [createOverrides](ASBTContract.md#createoverrides)
+- [estimateGasWithSlippage](ASBTContract.md#estimategaswithslippage)
 - [formatPrice](ASBTContract.md#formatprice)
 - [getMintPrice](ASBTContract.md#getmintprice)
 - [getNetworkFeeInformation](ASBTContract.md#getnetworkfeeinformation)
@@ -164,6 +165,28 @@ ___
 #### Inherited from
 
 MasaSBTModuleBase.createOverrides
+
+___
+
+### estimateGasWithSlippage
+
+▸ **estimateGasWithSlippage**(`estimateGas`, `args?`, `overrides?`): `Promise`\<`BigNumber`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `estimateGas` | (...`estimateGasArgAndOverrides`: `never`[]) => `Promise`\<`BigNumber`\> |
+| `args?` | `unknown`[] |
+| `overrides?` | `PayableOverrides` |
+
+#### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### Inherited from
+
+MasaSBTModuleBase.estimateGasWithSlippage
 
 ___
 

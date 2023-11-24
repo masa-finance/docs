@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.12.0-alpha.5](README.md) / Exports
+ - v3.13.0](README.md) / Exports
 
 # # Masa SDK
- - v3.12.0-alpha.5
+ - v3.13.0
 
 ## Table of contents
 
@@ -54,6 +54,7 @@
 - [ApprovalEventObject](interfaces/ApprovalEventObject.md)
 - [Attribute](interfaces/Attribute.md)
 - [BaseResult](interfaces/BaseResult.md)
+- [BaseResultWithTokenId](interfaces/BaseResultWithTokenId.md)
 - [ChallengeResult](interfaces/ChallengeResult.md)
 - [ChallengeResultWithCookie](interfaces/ChallengeResultWithCookie.md)
 - [ContractInfo](interfaces/ContractInfo.md)
@@ -75,6 +76,7 @@
 - [ISoulName](interfaces/ISoulName.md)
 - [IdentityDetails](interfaces/IdentityDetails.md)
 - [LoadIdentityContractsArgs](interfaces/LoadIdentityContractsArgs.md)
+- [LoginResult](interfaces/LoginResult.md)
 - [LogoutResult](interfaces/LogoutResult.md)
 - [MasaArgs](interfaces/MasaArgs.md)
 - [MasaConfig](interfaces/MasaConfig.md)
@@ -255,13 +257,13 @@ ___
 
 ### Environment
 
-Ƭ **Environment**: \{ `name`: ``"local"`` \| ``"dev"`` \| ``"test"`` \| ``"stage"`` \| ``"production"`` ; `wallet?`: `Signer`  } & [`MasaArgs`](interfaces/MasaArgs.md)
+Ƭ **Environment**: \{ `wallet?`: `Signer`  } & [`MasaArgs`](interfaces/MasaArgs.md)
 
 ___
 
 ### EnvironmentName
 
-Ƭ **EnvironmentName**: ``"dev"`` \| ``"test"`` \| ``"beta"`` \| ``"production"``
+Ƭ **EnvironmentName**: ``"local"`` \| ``"dev"`` \| ``"stage"`` \| ``"production"``
 
 ___
 
@@ -467,7 +469,7 @@ ___
 
 ### burnIdentity
 
-▸ **burnIdentity**(`masa`): `Promise`\<`boolean`\>
+▸ **burnIdentity**(`masa`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -477,13 +479,13 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
 ### burnSoulName
 
-▸ **burnSoulName**(`masa`, `soulName`): `Promise`\<`boolean`\>
+▸ **burnSoulName**(`masa`, `soulName`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -494,7 +496,7 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
@@ -568,7 +570,7 @@ ___
 
 ### createIdentity
 
-▸ **createIdentity**(`masa`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
+▸ **createIdentity**(`masa`): `Promise`\<[`BaseResultWithTokenId`](interfaces/BaseResultWithTokenId.md)\>
 
 #### Parameters
 
@@ -578,7 +580,7 @@ ___
 
 #### Returns
 
-`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResultWithTokenId`](interfaces/BaseResultWithTokenId.md)\>
 
 ___
 
@@ -1264,7 +1266,7 @@ ___
 
 ### login
 
-▸ **login**(`masa`): `Promise`\<`undefined` \| \{ `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\>
+▸ **login**(`masa`): `Promise`\<[`LoginResult`](interfaces/LoginResult.md)\>
 
 #### Parameters
 
@@ -1274,7 +1276,7 @@ ___
 
 #### Returns
 
-`Promise`\<`undefined` \| \{ `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\>
+`Promise`\<[`LoginResult`](interfaces/LoginResult.md)\>
 
 ___
 
@@ -1296,7 +1298,7 @@ ___
 
 ### mintGreen
 
-▸ **mintGreen**(`masa`, `paymentMethod`, `authorityAddress`, `signatureDate`, `signature`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
+▸ **mintGreen**(`masa`, `paymentMethod`, `authorityAddress`, `signatureDate`, `signature`): `Promise`\<[`BaseResultWithTokenId`](interfaces/BaseResultWithTokenId.md)\>
 
 #### Parameters
 
@@ -1310,7 +1312,7 @@ ___
 
 #### Returns
 
-`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResultWithTokenId`](interfaces/BaseResultWithTokenId.md)\>
 
 ___
 
@@ -1369,7 +1371,7 @@ ___
 
 ### purchaseIdentity
 
-▸ **purchaseIdentity**(`masa`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
+▸ **purchaseIdentity**(`masa`): `Promise`\<[`BaseResultWithTokenId`](interfaces/BaseResultWithTokenId.md)\>
 
 Identity only
 
@@ -1381,7 +1383,7 @@ Identity only
 
 #### Returns
 
-`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResultWithTokenId`](interfaces/BaseResultWithTokenId.md)\>
 
 ___
 
@@ -1470,7 +1472,7 @@ ___
 
 ### renewSoulName
 
-▸ **renewSoulName**(`masa`, `soulName`, `years`): `Promise`\<`boolean`\>
+▸ **renewSoulName**(`masa`, `soulName`, `years`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -1482,7 +1484,7 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
@@ -1541,7 +1543,7 @@ ___
 
 ### sendSoulName
 
-▸ **sendSoulName**(`masa`, `soulName`, `receiver`): `Promise`\<`boolean`\>
+▸ **sendSoulName**(`masa`, `soulName`, `receiver`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -1553,7 +1555,7 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 

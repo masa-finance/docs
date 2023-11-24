@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v3.13.0](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
@@ -69,7 +69,7 @@ MasaBase.masa
 
 ### burn
 
-▸ **burn**(`soulName`): `Promise`\<`boolean`\>
+▸ **burn**(`soulName`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -79,7 +79,7 @@ MasaBase.masa
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 ### renew
 
-▸ **renew**(`soulName`, `years`): `Promise`\<`boolean`\>
+▸ **renew**(`soulName`, `years`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -190,7 +190,7 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
@@ -212,7 +212,7 @@ ___
 
 ### send
 
-▸ **send**(`soulName`, `receiver`): `Promise`\<`boolean`\>
+▸ **send**(`soulName`, `receiver`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -223,7 +223,7 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 

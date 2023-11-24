@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / SoulName
+ - v3.13.0](../README.md) / [Exports](../modules.md) / SoulName
 
 # Class: SoulName
 
@@ -26,6 +26,7 @@
 - [burn](SoulName.md#burn)
 - [checkOrGiveAllowance](SoulName.md#checkorgiveallowance)
 - [createOverrides](SoulName.md#createoverrides)
+- [estimateGasWithSlippage](SoulName.md#estimategaswithslippage)
 - [formatPrice](SoulName.md#formatprice)
 - [getNetworkFeeInformation](SoulName.md#getnetworkfeeinformation)
 - [getPaymentAddress](SoulName.md#getpaymentaddress)
@@ -33,6 +34,7 @@
 - [getSoulnameData](SoulName.md#getsoulnamedata)
 - [isAvailable](SoulName.md#isavailable)
 - [purchase](SoulName.md#purchase)
+- [renew](SoulName.md#renew)
 - [sign](SoulName.md#sign)
 - [transfer](SoulName.md#transfer)
 - [verify](SoulName.md#verify)
@@ -89,7 +91,7 @@ ___
 
 ### burn
 
-▸ **burn**(`soulName`): `Promise`\<`boolean`\>
+▸ **burn**(`soulName`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -99,7 +101,7 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
@@ -145,6 +147,28 @@ ___
 #### Inherited from
 
 MasaModuleBase.createOverrides
+
+___
+
+### estimateGasWithSlippage
+
+▸ **estimateGasWithSlippage**(`estimateGas`, `args?`, `overrides?`): `Promise`\<`BigNumber`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `estimateGas` | (...`estimateGasArgAndOverrides`: `never`[]) => `Promise`\<`BigNumber`\> |
+| `args?` | `unknown`[] |
+| `overrides?` | `PayableOverrides` |
+
+#### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### Inherited from
+
+MasaModuleBase.estimateGasWithSlippage
 
 ___
 
@@ -287,6 +311,23 @@ purchase only name
 
 ___
 
+### renew
+
+▸ **renew**(`soulName`, `years`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `soulName` | `string` |
+| `years` | `number` |
+
+#### Returns
+
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+___
+
 ### sign
 
 ▸ **sign**(`soulName`, `soulNameLength`, `duration`, `metadataUrl`, `receiver`): `Promise`\<`undefined` \| \{ `authorityAddress`: `string` ; `signature`: `string`  }\>
@@ -311,7 +352,7 @@ ___
 
 ### transfer
 
-▸ **transfer**(`soulName`, `receiver`): `Promise`\<`boolean`\>
+▸ **transfer**(`soulName`, `receiver`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -322,7 +363,7 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 

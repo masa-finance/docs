@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / GenerateCreditScoreResult
+ - v3.13.0](../README.md) / [Exports](../modules.md) / GenerateCreditScoreResult
 
 # Interface: GenerateCreditScoreResult
 
@@ -18,7 +18,6 @@
 - [signature](GenerateCreditScoreResult.md#signature)
 - [signatureDate](GenerateCreditScoreResult.md#signaturedate)
 - [success](GenerateCreditScoreResult.md#success)
-- [tokenId](GenerateCreditScoreResult.md#tokenid)
 
 ## Properties
 
@@ -30,7 +29,7 @@ ___
 
 ### message
 
-• **message**: `string`
+• `Optional` **message**: `string`
 
 #### Inherited from
 
@@ -57,13 +56,3 @@ ___
 #### Inherited from
 
 [BaseResult](BaseResult.md).[success](BaseResult.md#success)
-
-___
-
-### tokenId
-
-• `Optional` **tokenId**: `string` \| `BigNumber`
-
-#### Inherited from
-
-[BaseResult](BaseResult.md).[tokenId](BaseResult.md#tokenid)

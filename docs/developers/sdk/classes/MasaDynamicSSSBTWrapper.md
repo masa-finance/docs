@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaDynamicSSSBTWrapper
+ - v3.13.0](../README.md) / [Exports](../modules.md) / MasaDynamicSSSBTWrapper
 
 # Class: MasaDynamicSSSBTWrapper\<Contract\>
 
@@ -98,7 +98,7 @@ ___
 
 ### burn
 
-▸ **burn**(`SBTId`): `Promise`\<`boolean`\>
+▸ **burn**(`SBTId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -108,7 +108,7 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Inherited from
 
@@ -178,7 +178,7 @@ ___
 
 ### mint
 
-▸ **mint**(`paymentMethod?`): `Promise`\<`boolean`\>
+▸ **mint**(`paymentMethod?`): `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
 #### Parameters
 
@@ -188,13 +188,13 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
 ___
 
 ### setState
 
-▸ **setState**(`state`, `stateValue`, `signature`, `signatureDate`, `authorityAddress`): `Promise`\<`boolean`\>
+▸ **setState**(`state`, `stateValue`, `signature`, `signatureDate`, `authorityAddress`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -208,13 +208,13 @@ ___
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
 ### signSetState
 
-▸ **signSetState**(`receiver`, `state`, `stateValue`): `Promise`\<`undefined` \| \{ `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
+▸ **signSetState**(`receiver`, `state`, `stateValue`): `Promise`\<`SignSetStateResult`\>
 
 #### Parameters
 
@@ -226,4 +226,4 @@ ___
 
 #### Returns
 
-`Promise`\<`undefined` \| \{ `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
+`Promise`\<`SignSetStateResult`\>

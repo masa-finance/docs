@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaConfig
+ - v3.13.0](../README.md) / [Exports](../modules.md) / MasaConfig
 
 # Interface: MasaConfig
 
@@ -9,7 +9,7 @@
 
 - [apiUrl](MasaConfig.md#apiurl)
 - [environment](MasaConfig.md#environment)
-- [force](MasaConfig.md#force)
+- [forceTransactions](MasaConfig.md#forcetransactions)
 - [network](MasaConfig.md#network)
 - [networkName](MasaConfig.md#networkname)
 - [signer](MasaConfig.md#signer)
@@ -29,9 +29,9 @@ ___
 
 ___
 
-### force
+### forceTransactions
 
-• `Readonly` **force**: `boolean`
+• `Readonly` **forceTransactions**: `boolean`
 
 ___
 

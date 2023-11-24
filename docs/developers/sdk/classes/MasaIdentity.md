@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.12.0-alpha.5](../README.md) / [Exports](../modules.md) / MasaIdentity
+ - v3.13.0](../README.md) / [Exports](../modules.md) / MasaIdentity
 
 # Class: MasaIdentity
 
@@ -83,21 +83,21 @@ MasaLinkable.masa
 
 ### burn
 
-▸ **burn**(): `Promise`\<`boolean`\>
+▸ **burn**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
 ### create
 
-▸ **create**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+▸ **create**(): `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
 #### Returns
 
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
 ___
 
