@@ -1,5 +1,5 @@
 [# Masa React
- - v3.4.6](../README.md) / [Exports](../modules.md) / FullContract
+ - v3.6.0](../README.md) / [Exports](../modules.md) / FullContract
 
 # Interface: FullContract
 
@@ -7,7 +7,7 @@
 
 - [`CustomGallerySBT`](CustomGallerySBT.md)
 
-- `MasaSBTWrapper`<`MasaSBT`\>
+- `MasaSBTWrapper`\<`MasaSBT`\>
 
   ↳ **`FullContract`**
 
@@ -45,11 +45,11 @@ ___
 
 ### burn
 
-• **burn**: (`SBTId`: `BigNumber`) => `Promise`<`boolean`\>
+• **burn**: (`SBTId`: `BigNumber`) => `Promise`\<`BaseResult`\>
 
 #### Type declaration
 
-▸ (`SBTId`): `Promise`<`boolean`\>
+▸ (`SBTId`): `Promise`\<`BaseResult`\>
 
 ##### Parameters
 
@@ -59,7 +59,7 @@ ___
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`BaseResult`\>
 
 #### Inherited from
 
@@ -79,11 +79,11 @@ ___
 
 ### getMetadata
 
-• **getMetadata**: (`item`: { `tokenId`: `any` ; `tokenUri`: `any`  }) => `Promise`<{ `description`: `string` ; `image`: `string` ; `name`: `string`  }\>
+• **getMetadata**: (`item`: \{ `tokenId`: `any` ; `tokenUri`: `any`  }) => `Promise`\<\{ `description`: `string` ; `image`: `string` ; `name`: `string`  }\>
 
 #### Type declaration
 
-▸ (`item`): `Promise`<{ `description`: `string` ; `image`: `string` ; `name`: `string`  }\>
+▸ (`item`): `Promise`\<\{ `description`: `string` ; `image`: `string` ; `name`: `string`  }\>
 
 ##### Parameters
 
@@ -95,7 +95,7 @@ ___
 
 ##### Returns
 
-`Promise`<{ `description`: `string` ; `image`: `string` ; `name`: `string`  }\>
+`Promise`\<\{ `description`: `string` ; `image`: `string` ; `name`: `string`  }\>
 
 #### Inherited from
 
@@ -115,11 +115,11 @@ ___
 
 ### list
 
-• **list**: (`address?`: `string`) => `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+• **list**: (`address?`: `string`) => `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Type declaration
 
-▸ (`address?`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ (`address?`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 ##### Parameters
 
@@ -129,7 +129,7 @@ ___
 
 ##### Returns
 
-`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Inherited from
 
@@ -139,11 +139,11 @@ ___
 
 ### loadSBTIDs
 
-• `Protected` **loadSBTIDs**: (`sbtIDs`: `BigNumber`[]) => `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+• `Protected` **loadSBTIDs**: (`sbtIDs`: `BigNumber`[]) => `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Type declaration
 
-▸ (`sbtIDs`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ (`sbtIDs`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 ##### Parameters
 
@@ -153,7 +153,7 @@ ___
 
 ##### Returns
 
-`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Inherited from
 
@@ -163,11 +163,11 @@ ___
 
 ### loadSBTs
 
-• `Protected` **loadSBTs**: (`identityIdOrAddress`: `string` \| `BigNumber`) => `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+• `Protected` **loadSBTs**: (`identityIdOrAddress`: `string` \| `BigNumber`) => `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Type declaration
 
-▸ (`identityIdOrAddress`): `Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+▸ (`identityIdOrAddress`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 ##### Parameters
 
@@ -177,7 +177,7 @@ ___
 
 ##### Returns
 
-`Promise`<{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
 
 #### Inherited from
 

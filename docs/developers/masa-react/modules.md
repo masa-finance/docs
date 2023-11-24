@@ -1,8 +1,8 @@
 [# Masa React
- - v3.4.6](README.md) / Exports
+ - v3.6.0](README.md) / Exports
 
 # # Masa React
- - v3.4.6
+ - v3.6.0
 
 ## Table of contents
 
@@ -34,7 +34,7 @@
 - [ModalLoading](modules.md#modalloading)
 - [fetchContractsAndTokens](modules.md#fetchcontractsandtokens)
 - [hydrateTokensWithMetadata](modules.md#hydratetokenswithmetadata)
-- [isIdentityContractAvailable](modules.md#isidentitycontractavailible)
+- [isIdentityContractAvailable](modules.md#isidentitycontractavailable)
 - [openAuthenticateModal](modules.md#openauthenticatemodal)
 - [openCreateSoulnameModal](modules.md#opencreatesoulnamemodal)
 - [useAuthenticate](modules.md#useauthenticate)
@@ -73,7 +73,7 @@
 
 ### MasaQueryClientContext
 
-• `Const` **MasaQueryClientContext**: `Context`<`undefined` \| `QueryClient`\>
+• `Const` **MasaQueryClientContext**: `Context`\<`undefined` \| `QueryClient`\>
 
 ## Functions
 
@@ -118,7 +118,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `props` | { `closeOnSuccess?`: `boolean` ; `onError?`: () => `void` ; `onMintError?`: () => `void` ; `onMintSuccess?`: (`result`: `CreateSoulNameResult`) => `void` ; `onRegisterFinish?`: () => `void` ; `onSuccess?`: () => `void`  } & `NiceModalHocProps` |
+| `props` | \{ `closeOnSuccess?`: `boolean` ; `onError?`: () => `void` ; `onMintError?`: () => `void` ; `onMintSuccess?`: (`result`: `CreateSoulNameResult`) => `void` ; `onRegisterFinish?`: () => `void` ; `onSuccess?`: () => `void`  } & `NiceModalHocProps` |
 | `context?` | `any` |
 
 #### Returns
@@ -203,7 +203,7 @@ ___
 
 ### fetchContractsAndTokens
 
-▸ **fetchContractsAndTokens**(`customContracts`): `Promise`<[`FullContractWithTokens`](interfaces/FullContractWithTokens.md)[]\>
+▸ **fetchContractsAndTokens**(`customContracts`): `Promise`\<[`FullContractWithTokens`](interfaces/FullContractWithTokens.md)[]\>
 
 #### Parameters
 
@@ -213,13 +213,13 @@ ___
 
 #### Returns
 
-`Promise`<[`FullContractWithTokens`](interfaces/FullContractWithTokens.md)[]\>
+`Promise`\<[`FullContractWithTokens`](interfaces/FullContractWithTokens.md)[]\>
 
 ___
 
 ### hydrateTokensWithMetadata
 
-▸ **hydrateTokensWithMetadata**(`contractsAndTokens`): `Promise`<[`HydratedContract`](interfaces/HydratedContract.md)[]\>
+▸ **hydrateTokensWithMetadata**(`contractsAndTokens`): `Promise`\<[`HydratedContract`](interfaces/HydratedContract.md)[]\>
 
 #### Parameters
 
@@ -229,7 +229,7 @@ ___
 
 #### Returns
 
-`Promise`<[`HydratedContract`](interfaces/HydratedContract.md)[]\>
+`Promise`\<[`HydratedContract`](interfaces/HydratedContract.md)[]\>
 
 ___
 
@@ -251,7 +251,7 @@ ___
 
 ### openAuthenticateModal
 
-▸ **openAuthenticateModal**(`«destructured»`): `Promise`<`unknown`\>
+▸ **openAuthenticateModal**(`«destructured»`): `Promise`\<`unknown`\>
 
 #### Parameters
 
@@ -261,13 +261,13 @@ ___
 
 #### Returns
 
-`Promise`<`unknown`\>
+`Promise`\<`unknown`\>
 
 ___
 
 ### openCreateSoulnameModal
 
-▸ **openCreateSoulnameModal**(`«destructured»`): `Promise`<`unknown`\>
+▸ **openCreateSoulnameModal**(`«destructured»`): `Promise`\<`unknown`\>
 
 #### Parameters
 
@@ -283,7 +283,7 @@ ___
 
 #### Returns
 
-`Promise`<`unknown`\>
+`Promise`\<`unknown`\>
 
 ___
 
@@ -297,7 +297,7 @@ ___
 | :------ | :------ |
 | `«destructured»` | `Object` |
 | › `onAuthenticateError?` | () => `void` |
-| › `onAuthenticateSuccess?` | (`payload`: { `address?`: `string` ; `walletType?`: `string`  }) => `void` |
+| › `onAuthenticateSuccess?` | (`payload`: \{ `address?`: `string` ; `walletType?`: `string`  }) => `void` |
 | › `onError?` | () => `void` |
 | › `onRegisterFinish?` | () => `void` |
 | › `onSuccess?` | () => `void` |
@@ -309,7 +309,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `isAuthenticateModalOpen` | `boolean` |
-| `openAuthModal` | () => `Promise`<`void`\> |
+| `openAuthModal` | () => `Promise`\<`void`\> |
 
 ___
 
@@ -323,7 +323,7 @@ ___
 | :------ | :------ |
 | `«destructured»` | `Object` |
 | › `onAuthenticateError?` | () => `void` |
-| › `onAuthenticateSuccess?` | (`payload`: { `address?`: `string` ; `walletType?`: `string`  }) => `void` |
+| › `onAuthenticateSuccess?` | (`payload`: \{ `address?`: `string` ; `walletType?`: `string`  }) => `void` |
 | › `onClose?` | () => `void` |
 
 #### Returns
@@ -334,7 +334,7 @@ ___
 | :------ | :------ |
 | `isAuthenticating` | `boolean` |
 | `needsWalletConnection` | `boolean` |
-| `onAuthenticateStart` | () => `Promise`<``null`` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\> |
+| `onAuthenticateStart` | () => `Promise`\<``null`` \| `LoginResult`\> |
 | `showAuthenticateView` | `undefined` \| `boolean` |
 | `showConnectedView` | `undefined` \| ``null`` \| `boolean` |
 | `showSwitchWalletButton` | `undefined` \| `boolean` |
@@ -362,8 +362,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `createCreditScore` | () => `Promise`<`undefined` \| `boolean`\> |
-| `handleCreateCreditScore` | () => `Promise`<`undefined` \| `boolean`\> |
+| `createCreditScore` | () => `Promise`\<`undefined` \| `boolean`\> |
+| `handleCreateCreditScore` | () => `Promise`\<`undefined` \| `boolean`\> |
 | `isCreatingCreditScore` | `boolean` |
 
 ___
@@ -379,10 +379,10 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `creditScores` | `undefined` \| ``null`` \| `CreditScoreDetails`[] |
-| `getCreditScores` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| `CreditScoreDetails`[], `unknown`\>\> |
+| `getCreditScores` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<``null`` \| `CreditScoreDetails`[], `unknown`\>\> |
 | `isCreditScoresLoading` | `boolean` |
 | `isLoadingCreditScores` | `boolean` |
-| `reloadCreditScores` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| `CreditScoreDetails`[], `unknown`\>\> |
+| `reloadCreditScores` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<``null`` \| `CreditScoreDetails`[], `unknown`\>\> |
 
 ___
 
@@ -407,8 +407,8 @@ ___
 | `error` | `unknown` |
 | `isFetching` | `boolean` |
 | `isLoading` | `boolean` |
-| `refetchContracts` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| [`FullContract`](interfaces/FullContract.md)[], `unknown`\>\> |
-| `status` | ``"loading"`` \| ``"error"`` \| ``"success"`` |
+| `refetchContracts` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<``null`` \| [`FullContract`](interfaces/FullContract.md)[], `unknown`\>\> |
+| `status` | ``"error"`` \| ``"loading"`` \| ``"success"`` |
 
 ___
 
@@ -432,8 +432,8 @@ ___
 | `error` | `unknown` |
 | `isFetching` | `boolean` |
 | `isLoading` | `boolean` |
-| `reloadCustomSBTs` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| [`HydratedContract`](interfaces/HydratedContract.md)[], `unknown`\>\> |
-| `status` | ``"loading"`` \| ``"error"`` \| ``"success"`` |
+| `reloadCustomSBTs` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<``null`` \| [`HydratedContract`](interfaces/HydratedContract.md)[], `unknown`\>\> |
+| `status` | ``"error"`` \| ``"loading"`` \| ``"success"`` |
 
 ___
 
@@ -501,11 +501,11 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `getGreens` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| `GreenDetails`[], `unknown`\>\> |
+| `getGreens` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<``null`` \| `GreenDetails`[], `unknown`\>\> |
 | `greens` | `undefined` \| ``null`` \| `GreenDetails`[] |
 | `isGreensLoading` | `boolean` |
 | `isLoadingGreens` | `boolean` |
-| `reloadGreens` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| `GreenDetails`[], `unknown`\>\> |
+| `reloadGreens` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<``null`` \| `GreenDetails`[], `unknown`\>\> |
 
 ___
 
@@ -519,10 +519,10 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `createGreen` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<``null`` \| `GreenBaseResult`\> |
-| `generateGreen` | (`phoneNumber`: `string`) => `Promise`<``null`` \| `GenerateGreenResult`\> |
-| `handleCreateGreen` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`<``null`` \| `GreenBaseResult`\> |
-| `handleGenerateGreen` | (`phoneNumber`: `string`) => `Promise`<``null`` \| `GenerateGreenResult`\> |
+| `createGreen` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`\<``null`` \| `GreenBaseResult`\> |
+| `generateGreen` | (`phoneNumber`: `string`) => `Promise`\<``null`` \| `GenerateGreenResult`\> |
+| `handleCreateGreen` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`\<``null`` \| `GreenBaseResult`\> |
+| `handleGenerateGreen` | (`phoneNumber`: `string`) => `Promise`\<``null`` \| `GenerateGreenResult`\> |
 | `isCreatingGreen` | `boolean` |
 | `isGeneratingGreen` | `boolean` |
 
@@ -538,33 +538,33 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `getIdentity` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| ``null`` \| { `address`: `string` ; `identityId?`: `BigNumber`  }, `unknown`\>\> |
+| `getIdentity` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<`undefined` \| ``null`` \| \{ `address`: `string` ; `identityId?`: `BigNumber`  }, `unknown`\>\> |
 | `hasIdentity` | `undefined` \| ``false`` \| `BigNumber` |
-| `identity` | `undefined` \| ``null`` \| { `address`: `string` ; `identityId?`: `BigNumber`  } |
+| `identity` | `undefined` \| ``null`` \| \{ `address`: `string` ; `identityId?`: `BigNumber`  } |
 | `isFetchingIdentity` | `boolean` |
 | `isIdentityAvailableInNetwork` | `undefined` \| `boolean` |
 | `isIdentityLoading` | `boolean` |
 | `isLoadingIdentity` | `boolean` |
-| `reloadIdentity` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| ``null`` \| { `address`: `string` ; `identityId?`: `BigNumber`  }, `unknown`\>\> |
+| `reloadIdentity` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<`undefined` \| ``null`` \| \{ `address`: `string` ; `identityId?`: `BigNumber`  }, `unknown`\>\> |
 
 ___
 
 ### useIdentityListen
 
-▸ **useIdentityListen**(`«destructured»`): `AsyncState`<`undefined`\>
+▸ **useIdentityListen**(`«destructured»`): `AsyncState`\<`undefined`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `getIdentity` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| ``null`` \| { `address`: `string` ; `identityId?`: `BigNumber`  }, `unknown`\>\> |
-| › `identity?` | ``null`` \| { `address`: `string` ; `identityId?`: `BigNumber`  } |
+| › `getIdentity` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<`undefined` \| ``null`` \| \{ `address`: `string` ; `identityId?`: `BigNumber`  }, `unknown`\>\> |
+| › `identity?` | ``null`` \| \{ `address`: `string` ; `identityId?`: `BigNumber`  } |
 | › `sessionAddress?` | `string` |
 
 #### Returns
 
-`AsyncState`<`undefined`\>
+`AsyncState`\<`undefined`\>
 
 ___
 
@@ -578,25 +578,25 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handlePurchaseIdentity` | () => `Promise`<`undefined` \| `boolean` \| `Error` & { `code?`: `string`  }\> |
-| `handlePurchaseIdentityWithSoulname` | (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`, `style?`: `string`) => `Promise`<`undefined` \| { `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult` \| `Error` & { `code?`: `string`  }\> |
-| `hasPurchasedIdentity` | `undefined` \| `boolean` \| `Error` & { `code?`: `string`  } |
-| `hasPurchasedIdentityWithSoulName` | `undefined` \| { `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult` \| `Error` & { `code?`: `string`  } |
+| `handlePurchaseIdentity` | () => `Promise`\<`undefined` \| `boolean` \| `Error` & \{ `code?`: `string`  }\> |
+| `handlePurchaseIdentityWithSoulname` | (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`, `style?`: `string`) => `Promise`\<`undefined` \| \{ `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult` \| `Error` & \{ `code?`: `string`  }\> |
+| `hasPurchasedIdentity` | `undefined` \| `boolean` \| `Error` & \{ `code?`: `string`  } |
+| `hasPurchasedIdentityWithSoulName` | `undefined` \| \{ `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult` \| `Error` & \{ `code?`: `string`  } |
 | `isPurchasingIdentity` | `boolean` |
 | `isPurchasingIdentityWithSoulName` | `boolean` |
-| `purchaseIdentity` | () => `Promise`<`undefined` \| `boolean` \| `Error` & { `code?`: `string`  }\> |
+| `purchaseIdentity` | () => `Promise`\<`undefined` \| `boolean` \| `Error` & \{ `code?`: `string`  }\> |
 | `purchaseIdentityError` | `undefined` \| `Error` |
-| `purchaseIdentityWithSoulName` | (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`, `style?`: `string`) => `Promise`<`undefined` \| { `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult` \| `Error` & { `code?`: `string`  }\> |
+| `purchaseIdentityWithSoulName` | (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`, `style?`: `string`) => `Promise`\<`undefined` \| \{ `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult` \| `Error` & \{ `code?`: `string`  }\> |
 
 ___
 
 ### useMasaClient
 
-▸ **useMasaClient**(): { `isLoadingMasa?`: `undefined` ; `masa`: `undefined` = undefined; `masaAddress`: `undefined` \| \`0x${string}\` ; `masaChainId`: `undefined` \| `number` ; `masaNetwork`: `undefined` ; `sdk`: `undefined` = undefined } \| { `isLoadingMasa`: `boolean` ; `masa`: `undefined` \| `Masa` ; `masaAddress`: `undefined` \| \`0x${string}\` ; `masaChainId`: `undefined` \| `number` ; `masaNetwork`: `undefined` \| `NetworkName` ; `sdk`: `undefined` \| `Masa` = masa }
+▸ **useMasaClient**(): \{ `isLoadingMasa?`: `undefined` ; `masa`: `undefined` = undefined; `masaAddress`: `undefined` \| \`0x$\{string}\` ; `masaChainId`: `undefined` \| `number` ; `masaNetwork`: `undefined`  } \| \{ `isLoadingMasa`: `boolean` ; `masa`: `undefined` \| `Masa` ; `masaAddress`: `undefined` \| \`0x$\{string}\` ; `masaChainId`: `undefined` \| `number` ; `masaNetwork`: `undefined` \| `NetworkName`  }
 
 #### Returns
 
-{ `isLoadingMasa?`: `undefined` ; `masa`: `undefined` = undefined; `masaAddress`: `undefined` \| \`0x${string}\` ; `masaChainId`: `undefined` \| `number` ; `masaNetwork`: `undefined` ; `sdk`: `undefined` = undefined } \| { `isLoadingMasa`: `boolean` ; `masa`: `undefined` \| `Masa` ; `masaAddress`: `undefined` \| \`0x${string}\` ; `masaChainId`: `undefined` \| `number` ; `masaNetwork`: `undefined` \| `NetworkName` ; `sdk`: `undefined` \| `Masa` = masa }
+\{ `isLoadingMasa?`: `undefined` ; `masa`: `undefined` = undefined; `masaAddress`: `undefined` \| \`0x$\{string}\` ; `masaChainId`: `undefined` \| `number` ; `masaNetwork`: `undefined`  } \| \{ `isLoadingMasa`: `boolean` ; `masa`: `undefined` \| `Masa` ; `masaAddress`: `undefined` \| \`0x$\{string}\` ; `masaChainId`: `undefined` \| `number` ; `masaNetwork`: `undefined` \| `NetworkName`  }
 
 ___
 
@@ -628,7 +628,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `UseMasaSdkArgs` & { `address`: `undefined` \| \`0x${string}\`  } |
+| `«destructured»` | `UseMasaSdkArgs` & \{ `address`: `undefined` \| \`0x$\{string}\`  } |
 | `deps` | `unknown`[] |
 
 #### Returns
@@ -647,22 +647,22 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `activeChain` | `undefined` \| `Chain` & { `unsupported?`: `boolean`  } |
+| `activeChain` | `undefined` \| `ChainConstants` & `ChainConfig`\<`undefined` \| `ChainFormatters`\> & \{ `unsupported?`: `boolean`  } |
 | `activeChainId` | `number` |
 | `activeNetwork` | `string` |
 | `availableChains` | `Chain`[] |
 | `canProgrammaticallySwitchNetwork` | `boolean` |
 | `chains` | `Chain`[] |
-| `connectors?` | `Connector`<`any`, `any`\>[] |
+| `connectors?` | `Connector`\<`any`, `any`\>[] |
 | `currentNetwork` | `undefined` \| `Network` |
 | `currentNetworkNew` | `GetNetworkResult` |
 | `isActiveChainUnsupported` | `boolean` |
 | `isSwitchingChain` | `boolean` |
 | `networkError` | ``null`` \| `Error` |
-| `pendingConnector?` | `Connector`<`any`, `any`\> |
+| `pendingConnector?` | `Connector`\<`any`, `any`\> |
 | `stopSwitching` | () => `void` |
 | `switchNetwork?` | (`chainId?`: `number`) => `void` |
-| `switchNetworkAsync?` | (`chainId_?`: `number`) => `Promise`<`Chain`\> |
+| `switchNetworkAsync?` | (`chainId_?`: `number`) => `Promise`\<`Chain`\> |
 | `switchNetworkByName` | (`forcedNetworkParam`: `NetworkName`) => `void` |
 | `switchingToChain` | `undefined` \| ``null`` \| `number` |
 
@@ -677,7 +677,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `activeConnector?` | `Connector`<`any`, `any`\> |
+| › `activeConnector?` | `Connector`\<`any`, `any`\> |
 | › `networkError` | ``null`` \| `Error` |
 | › `stopSwitching` | () => `void` |
 
@@ -695,7 +695,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `Partial`<{ `onMintError?`: () => `void` ; `onMintSuccess?`: (`result`: `CreateSoulNameResult`) => `void` ; `onRegisterFinish?`: () => `void`  }\> |
+| `«destructured»` | `Partial`\<\{ `onMintError?`: () => `void` ; `onMintSuccess?`: (`result`: `CreateSoulNameResult`) => `void` ; `onRegisterFinish?`: () => `void`  }\> |
 
 #### Returns
 
@@ -706,7 +706,7 @@ ___
 | `errorRegisterSoulname` | `undefined` \| `Error` |
 | `hasRegisteredSoulname` | `undefined` \| `CreateSoulNameResult` |
 | `isRegisteringSoulname` | `boolean` |
-| `onRegisterSoulname` | () => `Promise`<`CreateSoulNameResult`\> |
+| `onRegisterSoulname` | () => `Promise`\<`CreateSoulNameResult`\> |
 
 ___
 
@@ -727,9 +727,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `SBTs` | `undefined` \| ``null`` \| { `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] \| { `message`: `string` = err.message }[] |
+| `SBTs` | `undefined` \| ``null`` \| \{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] \| \{ `message`: `string` = err.message }[] |
 | `currentTokenAddress` | `string` |
-| `getSBTs` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| { `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] \| { `message`: `string` = err.message }[], `unknown`\>\> |
+| `getSBTs` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<``null`` \| \{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] \| \{ `message`: `string` = err.message }[], `unknown`\>\> |
 | `isLoadingSBTs` | `boolean` |
 
 ___
@@ -744,10 +744,10 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `checkLogin` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| `boolean`, `unknown`\>\> |
-| `getSession` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| `ISession`, `unknown`\>\> |
-| `handleLogin` | () => `Promise`<``null`` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\> |
-| `handleLogout` | (`logoutCallback?`: () => `void`) => `Promise`<`void`\> |
+| `checkLogin` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<``null`` \| `boolean`, `unknown`\>\> |
+| `getSession` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<``null`` \| `ISession`, `unknown`\>\> |
+| `handleLogin` | () => `Promise`\<``null`` \| `LoginResult`\> |
+| `handleLogout` | (`logoutCallback?`: () => `void`) => `Promise`\<`void`\> |
 | `hasSession` | `undefined` \| ``null`` \| `boolean` |
 | `isCheckingLogin` | `boolean` |
 | `isFetchingSession` | `boolean` |
@@ -756,9 +756,9 @@ ___
 | `isLoggingIn` | `boolean` |
 | `isLoggingOut` | `boolean` |
 | `isSessionLoading` | `boolean` |
-| `loginSession` | () => `Promise`<``null`` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\> |
-| `loginSessionAsync` | () => `Promise`<``null`` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\> |
-| `logoutSession` | () => `Promise`<`undefined` \| { `status`: `string`  }\> |
+| `loginSession` | () => `Promise`\<``null`` \| `LoginResult`\> |
+| `loginSessionAsync` | () => `Promise`\<``null`` \| `LoginResult`\> |
+| `logoutSession` | () => `Promise`\<`undefined` \| \{ `status`: `string`  }\> |
 | `session` | `undefined` \| ``null`` \| `ISession` |
 | `sessionAddress` | `undefined` \| `string` |
 
@@ -776,8 +776,8 @@ ___
 | :------ | :------ |
 | `isLoggingIn` | `boolean` |
 | `isLoggingOut` | `boolean` |
-| `loginSessionAsync` | () => `Promise`<``null`` \| { `address`: `string` ; `cookie?`: `string` ; `userId`: `string` \| `BigNumber`  }\> |
-| `logoutSession` | () => `Promise`<`undefined` \| { `status`: `string`  }\> |
+| `loginSessionAsync` | () => `Promise`\<``null`` \| `LoginResult`\> |
+| `logoutSession` | () => `Promise`\<`undefined` \| \{ `status`: `string`  }\> |
 
 ___
 
@@ -790,9 +790,9 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `checkLogin` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<``null`` \| `boolean`, `unknown`\>\> |
+| › `checkLogin` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<``null`` \| `boolean`, `unknown`\>\> |
 | › `hasSession?` | ``null`` \| `boolean` |
-| › `logoutSession` | () => `Promise`<`undefined` \| { `status`: `string`  }\> |
+| › `logoutSession` | () => `Promise`\<`undefined` \| \{ `status`: `string`  }\> |
 | › `sessionAddress?` | `string` |
 
 #### Returns
@@ -815,10 +815,10 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `getSoulnames` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `string`[], `unknown`\>\> |
+| `getSoulnames` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<`undefined` \| `string`[], `unknown`\>\> |
 | `isLoadingSoulnames` | `boolean` |
 | `isSoulnamesLoading` | `boolean` |
-| `reloadSoulnames` | <TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`<`TPageData`\>) => `Promise`<`QueryObserverResult`<`undefined` \| `string`[], `unknown`\>\> |
+| `reloadSoulnames` | \<TPageData\>(`options?`: `RefetchOptions` & `RefetchQueryFilters`\<`TPageData`\>) => `Promise`\<`QueryObserverResult`\<`undefined` \| `string`[], `unknown`\>\> |
 | `soulnames` | `undefined` \| `string`[] |
 
 ___
@@ -834,9 +834,9 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `errorPurchaseSoulName` | `undefined` \| `Error` |
-| `hasPurchasedSoulName` | `undefined` \| `CreateSoulNameResult` \| `Error` & { `code?`: `string`  } |
+| `hasPurchasedSoulName` | `undefined` \| `CreateSoulNameResult` \| `Error` & \{ `code?`: `string`  } |
 | `isPurchasingSoulName` | `boolean` |
-| `purchaseSoulName` | (`soulname`: `string`, `registrationPeriod`: `number`, `paymentMethod`: `PaymentMethod`, `style?`: `string`) => `Promise`<`undefined` \| `CreateSoulNameResult` \| `Error` & { `code?`: `string`  }\> |
+| `purchaseSoulName` | (`soulname`: `string`, `registrationPeriod`: `number`, `paymentMethod`: `PaymentMethod`, `style?`: `string`) => `Promise`\<`undefined` \| `CreateSoulNameResult` \| `Error` & \{ `code?`: `string`  }\> |
 
 ___
 
@@ -850,14 +850,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `handleChangeSoulname` | (`event`: `ChangeEvent`<`HTMLInputElement`\>) => `void` |
+| `handleChangeSoulname` | (`event`: `ChangeEvent`\<`HTMLInputElement`\>) => `void` |
 | `isAvailable` | `undefined` \| `boolean` |
 | `isLoadingAvailability` | `boolean` |
 | `isLoadingRegistrationPrice` | `boolean` |
 | `paymentMethod` | `PaymentMethod` |
 | `registrationPeriod` | `number` |
 | `registrationPrice` | `undefined` \| `string` |
-| `setSoulname` | `Dispatch`<`SetStateAction`<`string`\>\> |
+| `setSoulname` | `Dispatch`\<`SetStateAction`\<`string`\>\> |
 | `soulNameError` | `undefined` \| `string` |
 | `soulname` | `string` |
 | `updatePaymentMethod` | (`e`: `unknown`) => `void` |
@@ -879,7 +879,7 @@ ___
 | `extension` | `undefined` \| `string` |
 | `isLoadingEnabledMethods` | `boolean` |
 | `isLoadingExtension` | `boolean` |
-| `paymentMethods` | { `name`: `PaymentMethod` ; `value`: `string`  }[] |
+| `paymentMethods` | \{ `name`: `PaymentMethod` ; `value`: `string`  }[] |
 
 ___
 

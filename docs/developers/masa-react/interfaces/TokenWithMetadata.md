@@ -1,5 +1,5 @@
 [# Masa React
- - v3.4.6](../README.md) / [Exports](../modules.md) / TokenWithMetadata
+ - v3.6.0](../README.md) / [Exports](../modules.md) / TokenWithMetadata
 
 # Interface: TokenWithMetadata
 

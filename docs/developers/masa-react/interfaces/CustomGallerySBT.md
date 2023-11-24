@@ -1,5 +1,5 @@
 [# Masa React
- - v3.4.6](../README.md) / [Exports](../modules.md) / CustomGallerySBT
+ - v3.6.0](../README.md) / [Exports](../modules.md) / CustomGallerySBT
 
 # Interface: CustomGallerySBT
 
@@ -28,11 +28,11 @@ ___
 
 ### getMetadata
 
-• **getMetadata**: (`item`: { `tokenId`: `any` ; `tokenUri`: `any`  }) => `Promise`<{ `description`: `string` ; `image`: `string` ; `name`: `string`  }\>
+• **getMetadata**: (`item`: \{ `tokenId`: `any` ; `tokenUri`: `any`  }) => `Promise`\<\{ `description`: `string` ; `image`: `string` ; `name`: `string`  }\>
 
 #### Type declaration
 
-▸ (`item`): `Promise`<{ `description`: `string` ; `image`: `string` ; `name`: `string`  }\>
+▸ (`item`): `Promise`\<\{ `description`: `string` ; `image`: `string` ; `name`: `string`  }\>
 
 ##### Parameters
 
@@ -44,7 +44,7 @@ ___
 
 ##### Returns
 
-`Promise`<{ `description`: `string` ; `image`: `string` ; `name`: `string`  }\>
+`Promise`\<\{ `description`: `string` ; `image`: `string` ; `name`: `string`  }\>
 
 ___
 
