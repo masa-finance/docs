@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.13.0](../README.md) / [Exports](../modules.md) / BaseResultWithTokenId
+ - v3.13.3](../README.md) / [Exports](../modules.md) / BaseResultWithTokenId
 
 # Interface: BaseResultWithTokenId
 
