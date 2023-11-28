@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.13.3](README.md) / Exports
+ - v3.14.1](README.md) / Exports
 
 # # Masa SDK
- - v3.13.3
+ - v3.14.1
 
 ## Table of contents
 
@@ -304,7 +304,7 @@ ___
 
 ### NetworkName
 
-Ƭ **NetworkName**: ``"goerli"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"opbnbtest"`` \| ``"opbnb"`` \| ``"basegoerli"`` \| ``"base"`` \| ``"scrollsepolia"`` \| ``"scroll"`` \| ``"unknown"``
+Ƭ **NetworkName**: ``"goerli"`` \| ``"sepolia"`` \| ``"ethereum"`` \| ``"alfajores"`` \| ``"celo"`` \| ``"mumbai"`` \| ``"polygon"`` \| ``"bsctest"`` \| ``"bsc"`` \| ``"opbnbtest"`` \| ``"opbnb"`` \| ``"basegoerli"`` \| ``"basesepolia"`` \| ``"base"`` \| ``"scrollsepolia"`` \| ``"scroll"`` \| ``"unknown"``
 
 ___
 
