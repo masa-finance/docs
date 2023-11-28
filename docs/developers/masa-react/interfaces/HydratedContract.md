@@ -1,5 +1,5 @@
 [# Masa React
- - v3.6.0](../README.md) / [Exports](../modules.md) / HydratedContract
+ - v3.7.0](../README.md) / [Exports](../modules.md) / HydratedContract
 
 # Interface: HydratedContract
 
