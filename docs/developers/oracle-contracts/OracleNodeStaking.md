@@ -1,12 +1,12 @@
 # OracleNodeStaking
 
+*Masa Finance*
 
+> OracleNodeStaking
 
+This contract is used for staking tokens in the Oracle Node
 
-
-
-
-
+*The contract inherits from ReentrancyGuard to prevent re-entrancy attacks*
 
 ## Methods
 
@@ -16,21 +16,21 @@
 function balanceOf(address account) external view returns (uint256)
 ```
 
+Function to check the balance of a particular account
 
-
-
+*This is called by the oracle node to check isStaked status*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| account | address | undefined |
+| account | address | The address of the account to be checked |
 
 #### Returns
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256 | undefined |
+| _0 | uint256 | The balance of the account |
 
 ### masaToken
 
@@ -49,21 +49,38 @@ function masaToken() external view returns (contract IERC20)
 |---|---|---|
 | _0 | contract IERC20 | undefined |
 
-### stake
+### minimumStake
 
 ```solidity
-function stake(uint256 amount) external nonpayable
+function minimumStake() external view returns (uint256)
 ```
 
 
 
 
 
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### stake
+
+```solidity
+function stake(uint256 amount) external nonpayable
+```
+
+Function to stake tokens
+
+*It updates the stake, transfers the tokens to the contract, mints the token representing the stake, and emits the Staked event*
+
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| amount | uint256 | undefined |
+| amount | uint256 | The amount of tokens to be staked |
 
 ### stakes
 
@@ -118,7 +135,7 @@ function withdraw(uint256 amount) external nonpayable
 
 | Name | Type | Description |
 |---|---|---|
-| amount | uint256 | undefined |
+| amount | uint256 | The amount of tokens to be withdrawn |
 
 
 

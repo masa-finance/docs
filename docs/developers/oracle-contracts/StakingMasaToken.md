@@ -1,10 +1,10 @@
 # StakingMasaToken
 
+*Masa Finance*
 
+> StakingMasaToken
 
-
-
-
+This contract is used for the token representing the stake
 
 
 
@@ -152,15 +152,15 @@ function balanceOf(address account) external view returns (uint256)
 function burn(uint256 amount) external nonpayable
 ```
 
+Allows an account with the burner role to burn (destroy) tokens from their balance.
 
-
-*Destroys `amount` tokens from the caller. See {ERC20-_burn}.*
+*It emits a log event and then calls the burn function from the parent contract.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| amount | uint256 | undefined |
+| amount | uint256 | The amount of tokens to be burned |
 
 ### burnFrom
 
@@ -168,16 +168,16 @@ function burn(uint256 amount) external nonpayable
 function burnFrom(address account, uint256 amount) external nonpayable
 ```
 
+Allows an account with the burner role to burn (destroy) tokens from another account.
 
-
-*Destroys `amount` tokens from `account`, deducting from the caller&#39;s allowance. See {ERC20-_burn} and {ERC20-allowance}. Requirements: - the caller must have allowance for ``accounts``&#39;s tokens of at least `amount`.*
+*It emits a log event and then calls the burnFrom function from the parent contract.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| account | address | undefined |
-| amount | uint256 | undefined |
+| account | address | The account from which tokens are burned |
+| amount | uint256 | The amount of tokens to be burned |
 
 ### decimals
 
