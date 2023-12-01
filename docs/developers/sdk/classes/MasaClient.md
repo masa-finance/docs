@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.14.2](../README.md) / [Exports](../modules.md) / MasaClient
+ - v3.14.4](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -208,7 +208,7 @@ ___
 
 ### post
 
-▸ **post**\<`Payload`, `Result`\>(`endpoint`, `data`, `silent?`): `Promise`\<`undefined` \| `Result`\>
+▸ **post**\<`Payload`, `Result`\>(`endpoint`, `data`, `silent?`): `Promise`\<\{ `data`: `undefined` \| `Result` ; `status`: `undefined` \| `number` ; `statusText`: `undefined` \| `string`  }\>
 
 #### Type parameters
 
@@ -227,4 +227,4 @@ ___
 
 #### Returns
 
-`Promise`\<`undefined` \| `Result`\>
+`Promise`\<\{ `data`: `undefined` \| `Result` ; `status`: `undefined` \| `number` ; `statusText`: `undefined` \| `string`  }\>
