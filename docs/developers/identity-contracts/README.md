@@ -1,12 +1,9 @@
-# Masa Identity Contracts
+# Masa Oracle Contracts
 
 <!-- TOC -->
 * [Masa Identity Contracts](#masa-identity-contracts)
   * [Contract Deployments](#contract-deployments)
-    * [Goerli test network](#goerli-test-network)
-      * [Configuration](#configuration)
   * [Roles](#roles)
-  * [Interface](#interface)
   * [Deployment](#deployment)
     * [Preparations](#preparations)
     * [Deploy](#deploy)
@@ -18,17 +15,12 @@
 
 ### Addresses of the deployed contracts
 
+* Sepolia test network:
+  * MasaToken: [`0x26775cD6D7615c8570c8421819c228225543a844`](https://sepolia.etherscan.io/address/0x26775cD6D7615c8570c8421819c228225543a844)
+  * OracleNodeStaking: [`0xd925bc5d3eCd899a3F7B8D762397D2DC75E1187b`](https://sepolia.etherscan.io/address/0xd925bc5d3eCd899a3F7B8D762397D2DC75E1187b)
+  * StakingMasaToken: [`0x6F89e72570089799A4FCBfC66790e5726d5c7F6a`](https://sepolia.etherscan.io/address/0x6F89e72570089799A4FCBfC66790e5726d5c7F6a)
+
 You can see the deployment address of the smart contracts in the [addresses.json](addresses.json) file. For every deployed smart contract you will find a `<network>.<contract>` value.
-
-#### Configuration
-
-- `Admin`: [`0xA38dd237a3A8D50537B74a4B0D4E7E8A5359386F`](https://goerli.etherscan.io/address/0xA38dd237a3A8D50537B74a4B0D4E7E8A5359386F)
-
-The `admin` is allowed to set configuration variables in the smart contracts.
-
-- `BASE_URI`: https://beta.metadata.masa.finance/v1.0
-
-The base url for the Metadata url that is beeing generated from the contract
 
 ## Roles
 
@@ -36,17 +28,6 @@ The base url for the Metadata url that is beeing generated from the contract
 - `admin`: Delegated to the Masa Service account inside the Masa API. It has the rights to administrate the smart
   contracts
 - `minter`: Minter role. It has the rights to mint tokens to customers wallets.
-
-## Interface
-
-- [Abstract Soulbound Token Definition](docs/tokens/MasaSBT.md)
-- [Abstract Non-Fungible Token Definition](docs/tokens/MasaNFT.md)
-- [Soulbound Identity Definition](docs/SoulboundIdentity.md)
-- [Soulbound Credit Score Definition](docs/SoulboundCreditScore.md)
-- [Soulbound Green Definition](docs/SoulboundGreen.md)
-- [Soul Name Definition](docs/SoulName.md)
-- [Soul Linker Definition](docs/SoulLinker.md)
-- [Soul Store Definition](docs/SoulStore.md)
 
 ## Deployment
 
@@ -70,22 +51,22 @@ Run: `yarn deploy --network {network}` to deploy.
 Installing via `npm` package:
 
 ```bash
-npm i @masa-finance/masa-contracts-identity
+npm i @masa-finance/masa-contracts-oracle
 ```
 
 Import in your project:
 
 ```typescript
 import {
-  SoulboundIdentity,
-  SoulboundIdentity__factory
-} from "@masa-finance/masa-contracts-identity";
+  MasaToken,
+  MasaToken__factory
+} from "@masa-finance/masa-contracts-oracle";
 
-const soulboundIdentity: SoulboundIdentity = SoulboundIdentity__factory.connect(
+const masaToken: MasaToken = MasaToken__factory.connect(
   <address>, // address of the deployed contract
   <provider> // web3 provider
 );
-console.log(await soulboundIdentity.symbol());
+console.log(await masaToken.symbol());
 ```
 
 ## Generation of a new release
