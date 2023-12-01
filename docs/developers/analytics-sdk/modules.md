@@ -1,8 +1,8 @@
 [# Masa Analytics SDK
- - v0.2.5](README.md) / Exports
+ - v0.2.8](README.md) / Exports
 
 # # Masa Analytics SDK
- - v0.2.5
+ - v0.2.8
 
 ## Table of contents
 
@@ -37,13 +37,13 @@
 
 ### EventType
 
-Ƭ **EventType**: ``"pageView"`` \| ``"login"`` \| ``"mint"`` \| ``"connectWallet"`` \| ``"swap"`` \| ``"bridge"`` \| ``"addLiquidity"`` \| ``"farm"`` \| ``"trade"`` \| ``"claim"``
+Ƭ **EventType**: ``"pageView"`` \| ``"login"`` \| ``"mint"`` \| ``"connectWallet"`` \| ``"swap"`` \| ``"bridge"`` \| ``"addLiquidity"`` \| ``"removeLiquidity"`` \| ``"farm"`` \| ``"trade"`` \| ``"claim"``
 
 ## Functions
 
 ### generateSignature
 
-▸ **generateSignature**(`wallet`, `client_app`, `client_name`): `Promise`<{ `message`: `string` ; `nonce`: `string` ; `signature`: `string`  }\>
+▸ **generateSignature**(`wallet`, `client_app`, `client_name`): `Promise`\<\{ `message`: `string` ; `nonce`: `string` ; `signature`: `string`  }\>
 
 #### Parameters
 
@@ -55,4 +55,4 @@
 
 #### Returns
 
-`Promise`<{ `message`: `string` ; `nonce`: `string` ; `signature`: `string`  }\>
+`Promise`\<\{ `message`: `string` ; `nonce`: `string` ; `signature`: `string`  }\>
