@@ -1,8 +1,8 @@
 [# Masa Analytics React
- - v0.12.7](README.md) / Exports
+ - v0.12.10](README.md) / Exports
 
 # # Masa Analytics React
- - v0.12.7
+ - v0.12.10
 
 ## Table of contents
 
@@ -25,13 +25,13 @@
 
 ### EventType
 
-Ƭ **EventType**: ``"pageView"`` \| ``"login"`` \| ``"mint"`` \| ``"connectWallet"`` \| ``"swap"`` \| ``"bridge"`` \| ``"addLiquidity"`` \| ``"farm"`` \| ``"trade"`` \| ``"claim"``
+Ƭ **EventType**: ``"pageView"`` \| ``"login"`` \| ``"mint"`` \| ``"connectWallet"`` \| ``"swap"`` \| ``"bridge"`` \| ``"addLiquidity"`` \| ``"removeLiquidity"`` \| ``"farm"`` \| ``"trade"`` \| ``"claim"``
 
 ## Functions
 
 ### generateSignature
 
-▸ **generateSignature**(`wallet`, `client_app`, `client_name`): `Promise`<{ `message`: `string` ; `nonce`: `string` ; `signature`: `string`  }\>
+▸ **generateSignature**(`wallet`, `client_app`, `client_name`): `Promise`\<\{ `message`: `string` ; `nonce`: `string` ; `signature`: `string`  }\>
 
 #### Parameters
 
@@ -43,7 +43,7 @@
 
 #### Returns
 
-`Promise`<{ `message`: `string` ; `nonce`: `string` ; `signature`: `string`  }\>
+`Promise`\<\{ `message`: `string` ; `nonce`: `string` ; `signature`: `string`  }\>
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `logEvent` | (`__namedParameters`: { `client_id?`: `string` ; `endpoint`: `string` ; `event_data`: `BaseEventData` ; `type`: [`EventType`](modules.md#eventtype) ; `user_address?`: `string`  }) => `Promise`<`undefined` \| `Event`\> |
+| `logEvent` | (`__namedParameters`: \{ `client_id?`: `string` ; `endpoint`: `string` ; `event_data`: `BaseEventData` ; `type`: [`EventType`](modules.md#eventtype) ; `user_address?`: `string`  }) => `Promise`\<`undefined` \| `Event`\> |
 
 ___
 
@@ -80,8 +80,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `fireConnectWalletEvent` | (`__namedParameters`: { `user_address`: `string` ; `wallet_type`: `string`  }) => `Promise`<`void`\> |
-| `fireEvent` | (`type`: `string`, `__namedParameters`: `FireEventArgs`) => `Promise`<`void`\> |
-| `fireLoginEvent` | (`__namedParameters`: { `user_address`: `string`  }) => `Promise`<`void`\> |
-| `fireMintEvent` | (`__namedParameters`: `FireMintEventArgs`) => `Promise`<`void`\> |
-| `firePageViewEvent` | (`__namedParameters`: { `page`: `string` ; `user_address?`: `string`  }) => `Promise`<`void`\> |
+| `fireConnectWalletEvent` | (`__namedParameters`: \{ `user_address`: `string` ; `wallet_type`: `string`  }) => `Promise`\<`void`\> |
+| `fireEvent` | (`type`: `string`, `__namedParameters`: `FireEventArgs`) => `Promise`\<`void`\> |
+| `fireLoginEvent` | (`__namedParameters`: \{ `user_address`: `string`  }) => `Promise`\<`void`\> |
+| `fireMintEvent` | (`__namedParameters`: `FireMintEventArgs`) => `Promise`\<`void`\> |
+| `firePageViewEvent` | (`__namedParameters`: \{ `page`: `string` ; `user_address?`: `string`  }) => `Promise`\<`void`\> |

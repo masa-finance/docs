@@ -1,5 +1,5 @@
 [# Masa Analytics React
- - v0.12.7](../README.md) / [Exports](../modules.md) / MasaAnalytics
+ - v0.12.10](../README.md) / [Exports](../modules.md) / MasaAnalytics
 
 # Class: MasaAnalytics
 
@@ -72,7 +72,7 @@ ___
 
 ### fireConnectWalletEvent
 
-▸ **fireConnectWalletEvent**(`«destructured»`): `Promise`<`void`\>
+▸ **fireConnectWalletEvent**(`«destructured»`): `Promise`\<`void`\>
 
 Fire an event once a user tries to mint a token
 
@@ -86,13 +86,13 @@ Fire an event once a user tries to mint a token
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 ___
 
 ### fireEvent
 
-▸ **fireEvent**(`type`, `«destructured»`): `Promise`<`void`\>
+▸ **fireEvent**(`type`, `«destructured»`): `Promise`\<`void`\>
 
 Fire a flexible event
 It can use any of the EventTypes
@@ -106,13 +106,13 @@ It can use any of the EventTypes
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 ___
 
 ### fireLoginEvent
 
-▸ **fireLoginEvent**(`«destructured»`): `Promise`<`void`\>
+▸ **fireLoginEvent**(`«destructured»`): `Promise`\<`void`\>
 
 Fire an event once the user logged in
 
@@ -125,13 +125,13 @@ Fire an event once the user logged in
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 ___
 
 ### fireMintEvent
 
-▸ **fireMintEvent**(`«destructured»`): `Promise`<`void`\>
+▸ **fireMintEvent**(`«destructured»`): `Promise`\<`void`\>
 
 Fire an event once a user tries to mint a token
 
@@ -143,13 +143,13 @@ Fire an event once a user tries to mint a token
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 ___
 
 ### firePageViewEvent
 
-▸ **firePageViewEvent**(`«destructured»`): `Promise`<`void`\>
+▸ **firePageViewEvent**(`«destructured»`): `Promise`\<`void`\>
 
 Fire an event once the user changes the page
 
@@ -163,4 +163,4 @@ Fire an event once the user changes the page
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
