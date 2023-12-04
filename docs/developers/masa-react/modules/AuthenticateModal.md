@@ -1,5 +1,5 @@
 [# Masa React
- - v3.7.0](../README.md) / [Exports](../modules.md) / AuthenticateModal
+ - v3.8.2](../README.md) / [Exports](../modules.md) / AuthenticateModal
 
 # Namespace: AuthenticateModal
 

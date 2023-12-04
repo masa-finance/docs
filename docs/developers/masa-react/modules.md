@@ -1,8 +1,8 @@
 [# Masa React
- - v3.7.0](README.md) / Exports
+ - v3.8.2](README.md) / Exports
 
 # # Masa React
- - v3.7.0
+ - v3.8.2
 
 ## Table of contents
 
@@ -13,16 +13,7 @@
 
 ### Interfaces
 
-- [CustomGallerySBT](interfaces/CustomGallerySBT.md)
-- [FullContract](interfaces/FullContract.md)
-- [FullContractWithTokens](interfaces/FullContractWithTokens.md)
-- [GalleryMetadata](interfaces/GalleryMetadata.md)
-- [HydratedContract](interfaces/HydratedContract.md)
 - [MasaProviderValue](interfaces/MasaProviderValue.md)
-- [Metadata](interfaces/Metadata.md)
-- [TabsInterface](interfaces/TabsInterface.md)
-- [Token](interfaces/Token.md)
-- [TokenWithMetadata](interfaces/TokenWithMetadata.md)
 
 ### Functions
 
@@ -33,8 +24,6 @@
 - [Modal](modules.md#modal)
 - [ModalError](modules.md#modalerror)
 - [ModalLoading](modules.md#modalloading)
-- [fetchContractsAndTokens](modules.md#fetchcontractsandtokens)
-- [hydrateTokensWithMetadata](modules.md#hydratetokenswithmetadata)
 - [isIdentityContractAvailable](modules.md#isidentitycontractavailable)
 - [openAuthenticateModal](modules.md#openauthenticatemodal)
 - [openCreateSoulnameModal](modules.md#opencreatesoulnamemodal)
@@ -43,8 +32,6 @@
 - [useCanQuery](modules.md#usecanquery)
 - [useCreditScoreCreate](modules.md#usecreditscorecreate)
 - [useCreditScores](modules.md#usecreditscores)
-- [useCustomGallerySBT](modules.md#usecustomgallerysbt)
-- [useCustomSBTs](modules.md#usecustomsbts)
 - [useDebounce](modules.md#usedebounce)
 - [useDebounceIfValue](modules.md#usedebounceifvalue)
 - [useDebug](modules.md#usedebug)
@@ -193,38 +180,6 @@ ___
 #### Returns
 
 `Element`
-
-___
-
-### fetchContractsAndTokens
-
-▸ **fetchContractsAndTokens**(`customContracts`): `Promise`\<[`FullContractWithTokens`](interfaces/FullContractWithTokens.md)[]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `customContracts` | [`FullContract`](interfaces/FullContract.md)[] |
-
-#### Returns
-
-`Promise`\<[`FullContractWithTokens`](interfaces/FullContractWithTokens.md)[]\>
-
-___
-
-### hydrateTokensWithMetadata
-
-▸ **hydrateTokensWithMetadata**(`contractsAndTokens`): `Promise`\<[`HydratedContract`](interfaces/HydratedContract.md)[]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `contractsAndTokens` | [`FullContractWithTokens`](interfaces/FullContractWithTokens.md)[] |
-
-#### Returns
-
-`Promise`\<[`HydratedContract`](interfaces/HydratedContract.md)[]\>
 
 ___
 
@@ -382,57 +337,6 @@ ___
 
 ___
 
-### useCustomGallerySBT
-
-▸ **useCustomGallerySBT**(`«destructured»`): `Object`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `overrideCustomSBTs?` | [`CustomGallerySBT`](interfaces/CustomGallerySBT.md)[] |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `customContracts` | [`FullContract`](interfaces/FullContract.md)[] |
-| `error` | ``null`` \| `Error` |
-| `isFetching` | `boolean` |
-| `isLoading` | `boolean` |
-| `refetchContracts` | (`options?`: `RefetchOptions`) => `Promise`\<`QueryObserverResult`\<``null`` \| [`FullContract`](interfaces/FullContract.md)[], `Error`\>\> |
-| `status` | ``"pending"`` \| ``"error"`` \| ``"success"`` |
-
-___
-
-### useCustomSBTs
-
-▸ **useCustomSBTs**(`overrideCustomSBTs?`): `Object`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `overrideCustomSBTs?` | [`CustomGallerySBT`](interfaces/CustomGallerySBT.md)[] |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `customSBTs` | `undefined` \| ``null`` \| [`HydratedContract`](interfaces/HydratedContract.md)[] |
-| `error` | ``null`` \| `Error` |
-| `isFetching` | `boolean` |
-| `isLoading` | `boolean` |
-| `reloadCustomSBTs` | (`options?`: `RefetchOptions`) => `Promise`\<`QueryObserverResult`\<``null`` \| [`HydratedContract`](interfaces/HydratedContract.md)[], `Error`\>\> |
-| `status` | ``"pending"`` \| ``"error"`` \| ``"success"`` |
-
-___
-
 ### useDebounce
 
 ▸ **useDebounce**(`value`, `delay`): `string` \| `number`
@@ -577,14 +481,14 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `handlePurchaseIdentity` | () => `Promise`\<`undefined` \| `boolean`\> |
-| `handlePurchaseIdentityWithSoulname` | (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`, `style?`: `string`) => `Promise`\<`undefined` \| \{ `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult` \| `Error` & \{ `code?`: `string`  }\> |
+| `handlePurchaseIdentityWithSoulname` | (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`, `style?`: `string`) => `Promise`\<`undefined` \| \{ `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult`\> |
 | `hasPurchasedIdentity` | `undefined` \| `boolean` |
-| `hasPurchasedIdentityWithSoulName` | `undefined` \| \{ `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult` \| `Error` & \{ `code?`: `string`  } |
+| `hasPurchasedIdentityWithSoulName` | `undefined` \| \{ `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult` |
 | `isPurchasingIdentity` | `boolean` |
 | `isPurchasingIdentityWithSoulName` | `boolean` |
 | `purchaseIdentity` | () => `Promise`\<`undefined` \| `boolean`\> |
 | `purchaseIdentityError` | `undefined` \| `Error` |
-| `purchaseIdentityWithSoulName` | (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`, `style?`: `string`) => `Promise`\<`undefined` \| \{ `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult` \| `Error` & \{ `code?`: `string`  }\> |
+| `purchaseIdentityWithSoulName` | (`paymentMethod`: `PaymentMethod`, `soulname`: `string`, `registrationPeriod`: `number`, `style?`: `string`) => `Promise`\<`undefined` \| \{ `identityId?`: `string` \| `BigNumber`  } & `CreateSoulNameResult`\> |
 | `purchaseIdentityWithSoulnameError` | `undefined` \| `Error` |
 
 ___
