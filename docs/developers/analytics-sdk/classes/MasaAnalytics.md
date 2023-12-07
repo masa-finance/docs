@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.2.8](../README.md) / [Exports](../modules.md) / MasaAnalytics
+ - v0.3.0](../README.md) / [Exports](../modules.md) / MasaAnalytics
 
 # Class: MasaAnalytics
 
@@ -89,9 +89,7 @@ Fire an event once a user tries to mint a token
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `Object` |
-| › `user_address` | `string` |
-| › `wallet_type` | `string` |
+| `«destructured»` | [`FireConnectWalletEventArgs`](../interfaces/FireConnectWalletEventArgs.md) |
 
 #### Returns
 
@@ -129,8 +127,7 @@ Fire an event once the user logged in
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `Object` |
-| › `user_address` | `string` |
+| `«destructured»` | [`FireLoginEventArgs`](../interfaces/FireLoginEventArgs.md) |
 
 #### Returns
 
@@ -166,9 +163,7 @@ Fire an event once the user changes the page
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `Object` |
-| › `page` | `string` |
-| › `user_address?` | `string` |
+| `«destructured»` | [`FirePageViewEventArgs`](../interfaces/FirePageViewEventArgs.md) |
 
 #### Returns
 

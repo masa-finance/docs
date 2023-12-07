@@ -1,7 +1,13 @@
 [# Masa Analytics SDK
- - v0.2.8](../README.md) / [Exports](../modules.md) / FireMintEventArgs
+ - v0.3.0](../README.md) / [Exports](../modules.md) / FireMintEventArgs
 
 # Interface: FireMintEventArgs
+
+## Hierarchy
+
+- [`BaseArgs`](BaseArgs.md)
+
+  ↳ **`FireMintEventArgs`**
 
 ## Table of contents
 
@@ -24,6 +30,10 @@
 ### additionalEventData
 
 • `Optional` **additionalEventData**: `Record`\<`string`, `unknown`\>
+
+#### Inherited from
+
+[BaseArgs](BaseArgs.md).[additionalEventData](BaseArgs.md#additionaleventdata)
 
 ___
 

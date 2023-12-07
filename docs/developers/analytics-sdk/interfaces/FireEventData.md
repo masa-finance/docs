@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.2.8](../README.md) / [Exports](../modules.md) / FireEventData
+ - v0.3.0](../README.md) / [Exports](../modules.md) / FireEventData
 
 # Interface: FireEventData
 
@@ -27,6 +27,10 @@
 ### additionalEventData
 
 • `Optional` **additionalEventData**: `Record`\<`string`, `unknown`\>
+
+#### Inherited from
+
+[BaseEventData](BaseEventData.md).[additionalEventData](BaseEventData.md#additionaleventdata)
 
 ___
 

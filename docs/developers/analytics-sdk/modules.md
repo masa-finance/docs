@@ -1,8 +1,8 @@
 [# Masa Analytics SDK
- - v0.2.8](README.md) / Exports
+ - v0.3.0](README.md) / Exports
 
 # # Masa Analytics SDK
- - v0.2.8
+ - v0.3.0
 
 ## Table of contents
 
@@ -13,12 +13,16 @@
 
 ### Interfaces
 
+- [BaseArgs](interfaces/BaseArgs.md)
+- [BaseEvent](interfaces/BaseEvent.md)
 - [BaseEventData](interfaces/BaseEventData.md)
 - [ConnectWalletEventData](interfaces/ConnectWalletEventData.md)
-- [Event](interfaces/Event.md)
+- [FireConnectWalletEventArgs](interfaces/FireConnectWalletEventArgs.md)
 - [FireEventArgs](interfaces/FireEventArgs.md)
 - [FireEventData](interfaces/FireEventData.md)
+- [FireLoginEventArgs](interfaces/FireLoginEventArgs.md)
 - [FireMintEventArgs](interfaces/FireMintEventArgs.md)
+- [FirePageViewEventArgs](interfaces/FirePageViewEventArgs.md)
 - [LoginEventData](interfaces/LoginEventData.md)
 - [MintEventData](interfaces/MintEventData.md)
 - [PageViewEventData](interfaces/PageViewEventData.md)

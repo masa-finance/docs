@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.2.8](../README.md) / [Exports](../modules.md) / BaseEventData
+ - v0.3.0](../README.md) / [Exports](../modules.md) / BaseEventData
 
 # Interface: BaseEventData
 
@@ -7,13 +7,13 @@
 
 - **`BaseEventData`**
 
-  ↳ [`LoginEventData`](LoginEventData.md)
+  ↳ [`FireEventData`](FireEventData.md)
 
-  ↳ [`PageViewEventData`](PageViewEventData.md)
+  ↳ [`LoginEventData`](LoginEventData.md)
 
   ↳ [`MintEventData`](MintEventData.md)
 
-  ↳ [`FireEventData`](FireEventData.md)
+  ↳ [`PageViewEventData`](PageViewEventData.md)
 
   ↳ [`ConnectWalletEventData`](ConnectWalletEventData.md)
 
@@ -21,10 +21,17 @@
 
 ### Properties
 
+- [additionalEventData](BaseEventData.md#additionaleventdata)
 - [client\_app](BaseEventData.md#client_app)
 - [client\_name](BaseEventData.md#client_name)
 
 ## Properties
+
+### additionalEventData
+
+• `Optional` **additionalEventData**: `Record`\<`string`, `unknown`\>
+
+___
 
 ### client\_app
 

@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.2.8](../README.md) / [Exports](../modules.md) / ReferrerInfo
+ - v0.3.0](../README.md) / [Exports](../modules.md) / ReferrerInfo
 
 # Interface: ReferrerInfo
 
