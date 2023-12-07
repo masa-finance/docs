@@ -1,5 +1,5 @@
 [# Masa Analytics React
- - v0.12.10](../README.md) / [Exports](../modules.md) / MasaAnalytics
+ - v0.13.1](../README.md) / [Exports](../modules.md) / MasaAnalytics
 
 # Class: MasaAnalytics
 
@@ -80,9 +80,7 @@ Fire an event once a user tries to mint a token
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `Object` |
-| › `user_address` | `string` |
-| › `wallet_type` | `string` |
+| `«destructured»` | `FireConnectWalletEventArgs` |
 
 #### Returns
 
@@ -120,8 +118,7 @@ Fire an event once the user logged in
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `Object` |
-| › `user_address` | `string` |
+| `«destructured»` | `FireLoginEventArgs` |
 
 #### Returns
 
@@ -157,9 +154,7 @@ Fire an event once the user changes the page
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `Object` |
-| › `page` | `string` |
-| › `user_address?` | `string` |
+| `«destructured»` | `FirePageViewEventArgs` |
 
 #### Returns
 

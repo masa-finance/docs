@@ -1,8 +1,8 @@
 [# Masa Analytics React
- - v0.12.10](README.md) / Exports
+ - v0.13.1](README.md) / Exports
 
 # # Masa Analytics React
- - v0.12.10
+ - v0.13.1
 
 ## Table of contents
 
