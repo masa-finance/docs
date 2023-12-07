@@ -39,16 +39,16 @@ These events can be easily integrated into your application to gather insights a
 #### Usage
 
 ```typescript
-import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
+import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 
 const { firePageViewEvent } = useMasaAnalyticsReact({
-  clientApp: "My App",
-  clientName: "My Company Name",
+  clientApp: 'My App',
+  clientName: 'My Company Name',
 });
 
 // Track a page visit event
-const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const page = "https://your-site.example.com/page1";
+const user_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const page = 'https://your-site.example.com/page1';
 
 void firePageViewEvent(page, user_address);
 ```
@@ -63,19 +63,21 @@ void firePageViewEvent(page, user_address);
 #### Usage
 
 ```typescript
-import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
+import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 
-const { fireConnectWalletEvent } =
-  useMasaAnalyticsReact({
-    clientApp: 'My App',
-    clientName: 'My Company Name',
-  });
+const { fireConnectWalletEvent } = useMasaAnalyticsReact({
+  clientApp: 'My App',
+  clientName: 'My Company Name',
+});
 
 // Track a wallet connect event
-const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const connector = "metamask"
+const user_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const connector = 'metamask';
 
-void fireConnectWalletEvent({ user_address: user_address, connector: connector });
+void fireConnectWalletEvent({
+  user_address: user_address,
+  connector: connector,
+});
 ```
 
 ### Login Event
@@ -87,15 +89,15 @@ void fireConnectWalletEvent({ user_address: user_address, connector: connector }
 #### Usage
 
 ```typescript
-import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
+import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 
 const { fireLoginEvent } = useMasaAnalyticsReact({
-  clientApp: "My App",
-  clientName: "My Company Name",
+  clientApp: 'My App',
+  clientName: 'My Company Name',
 });
 
 // Track a login event
-const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
+const user_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
 
 void fireLoginEvent({ user_address: user_address });
 ```
@@ -114,21 +116,21 @@ void fireLoginEvent({ user_address: user_address });
 #### Usage
 
 ```typescript
-import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
+import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 
 const { fireMintEvent } = useMasaAnalyticsReact({
-  clientApp: "My App",
-  clientName: "My Company Name",
-  clientId: '1234-5678-9012-4567'
+  clientApp: 'My App',
+  clientName: 'My Company Name',
+  clientId: '1234-5678-9012-4567',
 });
 
 // Track a mint event
-const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const network = "goerli";
-const contract_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const token_name = "My SBT Project";
-const ticker = "MSP";
-const token_type = "SBT";
+const user_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const network = 'goerli';
+const contract_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const token_name = 'My SBT Project';
+const ticker = 'MSP';
+const token_type = 'SBT';
 
 void fireMintEvent({
   user_address: user_address,
@@ -136,8 +138,8 @@ void fireMintEvent({
   contract_address: contract_address,
   token_name: token_name,
   ticker: ticker,
-  token_type: token_type
-  });
+  token_type: token_type,
+});
 ```
 
 ### Add liquidity Event
@@ -153,28 +155,28 @@ void fireMintEvent({
 #### Usage
 
 ```typescript
-import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
+import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 
 const { fireEvent } = useMasaAnalyticsReact({
-  clientApp: "My App",
-  clientName: "My Company Name",
-  clientId: '1234-5678-9012-4567'
+  clientApp: 'My App',
+  clientName: 'My Company Name',
+  clientId: '1234-5678-9012-4567',
 });
 
 // Track an add liquidity event
-const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const network = "goerli";
-const contract_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const asset_amount = "1.20";
-const asset_ticker = "ETH";
+const user_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const network = 'goerli';
+const contract_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const asset_amount = '1.20';
+const asset_ticker = 'ETH';
 
-void fireEvent( "addLiquidity" , {
+void fireEvent('addLiquidity', {
   user_address: user_address,
   network: network,
   contract_address: contract_address,
   asset_amount: asset_amount,
-  asset_ticker: asset_ticker
-  });
+  asset_ticker: asset_ticker,
+});
 ```
 
 ### Remove liquidity Event
@@ -190,28 +192,28 @@ void fireEvent( "addLiquidity" , {
 #### Usage
 
 ```typescript
-import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
+import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 
 const { fireEvent } = useMasaAnalyticsReact({
-  clientApp: "My App",
-  clientName: "My Company Name",
-  clientId: '1234-5678-9012-4567'
+  clientApp: 'My App',
+  clientName: 'My Company Name',
+  clientId: '1234-5678-9012-4567',
 });
 
 // Track a remove liquidity event
-const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const network = "goerli";
-const contract_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const asset_amount = "1.20";
-const asset_ticker = "ETH";
+const user_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const network = 'goerli';
+const contract_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const asset_amount = '1.20';
+const asset_ticker = 'ETH';
 
-void fireEvent( "removeLiquidity" , {
+void fireEvent('removeLiquidity', {
   user_address: user_address,
   network: network,
   contract_address: contract_address,
   asset_amount: asset_amount,
-  asset_ticker: asset_ticker
-  });
+  asset_ticker: asset_ticker,
+});
 ```
 
 ### Farm Event
@@ -227,27 +229,27 @@ void fireEvent( "removeLiquidity" , {
 #### Usage
 
 ```typescript
-import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
+import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 
 const { fireEvent } = useMasaAnalyticsReact({
-  clientApp: "My App",
-  clientName: "My Company Name",
-  clientId: '1234-5678-9012-4567'
+  clientApp: 'My App',
+  clientName: 'My Company Name',
+  clientId: '1234-5678-9012-4567',
 });
 
 // Track a farm event
-const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const network = "goerli";
-const contract_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const asset_amount = "1.20";
-const asset_ticker = "ETH";
-void fireEvent( "farm" , {
+const user_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const network = 'goerli';
+const contract_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const asset_amount = '1.20';
+const asset_ticker = 'ETH';
+void fireEvent('farm', {
   user_address: user_address,
   network: network,
   contract_address: contract_address,
   asset_amount: asset_amount,
-  asset_ticker: asset_ticker
-  });
+  asset_ticker: asset_ticker,
+});
 ```
 
 ### Swap Event
@@ -263,28 +265,28 @@ void fireEvent( "farm" , {
 #### Usage
 
 ```typescript
-import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
+import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 
 const { fireEvent } = useMasaAnalyticsReact({
-  clientApp: "My App",
-  clientName: "My Company Name",
-  clientId: '1234-5678-9012-4567'
+  clientApp: 'My App',
+  clientName: 'My Company Name',
+  clientId: '1234-5678-9012-4567',
 });
 
 // Track a swap event
-const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const network = "goerli";
-const contract_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const asset_amount = "1.20";
-const asset_ticker = "ETH";
+const user_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const network = 'goerli';
+const contract_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const asset_amount = '1.20';
+const asset_ticker = 'ETH';
 
-void fireEvent( "swap" , {
+void fireEvent('swap', {
   user_address: user_address,
   network: network,
   contract_address: contract_address,
   asset_amount: asset_amount,
-  asset_ticker: asset_ticker
-  });
+  asset_ticker: asset_ticker,
+});
 ```
 
 ### Bridge Event
@@ -300,28 +302,28 @@ void fireEvent( "swap" , {
 #### Usage
 
 ```typescript
-import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
+import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 
 const { fireEvent } = useMasaAnalyticsReact({
-  clientApp: "My App",
-  clientName: "My Company Name",
-  clientId: '1234-5678-9012-4567'
+  clientApp: 'My App',
+  clientName: 'My Company Name',
+  clientId: '1234-5678-9012-4567',
 });
 
 // Track a bridge event
-const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const network = "goerli";
-const contract_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const asset_amount = "1.20";
-const asset_ticker = "ETH";
+const user_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const network = 'goerli';
+const contract_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const asset_amount = '1.20';
+const asset_ticker = 'ETH';
 
-void fireEvent( "bridge" , {
+void fireEvent('bridge', {
   user_address: user_address,
   network: network,
   contract_address: contract_address,
   asset_amount: asset_amount,
-  asset_ticker: asset_ticker
-  });
+  asset_ticker: asset_ticker,
+});
 ```
 
 ### Trade Event
@@ -337,28 +339,28 @@ void fireEvent( "bridge" , {
 #### Usage
 
 ```typescript
-import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
+import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 
 const { fireEvent } = useMasaAnalyticsReact({
-  clientApp: "My App",
-  clientName: "My Company Name",
-  clientId: '1234-5678-9012-4567'
+  clientApp: 'My App',
+  clientName: 'My Company Name',
+  clientId: '1234-5678-9012-4567',
 });
 
 // Track a trade event
-const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const network = "goerli";
-const contract_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const asset_amount = "1.20";
-const asset_ticker = "ETH";
+const user_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const network = 'goerli';
+const contract_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const asset_amount = '1.20';
+const asset_ticker = 'ETH';
 
-void fireEvent( "trade" , {
+void fireEvent('trade', {
   user_address: user_address,
   network: network,
   contract_address: contract_address,
   asset_amount: asset_amount,
-  asset_ticker: asset_ticker
-  });
+  asset_ticker: asset_ticker,
+});
 ```
 
 ### Claim Event
@@ -374,61 +376,62 @@ void fireEvent( "trade" , {
 #### Usage
 
 ```typescript
-import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
+import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 
 const { fireEvent } = useMasaAnalyticsReact({
-  clientApp: "My App",
-  clientName: "My Company Name",
-  clientId: '1234-5678-9012-4567'
+  clientApp: 'My App',
+  clientName: 'My Company Name',
+  clientId: '1234-5678-9012-4567',
 });
 
 // Track a claim event
-const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const network = "goerli";
-const contract_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const asset_amount = "1.20";
-const asset_ticker = "ETH";
+const user_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const network = 'goerli';
+const contract_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const asset_amount = '1.20';
+const asset_ticker = 'ETH';
 
-void fireEvent( "claim" , {
+void fireEvent('claim', {
   user_address: user_address,
   network: network,
   contract_address: contract_address,
   asset_amount: asset_amount,
-  asset_ticker: asset_ticker
-  });
+  asset_ticker: asset_ticker,
+});
 ```
 
 ### Extending to Include Additional Event Data
 
-You can extend the tracking function to collect additional event data using the `additionalEventData` field as shown in this example. In this example we want to track and log the transaction hash and the protocol fee for making the swap so we can track swap revenue in Masa Analytics. `additionalEventData` can take any information you want to add for future reference or running custom analytics with Masa. 
+You can extend the tracking function to collect additional event data using the `additionalEventData` field as shown in this example. In this example we want to track and log the transaction hash and the protocol fee for making the swap so we can track swap revenue in Masa Analytics. `additionalEventData` can take any information you want to add for future reference or running custom analytics with Masa.
 
 ```typescript
-import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
+import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 
 const { fireEvent } = useMasaAnalyticsReact({
-  clientApp: "My App",
-  clientName: "My Company Name",
-  clientId: '1234-5678-9012-4567'
+  clientApp: 'My App',
+  clientName: 'My Company Name',
+  clientId: '1234-5678-9012-4567',
 });
 
 // Track a swap event with additional data
-const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const network = "goerli";
-const contract_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const asset_amount = "1.20";
-const asset_ticker = "ETH";
+const user_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const network = 'goerli';
+const contract_address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e';
+const asset_amount = '1.20';
+const asset_ticker = 'ETH';
 
-void fireEvent( "swap" , {
+void fireEvent('swap', {
   user_address: user_address,
   network: network,
   contract_address: contract_address,
   asset_amount: asset_amount,
   asset_ticker: asset_ticker,
   additionalEventData: {
-    transactionHash: "0x83138032f1e7bee64fccd15bbed403f6b875c47641f6b203cd59dfa9b7cf1b4a",
-    fee: "0.12",
-    fee_asset: "ETH"
-  }
+    transactionHash:
+      '0x83138032f1e7bee64fccd15bbed403f6b875c47641f6b203cd59dfa9b7cf1b4a',
+    fee: '0.12',
+    fee_asset: 'ETH',
+  },
 });
 ```
 
