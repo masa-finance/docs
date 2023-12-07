@@ -1,8 +1,8 @@
 [# Masa Analytics React
- - v0.13.1](README.md) / Exports
+ - v0.13.2](README.md) / Exports
 
 # # Masa Analytics React
- - v0.13.1
+ - v0.13.2
 
 ## Table of contents
 
@@ -80,8 +80,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `fireConnectWalletEvent` | (`__namedParameters`: \{ `user_address`: `string` ; `wallet_type`: `string`  }) => `Promise`\<`void`\> |
-| `fireEvent` | (`type`: `string`, `__namedParameters`: `FireEventArgs`) => `Promise`\<`void`\> |
-| `fireLoginEvent` | (`__namedParameters`: \{ `user_address`: `string`  }) => `Promise`\<`void`\> |
-| `fireMintEvent` | (`__namedParameters`: `FireMintEventArgs`) => `Promise`\<`void`\> |
-| `firePageViewEvent` | (`__namedParameters`: \{ `page`: `string` ; `user_address?`: `string`  }) => `Promise`\<`void`\> |
+| `fireConnectWalletEvent` | (`fireConnectWalletEventArgs`: `FireConnectWalletEventArgs`) => `Promise`\<`void`\> |
+| `fireEvent` | (`type`: `string`, `fireEventArgs`: `FireEventArgs`) => `Promise`\<`void`\> |
+| `fireLoginEvent` | (`__namedParameters`: `FireLoginEventArgs`) => `Promise`\<`void`\> |
+| `fireMintEvent` | (`fireMintEventArgs`: `FireMintEventArgs`) => `Promise`\<`void`\> |
+| `firePageViewEvent` | (`firePageViewEventArgs`: `FirePageViewEventArgs`) => `Promise`\<`void`\> |

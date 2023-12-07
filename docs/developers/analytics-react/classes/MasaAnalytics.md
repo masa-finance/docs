@@ -1,5 +1,5 @@
 [# Masa Analytics React
- - v0.13.1](../README.md) / [Exports](../modules.md) / MasaAnalytics
+ - v0.13.2](../README.md) / [Exports](../modules.md) / MasaAnalytics
 
 # Class: MasaAnalytics
 
