@@ -28,14 +28,14 @@ The `admin` is allowed to set configuration variables in the smart contracts.
 
 - `BASE_URI`: https://beta.metadata.masa.finance/v1.0
 
-The base url for the Metadata url that is beeing generated from the contract
+The base url for the Metadata url that is being generated from the contract
 
 ## Roles
 
-- `deployer`: Deploys the contract, has no rights after everything has properlty handed over to other roles
+- `deployer`: Deploys the contract, has no rights after everything has properly handed over to other roles
 - `admin`: Delegated to the Masa Service account inside the Masa API. It has the rights to administrate the smart
   contracts
-- `minter`: Minter role. It has the rights to mint tokens to customers wallets.
+- `minter`: Minter role. It has the rights to mint tokens to customer's wallets.
 
 ## Interface
 
