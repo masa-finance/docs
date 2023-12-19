@@ -1,8 +1,8 @@
-# StakingMasaToken
+# StakedMasaToken
 
 *Masa Finance*
 
-> StakingMasaToken
+> StakedMasaToken
 
 This contract is used for the token representing the stake
 

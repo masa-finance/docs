@@ -82,6 +82,23 @@ Function to stake tokens
 |---|---|---|
 | amount | uint256 | The amount of tokens to be staked |
 
+### stakedMasaToken
+
+```solidity
+function stakedMasaToken() external view returns (contract StakedMasaToken)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | contract StakedMasaToken | undefined |
+
 ### stakes
 
 ```solidity
@@ -103,23 +120,6 @@ function stakes(address) external view returns (uint256)
 | Name | Type | Description |
 |---|---|---|
 | _0 | uint256 | undefined |
-
-### stakingMasaToken
-
-```solidity
-function stakingMasaToken() external view returns (contract StakingMasaToken)
-```
-
-
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | contract StakingMasaToken | undefined |
 
 ### withdraw
 

@@ -18,7 +18,7 @@
 * Sepolia test network:
   * MasaToken: [`0x26775cD6D7615c8570c8421819c228225543a844`](https://sepolia.etherscan.io/address/0x26775cD6D7615c8570c8421819c228225543a844)
   * OracleNodeStaking: [`0xd925bc5d3eCd899a3F7B8D762397D2DC75E1187b`](https://sepolia.etherscan.io/address/0xd925bc5d3eCd899a3F7B8D762397D2DC75E1187b)
-  * StakingMasaToken: [`0x6F89e72570089799A4FCBfC66790e5726d5c7F6a`](https://sepolia.etherscan.io/address/0x6F89e72570089799A4FCBfC66790e5726d5c7F6a)
+  * StakedMasaToken: [`0x6F89e72570089799A4FCBfC66790e5726d5c7F6a`](https://sepolia.etherscan.io/address/0x6F89e72570089799A4FCBfC66790e5726d5c7F6a)
 
 You can see the deployment address of the smart contracts in the [addresses.json](addresses.json) file. For every deployed smart contract you will find a `<network>.<contract>` value.
 
