@@ -69,7 +69,7 @@ Function to retrieve node data for a specific period
 ### nodeData
 
 ```solidity
-function nodeData(uint256) external view returns (string peerId, uint256 lastJoined, uint256 lastLeft, uint256 lastUpdated, uint256 currentUptime, string currentUptimeStr, uint256 accumulatedUptime, string accumulatedUptimeStr, string publicKey, uint256 activity, bool isActive)
+function nodeData(uint256) external view returns (string peerId, uint256 lastJoined, uint256 lastLeft, uint256 lastUpdated, uint256 currentUptime, string currentUptimeStr, uint256 accumulatedUptime, string accumulatedUptimeStr, string nodeAddress, uint256 activity, bool isActive)
 ```
 
 
@@ -94,7 +94,7 @@ function nodeData(uint256) external view returns (string peerId, uint256 lastJoi
 | currentUptimeStr | string | undefined |
 | accumulatedUptime | uint256 | undefined |
 | accumulatedUptimeStr | string | undefined |
-| publicKey | string | undefined |
+| nodeAddress | string | undefined |
 | activity | uint256 | undefined |
 | isActive | bool | undefined |
 

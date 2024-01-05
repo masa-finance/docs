@@ -581,23 +581,6 @@ event Approval(address indexed owner, address indexed spender, uint256 value)
 | spender `indexed` | address | undefined |
 | value  | uint256 | undefined |
 
-### Log
-
-```solidity
-event Log(string message, address account)
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| message  | string | undefined |
-| account  | address | undefined |
-
 ### Paused
 
 ```solidity
