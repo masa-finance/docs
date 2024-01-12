@@ -72,23 +72,29 @@ npm install -g snarkjs
 
 ```
 cd circuits
-circom verify4.circom --r1cs --wasm --sym --c
+circom verify4.circom --r1cs --wasm
 ```
 
-### Run circuit trusted setup
+### Download the trusted setup (Powers of tau file)
 
-Powers of tau, which is independent of the circuit:
 ```
-snarkjs powersoftau new bn128 12 pot12_0000.ptau -v
-snarkjs powersoftau contribute pot12_0000.ptau pot12_0001.ptau --name="First contribution" -v
+wget https://hermez.s3-eu-west-1.amazonaws.com/powersOfTau28_hez_final_11.ptau
 ```
 
-Phase 2, which depends on the circuit:
+It is a community-generated trusted setup. A trusted setup is an algorithm that determines a protocol’s public parameters using information that must remain secret to ensure the protocol’s security.
+
+### Generate the verification key
+
+The verification key is generated starting from `verify4.r1cs` (description of the circuit and its constraints) and `powersOfTau28_hez_final_11.ptau` which is the trusted setup. The output file of the operation is `verify4.zkey`, namely the verification key for the circuit.
+
 ```
-snarkjs powersoftau prepare phase2 pot12_0001.ptau pot12_final.ptau -v
-snarkjs groth16 setup verify4.r1cs pot12_final.ptau verify4_0000.zkey
-snarkjs zkey contribute verify4_0000.zkey verify4_0001.zkey --name="1st Contributor Name" -v
-snarkjs zkey export verificationkey verify4_0001.zkey verification_key.json
+snarkjs groth16 setup verify4.r1cs powersOfTau28_hez_final_11.ptau verify4.zkey
+```
+
+# Get a verification key in json format (from the proving key)
+
+```
+snarkjs zkey export verificationkey verify4.zkey verification_key.json
 ```
 
 ### Compute the witness
@@ -115,7 +121,7 @@ node verify4_js/generate_witness.js verify4_js/verify4.wasm input.json witness.w
 
 Generate a zk-proof associated to the circuit and the witness:
 ```
-snarkjs groth16 prove verify4_0001.zkey witness.wtns proof.json public.json
+snarkjs groth16 prove verify4.zkey witness.wtns proof.json public.json
 ```
 
 ### Verifying a Proof
@@ -129,7 +135,7 @@ snarkjs groth16 verify verification_key.json public.json proof.json
 
 We need to generate the Solidity code using the command:
 ```
-snarkjs zkey export solidityverifier verify4_0001.zkey ../contracts/verifier.sol
+snarkjs zkey export solidityverifier verify4.zkey ../contracts/verifier.sol
 ```
 
 The `Verifier` has a `view` function called `verifyProof` that returns `TRUE` if and only if the proof and the inputs are valid. To facilitate the call, you can use `snarkJS` to generate the parameters of the call by typing:
