@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.14.4](README.md) / Exports
+ - v3.15.0](README.md) / Exports
 
 # # Masa SDK
- - v3.14.4
+ - v3.15.0
 
 ## Table of contents
 
@@ -183,6 +183,7 @@
 - [loadSoulNameDetailsByAddress](modules.md#loadsoulnamedetailsbyaddress)
 - [loadSoulNames](modules.md#loadsoulnames)
 - [loadSoulNamesByNames](modules.md#loadsoulnamesbynames)
+- [loadSoulNamesWithExpired](modules.md#loadsoulnameswithexpired)
 - [login](modules.md#login)
 - [logout](modules.md#logout)
 - [mintGreen](modules.md#mintgreen)
@@ -377,9 +378,9 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `loginTemplate` | (`challenge`: `string`, `expires`: `string`) => `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `loginTemplate` | (`challenge`: `string`, `expires`: `string`) => `string` | The Masa Finance Login Template used for authenticating with the middleware |
 
 ___
 
@@ -650,17 +651,17 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `adminAddress?` | `string` |
-| › `baseTokenUri` | `string` |
-| › `limit?` | `number` |
-| › `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
-| › `name` | `string` |
-| › `paymentOptions?` | `Object` |
-| › `paymentOptions.projectFeeReceiver` | `string` |
-| › `symbol` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `«destructured»` | `Object` | `undefined` |
+| › `adminAddress?` | `string` | `undefined` |
+| › `baseTokenUri` | `string` | `undefined` |
+| › `limit?` | `number` | `1` |
+| › `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
+| › `name` | `string` | `undefined` |
+| › `paymentOptions?` | `Object` | `undefined` |
+| › `paymentOptions.projectFeeReceiver` | `string` | `undefined` |
+| › `symbol` | `string` | `undefined` |
 
 #### Returns
 
@@ -674,18 +675,18 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `adminAddress?` | `string` |
-| › `authorityAddress?` | `string` |
-| › `baseTokenUri` | `string` |
-| › `limit` | `number` |
-| › `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
-| › `name` | `string` |
-| › `paymentOptions?` | `Object` |
-| › `paymentOptions.projectFeeReceiver` | `string` |
-| › `symbol` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `«destructured»` | `Object` | `undefined` |
+| › `adminAddress?` | `string` | `undefined` |
+| › `authorityAddress?` | `string` | `undefined` |
+| › `baseTokenUri` | `string` | `undefined` |
+| › `limit` | `number` | `1` |
+| › `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
+| › `name` | `string` | `undefined` |
+| › `paymentOptions?` | `Object` | `undefined` |
+| › `paymentOptions.projectFeeReceiver` | `string` | `undefined` |
+| › `symbol` | `string` | `undefined` |
 
 #### Returns
 
@@ -1234,6 +1235,8 @@ ___
 
 ▸ **loadSoulNames**(`masa`, `identityIdOrAddress`): `Promise`\<`string`[]\>
 
+loads active soul names
+
 #### Parameters
 
 | Name | Type |
@@ -1261,6 +1264,25 @@ ___
 #### Returns
 
 `Promise`\<[`SoulNameDetails`](interfaces/SoulNameDetails.md)[]\>
+
+___
+
+### loadSoulNamesWithExpired
+
+▸ **loadSoulNamesWithExpired**(`masa`, `identityIdOrAddress`): `Promise`\<`string`[]\>
+
+loads all soul names even expired ones
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `identityIdOrAddress` | `string` \| `BigNumber` |
+
+#### Returns
+
+`Promise`\<`string`[]\>
 
 ___
 

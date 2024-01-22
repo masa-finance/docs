@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.14.4](../README.md) / [Exports](../modules.md) / ERC20
+ - v3.15.0](../README.md) / [Exports](../modules.md) / ERC20
 
 # Interface: ERC20
 
@@ -421,7 +421,7 @@ ___
 
 ### attach
 
-▸ **attach**(`addressOrName`): [`ERC20`](ERC20.md)
+▸ **attach**(`addressOrName`): `this`
 
 #### Parameters
 
@@ -431,7 +431,7 @@ ___
 
 #### Returns
 
-[`ERC20`](ERC20.md)
+`this`
 
 #### Overrides
 
@@ -458,7 +458,7 @@ ___
 
 ### connect
 
-▸ **connect**(`signerOrProvider`): [`ERC20`](ERC20.md)
+▸ **connect**(`signerOrProvider`): `this`
 
 #### Parameters
 
@@ -468,7 +468,7 @@ ___
 
 #### Returns
 
-[`ERC20`](ERC20.md)
+`this`
 
 #### Overrides
 
@@ -691,7 +691,7 @@ ___
 
 ### removeAllListeners
 
-▸ **removeAllListeners**\<`TEvent`\>(`eventFilter`): [`ERC20`](ERC20.md)
+▸ **removeAllListeners**\<`TEvent`\>(`eventFilter`): `this`
 
 #### Type parameters
 
@@ -707,13 +707,13 @@ ___
 
 #### Returns
 
-[`ERC20`](ERC20.md)
+`this`
 
 #### Overrides
 
 BaseContract.removeAllListeners
 
-▸ **removeAllListeners**(`eventName?`): [`ERC20`](ERC20.md)
+▸ **removeAllListeners**(`eventName?`): `this`
 
 #### Parameters
 
@@ -723,7 +723,7 @@ BaseContract.removeAllListeners
 
 #### Returns
 
-[`ERC20`](ERC20.md)
+`this`
 
 #### Overrides
 

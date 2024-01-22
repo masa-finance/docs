@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.14.4](../README.md) / [Exports](../modules.md) / StaticJsonRpcProvider
+ - v3.15.0](../README.md) / [Exports](../modules.md) / StaticJsonRpcProvider
 
 # Class: StaticJsonRpcProvider
 
@@ -481,7 +481,7 @@ providers.JsonRpcProvider.ready
 
 ### \_addEventListener
 
-▸ **_addEventListener**(`eventName`, `listener`, `once`): [`StaticJsonRpcProvider`](StaticJsonRpcProvider.md)
+▸ **_addEventListener**(`eventName`, `listener`, `once`): `this`
 
 #### Parameters
 
@@ -493,7 +493,7 @@ providers.JsonRpcProvider.ready
 
 #### Returns
 
-[`StaticJsonRpcProvider`](StaticJsonRpcProvider.md)
+`this`
 
 #### Inherited from
 
@@ -1362,7 +1362,7 @@ ___
 
 ### off
 
-▸ **off**(`eventName`, `listener?`): [`StaticJsonRpcProvider`](StaticJsonRpcProvider.md)
+▸ **off**(`eventName`, `listener?`): `this`
 
 #### Parameters
 
@@ -1373,7 +1373,7 @@ ___
 
 #### Returns
 
-[`StaticJsonRpcProvider`](StaticJsonRpcProvider.md)
+`this`
 
 #### Inherited from
 
@@ -1383,7 +1383,7 @@ ___
 
 ### on
 
-▸ **on**(`eventName`, `listener`): [`StaticJsonRpcProvider`](StaticJsonRpcProvider.md)
+▸ **on**(`eventName`, `listener`): `this`
 
 #### Parameters
 
@@ -1394,7 +1394,7 @@ ___
 
 #### Returns
 
-[`StaticJsonRpcProvider`](StaticJsonRpcProvider.md)
+`this`
 
 #### Inherited from
 
@@ -1404,7 +1404,7 @@ ___
 
 ### once
 
-▸ **once**(`eventName`, `listener`): [`StaticJsonRpcProvider`](StaticJsonRpcProvider.md)
+▸ **once**(`eventName`, `listener`): `this`
 
 #### Parameters
 
@@ -1415,7 +1415,7 @@ ___
 
 #### Returns
 
-[`StaticJsonRpcProvider`](StaticJsonRpcProvider.md)
+`this`
 
 #### Inherited from
 
@@ -1481,7 +1481,7 @@ ___
 
 ### removeAllListeners
 
-▸ **removeAllListeners**(`eventName?`): [`StaticJsonRpcProvider`](StaticJsonRpcProvider.md)
+▸ **removeAllListeners**(`eventName?`): `this`
 
 #### Parameters
 
@@ -1491,7 +1491,7 @@ ___
 
 #### Returns
 
-[`StaticJsonRpcProvider`](StaticJsonRpcProvider.md)
+`this`
 
 #### Inherited from
 

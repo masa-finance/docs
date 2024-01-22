@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.14.4](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v3.15.0](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
@@ -28,6 +28,7 @@
 - [loadSoulNameByName](MasaSoulName.md#loadsoulnamebyname)
 - [loadSoulNameByTokenId](MasaSoulName.md#loadsoulnamebytokenid)
 - [loadSoulNames](MasaSoulName.md#loadsoulnames)
+- [loadSoulNamesWithExpired](MasaSoulName.md#loadsoulnameswithexpired)
 - [renew](MasaSoulName.md#renew)
 - [resolve](MasaSoulName.md#resolve)
 - [send](MasaSoulName.md#send)
@@ -164,6 +165,22 @@ ___
 ### loadSoulNames
 
 ▸ **loadSoulNames**(`identityIdOrAddress`): `Promise`\<`string`[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `identityIdOrAddress` | `string` \| `BigNumber` |
+
+#### Returns
+
+`Promise`\<`string`[]\>
+
+___
+
+### loadSoulNamesWithExpired
+
+▸ **loadSoulNamesWithExpired**(`identityIdOrAddress`): `Promise`\<`string`[]\>
 
 #### Parameters
 

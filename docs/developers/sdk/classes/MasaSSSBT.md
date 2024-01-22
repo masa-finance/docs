@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.14.4](../README.md) / [Exports](../modules.md) / MasaSSSBT
+ - v3.15.0](../README.md) / [Exports](../modules.md) / MasaSSSBT
 
 # Class: MasaSSSBT
 
@@ -108,15 +108,15 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `adminAddress?` | `string` |
-| › `authorityAddress` | `string` |
-| › `baseTokenUri` | `string` |
-| › `limit?` | `number` |
-| › `name` | `string` |
-| › `symbol` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `«destructured»` | `Object` | `undefined` |
+| › `adminAddress?` | `string` | `undefined` |
+| › `authorityAddress` | `string` | `undefined` |
+| › `baseTokenUri` | `string` | `undefined` |
+| › `limit?` | `number` | `1` |
+| › `name` | `string` | `undefined` |
+| › `symbol` | `string` | `undefined` |
 
 #### Returns
 
