@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.3.0](../README.md) / [Exports](../modules.md) / BaseEvent
+ - v0.4.1](../README.md) / [Exports](../modules.md) / BaseEvent
 
 # Interface: BaseEvent
 
