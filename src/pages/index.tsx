@@ -14,7 +14,7 @@ const Home = (): JSX.Element => {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description="Dive into our developer docs and guides"
     >
       <HomepageHeader />
     </Layout>
