@@ -1,8 +1,8 @@
 [# Masa Express
- - v1.2.1](README.md) / Exports
+ - v1.3.3](README.md) / Exports
 
 # # Masa Express
- - v1.2.1
+ - v1.3.3
 
 ## Table of contents
 
@@ -20,26 +20,26 @@
 
 ### MasaSessionMiddleware
 
-▸ **MasaSessionMiddleware**(`«destructured»`): `RequestHandler`<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`<`string`, `any`\>\>
+▸ **MasaSessionMiddleware**(`«destructured»`): `RequestHandler`\<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`\<`string`, `any`\>\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `domain` | `string` |
-| › `environment` | `string` |
-| › `sameSite?` | ``"none"`` \| ``"lax"`` \| ``"strict"`` |
-| › `secret` | `string` |
-| › `secure?` | `boolean` |
-| › `sessionName` | `string` |
-| › `store?` | `Store` |
-| › `ttl` | `number` |
-| › `verbose?` | `boolean` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `«destructured»` | `Object` | `undefined` |
+| › `domain` | `string` | `".masa.finance"` |
+| › `environment` | `string` | `undefined` |
+| › `sameSite?` | ``"none"`` \| ``"lax"`` \| ``"strict"`` | `undefined` |
+| › `secret` | `string` | `undefined` |
+| › `secure?` | `boolean` | `undefined` |
+| › `sessionName` | `string` | `undefined` |
+| › `store?` | `Store` | `undefined` |
+| › `ttl` | `number` | `undefined` |
+| › `verbose?` | `boolean` | `false` |
 
 #### Returns
 
-`RequestHandler`<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`<`string`, `any`\>\>
+`RequestHandler`\<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`\<`string`, `any`\>\>
 
 ___
 
@@ -52,7 +52,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `Object` |
-| › `sessionMiddleware` | `RequestHandler`<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`<`string`, `any`\>\> |
+| › `sessionMiddleware` | `RequestHandler`\<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`\<`string`, `any`\>\> |
 | › `sessionName` | `string` |
 | › `sessionNamespace` | `string` |
 
@@ -64,16 +64,16 @@ ___
 
 ### sessionCheckHandler
 
-▸ **sessionCheckHandler**(`request`, `response`, `next`): `undefined` \| `Response`<`any`, `Record`<`string`, `any`\>\>
+▸ **sessionCheckHandler**(`request`, `response`, `next`): `undefined` \| `Response`\<`any`, `Record`\<`string`, `any`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `request` | `RequestSession` |
-| `response` | `Response`<`any`, `Record`<`string`, `any`\>\> |
+| `response` | `Response`\<`any`, `Record`\<`string`, `any`\>\> |
 | `next` | `NextFunction` |
 
 #### Returns
 
-`undefined` \| `Response`<`any`, `Record`<`string`, `any`\>\>
+`undefined` \| `Response`\<`any`, `Record`\<`string`, `any`\>\>
