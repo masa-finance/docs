@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 
 /** @type {import("@docusaurus/types").Config} */
 const config = {
-  title: "Masa Finance",
+  title: "Masa Dev Docs",
   tagline: "Developer Documentation",
   url: "https://masa.finance",
   baseUrl: "/",
