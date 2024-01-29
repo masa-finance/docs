@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.15.0](../README.md) / [Exports](../modules.md) / MasaClient
+ - v3.16.1](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -132,7 +132,7 @@ ___
 | `check` | () => `Promise`\<`undefined` \| [`ISession`](../interfaces/ISession.md)\> | Check session is still alive |
 | `checkSignature` | (`address`: `string`, `signature`: `string`, `cookie?`: `string`) => `Promise`\<`undefined` \| [`SessionUser`](../interfaces/SessionUser.md)\> |  |
 | `getChallenge` | () => `Promise`\<`undefined` \| [`ChallengeResultWithCookie`](../interfaces/ChallengeResultWithCookie.md)\> | Get challenge |
-| `logout` | () => `Promise`\<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\> | - |
+| `logout` | () => `Promise`\<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\> | Logout the current user |
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 ### get
 
-▸ **get**\<`Result`\>(`endpoint`, `silent?`): `Promise`\<`undefined` \| `Result`\>
+▸ **get**\<`Result`\>(`endpoint`, `silent?`): `Promise`\<\{ `data`: `undefined` \| `Result` ; `status`: `undefined` \| `number` ; `statusText`: `undefined` \| `string`  }\>
 
 #### Type parameters
 
@@ -177,19 +177,19 @@ ___
 
 #### Returns
 
-`Promise`\<`undefined` \| `Result`\>
+`Promise`\<\{ `data`: `undefined` \| `Result` ; `status`: `undefined` \| `number` ; `statusText`: `undefined` \| `string`  }\>
 
 ___
 
 ### patch
 
-▸ **patch**\<`Payload`, `Result`\>(`endpoint`, `data`, `silent?`): `Promise`\<`undefined` \| `Result`\>
+▸ **patch**\<`Request`, `Result`\>(`endpoint`, `data`, `silent?`): `Promise`\<\{ `data`: `undefined` \| `Result` ; `status`: `undefined` \| `number` ; `statusText`: `undefined` \| `string`  }\>
 
 #### Type parameters
 
 | Name |
 | :------ |
-| `Payload` |
+| `Request` |
 | `Result` |
 
 #### Parameters
@@ -197,24 +197,24 @@ ___
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `endpoint` | `string` | `undefined` |
-| `data` | `Payload` | `undefined` |
+| `data` | `Request` | `undefined` |
 | `silent` | `boolean` | `false` |
 
 #### Returns
 
-`Promise`\<`undefined` \| `Result`\>
+`Promise`\<\{ `data`: `undefined` \| `Result` ; `status`: `undefined` \| `number` ; `statusText`: `undefined` \| `string`  }\>
 
 ___
 
 ### post
 
-▸ **post**\<`Payload`, `Result`\>(`endpoint`, `data`, `silent?`): `Promise`\<\{ `data`: `undefined` \| `Result` ; `status`: `undefined` \| `number` ; `statusText`: `undefined` \| `string`  }\>
+▸ **post**\<`Request`, `Result`\>(`endpoint`, `data`, `silent?`): `Promise`\<\{ `data`: `undefined` \| `Result` ; `status`: `undefined` \| `number` ; `statusText`: `undefined` \| `string`  }\>
 
 #### Type parameters
 
 | Name |
 | :------ |
-| `Payload` |
+| `Request` |
 | `Result` |
 
 #### Parameters
@@ -222,7 +222,7 @@ ___
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `endpoint` | `string` | `undefined` |
-| `data` | `Payload` | `undefined` |
+| `data` | `Request` | `undefined` |
 | `silent` | `boolean` | `false` |
 
 #### Returns
