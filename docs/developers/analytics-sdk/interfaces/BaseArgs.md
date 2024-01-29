@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.4.1](../README.md) / [Exports](../modules.md) / BaseArgs
+ - v0.4.2](../README.md) / [Exports](../modules.md) / BaseArgs
 
 # Interface: BaseArgs
 
