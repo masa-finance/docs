@@ -1,5 +1,5 @@
 [# Masa React
- - v3.8.2](../README.md) / [Exports](../modules.md) / MasaProviderValue
+ - v3.10.2](../README.md) / [Exports](../modules.md) / MasaProviderValue
 
 # Interface: MasaProviderValue
 

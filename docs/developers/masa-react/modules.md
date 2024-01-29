@@ -1,15 +1,10 @@
 [# Masa React
- - v3.8.2](README.md) / Exports
+ - v3.10.2](README.md) / Exports
 
 # # Masa React
- - v3.8.2
+ - v3.10.2
 
 ## Table of contents
-
-### Namespaces
-
-- [AuthenticateModal](modules/AuthenticateModal.md)
-- [CreateSoulnameModal](modules/CreateSoulnameModal.md)
 
 ### Interfaces
 
