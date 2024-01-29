@@ -1,8 +1,8 @@
 [# Masa Express
- - v1.3.3](README.md) / Exports
+ - v1.4.1](README.md) / Exports
 
 # # Masa Express
- - v1.3.3
+ - v1.4.1
 
 ## Table of contents
 
@@ -64,16 +64,16 @@ ___
 
 ### sessionCheckHandler
 
-▸ **sessionCheckHandler**(`request`, `response`, `next`): `undefined` \| `Response`\<`any`, `Record`\<`string`, `any`\>\>
+▸ **sessionCheckHandler**(`request`, `response`, `next`): `undefined` \| `Response`\<`ISession` \| `BaseResult`, `Record`\<`string`, `any`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `request` | `RequestSession` |
-| `response` | `Response`\<`any`, `Record`\<`string`, `any`\>\> |
+| `response` | `Response`\<`ISession` \| `BaseResult`, `Record`\<`string`, `any`\>\> |
 | `next` | `NextFunction` |
 
 #### Returns
 
-`undefined` \| `Response`\<`any`, `Record`\<`string`, `any`\>\>
+`undefined` \| `Response`\<`ISession` \| `BaseResult`, `Record`\<`string`, `any`\>\>
