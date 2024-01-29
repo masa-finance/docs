@@ -16,7 +16,7 @@ A customizable, easy-to-use React component for connecting to Masa Analytics, wr
 This package provides built-in support for tracking different types of events:
 
 - [Page Visit Event](#page-visit-event)
-- [Wallet Connect Event](#wallet-connect-event)
+- [Connect Wallet Event](#connect-wallet-event)
 - [Login Event](#login-event)
 - [Mint Event](#mint-event)
 - [Add Liquidity Event](#add-liquidity-event)
@@ -29,7 +29,7 @@ This package provides built-in support for tracking different types of events:
 
 These events can be easily integrated into your application to gather insights about user interactions.
 
-### Page Visit Event
+### Page View Event
 
 `firePageViewEvent` function is provided to send a page visit event to your API. It takes the following parameters:
 
@@ -44,6 +44,7 @@ import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 const { firePageViewEvent } = useMasaAnalyticsReact({
   clientApp: 'My App',
   clientName: 'My Company Name',
+  clientId: '1234-5678-9012-4567',
 });
 
 // Track a page visit event
@@ -53,7 +54,7 @@ const page = 'https://your-site.example.com/page1';
 void firePageViewEvent(page, user_address);
 ```
 
-### Wallet Connect Event
+### Connect Wallet Event
 
 `fireConnectWalletEvent` function is provided to send a wallet connect wallet event to your API. It takes the following parameters:
 
@@ -68,6 +69,7 @@ import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 const { fireConnectWalletEvent } = useMasaAnalyticsReact({
   clientApp: 'My App',
   clientName: 'My Company Name',
+  clientId: '1234-5678-9012-4567',
 });
 
 // Track a wallet connect event
@@ -94,6 +96,7 @@ import { useMasaAnalyticsReact } from '@masa-finance/analytics-react';
 const { fireLoginEvent } = useMasaAnalyticsReact({
   clientApp: 'My App',
   clientName: 'My Company Name',
+  clientId: '1234-5678-9012-4567',
 });
 
 // Track a login event
