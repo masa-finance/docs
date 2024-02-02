@@ -68,10 +68,15 @@ We strongly recommend using the React SDK to track `connectWallet`, `login`, `mi
 
 ### Step 3: Tracking `elementClick` Event
 
-To track all clicks on your website, you can use the following script. Note, if you want to use this in conjunction with any other events, you will need to write an extra line of code in those functions.
+To track all clicks on your website, you can add the following script to your <header></header>. Note, if you want to use this in conjunction with any other events, you will need to write an extra line of code in those functions.
 
 ```html
 <script>
+
+    var masaAnalytics = new MA.MasaAnalytics({
+      clientId: 'YOUR_CLIENT_ID',
+    });
+
     var userAddress = null;
     // Listen for any click on the document
     document.addEventListener("click", function (event) {
