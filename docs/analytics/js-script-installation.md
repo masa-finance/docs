@@ -66,6 +66,63 @@ If you are using Google Tag Manager you do not need to do **Step 1** start from 
 We strongly recommend using the React SDK to track `connectWallet`, `login`, `mint`, and `custom` events in your React app
 :::
 
+### Step 3: Tracking `elementClick` Event
+
+To track all clicks on your website, you can use the following script. Note, if you want to use this in conjunction with any other events, you will need to write an extra line of code in those functions.
+
+```html
+<script>
+    var userAddress = null;
+    // Listen for any click on the document
+    document.addEventListener("click", function (event) {
+      if (event.target.nodeType === Node.ELEMENT_NODE) {
+        console.log(event.target.nodeType);
+
+        var page_url = window.location.href; // Gets the current page URL
+        var page_title = document.title; // Gets the current page title
+        var element = event.target; // The element that was clicked
+
+        // Get the element's ID
+        var element_id = element.id;
+
+        // Get the element's class (as a string)
+        var element_class = element.className;
+
+        // Get the element's text content
+        var element_text = element.textContent || element.innerText;
+
+        // Include userAddress in the fireEvent method if it exists
+        var eventData = {
+          page_url,
+          page_title,
+          element_id,
+          element_class,
+          element_text,
+        };
+
+        if (userAddress) {
+          eventData.user_address = userAddress; // Add userAddress to the event data if it exists
+        }
+
+        masaAnalytics.fireElementClickEvent(eventData);
+      }
+    });
+    </script>
+```
+
+If you want to use this with other click events (like connect wallet), you would use this same script as is and in your other event functions, you would add `event.stopPropagation();` to the top of the function. For example:
+
+```javascript
+    async function handleConnectWallet() {
+      event.stopPropagation(); // Prevent the event from bubbling up
+      console.log("handleConnectWallet");
+      const address = await MA.connectMetamask(masaAnalytics);
+      if (address) {
+        userAddress = address; // Store the user address in the global variable
+      }
+    }
+```
+
 ### Step 3: Tracking `connectWallet` Event
 
 To track the `connectWallet` event, you'll need to extract the Ethereum address from the connected wallet.
