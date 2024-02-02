@@ -123,7 +123,7 @@ If you want to use this with other click events (like connect wallet), you would
     }
 ```
 
-### Step 3: Tracking `connectWallet` Event
+### Step 4: Tracking `connectWallet` Event
 
 To track the `connectWallet` event, you'll need to extract the Ethereum address from the connected wallet.
 
@@ -155,14 +155,14 @@ To track the `connectWallet` event, you'll need to extract the Ethereum address 
 </script>
 ```
 
-### Step 4: Tracking `login` Event
+### Step 5: Tracking `login` Event
 
 ```javascript
 // Example tracking login event
 MasaAnalytics.trackLogin(clientId, address, clientApp, clientName, "metamask", "celo");
 ```
 
-### Step 5: Tracking `mint` Event
+### Step 6: Tracking `mint` Event
 
 ```javascript
 // Example tracking mint event
@@ -181,5 +181,5 @@ MasaAnalytics.trackMint(clientId, address, mintEventData);
 
 ### Conclusion
 
-By following this guide, you'll be able to integrate Masa Analytics into your website to track `pageView`, `connectWallet`, `login`, and `mint` events. Replace placeholders with actual values and customize tracking as needed.
+By following this guide, you'll be able to integrate Masa Analytics into your website to track `pageView`, `elementClick`, `connectWallet`, `login`, and `mint` events. Replace placeholders with actual values and customize tracking as needed.
 ```
