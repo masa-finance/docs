@@ -66,7 +66,36 @@ If you are using Google Tag Manager you do not need to do **Step 1** start from 
 We strongly recommend using the React SDK to track `connectWallet`, `login`, `mint`, and `custom` events in your React app
 :::
 
-### Step 3: Tracking `connectWallet` Event
+### Step 3: Tracking `elementClick` Event
+
+To track all clicks on your website, you can add the following script to your <header></header>. Note, if you want to use this in conjunction with any other events, you will need to write an extra line of code in those functions.
+
+```html
+<script>
+
+    var masaAnalytics = new MA.MasaAnalytics({
+      clientId: 'YOUR_CLIENT_ID',
+    });
+    
+    masaAnalytics.trackClicks()
+
+    </script>
+```
+
+If you want to use this with other click events (like connect wallet), you would use this same script as is and in your other event functions, you would add `event.stopPropagation();` to the top of the function. For example:
+
+```javascript
+    async function handleConnectWallet() {
+      event.stopPropagation(); // Prevent the event from bubbling up
+      console.log("handleConnectWallet");
+      const address = await MA.connectMetamask(masaAnalytics);
+      if (address) {
+        userAddress = address; // Store the user address in the global variable
+      }
+    }
+```
+
+### Step 4: Tracking `connectWallet` Event
 
 To track the `connectWallet` event, you'll need to extract the Ethereum address from the connected wallet.
 
@@ -98,14 +127,14 @@ To track the `connectWallet` event, you'll need to extract the Ethereum address 
 </script>
 ```
 
-### Step 4: Tracking `login` Event
+### Step 5: Tracking `login` Event
 
 ```javascript
 // Example tracking login event
 MasaAnalytics.trackLogin(clientId, address, clientApp, clientName, "metamask", "celo");
 ```
 
-### Step 5: Tracking `mint` Event
+### Step 6: Tracking `mint` Event
 
 ```javascript
 // Example tracking mint event
@@ -124,5 +153,5 @@ MasaAnalytics.trackMint(clientId, address, mintEventData);
 
 ### Conclusion
 
-By following this guide, you'll be able to integrate Masa Analytics into your website to track `pageView`, `connectWallet`, `login`, and `mint` events. Replace placeholders with actual values and customize tracking as needed.
+By following this guide, you'll be able to integrate Masa Analytics into your website to track `pageView`, `elementClick`, `connectWallet`, `login`, and `mint` events. Replace placeholders with actual values and customize tracking as needed.
 ```
