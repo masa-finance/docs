@@ -76,42 +76,9 @@ To track all clicks on your website, you can add the following script to your <h
     var masaAnalytics = new MA.MasaAnalytics({
       clientId: 'YOUR_CLIENT_ID',
     });
+    
+    masaAnalytics.trackClicks()
 
-    var userAddress = null;
-    // Listen for any click on the document
-    document.addEventListener("click", function (event) {
-      if (event.target.nodeType === Node.ELEMENT_NODE) {
-        console.log(event.target.nodeType);
-
-        var page_url = window.location.href; // Gets the current page URL
-        var page_title = document.title; // Gets the current page title
-        var element = event.target; // The element that was clicked
-
-        // Get the element's ID
-        var element_id = element.id;
-
-        // Get the element's class (as a string)
-        var element_class = element.className;
-
-        // Get the element's text content
-        var element_text = element.textContent || element.innerText;
-
-        // Include userAddress in the fireEvent method if it exists
-        var eventData = {
-          page_url,
-          page_title,
-          element_id,
-          element_class,
-          element_text,
-        };
-
-        if (userAddress) {
-          eventData.user_address = userAddress; // Add userAddress to the event data if it exists
-        }
-
-        masaAnalytics.fireElementClickEvent(eventData);
-      }
-    });
     </script>
 ```
 
