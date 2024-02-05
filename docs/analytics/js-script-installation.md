@@ -28,6 +28,21 @@ Copy and paste the Masa Analytics initialization script into the `<head>` sectio
   var masaAnalytics = new MA.MasaAnalytics({
     clientId: "YOUR_CLIENT_ID",
   });
+
+  window.onload = async function () {
+    var page = window.location.href;
+
+    // Track PageView event
+    masaAnalytics.firePageViewEvent({ page });
+
+    function trackPageViewForSPA() {
+      var updatedPageUrl = window.location.href;
+      masaAnalytics.firePageViewEvent({ page: updatedPageUrl });
+    }
+
+    // This event is triggered when the route changes in many SPAs
+    window.addEventListener("popstate", trackPageViewForSPA);
+  };
 </script>
 ```
 
