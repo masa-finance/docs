@@ -35,6 +35,7 @@ Copy and paste the Masa Analytics initialization script into the `<head>` sectio
 
 After following initialization in step 1, we can create a new script to trigger on page load to fire page view events.
 
+```javascript
 <script>
   window.onload = async function () {
     var page = window.location.href;
@@ -51,10 +52,11 @@ After following initialization in step 1, we can create a new script to trigger 
     window.addEventListener("popstate", trackPageViewForSPA);
   };
 </script>
+```
 
 ### Step 3: Google Tag Manager Integration
 
-If you are using Google Tag Manager you do not need to do **Step 1** start from **Step 2**
+If you are using Google Tag Manager you do not need to do **Step 2** start from **Step 1**
 
 1. **Go to Google Tag Manager** (GTM) and create a new tag.
 2. **Choose the 'Custom HTML' tag type** and paste the Masa Analytics initialization script from Step 1.
@@ -71,7 +73,7 @@ We strongly recommend using the React SDK to track `connectWallet`, `elementClic
 
 ### Step 4: Tracking `elementClick` Event
 
-To track all clicks on your website, you can add the following script to your <header></header>. Note, if you want to use this in conjunction with any other events, you will need to write an extra line of code in those functions.
+To track all clicks on your website, you can add the following script to your header. Note, if you want to use this in conjunction with any other events, you will need to write an extra line of code in those functions.
 
 ```html
 <script>
