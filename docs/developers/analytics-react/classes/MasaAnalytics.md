@@ -1,5 +1,5 @@
 [# Masa Analytics React
- - v0.13.5](../README.md) / [Exports](../modules.md) / MasaAnalytics
+ - v0.13.7](../README.md) / [Exports](../modules.md) / MasaAnalytics
 
 # Class: MasaAnalytics
 
@@ -12,7 +12,11 @@
 ### Properties
 
 - [\_client](MasaAnalytics.md#_client)
+- [clickedElements](MasaAnalytics.md#clickedelements)
 - [config](MasaAnalytics.md#config)
+- [extractElementData](MasaAnalytics.md#extractelementdata)
+- [handleDocumentClick](MasaAnalytics.md#handledocumentclick)
+- [userAddress](MasaAnalytics.md#useraddress)
 
 ### Accessors
 
@@ -21,10 +25,12 @@
 ### Methods
 
 - [fireConnectWalletEvent](MasaAnalytics.md#fireconnectwalletevent)
+- [fireElementClickEvent](MasaAnalytics.md#fireelementclickevent)
 - [fireEvent](MasaAnalytics.md#fireevent)
 - [fireLoginEvent](MasaAnalytics.md#fireloginevent)
 - [fireMintEvent](MasaAnalytics.md#firemintevent)
 - [firePageViewEvent](MasaAnalytics.md#firepageviewevent)
+- [trackClicks](MasaAnalytics.md#trackclicks)
 
 ## Constructors
 
@@ -54,9 +60,37 @@
 
 ___
 
+### clickedElements
+
+• `Private` **clickedElements**: `any`
+
+___
+
 ### config
 
 • `Private` **config**: `any`
+
+___
+
+### extractElementData
+
+• `Private` **extractElementData**: `any`
+
+Extracts relevant data from the clicked element.
+
+___
+
+### handleDocumentClick
+
+• `Private` **handleDocumentClick**: `any`
+
+Handles click events on the document, filtering out non-element nodes and specific elements.
+
+___
+
+### userAddress
+
+• **userAddress**: ``null`` \| `string`
 
 ## Accessors
 
@@ -81,6 +115,24 @@ Fire an event once a user tries to mint a token
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `FireConnectWalletEventArgs` |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+___
+
+### fireElementClickEvent
+
+▸ **fireElementClickEvent**(`«destructured»`): `Promise`\<`void`\>
+
+Fire an event once the user changes the page
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `FireElementClickEventArgs` |
 
 #### Returns
 
@@ -159,3 +211,15 @@ Fire an event once the user changes the page
 #### Returns
 
 `Promise`\<`void`\>
+
+___
+
+### trackClicks
+
+▸ **trackClicks**(): `void`
+
+Sets up tracking for click events on the entire document.
+
+#### Returns
+
+`void`

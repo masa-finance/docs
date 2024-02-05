@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.4.2](../README.md) / [Exports](../modules.md) / PageViewEventData
+ - v0.5.4](../README.md) / [Exports](../modules.md) / PageViewEventData
 
 # Interface: PageViewEventData
 

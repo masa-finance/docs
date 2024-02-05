@@ -1,8 +1,8 @@
 [# Masa Analytics React
- - v0.13.5](README.md) / Exports
+ - v0.13.7](README.md) / Exports
 
 # # Masa Analytics React
- - v0.13.5
+ - v0.13.7
 
 ## Table of contents
 
@@ -25,7 +25,7 @@
 
 ### EventType
 
-Ƭ **EventType**: ``"pageView"`` \| ``"login"`` \| ``"mint"`` \| ``"connectWallet"`` \| ``"swap"`` \| ``"bridge"`` \| ``"addLiquidity"`` \| ``"removeLiquidity"`` \| ``"farm"`` \| ``"trade"`` \| ``"claim"``
+Ƭ **EventType**: ``"pageView"`` \| ``"elementClick"`` \| ``"login"`` \| ``"mint"`` \| ``"connectWallet"`` \| ``"swap"`` \| ``"bridge"`` \| ``"addLiquidity"`` \| ``"removeLiquidity"`` \| ``"farm"`` \| ``"trade"`` \| ``"claim"``
 
 ## Functions
 
