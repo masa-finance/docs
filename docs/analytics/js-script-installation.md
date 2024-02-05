@@ -50,6 +50,7 @@ After following initialization in step 1, we can create a new script to trigger 
     window.addEventListener("popstate", trackPageViewForSPA);
   };
 </script>
+
 ### Step 3: Google Tag Manager Integration
 
 If you are using Google Tag Manager you do not need to do **Step 1** start from **Step 2**
