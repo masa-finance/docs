@@ -85,7 +85,7 @@ If you want to use this with other click events (like connect wallet), you would
 
 ```javascript
 async function handleConnectWallet() {
-  event.stopPropagation(); // Prevent the event from bubbling up if using masaAnalytics.trackClicks(); 
+  event.stopPropagation(); // Prevent the event from bubbling up if using masaAnalytics.trackClicks();
   console.log("handleConnectWallet");
   const address = await MA.connectMetamask(masaAnalytics);
   if (address) {
@@ -96,25 +96,56 @@ async function handleConnectWallet() {
 
 ### Step 5: Tracking `connectWallet` Event
 
-To track the `connectWallet` event, you'll need to extract the Ethereum address from the connected wallet. This works with the window.ethereum object out of the box.
+To track the `connectWallet` event, you'll need to extract the Ethereum address from the connected wallet. This works with the window.ethereum object out of the box. If you want to call this with a button click, you would need to make sure your button has the id of `connectWalletBtn` or else you can call this on page load. Two examples are below.
 
 ```html
 <script>
-async function handleConnectWallet() {
-  event.stopPropagation(); // Prevent the event from bubbling up if using masaAnalytics.trackClicks(); 
-  console.log("handleConnectWallet");
-  const address = await MA.connectMetamask(masaAnalytics);
-  if (address) {
-    userAddress = address; // Store the user address in the global variable
-  }
-}
-await handleConnectWallet();
+  document.addEventListener("DOMContentLoaded", (event) => {
+    document
+      .getElementById("connectWalletBtn")
+      .addEventListener("click", handleConnectWallet);
+
+    async function handleConnectWallet(event) {
+      if (event) event.stopPropagation();
+      console.log("handleConnectWallet");
+      const address = await MA.connectMetamask(masaAnalytics);
+      // Handle the address
+    }
+  });
 </script>
 ```
 
-### Conclusion
+```html
+<script>
+  window.onload = async function () {
+    var page = window.location.href;
 
-By following this guide, you'll be able to integrate Masa Analytics into your website to track `pageView`, `elementClick`, `connectWallet`, `login`, and `mint` events. Replace placeholders with actual values and customize tracking as needed.
+    // Track PageView event
+    masaAnalytics.firePageViewEvent({ page });
+
+    function trackPageViewForSPA() {
+      var updatedPageUrl = window.location.href;
+      masaAnalytics.firePageViewEvent({ page: updatedPageUrl });
+    }
+
+    // This event is triggered when the route changes in many SPAs
+    window.addEventListener("popstate", trackPageViewForSPA);
+
+    async function handleConnectWallet() {
+      console.log("handleConnectWallet");
+      const address = await MA.connectMetamask(masaAnalytics);
+      // Handle the address
+    }
+
+    handleConnectWallet();
+  };
+</script>
+
+### Conclusion By following this guide, you'll be able to integrate Masa
+Analytics into your website to track `pageView`, `elementClick`,
+`connectWallet`, `login`, and `mint` events. Replace placeholders with actual
+values and customize tracking as needed.
+```
 
 ```
 
