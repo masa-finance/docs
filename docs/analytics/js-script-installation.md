@@ -30,6 +30,7 @@ Copy and paste the Masa Analytics initialization script into the `<head>` sectio
   });
 </script>
 ```
+
 ### Step 2: Track `pageView` events
 
 After following initialization in step 1, we can create a new script to trigger on page load to fire page view events.
