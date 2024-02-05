@@ -1,8 +1,8 @@
 [# Masa Analytics SDK
- - v0.4.2](README.md) / Exports
+ - v0.5.4](README.md) / Exports
 
 # # Masa Analytics SDK
- - v0.4.2
+ - v0.5.4
 
 ## Table of contents
 
@@ -17,7 +17,9 @@
 - [BaseEvent](interfaces/BaseEvent.md)
 - [BaseEventData](interfaces/BaseEventData.md)
 - [ConnectWalletEventData](interfaces/ConnectWalletEventData.md)
+- [ElementClickEventData](interfaces/ElementClickEventData.md)
 - [FireConnectWalletEventArgs](interfaces/FireConnectWalletEventArgs.md)
+- [FireElementClickEventArgs](interfaces/FireElementClickEventArgs.md)
 - [FireEventArgs](interfaces/FireEventArgs.md)
 - [FireEventData](interfaces/FireEventData.md)
 - [FireLoginEventArgs](interfaces/FireLoginEventArgs.md)
@@ -48,7 +50,7 @@
 
 ### EventType
 
-Ƭ **EventType**: ``"pageView"`` \| ``"login"`` \| ``"mint"`` \| ``"connectWallet"`` \| ``"swap"`` \| ``"bridge"`` \| ``"addLiquidity"`` \| ``"removeLiquidity"`` \| ``"farm"`` \| ``"trade"`` \| ``"claim"``
+Ƭ **EventType**: ``"pageView"`` \| ``"elementClick"`` \| ``"login"`` \| ``"mint"`` \| ``"connectWallet"`` \| ``"swap"`` \| ``"bridge"`` \| ``"addLiquidity"`` \| ``"removeLiquidity"`` \| ``"farm"`` \| ``"trade"`` \| ``"claim"``
 
 ## Variables
 
@@ -60,7 +62,7 @@
 
 ### connectMetamask
 
-▸ **connectMetamask**(`ma`): `Promise`\<`void`\>
+▸ **connectMetamask**(`ma`): `Promise`\<`undefined` \| `string`\>
 
 #### Parameters
 
@@ -70,7 +72,7 @@
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`\<`undefined` \| `string`\>
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.4.2](../README.md) / [Exports](../modules.md) / MasaAnalytics
+ - v0.5.4](../README.md) / [Exports](../modules.md) / MasaAnalytics
 
 # Class: MasaAnalytics
 
@@ -12,7 +12,9 @@
 ### Properties
 
 - [\_client](MasaAnalytics.md#_client)
+- [clickedElements](MasaAnalytics.md#clickedelements)
 - [config](MasaAnalytics.md#config)
+- [userAddress](MasaAnalytics.md#useraddress)
 
 ### Accessors
 
@@ -20,11 +22,15 @@
 
 ### Methods
 
+- [extractElementData](MasaAnalytics.md#extractelementdata)
 - [fireConnectWalletEvent](MasaAnalytics.md#fireconnectwalletevent)
+- [fireElementClickEvent](MasaAnalytics.md#fireelementclickevent)
 - [fireEvent](MasaAnalytics.md#fireevent)
 - [fireLoginEvent](MasaAnalytics.md#fireloginevent)
 - [fireMintEvent](MasaAnalytics.md#firemintevent)
 - [firePageViewEvent](MasaAnalytics.md#firepageviewevent)
+- [handleDocumentClick](MasaAnalytics.md#handledocumentclick)
+- [trackClicks](MasaAnalytics.md#trackclicks)
 
 ## Constructors
 
@@ -54,6 +60,12 @@
 
 ___
 
+### clickedElements
+
+• `Private` **clickedElements**: `Record`\<`string`, `boolean`\> = `{}`
+
+___
+
 ### config
 
 • `Private` **config**: `Object`
@@ -67,6 +79,12 @@ ___
 | `clientId` | `string` |
 | `clientName` | `string` |
 
+___
+
+### userAddress
+
+• **userAddress**: ``null`` \| `string` = `null`
+
 ## Accessors
 
 ### client
@@ -79,6 +97,34 @@ ___
 
 ## Methods
 
+### extractElementData
+
+▸ **extractElementData**(`element`): `Object`
+
+Extracts relevant data from the clicked element.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `element` | `any` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `additionalEventData` | {} |
+| `element_class` | `any` |
+| `element_id` | `any` |
+| `element_text` | `any` |
+| `page_title` | `string` |
+| `page_url` | `string` |
+| `user_address` | `undefined` \| `string` |
+
+___
+
 ### fireConnectWalletEvent
 
 ▸ **fireConnectWalletEvent**(`«destructured»`): `Promise`\<`void`\>
@@ -90,6 +136,24 @@ Fire an event once a user tries to mint a token
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | [`FireConnectWalletEventArgs`](../interfaces/FireConnectWalletEventArgs.md) |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+___
+
+### fireElementClickEvent
+
+▸ **fireElementClickEvent**(`«destructured»`): `Promise`\<`void`\>
+
+Fire an event once the user changes the page
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | [`FireElementClickEventArgs`](../interfaces/FireElementClickEventArgs.md) |
 
 #### Returns
 
@@ -168,3 +232,33 @@ Fire an event once the user changes the page
 #### Returns
 
 `Promise`\<`void`\>
+
+___
+
+### handleDocumentClick
+
+▸ **handleDocumentClick**(`event`): `void`
+
+Handles click events on the document, filtering out non-element nodes and specific elements.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `event` | `any` |
+
+#### Returns
+
+`void`
+
+___
+
+### trackClicks
+
+▸ **trackClicks**(): `void`
+
+Sets up tracking for click events on the entire document.
+
+#### Returns
+
+`void`
