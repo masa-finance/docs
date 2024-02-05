@@ -14,7 +14,7 @@ This guide will walk you through integrating Masa Analytics React into your webs
 A `client_id` will be provided to you during your onboarding to Masa Analytics, please reach out to **help@masa.finance** or reach out to us on **Discord** if you need a ClientID
 :::
 
-### Step 1: Track `pageViews` With Masa Analytics Tracking Script
+### Step 1: Initialize Masa Analytics Tracking Script
 
 Copy and paste the Masa Analytics initialization script into the `<head>` section of your website's HTML. This script will load the CDN-hosted tracking code and set up basic page view tracking.
 
@@ -28,7 +28,13 @@ Copy and paste the Masa Analytics initialization script into the `<head>` sectio
   var masaAnalytics = new MA.MasaAnalytics({
     clientId: "YOUR_CLIENT_ID",
   });
+</script>
+```
+### Step 2: Track `pageView` events
 
+After following initialization in step 1, we can create a new script to trigger on page load to fire page view events.
+
+<script>
   window.onload = async function () {
     var page = window.location.href;
 
@@ -44,9 +50,7 @@ Copy and paste the Masa Analytics initialization script into the `<head>` sectio
     window.addEventListener("popstate", trackPageViewForSPA);
   };
 </script>
-```
-
-### Step 2: Google Tag Manager Integration
+### Step 3: Google Tag Manager Integration
 
 If you are using Google Tag Manager you do not need to do **Step 1** start from **Step 2**
 
@@ -63,7 +67,7 @@ If you are using Google Tag Manager you do not need to do **Step 1** start from 
 We strongly recommend using the React SDK to track `connectWallet`, `elementClick`, `login`, `mint`, and `custom` events in your React app
 :::
 
-### Step 3: Tracking `elementClick` Event
+### Step 4: Tracking `elementClick` Event
 
 To track all clicks on your website, you can add the following script to your <header></header>. Note, if you want to use this in conjunction with any other events, you will need to write an extra line of code in those functions.
 
@@ -86,7 +90,7 @@ async function handleConnectWallet() {
 }
 ```
 
-### Step 4: Tracking `connectWallet` Event
+### Step 5: Tracking `connectWallet` Event
 
 To track the `connectWallet` event, you'll need to extract the Ethereum address from the connected wallet.
 
@@ -133,7 +137,7 @@ To track the `connectWallet` event, you'll need to extract the Ethereum address 
 </script>
 ```
 
-### Step 5: Tracking `login` Event
+### Step 6: Tracking `login` Event
 
 ```javascript
 // Example tracking login event
@@ -147,7 +151,7 @@ MasaAnalytics.trackLogin(
 );
 ```
 
-### Step 6: Tracking `mint` Event
+### Step 7: Tracking `mint` Event
 
 ```javascript
 // Example tracking mint event
