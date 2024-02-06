@@ -111,9 +111,6 @@ async function handleConnectWallet(event) {
   if (event) event.stopPropagation(); // Prevent the event from bubbling up if using masaAnalytics.trackClicks();
   console.log("handleConnectWallet");
   const address = await MA.connectMetamask(masaAnalytics);
-  if (address) {
-    userAddress = address; // Store the user address in the global variable
-  }
 }
 ```
 
