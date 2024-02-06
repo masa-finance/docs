@@ -95,7 +95,7 @@ Choose the 'Custom HTML' tag type and paste the Masa Analytics initialization sc
 
 <br/>
 
-:::warning
+:::info
 We strongly recommend using the React SDK to track `connectWallet`, `elementClick`, `login`, `mint`, and `custom` events in your React app
 :::
 
