@@ -11,7 +11,12 @@ This guide will instruct you how to integrate Masa Analytics into your website. 
 ### Get a `client_id`
 
 :::info
-A `client_id` will be provided to you during your onboarding to Masa Analytics, please reach out to **help@masa.finance** or reach out to us at our #developers channel on **Discord** if you need a ClientID.
+A `client_id` will be provided to you during your Masa Analytics on-boarding. Please contact **help@masa.finance** or reach out to us at our #developers channel on **Discord** if you need a ClientID.
+:::
+
+
+:::info
+If you’re installing Masa Analytics directly into your Website HTML follow the steps below. If you’re installing Masa Analytics into your Google Tag Manager scroll down.
 :::
 
 ## Website HTML Integration
@@ -90,7 +95,7 @@ Choose the 'Custom HTML' tag type and paste the Masa Analytics initialization sc
 
 <br/>
 
-:::warning
+:::info
 We strongly recommend using the React SDK to track `connectWallet`, `elementClick`, `login`, `mint`, and `custom` events in your React app
 :::
 
@@ -212,10 +217,4 @@ If you are using most of this functionality together, you also have the option t
   };
 </script>
 ```
-
-### Conclusion 
-
-By following this guide, you'll be able to integrate Masa Analytics into your website to track `pageView`, `elementClick`,
-`connectWallet`, `login`, and `mint` events. Replace placeholders with actual
-values and customize tracking as needed.
 
