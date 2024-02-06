@@ -213,9 +213,9 @@ If you are using most of this functionality together, you also have the option t
 </script>
 ```
 
-### Conclusion By following this guide, you'll be able to integrate Masa
+### Conclusion 
 
-Analytics into your website to track `pageView`, `elementClick`,
+By following this guide, you'll be able to integrate Masa Analytics into your website to track `pageView`, `elementClick`,
 `connectWallet`, `login`, and `mint` events. Replace placeholders with actual
 values and customize tracking as needed.
 
