@@ -96,7 +96,7 @@ We strongly recommend using the React SDK to track `connectWallet`, `elementClic
 
 ### Step 3: Tracking `elementClick` Event
 
-To track all clicks on your website, you can add the following script to your header. Note, if you want to use this in conjunction with any other events, you will need to write an extra line of code in those functions.
+To track all clicks on your website, you can add the following script to your header. Note: If you want to use this in conjunction with any other events, you will need to write an extra line of code for each of those functions.
 
 ```html
 <script>
@@ -104,17 +104,23 @@ To track all clicks on your website, you can add the following script to your he
 </script>
 ```
 
-If you want to use this with other click events (like connect wallet), you would use this same script as is and in your other event functions, you would add `event.stopPropagation();` to the top of the function. For example:
+If you want to use this with other defined click events (like a button to call connect wallet), you would use this same script as is and in your other event functions, you would add `event.stopPropagation();` to the top of the function. For example:
 
-```javascript
-async function handleConnectWallet(event) {
-  if (event) event.stopPropagation(); // Prevent the event from bubbling up if using masaAnalytics.trackClicks();
-  console.log("handleConnectWallet");
-  const address = await MA.connectMetamask(masaAnalytics);
-  if (address) {
-    userAddress = address; // Store the user address in the global variable
-  }
-}
+```html
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    document
+      .getElementById("connectWalletBtn")
+      .addEventListener("click", handleConnectWallet);
+
+    async function handleConnectWallet(event) {
+      if (event) event.stopPropagation();
+      console.log("handleConnectWallet");
+      const address = await MA.connectMetamask(masaAnalytics);
+      // Handle the address
+    }
+  });
+</script>
 ```
 
 ### Step 4: Tracking `connectWallet` Event
