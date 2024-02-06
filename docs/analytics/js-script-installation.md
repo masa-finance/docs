@@ -67,7 +67,7 @@ Please jump to Step 3 to continue installing and configuring Masa Analytics into
 
 ## Google Tag Manager Integration
 
-## Step 1: Google Tag Manager Integration​
+### Step 1: Google Tag Manager Integration​
 
 Go to Google Tag Manager (GTM) and create a new tag.
 Choose the 'Custom HTML' tag type and paste the Masa Analytics initialization script.
@@ -85,7 +85,7 @@ Choose the 'Custom HTML' tag type and paste the Masa Analytics initialization sc
 </script>
 ```
 
-## Step 2: Set Up Triggers
+### Step 2: Set Up Triggers
 
 **Set up triggers**:
 
