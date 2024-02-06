@@ -16,7 +16,7 @@ A `client_id` will be provided to you during your onboarding to Masa Analytics, 
 
 ### Step 1: Initialize Masa Analytics Tracking Script
 
-Copy and paste the Masa Analytics initialization script into the `<head>` section of your website's HTML. This script will load the CDN-hosted tracking code and set up basic page view tracking.
+Copy and paste the Masa Analytics initialization script into the `<head>` section of your website's HTML. This script will load the CDN-hosted tracking code and set up basic page view tracking. Make sure to replace `YOUR_CLIENT_ID` with the client id you generate from your dashboard.
 
 ```html
 <!-- Include this script in your HTML -->
@@ -140,11 +140,58 @@ To track the `connectWallet` event, you'll need to extract the Ethereum address 
     handleConnectWallet();
   };
 </script>
+```
+
+### Combining these scripts
+
+If you are using most of this functionality together, you also have the option to refactor all of these scripts into one as demonstrated below.
+
+```html
+<!-- Include this script in your HTML -->
+<script
+  type="application/javascript"
+  src="https://cdn.jsdelivr.net/npm/@masa-finance/analytics-sdk@latest/dist/browser/masa-analytics.min.js"
+></script>
+<script>
+  var masaAnalytics = new MA.MasaAnalytics({
+    clientId: "YOUR_CLIENT_ID",
+  });
+
+  masaAnalytics.trackClicks();
+
+  window.onload = async function () {
+    var page = window.location.href;
+
+    // Track PageView event
+    masaAnalytics.firePageViewEvent({ page });
+
+    function trackPageViewForSPA() {
+      var updatedPageUrl = window.location.href;
+      masaAnalytics.firePageViewEvent({ page: updatedPageUrl });
+    }
+
+    // This event is triggered when the route changes in many SPAs
+    window.addEventListener("popstate", trackPageViewForSPA);
+
+    async function handleConnectWallet() {
+      console.log("handleConnectWallet");
+      const address = await MA.connectMetamask(masaAnalytics);
+      // Handle the address
+    }
+
+    handleConnectWallet();
+  };
+</script>
+```
 
 ### Conclusion By following this guide, you'll be able to integrate Masa
+
 Analytics into your website to track `pageView`, `elementClick`,
 `connectWallet`, `login`, and `mint` events. Replace placeholders with actual
 values and customize tracking as needed.
+
+```
+
 ```
 
 ```
