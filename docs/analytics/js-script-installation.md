@@ -5,18 +5,20 @@ title: JS Script Installation
 ## Masa Analytics Integration Guide
 
 :::info
-This guide will walk you through integrating Masa Analytics React into your website using our JS Script and CDN with Google Tag Manager. It's designed to get you up and running quickly and smoothly.
+This guide will instruct you how to integrate Masa Analytics into your website. We’ll walk you through how to install Masa Analytics React code into your Website’s HTML or Google Tag manager using our JS Script and CDN. It's designed to get you up and running quickly and easily.
 :::
 
 ### Get a `client_id`
 
 :::info
-A `client_id` will be provided to you during your onboarding to Masa Analytics, please reach out to **help@masa.finance** or reach out to us on **Discord** if you need a ClientID
+A `client_id` will be provided to you during your onboarding to Masa Analytics, please reach out to **help@masa.finance** or reach out to us at our #developers channel on **Discord** if you need a ClientID.
 :::
 
-### Step 1: Initialize Masa Analytics Tracking Script
+## Website HTML Integration
 
-Copy and paste the Masa Analytics initialization script into the `<head>` section of your website's HTML. This script will load the CDN-hosted tracking code and set up basic page view tracking. Make sure to replace `YOUR_CLIENT_ID` with the client id you generate from your dashboard.
+### Step 1: Install the Masa Analytics Tracking Script​
+
+Copy and paste the Masa Analytics initialization script into the `<header>` section of your website's HTML. This script will load the CDN-hosted tracking code and set up basic page view tracking.
 
 ```html
 <!-- Include this script in your HTML -->
@@ -33,7 +35,7 @@ Copy and paste the Masa Analytics initialization script into the `<head>` sectio
 
 ### Step 2: Track `pageView` events
 
-After following initialization in step 1, we can create a new script to trigger on page load to fire page view events.
+After installing the tacking script in Step 1, we can create a new script to trigger each time a user loads a page to fire pageView events.
 
 ```javascript
 <script>
@@ -54,16 +56,37 @@ After following initialization in step 1, we can create a new script to trigger 
 </script>
 ```
 
-### Step 3: Google Tag Manager Integration
+:::info
+Please jump to Step 3 to continue installing and configuring Masa Analytics into your Website HTML.
+:::
 
-If you are using Google Tag Manager you do not need to do **Step 2** start from **Step 1**
+## Google Tag Manager Integration
 
-1. **Go to Google Tag Manager** (GTM) and create a new tag.
-2. **Choose the 'Custom HTML' tag type** and paste the Masa Analytics initialization script from Step 1.
-3. **Set up triggers**:
-   - **All Pages**: To track all page views.
-   - **Page Views**: For tracking specific page views.
-   - **History Changes**: Useful for Single Page Applications (SPAs) to track route changes.
+## Step 1: Google Tag Manager Integration​
+
+Go to Google Tag Manager (GTM) and create a new tag.
+Choose the 'Custom HTML' tag type and paste the Masa Analytics initialization script.
+
+```html
+<!-- Include this script in your HTML -->
+<script
+  type="application/javascript"
+  src="https://cdn.jsdelivr.net/npm/@masa-finance/analytics-sdk@latest/dist/browser/masa-analytics.min.js"
+></script>
+<script>
+  var masaAnalytics = new MA.MasaAnalytics({
+    clientId: "YOUR_CLIENT_ID",
+  });
+</script>
+```
+
+## Step 2: Set Up Triggers
+
+**Set up triggers**:
+
+- **All Pages**: To track all page views.
+- **Page Views**: For tracking specific page views.
+- **History Changes**: Useful for Single Page Applications (SPAs) to track route changes.
 
 <br/>
 
@@ -71,7 +94,7 @@ If you are using Google Tag Manager you do not need to do **Step 2** start from 
 We strongly recommend using the React SDK to track `connectWallet`, `elementClick`, `login`, `mint`, and `custom` events in your React app
 :::
 
-### Step 4: Tracking `elementClick` Event
+### Step 3: Tracking `elementClick` Event
 
 To track all clicks on your website, you can add the following script to your header. Note, if you want to use this in conjunction with any other events, you will need to write an extra line of code in those functions.
 
@@ -84,8 +107,8 @@ To track all clicks on your website, you can add the following script to your he
 If you want to use this with other click events (like connect wallet), you would use this same script as is and in your other event functions, you would add `event.stopPropagation();` to the top of the function. For example:
 
 ```javascript
-async function handleConnectWallet() {
-  event.stopPropagation(); // Prevent the event from bubbling up if using masaAnalytics.trackClicks();
+async function handleConnectWallet(event) {
+  if (event) event.stopPropagation(); // Prevent the event from bubbling up if using masaAnalytics.trackClicks();
   console.log("handleConnectWallet");
   const address = await MA.connectMetamask(masaAnalytics);
   if (address) {
@@ -94,7 +117,7 @@ async function handleConnectWallet() {
 }
 ```
 
-### Step 5: Tracking `connectWallet` Event
+### Step 4: Tracking `connectWallet` Event
 
 To track the `connectWallet` event, you'll need to extract the Ethereum address from the connected wallet. This works with the window.ethereum object out of the box. If you want to call this with a button click, you would need to make sure your button has the id of `connectWalletBtn` or else you can call this on page load. Two examples are below.
 
@@ -190,10 +213,3 @@ Analytics into your website to track `pageView`, `elementClick`,
 `connectWallet`, `login`, and `mint` events. Replace placeholders with actual
 values and customize tracking as needed.
 
-```
-
-```
-
-```
-
-```
