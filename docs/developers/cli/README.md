@@ -70,6 +70,8 @@
     - [`masa oracle`](#masa-oracle)
       - [`masa oracle stake <amount>`](#masa-oracle-stake-amount)
       - [`masa oracle withdraw <amount>`](#masa-oracle-withdraw-amount)
+    - [`masa token`](#masa-token)
+      - [`masa token swap <to> <amount>`](#masa-token-swap-to-amount)
     - [`masa settings`](#masa-settings)
       - [`masa settings set <key> <value>`](#masa-settings-set-key-value)
       - [`masa settings preset <environment>`](#masa-settings-preset-environment)
@@ -162,6 +164,8 @@ Commands:
   oracle                                                                                                             Oracle commands
   oracle stake <amount>
   oracle withdraw <amount>
+  token                                                                                                              Token commands
+  token swap <to> <amount>
   settings                                                                                                           Set config settings
   settings set <key> <value>                                                                                         Changes setting <key> to <value>
   settings preset <environment>                                                                                      Changes setting <environment> presets
@@ -597,6 +601,15 @@ Oracle commands
 #### `masa oracle withdraw <amount>`
 
 - `<amount> Amount to withdraw`
+
+### `masa token`
+
+Token commands
+
+#### `masa token swap <to> <amount>`
+
+- `<to> To network`
+- `<amount> Amount to bridge`
 
 ### `masa settings`
 
