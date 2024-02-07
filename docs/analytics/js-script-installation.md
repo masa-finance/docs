@@ -96,10 +96,10 @@ Choose the 'Custom HTML' tag type and paste the Masa Analytics initialization sc
 <br/>
 
 :::info
-We strongly recommend using the React SDK to track `connectWallet`, `trackEvent`, `login`, `mint`, and `custom` events in your React app
+We strongly recommend using the React SDK to track `connectWallet`, `trackCustomEvent`, `login`, `mint`, and `custom` events in your React app
 :::
 
-### Step 3: Tracking `trackEvent` Event
+### Step 3: Tracking `trackCustomEvent` Event
 
 To track specific events on your website (eg clicks or functions being called), you can add the following piece of code to the place you want to track the event. The first example is a Vue example, so you would place this in your Vue component, but this will work with any javascript framework. All that is required is the `window.masaAnalytics` object, and you must define an `eventName` at the minimum, but have the option to add `additionalEventData`. If you aren't using `additionalEventData` you must set it to an empty object. Examples are shown below
 
@@ -116,7 +116,7 @@ To track specific events on your website (eg clicks or functions being called), 
   methods: {
     handleCliPluginsHeaderClick() {
       console.log('CLI Plugins header was clicked!');
-      window.masaAnalytics.trackEvent({eventName: 'handleCliPluginsHeaderClick', additionalEventData: {property1: 23213, property2: 'whatever'}})
+      window.masaAnalytics.trackCustomEvent({eventName: 'handleCliPluginsHeaderClick', additionalEventData: {property1: 23213, property2: 'whatever'}})
       // Add any additional logic for when the header is clicked
     }
   }
