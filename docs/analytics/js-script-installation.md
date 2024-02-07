@@ -96,36 +96,36 @@ Choose the 'Custom HTML' tag type and paste the Masa Analytics initialization sc
 <br/>
 
 :::info
-We strongly recommend using the React SDK to track `connectWallet`, `elementClick`, `login`, `mint`, and `custom` events in your React app
+We strongly recommend using the React SDK to track `connectWallet`, `trackEvent`, `login`, `mint`, and `custom` events in your React app
 :::
 
-### Step 3: Tracking `elementClick` Event
+### Step 3: Tracking `trackEvent` Event
 
-To track all clicks on your website, you can add the following script to your header. Note: If you want to use this in conjunction with any other events, you will need to write an extra line of code for each of those functions.
+To track specific events on your website (eg clicks or functions being called), you can add the following piece of code to the place you want to track the event. The first example is a Vue example, so you would place this in your Vue component, but this will work with any javascript framework. All that is required is the `window.masaAnalytics` object, and you must define an `eventName` at the minimum, but have the option to add `additionalEventData`. If you aren't using `additionalEventData` you must set it to an empty object. Examples are shown below
 
-```html
-<script>
-  masaAnalytics.trackClicks();
-</script>
+```javascript
+  mounted() {
+    // Access the global masaAnalytics instance
+    if (window.masaAnalytics) {
+      console.log('masaAnalytics is available');
+      // You can now use window.masaAnalytics here
+    } else {
+      console.log('masaAnalytics is not defined');
+    }
+  },
+  methods: {
+    handleCliPluginsHeaderClick() {
+      console.log('CLI Plugins header was clicked!');
+      window.masaAnalytics.trackEvent({eventName: 'handleCliPluginsHeaderClick', additionalEventData: {property1: 23213, property2: 'whatever'}})
+      // Add any additional logic for when the header is clicked
+    }
+  }
 ```
 
-If you want to use this with other defined click events (like a button to call connect wallet), you would use this same script as is and in your other event functions, you would add `event.stopPropagation();` to the top of the function. For example:
+Empty `additionalEventData` object example
 
-```html
-<script>
-  document.addEventListener("DOMContentLoaded", (event) => {
-    document
-      .getElementById("connectWalletBtn")
-      .addEventListener("click", handleConnectWallet);
-
-    async function handleConnectWallet(event) {
-      if (event) event.stopPropagation();
-      console.log("handleConnectWallet");
-      const address = await MA.connectMetamask(masaAnalytics);
-      // Handle the address
-    }
-  });
-</script>
+```javascript
+window.masaAnalytics.trackEvent({eventName:'handleCliPluginsHeaderClick', additionalEventData: {}})
 ```
 
 ### Step 4: Tracking `connectWallet` Event
@@ -139,60 +139,17 @@ To track the `connectWallet` event, you'll need to extract the Ethereum address 
       .getElementById("connectWalletBtn")
       .addEventListener("click", handleConnectWallet);
 
-    async function handleConnectWallet(event) {
-      if (event) event.stopPropagation();
-      console.log("handleConnectWallet");
-      const address = await MA.connectMetamask(masaAnalytics);
-      // Handle the address
-    }
-  });
-</script>
-```
-
-```html
-<script>
-  window.onload = async function () {
-    var page = window.location.href;
-
-    // Track PageView event
-    masaAnalytics.firePageViewEvent({ page });
-
-    function trackPageViewForSPA() {
-      var updatedPageUrl = window.location.href;
-      masaAnalytics.firePageViewEvent({ page: updatedPageUrl });
-    }
-
-    // This event is triggered when the route changes in many SPAs
-    window.addEventListener("popstate", trackPageViewForSPA);
-
     async function handleConnectWallet() {
       console.log("handleConnectWallet");
       const address = await MA.connectMetamask(masaAnalytics);
       // Handle the address
     }
-
-    handleConnectWallet();
-  };
+  });
 </script>
 ```
 
-### Combining these scripts
-
-If you are using most of this functionality together, you also have the option to refactor all of these scripts into one as demonstrated below.
-
 ```html
-<!-- Include this script in your HTML -->
-<script
-  type="application/javascript"
-  src="https://cdn.jsdelivr.net/npm/@masa-finance/analytics-sdk@latest/dist/browser/masa-analytics.min.js"
-></script>
 <script>
-  var masaAnalytics = new MA.MasaAnalytics({
-    clientId: "YOUR_CLIENT_ID",
-  });
-
-  masaAnalytics.trackClicks();
-
   window.onload = async function () {
     var page = window.location.href;
 
