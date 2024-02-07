@@ -35,7 +35,7 @@ Function to check the balance of a particular account
 ### masaToken
 
 ```solidity
-function masaToken() external view returns (contract IERC20)
+function masaToken() external view returns (address)
 ```
 
 
@@ -47,7 +47,7 @@ function masaToken() external view returns (contract IERC20)
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | contract IERC20 | undefined |
+| _0 | address | undefined |
 
 ### minimumStake
 
@@ -69,7 +69,7 @@ function minimumStake() external view returns (uint256)
 ### stake
 
 ```solidity
-function stake(uint256 amount) external nonpayable
+function stake(uint256 amount) external payable
 ```
 
 Function to stake tokens

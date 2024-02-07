@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.17.0](../README.md) / [Exports](../modules.md) / Network
+ - v3.18.1](../README.md) / [Exports](../modules.md) / Network
 
 # Interface: Network
 
@@ -15,6 +15,7 @@
 - [chainNameShort](Network.md#chainnameshort)
 - [gasSlippagePercentage](Network.md#gasslippagepercentage)
 - [isTestnet](Network.md#istestnet)
+- [lzEndpointId](Network.md#lzendpointid)
 - [nativeCurrency](Network.md#nativecurrency)
 - [networkName](Network.md#networkname)
 - [rpcUrls](Network.md#rpcurls)
@@ -85,6 +86,14 @@ ___
 • **isTestnet**: `boolean`
 
 is this network a test network or not?
+
+___
+
+### lzEndpointId
+
+• `Optional` **lzEndpointId**: `EndpointId`
+
+LayerZero Endpoint ID
 
 ___
 
