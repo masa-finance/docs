@@ -67,6 +67,9 @@
       - [`masa dynamic-sssbt set-state <contract-address> <state> <state-value> <authority-address> <signature-date> <signature>`](#masa-dynamic-sssbt-set-state-contract-address-state-state-value-authority-address-signature-date-signature)
       - [`masa dynamic-sssbt sign-set-state <contract-address> <receiver> <state> <state-value>`](#masa-dynamic-sssbt-sign-set-state-contract-address-receiver-state-state-value)
       - [`masa dynamic-sssbt mint <contract-address>`](#masa-dynamic-sssbt-mint-contract-address)
+    - [`masa oracle`](#masa-oracle)
+      - [`masa oracle stake <amount>`](#masa-oracle-stake-amount)
+      - [`masa oracle withdraw <amount>`](#masa-oracle-withdraw-amount)
     - [`masa settings`](#masa-settings)
       - [`masa settings set <key> <value>`](#masa-settings-set-key-value)
       - [`masa settings preset <environment>`](#masa-settings-preset-environment)
@@ -156,6 +159,9 @@ Commands:
   dynamic-sssbt set-state <contract-address> <state> <state-value> <authority-address> <signature-date> <signature>  Sets a state on a dynamic SSSBTs
   dynamic-sssbt sign-set-state <contract-address> <receiver> <state> <state-value>                                   Signs a Set State operation on a Dynamic SSSBTs
   dynamic-sssbt mint <contract-address>                                                                              Mints Dynamic SSSBTs
+  oracle                                                                                                             Oracle commands
+  oracle stake <amount>
+  oracle withdraw <amount>
   settings                                                                                                           Set config settings
   settings set <key> <value>                                                                                         Changes setting <key> to <value>
   settings preset <environment>                                                                                      Changes setting <environment> presets
@@ -579,6 +585,18 @@ Signs a Set State operation on a Dynamic SSSBTs
 Mints Dynamic SSSBTs
 
 - `<contract-address> Address of the SBT to mint on`
+
+### `masa oracle`
+
+Oracle commands
+
+#### `masa oracle stake <amount>`
+
+- `<amount> Amount to stake`
+
+#### `masa oracle withdraw <amount>`
+
+- `<amount> Amount to withdraw`
 
 ### `masa settings`
 
