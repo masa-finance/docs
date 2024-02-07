@@ -50,7 +50,7 @@
 
 ### EventType
 
-Ƭ **EventType**: ``"pageView"`` \| ``"elementClick"`` \| ``"login"`` \| ``"mint"`` \| ``"connectWallet"`` \| ``"swap"`` \| ``"bridge"`` \| ``"addLiquidity"`` \| ``"removeLiquidity"`` \| ``"farm"`` \| ``"trade"`` \| ``"claim"``
+Ƭ **EventType**: ``"pageView"`` \| ``"trackEvent"`` \| ``"login"`` \| ``"mint"`` \| ``"connectWallet"`` \| ``"swap"`` \| ``"bridge"`` \| ``"addLiquidity"`` \| ``"removeLiquidity"`` \| ``"farm"`` \| ``"trade"`` \| ``"claim"``
 
 ## Variables
 
