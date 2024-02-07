@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.17.0](README.md) / Exports
+ - v3.18.1](README.md) / Exports
 
 # # Masa SDK
- - v3.17.0
+ - v3.18.1
 
 ## Table of contents
 
@@ -40,6 +40,7 @@
 - [MasaSession](classes/MasaSession.md)
 - [MasaSoulLinker](classes/MasaSoulLinker.md)
 - [MasaSoulName](classes/MasaSoulName.md)
+- [MasaToken](classes/MasaToken.md)
 - [SBTContract](classes/SBTContract.md)
 - [SBTContractWrapper](classes/SBTContractWrapper.md)
 - [SSSBTContract](classes/SSSBTContract.md)
@@ -135,6 +136,7 @@
 - [mumbai](modules.md#mumbai)
 - [nativeCurrencies](modules.md#nativecurrencies-1)
 - [polygon](modules.md#polygon)
+- [sepolia](modules.md#sepolia)
 
 ### Functions
 
@@ -203,6 +205,7 @@
 - [showIdentity](modules.md#showidentity)
 - [signMessage](modules.md#signmessage)
 - [signTypedData](modules.md#signtypeddata)
+- [swap](modules.md#swap)
 - [tailSoulNames](modules.md#tailsoulnames)
 - [tailSoulNamesAndPrint](modules.md#tailsoulnamesandprint)
 - [unpackSessionId](modules.md#unpacksessionid)
@@ -465,6 +468,12 @@ ___
 ### polygon
 
 • `Const` **polygon**: [`Addresses`](interfaces/Addresses.md)
+
+___
+
+### sepolia
+
+• `Const` **sepolia**: [`Addresses`](interfaces/Addresses.md)
 
 ## Functions
 
@@ -1634,6 +1643,25 @@ ___
 #### Returns
 
 `Promise`\<\{ `domain`: `TypedDataDomain` ; `signature`: `string`  }\>
+
+___
+
+### swap
+
+▸ **swap**(`masa`, `to`, `amount`, `slippage?`): `Promise`\<`void`\>
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
+| `to` | [`NetworkName`](modules.md#networkname) | `undefined` |
+| `amount` | `string` | `undefined` |
+| `slippage` | `number` | `250` |
+
+#### Returns
+
+`Promise`\<`void`\>
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.17.0](../README.md) / [Exports](../modules.md) / Masa
+ - v3.18.1](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -30,6 +30,7 @@
 - [session](Masa.md#session)
 - [soulName](Masa.md#soulname)
 - [sssbt](Masa.md#sssbt)
+- [token](Masa.md#token)
 - [utils](Masa.md#utils)
 
 ### Methods
@@ -193,6 +194,12 @@ ___
 #### Implementation of
 
 [MasaInterface](../interfaces/MasaInterface.md).[sssbt](../interfaces/MasaInterface.md#sssbt)
+
+___
+
+### token
+
+• `Readonly` **token**: [`MasaToken`](MasaToken.md)
 
 ___
 
