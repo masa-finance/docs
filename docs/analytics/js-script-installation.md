@@ -14,7 +14,6 @@ This guide will instruct you how to integrate Masa Analytics into your website. 
 A `client_id` will be provided to you during your Masa Analytics on-boarding. Please contact **help@masa.finance** or reach out to us at our #developers channel on **Discord** if you need a ClientID.
 :::
 
-
 :::info
 If you’re installing Masa Analytics directly into your Website HTML follow the steps below. If you’re installing Masa Analytics into your Google Tag Manager scroll down.
 :::
@@ -40,7 +39,7 @@ Copy and paste the Masa Analytics initialization script into the `<header>` sect
 
 ### Step 2: Track `pageView` events
 
-After installing the tacking script in Step 1, we can create a new script to trigger each time a user loads a page to fire pageView events.
+After installing the tacking script in Step 1, we can create a new script to trigger each time a user loads a page to fire pageView events. This will work in a vanilla JS environment, but you will see **React Router** and **Vue Router** examples below.
 
 ```javascript
 <script>
@@ -59,6 +58,80 @@ After installing the tacking script in Step 1, we can create a new script to tri
     window.addEventListener("popstate", trackPageViewForSPA);
   };
 </script>
+```
+
+### Vue Router
+
+You will need to firstly add this script to your `index.html`
+
+```html
+<script>
+  window.trackPageViewForSPA = function () {
+    console.log("Tracking page view:", window.location.href);
+    var page = window.location.href;
+
+    // Track PageView event
+    masaAnalytics.firePageViewEvent({ page });
+    // Here, you can invoke your tracking logic, e.g., masaAnalytics.firePageViewEvent(...)
+  };
+</script>
+```
+
+Secondly, you will need to update your router config file to include the `router.afterEach(())` code.
+
+```javascript
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "../components/HelloWorld.vue"; // Example route component
+
+const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  // other routes...
+];
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes,
+});
+
+router.afterEach(() => {
+  if (window.trackPageViewForSPA) {
+    window.trackPageViewForSPA();
+  }
+});
+
+export default router;
+```
+
+### React Router
+
+
+You will need to firstly add this script to your `index.html`
+
+```html
+<script>
+  window.trackPageViewForSPA = function () {
+    console.log("Tracking page view:", window.location.href);
+    var page = window.location.href;
+
+    // Track PageView event
+    masaAnalytics.firePageViewEvent({ page });
+    // Here, you can invoke your tracking logic, e.g., masaAnalytics.firePageViewEvent(...)
+  };
+</script>
+```
+Secondly, you will need to set up a `useEffect` with `useLocation` to fire the page view tracking whenever the page changes.
+
+```javascript
+const location = useLocation();
+
+useEffect(() => {
+  // Track the initial page view
+  window.trackPageViewForSPA();
+}, [location]); // Re-run the effect only if the location changes
 ```
 
 :::info
@@ -125,7 +198,10 @@ To track specific events on your website (eg clicks or functions being called), 
 Empty `additionalEventData` object example
 
 ```javascript
-window.masaAnalytics.trackEvent({eventName:'handleCliPluginsHeaderClick', additionalEventData: {}})
+window.masaAnalytics.trackCustomEvent({
+  eventName: "handleCliPluginsHeaderClick",
+  additionalEventData: {},
+});
 ```
 
 ### Step 4: Tracking `connectWallet` Event
@@ -174,4 +250,3 @@ To track the `connectWallet` event, you'll need to extract the Ethereum address 
   };
 </script>
 ```
-
