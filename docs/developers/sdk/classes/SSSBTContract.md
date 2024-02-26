@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.18.1](../README.md) / [Exports](../modules.md) / SSSBTContract
+ - v3.18.2](../README.md) / [Exports](../modules.md) / SSSBTContract
 
 # Class: SSSBTContract
 
