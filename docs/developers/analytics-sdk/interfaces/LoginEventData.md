@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.5.4](../README.md) / [Exports](../modules.md) / LoginEventData
+ - v0.5.8](../README.md) / [Exports](../modules.md) / LoginEventData
 
 # Interface: LoginEventData
 
@@ -14,8 +14,6 @@
 ### Properties
 
 - [additionalEventData](LoginEventData.md#additionaleventdata)
-- [client\_app](LoginEventData.md#client_app)
-- [client\_name](LoginEventData.md#client_name)
 - [description](LoginEventData.md#description)
 
 ## Properties
@@ -27,26 +25,6 @@
 #### Inherited from
 
 [BaseEventData](BaseEventData.md).[additionalEventData](BaseEventData.md#additionaleventdata)
-
-___
-
-### client\_app
-
-• **client\_app**: `string`
-
-#### Inherited from
-
-[BaseEventData](BaseEventData.md).[client_app](BaseEventData.md#client_app)
-
-___
-
-### client\_name
-
-• **client\_name**: `string`
-
-#### Inherited from
-
-[BaseEventData](BaseEventData.md).[client_name](BaseEventData.md#client_name)
 
 ___
 

@@ -1,8 +1,8 @@
 [# Masa Analytics SDK
- - v0.5.4](README.md) / Exports
+ - v0.5.8](README.md) / Exports
 
 # # Masa Analytics SDK
- - v0.5.4
+ - v0.5.8
 
 ## Table of contents
 
@@ -17,18 +17,18 @@
 - [BaseEvent](interfaces/BaseEvent.md)
 - [BaseEventData](interfaces/BaseEventData.md)
 - [ConnectWalletEventData](interfaces/ConnectWalletEventData.md)
-- [ElementClickEventData](interfaces/ElementClickEventData.md)
 - [FireConnectWalletEventArgs](interfaces/FireConnectWalletEventArgs.md)
-- [FireElementClickEventArgs](interfaces/FireElementClickEventArgs.md)
 - [FireEventArgs](interfaces/FireEventArgs.md)
 - [FireEventData](interfaces/FireEventData.md)
 - [FireLoginEventArgs](interfaces/FireLoginEventArgs.md)
 - [FireMintEventArgs](interfaces/FireMintEventArgs.md)
 - [FirePageViewEventArgs](interfaces/FirePageViewEventArgs.md)
+- [FireTrackCustomEventArgs](interfaces/FireTrackCustomEventArgs.md)
 - [LoginEventData](interfaces/LoginEventData.md)
 - [MintEventData](interfaces/MintEventData.md)
 - [PageViewEventData](interfaces/PageViewEventData.md)
 - [ReferrerInfo](interfaces/ReferrerInfo.md)
+- [TrackCustomEventData](interfaces/TrackCustomEventData.md)
 - [UTMParams](interfaces/UTMParams.md)
 
 ### Type Aliases
@@ -50,7 +50,7 @@
 
 ### EventType
 
-Ƭ **EventType**: ``"pageView"`` \| ``"trackEvent"`` \| ``"login"`` \| ``"mint"`` \| ``"connectWallet"`` \| ``"swap"`` \| ``"bridge"`` \| ``"addLiquidity"`` \| ``"removeLiquidity"`` \| ``"farm"`` \| ``"trade"`` \| ``"claim"``
+Ƭ **EventType**: ``"pageView"`` \| ``"customEvent"`` \| ``"login"`` \| ``"mint"`` \| ``"connectWallet"`` \| ``"swap"`` \| ``"bridge"`` \| ``"addLiquidity"`` \| ``"removeLiquidity"`` \| ``"farm"`` \| ``"trade"`` \| ``"claim"``
 
 ## Variables
 

@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.5.4](../README.md) / [Exports](../modules.md) / PageViewEventData
+ - v0.5.8](../README.md) / [Exports](../modules.md) / PageViewEventData
 
 # Interface: PageViewEventData
 
@@ -18,8 +18,6 @@
 ### Properties
 
 - [additionalEventData](PageViewEventData.md#additionaleventdata)
-- [client\_app](PageViewEventData.md#client_app)
-- [client\_name](PageViewEventData.md#client_name)
 - [historyLength](PageViewEventData.md#historylength)
 - [page](PageViewEventData.md#page)
 - [referrer](PageViewEventData.md#referrer)
@@ -38,26 +36,6 @@
 #### Inherited from
 
 [BaseEventData](BaseEventData.md).[additionalEventData](BaseEventData.md#additionaleventdata)
-
-___
-
-### client\_app
-
-• **client\_app**: `string`
-
-#### Inherited from
-
-[BaseEventData](BaseEventData.md).[client_app](BaseEventData.md#client_app)
-
-___
-
-### client\_name
-
-• **client\_name**: `string`
-
-#### Inherited from
-
-[BaseEventData](BaseEventData.md).[client_name](BaseEventData.md#client_name)
 
 ___
 

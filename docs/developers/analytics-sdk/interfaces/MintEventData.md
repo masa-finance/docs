@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.5.4](../README.md) / [Exports](../modules.md) / MintEventData
+ - v0.5.8](../README.md) / [Exports](../modules.md) / MintEventData
 
 # Interface: MintEventData
 
@@ -15,8 +15,6 @@
 
 - [additionalEventData](MintEventData.md#additionaleventdata)
 - [asset\_amount](MintEventData.md#asset_amount)
-- [client\_app](MintEventData.md#client_app)
-- [client\_name](MintEventData.md#client_name)
 - [contract\_address](MintEventData.md#contract_address)
 - [fee\_asset](MintEventData.md#fee_asset)
 - [mint\_currency](MintEventData.md#mint_currency)
@@ -41,26 +39,6 @@ ___
 ### asset\_amount
 
 • `Optional` **asset\_amount**: `string`
-
-___
-
-### client\_app
-
-• **client\_app**: `string`
-
-#### Inherited from
-
-[BaseEventData](BaseEventData.md).[client_app](BaseEventData.md#client_app)
-
-___
-
-### client\_name
-
-• **client\_name**: `string`
-
-#### Inherited from
-
-[BaseEventData](BaseEventData.md).[client_name](BaseEventData.md#client_name)
 
 ___
 

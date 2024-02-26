@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.5.4](../README.md) / [Exports](../modules.md) / FireConnectWalletEventArgs
+ - v0.5.8](../README.md) / [Exports](../modules.md) / FireConnectWalletEventArgs
 
 # Interface: FireConnectWalletEventArgs
 
