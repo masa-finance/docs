@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.18.2](README.md) / Exports
+ - v3.19.0](README.md) / Exports
 
 # # Masa SDK
- - v3.18.2
+ - v3.19.0
 
 ## Table of contents
 
@@ -19,6 +19,7 @@
 - [ERC20\_\_factory](classes/ERC20__factory.md)
 - [Green](classes/Green.md)
 - [Identity](classes/Identity.md)
+- [Marketplace](classes/Marketplace.md)
 - [Masa](classes/Masa.md)
 - [MasaASBT](classes/MasaASBT.md)
 - [MasaASBTWrapper](classes/MasaASBTWrapper.md)
@@ -33,6 +34,7 @@
 - [MasaDynamicSSSBTWrapper](classes/MasaDynamicSSSBTWrapper.md)
 - [MasaGreen](classes/MasaGreen.md)
 - [MasaIdentity](classes/MasaIdentity.md)
+- [MasaMarketplace](classes/MasaMarketplace.md)
 - [MasaSBTBase](classes/MasaSBTBase.md)
 - [MasaSBTWrapper](classes/MasaSBTWrapper.md)
 - [MasaSSSBT](classes/MasaSSSBT.md)
@@ -72,11 +74,11 @@
 - [IGreen](interfaces/IGreen.md)
 - [IIdentity](interfaces/IIdentity.md)
 - [IIdentityContracts](interfaces/IIdentityContracts.md)
+- [IMarketplaceContracts](interfaces/IMarketplaceContracts.md)
 - [IPassport](interfaces/IPassport.md)
 - [ISession](interfaces/ISession.md)
 - [ISoulName](interfaces/ISoulName.md)
 - [IdentityDetails](interfaces/IdentityDetails.md)
-- [LoadIdentityContractsArgs](interfaces/LoadIdentityContractsArgs.md)
 - [LoginResult](interfaces/LoginResult.md)
 - [LogoutResult](interfaces/LogoutResult.md)
 - [MasaArgs](interfaces/MasaArgs.md)
@@ -205,6 +207,7 @@
 - [showIdentity](modules.md#showidentity)
 - [signMessage](modules.md#signmessage)
 - [signTypedData](modules.md#signtypeddata)
+- [stake](modules.md#stake)
 - [swap](modules.md#swap)
 - [tailSoulNames](modules.md#tailsoulnames)
 - [tailSoulNamesAndPrint](modules.md#tailsoulnamesandprint)
@@ -383,7 +386,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `loginTemplate` | (`challenge`: `string`, `expires`: `string`) => `string` | The Masa Finance Login Template used for authenticating with the middleware |
+| `loginTemplate` | (`challenge`: `string`, `expires`: `string`) => `string` | - |
 
 ___
 
@@ -1144,9 +1147,11 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | [`LoadIdentityContractsArgs`](interfaces/LoadIdentityContractsArgs.md) |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `«destructured»` | `Object` | `undefined` |
+| › `networkName?` | [`NetworkName`](modules.md#networkname) | `"ethereum"` |
+| › `signer` | `Signer` | `undefined` |
 
 #### Returns
 
@@ -1643,6 +1648,24 @@ ___
 #### Returns
 
 `Promise`\<\{ `domain`: `TypedDataDomain` ; `signature`: `string`  }\>
+
+___
+
+### stake
+
+▸ **stake**(`masa`, `tokenId`, `amount`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `tokenId` | `BigNumber` |
+| `amount` | `BigNumber` |
+
+#### Returns
+
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 

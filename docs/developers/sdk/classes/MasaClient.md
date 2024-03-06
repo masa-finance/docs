@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.18.2](../README.md) / [Exports](../modules.md) / MasaClient
+ - v3.19.0](../README.md) / [Exports](../modules.md) / MasaClient
 
 # Class: MasaClient
 
@@ -81,8 +81,8 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `generate` | () => `Promise`\<`undefined` \| [`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\> | Generates a new credit score |
-| `update` | (`transactionHash`: `string`) => `Promise`\<`undefined` \| [`UpdateCreditScoreResult`](../interfaces/UpdateCreditScoreResult.md)\> | Update an existing credit score |
+| `generate` | () => `Promise`\<`undefined` \| [`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\> | - |
+| `update` | (`transactionHash`: `string`) => `Promise`\<`undefined` \| [`UpdateCreditScoreResult`](../interfaces/UpdateCreditScoreResult.md)\> | - |
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `generate` | (`phoneNumber`: `string`) => `Promise`\<[`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\> | Generates a new masa green request |
+| `generate` | (`phoneNumber`: `string`) => `Promise`\<[`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\> | - |
 | `verify` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`\<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\> | - |
 
 ___
@@ -117,7 +117,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `get` | (`uri`: `string`, `additionalHeaders?`: `Record`\<`string`, `string`\>) => `Promise`\<`undefined` \| [`IIdentity`](../interfaces/IIdentity.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IGreen`](../interfaces/IGreen.md)\> | Retrieve metadata |
+| `get` | (`uri`: `string`, `additionalHeaders?`: `Record`\<`string`, `string`\>) => `Promise`\<`undefined` \| [`IIdentity`](../interfaces/IIdentity.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IGreen`](../interfaces/IGreen.md)\> | - |
 
 ___
 
@@ -129,10 +129,10 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `check` | () => `Promise`\<`undefined` \| [`ISession`](../interfaces/ISession.md)\> | Check session is still alive |
-| `checkSignature` | (`address`: `string`, `signature`: `string`, `cookie?`: `string`) => `Promise`\<`undefined` \| [`SessionUser`](../interfaces/SessionUser.md)\> |  |
-| `getChallenge` | () => `Promise`\<`undefined` \| [`ChallengeResultWithCookie`](../interfaces/ChallengeResultWithCookie.md)\> | Get challenge |
-| `logout` | () => `Promise`\<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\> | Logout the current user |
+| `check` | () => `Promise`\<`undefined` \| [`ISession`](../interfaces/ISession.md)\> | - |
+| `checkSignature` | (`address`: `string`, `signature`: `string`, `cookie?`: `string`) => `Promise`\<`undefined` \| [`SessionUser`](../interfaces/SessionUser.md)\> | - |
+| `getChallenge` | () => `Promise`\<`undefined` \| [`ChallengeResultWithCookie`](../interfaces/ChallengeResultWithCookie.md)\> | - |
+| `logout` | () => `Promise`\<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\> | - |
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`, `style?`: `string`) => `Promise`\<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md) \| [`SoulNameResultBase`](../interfaces/SoulNameResultBase.md)\> | Store metadata |
+| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`, `style?`: `string`) => `Promise`\<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md) \| [`SoulNameResultBase`](../interfaces/SoulNameResultBase.md)\> | - |
 
 ## Accessors
 

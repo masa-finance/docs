@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.18.2](../README.md) / [Exports](../modules.md) / GreenDetails
+ - v3.19.0](../README.md) / [Exports](../modules.md) / GreenDetails
 
 # Interface: GreenDetails
 

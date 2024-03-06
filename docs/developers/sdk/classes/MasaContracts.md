@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.18.2](../README.md) / [Exports](../modules.md) / MasaContracts
+ - v3.19.0](../README.md) / [Exports](../modules.md) / MasaContracts
 
 # Class: MasaContracts
 
@@ -24,6 +24,7 @@
 - [green](MasaContracts.md#green)
 - [identity](MasaContracts.md#identity)
 - [instances](MasaContracts.md#instances)
+- [marketplace](MasaContracts.md#marketplace)
 - [masa](MasaContracts.md#masa)
 - [sbt](MasaContracts.md#sbt)
 - [soulLinker](MasaContracts.md#soullinker)
@@ -102,9 +103,17 @@ ___
 
 ### instances
 
-• **instances**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
+• **instances**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md) & [`IMarketplaceContracts`](../interfaces/IMarketplaceContracts.md)
 
 direct contract access
+
+___
+
+### marketplace
+
+• **marketplace**: [`Marketplace`](Marketplace.md)
+
+Marketplace
 
 ___
 

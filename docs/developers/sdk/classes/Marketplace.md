@@ -1,46 +1,42 @@
 [# Masa SDK
- - v3.19.0](../README.md) / [Exports](../modules.md) / SoulLinker
+ - v3.19.0](../README.md) / [Exports](../modules.md) / Marketplace
 
-# Class: SoulLinker
+# Class: Marketplace
 
 ## Hierarchy
 
 - `MasaModuleBase`
 
-  ↳ **`SoulLinker`**
+  ↳ **`Marketplace`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](SoulLinker.md#constructor)
+- [constructor](Marketplace.md#constructor)
 
 ### Properties
 
-- [instances](SoulLinker.md#instances)
-- [masa](SoulLinker.md#masa)
-- [types](SoulLinker.md#types)
+- [instances](Marketplace.md#instances)
+- [masa](Marketplace.md#masa)
 
 ### Methods
 
-- [addLink](SoulLinker.md#addlink)
-- [breakLink](SoulLinker.md#breaklink)
-- [checkOrGiveAllowance](SoulLinker.md#checkorgiveallowance)
-- [createOverrides](SoulLinker.md#createoverrides)
-- [estimateGasWithSlippage](SoulLinker.md#estimategaswithslippage)
-- [formatPrice](SoulLinker.md#formatprice)
-- [getNetworkFeeInformation](SoulLinker.md#getnetworkfeeinformation)
-- [getPaymentAddress](SoulLinker.md#getpaymentaddress)
-- [getPrice](SoulLinker.md#getprice)
-- [signLink](SoulLinker.md#signlink)
-- [verify](SoulLinker.md#verify)
-- [addSlippage](SoulLinker.md#addslippage)
+- [checkOrGiveAllowance](Marketplace.md#checkorgiveallowance)
+- [createOverrides](Marketplace.md#createoverrides)
+- [estimateGasWithSlippage](Marketplace.md#estimategaswithslippage)
+- [formatPrice](Marketplace.md#formatprice)
+- [getNetworkFeeInformation](Marketplace.md#getnetworkfeeinformation)
+- [getPaymentAddress](Marketplace.md#getpaymentaddress)
+- [stake](Marketplace.md#stake)
+- [verify](Marketplace.md#verify)
+- [addSlippage](Marketplace.md#addslippage)
 
 ## Constructors
 
 ### constructor
 
-• **new SoulLinker**(`masa`, `instances`): [`SoulLinker`](SoulLinker.md)
+• **new Marketplace**(`masa`, `instances`): [`Marketplace`](Marketplace.md)
 
 #### Parameters
 
@@ -51,7 +47,7 @@
 
 #### Returns
 
-[`SoulLinker`](SoulLinker.md)
+[`Marketplace`](Marketplace.md)
 
 #### Inherited from
 
@@ -77,57 +73,7 @@ ___
 
 MasaModuleBase.masa
 
-___
-
-### types
-
-• `Readonly` **types**: `Record`\<`string`, `TypedDataField`[]\>
-
 ## Methods
-
-### addLink
-
-▸ **addLink**(`tokenAddress`, `paymentMethod`, `readerIdentityId`, `ownerIdentityId`, `tokenId`, `signatureDate`, `expirationDate`, `signature`, `slippage?`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-Adds a link to the soullinker
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `tokenAddress` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `readerIdentityId` | `BigNumber` | `undefined` |
-| `ownerIdentityId` | `BigNumber` | `undefined` |
-| `tokenId` | `BigNumber` | `undefined` |
-| `signatureDate` | `number` | `undefined` |
-| `expirationDate` | `number` | `undefined` |
-| `signature` | `string` | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
-
-#### Returns
-
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-___
-
-### breakLink
-
-▸ **breakLink**(`contract`, `tokenId`, `readerIdentityId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `contract` | `Contract` |
-| `tokenId` | `BigNumber` |
-| `readerIdentityId` | `BigNumber` |
-
-#### Returns
-
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-___
 
 ### checkOrGiveAllowance
 
@@ -253,46 +199,20 @@ MasaModuleBase.getPaymentAddress
 
 ___
 
-### getPrice
+### stake
 
-▸ **getPrice**(`tokenAddress`, `paymentMethod`, `slippage?`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
-
-Gets price for establishing a link
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `tokenAddress` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
-
-#### Returns
-
-`Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
-
-___
-
-### signLink
-
-▸ **signLink**(`readerIdentityId`, `ownerIdentityId`, `tokenAddress`, `tokenId`, `signatureDate?`, `expirationOffset?`): `Promise`\<\{ `expirationDate`: `number` ; `signature`: `string` ; `signatureDate`: `number`  }\>
-
-Signs a soul linker link
+▸ **stake**(`tokenId`, `amount`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `readerIdentityId` | `BigNumber` |
-| `ownerIdentityId` | `BigNumber` |
-| `tokenAddress` | `string` |
 | `tokenId` | `BigNumber` |
-| `signatureDate` | `number` |
-| `expirationOffset` | `number` |
+| `amount` | `BigNumber` |
 
 #### Returns
 
-`Promise`\<\{ `expirationDate`: `number` ; `signature`: `string` ; `signatureDate`: `number`  }\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 

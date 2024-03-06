@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.18.2](../README.md) / [Exports](../modules.md) / Masa
+ - v3.19.0](../README.md) / [Exports](../modules.md) / Masa
 
 # Class: Masa
 
@@ -26,6 +26,7 @@
 - [dynamic-sssbt](Masa.md#dynamic-sssbt)
 - [green](Masa.md#green)
 - [identity](Masa.md#identity)
+- [marketplace](Masa.md#marketplace)
 - [sbt](Masa.md#sbt)
 - [session](Masa.md#session)
 - [soulName](Masa.md#soulname)
@@ -154,6 +155,16 @@ ___
 #### Implementation of
 
 [MasaInterface](../interfaces/MasaInterface.md).[identity](../interfaces/MasaInterface.md#identity)
+
+___
+
+### marketplace
+
+• `Readonly` **marketplace**: [`MasaMarketplace`](MasaMarketplace.md)
+
+#### Implementation of
+
+[MasaInterface](../interfaces/MasaInterface.md).[marketplace](../interfaces/MasaInterface.md#marketplace)
 
 ___
 

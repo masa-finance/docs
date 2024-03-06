@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.18.2](../README.md) / [Exports](../modules.md) / MasaInterface
+ - v3.19.0](../README.md) / [Exports](../modules.md) / MasaInterface
 
 # Interface: MasaInterface
 
@@ -20,6 +20,7 @@
 - [creditScore](MasaInterface.md#creditscore)
 - [green](MasaInterface.md#green)
 - [identity](MasaInterface.md#identity)
+- [marketplace](MasaInterface.md#marketplace)
 - [sbt](MasaInterface.md#sbt)
 - [session](MasaInterface.md#session)
 - [soulName](MasaInterface.md#soulname)
@@ -79,6 +80,12 @@ ___
 ### identity
 
 • `Readonly` **identity**: [`MasaIdentity`](../classes/MasaIdentity.md)
+
+___
+
+### marketplace
+
+• `Readonly` **marketplace**: [`MasaMarketplace`](../classes/MasaMarketplace.md)
 
 ___
 
