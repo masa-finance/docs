@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.19.0](../README.md) / [Exports](../modules.md) / PriceInformation
+ - v3.20.0](../README.md) / [Exports](../modules.md) / PriceInformation
 
 # Interface: PriceInformation
 
