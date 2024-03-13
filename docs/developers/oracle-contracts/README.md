@@ -37,7 +37,7 @@ You can see the deployment address of the smart contracts in the [addresses.json
 
 * Set `DEPLOYER_PRIVATE_KEY` to the deployers private key in `.env.{network}.secret`
 * Set `COINMARKETCAP_API_KEY` to the CoinMarketCap API key in `.env`, if needed
-* Set `INFURA_API_KEY` to the Infura API key in `.env`, if needed
+* Set `ANKR_API_KEY` to the Ankr API key in `.env`, if needed
 * Set `ETHERSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
 * Set `BSCSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
 * Set `POLYGONSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
