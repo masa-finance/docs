@@ -1,8 +1,8 @@
 [# Masa React
- - v3.10.2](README.md) / Exports
+ - v3.12.0](README.md) / Exports
 
 # # Masa React
- - v3.10.2
+ - v3.12.0
 
 ## Table of contents
 
