@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.20.0](README.md) / Exports
+ - v3.21.1](README.md) / Exports
 
 # # Masa SDK
- - v3.20.0
+ - v3.21.1
 
 ## Table of contents
 
@@ -476,7 +476,7 @@ ___
 
 ### sepolia
 
-• `Const` **sepolia**: [`Addresses`](interfaces/Addresses.md)
+• `Const` **sepolia**: [`Addresses`](interfaces/Addresses.md) = `{}`
 
 ## Functions
 
