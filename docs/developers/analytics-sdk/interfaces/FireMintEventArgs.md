@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.5.8](../README.md) / [Exports](../modules.md) / FireMintEventArgs
+ - v0.5.11](../README.md) / [Exports](../modules.md) / FireMintEventArgs
 
 # Interface: FireMintEventArgs
 

@@ -1,8 +1,8 @@
 [# Masa Analytics SDK
- - v0.5.8](README.md) / Exports
+ - v0.5.11](README.md) / Exports
 
 # # Masa Analytics SDK
- - v0.5.8
+ - v0.5.11
 
 ## Table of contents
 

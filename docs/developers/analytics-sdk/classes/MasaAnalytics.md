@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.5.8](../README.md) / [Exports](../modules.md) / MasaAnalytics
+ - v0.5.11](../README.md) / [Exports](../modules.md) / MasaAnalytics
 
 # Class: MasaAnalytics
 
@@ -116,7 +116,7 @@ Extracts relevant data from the clicked element.
 | `event_name` | `string` |
 | `page_title` | `string` |
 | `page_url` | `string` |
-| `user_address` | `undefined` \| `string` |
+| `user_address?` | `string` |
 
 ___
 
