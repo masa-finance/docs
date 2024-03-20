@@ -8,14 +8,14 @@ Masa Token Mesh
 
 ## Masa
 
-- Token Address: [0x]()
-- TimeLock Address: [0x]()
-- Admin Address: [0x]()
+- Token Address: [0x]
+- TimeLock Address: [0x]
+- Admin Address: [0x]
 
 ### Masa Testnet
 
-- Token Address: [0x]()
-- TimeLock Address: [0x]()
+- Token Address: [0x]
+- TimeLock Address: [0x]
 - Admin Address: [0x19B35C375BE865A902423590f68B8B5f0ec02574](https://subnets-test.avax.network/masatestnet/address/0x19B35C375BE865A902423590f68B8B5f0ec02574)
 
 ## Ethereum
