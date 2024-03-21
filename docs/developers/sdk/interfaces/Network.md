@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.21.1](../README.md) / [Exports](../modules.md) / Network
+ - v3.23.1](../README.md) / [Exports](../modules.md) / Network
 
 # Interface: Network
 
@@ -100,7 +100,7 @@ ___
 
 ### lzEndpointId
 
-• `Optional` **lzEndpointId**: `EndpointId`
+• `Optional` **lzEndpointId**: `number`
 
 LayerZero Endpoint ID
 

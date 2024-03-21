@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.21.1](../README.md) / [Exports](../modules.md) / MasaMarketplace
+ - v3.23.1](../README.md) / [Exports](../modules.md) / MasaMarketplace
 
 # Class: MasaMarketplace
 
@@ -21,7 +21,8 @@
 
 ### Methods
 
-- [stake](MasaMarketplace.md#stake)
+- [claimAllRewards](MasaMarketplace.md#claimallrewards)
+- [stakeAll](MasaMarketplace.md#stakeall)
 
 ## Constructors
 
@@ -55,16 +56,19 @@ MasaBase.masa
 
 ## Methods
 
-### stake
+### claimAllRewards
 
-▸ **stake**(`tokenId`, `amount`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+▸ **claimAllRewards**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
-#### Parameters
+#### Returns
 
-| Name | Type |
-| :------ | :------ |
-| `tokenId` | `BigNumber` |
-| `amount` | `BigNumber` |
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+___
+
+### stakeAll
+
+▸ **stakeAll**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Returns
 

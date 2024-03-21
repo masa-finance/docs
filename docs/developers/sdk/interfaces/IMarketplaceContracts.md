@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.21.1](../README.md) / [Exports](../modules.md) / IMarketplaceContracts
+ - v3.23.1](../README.md) / [Exports](../modules.md) / IMarketplaceContracts
 
 # Interface: IMarketplaceContracts
 
@@ -7,10 +7,17 @@
 
 ### Properties
 
-- [DataStaking](IMarketplaceContracts.md#datastaking)
+- [DataPointsMulti](IMarketplaceContracts.md#datapointsmulti)
+- [DataStakingDynamicNative](IMarketplaceContracts.md#datastakingdynamicnative)
 
 ## Properties
 
-### DataStaking
+### DataPointsMulti
 
-• **DataStaking**: `DataStaking` & [`ContractInfo`](ContractInfo.md)
+• **DataPointsMulti**: `DataPointsMulti` & [`ContractInfo`](ContractInfo.md)
+
+___
+
+### DataStakingDynamicNative
+
+• **DataStakingDynamicNative**: `DataStakingDynamicNative` & [`ContractInfo`](ContractInfo.md)

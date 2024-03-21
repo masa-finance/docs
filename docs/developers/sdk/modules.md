@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.21.1](README.md) / Exports
+ - v3.23.1](README.md) / Exports
 
 # # Masa SDK
- - v3.21.1
+ - v3.23.1
 
 ## Table of contents
 
@@ -146,6 +146,7 @@
 - [burnSoulName](modules.md#burnsoulname)
 - [calculateSoulNameLength](modules.md#calculatesoulnamelength)
 - [checkLogin](modules.md#checklogin)
+- [claimAllRewards](modules.md#claimallrewards)
 - [createCreditScore](modules.md#createcreditscore)
 - [createGreen](modules.md#creategreen)
 - [createIdentity](modules.md#createidentity)
@@ -154,6 +155,7 @@
 - [createSoulName](modules.md#createsoulname)
 - [deployASBT](modules.md#deployasbt)
 - [deploySSSBT](modules.md#deploysssbt)
+- [deposit](modules.md#deposit)
 - [establishLink](modules.md#establishlink)
 - [establishLinkFromPassport](modules.md#establishlinkfrompassport)
 - [generateGreen](modules.md#generategreen)
@@ -182,6 +184,7 @@
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
 - [loadIdentityDetails](modules.md#loadidentitydetails)
 - [loadLinks](modules.md#loadlinks)
+- [loadMarketplaceContracts](modules.md#loadmarketplacecontracts)
 - [loadSoulNameByName](modules.md#loadsoulnamebyname)
 - [loadSoulNameByTokenId](modules.md#loadsoulnamebytokenid)
 - [loadSoulNameDetailsByAddress](modules.md#loadsoulnamedetailsbyaddress)
@@ -207,7 +210,7 @@
 - [showIdentity](modules.md#showidentity)
 - [signMessage](modules.md#signmessage)
 - [signTypedData](modules.md#signtypeddata)
-- [stake](modules.md#stake)
+- [stakeAll](modules.md#stakeall)
 - [swap](modules.md#swap)
 - [tailSoulNames](modules.md#tailsoulnames)
 - [tailSoulNamesAndPrint](modules.md#tailsoulnamesandprint)
@@ -217,6 +220,7 @@
 - [verifyGreen](modules.md#verifygreen)
 - [verifyLink](modules.md#verifylink)
 - [version](modules.md#version)
+- [withdraw](modules.md#withdraw)
 
 ## Type Aliases
 
@@ -476,7 +480,7 @@ ___
 
 ### sepolia
 
-• `Const` **sepolia**: [`Addresses`](interfaces/Addresses.md) = `{}`
+• `Const` **sepolia**: [`Addresses`](interfaces/Addresses.md)
 
 ## Functions
 
@@ -542,6 +546,22 @@ ___
 #### Returns
 
 `Promise`\<`boolean`\>
+
+___
+
+### claimAllRewards
+
+▸ **claimAllRewards**(`masa`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+
+#### Returns
+
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
@@ -703,6 +723,23 @@ ___
 #### Returns
 
 `Promise`\<`undefined` \| [`DeployResult`](interfaces/DeployResult.md)\<`PaymentParamsStruct`\>\>
+
+___
+
+### deposit
+
+▸ **deposit**(`masa`, `amount`): `Promise`\<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `amount` | `string` |
+
+#### Returns
+
+`Promise`\<`void`\>
 
 ___
 
@@ -1194,6 +1231,24 @@ ___
 
 ___
 
+### loadMarketplaceContracts
+
+▸ **loadMarketplaceContracts**(`«destructured»`): [`IMarketplaceContracts`](interfaces/IMarketplaceContracts.md)
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `«destructured»` | `Object` | `undefined` |
+| › `networkName?` | [`NetworkName`](modules.md#networkname) | `"ethereum"` |
+| › `signer` | `Signer` | `undefined` |
+
+#### Returns
+
+[`IMarketplaceContracts`](interfaces/IMarketplaceContracts.md)
+
+___
+
 ### loadSoulNameByName
 
 ▸ **loadSoulNameByName**(`masa`, `soulName`): `Promise`\<`undefined` \| [`SoulNameDetails`](interfaces/SoulNameDetails.md)\>
@@ -1651,17 +1706,15 @@ ___
 
 ___
 
-### stake
+### stakeAll
 
-▸ **stake**(`masa`, `tokenId`, `amount`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
+▸ **stakeAll**(`masa`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
-| `tokenId` | `BigNumber` |
-| `amount` | `BigNumber` |
 
 #### Returns
 
@@ -1828,3 +1881,20 @@ ___
 | :------ | :------ |
 | `contractsVersion` | `string` |
 | `sdkVersion` | `string` |
+
+___
+
+### withdraw
+
+▸ **withdraw**(`masa`, `amount`): `Promise`\<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `amount` | `string` |
+
+#### Returns
+
+`Promise`\<`void`\>

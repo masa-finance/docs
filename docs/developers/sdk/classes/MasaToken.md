@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.21.1](../README.md) / [Exports](../modules.md) / MasaToken
+ - v3.23.1](../README.md) / [Exports](../modules.md) / MasaToken
 
 # Class: MasaToken
 
@@ -21,7 +21,9 @@
 
 ### Methods
 
+- [deposit](MasaToken.md#deposit)
 - [swap](MasaToken.md#swap)
+- [withdraw](MasaToken.md#withdraw)
 
 ## Constructors
 
@@ -55,6 +57,22 @@ MasaBase.masa
 
 ## Methods
 
+### deposit
+
+▸ **deposit**(`amount`): `Promise`\<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `amount` | `string` |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+___
+
 ### swap
 
 ▸ **swap**(`to`, `amount`, `slippage?`): `Promise`\<`void`\>
@@ -66,6 +84,22 @@ MasaBase.masa
 | `to` | [`NetworkName`](../modules.md#networkname) |
 | `amount` | `string` |
 | `slippage?` | `number` |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+___
+
+### withdraw
+
+▸ **withdraw**(`amount`): `Promise`\<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `amount` | `string` |
 
 #### Returns
 
