@@ -1,5 +1,5 @@
 [# Masa Express
- - v1.4.2](../README.md) / [Exports](../modules.md) / CustomSessionFields
+ - v1.4.4](../README.md) / [Exports](../modules.md) / CustomSessionFields
 
 # Interface: CustomSessionFields
 
