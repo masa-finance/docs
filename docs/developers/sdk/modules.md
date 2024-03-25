@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.23.1](README.md) / Exports
+ - v3.24.7](README.md) / Exports
 
 # # Masa SDK
- - v3.23.1
+ - v3.24.7
 
 ## Table of contents
 
@@ -164,6 +164,8 @@
 - [getNetworkNameByChainId](modules.md#getnetworknamebychainid)
 - [getSession](modules.md#getsession)
 - [getSoulNameMetadataPrefix](modules.md#getsoulnamemetadataprefix)
+- [getSwapParameters](modules.md#getswapparameters)
+- [getSwapQuote](modules.md#getswapquote)
 - [isBigNumber](modules.md#isbignumber)
 - [isERC20Currency](modules.md#iserc20currency)
 - [isNativeCurrency](modules.md#isnativecurrency)
@@ -885,6 +887,47 @@ try to evaluate the right prefix
 #### Returns
 
 `string`
+
+___
+
+### getSwapParameters
+
+▸ **getSwapParameters**(`eid`, `receiverAddress`, `tokenAmount`, `slippage?`): `Object`
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `eid` | `EndpointId` | `undefined` |
+| `receiverAddress` | `string` | `undefined` |
+| `tokenAmount` | `BigNumber` | `undefined` |
+| `slippage` | `number` | `250` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `sendParameters` | `SendParamStruct` \| `SendParamStruct` \| `SendParamStruct` |
+| `slippage` | `number` |
+
+___
+
+### getSwapQuote
+
+▸ **getSwapQuote**(`masa`, `sendParameters`): `Promise`\<`undefined` \| \{ `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `sendParameters` | `SendParamStruct` \| `SendParamStruct` \| `SendParamStruct` |
+
+#### Returns
+
+`Promise`\<`undefined` \| \{ `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber`  }\>
 
 ___
 
@@ -1728,12 +1771,12 @@ ___
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
-| `to` | [`NetworkName`](modules.md#networkname) | `undefined` |
-| `amount` | `string` | `undefined` |
-| `slippage` | `number` | `250` |
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `to` | [`NetworkName`](modules.md#networkname) |
+| `amount` | `string` |
+| `slippage?` | `number` |
 
 #### Returns
 

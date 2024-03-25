@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.23.1](../README.md) / [Exports](../modules.md) / Marketplace
+ - v3.24.7](../README.md) / [Exports](../modules.md) / Marketplace
 
 # Class: Marketplace
 
@@ -25,18 +25,11 @@
 - [checkOrGiveAllowance](Marketplace.md#checkorgiveallowance)
 - [claimAllRewards](Marketplace.md#claimallrewards)
 - [createOverrides](Marketplace.md#createoverrides)
-- [dataPointsMulti](Marketplace.md#datapointsmulti)
 - [estimateGasWithSlippage](Marketplace.md#estimategaswithslippage)
 - [formatPrice](Marketplace.md#formatprice)
 - [getNetworkFeeInformation](Marketplace.md#getnetworkfeeinformation)
 - [getPaymentAddress](Marketplace.md#getpaymentaddress)
-- [getRemainingRewards](Marketplace.md#getremainingrewards)
-- [name](Marketplace.md#name)
-- [owner](Marketplace.md#owner)
 - [stakeAll](Marketplace.md#stakeall)
-- [stakeInfos](Marketplace.md#stakeinfos)
-- [totalRewardsPool](Marketplace.md#totalrewardspool)
-- [userStakes](Marketplace.md#userstakes)
 - [verify](Marketplace.md#verify)
 - [addSlippage](Marketplace.md#addslippage)
 
@@ -110,11 +103,11 @@ ___
 
 ### claimAllRewards
 
-▸ **claimAllRewards**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+▸ **claimAllRewards**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
 
 #### Returns
 
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
 
 ___
 
@@ -135,16 +128,6 @@ ___
 #### Inherited from
 
 MasaModuleBase.createOverrides
-
-___
-
-### dataPointsMulti
-
-▸ **dataPointsMulti**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-#### Returns
-
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
@@ -227,86 +210,13 @@ MasaModuleBase.getPaymentAddress
 
 ___
 
-### getRemainingRewards
-
-▸ **getRemainingRewards**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-#### Returns
-
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-___
-
-### name
-
-▸ **name**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-#### Returns
-
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-___
-
-### owner
-
-▸ **owner**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-#### Returns
-
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-___
-
 ### stakeAll
 
-▸ **stakeAll**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+▸ **stakeAll**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
 
 #### Returns
 
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-___
-
-### stakeInfos
-
-▸ **stakeInfos**(`tokenId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `tokenId` | `BigNumber` |
-
-#### Returns
-
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-___
-
-### totalRewardsPool
-
-▸ **totalRewardsPool**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-#### Returns
-
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-___
-
-### userStakes
-
-▸ **userStakes**(`userAddress`, `tokenId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `userAddress` | `string` |
-| `tokenId` | `BigNumber` |
-
-#### Returns
-
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
 
 ___
 

@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.23.1](../README.md) / [Exports](../modules.md) / Addresses
+ - v3.24.7](../README.md) / [Exports](../modules.md) / Addresses
 
 # Interface: Addresses
 
@@ -27,7 +27,7 @@ ___
 
 ### DataStakingDynamicNativeAddress
 
-• `Optional` **DataStakingDynamicNativeAddress**: `string`
+• `Optional` **DataStakingDynamicNativeAddress**: `string`[]
 
 ___
 

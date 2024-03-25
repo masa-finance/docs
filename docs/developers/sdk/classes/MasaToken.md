@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.23.1](../README.md) / [Exports](../modules.md) / MasaToken
+ - v3.24.7](../README.md) / [Exports](../modules.md) / MasaToken
 
 # Class: MasaToken
 
@@ -22,6 +22,8 @@
 ### Methods
 
 - [deposit](MasaToken.md#deposit)
+- [getSwapParameters](MasaToken.md#getswapparameters)
+- [getSwapQuote](MasaToken.md#getswapquote)
 - [swap](MasaToken.md#swap)
 - [withdraw](MasaToken.md#withdraw)
 
@@ -70,6 +72,46 @@ MasaBase.masa
 #### Returns
 
 `Promise`\<`void`\>
+
+___
+
+### getSwapParameters
+
+▸ **getSwapParameters**(`eid`, `receiverAddress`, `tokenAmount`, `slippage?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `eid` | `EndpointId` |
+| `receiverAddress` | `string` |
+| `tokenAmount` | `BigNumber` |
+| `slippage?` | `number` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `sendParameters` | `SendParamStruct` \| `SendParamStruct` \| `SendParamStruct` |
+| `slippage` | `number` |
+
+___
+
+### getSwapQuote
+
+▸ **getSwapQuote**(`sendParameters`): `Promise`\<`undefined` \| \{ `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `sendParameters` | `SendParamStruct` \| `SendParamStruct` \| `SendParamStruct` |
+
+#### Returns
+
+`Promise`\<`undefined` \| \{ `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber`  }\>
 
 ___
 
