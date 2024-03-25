@@ -20,7 +20,7 @@
     "@docusaurus/preset-classic": "~2.4.3",
     "@masa-finance/masa-react": "~2.7.5",
     "@mdx-js/react": "~1.6.22",
-    "autoprefixer": "^10.4.18",
+    "autoprefixer": "^10.4.19",
     "clsx": "^2.1.0",
     "postcss": "^8.4.36",
     "prism-react-renderer": "^2.3.1",
