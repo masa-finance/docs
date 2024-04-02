@@ -1,9 +1,25 @@
 # Masa Token Governance
 
-General Token Governance Overview
+<!-- TOC -->
+
+- [Masa Token Governance](#masa-token-governance)
+  - [General Token Governance Overview](#general-token-governance-overview)
+  - [Masa Token Mesh](#masa-token-mesh)
+  - [Masa](#masa)
+    - [Masa Testnet](#masa-testnet)
+  - [Ethereum](#ethereum)
+    - [Sepolia](#sepolia)
+  - [Binance Smart Chain](#binance-smart-chain)
+    - [Binance Smart Chain Testnet](#binance-smart-chain-testnet)
+
+<!-- TOC -->
+
+### General Token Governance Overview
+
 ![Masa Token Governance](./assets/masa_token_governance.png)
 
-Masa Token Mesh
+### Masa Token Mesh
+
 ![Masa Token Mesh](./assets/masa_token_mesh.png)
 
 ## Masa
@@ -29,3 +45,15 @@ Masa Token Mesh
 - Token Address: [0xFd36990172dFB44ef0cEa51a9B1159687CfBb4E2](https://sepolia.etherscan.io/token/0xFd36990172dFB44ef0cEa51a9B1159687CfBb4E2)
 - TimeLock Address: [0x471e69B65c5b00FdBeB0f343CD46F98E4ea6F5ae](https://sepolia.etherscan.io/address/0x471e69B65c5b00FdBeB0f343CD46F98E4ea6F5ae)
 - Admin Address: [0x574f1dC03c4ACBa6b401fDC607610BF10A1659fF](https://sepolia.etherscan.io/address/0x574f1dC03c4ACBa6b401fDC607610BF10A1659fF)
+
+## Binance Smart Chain
+
+- Token Address: [0x]
+- TimeLock Address: [0x]
+- Admin Address: [0x]
+
+### Binance Smart Chain Testnet
+
+- Token Address: [0xCB3f0EC4019f20D0eA05d7db0f6E82f2DA3a619D](https://testnet.bscscan.com/address/0xCB3f0EC4019f20D0eA05d7db0f6E82f2DA3a619D)
+- TimeLock Address: none
+- Admin Address: [0xd207773F00222aA85A44770ed18F9D09861F6f0b](https://testnet.bscscan.com/address/0xd207773F00222aA85A44770ed18F9D09861F6f0b)
