@@ -175,23 +175,6 @@ Combines options for a given endpoint and message type.
 |---|---|---|
 | _0 | bytes | options The combination of caller specified options AND enforced options. |
 
-### composeMsgSender
-
-```solidity
-function composeMsgSender() external view returns (address sender)
-```
-
-Retrieves the address responsible for &#39;sending&#39; composeMsg&#39;s to the Endpoint.
-
-*Applications can optionally choose to implement a separate composeMsg sender that is NOT the bridging layer.The default sender IS the OApp implementer.*
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| sender | address | The address responsible for &#39;sending&#39; composeMsg&#39;s to the Endpoint. |
-
 ### decimalConversionRate
 
 ```solidity
@@ -305,6 +288,30 @@ function increaseAllowance(address spender, uint256 addedValue) external nonpaya
 |---|---|---|
 | spender | address | undefined |
 | addedValue | uint256 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
+
+### isComposeMsgSender
+
+```solidity
+function isComposeMsgSender(Origin, bytes, address _sender) external view returns (bool)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | Origin | undefined |
+| _1 | bytes | undefined |
+| _sender | address | undefined |
 
 #### Returns
 

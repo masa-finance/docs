@@ -32,23 +32,6 @@ function allowInitializePath(Origin origin) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
-### composeMsgSender
-
-```solidity
-function composeMsgSender() external view returns (address sender)
-```
-
-Retrieves the address responsible for &#39;sending&#39; composeMsg&#39;s to the Endpoint.
-
-*Applications can optionally choose to implement a separate composeMsg sender that is NOT the bridging layer.The default sender IS the OApp implementer.*
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| sender | address | The address responsible for &#39;sending&#39; composeMsg&#39;s to the Endpoint. |
-
 ### endpoint
 
 ```solidity
@@ -65,6 +48,30 @@ Retrieves the LayerZero endpoint associated with the OApp.
 | Name | Type | Description |
 |---|---|---|
 | _0 | contract ILayerZeroEndpointV2 | undefined |
+
+### isComposeMsgSender
+
+```solidity
+function isComposeMsgSender(Origin, bytes, address _sender) external view returns (bool)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | Origin | undefined |
+| _1 | bytes | undefined |
+| _sender | address | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bool | undefined |
 
 ### lzReceive
 
