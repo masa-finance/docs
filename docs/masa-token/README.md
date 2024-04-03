@@ -48,8 +48,8 @@
 
 ## Binance Smart Chain
 
-- Token Address: [0x]
-- TimeLock Address: [0x]
+- Token Address: [0x944824290CC12F31ae18Ef51216A223Ba4063092](https://bscscan.com/address/0x944824290CC12F31ae18Ef51216A223Ba4063092)
+- TimeLock Address: [0x320F5AE538A9A4Ba8D01DB660304f0fC49100DBF](https://bscscan.com/address/0x320F5AE538A9A4Ba8D01DB660304f0fC49100DBF)
 - Admin Address: [0xD9f8D4359C034E1290d83b70e73e32fdd31a663B](https://bscscan.com/address/0xD9f8D4359C034E1290d83b70e73e32fdd31a663B)
 
 ### Binance Smart Chain Testnet
