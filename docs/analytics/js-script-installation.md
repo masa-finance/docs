@@ -43,11 +43,11 @@ After installing the tacking script in Step 1, we can create a new script to tri
 
 ```javascript
 <script>
-  window.onload = async function () {
+  window.onload = function () {
     var page = window.location.href;
 
     // Track PageView event
-    masaAnalytics.firePageViewEvent({ page });
+    masaAnalytics.firePageViewEvent({ page: page });
 
     function trackPageViewForSPA() {
       var updatedPageUrl = window.location.href;
@@ -156,6 +156,22 @@ Choose the 'Custom HTML' tag type and paste the Masa Analytics initialization sc
     clientId: "YOUR_CLIENT_ID",
   });
 </script>
+<script>
+  window.onload = function () {
+    var page = window.location.href;
+
+    // Track PageView event
+    masaAnalytics.firePageViewEvent({ page: page });
+
+    function trackPageViewForSPA() {
+      var updatedPageUrl = window.location.href;
+      masaAnalytics.firePageViewEvent({ page: updatedPageUrl });
+    }
+
+    // This event is triggered when the route changes in many SPAs
+    window.addEventListener("popstate", trackPageViewForSPA);
+  };
+</script>
 ```
 
 ### Step 2: Set Up Triggers
@@ -226,11 +242,11 @@ To track the `connectWallet` event, you'll need to extract the Ethereum address 
 
 ```html
 <script>
-  window.onload = async function () {
+  window.onload = function () {
     var page = window.location.href;
 
     // Track PageView event
-    masaAnalytics.firePageViewEvent({ page });
+    masaAnalytics.firePageViewEvent({ page: page });
 
     function trackPageViewForSPA() {
       var updatedPageUrl = window.location.href;
