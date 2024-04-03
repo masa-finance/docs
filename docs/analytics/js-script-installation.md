@@ -14,7 +14,6 @@ This guide will instruct you how to integrate Masa Analytics into your website. 
 A `client_id` will be provided to you during your Masa Analytics on-boarding. Please contact **help@masa.finance** or reach out to us at our #developers channel on **Discord** if you need a ClientID.
 :::
 
-
 :::info
 If you’re installing Masa Analytics directly into your Website HTML follow the steps below. If you’re installing Masa Analytics into your Google Tag Manager scroll down.
 :::
@@ -44,11 +43,11 @@ After installing the tacking script in Step 1, we can create a new script to tri
 
 ```javascript
 <script>
-  window.onload = async function () {
+  window.onload = function () {
     var page = window.location.href;
 
     // Track PageView event
-    masaAnalytics.firePageViewEvent({ page });
+    masaAnalytics.firePageViewEvent({ page: page });
 
     function trackPageViewForSPA() {
       var updatedPageUrl = window.location.href;
@@ -82,6 +81,22 @@ Choose the 'Custom HTML' tag type and paste the Masa Analytics initialization sc
   var masaAnalytics = new MA.MasaAnalytics({
     clientId: "YOUR_CLIENT_ID",
   });
+</script>
+<script>
+  window.onload = function () {
+    var page = window.location.href;
+
+    // Track PageView event
+    masaAnalytics.firePageViewEvent({ page: page });
+
+    function trackPageViewForSPA() {
+      var updatedPageUrl = window.location.href;
+      masaAnalytics.firePageViewEvent({ page: updatedPageUrl });
+    }
+
+    // This event is triggered when the route changes in many SPAs
+    window.addEventListener("popstate", trackPageViewForSPA);
+  };
 </script>
 ```
 
@@ -125,7 +140,10 @@ To track specific events on your website (eg clicks or functions being called), 
 Empty `additionalEventData` object example
 
 ```javascript
-window.masaAnalytics.trackEvent({eventName:'handleCliPluginsHeaderClick', additionalEventData: {}})
+window.masaAnalytics.trackEvent({
+  eventName: "handleCliPluginsHeaderClick",
+  additionalEventData: {},
+});
 ```
 
 ### Step 4: Tracking `connectWallet` Event
@@ -150,11 +168,11 @@ To track the `connectWallet` event, you'll need to extract the Ethereum address 
 
 ```html
 <script>
-  window.onload = async function () {
+  window.onload = function () {
     var page = window.location.href;
 
     // Track PageView event
-    masaAnalytics.firePageViewEvent({ page });
+    masaAnalytics.firePageViewEvent({ page: page });
 
     function trackPageViewForSPA() {
       var updatedPageUrl = window.location.href;
@@ -174,4 +192,3 @@ To track the `connectWallet` event, you'll need to extract the Ethereum address 
   };
 </script>
 ```
-
