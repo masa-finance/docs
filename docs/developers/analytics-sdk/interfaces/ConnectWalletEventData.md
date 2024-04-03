@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.5.4](../README.md) / [Exports](../modules.md) / ConnectWalletEventData
+ - v0.5.11](../README.md) / [Exports](../modules.md) / ConnectWalletEventData
 
 # Interface: ConnectWalletEventData
 
@@ -14,8 +14,6 @@
 ### Properties
 
 - [additionalEventData](ConnectWalletEventData.md#additionaleventdata)
-- [client\_app](ConnectWalletEventData.md#client_app)
-- [client\_name](ConnectWalletEventData.md#client_name)
 - [wallet\_type](ConnectWalletEventData.md#wallet_type)
 
 ## Properties
@@ -27,26 +25,6 @@
 #### Inherited from
 
 [BaseEventData](BaseEventData.md).[additionalEventData](BaseEventData.md#additionaleventdata)
-
-___
-
-### client\_app
-
-• **client\_app**: `string`
-
-#### Inherited from
-
-[BaseEventData](BaseEventData.md).[client_app](BaseEventData.md#client_app)
-
-___
-
-### client\_name
-
-• **client\_name**: `string`
-
-#### Inherited from
-
-[BaseEventData](BaseEventData.md).[client_name](BaseEventData.md#client_name)
 
 ___
 

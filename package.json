@@ -20,19 +20,19 @@
     "@docusaurus/preset-classic": "~2.4.3",
     "@masa-finance/masa-react": "~2.7.5",
     "@mdx-js/react": "~1.6.22",
-    "autoprefixer": "^10.4.17",
+    "autoprefixer": "^10.4.19",
     "clsx": "^2.1.0",
-    "postcss": "^8.4.33",
-    "prism-react-renderer": "^2.1.0",
+    "postcss": "^8.4.38",
+    "prism-react-renderer": "^2.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "~2.4.3",
-    "@tsconfig/docusaurus": "^2.0.2",
+    "@tsconfig/docusaurus": "^2.0.3",
     "docusaurus-node-polyfills": "^1.0.0",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.3"
   },
   "browserslist": {
     "production": [

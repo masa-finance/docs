@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.18.1](../README.md) / [Exports](../modules.md) / Network
+ - v3.27.1](../README.md) / [Exports](../modules.md) / Network
 
 # Interface: Network
 
@@ -14,6 +14,7 @@
 - [chainName](Network.md#chainname)
 - [chainNameShort](Network.md#chainnameshort)
 - [gasSlippagePercentage](Network.md#gasslippagepercentage)
+- [isDeprecated](Network.md#isdeprecated)
 - [isTestnet](Network.md#istestnet)
 - [lzEndpointId](Network.md#lzendpointid)
 - [nativeCurrency](Network.md#nativecurrency)
@@ -81,6 +82,14 @@ the default gas slippage percentage used on some testnets
 
 ___
 
+### isDeprecated
+
+• `Optional` **isDeprecated**: `boolean`
+
+is this network deprecated
+
+___
+
 ### isTestnet
 
 • **isTestnet**: `boolean`
@@ -91,7 +100,7 @@ ___
 
 ### lzEndpointId
 
-• `Optional` **lzEndpointId**: `EndpointId`
+• `Optional` **lzEndpointId**: `number`
 
 LayerZero Endpoint ID
 

@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.18.1](README.md) / Exports
+ - v3.27.1](README.md) / Exports
 
 # # Masa SDK
- - v3.18.1
+ - v3.27.1
 
 ## Table of contents
 
@@ -19,6 +19,7 @@
 - [ERC20\_\_factory](classes/ERC20__factory.md)
 - [Green](classes/Green.md)
 - [Identity](classes/Identity.md)
+- [Marketplace](classes/Marketplace.md)
 - [Masa](classes/Masa.md)
 - [MasaASBT](classes/MasaASBT.md)
 - [MasaASBTWrapper](classes/MasaASBTWrapper.md)
@@ -33,7 +34,9 @@
 - [MasaDynamicSSSBTWrapper](classes/MasaDynamicSSSBTWrapper.md)
 - [MasaGreen](classes/MasaGreen.md)
 - [MasaIdentity](classes/MasaIdentity.md)
+- [MasaMarketplace](classes/MasaMarketplace.md)
 - [MasaSBTBase](classes/MasaSBTBase.md)
+- [MasaSBTModuleBase](classes/MasaSBTModuleBase.md)
 - [MasaSBTWrapper](classes/MasaSBTWrapper.md)
 - [MasaSSSBT](classes/MasaSSSBT.md)
 - [MasaSSSBTWrapper](classes/MasaSSSBTWrapper.md)
@@ -72,11 +75,11 @@
 - [IGreen](interfaces/IGreen.md)
 - [IIdentity](interfaces/IIdentity.md)
 - [IIdentityContracts](interfaces/IIdentityContracts.md)
+- [IMarketplaceContracts](interfaces/IMarketplaceContracts.md)
 - [IPassport](interfaces/IPassport.md)
 - [ISession](interfaces/ISession.md)
 - [ISoulName](interfaces/ISoulName.md)
 - [IdentityDetails](interfaces/IdentityDetails.md)
-- [LoadIdentityContractsArgs](interfaces/LoadIdentityContractsArgs.md)
 - [LoginResult](interfaces/LoginResult.md)
 - [LogoutResult](interfaces/LogoutResult.md)
 - [MasaArgs](interfaces/MasaArgs.md)
@@ -143,7 +146,9 @@
 - [burnIdentity](modules.md#burnidentity)
 - [burnSoulName](modules.md#burnsoulname)
 - [calculateSoulNameLength](modules.md#calculatesoulnamelength)
+- [checkExists](modules.md#checkexists)
 - [checkLogin](modules.md#checklogin)
+- [claimAllRewards](modules.md#claimallrewards)
 - [createCreditScore](modules.md#createcreditscore)
 - [createGreen](modules.md#creategreen)
 - [createIdentity](modules.md#createidentity)
@@ -152,6 +157,7 @@
 - [createSoulName](modules.md#createsoulname)
 - [deployASBT](modules.md#deployasbt)
 - [deploySSSBT](modules.md#deploysssbt)
+- [deposit](modules.md#deposit)
 - [establishLink](modules.md#establishlink)
 - [establishLinkFromPassport](modules.md#establishlinkfrompassport)
 - [generateGreen](modules.md#generategreen)
@@ -160,9 +166,12 @@
 - [getNetworkNameByChainId](modules.md#getnetworknamebychainid)
 - [getSession](modules.md#getsession)
 - [getSoulNameMetadataPrefix](modules.md#getsoulnamemetadataprefix)
+- [getSwapParameters](modules.md#getswapparameters)
+- [getSwapQuote](modules.md#getswapquote)
 - [isBigNumber](modules.md#isbignumber)
 - [isERC20Currency](modules.md#iserc20currency)
 - [isNativeCurrency](modules.md#isnativecurrency)
+- [isSession](modules.md#issession)
 - [isSoulNameMetadataStoreResult](modules.md#issoulnamemetadatastoreresult)
 - [listCreditScores](modules.md#listcreditscores)
 - [listCreditScoresAndPrint](modules.md#listcreditscoresandprint)
@@ -180,6 +189,8 @@
 - [loadIdentityContracts](modules.md#loadidentitycontracts)
 - [loadIdentityDetails](modules.md#loadidentitydetails)
 - [loadLinks](modules.md#loadlinks)
+- [loadMarketplaceContracts](modules.md#loadmarketplacecontracts)
+- [loadOFTContract](modules.md#loadoftcontract)
 - [loadSoulNameByName](modules.md#loadsoulnamebyname)
 - [loadSoulNameByTokenId](modules.md#loadsoulnamebytokenid)
 - [loadSoulNameDetailsByAddress](modules.md#loadsoulnamedetailsbyaddress)
@@ -205,6 +216,7 @@
 - [showIdentity](modules.md#showidentity)
 - [signMessage](modules.md#signmessage)
 - [signTypedData](modules.md#signtypeddata)
+- [stakeAll](modules.md#stakeall)
 - [swap](modules.md#swap)
 - [tailSoulNames](modules.md#tailsoulnames)
 - [tailSoulNamesAndPrint](modules.md#tailsoulnamesandprint)
@@ -214,6 +226,7 @@
 - [verifyGreen](modules.md#verifygreen)
 - [verifyLink](modules.md#verifylink)
 - [version](modules.md#version)
+- [withdraw](modules.md#withdraw)
 
 ## Type Aliases
 
@@ -383,7 +396,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `loginTemplate` | (`challenge`: `string`, `expires`: `string`) => `string` | The Masa Finance Login Template used for authenticating with the middleware |
+| `loginTemplate` | (`challenge`: `string`, `expires`: `string`) => `string` | - |
 
 ___
 
@@ -526,6 +539,23 @@ ___
 
 ___
 
+### checkExists
+
+▸ **checkExists**(`address`, `signer`): `Promise`\<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `address` | `string` |
+| `signer` | `Signer` |
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+___
+
 ### checkLogin
 
 ▸ **checkLogin**(`masa`): `Promise`\<`boolean`\>
@@ -539,6 +569,22 @@ ___
 #### Returns
 
 `Promise`\<`boolean`\>
+
+___
+
+### claimAllRewards
+
+▸ **claimAllRewards**(`masa`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+
+#### Returns
+
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
@@ -703,6 +749,23 @@ ___
 
 ___
 
+### deposit
+
+▸ **deposit**(`masa`, `amount`): `Promise`\<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `amount` | `string` |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+___
+
 ### establishLink
 
 ▸ **establishLink**(`masa`, `paymentMethod`, `contract`, `tokenId`, `readerIdentityId`, `signature`, `signatureDate`, `expirationDate`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
@@ -848,6 +911,47 @@ try to evaluate the right prefix
 
 ___
 
+### getSwapParameters
+
+▸ **getSwapParameters**(`eid`, `receiverAddress`, `tokenAmount`, `slippage?`): `Object`
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `eid` | `EndpointId` | `undefined` |
+| `receiverAddress` | `string` | `undefined` |
+| `tokenAmount` | `BigNumber` | `undefined` |
+| `slippage` | `number` | `250` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `sendParameters` | `SendParamStruct` \| `SendParamStruct` \| `SendParamStruct` |
+| `slippage` | `number` |
+
+___
+
+### getSwapQuote
+
+▸ **getSwapQuote**(`masa`, `sendParameters`): `Promise`\<`undefined` \| \{ `gasLimit`: `BigNumber` ; `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber` ; `transactionCost`: `BigNumber`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `sendParameters` | `SendParamStruct` \| `SendParamStruct` \| `SendParamStruct` |
+
+#### Returns
+
+`Promise`\<`undefined` \| \{ `gasLimit`: `BigNumber` ; `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber` ; `transactionCost`: `BigNumber`  }\>
+
+___
+
 ### isBigNumber
 
 ▸ **isBigNumber**(`item`): item is BigNumber
@@ -893,6 +997,22 @@ ___
 #### Returns
 
 paymentMethod is "ETH" \| "CELO" \| "MATIC" \| "BNB"
+
+___
+
+### isSession
+
+▸ **isSession**(`session`): session is ISession
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `session` | `unknown` |
+
+#### Returns
+
+session is ISession
 
 ___
 
@@ -1144,9 +1264,11 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | [`LoadIdentityContractsArgs`](interfaces/LoadIdentityContractsArgs.md) |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `«destructured»` | `Object` | `undefined` |
+| › `networkName?` | [`NetworkName`](modules.md#networkname) | `"ethereum"` |
+| › `signer` | `Signer` | `undefined` |
 
 #### Returns
 
@@ -1186,6 +1308,40 @@ ___
 #### Returns
 
 `Promise`\<[`Link`](modules.md#link)[]\>
+
+___
+
+### loadMarketplaceContracts
+
+▸ **loadMarketplaceContracts**(`«destructured»`): [`IMarketplaceContracts`](interfaces/IMarketplaceContracts.md)
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `«destructured»` | `Object` | `undefined` |
+| › `networkName?` | [`NetworkName`](modules.md#networkname) | `"ethereum"` |
+| › `signer` | `Signer` | `undefined` |
+
+#### Returns
+
+[`IMarketplaceContracts`](interfaces/IMarketplaceContracts.md)
+
+___
+
+### loadOFTContract
+
+▸ **loadOFTContract**(`masa`): `undefined` \| `MasaTokenNativeOFT` \| `MasaToken` \| `MasaTokenOFT`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+
+#### Returns
+
+`undefined` \| `MasaTokenNativeOFT` \| `MasaToken` \| `MasaTokenOFT`
 
 ___
 
@@ -1646,18 +1802,34 @@ ___
 
 ___
 
+### stakeAll
+
+▸ **stakeAll**(`masa`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+
+#### Returns
+
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
+
+___
+
 ### swap
 
 ▸ **swap**(`masa`, `to`, `amount`, `slippage?`): `Promise`\<`void`\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) | `undefined` |
-| `to` | [`NetworkName`](modules.md#networkname) | `undefined` |
-| `amount` | `string` | `undefined` |
-| `slippage` | `number` | `250` |
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `to` | [`NetworkName`](modules.md#networkname) |
+| `amount` | `string` |
+| `slippage?` | `number` |
 
 #### Returns
 
@@ -1805,3 +1977,20 @@ ___
 | :------ | :------ |
 | `contractsVersion` | `string` |
 | `sdkVersion` | `string` |
+
+___
+
+### withdraw
+
+▸ **withdraw**(`masa`, `amount`): `Promise`\<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+| `amount` | `string` |
+
+#### Returns
+
+`Promise`\<`void`\>

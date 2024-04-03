@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.18.1](../README.md) / [Exports](../modules.md) / MasaToken
+ - v3.27.1](../README.md) / [Exports](../modules.md) / MasaToken
 
 # Class: MasaToken
 
@@ -21,7 +21,11 @@
 
 ### Methods
 
+- [deposit](MasaToken.md#deposit)
+- [getSwapParameters](MasaToken.md#getswapparameters)
+- [getSwapQuote](MasaToken.md#getswapquote)
 - [swap](MasaToken.md#swap)
+- [withdraw](MasaToken.md#withdraw)
 
 ## Constructors
 
@@ -55,6 +59,62 @@ MasaBase.masa
 
 ## Methods
 
+### deposit
+
+▸ **deposit**(`amount`): `Promise`\<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `amount` | `string` |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+___
+
+### getSwapParameters
+
+▸ **getSwapParameters**(`eid`, `receiverAddress`, `tokenAmount`, `slippage?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `eid` | `EndpointId` |
+| `receiverAddress` | `string` |
+| `tokenAmount` | `BigNumber` |
+| `slippage?` | `number` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `sendParameters` | `SendParamStruct` \| `SendParamStruct` \| `SendParamStruct` |
+| `slippage` | `number` |
+
+___
+
+### getSwapQuote
+
+▸ **getSwapQuote**(`sendParameters`): `Promise`\<`undefined` \| \{ `gasLimit`: `BigNumber` ; `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber` ; `transactionCost`: `BigNumber`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `sendParameters` | `SendParamStruct` \| `SendParamStruct` \| `SendParamStruct` |
+
+#### Returns
+
+`Promise`\<`undefined` \| \{ `gasLimit`: `BigNumber` ; `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber` ; `transactionCost`: `BigNumber`  }\>
+
+___
+
 ### swap
 
 ▸ **swap**(`to`, `amount`, `slippage?`): `Promise`\<`void`\>
@@ -66,6 +126,22 @@ MasaBase.masa
 | `to` | [`NetworkName`](../modules.md#networkname) |
 | `amount` | `string` |
 | `slippage?` | `number` |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+___
+
+### withdraw
+
+▸ **withdraw**(`amount`): `Promise`\<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `amount` | `string` |
 
 #### Returns
 

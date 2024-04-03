@@ -39,7 +39,7 @@ Copy and paste the Masa Analytics initialization script into the `<header>` sect
 
 ### Step 2: Track `pageView` events
 
-After installing the tacking script in Step 1, we can create a new script to trigger each time a user loads a page to fire pageView events.
+After installing the tacking script in Step 1, we can create a new script to trigger each time a user loads a page to fire pageView events. This will work in a vanilla JS environment, but you will see **React Router** and **Vue Router** examples below.
 
 ```javascript
 <script>
@@ -58,6 +58,80 @@ After installing the tacking script in Step 1, we can create a new script to tri
     window.addEventListener("popstate", trackPageViewForSPA);
   };
 </script>
+```
+
+### Vue Router
+
+You will need to firstly add this script to your `index.html`
+
+```html
+<script>
+  window.trackPageViewForSPA = function () {
+    console.log("Tracking page view:", window.location.href);
+    var page = window.location.href;
+
+    // Track PageView event
+    masaAnalytics.firePageViewEvent({ page });
+    // Here, you can invoke your tracking logic, e.g., masaAnalytics.firePageViewEvent(...)
+  };
+</script>
+```
+
+Secondly, you will need to update your router config file to include the `router.afterEach(())` code.
+
+```javascript
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "../components/HelloWorld.vue"; // Example route component
+
+const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  // other routes...
+];
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes,
+});
+
+router.afterEach(() => {
+  if (window.trackPageViewForSPA) {
+    window.trackPageViewForSPA();
+  }
+});
+
+export default router;
+```
+
+### React Router
+
+
+You will need to firstly add this script to your `index.html`
+
+```html
+<script>
+  window.trackPageViewForSPA = function () {
+    console.log("Tracking page view:", window.location.href);
+    var page = window.location.href;
+
+    // Track PageView event
+    masaAnalytics.firePageViewEvent({ page });
+    // Here, you can invoke your tracking logic, e.g., masaAnalytics.firePageViewEvent(...)
+  };
+</script>
+```
+Secondly, you will need to set up a `useEffect` with `useLocation` to fire the page view tracking whenever the page changes.
+
+```javascript
+const location = useLocation();
+
+useEffect(() => {
+  // Track the initial page view
+  window.trackPageViewForSPA();
+}, [location]); // Re-run the effect only if the location changes
 ```
 
 :::info
@@ -140,7 +214,7 @@ To track specific events on your website (eg clicks or functions being called), 
 Empty `additionalEventData` object example
 
 ```javascript
-window.masaAnalytics.trackEvent({
+window.masaAnalytics.trackCustomEvent({
   eventName: "handleCliPluginsHeaderClick",
   additionalEventData: {},
 });

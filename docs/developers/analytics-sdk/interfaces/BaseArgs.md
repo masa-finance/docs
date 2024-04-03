@@ -1,13 +1,11 @@
 [# Masa Analytics SDK
- - v0.5.4](../README.md) / [Exports](../modules.md) / BaseArgs
+ - v0.5.11](../README.md) / [Exports](../modules.md) / BaseArgs
 
 # Interface: BaseArgs
 
 ## Hierarchy
 
 - **`BaseArgs`**
-
-  ↳ [`FireElementClickEventArgs`](FireElementClickEventArgs.md)
 
   ↳ [`FireEventArgs`](FireEventArgs.md)
 
@@ -16,6 +14,8 @@
   ↳ [`FireMintEventArgs`](FireMintEventArgs.md)
 
   ↳ [`FirePageViewEventArgs`](FirePageViewEventArgs.md)
+
+  ↳ [`FireTrackCustomEventArgs`](FireTrackCustomEventArgs.md)
 
   ↳ [`FireConnectWalletEventArgs`](FireConnectWalletEventArgs.md)
 

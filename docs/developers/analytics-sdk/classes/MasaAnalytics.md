@@ -1,5 +1,5 @@
 [# Masa Analytics SDK
- - v0.5.4](../README.md) / [Exports](../modules.md) / MasaAnalytics
+ - v0.5.11](../README.md) / [Exports](../modules.md) / MasaAnalytics
 
 # Class: MasaAnalytics
 
@@ -24,13 +24,13 @@
 
 - [extractElementData](MasaAnalytics.md#extractelementdata)
 - [fireConnectWalletEvent](MasaAnalytics.md#fireconnectwalletevent)
-- [fireElementClickEvent](MasaAnalytics.md#fireelementclickevent)
 - [fireEvent](MasaAnalytics.md#fireevent)
 - [fireLoginEvent](MasaAnalytics.md#fireloginevent)
 - [fireMintEvent](MasaAnalytics.md#firemintevent)
 - [firePageViewEvent](MasaAnalytics.md#firepageviewevent)
+- [fireTrackCustomEvent](MasaAnalytics.md#firetrackcustomevent)
 - [handleDocumentClick](MasaAnalytics.md#handledocumentclick)
-- [trackClicks](MasaAnalytics.md#trackclicks)
+- [trackCustomEvent](MasaAnalytics.md#trackcustomevent)
 
 ## Constructors
 
@@ -44,9 +44,7 @@
 | :------ | :------ |
 | `config` | `Object` |
 | `config.apiUrl?` | `string` |
-| `config.clientApp` | `string` |
 | `config.clientId` | `string` |
-| `config.clientName` | `string` |
 
 #### Returns
 
@@ -75,9 +73,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `apiUrl?` | `string` |
-| `clientApp` | `string` |
 | `clientId` | `string` |
-| `clientName` | `string` |
 
 ___
 
@@ -99,7 +95,7 @@ ___
 
 ### extractElementData
 
-▸ **extractElementData**(`element`): `Object`
+▸ **extractElementData**(`eventName`, `additionalEventData`): `Object`
 
 Extracts relevant data from the clicked element.
 
@@ -107,7 +103,8 @@ Extracts relevant data from the clicked element.
 
 | Name | Type |
 | :------ | :------ |
-| `element` | `any` |
+| `eventName` | `string` |
+| `additionalEventData` | `Record`\<`string`, `unknown`\> |
 
 #### Returns
 
@@ -115,13 +112,11 @@ Extracts relevant data from the clicked element.
 
 | Name | Type |
 | :------ | :------ |
-| `additionalEventData` | {} |
-| `element_class` | `any` |
-| `element_id` | `any` |
-| `element_text` | `any` |
+| `additionalEventData` | `Record`\<`string`, `unknown`\> |
+| `event_name` | `string` |
 | `page_title` | `string` |
 | `page_url` | `string` |
-| `user_address` | `undefined` \| `string` |
+| `user_address?` | `string` |
 
 ___
 
@@ -136,24 +131,6 @@ Fire an event once a user tries to mint a token
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | [`FireConnectWalletEventArgs`](../interfaces/FireConnectWalletEventArgs.md) |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-___
-
-### fireElementClickEvent
-
-▸ **fireElementClickEvent**(`«destructured»`): `Promise`\<`void`\>
-
-Fire an event once the user changes the page
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | [`FireElementClickEventArgs`](../interfaces/FireElementClickEventArgs.md) |
 
 #### Returns
 
@@ -235,9 +212,27 @@ Fire an event once the user changes the page
 
 ___
 
+### fireTrackCustomEvent
+
+▸ **fireTrackCustomEvent**(`«destructured»`): `Promise`\<`void`\>
+
+Fire an event once the user changes the page
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | [`FireTrackCustomEventArgs`](../interfaces/FireTrackCustomEventArgs.md) |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+___
+
 ### handleDocumentClick
 
-▸ **handleDocumentClick**(`event`): `void`
+▸ **handleDocumentClick**(`eventName`, `additionalEventData`): `void`
 
 Handles click events on the document, filtering out non-element nodes and specific elements.
 
@@ -245,7 +240,8 @@ Handles click events on the document, filtering out non-element nodes and specif
 
 | Name | Type |
 | :------ | :------ |
-| `event` | `any` |
+| `eventName` | `string` |
+| `additionalEventData` | `Record`\<`string`, `unknown`\> |
 
 #### Returns
 
@@ -253,11 +249,19 @@ Handles click events on the document, filtering out non-element nodes and specif
 
 ___
 
-### trackClicks
+### trackCustomEvent
 
-▸ **trackClicks**(): `void`
+▸ **trackCustomEvent**(`«destructured»`): `void`
 
-Sets up tracking for click events on the entire document.
+Sets up tracking for a specific click event on the entire document.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `Object` |
+| › `additionalEventData` | `Record`\<`string`, `unknown`\> |
+| › `eventName` | `string` |
 
 #### Returns
 
