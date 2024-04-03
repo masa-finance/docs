@@ -30,7 +30,7 @@
 
 ### Masa Testnet
 
-- Token Address: [0x486085dBC5ec794E640AFe81767Bf603Fb1a25A5](https://subnets-test.avax.network/masatestnet/address/0x486085dBC5ec794E640AFe81767Bf603Fb1a25A5)
+- Token Address: [0x6F89e72570089799A4FCBfC66790e5726d5c7F6a](https://subnets-test.avax.network/masatestnet/address/0x6F89e72570089799A4FCBfC66790e5726d5c7F6a)
 - TimeLock Address: none
 - Admin Address: [0x19B35C375BE865A902423590f68B8B5f0ec02574](https://subnets-test.avax.network/masatestnet/address/0x19B35C375BE865A902423590f68B8B5f0ec02574)
 
@@ -54,6 +54,6 @@
 
 ### Binance Smart Chain Testnet
 
-- Token Address: [0xCB3f0EC4019f20D0eA05d7db0f6E82f2DA3a619D](https://testnet.bscscan.com/address/0xCB3f0EC4019f20D0eA05d7db0f6E82f2DA3a619D)
+- Token Address: [0xB99CA5896D3cb306B6066e22B3CB82eA10361279](https://testnet.bscscan.com/address/0xB99CA5896D3cb306B6066e22B3CB82eA10361279)
 - TimeLock Address: none
 - Admin Address: [0xd207773F00222aA85A44770ed18F9D09861F6f0b](https://testnet.bscscan.com/address/0xd207773F00222aA85A44770ed18F9D09861F6f0b)
