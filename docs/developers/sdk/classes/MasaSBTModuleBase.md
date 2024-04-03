@@ -1,48 +1,57 @@
 [# Masa SDK
- - v3.27.1](../README.md) / [Exports](../modules.md) / Green
+ - v3.27.1](../README.md) / [Exports](../modules.md) / MasaSBTModuleBase
 
-# Class: Green
+# Class: MasaSBTModuleBase
 
 ## Hierarchy
 
-- [`MasaSBTModuleBase`](MasaSBTModuleBase.md)
+- `MasaModuleBase`
 
-  ↳ **`Green`**
+  ↳ **`MasaSBTModuleBase`**
+
+  ↳↳ [`CreditScore`](CreditScore.md)
+
+  ↳↳ [`Green`](Green.md)
+
+  ↳↳ [`Identity`](Identity.md)
+
+  ↳↳ [`ASBTContract`](ASBTContract.md)
+
+  ↳↳ [`SBTContract`](SBTContract.md)
+
+  ↳↳ [`SBTContractWrapper`](SBTContractWrapper.md)
+
+  ↳↳ [`SSSBTContract`](SSSBTContract.md)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](Green.md#constructor)
+- [constructor](MasaSBTModuleBase.md#constructor)
 
 ### Properties
 
-- [instances](Green.md#instances)
-- [masa](Green.md#masa)
-- [types](Green.md#types)
+- [instances](MasaSBTModuleBase.md#instances)
+- [masa](MasaSBTModuleBase.md#masa)
 
 ### Methods
 
-- [burn](Green.md#burn)
-- [checkOrGiveAllowance](Green.md#checkorgiveallowance)
-- [createOverrides](Green.md#createoverrides)
-- [estimateGasWithSlippage](Green.md#estimategaswithslippage)
-- [formatPrice](Green.md#formatprice)
-- [getMintPrice](Green.md#getmintprice)
-- [getNetworkFeeInformation](Green.md#getnetworkfeeinformation)
-- [getPaymentAddress](Green.md#getpaymentaddress)
-- [getPrice](Green.md#getprice)
-- [loadSBTContract](Green.md#loadsbtcontract)
-- [mint](Green.md#mint)
-- [sign](Green.md#sign)
-- [verify](Green.md#verify)
-- [addSlippage](Green.md#addslippage)
+- [checkOrGiveAllowance](MasaSBTModuleBase.md#checkorgiveallowance)
+- [createOverrides](MasaSBTModuleBase.md#createoverrides)
+- [estimateGasWithSlippage](MasaSBTModuleBase.md#estimategaswithslippage)
+- [formatPrice](MasaSBTModuleBase.md#formatprice)
+- [getMintPrice](MasaSBTModuleBase.md#getmintprice)
+- [getNetworkFeeInformation](MasaSBTModuleBase.md#getnetworkfeeinformation)
+- [getPaymentAddress](MasaSBTModuleBase.md#getpaymentaddress)
+- [loadSBTContract](MasaSBTModuleBase.md#loadsbtcontract)
+- [verify](MasaSBTModuleBase.md#verify)
+- [addSlippage](MasaSBTModuleBase.md#addslippage)
 
 ## Constructors
 
 ### constructor
 
-• **new Green**(`masa`, `instances`): [`Green`](Green.md)
+• **new MasaSBTModuleBase**(`masa`, `instances`): [`MasaSBTModuleBase`](MasaSBTModuleBase.md)
 
 #### Parameters
 
@@ -53,11 +62,11 @@
 
 #### Returns
 
-[`Green`](Green.md)
+[`MasaSBTModuleBase`](MasaSBTModuleBase.md)
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[constructor](MasaSBTModuleBase.md#constructor)
+MasaModuleBase.constructor
 
 ## Properties
 
@@ -67,7 +76,7 @@
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[instances](MasaSBTModuleBase.md#instances)
+MasaModuleBase.instances
 
 ___
 
@@ -77,31 +86,9 @@ ___
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[masa](MasaSBTModuleBase.md#masa)
-
-___
-
-### types
-
-• `Readonly` **types**: `Record`\<`string`, `TypedDataField`[]\>
+MasaModuleBase.masa
 
 ## Methods
-
-### burn
-
-▸ **burn**(`greenId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `greenId` | `BigNumber` |
-
-#### Returns
-
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-___
 
 ### checkOrGiveAllowance
 
@@ -124,7 +111,7 @@ Checks or gives allowance on ERC20 tokens
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[checkOrGiveAllowance](MasaSBTModuleBase.md#checkorgiveallowance)
+MasaModuleBase.checkOrGiveAllowance
 
 ___
 
@@ -144,7 +131,7 @@ ___
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[createOverrides](MasaSBTModuleBase.md#createoverrides)
+MasaModuleBase.createOverrides
 
 ___
 
@@ -166,7 +153,7 @@ ___
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[estimateGasWithSlippage](MasaSBTModuleBase.md#estimategaswithslippage)
+MasaModuleBase.estimateGasWithSlippage
 
 ___
 
@@ -187,7 +174,7 @@ ___
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[formatPrice](MasaSBTModuleBase.md#formatprice)
+MasaModuleBase.formatPrice
 
 ___
 
@@ -207,10 +194,6 @@ ___
 
 `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
-#### Inherited from
-
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[getMintPrice](MasaSBTModuleBase.md#getmintprice)
-
 ___
 
 ### getNetworkFeeInformation
@@ -223,7 +206,7 @@ ___
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[getNetworkFeeInformation](MasaSBTModuleBase.md#getnetworkfeeinformation)
+MasaModuleBase.getNetworkFeeInformation
 
 ___
 
@@ -245,26 +228,7 @@ Gets the payment address for a given payment method
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[getPaymentAddress](MasaSBTModuleBase.md#getpaymentaddress)
-
-___
-
-### getPrice
-
-▸ **getPrice**(`paymentMethod`, `slippage?`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md) & \{ `formattedMintTransactionFee`: `string` ; `mintTransactionEstimatedGas`: `BigNumber` ; `mintTransactionFee`: `BigNumber`  }\>
-
-Gets the price for a masa green
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
-
-#### Returns
-
-`Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md) & \{ `formattedMintTransactionFee`: `string` ; `mintTransactionEstimatedGas`: `BigNumber` ; `mintTransactionFee`: `BigNumber`  }\>
+MasaModuleBase.getPaymentAddress
 
 ___
 
@@ -288,51 +252,6 @@ ___
 #### Returns
 
 `Promise`\<`Contract`\>
-
-#### Inherited from
-
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[loadSBTContract](MasaSBTModuleBase.md#loadsbtcontract)
-
-___
-
-### mint
-
-▸ **mint**(`paymentMethod`, `receiver`, `authorityAddress`, `signatureDate`, `signature`, `slippage?`): `Promise`\<`ContractTransaction`\>
-
-Purchase a masa green
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `receiver` | `string` | `undefined` |
-| `authorityAddress` | `string` | `undefined` |
-| `signatureDate` | `number` | `undefined` |
-| `signature` | `string` | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
-
-#### Returns
-
-`Promise`\<`ContractTransaction`\>
-
-___
-
-### sign
-
-▸ **sign**(`receiver`): `Promise`\<`undefined` \| \{ `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
-
-Signs a masa green
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `receiver` | `string` |
-
-#### Returns
-
-`Promise`\<`undefined` \| \{ `authorityAddress`: `string` ; `signature`: `string` ; `signatureDate`: `number`  }\>
 
 ___
 
@@ -360,7 +279,7 @@ verify a signature created during one of the SBT signing flows
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[verify](MasaSBTModuleBase.md#verify)
+MasaModuleBase.verify
 
 ___
 
@@ -383,4 +302,4 @@ adds a percentage to the price as slippage
 
 #### Inherited from
 
-[MasaSBTModuleBase](MasaSBTModuleBase.md).[addSlippage](MasaSBTModuleBase.md#addslippage)
+MasaModuleBase.addSlippage

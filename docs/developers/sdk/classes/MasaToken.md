@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.24.7](../README.md) / [Exports](../modules.md) / MasaToken
+ - v3.27.1](../README.md) / [Exports](../modules.md) / MasaToken
 
 # Class: MasaToken
 
@@ -101,7 +101,7 @@ ___
 
 ### getSwapQuote
 
-▸ **getSwapQuote**(`sendParameters`): `Promise`\<`undefined` \| \{ `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber`  }\>
+▸ **getSwapQuote**(`sendParameters`): `Promise`\<`undefined` \| \{ `gasLimit`: `BigNumber` ; `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber` ; `transactionCost`: `BigNumber`  }\>
 
 #### Parameters
 
@@ -111,7 +111,7 @@ ___
 
 #### Returns
 
-`Promise`\<`undefined` \| \{ `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber`  }\>
+`Promise`\<`undefined` \| \{ `gasLimit`: `BigNumber` ; `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber` ; `transactionCost`: `BigNumber`  }\>
 
 ___
 

@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.24.7](README.md) / Exports
+ - v3.27.1](README.md) / Exports
 
 # # Masa SDK
- - v3.24.7
+ - v3.27.1
 
 ## Table of contents
 
@@ -36,6 +36,7 @@
 - [MasaIdentity](classes/MasaIdentity.md)
 - [MasaMarketplace](classes/MasaMarketplace.md)
 - [MasaSBTBase](classes/MasaSBTBase.md)
+- [MasaSBTModuleBase](classes/MasaSBTModuleBase.md)
 - [MasaSBTWrapper](classes/MasaSBTWrapper.md)
 - [MasaSSSBT](classes/MasaSSSBT.md)
 - [MasaSSSBTWrapper](classes/MasaSSSBTWrapper.md)
@@ -145,6 +146,7 @@
 - [burnIdentity](modules.md#burnidentity)
 - [burnSoulName](modules.md#burnsoulname)
 - [calculateSoulNameLength](modules.md#calculatesoulnamelength)
+- [checkExists](modules.md#checkexists)
 - [checkLogin](modules.md#checklogin)
 - [claimAllRewards](modules.md#claimallrewards)
 - [createCreditScore](modules.md#createcreditscore)
@@ -169,6 +171,7 @@
 - [isBigNumber](modules.md#isbignumber)
 - [isERC20Currency](modules.md#iserc20currency)
 - [isNativeCurrency](modules.md#isnativecurrency)
+- [isSession](modules.md#issession)
 - [isSoulNameMetadataStoreResult](modules.md#issoulnamemetadatastoreresult)
 - [listCreditScores](modules.md#listcreditscores)
 - [listCreditScoresAndPrint](modules.md#listcreditscoresandprint)
@@ -187,6 +190,7 @@
 - [loadIdentityDetails](modules.md#loadidentitydetails)
 - [loadLinks](modules.md#loadlinks)
 - [loadMarketplaceContracts](modules.md#loadmarketplacecontracts)
+- [loadOFTContract](modules.md#loadoftcontract)
 - [loadSoulNameByName](modules.md#loadsoulnamebyname)
 - [loadSoulNameByTokenId](modules.md#loadsoulnamebytokenid)
 - [loadSoulNameDetailsByAddress](modules.md#loadsoulnamedetailsbyaddress)
@@ -532,6 +536,23 @@ ___
 #### Returns
 
 `number`
+
+___
+
+### checkExists
+
+▸ **checkExists**(`address`, `signer`): `Promise`\<`boolean`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `address` | `string` |
+| `signer` | `Signer` |
+
+#### Returns
+
+`Promise`\<`boolean`\>
 
 ___
 
@@ -916,7 +937,7 @@ ___
 
 ### getSwapQuote
 
-▸ **getSwapQuote**(`masa`, `sendParameters`): `Promise`\<`undefined` \| \{ `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber`  }\>
+▸ **getSwapQuote**(`masa`, `sendParameters`): `Promise`\<`undefined` \| \{ `gasLimit`: `BigNumber` ; `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber` ; `transactionCost`: `BigNumber`  }\>
 
 #### Parameters
 
@@ -927,7 +948,7 @@ ___
 
 #### Returns
 
-`Promise`\<`undefined` \| \{ `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber`  }\>
+`Promise`\<`undefined` \| \{ `gasLimit`: `BigNumber` ; `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber` ; `transactionCost`: `BigNumber`  }\>
 
 ___
 
@@ -976,6 +997,22 @@ ___
 #### Returns
 
 paymentMethod is "ETH" \| "CELO" \| "MATIC" \| "BNB"
+
+___
+
+### isSession
+
+▸ **isSession**(`session`): session is ISession
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `session` | `unknown` |
+
+#### Returns
+
+session is ISession
 
 ___
 
@@ -1289,6 +1326,22 @@ ___
 #### Returns
 
 [`IMarketplaceContracts`](interfaces/IMarketplaceContracts.md)
+
+___
+
+### loadOFTContract
+
+▸ **loadOFTContract**(`masa`): `undefined` \| `MasaTokenNativeOFT` \| `MasaToken` \| `MasaTokenOFT`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `masa` | [`MasaInterface`](interfaces/MasaInterface.md) |
+
+#### Returns
+
+`undefined` \| `MasaTokenNativeOFT` \| `MasaToken` \| `MasaTokenOFT`
 
 ___
 

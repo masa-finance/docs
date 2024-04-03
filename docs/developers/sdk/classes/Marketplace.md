@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.24.7](../README.md) / [Exports](../modules.md) / Marketplace
+ - v3.27.1](../README.md) / [Exports](../modules.md) / Marketplace
 
 # Class: Marketplace
 
@@ -23,13 +23,11 @@
 ### Methods
 
 - [checkOrGiveAllowance](Marketplace.md#checkorgiveallowance)
-- [claimAllRewards](Marketplace.md#claimallrewards)
 - [createOverrides](Marketplace.md#createoverrides)
 - [estimateGasWithSlippage](Marketplace.md#estimategaswithslippage)
 - [formatPrice](Marketplace.md#formatprice)
 - [getNetworkFeeInformation](Marketplace.md#getnetworkfeeinformation)
 - [getPaymentAddress](Marketplace.md#getpaymentaddress)
-- [stakeAll](Marketplace.md#stakeall)
 - [verify](Marketplace.md#verify)
 - [addSlippage](Marketplace.md#addslippage)
 
@@ -98,16 +96,6 @@ Checks or gives allowance on ERC20 tokens
 #### Inherited from
 
 MasaModuleBase.checkOrGiveAllowance
-
-___
-
-### claimAllRewards
-
-▸ **claimAllRewards**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
-
-#### Returns
-
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
 
 ___
 
@@ -207,16 +195,6 @@ Gets the payment address for a given payment method
 #### Inherited from
 
 MasaModuleBase.getPaymentAddress
-
-___
-
-### stakeAll
-
-▸ **stakeAll**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
-
-#### Returns
-
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
 
 ___
 

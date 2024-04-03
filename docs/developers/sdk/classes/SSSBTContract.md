@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.24.7](../README.md) / [Exports](../modules.md) / SSSBTContract
+ - v3.27.1](../README.md) / [Exports](../modules.md) / SSSBTContract
 
 # Class: SSSBTContract
 
 ## Hierarchy
 
-- `MasaSBTModuleBase`
+- [`MasaSBTModuleBase`](MasaSBTModuleBase.md)
 
   ↳ **`SSSBTContract`**
 
@@ -54,7 +54,7 @@
 
 #### Inherited from
 
-MasaSBTModuleBase.constructor
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[constructor](MasaSBTModuleBase.md#constructor)
 
 ## Properties
 
@@ -64,7 +64,7 @@ MasaSBTModuleBase.constructor
 
 #### Inherited from
 
-MasaSBTModuleBase.instances
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[instances](MasaSBTModuleBase.md#instances)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Inherited from
 
-MasaSBTModuleBase.masa
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[masa](MasaSBTModuleBase.md#masa)
 
 ## Methods
 
@@ -121,7 +121,7 @@ Checks or gives allowance on ERC20 tokens
 
 #### Inherited from
 
-MasaSBTModuleBase.checkOrGiveAllowance
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[checkOrGiveAllowance](MasaSBTModuleBase.md#checkorgiveallowance)
 
 ___
 
@@ -164,7 +164,7 @@ ___
 
 #### Inherited from
 
-MasaSBTModuleBase.createOverrides
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[createOverrides](MasaSBTModuleBase.md#createoverrides)
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 #### Inherited from
 
-MasaSBTModuleBase.estimateGasWithSlippage
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[estimateGasWithSlippage](MasaSBTModuleBase.md#estimategaswithslippage)
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 #### Inherited from
 
-MasaSBTModuleBase.formatPrice
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[formatPrice](MasaSBTModuleBase.md#formatprice)
 
 ___
 
@@ -229,7 +229,7 @@ ___
 
 #### Inherited from
 
-MasaSBTModuleBase.getMintPrice
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[getMintPrice](MasaSBTModuleBase.md#getmintprice)
 
 ___
 
@@ -243,7 +243,7 @@ ___
 
 #### Inherited from
 
-MasaSBTModuleBase.getNetworkFeeInformation
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[getNetworkFeeInformation](MasaSBTModuleBase.md#getnetworkfeeinformation)
 
 ___
 
@@ -265,7 +265,7 @@ Gets the payment address for a given payment method
 
 #### Inherited from
 
-MasaSBTModuleBase.getPaymentAddress
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[getPaymentAddress](MasaSBTModuleBase.md#getpaymentaddress)
 
 ___
 
@@ -292,7 +292,7 @@ ___
 
 #### Inherited from
 
-MasaSBTModuleBase.loadSBTContract
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[loadSBTContract](MasaSBTModuleBase.md#loadsbtcontract)
 
 ___
 
@@ -320,7 +320,7 @@ verify a signature created during one of the SBT signing flows
 
 #### Inherited from
 
-MasaSBTModuleBase.verify
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[verify](MasaSBTModuleBase.md#verify)
 
 ___
 
@@ -343,4 +343,4 @@ adds a percentage to the price as slippage
 
 #### Inherited from
 
-MasaSBTModuleBase.addSlippage
+[MasaSBTModuleBase](MasaSBTModuleBase.md).[addSlippage](MasaSBTModuleBase.md#addslippage)
