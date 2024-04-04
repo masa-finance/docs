@@ -139,17 +139,6 @@ error Executor_UnsupportedOptionType(uint8 optionType)
 |---|---|---|
 | optionType | uint8 | undefined |
 
-### Executor_ZeroLzComposeGasProvided
-
-```solidity
-error Executor_ZeroLzComposeGasProvided()
-```
-
-
-
-
-
-
 ### Executor_ZeroLzReceiveGasProvided
 
 ```solidity

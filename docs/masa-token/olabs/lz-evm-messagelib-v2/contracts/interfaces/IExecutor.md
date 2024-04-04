@@ -55,7 +55,7 @@ function defaultMultiplierBps() external view returns (uint16)
 ### dstConfig
 
 ```solidity
-function dstConfig(uint32 _dstEid) external view returns (uint64, uint16, uint128, uint128, uint64)
+function dstConfig(uint32 _dstEid) external view returns (uint64, uint16, uint128, uint128)
 ```
 
 
@@ -76,7 +76,6 @@ function dstConfig(uint32 _dstEid) external view returns (uint64, uint16, uint12
 | _1 | uint16 | undefined |
 | _2 | uint128 | undefined |
 | _3 | uint128 | undefined |
-| _4 | uint64 | undefined |
 
 ### getFee
 

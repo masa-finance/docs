@@ -30,7 +30,7 @@
 
 ### Masa Testnet
 
-- Token Address: [0xd925bc5d3eCd899a3F7B8D762397D2DC75E1187b](https://subnets-test.avax.network/masatestnet/address/0xd925bc5d3eCd899a3F7B8D762397D2DC75E1187b)
+- Token Address: [0x04FB5fB3aE822B9d9e4060eDCcDA44b76821D090](https://subnets-test.avax.network/masatestnet/address/0x04FB5fB3aE822B9d9e4060eDCcDA44b76821D090)
 - TimeLock Address: none
 - Admin Address: [0x19B35C375BE865A902423590f68B8B5f0ec02574](https://subnets-test.avax.network/masatestnet/address/0x19B35C375BE865A902423590f68B8B5f0ec02574)
 
