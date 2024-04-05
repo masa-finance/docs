@@ -1,4 +1,4 @@
-# Masa Node CLI Documentation
+# Oracle CLI Documentation
 
 The Masa Node CLI is a command-line interface tool designed to interact with the Masa Oracle network. It provides users with the ability to execute various operations such as viewing network status, managing staking, and interacting with the Masa Network.
 
