@@ -39,6 +39,8 @@ const sidebars = {
       },
       items: [
         "masa-oracle/README",
+        "masa-oracle/CLI",
+        "masa-oracle/LLM",
       ],
     },
     {

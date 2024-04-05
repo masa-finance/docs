@@ -1,4 +1,4 @@
-# Masa Oracle 🌐
+# Overview 🌐
 
 The Masa Oracle governs the access, sharing, and rewarding of private behavioral and identity data in a decentralized and private manner. The Masa Oracle Network ensures transparency and security of data sharing, while  enabling equitable compensation for nodes that participate in the Masa zk-Data Network and Marketplace.
 
@@ -100,3 +100,10 @@ After setting up your node, its address will be displayed, indicating it's ready
 
 Stay tuned to the Masa Oracle repository for updates and additional details on effectively using the protocol. For Docker users, update your node by pulling the latest changes from the Git repository, then rebuild and restart your Docker containers.
 
+## Masa Node CLI
+
+For more detailed documentation, please refer to the [CLI.md](./CLI.md) file.
+
+## Masa Node Twitter Sentiment Analysis
+
+For more detailed documentation, please refer to the [LLM.md](./LLM.md) file.
