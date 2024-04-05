@@ -1,14 +1,15 @@
 [# Masa Express
- - v1.4.4](README.md) / Exports
+ - v2.0.0](README.md) / Exports
 
 # # Masa Express
- - v1.4.4
+ - v2.0.0
 
 ## Table of contents
 
 ### Interfaces
 
 - [CustomSessionFields](interfaces/CustomSessionFields.md)
+- [MasaSessionArgs](interfaces/MasaSessionArgs.md)
 
 ### Functions
 
@@ -24,18 +25,9 @@
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `«destructured»` | `Object` | `undefined` |
-| › `domain` | `string` | `".masa.finance"` |
-| › `environment` | `string` | `undefined` |
-| › `sameSite?` | ``"none"`` \| ``"lax"`` \| ``"strict"`` | `undefined` |
-| › `secret` | `string` | `undefined` |
-| › `secure?` | `boolean` | `undefined` |
-| › `sessionName` | `string` | `undefined` |
-| › `store?` | `Store` | `undefined` |
-| › `ttl` | `number` | `undefined` |
-| › `verbose?` | `boolean` | `false` |
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | [`MasaSessionArgs`](interfaces/MasaSessionArgs.md) |
 
 #### Returns
 
@@ -45,28 +37,42 @@ ___
 
 ### MasaSessionRouter
 
-▸ **MasaSessionRouter**(`«destructured»`): `Router`
+▸ **MasaSessionRouter**(`args`): `Object`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `«destructured»` | `Object` |
-| › `sessionMiddleware` | `RequestHandler`\<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`\<`string`, `any`\>\> |
-| › `sessionName` | `string` |
-| › `sessionNamespace` | `string` |
+| `args` | [`MasaSessionArgs`](interfaces/MasaSessionArgs.md) |
 
 #### Returns
 
-`Router`
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `middleware` | `RequestHandler`\<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`\<`string`, `any`\>\> |
+| `router` | `Router` |
 
 ___
 
 ### sessionCheckHandler
 
-▸ **sessionCheckHandler**(`request`, `response`, `next`): `undefined` \| `Response`\<`ISession` \| `BaseResult`, `Record`\<`string`, `any`\>\>
+▸ **sessionCheckHandler**(`verbose?`): (`request`: `RequestSession`, `response`: `Response`\<`ISession` \| `BaseResult`, `Record`\<`string`, `any`\>\>, `next`: `NextFunction`) => `undefined` \| `Response`\<`ISession` \| `BaseResult`, `Record`\<`string`, `any`\>\>
 
 #### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `verbose?` | `boolean` |
+
+#### Returns
+
+`fn`
+
+▸ (`request`, `response`, `next`): `undefined` \| `Response`\<`ISession` \| `BaseResult`, `Record`\<`string`, `any`\>\>
+
+##### Parameters
 
 | Name | Type |
 | :------ | :------ |
@@ -74,6 +80,6 @@ ___
 | `response` | `Response`\<`ISession` \| `BaseResult`, `Record`\<`string`, `any`\>\> |
 | `next` | `NextFunction` |
 
-#### Returns
+##### Returns
 
 `undefined` \| `Response`\<`ISession` \| `BaseResult`, `Record`\<`string`, `any`\>\>
