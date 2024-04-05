@@ -40,7 +40,6 @@ const sidebars = {
       items: [
         "masa-oracle/README",
         "masa-oracle/MASAPROTOCOL",
-        "masa-oracle/MID",
         "masa-oracle/CLI",
         "masa-oracle/LLM",
         "masa-oracle/issues",
