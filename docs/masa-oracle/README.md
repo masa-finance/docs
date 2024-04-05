@@ -1,4 +1,4 @@
-# Masa Oracle: Decentralized Data Protocol 🌐
+# Masa Oracle 🌐
 
 The Masa Oracle governs the access, sharing, and rewarding of private behavioral and identity data in a decentralized and private manner. The Masa Oracle Network ensures transparency and security of data sharing, while  enabling equitable compensation for nodes that participate in the Masa zk-Data Network and Marketplace.
 

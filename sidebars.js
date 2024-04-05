@@ -32,6 +32,17 @@ const sidebars = {
     },
     {
       type: "category",
+      label: "Masa Oracle",
+      link: {
+        type: "generated-index",
+        title: "Masa Oracle",
+      },
+      items: [
+        "masa-oracle/README",
+      ],
+    },
+    {
+      type: "category",
       label: "Guides",
       link: {
         type: "generated-index",
