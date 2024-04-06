@@ -94,6 +94,34 @@ When the transactions have settled, you can stake
   docker-compose logs -f masa-node
   ```
 
+## Makefile Commands
+
+The Makefile provides several commands to build, install, run, test, and clean the Masa Node project. Here's a description of each command:
+
+### make build
+
+The build command compiles the Masa Node binary and places it in the ./bin directory. It uses the go build command with the following flags:
+
+-v: Enables verbose output to show the packages being compiled.
+-o ./bin/masa-node: Specifies the output binary name and location.
+./cmd/masa-node: Specifies the package to build (the main package).
+make install
+The install command runs the node_install.sh script to install any necessary dependencies or perform additional setup steps required by the Masa Node.
+
+### make run
+
+The run command first builds the Masa Node binary using the build command and then executes the binary located at ./bin/masa-node. This command allows you to compile and run the Masa Node in a single step.
+
+### make test
+
+The test command runs all the tests in the project using the go test command. It recursively searches for test files in all subdirectories and runs them.
+
+### make clean
+
+The clean command performs cleanup tasks for the project. It removes the bin directory, which contains the compiled binary, and deletes the masa_oracle_node.log file, which may contain log output from previous runs.
+
+To execute any of these commands, simply run make in your terminal from the project's root directory. For example, make build will compile the Masa Node binary, make test will run the tests, and make clean will remove the binary and log file.
+
 After setting up your node, its address will be displayed, indicating it's ready to connect with other Masa nodes. Follow any additional configuration steps and best practices as per your use case or network requirements.
 
 ## Updates & Additional Information
