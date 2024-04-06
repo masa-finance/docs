@@ -43,6 +43,9 @@ const sidebars = {
         "masa-oracle/CLI",
         "masa-oracle/LLM",
         "masa-oracle/issues",
+        "masa-oracle/staking-guide",
+        "masa-oracle/twitter-data",
+        "masa-oracle/twitter-worker",
       ],
     },
     {
