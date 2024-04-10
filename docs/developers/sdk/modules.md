@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.27.1](README.md) / Exports
+ - v3.29.0](README.md) / Exports
 
 # # Masa SDK
- - v3.27.1
+ - v3.29.0
 
 ## Table of contents
 
@@ -87,10 +87,12 @@
 - [MasaInterface](interfaces/MasaInterface.md)
 - [Network](interfaces/Network.md)
 - [PriceInformation](interfaces/PriceInformation.md)
+- [QuoteResult](interfaces/QuoteResult.md)
 - [SessionUser](interfaces/SessionUser.md)
 - [SoulNameDetails](interfaces/SoulNameDetails.md)
 - [SoulNameMetadataStoreResult](interfaces/SoulNameMetadataStoreResult.md)
 - [SoulNameResultBase](interfaces/SoulNameResultBase.md)
+- [SwapResult](interfaces/SwapResult.md)
 - [TransferEventObject](interfaces/TransferEventObject.md)
 - [UpdateCreditScoreResult](interfaces/UpdateCreditScoreResult.md)
 - [User](interfaces/User.md)
@@ -751,7 +753,7 @@ ___
 
 ### deposit
 
-▸ **deposit**(`masa`, `amount`): `Promise`\<`void`\>
+▸ **deposit**(`masa`, `amount`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -762,7 +764,7 @@ ___
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 ___
 
@@ -937,7 +939,7 @@ ___
 
 ### getSwapQuote
 
-▸ **getSwapQuote**(`masa`, `sendParameters`): `Promise`\<`undefined` \| \{ `gasLimit`: `BigNumber` ; `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber` ; `transactionCost`: `BigNumber`  }\>
+▸ **getSwapQuote**(`masa`, `sendParameters`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md) \| [`QuoteResult`](interfaces/QuoteResult.md)\>
 
 #### Parameters
 
@@ -948,7 +950,7 @@ ___
 
 #### Returns
 
-`Promise`\<`undefined` \| \{ `gasLimit`: `BigNumber` ; `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber` ; `transactionCost`: `BigNumber`  }\>
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md) \| [`QuoteResult`](interfaces/QuoteResult.md)\>
 
 ___
 
@@ -1820,7 +1822,7 @@ ___
 
 ### swap
 
-▸ **swap**(`masa`, `to`, `amount`, `slippage?`): `Promise`\<`void`\>
+▸ **swap**(`masa`, `to`, `amount`, `slippage?`): `Promise`\<[`SwapResult`](interfaces/SwapResult.md)\>
 
 #### Parameters
 
@@ -1833,7 +1835,7 @@ ___
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`\<[`SwapResult`](interfaces/SwapResult.md)\>
 
 ___
 
@@ -1982,7 +1984,7 @@ ___
 
 ### withdraw
 
-▸ **withdraw**(`masa`, `amount`): `Promise`\<`void`\>
+▸ **withdraw**(`masa`, `amount`): `Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -1993,4 +1995,4 @@ ___
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`\<[`BaseResult`](interfaces/BaseResult.md)\>

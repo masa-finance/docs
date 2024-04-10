@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.27.1](../README.md) / [Exports](../modules.md) / Addresses
+ - v3.29.0](../README.md) / [Exports](../modules.md) / Addresses
 
 # Interface: Addresses
 
@@ -8,7 +8,6 @@
 ### Properties
 
 - [DataPointsMultiAddress](Addresses.md#datapointsmultiaddress)
-- [DataStakingDynamicNativeAddress](Addresses.md#datastakingdynamicnativeaddress)
 - [SoulLinkerAddress](Addresses.md#soullinkeraddress)
 - [SoulNameAddress](Addresses.md#soulnameaddress)
 - [SoulStoreAddress](Addresses.md#soulstoreaddress)
@@ -22,12 +21,6 @@
 ### DataPointsMultiAddress
 
 • `Optional` **DataPointsMultiAddress**: `string`
-
-___
-
-### DataStakingDynamicNativeAddress
-
-• `Optional` **DataStakingDynamicNativeAddress**: `string`[]
 
 ___
 

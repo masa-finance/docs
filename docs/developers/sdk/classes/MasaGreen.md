@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.27.1](../README.md) / [Exports](../modules.md) / MasaGreen
+ - v3.29.0](../README.md) / [Exports](../modules.md) / MasaGreen
 
 # Class: MasaGreen
 
@@ -20,6 +20,10 @@
 - [contract](MasaGreen.md#contract)
 - [links](MasaGreen.md#links)
 - [masa](MasaGreen.md#masa)
+
+### Accessors
+
+- [isContractAvailable](MasaGreen.md#iscontractavailable)
 
 ### Methods
 
@@ -80,6 +84,20 @@ ___
 #### Inherited from
 
 MasaLinkable.masa
+
+## Accessors
+
+### isContractAvailable
+
+• `get` **isContractAvailable**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+MasaLinkable.isContractAvailable
 
 ## Methods
 

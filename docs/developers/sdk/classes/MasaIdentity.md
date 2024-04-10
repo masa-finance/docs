@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.27.1](../README.md) / [Exports](../modules.md) / MasaIdentity
+ - v3.29.0](../README.md) / [Exports](../modules.md) / MasaIdentity
 
 # Class: MasaIdentity
 
@@ -20,6 +20,10 @@
 - [contract](MasaIdentity.md#contract)
 - [links](MasaIdentity.md#links)
 - [masa](MasaIdentity.md#masa)
+
+### Accessors
+
+- [isContractAvailable](MasaIdentity.md#iscontractavailable)
 
 ### Methods
 
@@ -78,6 +82,20 @@ ___
 #### Inherited from
 
 MasaLinkable.masa
+
+## Accessors
+
+### isContractAvailable
+
+• `get` **isContractAvailable**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+MasaLinkable.isContractAvailable
 
 ## Methods
 

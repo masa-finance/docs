@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.27.1](../README.md) / [Exports](../modules.md) / MasaSoulName
+ - v3.29.0](../README.md) / [Exports](../modules.md) / MasaSoulName
 
 # Class: MasaSoulName
 
 ## Hierarchy
 
-- `MasaBase`
+- `MasaModuleBase`
 
   ↳ **`MasaSoulName`**
 
@@ -17,7 +17,12 @@
 
 ### Properties
 
+- [contract](MasaSoulName.md#contract)
 - [masa](MasaSoulName.md#masa)
+
+### Accessors
+
+- [isContractAvailable](MasaSoulName.md#iscontractavailable)
 
 ### Methods
 
@@ -52,11 +57,21 @@
 
 [`MasaSoulName`](MasaSoulName.md)
 
-#### Inherited from
+#### Overrides
 
-MasaBase.constructor
+MasaModuleBase.constructor
 
 ## Properties
+
+### contract
+
+• `Readonly` **contract**: `Contract` & [`ContractInfo`](../interfaces/ContractInfo.md)
+
+#### Inherited from
+
+MasaModuleBase.contract
+
+___
 
 ### masa
 
@@ -64,7 +79,21 @@ MasaBase.constructor
 
 #### Inherited from
 
-MasaBase.masa
+MasaModuleBase.masa
+
+## Accessors
+
+### isContractAvailable
+
+• `get` **isContractAvailable**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+MasaModuleBase.isContractAvailable
 
 ## Methods
 

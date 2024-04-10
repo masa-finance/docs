@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.27.1](../README.md) / [Exports](../modules.md) / BaseResult
+ - v3.29.0](../README.md) / [Exports](../modules.md) / BaseResult
 
 # Interface: BaseResult
 
@@ -12,6 +12,10 @@
   ↳ [`GenerateCreditScoreResult`](GenerateCreditScoreResult.md)
 
   ↳ [`LoginResult`](LoginResult.md)
+
+  ↳ [`QuoteResult`](QuoteResult.md)
+
+  ↳ [`SwapResult`](SwapResult.md)
 
 ## Table of contents
 

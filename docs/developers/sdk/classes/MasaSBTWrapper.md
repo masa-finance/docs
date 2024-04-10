@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.27.1](../README.md) / [Exports](../modules.md) / MasaSBTWrapper
+ - v3.29.0](../README.md) / [Exports](../modules.md) / MasaSBTWrapper
 
 # Class: MasaSBTWrapper\<Contract\>
 
@@ -32,6 +32,10 @@
 - [contract](MasaSBTWrapper.md#contract)
 - [links](MasaSBTWrapper.md#links)
 - [masa](MasaSBTWrapper.md#masa)
+
+### Accessors
+
+- [isContractAvailable](MasaSBTWrapper.md#iscontractavailable)
 
 ### Methods
 
@@ -96,6 +100,20 @@ ___
 #### Inherited from
 
 MasaLinkable.masa
+
+## Accessors
+
+### isContractAvailable
+
+• `get` **isContractAvailable**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+MasaLinkable.isContractAvailable
 
 ## Methods
 

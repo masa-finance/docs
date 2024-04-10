@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.27.1](../README.md) / [Exports](../modules.md) / MasaCreditScore
+ - v3.29.0](../README.md) / [Exports](../modules.md) / MasaCreditScore
 
 # Class: MasaCreditScore
 
@@ -20,6 +20,10 @@
 - [contract](MasaCreditScore.md#contract)
 - [links](MasaCreditScore.md#links)
 - [masa](MasaCreditScore.md#masa)
+
+### Accessors
+
+- [isContractAvailable](MasaCreditScore.md#iscontractavailable)
 
 ### Methods
 
@@ -77,6 +81,20 @@ ___
 #### Inherited from
 
 MasaLinkable.masa
+
+## Accessors
+
+### isContractAvailable
+
+• `get` **isContractAvailable**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+MasaLinkable.isContractAvailable
 
 ## Methods
 

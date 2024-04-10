@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.27.1](../README.md) / [Exports](../modules.md) / MasaToken
+ - v3.29.0](../README.md) / [Exports](../modules.md) / MasaToken
 
 # Class: MasaToken
 
@@ -61,7 +61,7 @@ MasaBase.masa
 
 ### deposit
 
-▸ **deposit**(`amount`): `Promise`\<`void`\>
+▸ **deposit**(`amount`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -71,7 +71,7 @@ MasaBase.masa
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 ### getSwapQuote
 
-▸ **getSwapQuote**(`sendParameters`): `Promise`\<`undefined` \| \{ `gasLimit`: `BigNumber` ; `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber` ; `transactionCost`: `BigNumber`  }\>
+▸ **getSwapQuote**(`sendParameters`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md) \| [`QuoteResult`](../interfaces/QuoteResult.md)\>
 
 #### Parameters
 
@@ -111,13 +111,13 @@ ___
 
 #### Returns
 
-`Promise`\<`undefined` \| \{ `gasLimit`: `BigNumber` ; `lzTokenFee`: `BigNumber` ; `nativeFee`: `BigNumber` ; `transactionCost`: `BigNumber`  }\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md) \| [`QuoteResult`](../interfaces/QuoteResult.md)\>
 
 ___
 
 ### swap
 
-▸ **swap**(`to`, `amount`, `slippage?`): `Promise`\<`void`\>
+▸ **swap**(`to`, `amount`, `slippage?`): `Promise`\<[`SwapResult`](../interfaces/SwapResult.md)\>
 
 #### Parameters
 
@@ -129,13 +129,13 @@ ___
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`\<[`SwapResult`](../interfaces/SwapResult.md)\>
 
 ___
 
 ### withdraw
 
-▸ **withdraw**(`amount`): `Promise`\<`void`\>
+▸ **withdraw**(`amount`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
@@ -145,4 +145,4 @@ ___
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>

@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.27.1](../README.md) / [Exports](../modules.md) / MasaMarketplace
+ - v3.29.0](../README.md) / [Exports](../modules.md) / MasaMarketplace
 
 # Class: MasaMarketplace
 
 ## Hierarchy
 
-- `MasaBase`
+- `MasaModuleBase`
 
   ↳ **`MasaMarketplace`**
 
@@ -17,7 +17,12 @@
 
 ### Properties
 
+- [contract](MasaMarketplace.md#contract)
 - [masa](MasaMarketplace.md#masa)
+
+### Accessors
+
+- [isContractAvailable](MasaMarketplace.md#iscontractavailable)
 
 ### Methods
 
@@ -40,11 +45,21 @@
 
 [`MasaMarketplace`](MasaMarketplace.md)
 
-#### Inherited from
+#### Overrides
 
-MasaBase.constructor
+MasaModuleBase.constructor
 
 ## Properties
+
+### contract
+
+• `Readonly` **contract**: `Contract` & [`ContractInfo`](../interfaces/ContractInfo.md)
+
+#### Inherited from
+
+MasaModuleBase.contract
+
+___
 
 ### masa
 
@@ -52,7 +67,21 @@ MasaBase.constructor
 
 #### Inherited from
 
-MasaBase.masa
+MasaModuleBase.masa
+
+## Accessors
+
+### isContractAvailable
+
+• `get` **isContractAvailable**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+MasaModuleBase.isContractAvailable
 
 ## Methods
 

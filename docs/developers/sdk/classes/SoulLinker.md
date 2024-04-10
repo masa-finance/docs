@@ -1,11 +1,11 @@
 [# Masa SDK
- - v3.27.1](../README.md) / [Exports](../modules.md) / SoulLinker
+ - v3.29.0](../README.md) / [Exports](../modules.md) / SoulLinker
 
 # Class: SoulLinker
 
 ## Hierarchy
 
-- `MasaModuleBase`
+- `MasaContractModuleBase`
 
   ↳ **`SoulLinker`**
 
@@ -55,7 +55,7 @@
 
 #### Inherited from
 
-MasaModuleBase.constructor
+MasaContractModuleBase.constructor
 
 ## Properties
 
@@ -65,7 +65,7 @@ MasaModuleBase.constructor
 
 #### Inherited from
 
-MasaModuleBase.instances
+MasaContractModuleBase.instances
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Inherited from
 
-MasaModuleBase.masa
+MasaContractModuleBase.masa
 
 ___
 
@@ -150,7 +150,7 @@ Checks or gives allowance on ERC20 tokens
 
 #### Inherited from
 
-MasaModuleBase.checkOrGiveAllowance
+MasaContractModuleBase.checkOrGiveAllowance
 
 ___
 
@@ -170,7 +170,7 @@ ___
 
 #### Inherited from
 
-MasaModuleBase.createOverrides
+MasaContractModuleBase.createOverrides
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 #### Inherited from
 
-MasaModuleBase.estimateGasWithSlippage
+MasaContractModuleBase.estimateGasWithSlippage
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 #### Inherited from
 
-MasaModuleBase.formatPrice
+MasaContractModuleBase.formatPrice
 
 ___
 
@@ -227,7 +227,7 @@ ___
 
 #### Inherited from
 
-MasaModuleBase.getNetworkFeeInformation
+MasaContractModuleBase.getNetworkFeeInformation
 
 ___
 
@@ -249,7 +249,7 @@ Gets the payment address for a given payment method
 
 #### Inherited from
 
-MasaModuleBase.getPaymentAddress
+MasaContractModuleBase.getPaymentAddress
 
 ___
 
@@ -320,7 +320,7 @@ verify a signature created during one of the SBT signing flows
 
 #### Inherited from
 
-MasaModuleBase.verify
+MasaContractModuleBase.verify
 
 ___
 
@@ -343,4 +343,4 @@ adds a percentage to the price as slippage
 
 #### Inherited from
 
-MasaModuleBase.addSlippage
+MasaContractModuleBase.addSlippage
