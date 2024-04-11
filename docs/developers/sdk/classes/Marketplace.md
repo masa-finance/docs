@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.30.0](../README.md) / [Exports](../modules.md) / Marketplace
+ - v3.30.2](../README.md) / [Exports](../modules.md) / Marketplace
 
 # Class: Marketplace
 
