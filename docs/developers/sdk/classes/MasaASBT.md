@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.27.1](../README.md) / [Exports](../modules.md) / MasaASBT
+ - v3.30.2](../README.md) / [Exports](../modules.md) / MasaASBT
 
 # Class: MasaASBT
 

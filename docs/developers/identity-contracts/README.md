@@ -3,7 +3,7 @@
 <!-- TOC -->
 * [Masa Identity Contracts](#masa-identity-contracts)
   * [Contract Deployments](#contract-deployments)
-    * [Goerli test network](#goerli-test-network)
+    * [Addresses of the deployed contracts](#addresses-of-the-deployed-contracts)
       * [Configuration](#configuration)
   * [Roles](#roles)
   * [Interface](#interface)
@@ -22,7 +22,7 @@ You can see the deployment address of the smart contracts in the [addresses.json
 
 #### Configuration
 
-- `Admin`: [`0xA38dd237a3A8D50537B74a4B0D4E7E8A5359386F`](https://goerli.etherscan.io/address/0xA38dd237a3A8D50537B74a4B0D4E7E8A5359386F)
+- `Admin`: [`0xA38dd237a3A8D50537B74a4B0D4E7E8A5359386F`](https://sepolia.etherscan.io/address/0xA38dd237a3A8D50537B74a4B0D4E7E8A5359386F)
 
 The `admin` is allowed to set configuration variables in the smart contracts.
 
@@ -54,7 +54,7 @@ The base url for the Metadata url that is being generated from the contract
 
 * Set `DEPLOYER_PRIVATE_KEY` to the deployers private key in `.env.{network}.secret`
 * Set `COINMARKETCAP_API_KEY` to the CoinMarketCap API key in `.env`, if needed
-* Set `INFURA_API_KEY` to the Infura API key in `.env`, if needed
+* Set `ANKR_API_KEY` to the Ankr API key in `.env`, if needed
 * Set `ETHERSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
 * Set `BSCSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
 * Set `POLYGONSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
