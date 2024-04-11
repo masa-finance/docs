@@ -742,7 +742,7 @@ function setPreCrime(address _preCrime) external nonpayable
 ### sharedDecimals
 
 ```solidity
-function sharedDecimals() external pure returns (uint8)
+function sharedDecimals() external view returns (uint8)
 ```
 
 
