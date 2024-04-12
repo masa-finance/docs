@@ -1,8 +1,8 @@
 [# Masa React
- - v3.12.2](README.md) / Exports
+ - v3.15.3](README.md) / Exports
 
 # # Masa React
- - v3.12.2
+ - v3.15.3
 
 ## Table of contents
 
@@ -19,7 +19,6 @@
 - [Modal](modules.md#modal)
 - [ModalError](modules.md#modalerror)
 - [ModalLoading](modules.md#modalloading)
-- [isIdentityContractAvailable](modules.md#isidentitycontractavailable)
 - [openAuthenticateModal](modules.md#openauthenticatemodal)
 - [openCreateSoulnameModal](modules.md#opencreatesoulnamemodal)
 - [useAuthenticate](modules.md#useauthenticate)
@@ -42,7 +41,6 @@
 - [useNetwork](modules.md#usenetwork)
 - [useNetworkSwitchListen](modules.md#usenetworkswitchlisten)
 - [useRegisterSoulname](modules.md#useregistersoulname)
-- [useSBT](modules.md#usesbt)
 - [useSession](modules.md#usesession)
 - [useSessionConnect](modules.md#usesessionconnect)
 - [useSessionListen](modules.md#usesessionlisten)
@@ -178,22 +176,6 @@ ___
 
 ___
 
-### isIdentityContractAvailable
-
-▸ **isIdentityContractAvailable**(`masa?`): `undefined` \| `boolean`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `masa?` | `Masa` |
-
-#### Returns
-
-`undefined` \| `boolean`
-
-___
-
 ### openAuthenticateModal
 
 ▸ **openAuthenticateModal**(`«destructured»`): `Promise`\<`unknown`\>
@@ -326,6 +308,7 @@ ___
 | :------ | :------ |
 | `creditScores` | `undefined` \| ``null`` \| `CreditScoreDetails`[] |
 | `getCreditScores` | (`options?`: `RefetchOptions`) => `Promise`\<`QueryObserverResult`\<``null`` \| `CreditScoreDetails`[], `Error`\>\> |
+| `isCreditScoreAvailableInNetwork` | `boolean` |
 | `isCreditScoresLoading` | `boolean` |
 | `isLoadingCreditScores` | `boolean` |
 | `reloadCreditScores` | (`options?`: `RefetchOptions`) => `Promise`\<`QueryObserverResult`\<``null`` \| `CreditScoreDetails`[], `Error`\>\> |
@@ -398,6 +381,7 @@ ___
 | :------ | :------ |
 | `getGreens` | (`options?`: `RefetchOptions`) => `Promise`\<`QueryObserverResult`\<``null`` \| `GreenDetails`[], `Error`\>\> |
 | `greens` | `undefined` \| ``null`` \| `GreenDetails`[] |
+| `isGreenAvailableInNetwork` | `boolean` |
 | `isGreensLoading` | `boolean` |
 | `isLoadingGreens` | `boolean` |
 | `reloadGreens` | (`options?`: `RefetchOptions`) => `Promise`\<`QueryObserverResult`\<``null`` \| `GreenDetails`[], `Error`\>\> |
@@ -439,7 +423,7 @@ ___
 | `hasIdentity` | `undefined` \| ``false`` \| `BigNumber` |
 | `identity` | `undefined` \| ``null`` \| \{ `address`: `string` ; `identityId?`: `BigNumber`  } |
 | `isFetchingIdentity` | `boolean` |
-| `isIdentityAvailableInNetwork` | `undefined` \| `boolean` |
+| `isIdentityAvailableInNetwork` | `boolean` |
 | `isIdentityLoading` | `boolean` |
 | `isLoadingIdentity` | `boolean` |
 | `reloadIdentity` | (`options?`: `RefetchOptions`) => `Promise`\<`QueryObserverResult`\<`undefined` \| ``null`` \| \{ `address`: `string` ; `identityId?`: `BigNumber`  }, `Error`\>\> |
@@ -608,30 +592,6 @@ ___
 
 ___
 
-### useSBT
-
-▸ **useSBT**(`«destructured»`): `Object`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `tokenAddress` | `string` |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `SBTs` | `undefined` \| ``null`` \| \{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] \| \{ `message`: `string` = err.message }[] |
-| `currentTokenAddress` | `string` |
-| `getSBTs` | (`options?`: `RefetchOptions`) => `Promise`\<`QueryObserverResult`\<``null`` \| \{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[] \| \{ `message`: `string` = err.message }[], `Error`\>\> |
-| `isLoadingSBTs` | `boolean` |
-
-___
-
 ### useSession
 
 ▸ **useSession**(): `Object`
@@ -713,11 +673,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `getSoulnames` | (`options?`: `RefetchOptions`) => `Promise`\<`QueryObserverResult`\<`undefined` \| `string`[], `Error`\>\> |
+| `getSoulnames` | (`options?`: `RefetchOptions`) => `Promise`\<`QueryObserverResult`\<``null`` \| `string`[], `Error`\>\> |
 | `isLoadingSoulnames` | `boolean` |
+| `isSoulnameAvailableInNetwork` | `boolean` |
 | `isSoulnamesLoading` | `boolean` |
-| `reloadSoulnames` | (`options?`: `RefetchOptions`) => `Promise`\<`QueryObserverResult`\<`undefined` \| `string`[], `Error`\>\> |
-| `soulnames` | `undefined` \| `string`[] |
+| `reloadSoulnames` | (`options?`: `RefetchOptions`) => `Promise`\<`QueryObserverResult`\<``null`` \| `string`[], `Error`\>\> |
+| `soulnames` | `undefined` \| ``null`` \| `string`[] |
 
 ___
 
