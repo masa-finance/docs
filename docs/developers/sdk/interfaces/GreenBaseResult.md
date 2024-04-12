@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.30.2](../README.md) / [Exports](../modules.md) / GreenBaseResult
+ - v3.30.3](../README.md) / [Exports](../modules.md) / GreenBaseResult
 
 # Interface: GreenBaseResult
 
