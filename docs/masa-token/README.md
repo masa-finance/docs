@@ -24,8 +24,8 @@
 
 ## Masa
 
-- Token Address: [0x]
-- TimeLock Address: [0x]
+- Token Address: [0x944824290CC12F31ae18Ef51216A223Ba4063092](https://subnets.avax.network/masa/address/0x944824290CC12F31ae18Ef51216A223Ba4063092)
+- TimeLock Address: [0x320F5AE538A9A4Ba8D01DB660304f0fC49100DBF](https://subnets.avax.network/masa/address/0x320F5AE538A9A4Ba8D01DB660304f0fC49100DBF)
 - Admin Address: [0x06168A0f16DFbe0cea6fa3E2807026617C96a2b8](https://subnets.avax.network/masa/address/0x06168A0f16DFbe0cea6fa3E2807026617C96a2b8)
 
 ### Masa Testnet
