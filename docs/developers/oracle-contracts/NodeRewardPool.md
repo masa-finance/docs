@@ -147,7 +147,7 @@ function lowActivityMultiplier() external view returns (uint256)
 ### masaToken
 
 ```solidity
-function masaToken() external view returns (contract MasaToken)
+function masaToken() external view returns (address)
 ```
 
 
@@ -159,7 +159,7 @@ function masaToken() external view returns (contract MasaToken)
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | contract MasaToken | undefined |
+| _0 | address | undefined |
 
 ### mediumActivityMultiplier
 
