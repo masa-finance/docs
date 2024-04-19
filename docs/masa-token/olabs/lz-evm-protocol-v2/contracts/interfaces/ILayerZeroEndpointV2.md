@@ -738,7 +738,7 @@ function setConfig(address _oapp, address _lib, SetConfigParam[] _params) extern
 ### setDefaultReceiveLibrary
 
 ```solidity
-function setDefaultReceiveLibrary(uint32 _eid, address _newLib, uint256 _timeout) external nonpayable
+function setDefaultReceiveLibrary(uint32 _eid, address _newLib, uint256 _gracePeriod) external nonpayable
 ```
 
 
@@ -751,7 +751,7 @@ function setDefaultReceiveLibrary(uint32 _eid, address _newLib, uint256 _timeout
 |---|---|---|
 | _eid | uint32 | undefined |
 | _newLib | address | undefined |
-| _timeout | uint256 | undefined |
+| _gracePeriod | uint256 | undefined |
 
 ### setDefaultReceiveLibraryTimeout
 
@@ -842,7 +842,7 @@ function setReceiveLibrary(address _oapp, uint32 _eid, address _newLib, uint256 
 ### setReceiveLibraryTimeout
 
 ```solidity
-function setReceiveLibraryTimeout(address _oapp, uint32 _eid, address _lib, uint256 _gracePeriod) external nonpayable
+function setReceiveLibraryTimeout(address _oapp, uint32 _eid, address _lib, uint256 _expiry) external nonpayable
 ```
 
 
@@ -856,7 +856,7 @@ function setReceiveLibraryTimeout(address _oapp, uint32 _eid, address _lib, uint
 | _oapp | address | undefined |
 | _eid | uint32 | undefined |
 | _lib | address | undefined |
-| _gracePeriod | uint256 | undefined |
+| _expiry | uint256 | undefined |
 
 ### setSendLibrary
 
