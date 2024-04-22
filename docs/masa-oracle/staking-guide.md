@@ -20,10 +20,13 @@ Staking on the Masa Oracle Node involves specifying the amount of tokens you wis
 1. **Open a Terminal:** Navigate to the directory where the Masa Oracle Node is located.
 
 2. **Execute the Staking Command:** Use the following command to initiate staking:
+
    ```bash
    ./masa-oracle-node --stake <amount>
    ```
+
    Replace `<amount>` with the number of tokens you want to stake. For example, to stake 1000 tokens:
+  
    ```bash
    ./masa-oracle-node --stake 1000
    ```

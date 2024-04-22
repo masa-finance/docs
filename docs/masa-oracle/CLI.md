@@ -1,9 +1,8 @@
-# Oracle CLI Documentation
+# Masa Node CLI Documentation
 
 The Masa Node CLI is a command-line interface tool designed to interact with the Masa Oracle network. It provides users with the ability to execute various operations such as viewing network status, managing staking, and interacting with the Masa Network.
 
 ![CLI Tool Screenshot](images/cli.png)
-
 
 ## Getting Started
 
@@ -11,14 +10,14 @@ Before using the Masa Node CLI, ensure you have the necessary prerequisites inst
 
 ### Installation
 
-1. Clone the Masa Oracle repository:
+1 . Clone the Masa Oracle repository:
 
 ```shell
 git clone https://github.com/masa-finance/masa-oracle.git
 cd masa-oracle
 ```
 
-2. Build the CLI tool:
+2 . Build the CLI tool:
 
 ```shell
 go build -v -o ./bin/masa-node-cli ./cmd/masa-node-cli
