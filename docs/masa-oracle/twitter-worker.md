@@ -24,7 +24,7 @@ As a worker in the Masa Oracle Node network, your primary function is to process
 To become a worker focused on Twitter data requests, you need to:
 
 - Have your Masa Oracle Node staked as outlined in the [Staking Guide for Masa Oracle Node](staking-guide.md).
-- Add your Twitter credentials to your node's `.env` file. This is crucial for authenticating with Twitter's API and fetching tweet data.
+- Add your Twitter login credentials to your node's `.env` file. This is crucial for authenticating with Twitter and fetching tweet data.
 - Ensure your Masa Oracle Node is up and running, with network accessibility for receiving and processing requests.
 
 ## Setting Up Your Node for Twitter Requests
@@ -32,28 +32,46 @@ To become a worker focused on Twitter data requests, you need to:
 ### Adding Twitter Credentials
 
 1. Locate your `.env` file in your Masa Oracle Node's directory.
-2. Add the following entries, replacing `YOUR_TWITTER_API_KEY` and `YOUR_TWITTER_API_SECRET` with your actual Twitter API credentials. If you have 2FA enabled set your 2FA code in `YOUR_TWITTER_2FA_CODE`. When you start your node a session is saved locally with cookies to prevent repeated logins:
-```bash
+2. Add the following entries, replacing `your_twitter_username` and `your_twitter_password` with your actual Twitter API credentials. If you have 2FA enabled set your 2FA code in `your_2fa_code`. You must set `TWITTER_SCRAPER=true` to start your node as a Twitter Worker. When you start your node a session is saved locally with cookies to prevent repeated logins:
+
+```shell
 #env
-TWITTER_API_KEY=YOUR_TWITTER_API_KEY
-TWITTER_API_SECRET=YOUR_TWITTER_API_SECRET
-TWITTER_2FA_CODE="YOUR_TWITTER_2FA_CODE"
+TWITTER_USER='your_twitter_username'
+TWITTER_PASS="your_twitter_password"
+TWITTER_2FA_CODE="your_2fa_code"
+TWITTER_SCRAPER=true
 ```
-3. Save the `.env` file and restart your node to apply the changes.
+
+3.Save the `.env` file and restart your node to apply the changes.
 
 ### Verifying Node Configuration
 
-Ensure your node is correctly configured to handle Twitter data requests by:
+Ensure your node is correctly configured to handle Twitter data requests by checkint the initialization message:
 
-- Checking the node's log for successful initialization messages.
-- Verifying that your Twitter API credentials are correctly loaded and authenticated.
+```bash
+#######################################
+#     __  __    _    ____    _        #
+#    |  \/  |  / \  / ___|  / \       #
+#    | |\/| | / _ \ \___ \ / _ \      #
+#    | |  | |/ ___ \ ___) / ___ \     #
+#    |_|  |_/_/   \_\____/_/   \_\    #
+#                                     #
+#######################################
+Multiaddress:           /ip4/172.20.7.45/udp/4001/quic-v1/p2p/16Uiu2HAm28dTN2WVWD2y2bjzwPdym59XASDfQsSktCtejtNR9Vox
+IP Address:             /ip4/127.0.0.1/udp/4001/quic-v1
+Public Key:             0x065728510468A2ef48e6E8a860ff42D68Ca612ee
+Is Staked:              true
+Is Writer:              false
+Is TwitterScraper:      true
+Is WebScraper:          false
+```
 
 ## Operational Guidelines
 
 As a worker, maintaining optimal performance and reliability is key. Here are some guidelines:
 
 - **Monitor Your Node**: Regularly check your node's health and log files to identify and resolve any issues promptly.
-- **Update Regularly**: Keep your node and its dependencies up to date to ensure compatibility with the latest Twitter API changes and network protocols.
+- **Update Regularly**: Keep your node and its dependencies up to date to ensure compatibility with the latest Twitter changes and network protocols.
 - **Secure Your Credentials**: Protect your Twitter API credentials and node's access keys to prevent unauthorized access.
 
 ## Conclusion
