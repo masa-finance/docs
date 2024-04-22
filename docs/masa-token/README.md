@@ -11,6 +11,10 @@
     - [Sepolia](#sepolia)
   - [Binance Smart Chain](#binance-smart-chain)
     - [Binance Smart Chain Testnet](#binance-smart-chain-testnet)
+  - [Base](#base)
+    - [Base Sepolia](#base-sepolia)
+  - [Polygon](#polygon)
+    - [PolygonAmoy](#polygon-amoy)
 
 <!-- TOC -->
 
@@ -57,3 +61,27 @@
 - Token Address: [0xB99CA5896D3cb306B6066e22B3CB82eA10361279](https://testnet.bscscan.com/address/0xB99CA5896D3cb306B6066e22B3CB82eA10361279)
 - TimeLock Address: none
 - Admin Address: [0xd207773F00222aA85A44770ed18F9D09861F6f0b](https://testnet.bscscan.com/address/0xd207773F00222aA85A44770ed18F9D09861F6f0b)
+
+## Base
+
+- Token Address: []
+- TimeLock Address: []
+- Admin Address: []
+
+### Base Sepolia
+
+- Token Address: [0x6fECCe51a6C4881e68F6460e0d73686e736c44D7](https://sepolia.basescan.org/address/0x6fECCe51a6C4881e68F6460e0d73686e736c44D7)
+- TimeLock Address: [0xd87Dd24903f06b9A32eE0f996dD39039FaA94fD8](https://sepolia.basescan.org/address/0xd87Dd24903f06b9A32eE0f996dD39039FaA94fD8)
+- Admin Address: [0x503aac45399e32B99BD6Ffa83F723D367f15e222](https://sepolia.basescan.org/address/0x503aac45399e32B99BD6Ffa83F723D367f15e222)
+
+## Polygon
+
+- Token Address: []
+- TimeLock Address: []
+- Admin Address: []
+
+### Polygon Amoy
+
+- Token Address: [0x784F4d8fB4bf51431e47b014DdA159e31ACC714e](https://amoy.polygonscan.com/address/0x784F4d8fB4bf51431e47b014DdA159e31ACC714e)
+- TimeLock Address: [0x78A660183257C4699a57a2D85a7Cf49b4DA75A6E](https://amoy.polygonscan.com/address/0x78A660183257C4699a57a2D85a7Cf49b4DA75A6E)
+- Admin Address: [0x46c9cdA3F83C5c13C767A07b6E80aEd302E40B28](https://amoy.polygonscan.com/address/0x46c9cdA3F83C5c13C767A07b6E80aEd302E40B28)
