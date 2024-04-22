@@ -3,8 +3,11 @@
 <!-- TOC -->
 
 - [Masa Token Governance](#masa-token-governance)
-  - [General Token Governance Overview](#general-token-governance-overview)
+  - [Masa Token Governance](#masa-token-governance-1)
   - [Masa Token Mesh](#masa-token-mesh)
+    - [Mainnets](#mainnets)
+    - [Testnets](#testnets)
+- [Networks](#networks)
   - [Masa](#masa)
     - [Masa Testnet](#masa-testnet)
   - [Ethereum](#ethereum)
@@ -14,17 +17,25 @@
   - [Base](#base)
     - [Base Sepolia](#base-sepolia)
   - [Polygon](#polygon)
-    - [PolygonAmoy](#polygon-amoy)
+    - [Polygon Amoy](#polygon-amoy)
 
 <!-- TOC -->
 
-### General Token Governance Overview
+### Masa Token Governance
 
 ![Masa Token Governance](./assets/masa_token_governance.png)
 
 ### Masa Token Mesh
 
+#### Mainnets
+
 ![Masa Token Mesh](./assets/masa_token_mesh.png)
+
+#### Testnets
+
+![Masa Token Mesh Testnets](./assets/masa_token_mesh_testnets.png)
+
+# Networks
 
 ## Masa
 
