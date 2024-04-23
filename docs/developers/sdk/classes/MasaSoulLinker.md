@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.32.0](../README.md) / [Exports](../modules.md) / MasaSoulLinker
+ - v3.33.0](../README.md) / [Exports](../modules.md) / MasaSoulLinker
 
 # Class: MasaSoulLinker
 

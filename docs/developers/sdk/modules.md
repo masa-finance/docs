@@ -1,8 +1,8 @@
 [# Masa SDK
- - v3.32.0](README.md) / Exports
+ - v3.33.0](README.md) / Exports
 
 # # Masa SDK
- - v3.32.0
+ - v3.33.0
 
 ## Table of contents
 
@@ -129,8 +129,10 @@
 - [Templates](modules.md#templates)
 - [addresses](modules.md#addresses)
 - [alfajores](modules.md#alfajores)
+- [amoy](modules.md#amoy)
 - [base](modules.md#base)
 - [basegoerli](modules.md#basegoerli)
+- [basesepolia](modules.md#basesepolia)
 - [bsc](modules.md#bsc)
 - [bsctest](modules.md#bsctest)
 - [celo](modules.md#celo)
@@ -414,6 +416,12 @@ ___
 
 ___
 
+### amoy
+
+• `Const` **amoy**: [`Addresses`](interfaces/Addresses.md)
+
+___
+
 ### base
 
 • `Const` **base**: [`Addresses`](interfaces/Addresses.md)
@@ -423,6 +431,12 @@ ___
 ### basegoerli
 
 • `Const` **basegoerli**: [`Addresses`](interfaces/Addresses.md)
+
+___
+
+### basesepolia
+
+• `Const` **basesepolia**: [`Addresses`](interfaces/Addresses.md)
 
 ___
 
