@@ -20,6 +20,13 @@ const (
   GPT4                 ModelType = "gpt-4"
   GPT4TurboPreview     ModelType = "gpt-4-turbo-preview"
   GPT35Turbo           ModelType = "gpt-3.5-turbo"
+  LLama2               ModelType = "llama2"
+  LLama3               ModelType = "llama3"
+  Mistral              ModelType = "mistral"
+  Gemma                ModelType = "gemma"
+  Mixtral              ModelType = "mixtral"
+  OpenChat             ModelType = "openchat"
+  NeuralChat           ModelType = "neural-chat"
 )
 ```
 

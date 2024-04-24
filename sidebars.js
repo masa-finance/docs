@@ -39,13 +39,12 @@ const sidebars = {
       },
       items: [
         "masa-oracle/README",
-        "masa-oracle/MASAPROTOCOL",
         "masa-oracle/CLI",
         "masa-oracle/LLM",
-        "masa-oracle/issues",
         "masa-oracle/staking-guide",
         "masa-oracle/twitter-data",
         "masa-oracle/twitter-worker",
+        "masa-oracle/web-worker",
       ],
     },
     {

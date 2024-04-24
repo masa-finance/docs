@@ -16,7 +16,7 @@
 ### Addresses of the deployed contracts
 
 * Sepolia test network:
-  * MasaToken: [`0x4511815866790D0149712FD7c04f6921176E5a04`](https://sepolia.etherscan.io/address/0x4511815866790D0149712FD7c04f6921176E5a04)
+  * MasaToken: [`0xFd36990172dFB44ef0cEa51a9B1159687CfBb4E2`](https://sepolia.etherscan.io/address/0xFd36990172dFB44ef0cEa51a9B1159687CfBb4E2)
   * StakedMasaToken: [`0xb4477Cc67CAFa04e751E3aE0d211e321fcA79046`](https://sepolia.etherscan.io/address/0xb4477Cc67CAFa04e751E3aE0d211e321fcA79046)
   * OracleNodeStaking: [`0xF339e2D564CE47C2FA29b073D6BD7B439e333589`](https://sepolia.etherscan.io/address/0xF339e2D564CE47C2FA29b073D6BD7B439e333589)
   * NodeDataMetrics: [`0x13B9bf9c3914e00e740AAb588Bf4845ED07953f5`](https://sepolia.etherscan.io/address/0x13B9bf9c3914e00e740AAb588Bf4845ED07953f5)

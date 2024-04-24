@@ -1,8 +1,8 @@
 [# Masa Express
- - v2.0.0](README.md) / Exports
+ - v2.0.1](README.md) / Exports
 
 # # Masa Express
- - v2.0.0
+ - v2.0.1
 
 ## Table of contents
 
@@ -15,7 +15,6 @@
 
 - [MasaSessionMiddleware](modules.md#masasessionmiddleware)
 - [MasaSessionRouter](modules.md#masasessionrouter)
-- [sessionCheckHandler](modules.md#sessioncheckhandler)
 
 ## Functions
 
@@ -53,33 +52,4 @@ ___
 | :------ | :------ |
 | `middleware` | `RequestHandler`\<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`\<`string`, `any`\>\> |
 | `router` | `Router` |
-
-___
-
-### sessionCheckHandler
-
-▸ **sessionCheckHandler**(`verbose?`): (`request`: `RequestSession`, `response`: `Response`\<`ISession` \| `BaseResult`, `Record`\<`string`, `any`\>\>, `next`: `NextFunction`) => `undefined` \| `Response`\<`ISession` \| `BaseResult`, `Record`\<`string`, `any`\>\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `verbose?` | `boolean` |
-
-#### Returns
-
-`fn`
-
-▸ (`request`, `response`, `next`): `undefined` \| `Response`\<`ISession` \| `BaseResult`, `Record`\<`string`, `any`\>\>
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `request` | `RequestSession` |
-| `response` | `Response`\<`ISession` \| `BaseResult`, `Record`\<`string`, `any`\>\> |
-| `next` | `NextFunction` |
-
-##### Returns
-
-`undefined` \| `Response`\<`ISession` \| `BaseResult`, `Record`\<`string`, `any`\>\>
+| `sessionChecker` | `RequestHandler`\<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`\<`string`, `any`\>\> |

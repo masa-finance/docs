@@ -71,19 +71,23 @@
       - [`masa oracle stake <amount>`](#masa-oracle-stake-amount)
       - [`masa oracle withdraw <amount>`](#masa-oracle-withdraw-amount)
     - [`masa marketplace`](#masa-marketplace)
-      - [`masa marketplace stake <amount>`](#masa-marketplace-stake-amount)
-        - [`masa marketplace stake show <token-id>`](#masa-marketplace-stake-show-token-id)
+      - [`masa marketplace points`](#masa-marketplace-points)
+        - [`masa marketplace points show`](#masa-marketplace-points-show)
+        - [`masa marketplace points stake <address>`](#masa-marketplace-points-stake-address)
     - [`masa token`](#masa-token)
       - [`masa token swap <to> <amount>`](#masa-token-swap-to-amount)
       - [`masa token deposit <amount>`](#masa-token-deposit-amount)
       - [`masa token withdraw <amount>`](#masa-token-withdraw-amount)
+      - [`masa token mesh`](#masa-token-mesh)
+      - [`masa token timelock`](#masa-token-timelock)
     - [`masa settings`](#masa-settings)
       - [`masa settings set <key> <value>`](#masa-settings-set-key-value)
       - [`masa settings preset <environment>`](#masa-settings-preset-environment)
       - [`masa settings preset-network <network-name>`](#masa-settings-preset-network-network-name)
       - [`masa settings show`](#masa-settings-show)
   - [Configuration](#configuration)
-  <!-- TOC -->
+
+<!-- TOC -->
 
 ## Overview
 
@@ -170,8 +174,9 @@ Commands:
   oracle stake <amount>
   oracle withdraw <amount>
   marketplace                                                                                                        Marketplace commands
-  marketplace stake <amount>
-  marketplace stake show [options] <token-id>
+  marketplace points
+  marketplace points show [options]
+  marketplace points stake <address>
   token                                                                                                              Token commands
   token swap <to> <amount>
   token deposit <amount>
@@ -616,16 +621,18 @@ Oracle commands
 
 Marketplace commands
 
-#### `masa marketplace stake <amount>`
+#### `masa marketplace points`
 
-- `<amount> Amount to stake`
+##### `masa marketplace points show`
 
-##### `masa marketplace stake show <token-id>`
+Options:
 
-- `<token-id> Token ID`
-  Options:
 - `-a, --address <address>`
   Address override
+
+##### `masa marketplace points stake <address>`
+
+- `<address> Pool address`
 
 ### `masa token`
 
@@ -635,6 +642,9 @@ Token commands
 
 - `<to> To network`
 - `<amount> Amount to swap`
+  Options:
+- `-s, --slippage <slippage>`
+  Slippage
 
 #### `masa token deposit <amount>`
 
@@ -643,6 +653,20 @@ Token commands
 #### `masa token withdraw <amount>`
 
 - `<amount> Amount to withdraw`
+
+#### `masa token mesh`
+
+Options:
+
+- `-t, --testnets`
+  Show testnets
+
+#### `masa token timelock`
+
+Options:
+
+- `-t, --testnets`
+  Show testnets
 
 ### `masa settings`
 
