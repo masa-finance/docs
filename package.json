@@ -18,7 +18,7 @@
   "dependencies": {
     "@docusaurus/core": "~2.4.3",
     "@docusaurus/preset-classic": "~2.4.3",
-    "@masa-finance/masa-react": "~2.7.5",
+    "@masa-finance/masa-react": "^2.7.5",
     "@mdx-js/react": "~1.6.22",
     "autoprefixer": "^10.4.19",
     "clsx": "^2.1.0",
