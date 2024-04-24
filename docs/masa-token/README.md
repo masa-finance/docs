@@ -75,9 +75,9 @@
 
 ## Base
 
-- Token Address: []
-- TimeLock Address: []
-- Admin Address: []
+- Token Address: [0x944824290CC12F31ae18Ef51216A223Ba4063092](https://basescan.org/address/0x944824290CC12F31ae18Ef51216A223Ba4063092)
+- TimeLock Address: [0x320F5AE538A9A4Ba8D01DB660304f0fC49100DBF](https://basescan.org/address/0x320F5AE538A9A4Ba8D01DB660304f0fC49100DBF)
+- Admin Address: [0x503aac45399e32B99BD6Ffa83F723D367f15e222](https://basescan.org/address/0x503aac45399e32B99BD6Ffa83F723D367f15e222)
 
 ### Base Sepolia
 
