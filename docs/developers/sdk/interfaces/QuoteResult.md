@@ -1,5 +1,5 @@
 [# Masa SDK
- - v3.33.0](../README.md) / [Exports](../modules.md) / QuoteResult
+ - v3.34.1](../README.md) / [Exports](../modules.md) / QuoteResult
 
 # Interface: QuoteResult
 
@@ -24,7 +24,7 @@
 
 ### gasLimit
 
-• **gasLimit**: `BigNumber`
+• `Optional` **gasLimit**: `BigNumber`
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 ### transactionCost
 
-• **transactionCost**: `BigNumber`
+• `Optional` **transactionCost**: `BigNumber`
