@@ -64,21 +64,20 @@ void firePageViewEvent(page, user_address);
 ```
 
 #### Connect Wallet Event
+
 To send a connect wallet event:
 
 ```typescript
 import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
 
-const { fireConnectWalletEvent } =
-  useMasaAnalyticsReact({
-    clientApp: 'My App',
-    clientName: 'My Company Name',
-  });
-
+const { fireConnectWalletEvent } = useMasaAnalyticsReact({
+  clientApp: "My App",
+  clientName: "My Company Name",
+});
 
 // Track a wallet connect event
 const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-const connector = "metamask"
+const connector = "metamask";
 
 void fireConnectWalletEvent(user_address, connector);
 ```
@@ -127,7 +126,34 @@ void fireMintEvent(
   token_type
 );
 ```
+
 <br/>
+
+#### Bridge Event
+
+```typescript
+import { useMasaAnalyticsReact } from "@masa-finance/analytics-react";
+
+const { fireBridgeEvent } = useMasaAnalyticsReact({
+  clientApp: "My App",
+  clientName: "My Company Name",
+});
+
+const network = "goerli";
+const contract_address = "0xExampleContractAddress";
+const asset_amount = "100"; // Example amount
+const asset_ticker = "ETH"; // Example asset
+const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
+
+void fireBridgeEvent(
+  "bridge",
+  network,
+  contract_address,
+  asset_amount,
+  asset_ticket,
+  user_address
+);
+```
 
 :::warning
 Ensure you handle sensitive data, like user addresses, with care. Always prioritize user privacy and adhere to best practices for data handling.
