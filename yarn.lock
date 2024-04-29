@@ -3356,7 +3356,7 @@
   dependencies:
     ethers "~5.7.2"
 
-"@masa-finance/masa-react@~2.7.5":
+"@masa-finance/masa-react@^2.7.5":
   version "2.7.5"
   resolved "https://registry.yarnpkg.com/@masa-finance/masa-react/-/masa-react-2.7.5.tgz#12bf3cab83806be9d77578bface48c0fb5780f4e"
   integrity sha512-SCboYTnEI+cXFYAlkGASwFrB/4d3SSGtq/TOzImTFGf1F/0xOsBGGWXJAgh+EAiwiFCH8HbUgbPaCXpDA9MoNw==

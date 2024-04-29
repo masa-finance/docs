@@ -222,7 +222,7 @@ window.masaAnalytics.trackCustomEvent({
 
 ### Step 4: Tracking `connectWallet` Event
 
-To track the `connectWallet` event, you'll need to extract the Ethereum address from the connected wallet. This works with the window.ethereum object out of the box. If you want to call this with a button click, you would need to make sure your button has the id of `connectWalletBtn` or else you can call this on page load. Two examples are below.
+To track the `connectWallet` event, you'll need to extract the Ethereum address from the connected wallet. This works with the window.ethereum object out of the box. If you want to call this with a button click, you would need to make sure your button has the id of `connectWalletBtn` or else you can call this on page load. The first two examples are demonstrations of how it can be done with Vanilla JS. The third example is a way it can be done with Vue.
 
 ```html
 <script>
@@ -264,5 +264,221 @@ To track the `connectWallet` event, you'll need to extract the Ethereum address 
 
     handleConnectWallet();
   };
+</script>
+```
+
+```javascript
+<script>
+export default {
+  name: "ConnectWalletComponent",
+  mounted() {
+    // Check if masaAnalytics is available
+    if (window.masaAnalytics) {
+      console.log("masaAnalytics is available");
+      // Optionally log the masaAnalytics object and user address
+      console.log(window.masaAnalytics);
+      console.log(window.masaAnalytics.userAddress);
+    } else {
+      console.log("masaAnalytics is not defined");
+    }
+  },
+  methods: {
+    async handleConnectWallet() {
+      console.log("handleConnectWallet");
+      // Implement your method to connect the wallet here
+      const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
+      const wallet_type = "metamask";
+      // Track the connectWallet event
+      await window.masaAnalytics.fireConnectWalletEvent({
+        user_address,
+        wallet_type,
+        additionalEventData: {
+          appName: "YourAppName",
+          property1: "value1",
+          property2: "value2",
+        },
+      });
+    },
+  },
+};
+</script>
+```
+
+### Step 5: Tracking `bridge` Event
+
+To track bridge events, such as when users transfer assets between networks, you can utilize the masaAnalytics object. This is particularly useful for applications that involve cross-chain operations or use bridge services for asset transfers. Below are examples of how to implement this tracking in both Vanilla JavaScript and Vue.js.
+
+```html
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("bridgeButton").addEventListener("click", async () => {
+      console.log("Bridge button clicked");
+
+      // Example data - replace with actual data from your application
+      const eventData = {
+        network: "mainnet",
+        contract_address: "0xExampleContractAddress",
+        asset_amount: "100", // Example amount
+        asset_ticker: "ETH", // Example asset
+        user_address: "0xUserWalletAddress"
+      };
+
+      // Track the bridge event
+      if (window.masaAnalytics) {
+        window.masaAnalytics.fireEvent("bridge", eventData);
+        console.log("Bridge event tracked:", eventData);
+      } else {
+        console.log("masaAnalytics is not defined");
+      }
+    });
+  });
+</script>
+```
+
+```javascript
+<script>
+export default {
+  name: "BridgeComponent",
+  methods: {
+    async handleBridgeEvent() {
+      console.log("Handling bridge event");
+
+      // Example data - replace with actual data from your application
+      const eventData = {
+        network: "mainnet",
+        contract_address: "0xExampleContractAddress",
+        asset_amount: "100", // Example amount
+        asset_ticker: "ETH", // Example asset
+        user_address: "0xUserWalletAddress"
+      };
+
+      // Track the bridge event
+      if (window.masaAnalytics) {
+        window.masaAnalytics.fireEvent("bridge", eventData);
+        console.log("Bridge event tracked:", eventData);
+      } else {
+        console.log("masaAnalytics is not defined");
+      }
+    }
+  }
+};
+</script>
+```
+### Step 6: Tracking `mint` Event
+
+To track a mint event in both Vanilla JavaScript and Vue.js, you'll need to adapt the approach based on the environment and how the masaAnalytics object is accessed and utilized. Below are examples for both scenarios, assuming you have the Masa Analytics SDK properly integrated into your project.
+
+```html
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("mintButton").addEventListener("click", async () => {
+      console.log("Mint button clicked");
+
+      // Example data - replace with actual data from your application
+      const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
+      const network = "goerli";
+      const contract_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
+      const token_name = "My SBT Project";
+      const ticker = "MSP";
+      const token_type = "SBT";
+
+      // Track the mint event
+      if (window.masaAnalytics) {
+        window.masaAnalytics.fireEvent("mint", {
+          user_address,
+          network,
+          contract_address,
+          token_name,
+          ticker,
+          token_type
+        });
+        console.log("Mint event tracked");
+      } else {
+        console.log("masaAnalytics is not defined");
+      }
+    });
+  });
+</script>
+```
+
+```javascript
+<script>
+export default {
+  name: "MintTokenComponent",
+  methods: {
+    fireMintEvent() {
+      const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
+      const network = "goerli";
+      const contract_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
+      const token_name = "My SBT Project";
+      const ticker = "MSP";
+      const token_type = "SBT";
+
+      // Assuming masaAnalytics is available globally
+      if (window.masaAnalytics) {
+        window.masaAnalytics.fireEvent("mint", {
+          user_address,
+          network,
+          contract_address,
+          token_name,
+          ticker,
+          token_type
+        });
+        console.log("Mint event fired");
+      } else {
+        console.log("masaAnalytics is not defined");
+      }
+    }
+  }
+};
+</script>
+```
+
+### Step 6: Tracking `login` event
+
+To track login events, such as when a user is logged into  your platform, you can use the masaAnalytics object directly in your JavaScript code. This example demonstrates how to set up an event listener for a login action, typically triggered by a user interaction like clicking a "Login" button.
+
+```html
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("loginButton").addEventListener("click", async () => {
+      console.log("Login button clicked");
+
+      // Example user address - replace with the actual user address obtained upon login
+      const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
+
+      // Track the login event
+      if (window.masaAnalytics) {
+        window.masaAnalytics.fireEvent("login", { user_address });
+        console.log("Login event tracked for user:", user_address);
+      } else {
+        console.log("masaAnalytics is not defined");
+      }
+    });
+  });
+</script>
+```
+
+```javascript
+<template>
+  <button @click="fireLoginEvent">Log In</button>
+</template>
+
+<script>
+export default {
+  name: "LoginComponent",
+  methods: {
+    fireLoginEvent() {
+      const user_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
+
+      if (window.masaAnalytics) {
+        window.masaAnalytics.fireEvent("login", { user_address });
+        console.log("Login event fired for user:", user_address);
+      } else {
+        console.log("masaAnalytics is not defined");
+      }
+    }
+  }
+};
 </script>
 ```
