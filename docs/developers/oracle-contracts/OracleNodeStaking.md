@@ -82,23 +82,6 @@ Function to stake tokens
 |---|---|---|
 | amount | uint256 | The amount of tokens to be staked |
 
-### stakedMasaToken
-
-```solidity
-function stakedMasaToken() external view returns (contract StakedMasaToken)
-```
-
-
-
-
-
-
-#### Returns
-
-| Name | Type | Description |
-|---|---|---|
-| _0 | contract StakedMasaToken | undefined |
-
 ### stakes
 
 ```solidity
