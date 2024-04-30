@@ -69,10 +69,11 @@
       - [`masa dynamic-sssbt mint <contract-address>`](#masa-dynamic-sssbt-mint-contract-address)
     - [`masa oracle`](#masa-oracle)
       - [`masa oracle stake <amount>`](#masa-oracle-stake-amount)
-      - [`masa oracle withdraw <amount>`](#masa-oracle-withdraw-amount)
+      - [`masa oracle unstake <amount>`](#masa-oracle-unstake-amount)
     - [`masa marketplace`](#masa-marketplace)
       - [`masa marketplace points`](#masa-marketplace-points)
         - [`masa marketplace points show`](#masa-marketplace-points-show)
+        - [`masa marketplace points info`](#masa-marketplace-points-info)
         - [`masa marketplace points stake <address>`](#masa-marketplace-points-stake-address)
     - [`masa token`](#masa-token)
       - [`masa token swap <to> <amount>`](#masa-token-swap-to-amount)
@@ -80,6 +81,9 @@
       - [`masa token withdraw <amount>`](#masa-token-withdraw-amount)
       - [`masa token mesh`](#masa-token-mesh)
       - [`masa token timelock`](#masa-token-timelock)
+      - [`masa token stake <amount> <duration>`](#masa-token-stake-amount-duration)
+      - [`masa token unstake <index>`](#masa-token-unstake-index)
+      - [`masa token show`](#masa-token-show)
     - [`masa settings`](#masa-settings)
       - [`masa settings set <key> <value>`](#masa-settings-set-key-value)
       - [`masa settings preset <environment>`](#masa-settings-preset-environment)
@@ -172,15 +176,20 @@ Commands:
   dynamic-sssbt mint <contract-address>                                                                              Mints Dynamic SSSBTs
   oracle                                                                                                             Oracle commands
   oracle stake <amount>
-  oracle withdraw <amount>
+  oracle unstake <amount>
   marketplace                                                                                                        Marketplace commands
   marketplace points
   marketplace points show [options]
   marketplace points stake <address>
   token                                                                                                              Token commands
-  token swap <to> <amount>
+  token swap [options] <to> <amount>
   token deposit <amount>
   token withdraw <amount>
+  token mesh [options]
+  token timelock [options]
+  token stake <amount> <duration>
+  token unstake <index>
+  token show [options]
   settings                                                                                                           Set config settings
   settings set <key> <value>                                                                                         Changes setting <key> to <value>
   settings preset <environment>                                                                                      Changes setting <environment> presets
@@ -613,9 +622,9 @@ Oracle commands
 
 - `<amount> Amount to stake`
 
-#### `masa oracle withdraw <amount>`
+#### `masa oracle unstake <amount>`
 
-- `<amount> Amount to withdraw`
+- `<amount> Amount to unstake`
 
 ### `masa marketplace`
 
@@ -630,9 +639,16 @@ Options:
 - `-a, --address <address>`
   Address override
 
+##### `masa marketplace points info`
+
+Shows information about the points
+
 ##### `masa marketplace points stake <address>`
 
 - `<address> Pool address`
+  Options:
+- `-t, --threshold <threshold>`
+  Number of points to skip before staking
 
 ### `masa token`
 
@@ -667,6 +683,22 @@ Options:
 
 - `-t, --testnets`
   Show testnets
+
+#### `masa token stake <amount> <duration>`
+
+- `<amount> Amount to stake`
+- `<duration> Duration to stake`
+
+#### `masa token unstake <index>`
+
+- `<index> Index to unstake`
+
+#### `masa token show`
+
+Options:
+
+- `-a, --address`
+  Address to show
 
 ### `masa settings`
 
