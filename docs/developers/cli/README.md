@@ -76,14 +76,18 @@
         - [`masa marketplace points info`](#masa-marketplace-points-info)
         - [`masa marketplace points stake <address>`](#masa-marketplace-points-stake-address)
     - [`masa token`](#masa-token)
-      - [`masa token swap <to> <amount>`](#masa-token-swap-to-amount)
-      - [`masa token deposit <amount>`](#masa-token-deposit-amount)
-      - [`masa token withdraw <amount>`](#masa-token-withdraw-amount)
-      - [`masa token mesh`](#masa-token-mesh)
-      - [`masa token timelock`](#masa-token-timelock)
-      - [`masa token stake <amount> <duration>`](#masa-token-stake-amount-duration)
-      - [`masa token unstake <index>`](#masa-token-unstake-index)
-      - [`masa token show`](#masa-token-show)
+      - [`masa token bridge`](#masa-token-bridge)
+        - [`masa token bridge send <to> <amount>`](#masa-token-bridge-send-to-amount)
+      - [`masa token wrap`](#masa-token-wrap)
+        - [`masa token wrap deposit <amount>`](#masa-token-wrap-deposit-amount)
+        - [`masa token wrap withdraw <amount>`](#masa-token-wrap-withdraw-amount)
+      - [`masa token governance`](#masa-token-governance)
+        - [`masa token governance mesh`](#masa-token-governance-mesh)
+        - [`masa token governance timelock`](#masa-token-governance-timelock)
+      - [`masa token staking`](#masa-token-staking)
+        - [`masa token staking stake <amount> <duration>`](#masa-token-staking-stake-amount-duration)
+        - [`masa token staking unstake <position>`](#masa-token-staking-unstake-position)
+        - [`masa token staking show`](#masa-token-staking-show)
     - [`masa settings`](#masa-settings)
       - [`masa settings set <key> <value>`](#masa-settings-set-key-value)
       - [`masa settings preset <environment>`](#masa-settings-preset-environment)
@@ -182,14 +186,18 @@ Commands:
   marketplace points show [options]
   marketplace points stake <address>
   token                                                                                                              Token commands
-  token swap [options] <to> <amount>
-  token deposit <amount>
-  token withdraw <amount>
-  token mesh [options]
-  token timelock [options]
-  token stake <amount> <duration>
-  token unstake <index>
-  token show [options]
+  token bridge                                                                                                       Bridge commands
+  token bridge send [options] <to> <amount>
+  token wrap                                                                                                         Wrapping commands
+  token wrap deposit <amount>
+  token wrap withdraw <amount>
+  token governance                                                                                                   Governance commands
+  token governance mesh [options]
+  token governance timelock [options]
+  token staking                                                                                                      Staking commands
+  token staking stake <amount> <duration>
+  token staking unstake <index>
+  token staking show [options]
   settings                                                                                                           Set config settings
   settings set <key> <value>                                                                                         Changes setting <key> to <value>
   settings preset <environment>                                                                                      Changes setting <environment> presets
@@ -654,46 +662,62 @@ Shows information about the points
 
 Token commands
 
-#### `masa token swap <to> <amount>`
+#### `masa token bridge`
+
+Bridge commands
+
+##### `masa token bridge send <to> <amount>`
 
 - `<to> To network`
-- `<amount> Amount to swap`
+- `<amount> Amount to send`
   Options:
 - `-s, --slippage <slippage>`
   Slippage
 
-#### `masa token deposit <amount>`
+#### `masa token wrap`
+
+Wrapping commands
+
+##### `masa token wrap deposit <amount>`
 
 - `<amount> Amount to deposit`
 
-#### `masa token withdraw <amount>`
+##### `masa token wrap withdraw <amount>`
 
 - `<amount> Amount to withdraw`
 
-#### `masa token mesh`
+#### `masa token governance`
+
+Governance commands
+
+##### `masa token governance mesh`
 
 Options:
 
 - `-t, --testnets`
   Show testnets
 
-#### `masa token timelock`
+##### `masa token governance timelock`
 
 Options:
 
 - `-t, --testnets`
   Show testnets
 
-#### `masa token stake <amount> <duration>`
+#### `masa token staking`
+
+Staking commands
+
+##### `masa token staking stake <amount> <duration>`
 
 - `<amount> Amount to stake`
 - `<duration> Duration to stake`
 
-#### `masa token unstake <index>`
+##### `masa token staking unstake <position>`
 
-- `<index> Index to unstake`
+- `<position> Index to unstake`
 
-#### `masa token show`
+##### `masa token staking show`
 
 Options:
 
