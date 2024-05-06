@@ -1,8 +1,8 @@
-[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+[**Masa SDK v3.36.1**](../README.md) • **Docs**
 
 ***
 
-[# Masa SDK v3.36.1](../globals.md) / ERC20Currencies
+[Masa SDK v3.36.1](../globals.md) / ERC20Currencies
 
 # Type alias: ERC20Currencies
 

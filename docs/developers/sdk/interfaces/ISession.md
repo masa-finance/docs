@@ -1,8 +1,8 @@
-[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+[**Masa SDK v3.36.1**](../README.md) • **Docs**
 
 ***
 
-[# Masa SDK v3.36.1](../globals.md) / ISession
+[Masa SDK v3.36.1](../globals.md) / ISession
 
 # Interface: ISession
 

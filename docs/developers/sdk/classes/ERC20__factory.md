@@ -1,8 +1,8 @@
-[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+[**Masa SDK v3.36.1**](../README.md) • **Docs**
 
 ***
 
-[# Masa SDK v3.36.1](../globals.md) / ERC20\_\_factory
+[Masa SDK v3.36.1](../globals.md) / ERC20\_\_factory
 
 # Class: ERC20\_\_factory
 

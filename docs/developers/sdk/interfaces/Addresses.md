@@ -1,8 +1,8 @@
-[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+[**Masa SDK v3.36.1**](../README.md) • **Docs**
 
 ***
 
-[# Masa SDK v3.36.1](../globals.md) / Addresses
+[Masa SDK v3.36.1](../globals.md) / Addresses
 
 # Interface: Addresses
 

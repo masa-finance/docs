@@ -1,8 +1,8 @@
-[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+[**Masa SDK v3.36.1**](../README.md) • **Docs**
 
 ***
 
-[# Masa SDK v3.36.1](../globals.md) / CreditScoreDetails
+[Masa SDK v3.36.1](../globals.md) / CreditScoreDetails
 
 # Interface: CreditScoreDetails
 

@@ -1,8 +1,6 @@
-**# Masa SDK v3.36.1** • [**Docs**](globals.md)
+**Masa SDK v3.36.1** • [**Docs**](globals.md)
 
 ***
-
-# Masa SDK
 
 <!-- TOC -->
 

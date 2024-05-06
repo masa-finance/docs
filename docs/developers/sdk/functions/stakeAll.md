@@ -1,8 +1,8 @@
-[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+[**Masa SDK v3.36.1**](../README.md) • **Docs**
 
 ***
 
-[# Masa SDK v3.36.1](../globals.md) / stakeAll
+[Masa SDK v3.36.1](../globals.md) / stakeAll
 
 # Function: stakeAll()
 

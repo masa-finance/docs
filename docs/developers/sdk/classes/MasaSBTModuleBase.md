@@ -1,8 +1,8 @@
-[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+[**Masa SDK v3.36.1**](../README.md) • **Docs**
 
 ***
 
-[# Masa SDK v3.36.1](../globals.md) / MasaSBTModuleBase
+[Masa SDK v3.36.1](../globals.md) / MasaSBTModuleBase
 
 # Class: `abstract` MasaSBTModuleBase
 
