@@ -1,44 +1,37 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / IPassport
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / IPassport
 
 # Interface: IPassport
-
-## Table of contents
-
-### Properties
-
-- [expirationDate](IPassport.md#expirationdate)
-- [readerIdentityId](IPassport.md#readeridentityid)
-- [signature](IPassport.md#signature)
-- [signatureDate](IPassport.md#signaturedate)
-- [tokenId](IPassport.md#tokenid)
 
 ## Properties
 
 ### expirationDate
 
-• **expirationDate**: `number`
+> **expirationDate**: `number`
 
-___
+***
 
 ### readerIdentityId
 
-• **readerIdentityId**: `string`
+> **readerIdentityId**: `string`
 
-___
+***
 
 ### signature
 
-• **signature**: `string`
+> **signature**: `string`
 
-___
+***
 
 ### signatureDate
 
-• **signatureDate**: `number`
+> **signatureDate**: `number`
 
-___
+***
 
 ### tokenId
 
-• **tokenId**: `string`
+> **tokenId**: `string`

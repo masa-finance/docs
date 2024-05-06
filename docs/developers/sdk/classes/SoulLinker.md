@@ -1,53 +1,26 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / SoulLinker
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / SoulLinker
 
 # Class: SoulLinker
 
-## Hierarchy
+## Extends
 
 - `MasaContractModuleBase`
 
-  ↳ **`SoulLinker`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](SoulLinker.md#constructor)
-
-### Properties
-
-- [instances](SoulLinker.md#instances)
-- [masa](SoulLinker.md#masa)
-- [types](SoulLinker.md#types)
-
-### Methods
-
-- [addLink](SoulLinker.md#addlink)
-- [breakLink](SoulLinker.md#breaklink)
-- [checkOrGiveAllowance](SoulLinker.md#checkorgiveallowance)
-- [createOverrides](SoulLinker.md#createoverrides)
-- [estimateGasWithSlippage](SoulLinker.md#estimategaswithslippage)
-- [formatPrice](SoulLinker.md#formatprice)
-- [getNetworkFeeInformation](SoulLinker.md#getnetworkfeeinformation)
-- [getPaymentAddress](SoulLinker.md#getpaymentaddress)
-- [getPrice](SoulLinker.md#getprice)
-- [signLink](SoulLinker.md#signlink)
-- [verify](SoulLinker.md#verify)
-- [addSlippage](SoulLinker.md#addslippage)
-
 ## Constructors
 
-### constructor
+### new SoulLinker()
 
-• **new SoulLinker**(`masa`, `instances`): [`SoulLinker`](SoulLinker.md)
+> **new SoulLinker**(`masa`, `instances`): [`SoulLinker`](SoulLinker.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
-| `instances` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) |
+• **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+
+• **instances**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
 
 #### Returns
 
@@ -55,94 +28,101 @@
 
 #### Inherited from
 
-MasaContractModuleBase.constructor
+`MasaContractModuleBase.constructor`
 
 ## Properties
 
 ### instances
 
-• `Protected` **instances**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
+> `protected` **instances**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
 
 #### Inherited from
 
-MasaContractModuleBase.instances
+`MasaContractModuleBase.instances`
 
-___
+***
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-MasaContractModuleBase.masa
+`MasaContractModuleBase.masa`
 
-___
+***
 
 ### types
 
-• `Readonly` **types**: `Record`\<`string`, `TypedDataField`[]\>
+> `readonly` **types**: `Record`\<`string`, `TypedDataField`[]\>
 
 ## Methods
 
-### addLink
+### addLink()
 
-▸ **addLink**(`tokenAddress`, `paymentMethod`, `readerIdentityId`, `ownerIdentityId`, `tokenId`, `signatureDate`, `expirationDate`, `signature`, `slippage?`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+> **addLink**(`tokenAddress`, `paymentMethod`, `readerIdentityId`, `ownerIdentityId`, `tokenId`, `signatureDate`, `expirationDate`, `signature`, `slippage`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 Adds a link to the soullinker
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `tokenAddress` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `readerIdentityId` | `BigNumber` | `undefined` |
-| `ownerIdentityId` | `BigNumber` | `undefined` |
-| `tokenId` | `BigNumber` | `undefined` |
-| `signatureDate` | `number` | `undefined` |
-| `expirationDate` | `number` | `undefined` |
-| `signature` | `string` | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
+• **tokenAddress**: `string`
+
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)
+
+• **readerIdentityId**: `BigNumber`
+
+• **ownerIdentityId**: `BigNumber`
+
+• **tokenId**: `BigNumber`
+
+• **signatureDate**: `number`
+
+• **expirationDate**: `number`
+
+• **signature**: `string`
+
+• **slippage**: `undefined` \| `number`= `250`
 
 #### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
-___
+***
 
-### breakLink
+### breakLink()
 
-▸ **breakLink**(`contract`, `tokenId`, `readerIdentityId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+> **breakLink**(`contract`, `tokenId`, `readerIdentityId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `contract` | `Contract` |
-| `tokenId` | `BigNumber` |
-| `readerIdentityId` | `BigNumber` |
+• **contract**: `Contract`
+
+• **tokenId**: `BigNumber`
+
+• **readerIdentityId**: `BigNumber`
 
 #### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
-___
+***
 
-### checkOrGiveAllowance
+### checkOrGiveAllowance()
 
-▸ **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`\<`undefined` \| `ContractReceipt`\>
+> `private` **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`\<`undefined` \| `ContractReceipt`\>
 
 Checks or gives allowance on ERC20 tokens
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `paymentAddress` | `string` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-| `spenderAddress` | `string` |
-| `price` | `BigNumber` |
+• **paymentAddress**: `string`
+
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)
+
+• **spenderAddress**: `string`
+
+• **price**: `BigNumber`
 
 #### Returns
 
@@ -150,19 +130,17 @@ Checks or gives allowance on ERC20 tokens
 
 #### Inherited from
 
-MasaContractModuleBase.checkOrGiveAllowance
+`MasaContractModuleBase.checkOrGiveAllowance`
 
-___
+***
 
-### createOverrides
+### createOverrides()
 
-▸ **createOverrides**(`value?`): `Promise`\<`PayableOverrides`\>
+> `protected` **createOverrides**(`value`?): `Promise`\<`PayableOverrides`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value?` | `BigNumber` |
+• **value?**: `BigNumber`
 
 #### Returns
 
@@ -170,21 +148,21 @@ ___
 
 #### Inherited from
 
-MasaContractModuleBase.createOverrides
+`MasaContractModuleBase.createOverrides`
 
-___
+***
 
-### estimateGasWithSlippage
+### estimateGasWithSlippage()
 
-▸ **estimateGasWithSlippage**(`estimateGas`, `args?`, `overrides?`): `Promise`\<`BigNumber`\>
+> `protected` **estimateGasWithSlippage**(`estimateGas`, `args`?, `overrides`?): `Promise`\<`BigNumber`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `estimateGas` | (...`estimateGasArgAndOverrides`: `never`[]) => `Promise`\<`BigNumber`\> |
-| `args?` | `unknown`[] |
-| `overrides?` | `PayableOverrides` |
+• **estimateGas**
+
+• **args?**: `unknown`[]
+
+• **overrides?**: `PayableOverrides`
 
 #### Returns
 
@@ -192,20 +170,19 @@ ___
 
 #### Inherited from
 
-MasaContractModuleBase.estimateGasWithSlippage
+`MasaContractModuleBase.estimateGasWithSlippage`
 
-___
+***
 
-### formatPrice
+### formatPrice()
 
-▸ **formatPrice**(`paymentAddress`, `price`): `Promise`\<`string`\>
+> `protected` **formatPrice**(`paymentAddress`, `price`): `Promise`\<`string`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `paymentAddress` | `string` |
-| `price` | `BigNumber` |
+• **paymentAddress**: `string`
+
+• **price**: `BigNumber`
 
 #### Returns
 
@@ -213,13 +190,13 @@ ___
 
 #### Inherited from
 
-MasaContractModuleBase.formatPrice
+`MasaContractModuleBase.formatPrice`
 
-___
+***
 
-### getNetworkFeeInformation
+### getNetworkFeeInformation()
 
-▸ **getNetworkFeeInformation**(): `Promise`\<`undefined` \| `FeeData`\>
+> `protected` **getNetworkFeeInformation**(): `Promise`\<`undefined` \| `FeeData`\>
 
 #### Returns
 
@@ -227,21 +204,19 @@ ___
 
 #### Inherited from
 
-MasaContractModuleBase.getNetworkFeeInformation
+`MasaContractModuleBase.getNetworkFeeInformation`
 
-___
+***
 
-### getPaymentAddress
+### getPaymentAddress()
 
-▸ **getPaymentAddress**(`paymentMethod`): `string`
+> `private` **getPaymentAddress**(`paymentMethod`): `string`
 
 Gets the payment address for a given payment method
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)
 
 #### Returns
 
@@ -249,70 +224,89 @@ Gets the payment address for a given payment method
 
 #### Inherited from
 
-MasaContractModuleBase.getPaymentAddress
+`MasaContractModuleBase.getPaymentAddress`
 
-___
+***
 
-### getPrice
+### getPrice()
 
-▸ **getPrice**(`tokenAddress`, `paymentMethod`, `slippage?`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+> **getPrice**(`tokenAddress`, `paymentMethod`, `slippage`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 Gets price for establishing a link
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `tokenAddress` | `string` | `undefined` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
+• **tokenAddress**: `string`
+
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)
+
+• **slippage**: `undefined` \| `number`= `250`
 
 #### Returns
 
 `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
-___
+***
 
-### signLink
+### signLink()
 
-▸ **signLink**(`readerIdentityId`, `ownerIdentityId`, `tokenAddress`, `tokenId`, `signatureDate?`, `expirationOffset?`): `Promise`\<\{ `expirationDate`: `number` ; `signature`: `string` ; `signatureDate`: `number`  }\>
+> **signLink**(`readerIdentityId`, `ownerIdentityId`, `tokenAddress`, `tokenId`, `signatureDate`, `expirationOffset`): `Promise`\<`object`\>
 
 Signs a soul linker link
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `readerIdentityId` | `BigNumber` |
-| `ownerIdentityId` | `BigNumber` |
-| `tokenAddress` | `string` |
-| `tokenId` | `BigNumber` |
-| `signatureDate` | `number` |
-| `expirationOffset` | `number` |
+• **readerIdentityId**: `BigNumber`
+
+• **ownerIdentityId**: `BigNumber`
+
+• **tokenAddress**: `string`
+
+• **tokenId**: `BigNumber`
+
+• **signatureDate**: `number`= `undefined`
+
+• **expirationOffset**: `number`= `undefined`
 
 #### Returns
 
-`Promise`\<\{ `expirationDate`: `number` ; `signature`: `string` ; `signatureDate`: `number`  }\>
+`Promise`\<`object`\>
 
-___
+##### expirationDate
 
-### verify
+> **expirationDate**: `number`
 
-▸ **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`\<`void`\>
+##### signature
+
+> **signature**: `string`
+
+##### signatureDate
+
+> **signatureDate**: `number`
+
+***
+
+### verify()
+
+> `protected` **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`\<`void`\>
 
 verify a signature created during one of the SBT signing flows
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `errorMessage` | `string` |
-| `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
-| `domain` | `TypedDataDomain` |
-| `types` | `Record`\<`string`, `TypedDataField`[]\> |
-| `value` | `Record`\<`string`, `string` \| `number` \| `boolean` \| `BigNumber`\> |
-| `signature` | `string` |
-| `authorityAddress` | `string` |
+• **errorMessage**: `string`
+
+• **contract**: `SoulLinker` \| `SoulStore` \| `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority`
+
+• **domain**: `TypedDataDomain`
+
+• **types**: `Record`\<`string`, `TypedDataField`[]\>
+
+• **value**: `Record`\<`string`, `string` \| `number` \| `boolean` \| `BigNumber`\>
+
+• **signature**: `string`
+
+• **authorityAddress**: `string`
 
 #### Returns
 
@@ -320,22 +314,21 @@ verify a signature created during one of the SBT signing flows
 
 #### Inherited from
 
-MasaContractModuleBase.verify
+`MasaContractModuleBase.verify`
 
-___
+***
 
-### addSlippage
+### addSlippage()
 
-▸ **addSlippage**(`price`, `slippage`): `BigNumber`
+> `static` `protected` **addSlippage**(`price`, `slippage`): `BigNumber`
 
 adds a percentage to the price as slippage
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `price` | `BigNumber` |
-| `slippage` | `number` |
+• **price**: `BigNumber`
+
+• **slippage**: `number`
 
 #### Returns
 
@@ -343,4 +336,4 @@ adds a percentage to the price as slippage
 
 #### Inherited from
 
-MasaContractModuleBase.addSlippage
+`MasaContractModuleBase.addSlippage`

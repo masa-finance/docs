@@ -1,66 +1,57 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / CreateSoulNameResult
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / CreateSoulNameResult
 
 # Interface: CreateSoulNameResult
 
-## Hierarchy
+## Extends
 
 - [`SoulNameResultBase`](SoulNameResultBase.md)
-
-  ↳ **`CreateSoulNameResult`**
-
-## Table of contents
-
-### Properties
-
-- [errorCode](CreateSoulNameResult.md#errorcode)
-- [message](CreateSoulNameResult.md#message)
-- [soulName](CreateSoulNameResult.md#soulname)
-- [success](CreateSoulNameResult.md#success)
-- [tokenId](CreateSoulNameResult.md#tokenid)
 
 ## Properties
 
 ### errorCode
 
-• **errorCode**: [`SoulNameErrorCodes`](../enums/SoulNameErrorCodes.md)
+> **errorCode**: [`SoulNameErrorCodes`](../enumerations/SoulNameErrorCodes.md)
 
 #### Inherited from
 
-[SoulNameResultBase](SoulNameResultBase.md).[errorCode](SoulNameResultBase.md#errorcode)
+[`SoulNameResultBase`](SoulNameResultBase.md).[`errorCode`](SoulNameResultBase.md#errorcode)
 
-___
+***
 
-### message
+### message?
 
-• `Optional` **message**: `string`
+> `optional` **message**: `string`
 
 #### Inherited from
 
-[SoulNameResultBase](SoulNameResultBase.md).[message](SoulNameResultBase.md#message)
+[`SoulNameResultBase`](SoulNameResultBase.md).[`message`](SoulNameResultBase.md#message)
 
-___
+***
 
-### soulName
+### soulName?
 
-• `Optional` **soulName**: `string`
+> `optional` **soulName**: `string`
 
-___
+***
 
 ### success
 
-• **success**: `boolean`
+> **success**: `boolean`
 
 #### Inherited from
 
-[SoulNameResultBase](SoulNameResultBase.md).[success](SoulNameResultBase.md#success)
+[`SoulNameResultBase`](SoulNameResultBase.md).[`success`](SoulNameResultBase.md#success)
 
-___
+***
 
-### tokenId
+### tokenId?
 
-• `Optional` **tokenId**: `string` \| `BigNumber`
+> `optional` **tokenId**: `string` \| `BigNumber`
 
 #### Inherited from
 
-[SoulNameResultBase](SoulNameResultBase.md).[tokenId](SoulNameResultBase.md#tokenid)
+[`SoulNameResultBase`](SoulNameResultBase.md).[`tokenId`](SoulNameResultBase.md#tokenid)

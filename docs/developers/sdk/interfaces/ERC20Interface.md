@@ -1,174 +1,166 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / ERC20Interface
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / ERC20Interface
 
 # Interface: ERC20Interface
 
-## Hierarchy
+## Extends
 
 - `Interface`
-
-  ↳ **`ERC20Interface`**
-
-## Table of contents
-
-### Properties
-
-- [\_abiCoder](ERC20Interface.md#_abicoder)
-- [\_isInterface](ERC20Interface.md#_isinterface)
-- [deploy](ERC20Interface.md#deploy)
-- [errors](ERC20Interface.md#errors)
-- [events](ERC20Interface.md#events)
-- [fragments](ERC20Interface.md#fragments)
-- [functions](ERC20Interface.md#functions)
-- [structs](ERC20Interface.md#structs)
-
-### Methods
-
-- [\_decodeParams](ERC20Interface.md#_decodeparams)
-- [\_encodeParams](ERC20Interface.md#_encodeparams)
-- [decodeErrorResult](ERC20Interface.md#decodeerrorresult)
-- [decodeEventLog](ERC20Interface.md#decodeeventlog)
-- [decodeFunctionData](ERC20Interface.md#decodefunctiondata)
-- [decodeFunctionResult](ERC20Interface.md#decodefunctionresult)
-- [encodeDeploy](ERC20Interface.md#encodedeploy)
-- [encodeErrorResult](ERC20Interface.md#encodeerrorresult)
-- [encodeEventLog](ERC20Interface.md#encodeeventlog)
-- [encodeFilterTopics](ERC20Interface.md#encodefiltertopics)
-- [encodeFunctionData](ERC20Interface.md#encodefunctiondata)
-- [encodeFunctionResult](ERC20Interface.md#encodefunctionresult)
-- [format](ERC20Interface.md#format)
-- [getError](ERC20Interface.md#geterror)
-- [getEvent](ERC20Interface.md#getevent)
-- [getEventTopic](ERC20Interface.md#geteventtopic)
-- [getFunction](ERC20Interface.md#getfunction)
-- [getSighash](ERC20Interface.md#getsighash)
-- [parseError](ERC20Interface.md#parseerror)
-- [parseLog](ERC20Interface.md#parselog)
-- [parseTransaction](ERC20Interface.md#parsetransaction)
 
 ## Properties
 
 ### \_abiCoder
 
-• `Readonly` **\_abiCoder**: `AbiCoder`
+> `readonly` **\_abiCoder**: `AbiCoder`
 
 #### Inherited from
 
-utils.Interface.\_abiCoder
+`utils.Interface._abiCoder`
 
-___
+***
 
 ### \_isInterface
 
-• `Readonly` **\_isInterface**: `boolean`
+> `readonly` **\_isInterface**: `boolean`
 
 #### Inherited from
 
-utils.Interface.\_isInterface
+`utils.Interface._isInterface`
 
-___
+***
 
 ### deploy
 
-• `Readonly` **deploy**: `ConstructorFragment`
+> `readonly` **deploy**: `ConstructorFragment`
 
 #### Inherited from
 
-utils.Interface.deploy
+`utils.Interface.deploy`
 
-___
+***
 
 ### errors
 
-• `Readonly` **errors**: `Object`
+> `readonly` **errors**: `object`
 
 #### Index signature
 
-▪ [name: `string`]: `ErrorFragment`
+ \[`name`: `string`\]: `ErrorFragment`
 
 #### Inherited from
 
-utils.Interface.errors
+`utils.Interface.errors`
 
-___
+***
 
 ### events
 
-• **events**: `Object`
+> **events**: `object`
 
-#### Type declaration
+#### Approval(address,address,uint256)
 
-| Name | Type |
-| :------ | :------ |
-| `Approval(address,address,uint256)` | `EventFragment` |
-| `Transfer(address,address,uint256)` | `EventFragment` |
+> **Approval(address,address,uint256)**: `EventFragment`
+
+#### Transfer(address,address,uint256)
+
+> **Transfer(address,address,uint256)**: `EventFragment`
 
 #### Overrides
 
-utils.Interface.events
+`utils.Interface.events`
 
-___
+***
 
 ### fragments
 
-• `Readonly` **fragments**: readonly `Fragment`[]
+> `readonly` **fragments**: readonly `Fragment`[]
 
 #### Inherited from
 
-utils.Interface.fragments
+`utils.Interface.fragments`
 
-___
+***
 
 ### functions
 
-• **functions**: `Object`
+> **functions**: `object`
 
-#### Type declaration
+#### allowance(address,address)
 
-| Name | Type |
-| :------ | :------ |
-| `allowance(address,address)` | `FunctionFragment` |
-| `approve(address,uint256)` | `FunctionFragment` |
-| `balanceOf(address)` | `FunctionFragment` |
-| `decimals()` | `FunctionFragment` |
-| `decreaseAllowance(address,uint256)` | `FunctionFragment` |
-| `increaseAllowance(address,uint256)` | `FunctionFragment` |
-| `name()` | `FunctionFragment` |
-| `symbol()` | `FunctionFragment` |
-| `totalSupply()` | `FunctionFragment` |
-| `transfer(address,uint256)` | `FunctionFragment` |
-| `transferFrom(address,address,uint256)` | `FunctionFragment` |
+> **allowance(address,address)**: `FunctionFragment`
+
+#### approve(address,uint256)
+
+> **approve(address,uint256)**: `FunctionFragment`
+
+#### balanceOf(address)
+
+> **balanceOf(address)**: `FunctionFragment`
+
+#### decimals()
+
+> **decimals()**: `FunctionFragment`
+
+#### decreaseAllowance(address,uint256)
+
+> **decreaseAllowance(address,uint256)**: `FunctionFragment`
+
+#### increaseAllowance(address,uint256)
+
+> **increaseAllowance(address,uint256)**: `FunctionFragment`
+
+#### name()
+
+> **name()**: `FunctionFragment`
+
+#### symbol()
+
+> **symbol()**: `FunctionFragment`
+
+#### totalSupply()
+
+> **totalSupply()**: `FunctionFragment`
+
+#### transfer(address,uint256)
+
+> **transfer(address,uint256)**: `FunctionFragment`
+
+#### transferFrom(address,address,uint256)
+
+> **transferFrom(address,address,uint256)**: `FunctionFragment`
 
 #### Overrides
 
-utils.Interface.functions
+`utils.Interface.functions`
 
-___
+***
 
 ### structs
 
-• `Readonly` **structs**: `Object`
+> `readonly` **structs**: `object`
 
 #### Index signature
 
-▪ [name: `string`]: `any`
+ \[`name`: `string`\]: `any`
 
 #### Inherited from
 
-utils.Interface.structs
+`utils.Interface.structs`
 
 ## Methods
 
-### \_decodeParams
+### \_decodeParams()
 
-▸ **_decodeParams**(`params`, `data`): `Result`
+> **\_decodeParams**(`params`, `data`): `Result`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | readonly `ParamType`[] |
-| `data` | `BytesLike` |
+• **params**: readonly `ParamType`[]
+
+• **data**: `BytesLike`
 
 #### Returns
 
@@ -176,20 +168,19 @@ utils.Interface.structs
 
 #### Inherited from
 
-utils.Interface.\_decodeParams
+`utils.Interface._decodeParams`
 
-___
+***
 
-### \_encodeParams
+### \_encodeParams()
 
-▸ **_encodeParams**(`params`, `values`): `string`
+> **\_encodeParams**(`params`, `values`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | readonly `ParamType`[] |
-| `values` | readonly `any`[] |
+• **params**: readonly `ParamType`[]
+
+• **values**: readonly `any`[]
 
 #### Returns
 
@@ -197,20 +188,19 @@ ___
 
 #### Inherited from
 
-utils.Interface.\_encodeParams
+`utils.Interface._encodeParams`
 
-___
+***
 
-### decodeErrorResult
+### decodeErrorResult()
 
-▸ **decodeErrorResult**(`fragment`, `data`): `Result`
+> **decodeErrorResult**(`fragment`, `data`): `Result`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `fragment` | `string` \| `ErrorFragment` |
-| `data` | `BytesLike` |
+• **fragment**: `string` \| `ErrorFragment`
+
+• **data**: `BytesLike`
 
 #### Returns
 
@@ -218,21 +208,21 @@ ___
 
 #### Inherited from
 
-utils.Interface.decodeErrorResult
+`utils.Interface.decodeErrorResult`
 
-___
+***
 
-### decodeEventLog
+### decodeEventLog()
 
-▸ **decodeEventLog**(`eventFragment`, `data`, `topics?`): `Result`
+> **decodeEventLog**(`eventFragment`, `data`, `topics`?): `Result`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventFragment` | `string` \| `EventFragment` |
-| `data` | `BytesLike` |
-| `topics?` | readonly `string`[] |
+• **eventFragment**: `string` \| `EventFragment`
+
+• **data**: `BytesLike`
+
+• **topics?**: readonly `string`[]
 
 #### Returns
 
@@ -240,20 +230,19 @@ ___
 
 #### Inherited from
 
-utils.Interface.decodeEventLog
+`utils.Interface.decodeEventLog`
 
-___
+***
 
-### decodeFunctionData
+### decodeFunctionData()
 
-▸ **decodeFunctionData**(`functionFragment`, `data`): `Result`
+> **decodeFunctionData**(`functionFragment`, `data`): `Result`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | `string` \| `FunctionFragment` |
-| `data` | `BytesLike` |
+• **functionFragment**: `string` \| `FunctionFragment`
+
+• **data**: `BytesLike`
 
 #### Returns
 
@@ -261,210 +250,219 @@ ___
 
 #### Inherited from
 
-utils.Interface.decodeFunctionData
+`utils.Interface.decodeFunctionData`
 
-___
+***
 
-### decodeFunctionResult
+### decodeFunctionResult()
 
-▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
+#### decodeFunctionResult(functionFragment, data)
 
-#### Parameters
+> **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"allowance"`` |
-| `data` | `BytesLike` |
+##### Parameters
 
-#### Returns
+• **functionFragment**: `"allowance"`
 
-`Result`
+• **data**: `BytesLike`
 
-#### Overrides
-
-utils.Interface.decodeFunctionResult
-
-▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"approve"`` |
-| `data` | `BytesLike` |
-
-#### Returns
+##### Returns
 
 `Result`
 
-#### Overrides
+##### Overrides
 
-utils.Interface.decodeFunctionResult
+`utils.Interface.decodeFunctionResult`
 
-▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
+#### decodeFunctionResult(functionFragment, data)
 
-#### Parameters
+> **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"balanceOf"`` |
-| `data` | `BytesLike` |
+##### Parameters
 
-#### Returns
+• **functionFragment**: `"approve"`
 
-`Result`
+• **data**: `BytesLike`
 
-#### Overrides
-
-utils.Interface.decodeFunctionResult
-
-▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"decimals"`` |
-| `data` | `BytesLike` |
-
-#### Returns
+##### Returns
 
 `Result`
 
-#### Overrides
+##### Overrides
 
-utils.Interface.decodeFunctionResult
+`utils.Interface.decodeFunctionResult`
 
-▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
+#### decodeFunctionResult(functionFragment, data)
 
-#### Parameters
+> **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"decreaseAllowance"`` |
-| `data` | `BytesLike` |
+##### Parameters
 
-#### Returns
+• **functionFragment**: `"balanceOf"`
 
-`Result`
+• **data**: `BytesLike`
 
-#### Overrides
-
-utils.Interface.decodeFunctionResult
-
-▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"increaseAllowance"`` |
-| `data` | `BytesLike` |
-
-#### Returns
+##### Returns
 
 `Result`
 
-#### Overrides
+##### Overrides
 
-utils.Interface.decodeFunctionResult
+`utils.Interface.decodeFunctionResult`
 
-▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
+#### decodeFunctionResult(functionFragment, data)
 
-#### Parameters
+> **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"name"`` |
-| `data` | `BytesLike` |
+##### Parameters
 
-#### Returns
+• **functionFragment**: `"decimals"`
 
-`Result`
+• **data**: `BytesLike`
 
-#### Overrides
-
-utils.Interface.decodeFunctionResult
-
-▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"symbol"`` |
-| `data` | `BytesLike` |
-
-#### Returns
+##### Returns
 
 `Result`
 
-#### Overrides
+##### Overrides
 
-utils.Interface.decodeFunctionResult
+`utils.Interface.decodeFunctionResult`
 
-▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
+#### decodeFunctionResult(functionFragment, data)
 
-#### Parameters
+> **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"totalSupply"`` |
-| `data` | `BytesLike` |
+##### Parameters
 
-#### Returns
+• **functionFragment**: `"decreaseAllowance"`
 
-`Result`
+• **data**: `BytesLike`
 
-#### Overrides
-
-utils.Interface.decodeFunctionResult
-
-▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"transfer"`` |
-| `data` | `BytesLike` |
-
-#### Returns
+##### Returns
 
 `Result`
 
-#### Overrides
+##### Overrides
 
-utils.Interface.decodeFunctionResult
+`utils.Interface.decodeFunctionResult`
 
-▸ **decodeFunctionResult**(`functionFragment`, `data`): `Result`
+#### decodeFunctionResult(functionFragment, data)
 
-#### Parameters
+> **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"transferFrom"`` |
-| `data` | `BytesLike` |
+##### Parameters
 
-#### Returns
+• **functionFragment**: `"increaseAllowance"`
+
+• **data**: `BytesLike`
+
+##### Returns
 
 `Result`
 
-#### Overrides
+##### Overrides
 
-utils.Interface.decodeFunctionResult
+`utils.Interface.decodeFunctionResult`
 
-___
+#### decodeFunctionResult(functionFragment, data)
 
-### encodeDeploy
+> **decodeFunctionResult**(`functionFragment`, `data`): `Result`
 
-▸ **encodeDeploy**(`values?`): `string`
+##### Parameters
+
+• **functionFragment**: `"name"`
+
+• **data**: `BytesLike`
+
+##### Returns
+
+`Result`
+
+##### Overrides
+
+`utils.Interface.decodeFunctionResult`
+
+#### decodeFunctionResult(functionFragment, data)
+
+> **decodeFunctionResult**(`functionFragment`, `data`): `Result`
+
+##### Parameters
+
+• **functionFragment**: `"symbol"`
+
+• **data**: `BytesLike`
+
+##### Returns
+
+`Result`
+
+##### Overrides
+
+`utils.Interface.decodeFunctionResult`
+
+#### decodeFunctionResult(functionFragment, data)
+
+> **decodeFunctionResult**(`functionFragment`, `data`): `Result`
+
+##### Parameters
+
+• **functionFragment**: `"totalSupply"`
+
+• **data**: `BytesLike`
+
+##### Returns
+
+`Result`
+
+##### Overrides
+
+`utils.Interface.decodeFunctionResult`
+
+#### decodeFunctionResult(functionFragment, data)
+
+> **decodeFunctionResult**(`functionFragment`, `data`): `Result`
+
+##### Parameters
+
+• **functionFragment**: `"transfer"`
+
+• **data**: `BytesLike`
+
+##### Returns
+
+`Result`
+
+##### Overrides
+
+`utils.Interface.decodeFunctionResult`
+
+#### decodeFunctionResult(functionFragment, data)
+
+> **decodeFunctionResult**(`functionFragment`, `data`): `Result`
+
+##### Parameters
+
+• **functionFragment**: `"transferFrom"`
+
+• **data**: `BytesLike`
+
+##### Returns
+
+`Result`
+
+##### Overrides
+
+`utils.Interface.decodeFunctionResult`
+
+***
+
+### encodeDeploy()
+
+> **encodeDeploy**(`values`?): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `values?` | readonly `any`[] |
+• **values?**: readonly `any`[]
 
 #### Returns
 
@@ -472,20 +470,19 @@ ___
 
 #### Inherited from
 
-utils.Interface.encodeDeploy
+`utils.Interface.encodeDeploy`
 
-___
+***
 
-### encodeErrorResult
+### encodeErrorResult()
 
-▸ **encodeErrorResult**(`fragment`, `values?`): `string`
+> **encodeErrorResult**(`fragment`, `values`?): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `fragment` | `string` \| `ErrorFragment` |
-| `values?` | readonly `any`[] |
+• **fragment**: `string` \| `ErrorFragment`
+
+• **values?**: readonly `any`[]
 
 #### Returns
 
@@ -493,46 +490,47 @@ ___
 
 #### Inherited from
 
-utils.Interface.encodeErrorResult
+`utils.Interface.encodeErrorResult`
 
-___
+***
 
-### encodeEventLog
+### encodeEventLog()
 
-▸ **encodeEventLog**(`eventFragment`, `values`): `Object`
+> **encodeEventLog**(`eventFragment`, `values`): `object`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventFragment` | `string` \| `EventFragment` |
-| `values` | readonly `any`[] |
+• **eventFragment**: `string` \| `EventFragment`
+
+• **values**: readonly `any`[]
 
 #### Returns
 
-`Object`
+`object`
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `string` |
-| `topics` | `string`[] |
+##### data
+
+> **data**: `string`
+
+##### topics
+
+> **topics**: `string`[]
 
 #### Inherited from
 
-utils.Interface.encodeEventLog
+`utils.Interface.encodeEventLog`
 
-___
+***
 
-### encodeFilterTopics
+### encodeFilterTopics()
 
-▸ **encodeFilterTopics**(`eventFragment`, `values`): (`string` \| `string`[])[]
+> **encodeFilterTopics**(`eventFragment`, `values`): (`string` \| `string`[])[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventFragment` | `string` \| `EventFragment` |
-| `values` | readonly `any`[] |
+• **eventFragment**: `string` \| `EventFragment`
+
+• **values**: readonly `any`[]
 
 #### Returns
 
@@ -540,211 +538,221 @@ ___
 
 #### Inherited from
 
-utils.Interface.encodeFilterTopics
+`utils.Interface.encodeFilterTopics`
 
-___
+***
 
-### encodeFunctionData
+### encodeFunctionData()
 
-▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
+#### encodeFunctionData(functionFragment, values)
 
-#### Parameters
+> **encodeFunctionData**(`functionFragment`, `values`): `string`
 
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"allowance"`` |
-| `values` | [`string`, `string`] |
+##### Parameters
 
-#### Returns
+• **functionFragment**: `"allowance"`
 
-`string`
+• **values**: [`string`, `string`]
 
-#### Overrides
-
-utils.Interface.encodeFunctionData
-
-▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"approve"`` |
-| `values` | [`string`, `BigNumberish`] |
-
-#### Returns
+##### Returns
 
 `string`
 
-#### Overrides
+##### Overrides
 
-utils.Interface.encodeFunctionData
+`utils.Interface.encodeFunctionData`
 
-▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
+#### encodeFunctionData(functionFragment, values)
 
-#### Parameters
+> **encodeFunctionData**(`functionFragment`, `values`): `string`
 
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"balanceOf"`` |
-| `values` | [`string`] |
+##### Parameters
 
-#### Returns
+• **functionFragment**: `"approve"`
 
-`string`
+• **values**: [`string`, `BigNumberish`]
 
-#### Overrides
-
-utils.Interface.encodeFunctionData
-
-▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"decimals"`` |
-| `values?` | `undefined` |
-
-#### Returns
+##### Returns
 
 `string`
 
-#### Overrides
+##### Overrides
 
-utils.Interface.encodeFunctionData
+`utils.Interface.encodeFunctionData`
 
-▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
+#### encodeFunctionData(functionFragment, values)
 
-#### Parameters
+> **encodeFunctionData**(`functionFragment`, `values`): `string`
 
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"decreaseAllowance"`` |
-| `values` | [`string`, `BigNumberish`] |
+##### Parameters
 
-#### Returns
+• **functionFragment**: `"balanceOf"`
 
-`string`
+• **values**: [`string`]
 
-#### Overrides
-
-utils.Interface.encodeFunctionData
-
-▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"increaseAllowance"`` |
-| `values` | [`string`, `BigNumberish`] |
-
-#### Returns
+##### Returns
 
 `string`
 
-#### Overrides
+##### Overrides
 
-utils.Interface.encodeFunctionData
+`utils.Interface.encodeFunctionData`
 
-▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
+#### encodeFunctionData(functionFragment, values)
 
-#### Parameters
+> **encodeFunctionData**(`functionFragment`, `values`?): `string`
 
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"name"`` |
-| `values?` | `undefined` |
+##### Parameters
 
-#### Returns
+• **functionFragment**: `"decimals"`
 
-`string`
+• **values?**: `undefined`
 
-#### Overrides
-
-utils.Interface.encodeFunctionData
-
-▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"symbol"`` |
-| `values?` | `undefined` |
-
-#### Returns
+##### Returns
 
 `string`
 
-#### Overrides
+##### Overrides
 
-utils.Interface.encodeFunctionData
+`utils.Interface.encodeFunctionData`
 
-▸ **encodeFunctionData**(`functionFragment`, `values?`): `string`
+#### encodeFunctionData(functionFragment, values)
 
-#### Parameters
+> **encodeFunctionData**(`functionFragment`, `values`): `string`
 
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"totalSupply"`` |
-| `values?` | `undefined` |
+##### Parameters
 
-#### Returns
+• **functionFragment**: `"decreaseAllowance"`
 
-`string`
+• **values**: [`string`, `BigNumberish`]
 
-#### Overrides
-
-utils.Interface.encodeFunctionData
-
-▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"transfer"`` |
-| `values` | [`string`, `BigNumberish`] |
-
-#### Returns
+##### Returns
 
 `string`
 
-#### Overrides
+##### Overrides
 
-utils.Interface.encodeFunctionData
+`utils.Interface.encodeFunctionData`
 
-▸ **encodeFunctionData**(`functionFragment`, `values`): `string`
+#### encodeFunctionData(functionFragment, values)
 
-#### Parameters
+> **encodeFunctionData**(`functionFragment`, `values`): `string`
 
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | ``"transferFrom"`` |
-| `values` | [`string`, `string`, `BigNumberish`] |
+##### Parameters
 
-#### Returns
+• **functionFragment**: `"increaseAllowance"`
+
+• **values**: [`string`, `BigNumberish`]
+
+##### Returns
 
 `string`
 
-#### Overrides
+##### Overrides
 
-utils.Interface.encodeFunctionData
+`utils.Interface.encodeFunctionData`
 
-___
+#### encodeFunctionData(functionFragment, values)
 
-### encodeFunctionResult
+> **encodeFunctionData**(`functionFragment`, `values`?): `string`
 
-▸ **encodeFunctionResult**(`functionFragment`, `values?`): `string`
+##### Parameters
+
+• **functionFragment**: `"name"`
+
+• **values?**: `undefined`
+
+##### Returns
+
+`string`
+
+##### Overrides
+
+`utils.Interface.encodeFunctionData`
+
+#### encodeFunctionData(functionFragment, values)
+
+> **encodeFunctionData**(`functionFragment`, `values`?): `string`
+
+##### Parameters
+
+• **functionFragment**: `"symbol"`
+
+• **values?**: `undefined`
+
+##### Returns
+
+`string`
+
+##### Overrides
+
+`utils.Interface.encodeFunctionData`
+
+#### encodeFunctionData(functionFragment, values)
+
+> **encodeFunctionData**(`functionFragment`, `values`?): `string`
+
+##### Parameters
+
+• **functionFragment**: `"totalSupply"`
+
+• **values?**: `undefined`
+
+##### Returns
+
+`string`
+
+##### Overrides
+
+`utils.Interface.encodeFunctionData`
+
+#### encodeFunctionData(functionFragment, values)
+
+> **encodeFunctionData**(`functionFragment`, `values`): `string`
+
+##### Parameters
+
+• **functionFragment**: `"transfer"`
+
+• **values**: [`string`, `BigNumberish`]
+
+##### Returns
+
+`string`
+
+##### Overrides
+
+`utils.Interface.encodeFunctionData`
+
+#### encodeFunctionData(functionFragment, values)
+
+> **encodeFunctionData**(`functionFragment`, `values`): `string`
+
+##### Parameters
+
+• **functionFragment**: `"transferFrom"`
+
+• **values**: [`string`, `string`, `BigNumberish`]
+
+##### Returns
+
+`string`
+
+##### Overrides
+
+`utils.Interface.encodeFunctionData`
+
+***
+
+### encodeFunctionResult()
+
+> **encodeFunctionResult**(`functionFragment`, `values`?): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `functionFragment` | `string` \| `FunctionFragment` |
-| `values?` | readonly `any`[] |
+• **functionFragment**: `string` \| `FunctionFragment`
+
+• **values?**: readonly `any`[]
 
 #### Returns
 
@@ -752,19 +760,17 @@ ___
 
 #### Inherited from
 
-utils.Interface.encodeFunctionResult
+`utils.Interface.encodeFunctionResult`
 
-___
+***
 
-### format
+### format()
 
-▸ **format**(`format?`): `string` \| `string`[]
+> **format**(`format`?): `string` \| `string`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `format?` | `string` |
+• **format?**: `string`
 
 #### Returns
 
@@ -772,19 +778,17 @@ ___
 
 #### Inherited from
 
-utils.Interface.format
+`utils.Interface.format`
 
-___
+***
 
-### getError
+### getError()
 
-▸ **getError**(`nameOrSignatureOrSighash`): `ErrorFragment`
+> **getError**(`nameOrSignatureOrSighash`): `ErrorFragment`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `nameOrSignatureOrSighash` | `string` |
+• **nameOrSignatureOrSighash**: `string`
 
 #### Returns
 
@@ -792,55 +796,53 @@ ___
 
 #### Inherited from
 
-utils.Interface.getError
+`utils.Interface.getError`
 
-___
+***
 
-### getEvent
+### getEvent()
 
-▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
+#### getEvent(nameOrSignatureOrTopic)
 
-#### Parameters
+> **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
-| Name | Type |
-| :------ | :------ |
-| `nameOrSignatureOrTopic` | ``"Approval"`` |
+##### Parameters
 
-#### Returns
+• **nameOrSignatureOrTopic**: `"Approval"`
 
-`EventFragment`
-
-#### Overrides
-
-utils.Interface.getEvent
-
-▸ **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `nameOrSignatureOrTopic` | ``"Transfer"`` |
-
-#### Returns
+##### Returns
 
 `EventFragment`
 
-#### Overrides
+##### Overrides
 
-utils.Interface.getEvent
+`utils.Interface.getEvent`
 
-___
+#### getEvent(nameOrSignatureOrTopic)
 
-### getEventTopic
+> **getEvent**(`nameOrSignatureOrTopic`): `EventFragment`
 
-▸ **getEventTopic**(`eventFragment`): `string`
+##### Parameters
+
+• **nameOrSignatureOrTopic**: `"Transfer"`
+
+##### Returns
+
+`EventFragment`
+
+##### Overrides
+
+`utils.Interface.getEvent`
+
+***
+
+### getEventTopic()
+
+> **getEventTopic**(`eventFragment`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventFragment` | `string` \| `EventFragment` |
+• **eventFragment**: `string` \| `EventFragment`
 
 #### Returns
 
@@ -848,19 +850,17 @@ ___
 
 #### Inherited from
 
-utils.Interface.getEventTopic
+`utils.Interface.getEventTopic`
 
-___
+***
 
-### getFunction
+### getFunction()
 
-▸ **getFunction**(`nameOrSignatureOrTopic`): `FunctionFragment`
+> **getFunction**(`nameOrSignatureOrTopic`): `FunctionFragment`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `nameOrSignatureOrTopic` | ``"symbol"`` \| ``"name"`` \| ``"allowance"`` \| ``"approve"`` \| ``"balanceOf"`` \| ``"decimals"`` \| ``"decreaseAllowance"`` \| ``"increaseAllowance"`` \| ``"totalSupply"`` \| ``"transfer"`` \| ``"transferFrom"`` |
+• **nameOrSignatureOrTopic**: `"symbol"` \| `"name"` \| `"allowance"` \| `"approve"` \| `"balanceOf"` \| `"decimals"` \| `"decreaseAllowance"` \| `"increaseAllowance"` \| `"totalSupply"` \| `"transfer"` \| `"transferFrom"`
 
 #### Returns
 
@@ -868,19 +868,17 @@ ___
 
 #### Overrides
 
-utils.Interface.getFunction
+`utils.Interface.getFunction`
 
-___
+***
 
-### getSighash
+### getSighash()
 
-▸ **getSighash**(`fragment`): `string`
+> **getSighash**(`fragment`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `fragment` | `string` \| `FunctionFragment` \| `ErrorFragment` |
+• **fragment**: `string` \| `FunctionFragment` \| `ErrorFragment`
 
 #### Returns
 
@@ -888,19 +886,17 @@ ___
 
 #### Inherited from
 
-utils.Interface.getSighash
+`utils.Interface.getSighash`
 
-___
+***
 
-### parseError
+### parseError()
 
-▸ **parseError**(`data`): `ErrorDescription`
+> **parseError**(`data`): `ErrorDescription`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `BytesLike` |
+• **data**: `BytesLike`
 
 #### Returns
 
@@ -908,21 +904,21 @@ ___
 
 #### Inherited from
 
-utils.Interface.parseError
+`utils.Interface.parseError`
 
-___
+***
 
-### parseLog
+### parseLog()
 
-▸ **parseLog**(`log`): `LogDescription`
+> **parseLog**(`log`): `LogDescription`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `log` | `Object` |
-| `log.data` | `string` |
-| `log.topics` | `string`[] |
+• **log**
+
+• **log.data**: `string`
+
+• **log.topics**: `string`[]
 
 #### Returns
 
@@ -930,21 +926,21 @@ ___
 
 #### Inherited from
 
-utils.Interface.parseLog
+`utils.Interface.parseLog`
 
-___
+***
 
-### parseTransaction
+### parseTransaction()
 
-▸ **parseTransaction**(`tx`): `TransactionDescription`
+> **parseTransaction**(`tx`): `TransactionDescription`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tx` | `Object` |
-| `tx.data` | `string` |
-| `tx.value?` | `BigNumberish` |
+• **tx**
+
+• **tx.data**: `string`
+
+• **tx.value?**: `BigNumberish`
 
 #### Returns
 
@@ -952,4 +948,4 @@ ___
 
 #### Inherited from
 
-utils.Interface.parseTransaction
+`utils.Interface.parseTransaction`

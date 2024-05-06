@@ -1,67 +1,30 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaSBTWrapper
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaSBTWrapper
 
 # Class: MasaSBTWrapper\<Contract\>
 
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBT` |
-
-## Hierarchy
+## Extends
 
 - `MasaLinkable`\<`Contract`\>
 
-  ↳ **`MasaSBTWrapper`**
+## Type parameters
 
-  ↳↳ [`MasaASBTWrapper`](MasaASBTWrapper.md)
-
-  ↳↳ [`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md)
-
-  ↳↳ [`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MasaSBTWrapper.md#constructor)
-
-### Properties
-
-- [contract](MasaSBTWrapper.md#contract)
-- [links](MasaSBTWrapper.md#links)
-- [masa](MasaSBTWrapper.md#masa)
-
-### Accessors
-
-- [isContractAvailable](MasaSBTWrapper.md#iscontractavailable)
-
-### Methods
-
-- [burn](MasaSBTWrapper.md#burn)
-- [list](MasaSBTWrapper.md#list)
-- [loadSBTIDs](MasaSBTWrapper.md#loadsbtids)
-- [loadSBTs](MasaSBTWrapper.md#loadsbts)
+• **Contract** *extends* `MasaSBT`
 
 ## Constructors
 
-### constructor
+### new MasaSBTWrapper()
 
-• **new MasaSBTWrapper**\<`Contract`\>(`masa`, `contract`): [`MasaSBTWrapper`](MasaSBTWrapper.md)\<`Contract`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBT` |
+> **new MasaSBTWrapper**\<`Contract`\>(`masa`, `contract`): [`MasaSBTWrapper`](MasaSBTWrapper.md)\<`Contract`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
-| `contract` | `Contract` |
+• **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+
+• **contract**: `Contract`
 
 #### Returns
 
@@ -69,112 +32,100 @@
 
 #### Inherited from
 
-MasaLinkable\<Contract\>.constructor
+`MasaLinkable<Contract>.constructor`
 
 ## Properties
 
 ### contract
 
-• `Readonly` **contract**: `Contract`
+> `readonly` **contract**: `Contract`
 
 #### Inherited from
 
-MasaLinkable.contract
+`MasaLinkable.contract`
 
-___
+***
 
 ### links
 
-• `Readonly` **links**: [`MasaSoulLinker`](MasaSoulLinker.md)
+> `readonly` **links**: [`MasaSoulLinker`](MasaSoulLinker.md)
 
 #### Inherited from
 
-MasaLinkable.links
+`MasaLinkable.links`
 
-___
+***
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-MasaLinkable.masa
+`MasaLinkable.masa`
 
 ## Accessors
 
 ### isContractAvailable
 
-• `get` **isContractAvailable**(): `boolean`
+> `get` **isContractAvailable**(): `boolean`
 
 #### Returns
 
 `boolean`
 
-#### Inherited from
-
-MasaLinkable.isContractAvailable
-
 ## Methods
 
-### burn
+### burn()
 
-▸ **burn**(`SBTId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+> **burn**(`SBTId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `SBTId` | `BigNumber` |
+• **SBTId**: `BigNumber`
 
 #### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
-___
+***
 
-### list
+### list()
 
-▸ **list**(`address?`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `address?` | `string` |
-
-#### Returns
-
-`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
-
-___
-
-### loadSBTIDs
-
-▸ **loadSBTIDs**(`sbtIDs`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+> **list**(`address`?): `Promise`\<`object`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `sbtIDs` | `BigNumber`[] |
+• **address?**: `string`
 
 #### Returns
 
-`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`\<`object`[]\>
 
-___
+***
 
-### loadSBTs
+### loadSBTIDs()
 
-▸ **loadSBTs**(`identityIdOrAddress`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+> `protected` **loadSBTIDs**(`sbtIDs`): `Promise`\<`object`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `identityIdOrAddress` | `string` \| `BigNumber` |
+• **sbtIDs**: `BigNumber`[]
 
 #### Returns
 
-`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`\<`object`[]\>
+
+***
+
+### loadSBTs()
+
+> `protected` **loadSBTs**(`identityIdOrAddress`): `Promise`\<`object`[]\>
+
+#### Parameters
+
+• **identityIdOrAddress**: `string` \| `BigNumber`
+
+#### Returns
+
+`Promise`\<`object`[]\>

@@ -1,49 +1,24 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaIdentity
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaIdentity
 
 # Class: MasaIdentity
 
-## Hierarchy
+## Extends
 
 - `MasaLinkable`\<`SoulboundIdentity`\>
 
-  ↳ **`MasaIdentity`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MasaIdentity.md#constructor)
-
-### Properties
-
-- [contract](MasaIdentity.md#contract)
-- [links](MasaIdentity.md#links)
-- [masa](MasaIdentity.md#masa)
-
-### Accessors
-
-- [isContractAvailable](MasaIdentity.md#iscontractavailable)
-
-### Methods
-
-- [burn](MasaIdentity.md#burn)
-- [create](MasaIdentity.md#create)
-- [createWithSoulName](MasaIdentity.md#createwithsoulname)
-- [load](MasaIdentity.md#load)
-- [show](MasaIdentity.md#show)
-
 ## Constructors
 
-### constructor
+### new MasaIdentity()
 
-• **new MasaIdentity**(`masa`): [`MasaIdentity`](MasaIdentity.md)
+> **new MasaIdentity**(`masa`): [`MasaIdentity`](MasaIdentity.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+• **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Returns
 
@@ -51,118 +26,119 @@
 
 #### Overrides
 
-MasaLinkable\&lt;SoulboundIdentity\&gt;.constructor
+`MasaLinkable<SoulboundIdentity>.constructor`
 
 ## Properties
 
 ### contract
 
-• `Readonly` **contract**: `SoulboundIdentity`
+> `readonly` **contract**: `SoulboundIdentity`
 
 #### Inherited from
 
-MasaLinkable.contract
+`MasaLinkable.contract`
 
-___
+***
 
 ### links
 
-• `Readonly` **links**: [`MasaSoulLinker`](MasaSoulLinker.md)
+> `readonly` **links**: [`MasaSoulLinker`](MasaSoulLinker.md)
 
 #### Inherited from
 
-MasaLinkable.links
+`MasaLinkable.links`
 
-___
+***
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-MasaLinkable.masa
+`MasaLinkable.masa`
 
 ## Accessors
 
 ### isContractAvailable
 
-• `get` **isContractAvailable**(): `boolean`
+> `get` **isContractAvailable**(): `boolean`
 
 #### Returns
 
 `boolean`
 
-#### Inherited from
-
-MasaLinkable.isContractAvailable
-
 ## Methods
 
-### burn
+### burn()
 
-▸ **burn**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+> **burn**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
-___
+***
 
-### create
+### create()
 
-▸ **create**(): `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
+> **create**(): `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
 #### Returns
 
 `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
-___
+***
 
-### createWithSoulName
+### createWithSoulName()
 
-▸ **createWithSoulName**(`paymentMethod`, `soulName`, `duration`, `style?`): `Promise`\<\{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
+> **createWithSoulName**(`paymentMethod`, `soulName`, `duration`, `style`?): `Promise`\<`object` & [`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-| `soulName` | `string` |
-| `duration` | `number` |
-| `style?` | `string` |
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)
+
+• **soulName**: `string`
+
+• **duration**: `number`
+
+• **style?**: `string`
 
 #### Returns
 
-`Promise`\<\{ `identityId?`: `string` \| `BigNumber`  } & [`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
+`Promise`\<`object` & [`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
 
-___
+***
 
-### load
+### load()
 
-▸ **load**(`address?`): `Promise`\<\{ `address`: `string` ; `identityId?`: `BigNumber`  }\>
+> **load**(`address`?): `Promise`\<`object`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `address?` | `string` |
+• **address?**: `string`
 
 #### Returns
 
-`Promise`\<\{ `address`: `string` ; `identityId?`: `BigNumber`  }\>
+`Promise`\<`object`\>
 
-___
+##### address
 
-### show
+> **address**: `string`
 
-▸ **show**(`address?`): `Promise`\<`undefined` \| [`IdentityDetails`](../interfaces/IdentityDetails.md)\>
+##### identityId?
+
+> `optional` **identityId**: `BigNumber`
+
+***
+
+### show()
+
+> **show**(`address`?): `Promise`\<`undefined` \| [`IdentityDetails`](../interfaces/IdentityDetails.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `address?` | `string` |
+• **address?**: `string`
 
 #### Returns
 

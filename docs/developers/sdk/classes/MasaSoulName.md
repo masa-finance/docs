@@ -1,57 +1,24 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaSoulName
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaSoulName
 
 # Class: MasaSoulName
 
-## Hierarchy
+## Extends
 
 - `MasaModuleBase`
 
-  ↳ **`MasaSoulName`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MasaSoulName.md#constructor)
-
-### Properties
-
-- [contract](MasaSoulName.md#contract)
-- [masa](MasaSoulName.md#masa)
-
-### Accessors
-
-- [isContractAvailable](MasaSoulName.md#iscontractavailable)
-
-### Methods
-
-- [burn](MasaSoulName.md#burn)
-- [create](MasaSoulName.md#create)
-- [getSoulNameMetadataPrefix](MasaSoulName.md#getsoulnamemetadataprefix)
-- [list](MasaSoulName.md#list)
-- [loadSoulNameByName](MasaSoulName.md#loadsoulnamebyname)
-- [loadSoulNameByTokenId](MasaSoulName.md#loadsoulnamebytokenid)
-- [loadSoulNames](MasaSoulName.md#loadsoulnames)
-- [loadSoulNamesWithExpired](MasaSoulName.md#loadsoulnameswithexpired)
-- [renew](MasaSoulName.md#renew)
-- [resolve](MasaSoulName.md#resolve)
-- [send](MasaSoulName.md#send)
-- [tail](MasaSoulName.md#tail)
-- [validate](MasaSoulName.md#validate)
-- [verify](MasaSoulName.md#verify)
-
 ## Constructors
 
-### constructor
+### new MasaSoulName()
 
-• **new MasaSoulName**(`masa`): [`MasaSoulName`](MasaSoulName.md)
+> **new MasaSoulName**(`masa`): [`MasaSoulName`](MasaSoulName.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+• **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Returns
 
@@ -59,268 +26,274 @@
 
 #### Overrides
 
-MasaModuleBase.constructor
+`MasaModuleBase.constructor`
 
 ## Properties
 
 ### contract
 
-• `Readonly` **contract**: `Contract` & [`ContractInfo`](../interfaces/ContractInfo.md)
+> `readonly` **contract**: `Contract` & [`ContractInfo`](../interfaces/ContractInfo.md)
 
 #### Inherited from
 
-MasaModuleBase.contract
+`MasaModuleBase.contract`
 
-___
+***
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-MasaModuleBase.masa
+`MasaModuleBase.masa`
 
 ## Accessors
 
 ### isContractAvailable
 
-• `get` **isContractAvailable**(): `boolean`
+> `get` **isContractAvailable**(): `boolean`
 
 #### Returns
 
 `boolean`
 
-#### Inherited from
-
-MasaModuleBase.isContractAvailable
-
 ## Methods
 
-### burn
+### burn()
 
-▸ **burn**(`soulName`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+> **burn**(`soulName`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `soulName` | `string` |
+• **soulName**: `string`
 
 #### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
-___
+***
 
-### create
+### create()
 
-▸ **create**(`paymentMethod?`, `soulName`, `duration`, `receiver?`, `style?`): `Promise`\<[`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
+> **create**(`paymentMethod`, `soulName`, `duration`, `receiver`?, `style`?): `Promise`\<[`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"ETH"` |
-| `soulName` | `string` | `undefined` |
-| `duration` | `number` | `undefined` |
-| `receiver?` | `string` | `undefined` |
-| `style?` | `string` | `undefined` |
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)= `"ETH"`
+
+• **soulName**: `string`
+
+• **duration**: `number`
+
+• **receiver?**: `string`
+
+• **style?**: `string`
 
 #### Returns
 
 `Promise`\<[`CreateSoulNameResult`](../interfaces/CreateSoulNameResult.md)\>
 
-___
+***
 
-### getSoulNameMetadataPrefix
+### getSoulNameMetadataPrefix()
 
-▸ **getSoulNameMetadataPrefix**(): `string`
+> **getSoulNameMetadataPrefix**(): `string`
 
 #### Returns
 
 `string`
 
-___
+***
 
-### list
+### list()
 
-▸ **list**(`address?`): `Promise`\<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
+> **list**(`address`?): `Promise`\<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `address?` | `string` |
+• **address?**: `string`
 
 #### Returns
 
 `Promise`\<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
 
-___
+***
 
-### loadSoulNameByName
+### loadSoulNameByName()
 
-▸ **loadSoulNameByName**(`soulName`): `Promise`\<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
+> **loadSoulNameByName**(`soulName`): `Promise`\<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `soulName` | `string` |
+• **soulName**: `string`
 
 #### Returns
 
 `Promise`\<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
 
-___
+***
 
-### loadSoulNameByTokenId
+### loadSoulNameByTokenId()
 
-▸ **loadSoulNameByTokenId**(`tokenId`): `Promise`\<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
+> **loadSoulNameByTokenId**(`tokenId`): `Promise`\<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tokenId` | `string` \| `BigNumber` |
+• **tokenId**: `string` \| `BigNumber`
 
 #### Returns
 
 `Promise`\<`undefined` \| [`SoulNameDetails`](../interfaces/SoulNameDetails.md)\>
 
-___
+***
 
-### loadSoulNames
+### loadSoulNames()
 
-▸ **loadSoulNames**(`identityIdOrAddress`): `Promise`\<`string`[]\>
+> **loadSoulNames**(`identityIdOrAddress`): `Promise`\<`string`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `identityIdOrAddress` | `string` \| `BigNumber` |
+• **identityIdOrAddress**: `string` \| `BigNumber`
 
 #### Returns
 
 `Promise`\<`string`[]\>
 
-___
+***
 
-### loadSoulNamesWithExpired
+### loadSoulNamesWithExpired()
 
-▸ **loadSoulNamesWithExpired**(`identityIdOrAddress`): `Promise`\<`string`[]\>
+> **loadSoulNamesWithExpired**(`identityIdOrAddress`): `Promise`\<`string`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `identityIdOrAddress` | `string` \| `BigNumber` |
+• **identityIdOrAddress**: `string` \| `BigNumber`
 
 #### Returns
 
 `Promise`\<`string`[]\>
 
-___
+***
 
-### renew
+### renew()
 
-▸ **renew**(`soulName`, `years`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+> **renew**(`soulName`, `years`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `soulName` | `string` |
-| `years` | `number` |
+• **soulName**: `string`
+
+• **years**: `number`
 
 #### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
-___
+***
 
-### resolve
+### resolve()
 
-▸ **resolve**(`soulName`): `Promise`\<`undefined` \| `string`\>
+> **resolve**(`soulName`): `Promise`\<`undefined` \| `string`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `soulName` | `string` |
+• **soulName**: `string`
 
 #### Returns
 
 `Promise`\<`undefined` \| `string`\>
 
-___
+***
 
-### send
+### send()
 
-▸ **send**(`soulName`, `receiver`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+> **send**(`soulName`, `receiver`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `soulName` | `string` |
-| `receiver` | `string` |
+• **soulName**: `string`
+
+• **receiver**: `string`
 
 #### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
-___
+***
 
-### tail
+### tail()
 
-▸ **tail**(`limit?`): `Promise`\<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
+> **tail**(`limit`?): `Promise`\<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `limit?` | `number` |
+• **limit?**: `number`
 
 #### Returns
 
 `Promise`\<[`SoulNameDetails`](../interfaces/SoulNameDetails.md)[]\>
 
-___
+***
 
-### validate
+### validate()
 
-▸ **validate**(`soulName`): `Object`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `soulName` | `string` |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `isValid` | `boolean` |
-| `length` | `number` |
-| `message?` | `string` |
-
-___
-
-### verify
-
-▸ **verify**(`soulName`): `Promise`\<\{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\>
+> **validate**(`soulName`): `object`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `soulName` | `string` |
+• **soulName**: `string`
 
 #### Returns
 
-`Promise`\<\{ `imageHashMatch`: `boolean` ; `imageOwnerIsMasaAccount`: `boolean` ; `imageSignatureMatch`: `boolean` ; `metadataOwnerIsMasaAccount`: `boolean` ; `metadataSignatureMatch`: `boolean` ; `nameMatch`: `boolean`  }\>
+`object`
+
+##### isValid
+
+> **isValid**: `boolean`
+
+##### length
+
+> **length**: `number`
+
+##### message?
+
+> `optional` **message**: `string`
+
+***
+
+### verify()
+
+> **verify**(`soulName`): `Promise`\<`object`\>
+
+#### Parameters
+
+• **soulName**: `string`
+
+#### Returns
+
+`Promise`\<`object`\>
+
+##### imageHashMatch
+
+> **imageHashMatch**: `boolean`
+
+##### imageOwnerIsMasaAccount
+
+> **imageOwnerIsMasaAccount**: `boolean`
+
+##### imageSignatureMatch
+
+> **imageSignatureMatch**: `boolean`
+
+##### metadataOwnerIsMasaAccount
+
+> **metadataOwnerIsMasaAccount**: `boolean`
+
+##### metadataSignatureMatch
+
+> **metadataSignatureMatch**: `boolean`
+
+##### nameMatch
+
+> **nameMatch**: `boolean`

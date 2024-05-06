@@ -1,58 +1,49 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaConfig
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaConfig
 
 # Interface: MasaConfig
-
-## Table of contents
-
-### Properties
-
-- [apiUrl](MasaConfig.md#apiurl)
-- [environment](MasaConfig.md#environment)
-- [forceTransactions](MasaConfig.md#forcetransactions)
-- [network](MasaConfig.md#network)
-- [networkName](MasaConfig.md#networkname)
-- [signer](MasaConfig.md#signer)
-- [verbose](MasaConfig.md#verbose)
 
 ## Properties
 
 ### apiUrl
 
-• `Readonly` **apiUrl**: `string`
+> `readonly` **apiUrl**: `string`
 
-___
+***
 
 ### environment
 
-• `Readonly` **environment**: `string`
+> `readonly` **environment**: `string`
 
-___
+***
 
 ### forceTransactions
 
-• `Readonly` **forceTransactions**: `boolean`
+> `readonly` **forceTransactions**: `boolean`
 
-___
+***
 
-### network
+### network?
 
-• `Optional` `Readonly` **network**: [`Network`](Network.md)
+> `optional` `readonly` **network**: [`Network`](Network.md)
 
-___
+***
 
 ### networkName
 
-• `Readonly` **networkName**: [`NetworkName`](../modules.md#networkname)
+> `readonly` **networkName**: [`NetworkName`](../type-aliases/NetworkName.md)
 
-___
+***
 
 ### signer
 
-• `Readonly` **signer**: `Signer`
+> `readonly` **signer**: `Signer`
 
-___
+***
 
 ### verbose
 
-• `Readonly` **verbose**: `boolean`
+> `readonly` **verbose**: `boolean`

@@ -1,29 +1,23 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / ChallengeResult
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / ChallengeResult
 
 # Interface: ChallengeResult
 
-## Hierarchy
+## Extended by
 
-- **`ChallengeResult`**
-
-  ↳ [`ChallengeResultWithCookie`](ChallengeResultWithCookie.md)
-
-## Table of contents
-
-### Properties
-
-- [challenge](ChallengeResult.md#challenge)
-- [expires](ChallengeResult.md#expires)
+- [`ChallengeResultWithCookie`](ChallengeResultWithCookie.md)
 
 ## Properties
 
 ### challenge
 
-• **challenge**: `string`
+> **challenge**: `string`
 
-___
+***
 
 ### expires
 
-• **expires**: `string`
+> **expires**: `string`

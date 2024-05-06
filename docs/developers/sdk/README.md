@@ -1,5 +1,6 @@
-# Masa SDK
- / [Exports](modules.md)
+**# Masa SDK v3.36.1** • [**Docs**](globals.md)
+
+***
 
 <!-- TOC -->
 

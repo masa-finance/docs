@@ -1,30 +1,25 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / GreenDetails
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / GreenDetails
 
 # Interface: GreenDetails
 
-## Table of contents
-
-### Properties
-
-- [metadata](GreenDetails.md#metadata)
-- [tokenId](GreenDetails.md#tokenid)
-- [tokenUri](GreenDetails.md#tokenuri)
-
 ## Properties
 
-### metadata
+### metadata?
 
-• `Optional` **metadata**: [`IGreen`](IGreen.md)
+> `optional` **metadata**: [`IGreen`](IGreen.md)
 
-___
+***
 
 ### tokenId
 
-• **tokenId**: `BigNumber`
+> **tokenId**: `BigNumber`
 
-___
+***
 
 ### tokenUri
 
-• **tokenUri**: `string`
+> **tokenUri**: `string`

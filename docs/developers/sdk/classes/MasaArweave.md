@@ -1,60 +1,26 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaArweave
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaArweave
 
 # Class: MasaArweave
 
-## Hierarchy
+## Extends
 
 - `default`
 
-  ↳ **`MasaArweave`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MasaArweave.md#constructor)
-
-### Properties
-
-- [api](MasaArweave.md#api)
-- [ar](MasaArweave.md#ar)
-- [blocks](MasaArweave.md#blocks)
-- [chunks](MasaArweave.md#chunks)
-- [masaConfig](MasaArweave.md#masaconfig)
-- [network](MasaArweave.md#network)
-- [silo](MasaArweave.md#silo)
-- [transactions](MasaArweave.md#transactions)
-- [wallets](MasaArweave.md#wallets)
-- [crypto](MasaArweave.md#crypto)
-- [init](MasaArweave.md#init)
-- [utils](MasaArweave.md#utils)
-
-### Accessors
-
-- [crypto](MasaArweave.md#crypto-1)
-- [utils](MasaArweave.md#utils-1)
-
-### Methods
-
-- [arql](MasaArweave.md#arql)
-- [createSiloTransaction](MasaArweave.md#createsilotransaction)
-- [createTransaction](MasaArweave.md#createtransaction)
-- [getConfig](MasaArweave.md#getconfig)
-- [loadTransactionData](MasaArweave.md#loadtransactiondata)
-
 ## Constructors
 
-### constructor
+### new MasaArweave()
 
-• **new MasaArweave**(`config`, `masaConfig`): [`MasaArweave`](MasaArweave.md)
+> **new MasaArweave**(`config`, `masaConfig`): [`MasaArweave`](MasaArweave.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `config` | `ApiConfig` |
-| `masaConfig` | [`MasaConfig`](../interfaces/MasaConfig.md) |
+• **config**: `ApiConfig`
+
+• **masaConfig**: [`MasaConfig`](../interfaces/MasaConfig.md)
 
 #### Returns
 
@@ -62,181 +28,165 @@
 
 #### Overrides
 
-Arweave.constructor
+`Arweave.constructor`
 
 ## Properties
 
 ### api
 
-• **api**: `default`
+> **api**: `default`
 
 #### Inherited from
 
-Arweave.api
+`Arweave.api`
 
-___
+***
 
 ### ar
 
-• **ar**: `default`
+> **ar**: `default`
 
 #### Inherited from
 
-Arweave.ar
+`Arweave.ar`
 
-___
+***
 
 ### blocks
 
-• **blocks**: `default`
+> **blocks**: `default`
 
 #### Inherited from
 
-Arweave.blocks
+`Arweave.blocks`
 
-___
+***
 
 ### chunks
 
-• **chunks**: `default`
+> **chunks**: `default`
 
 #### Inherited from
 
-Arweave.chunks
+`Arweave.chunks`
 
-___
+***
 
 ### masaConfig
 
-• `Private` **masaConfig**: [`MasaConfig`](../interfaces/MasaConfig.md)
+> `private` **masaConfig**: [`MasaConfig`](../interfaces/MasaConfig.md)
 
-___
+***
 
 ### network
 
-• **network**: `default`
+> **network**: `default`
 
 #### Inherited from
 
-Arweave.network
+`Arweave.network`
 
-___
+***
 
 ### silo
 
-• **silo**: `default`
+> **silo**: `default`
 
 #### Inherited from
 
-Arweave.silo
+`Arweave.silo`
 
-___
+***
 
 ### transactions
 
-• **transactions**: `default`
+> **transactions**: `default`
 
 #### Inherited from
 
-Arweave.transactions
+`Arweave.transactions`
 
-___
+***
 
 ### wallets
 
-• **wallets**: `default`
+> **wallets**: `default`
 
 #### Inherited from
 
-Arweave.wallets
+`Arweave.wallets`
 
-___
+***
 
 ### crypto
 
-▪ `Static` **crypto**: `default`
+> `static` **crypto**: `default`
 
 #### Inherited from
 
-Arweave.crypto
+`Arweave.crypto`
 
-___
+***
 
-### init
+### init()
 
-▪ `Static` **init**: (`apiConfig`: `ApiConfig`) => `default`
+> `static` **init**: (`apiConfig`) => `default`
 
-#### Type declaration
+#### Parameters
 
-▸ (`apiConfig`): `default`
+• **apiConfig**: `ApiConfig`
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `apiConfig` | `ApiConfig` |
-
-##### Returns
+#### Returns
 
 `default`
 
 #### Inherited from
 
-Arweave.init
+`Arweave.init`
 
-___
+***
 
 ### utils
 
-▪ `Static` **utils**: `__module`
+> `static` **utils**: `__module`
 
 #### Inherited from
 
-Arweave.utils
+`Arweave.utils`
 
 ## Accessors
 
 ### crypto
 
-• `get` **crypto**(): `default`
+> `get` **crypto**(): `default`
+
+#### Deprecated
 
 #### Returns
 
 `default`
 
-**`Deprecated`**
-
-#### Inherited from
-
-Arweave.crypto
-
-___
+***
 
 ### utils
 
-• `get` **utils**(): `__module`
+> `get` **utils**(): `__module`
+
+#### Deprecated
 
 #### Returns
 
 `__module`
 
-**`Deprecated`**
-
-#### Inherited from
-
-Arweave.utils
-
 ## Methods
 
-### arql
+### arql()
 
-▸ **arql**(`query`): `Promise`\<`string`[]\>
+> **arql**(`query`): `Promise`\<`string`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `query` | `object` |
+• **query**: `object`
 
 #### Returns
 
@@ -244,21 +194,21 @@ Arweave.utils
 
 #### Inherited from
 
-Arweave.arql
+`Arweave.arql`
 
-___
+***
 
-### createSiloTransaction
+### createSiloTransaction()
 
-▸ **createSiloTransaction**(`attributes`, `jwk`, `siloUri`): `Promise`\<`default`\>
+> **createSiloTransaction**(`attributes`, `jwk`, `siloUri`): `Promise`\<`default`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `attributes` | `Partial`\<`CreateTransactionInterface`\> |
-| `jwk` | `JWKInterface` |
-| `siloUri` | `string` |
+• **attributes**: `Partial`\<`CreateTransactionInterface`\>
+
+• **jwk**: `JWKInterface`
+
+• **siloUri**: `string`
 
 #### Returns
 
@@ -266,20 +216,19 @@ ___
 
 #### Inherited from
 
-Arweave.createSiloTransaction
+`Arweave.createSiloTransaction`
 
-___
+***
 
-### createTransaction
+### createTransaction()
 
-▸ **createTransaction**(`attributes`, `jwk?`): `Promise`\<`default`\>
+> **createTransaction**(`attributes`, `jwk`?): `Promise`\<`default`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `attributes` | `Partial`\<`CreateTransactionInterface`\> |
-| `jwk?` | `JWKInterface` \| ``"use_wallet"`` |
+• **attributes**: `Partial`\<`CreateTransactionInterface`\>
+
+• **jwk?**: `JWKInterface` \| `"use_wallet"`
 
 #### Returns
 
@@ -287,13 +236,13 @@ ___
 
 #### Inherited from
 
-Arweave.createTransaction
+`Arweave.createTransaction`
 
-___
+***
 
-### getConfig
+### getConfig()
 
-▸ **getConfig**(): `Config`
+> **getConfig**(): `Config`
 
 #### Returns
 
@@ -301,20 +250,19 @@ ___
 
 #### Inherited from
 
-Arweave.getConfig
+`Arweave.getConfig`
 
-___
+***
 
-### loadTransactionData
+### loadTransactionData()
 
-▸ **loadTransactionData**(`txId`, `isString?`): `Promise`\<`undefined` \| `object` \| `Uint8Array`\>
+> **loadTransactionData**(`txId`, `isString`): `Promise`\<`undefined` \| `object` \| `Uint8Array`\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `txId` | `string` | `undefined` |
-| `isString` | `boolean` | `true` |
+• **txId**: `string`
+
+• **isString**: `boolean`= `true`
 
 #### Returns
 

@@ -1,23 +1,19 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / SessionUser
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / SessionUser
 
 # Interface: SessionUser
-
-## Table of contents
-
-### Properties
-
-- [address](SessionUser.md#address)
-- [userId](SessionUser.md#userid)
 
 ## Properties
 
 ### address
 
-• **address**: `string`
+> **address**: `string`
 
-___
+***
 
 ### userId
 
-• **userId**: `string`
+> **userId**: `string`

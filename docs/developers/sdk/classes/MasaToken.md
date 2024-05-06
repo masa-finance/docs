@@ -1,43 +1,24 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaToken
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaToken
 
 # Class: MasaToken
 
-## Hierarchy
+## Extends
 
 - `MasaBase`
 
-  ↳ **`MasaToken`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MasaToken.md#constructor)
-
-### Properties
-
-- [masa](MasaToken.md#masa)
-
-### Methods
-
-- [deposit](MasaToken.md#deposit)
-- [getSwapParameters](MasaToken.md#getswapparameters)
-- [getSwapQuote](MasaToken.md#getswapquote)
-- [swap](MasaToken.md#swap)
-- [withdraw](MasaToken.md#withdraw)
-
 ## Constructors
 
-### constructor
+### new MasaToken()
 
-• **new MasaToken**(`masa`): [`MasaToken`](MasaToken.md)
+> **new MasaToken**(`masa`): [`MasaToken`](MasaToken.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+• **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Returns
 
@@ -45,104 +26,164 @@
 
 #### Inherited from
 
-MasaBase.constructor
+`MasaBase.constructor`
 
 ## Properties
 
-### masa
+### bridge
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> **bridge**: `object`
 
-#### Inherited from
+#### getSendParameters()
 
-MasaBase.masa
+> **getSendParameters**: (`eid`, `receiverAddress`, `tokenAmount`, `slippage`?) => `object`
 
-## Methods
+Get send parameters
 
-### deposit
+##### Parameters
 
-▸ **deposit**(`amount`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+• **eid**: `EndpointId`
 
-#### Parameters
+• **receiverAddress**: `string`
 
-| Name | Type |
-| :------ | :------ |
-| `amount` | `string` |
+• **tokenAmount**: `BigNumber`
 
-#### Returns
+• **slippage?**: `number`
 
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+##### Returns
 
-___
+`object`
 
-### getSwapParameters
+###### sendParameters
 
-▸ **getSwapParameters**(`eid`, `receiverAddress`, `tokenAmount`, `slippage?`): `Object`
+> **sendParameters**: `SendParamStruct` \| `SendParamStruct` \| `SendParamStruct`
 
-#### Parameters
+###### slippage
 
-| Name | Type |
-| :------ | :------ |
-| `eid` | `EndpointId` |
-| `receiverAddress` | `string` |
-| `tokenAmount` | `BigNumber` |
-| `slippage?` | `number` |
+> **slippage**: `number`
 
-#### Returns
+#### getSendQuote()
 
-`Object`
+> **getSendQuote**: (`sendParameters`) => `Promise`\<[`BaseResult`](../interfaces/BaseResult.md) \| [`QuoteResult`](../interfaces/QuoteResult.md)\>
 
-| Name | Type |
-| :------ | :------ |
-| `sendParameters` | `SendParamStruct` \| `SendParamStruct` \| `SendParamStruct` |
-| `slippage` | `number` |
+Get send quote
 
-___
+##### Parameters
 
-### getSwapQuote
+• **sendParameters**: `SendParamStruct` \| `SendParamStruct` \| `SendParamStruct`
 
-▸ **getSwapQuote**(`sendParameters`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md) \| [`QuoteResult`](../interfaces/QuoteResult.md)\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `sendParameters` | `SendParamStruct` \| `SendParamStruct` \| `SendParamStruct` |
-
-#### Returns
+##### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md) \| [`QuoteResult`](../interfaces/QuoteResult.md)\>
 
-___
+#### send()
 
-### swap
+> **send**: (`to`, `amount`, `slippage`?) => `Promise`\<[`SendResult`](../interfaces/SendResult.md)\>
 
-▸ **swap**(`to`, `amount`, `slippage?`): `Promise`\<[`SwapResult`](../interfaces/SwapResult.md)\>
+Send
 
-#### Parameters
+##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `to` | [`NetworkName`](../modules.md#networkname) |
-| `amount` | `string` |
-| `slippage?` | `number` |
+• **to**: [`NetworkName`](../type-aliases/NetworkName.md)
 
-#### Returns
+• **amount**: `string`
 
-`Promise`\<[`SwapResult`](../interfaces/SwapResult.md)\>
+• **slippage?**: `number`
 
-___
+##### Returns
 
-### withdraw
+`Promise`\<[`SendResult`](../interfaces/SendResult.md)\>
 
-▸ **withdraw**(`amount`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+***
 
-#### Parameters
+### masa
 
-| Name | Type |
-| :------ | :------ |
-| `amount` | `string` |
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
-#### Returns
+#### Inherited from
+
+`MasaBase.masa`
+
+***
+
+### staking
+
+> **staking**: `object`
+
+#### show()
+
+> **show**: (`address`?) => `Promise`\<[`BaseResult`](../interfaces/BaseResult.md) & `object`\>
+
+Show stakes
+
+##### Parameters
+
+• **address?**: `string`
+
+##### Returns
+
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md) & `object`\>
+
+#### stake()
+
+> **stake**: (`amount`, `duration`) => `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+Stake
+
+##### Parameters
+
+• **amount**: `string`
+
+• **duration**: `number`
+
+##### Returns
+
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+#### unstake()
+
+> **unstake**: (`index`) => `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+Unstake
+
+##### Parameters
+
+• **index**: `number`
+
+##### Returns
+
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+***
+
+### wrap
+
+> **wrap**: `object`
+
+#### deposit()
+
+> **deposit**: (`amount`) => `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+Deposit
+
+##### Parameters
+
+• **amount**: `string`
+
+##### Returns
+
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+#### withdraw()
+
+> **withdraw**: (`amount`) => `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+Withdraw
+
+##### Parameters
+
+• **amount**: `string`
+
+##### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>

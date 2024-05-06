@@ -1,62 +1,53 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / UpdateCreditScoreResult
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / UpdateCreditScoreResult
 
 # Interface: UpdateCreditScoreResult
 
-## Hierarchy
+## Extends
 
 - [`BaseResultWithTokenId`](BaseResultWithTokenId.md)
 
-  ↳ **`UpdateCreditScoreResult`**
-
-## Table of contents
-
-### Properties
-
-- [message](UpdateCreditScoreResult.md#message)
-- [signature](UpdateCreditScoreResult.md#signature)
-- [status](UpdateCreditScoreResult.md#status)
-- [success](UpdateCreditScoreResult.md#success)
-- [tokenId](UpdateCreditScoreResult.md#tokenid)
-
 ## Properties
 
-### message
+### message?
 
-• `Optional` **message**: `string`
+> `optional` **message**: `string`
 
 #### Inherited from
 
-[BaseResultWithTokenId](BaseResultWithTokenId.md).[message](BaseResultWithTokenId.md#message)
+[`BaseResultWithTokenId`](BaseResultWithTokenId.md).[`message`](BaseResultWithTokenId.md#message)
 
-___
+***
 
-### signature
+### signature?
 
-• `Optional` **signature**: `string`
+> `optional` **signature**: `string`
 
-___
+***
 
-### status
+### status?
 
-• `Optional` **status**: `string`
+> `optional` **status**: `string`
 
-___
+***
 
 ### success
 
-• **success**: `boolean`
+> **success**: `boolean`
 
 #### Inherited from
 
-[BaseResultWithTokenId](BaseResultWithTokenId.md).[success](BaseResultWithTokenId.md#success)
+[`BaseResultWithTokenId`](BaseResultWithTokenId.md).[`success`](BaseResultWithTokenId.md#success)
 
-___
+***
 
-### tokenId
+### tokenId?
 
-• `Optional` **tokenId**: `string` \| `BigNumber`
+> `optional` **tokenId**: `string` \| `BigNumber`
 
 #### Inherited from
 
-[BaseResultWithTokenId](BaseResultWithTokenId.md).[tokenId](BaseResultWithTokenId.md#tokenid)
+[`BaseResultWithTokenId`](BaseResultWithTokenId.md).[`tokenId`](BaseResultWithTokenId.md#tokenid)

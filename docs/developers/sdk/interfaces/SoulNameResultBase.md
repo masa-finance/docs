@@ -1,59 +1,47 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / SoulNameResultBase
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / SoulNameResultBase
 
 # Interface: SoulNameResultBase
 
-## Hierarchy
+## Extends
 
 - [`BaseResultWithTokenId`](BaseResultWithTokenId.md)
-
-  ↳ **`SoulNameResultBase`**
-
-  ↳↳ [`CreateSoulNameResult`](CreateSoulNameResult.md)
-
-  ↳↳ [`SoulNameMetadataStoreResult`](SoulNameMetadataStoreResult.md)
-
-## Table of contents
-
-### Properties
-
-- [errorCode](SoulNameResultBase.md#errorcode)
-- [message](SoulNameResultBase.md#message)
-- [success](SoulNameResultBase.md#success)
-- [tokenId](SoulNameResultBase.md#tokenid)
 
 ## Properties
 
 ### errorCode
 
-• **errorCode**: [`SoulNameErrorCodes`](../enums/SoulNameErrorCodes.md)
+> **errorCode**: [`SoulNameErrorCodes`](../enumerations/SoulNameErrorCodes.md)
 
-___
+***
 
-### message
+### message?
 
-• `Optional` **message**: `string`
+> `optional` **message**: `string`
 
 #### Inherited from
 
-[BaseResultWithTokenId](BaseResultWithTokenId.md).[message](BaseResultWithTokenId.md#message)
+[`BaseResultWithTokenId`](BaseResultWithTokenId.md).[`message`](BaseResultWithTokenId.md#message)
 
-___
+***
 
 ### success
 
-• **success**: `boolean`
+> **success**: `boolean`
 
 #### Inherited from
 
-[BaseResultWithTokenId](BaseResultWithTokenId.md).[success](BaseResultWithTokenId.md#success)
+[`BaseResultWithTokenId`](BaseResultWithTokenId.md).[`success`](BaseResultWithTokenId.md#success)
 
-___
+***
 
-### tokenId
+### tokenId?
 
-• `Optional` **tokenId**: `string` \| `BigNumber`
+> `optional` **tokenId**: `string` \| `BigNumber`
 
 #### Inherited from
 
-[BaseResultWithTokenId](BaseResultWithTokenId.md).[tokenId](BaseResultWithTokenId.md#tokenid)
+[`BaseResultWithTokenId`](BaseResultWithTokenId.md).[`tokenId`](BaseResultWithTokenId.md#tokenid)

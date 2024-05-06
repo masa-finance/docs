@@ -1,84 +1,73 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / GenerateGreenResult
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / GenerateGreenResult
 
 # Interface: GenerateGreenResult
 
-## Hierarchy
+## Extends
 
 - [`GreenBaseResult`](GreenBaseResult.md)
 
-  ↳ **`GenerateGreenResult`**
-
-## Table of contents
-
-### Properties
-
-- [channel](GenerateGreenResult.md#channel)
-- [data](GenerateGreenResult.md#data)
-- [errorCode](GenerateGreenResult.md#errorcode)
-- [message](GenerateGreenResult.md#message)
-- [status](GenerateGreenResult.md#status)
-- [success](GenerateGreenResult.md#success)
-- [tokenId](GenerateGreenResult.md#tokenid)
-
 ## Properties
 
-### channel
+### channel?
 
-• `Optional` **channel**: `string`
+> `optional` **channel**: `string`
 
-___
+***
 
-### data
+### data?
 
-• `Optional` **data**: `unknown`[]
+> `optional` **data**: `unknown`[]
 
-___
+***
 
-### errorCode
+### errorCode?
 
-• `Optional` **errorCode**: `number`
-
-#### Inherited from
-
-[GreenBaseResult](GreenBaseResult.md).[errorCode](GreenBaseResult.md#errorcode)
-
-___
-
-### message
-
-• `Optional` **message**: `string`
+> `optional` **errorCode**: `number`
 
 #### Inherited from
 
-[GreenBaseResult](GreenBaseResult.md).[message](GreenBaseResult.md#message)
+[`GreenBaseResult`](GreenBaseResult.md).[`errorCode`](GreenBaseResult.md#errorcode)
 
-___
+***
 
-### status
+### message?
 
-• `Optional` **status**: `string`
+> `optional` **message**: `string`
 
 #### Inherited from
 
-[GreenBaseResult](GreenBaseResult.md).[status](GreenBaseResult.md#status)
+[`GreenBaseResult`](GreenBaseResult.md).[`message`](GreenBaseResult.md#message)
 
-___
+***
+
+### status?
+
+> `optional` **status**: `string`
+
+#### Inherited from
+
+[`GreenBaseResult`](GreenBaseResult.md).[`status`](GreenBaseResult.md#status)
+
+***
 
 ### success
 
-• **success**: `boolean`
+> **success**: `boolean`
 
 #### Inherited from
 
-[GreenBaseResult](GreenBaseResult.md).[success](GreenBaseResult.md#success)
+[`GreenBaseResult`](GreenBaseResult.md).[`success`](GreenBaseResult.md#success)
 
-___
+***
 
-### tokenId
+### tokenId?
 
-• `Optional` **tokenId**: `string` \| `BigNumber`
+> `optional` **tokenId**: `string` \| `BigNumber`
 
 #### Inherited from
 
-[GreenBaseResult](GreenBaseResult.md).[tokenId](GreenBaseResult.md#tokenid)
+[`GreenBaseResult`](GreenBaseResult.md).[`tokenId`](GreenBaseResult.md#tokenid)

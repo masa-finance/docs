@@ -1,23 +1,16 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / ContractFactory
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
 
-# Class: ContractFactory
+***
 
-## Table of contents
+[# Masa SDK v3.36.1](../globals.md) / ContractFactory
 
-### Constructors
-
-- [constructor](ContractFactory.md#constructor)
-
-### Properties
-
-- [connect](ContractFactory.md#connect)
+# Class: `abstract` ContractFactory
 
 ## Constructors
 
-### constructor
+### new ContractFactory()
 
-• **new ContractFactory**(): [`ContractFactory`](ContractFactory.md)
+> **new ContractFactory**(): [`ContractFactory`](ContractFactory.md)
 
 #### Returns
 
@@ -25,27 +18,20 @@
 
 ## Properties
 
-### connect
+### connect()
 
-▪ `Static` **connect**: \<Contract\>(`address`: `string`, `signerOrProvider`: `Signer`) => `Contract`
+> `static` **connect**: \<`Contract`\>(`address`, `signerOrProvider`) => `Contract`
 
-#### Type declaration
+#### Type parameters
 
-▸ \<`Contract`\>(`address`, `signerOrProvider`): `Contract`
+• **Contract**
 
-##### Type parameters
+#### Parameters
 
-| Name |
-| :------ |
-| `Contract` |
+• **address**: `string`
 
-##### Parameters
+• **signerOrProvider**: `Signer`
 
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `signerOrProvider` | `Signer` |
-
-##### Returns
+#### Returns
 
 `Contract`

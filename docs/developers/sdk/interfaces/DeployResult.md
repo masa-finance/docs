@@ -1,36 +1,29 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / DeployResult
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / DeployResult
 
 # Interface: DeployResult\<Tuple\>
 
 ## Type parameters
 
-| Name |
-| :------ |
-| `Tuple` |
-
-## Table of contents
-
-### Properties
-
-- [abiEncodedConstructorArguments](DeployResult.md#abiencodedconstructorarguments)
-- [address](DeployResult.md#address)
-- [constructorArguments](DeployResult.md#constructorarguments)
+• **Tuple**
 
 ## Properties
 
 ### abiEncodedConstructorArguments
 
-• **abiEncodedConstructorArguments**: `string`
+> **abiEncodedConstructorArguments**: `string`
 
-___
+***
 
 ### address
 
-• **address**: `string`
+> **address**: `string`
 
-___
+***
 
 ### constructorArguments
 
-• **constructorArguments**: (`string` \| `number` \| `Tuple`)[]
+> **constructorArguments**: (`string` \| `number` \| `Tuple`)[]

@@ -1,40 +1,24 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaDynamicSSSBT
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaDynamicSSSBT
 
 # Class: MasaDynamicSSSBT
 
-## Hierarchy
+## Extends
 
 - `MasaBase`
 
-  ↳ **`MasaDynamicSSSBT`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MasaDynamicSSSBT.md#constructor)
-
-### Properties
-
-- [masa](MasaDynamicSSSBT.md#masa)
-
-### Methods
-
-- [attach](MasaDynamicSSSBT.md#attach)
-- [connect](MasaDynamicSSSBT.md#connect)
-
 ## Constructors
 
-### constructor
+### new MasaDynamicSSSBT()
 
-• **new MasaDynamicSSSBT**(`masa`): [`MasaDynamicSSSBT`](MasaDynamicSSSBT.md)
+> **new MasaDynamicSSSBT**(`masa`): [`MasaDynamicSSSBT`](MasaDynamicSSSBT.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+• **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Returns
 
@@ -42,58 +26,51 @@
 
 #### Inherited from
 
-MasaBase.constructor
+`MasaBase.constructor`
 
 ## Properties
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-MasaBase.masa
+`MasaBase.masa`
 
 ## Methods
 
-### attach
+### attach()
 
-▸ **attach**\<`Contract`\>(`contract`): [`MasaDynamicSSSBTWrapper`](MasaDynamicSSSBTWrapper.md)\<`Contract`\>
+> **attach**\<`Contract`\>(`contract`): [`MasaDynamicSSSBTWrapper`](MasaDynamicSSSBTWrapper.md)\<`Contract`\>
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaDynamicSSSBT` |
+• **Contract** *extends* `MasaDynamicSSSBT`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `contract` | `Contract` |
+• **contract**: `Contract`
 
 #### Returns
 
 [`MasaDynamicSSSBTWrapper`](MasaDynamicSSSBTWrapper.md)\<`Contract`\>
 
-___
+***
 
-### connect
+### connect()
 
-▸ **connect**\<`Contract`\>(`address`, `factory?`): `Promise`\<[`MasaDynamicSSSBTWrapper`](MasaDynamicSSSBTWrapper.md)\<`Contract`\>\>
+> **connect**\<`Contract`\>(`address`, `factory`): `Promise`\<[`MasaDynamicSSSBTWrapper`](MasaDynamicSSSBTWrapper.md)\<`Contract`\>\>
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaDynamicSSSBT` |
+• **Contract** *extends* `MasaDynamicSSSBT`
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `address` | `string` | `undefined` |
-| `factory` | [`ContractFactory`](ContractFactory.md) | `MasaDynamicSSSBT__factory` |
+• **address**: `string`
+
+• **factory**: [`ContractFactory`](ContractFactory.md)= `MasaDynamicSSSBT__factory`
 
 #### Returns
 

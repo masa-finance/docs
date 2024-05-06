@@ -1,64 +1,30 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaDynamicSSSBTWrapper
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaDynamicSSSBTWrapper
 
 # Class: MasaDynamicSSSBTWrapper\<Contract\>
 
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaDynamicSSSBT` |
-
-## Hierarchy
+## Extends
 
 - [`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md)\<`Contract`\>
 
-  ↳ **`MasaDynamicSSSBTWrapper`**
+## Type parameters
 
-## Table of contents
-
-### Constructors
-
-- [constructor](MasaDynamicSSSBTWrapper.md#constructor)
-
-### Properties
-
-- [contract](MasaDynamicSSSBTWrapper.md#contract)
-- [links](MasaDynamicSSSBTWrapper.md#links)
-- [masa](MasaDynamicSSSBTWrapper.md#masa)
-
-### Accessors
-
-- [isContractAvailable](MasaDynamicSSSBTWrapper.md#iscontractavailable)
-
-### Methods
-
-- [burn](MasaDynamicSSSBTWrapper.md#burn)
-- [list](MasaDynamicSSSBTWrapper.md#list)
-- [loadSBTIDs](MasaDynamicSSSBTWrapper.md#loadsbtids)
-- [loadSBTs](MasaDynamicSSSBTWrapper.md#loadsbts)
-- [mint](MasaDynamicSSSBTWrapper.md#mint)
-- [setState](MasaDynamicSSSBTWrapper.md#setstate)
-- [signSetState](MasaDynamicSSSBTWrapper.md#signsetstate)
+• **Contract** *extends* `MasaDynamicSSSBT`
 
 ## Constructors
 
-### constructor
+### new MasaDynamicSSSBTWrapper()
 
-• **new MasaDynamicSSSBTWrapper**\<`Contract`\>(`masa`, `contract`): [`MasaDynamicSSSBTWrapper`](MasaDynamicSSSBTWrapper.md)\<`Contract`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaDynamicSSSBT` |
+> **new MasaDynamicSSSBTWrapper**\<`Contract`\>(`masa`, `contract`): [`MasaDynamicSSSBTWrapper`](MasaDynamicSSSBTWrapper.md)\<`Contract`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
-| `contract` | `Contract` |
+• **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+
+• **contract**: `Contract`
 
 #### Returns
 
@@ -66,63 +32,57 @@
 
 #### Inherited from
 
-[MasaDynamicSBTWrapper](MasaDynamicSBTWrapper.md).[constructor](MasaDynamicSBTWrapper.md#constructor)
+[`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md).[`constructor`](MasaDynamicSBTWrapper.md#constructors)
 
 ## Properties
 
 ### contract
 
-• `Readonly` **contract**: `Contract`
+> `readonly` **contract**: `Contract`
 
 #### Inherited from
 
-[MasaDynamicSBTWrapper](MasaDynamicSBTWrapper.md).[contract](MasaDynamicSBTWrapper.md#contract)
+[`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md).[`contract`](MasaDynamicSBTWrapper.md#contract)
 
-___
+***
 
 ### links
 
-• `Readonly` **links**: [`MasaSoulLinker`](MasaSoulLinker.md)
+> `readonly` **links**: [`MasaSoulLinker`](MasaSoulLinker.md)
 
 #### Inherited from
 
-[MasaDynamicSBTWrapper](MasaDynamicSBTWrapper.md).[links](MasaDynamicSBTWrapper.md#links)
+[`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md).[`links`](MasaDynamicSBTWrapper.md#links)
 
-___
+***
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-[MasaDynamicSBTWrapper](MasaDynamicSBTWrapper.md).[masa](MasaDynamicSBTWrapper.md#masa)
+[`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md).[`masa`](MasaDynamicSBTWrapper.md#masa)
 
 ## Accessors
 
 ### isContractAvailable
 
-• `get` **isContractAvailable**(): `boolean`
+> `get` **isContractAvailable**(): `boolean`
 
 #### Returns
 
 `boolean`
 
-#### Inherited from
-
-MasaDynamicSBTWrapper.isContractAvailable
-
 ## Methods
 
-### burn
+### burn()
 
-▸ **burn**(`SBTId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+> **burn**(`SBTId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `SBTId` | `BigNumber` |
+• **SBTId**: `BigNumber`
 
 #### Returns
 
@@ -130,117 +90,111 @@ MasaDynamicSBTWrapper.isContractAvailable
 
 #### Inherited from
 
-[MasaDynamicSBTWrapper](MasaDynamicSBTWrapper.md).[burn](MasaDynamicSBTWrapper.md#burn)
+[`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md).[`burn`](MasaDynamicSBTWrapper.md#burn)
 
-___
+***
 
-### list
+### list()
 
-▸ **list**(`address?`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+> **list**(`address`?): `Promise`\<`object`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `address?` | `string` |
+• **address?**: `string`
 
 #### Returns
 
-`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`\<`object`[]\>
 
 #### Inherited from
 
-[MasaDynamicSBTWrapper](MasaDynamicSBTWrapper.md).[list](MasaDynamicSBTWrapper.md#list)
+[`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md).[`list`](MasaDynamicSBTWrapper.md#list)
 
-___
+***
 
-### loadSBTIDs
+### loadSBTIDs()
 
-▸ **loadSBTIDs**(`sbtIDs`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+> `protected` **loadSBTIDs**(`sbtIDs`): `Promise`\<`object`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `sbtIDs` | `BigNumber`[] |
+• **sbtIDs**: `BigNumber`[]
 
 #### Returns
 
-`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`\<`object`[]\>
 
 #### Inherited from
 
-[MasaDynamicSBTWrapper](MasaDynamicSBTWrapper.md).[loadSBTIDs](MasaDynamicSBTWrapper.md#loadsbtids)
+[`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md).[`loadSBTIDs`](MasaDynamicSBTWrapper.md#loadsbtids)
 
-___
+***
 
-### loadSBTs
+### loadSBTs()
 
-▸ **loadSBTs**(`identityIdOrAddress`): `Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+> `protected` **loadSBTs**(`identityIdOrAddress`): `Promise`\<`object`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `identityIdOrAddress` | `string` \| `BigNumber` |
+• **identityIdOrAddress**: `string` \| `BigNumber`
 
 #### Returns
 
-`Promise`\<\{ `tokenId`: `BigNumber` ; `tokenUri`: `string`  }[]\>
+`Promise`\<`object`[]\>
 
 #### Inherited from
 
-[MasaDynamicSBTWrapper](MasaDynamicSBTWrapper.md).[loadSBTs](MasaDynamicSBTWrapper.md#loadsbts)
+[`MasaDynamicSBTWrapper`](MasaDynamicSBTWrapper.md).[`loadSBTs`](MasaDynamicSBTWrapper.md#loadsbts)
 
-___
+***
 
-### mint
+### mint()
 
-▸ **mint**(`paymentMethod?`): `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
+> **mint**(`paymentMethod`): `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"ETH"` |
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)= `"ETH"`
 
 #### Returns
 
 `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
-___
+***
 
-### setState
+### setState()
 
-▸ **setState**(`state`, `stateValue`, `signature`, `signatureDate`, `authorityAddress`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+> **setState**(`state`, `stateValue`, `signature`, `signatureDate`, `authorityAddress`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `state` | `string` |
-| `stateValue` | `boolean` |
-| `signature` | `string` |
-| `signatureDate` | `number` |
-| `authorityAddress` | `string` |
+• **state**: `string`
+
+• **stateValue**: `boolean`
+
+• **signature**: `string`
+
+• **signatureDate**: `number`
+
+• **authorityAddress**: `string`
 
 #### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
-___
+***
 
-### signSetState
+### signSetState()
 
-▸ **signSetState**(`receiver`, `state`, `stateValue`): `Promise`\<`SignSetStateResult`\>
+> **signSetState**(`receiver`, `state`, `stateValue`): `Promise`\<`SignSetStateResult`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `receiver` | `string` |
-| `state` | `string` |
-| `stateValue` | `boolean` |
+• **receiver**: `string`
+
+• **state**: `string`
+
+• **stateValue**: `boolean`
 
 #### Returns
 

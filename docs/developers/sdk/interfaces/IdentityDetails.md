@@ -1,30 +1,25 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / IdentityDetails
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / IdentityDetails
 
 # Interface: IdentityDetails
 
-## Table of contents
-
-### Properties
-
-- [metadata](IdentityDetails.md#metadata)
-- [tokenId](IdentityDetails.md#tokenid)
-- [tokenUri](IdentityDetails.md#tokenuri)
-
 ## Properties
 
-### metadata
+### metadata?
 
-• `Optional` **metadata**: [`IIdentity`](IIdentity.md)
+> `optional` **metadata**: [`IIdentity`](IIdentity.md)
 
-___
+***
 
 ### tokenId
 
-• **tokenId**: `BigNumber`
+> **tokenId**: `BigNumber`
 
-___
+***
 
 ### tokenUri
 
-• **tokenUri**: `string`
+> **tokenUri**: `string`

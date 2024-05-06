@@ -1,99 +1,83 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / SoulNameMetadataStoreResult
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / SoulNameMetadataStoreResult
 
 # Interface: SoulNameMetadataStoreResult
 
-## Hierarchy
+## Extends
 
 - [`SoulNameResultBase`](SoulNameResultBase.md)
-
-  ↳ **`SoulNameMetadataStoreResult`**
-
-## Table of contents
-
-### Properties
-
-- [authorityAddress](SoulNameMetadataStoreResult.md#authorityaddress)
-- [errorCode](SoulNameMetadataStoreResult.md#errorcode)
-- [imageTransaction](SoulNameMetadataStoreResult.md#imagetransaction)
-- [message](SoulNameMetadataStoreResult.md#message)
-- [metadataTransaction](SoulNameMetadataStoreResult.md#metadatatransaction)
-- [signature](SoulNameMetadataStoreResult.md#signature)
-- [success](SoulNameMetadataStoreResult.md#success)
-- [tokenId](SoulNameMetadataStoreResult.md#tokenid)
 
 ## Properties
 
 ### authorityAddress
 
-• **authorityAddress**: `string`
+> **authorityAddress**: `string`
 
-___
+***
 
 ### errorCode
 
-• **errorCode**: [`SoulNameErrorCodes`](../enums/SoulNameErrorCodes.md)
+> **errorCode**: [`SoulNameErrorCodes`](../enumerations/SoulNameErrorCodes.md)
 
 #### Inherited from
 
-[SoulNameResultBase](SoulNameResultBase.md).[errorCode](SoulNameResultBase.md#errorcode)
+[`SoulNameResultBase`](SoulNameResultBase.md).[`errorCode`](SoulNameResultBase.md#errorcode)
 
-___
+***
 
 ### imageTransaction
 
-• **imageTransaction**: `Object`
+> **imageTransaction**: `object`
 
-#### Type declaration
+#### id
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
+> **id**: `string`
 
-___
+***
 
-### message
+### message?
 
-• `Optional` **message**: `string`
+> `optional` **message**: `string`
 
 #### Inherited from
 
-[SoulNameResultBase](SoulNameResultBase.md).[message](SoulNameResultBase.md#message)
+[`SoulNameResultBase`](SoulNameResultBase.md).[`message`](SoulNameResultBase.md#message)
 
-___
+***
 
 ### metadataTransaction
 
-• **metadataTransaction**: `Object`
+> **metadataTransaction**: `object`
 
-#### Type declaration
+#### id
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
+> **id**: `string`
 
-___
+***
 
 ### signature
 
-• **signature**: `string`
+> **signature**: `string`
 
-___
+***
 
 ### success
 
-• **success**: `boolean`
+> **success**: `boolean`
 
 #### Inherited from
 
-[SoulNameResultBase](SoulNameResultBase.md).[success](SoulNameResultBase.md#success)
+[`SoulNameResultBase`](SoulNameResultBase.md).[`success`](SoulNameResultBase.md#success)
 
-___
+***
 
-### tokenId
+### tokenId?
 
-• `Optional` **tokenId**: `string` \| `BigNumber`
+> `optional` **tokenId**: `string` \| `BigNumber`
 
 #### Inherited from
 
-[SoulNameResultBase](SoulNameResultBase.md).[tokenId](SoulNameResultBase.md#tokenid)
+[`SoulNameResultBase`](SoulNameResultBase.md).[`tokenId`](SoulNameResultBase.md#tokenid)

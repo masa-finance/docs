@@ -1,146 +1,134 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / Network
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / Network
 
 # Interface: Network
-
-## Table of contents
-
-### Properties
-
-- [addresses](Network.md#addresses)
-- [blockExplorerApiUrls](Network.md#blockexplorerapiurls)
-- [blockExplorerUrls](Network.md#blockexplorerurls)
-- [chainId](Network.md#chainid)
-- [chainName](Network.md#chainname)
-- [chainNameShort](Network.md#chainnameshort)
-- [gasSlippagePercentage](Network.md#gasslippagepercentage)
-- [isDeprecated](Network.md#isdeprecated)
-- [isTestnet](Network.md#istestnet)
-- [lzEndpointId](Network.md#lzendpointid)
-- [nativeCurrency](Network.md#nativecurrency)
-- [networkName](Network.md#networkname)
-- [rpcUrls](Network.md#rpcurls)
-- [skipEip1559](Network.md#skipeip1559)
 
 ## Properties
 
 ### addresses
 
-• **addresses**: [`Addresses`](Addresses.md)
+> **addresses**: [`Addresses`](Addresses.md)
 
 Masa Curated known Addresses of Contracts like Business logic and tokens
 
-___
+***
 
-### blockExplorerApiUrls
+### blockExplorerApiUrls?
 
-• `Optional` **blockExplorerApiUrls**: `string`[]
+> `optional` **blockExplorerApiUrls**: `string`[]
 
 set of block explorer api urls
 
-___
+***
 
-### blockExplorerUrls
+### blockExplorerUrls?
 
-• `Optional` **blockExplorerUrls**: `string`[]
+> `optional` **blockExplorerUrls**: `string`[]
 
 set of block explorer urls
 
-___
+***
 
 ### chainId
 
-• **chainId**: `number`
+> **chainId**: `number`
 
 The networks chain id used to add the network to the wallet
 
-___
+***
 
 ### chainName
 
-• **chainName**: `string`
+> **chainName**: `string`
 
 The long chain name that metamask displays or that we use to
 offer the user to switch networks
 
-___
+***
 
 ### chainNameShort
 
-• **chainNameShort**: `string`
+> **chainNameShort**: `string`
 
 A short version of the Chain Name to be displayed in Buttons or
 locations with less space
 
-___
+***
 
-### gasSlippagePercentage
+### gasSlippagePercentage?
 
-• `Optional` **gasSlippagePercentage**: `number`
+> `optional` **gasSlippagePercentage**: `number`
 
 the default gas slippage percentage used on some testnets
 
-___
+***
 
-### isDeprecated
+### isDeprecated?
 
-• `Optional` **isDeprecated**: `boolean`
+> `optional` **isDeprecated**: `boolean`
 
 is this network deprecated
 
-___
+***
 
 ### isTestnet
 
-• **isTestnet**: `boolean`
+> **isTestnet**: `boolean`
 
 is this network a test network or not?
 
-___
+***
 
-### lzEndpointId
+### lzEndpointId?
 
-• `Optional` **lzEndpointId**: `number`
+> `optional` **lzEndpointId**: `number`
 
 LayerZero Endpoint ID
 
-___
+***
 
-### nativeCurrency
+### nativeCurrency?
 
-• `Optional` **nativeCurrency**: `Object`
+> `optional` **nativeCurrency**: `object`
 
 Information about the native currency
 
-#### Type declaration
+#### decimals
 
-| Name | Type |
-| :------ | :------ |
-| `decimals` | `number` |
-| `name` | `string` |
-| `symbol` | `string` |
+> **decimals**: `number`
 
-___
+#### name
+
+> **name**: `string`
+
+#### symbol
+
+> **symbol**: `string`
+
+***
 
 ### networkName
 
-• **networkName**: [`NetworkName`](../modules.md#networkname)
+> **networkName**: [`NetworkName`](../type-aliases/NetworkName.md)
 
 the technical network name that the SDK knows
 
-___
+***
 
 ### rpcUrls
 
-• **rpcUrls**: (`undefined` \| `string`)[]
+> **rpcUrls**: (`undefined` \| `string`)[]
 
 The list of available rpc urls, required for adding the network
 to the wallet
 
-___
+***
 
-### skipEip1559
+### skipEip1559?
 
-• `Optional` **skipEip1559**: `boolean`
+> `optional` **skipEip1559**: `boolean`
 
 skip eip1559 gas price calculation for this network

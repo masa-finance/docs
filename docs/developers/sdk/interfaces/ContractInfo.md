@@ -1,16 +1,13 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / ContractInfo
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / ContractInfo
 
 # Interface: ContractInfo
 
-## Table of contents
-
-### Properties
-
-- [hasAddress](ContractInfo.md#hasaddress)
-
 ## Properties
 
-### hasAddress
+### hasAddress?
 
-• `Optional` **hasAddress**: `boolean`
+> `optional` **hasAddress**: `boolean`

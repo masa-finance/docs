@@ -1,49 +1,59 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / SoulNameDetails
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / SoulNameDetails
 
 # Interface: SoulNameDetails
-
-## Table of contents
-
-### Properties
-
-- [metadata](SoulNameDetails.md#metadata)
-- [owner](SoulNameDetails.md#owner)
-- [tokenDetails](SoulNameDetails.md#tokendetails)
-- [tokenUri](SoulNameDetails.md#tokenuri)
 
 ## Properties
 
 ### metadata
 
-• **metadata**: [`ISoulName`](ISoulName.md)
+> **metadata**: [`ISoulName`](ISoulName.md)
 
-___
+***
 
 ### owner
 
-• **owner**: `string`
+> **owner**: `string`
 
-___
+***
 
 ### tokenDetails
 
-• **tokenDetails**: `Object`
+> **tokenDetails**: `object`
 
-#### Type declaration
+#### active
 
-| Name | Type |
-| :------ | :------ |
-| `active` | `boolean` |
-| `expirationDate` | `BigNumber` |
-| `extension` | `string` |
-| `identityId` | `BigNumber` |
-| `linked` | `boolean` |
-| `sbtName` | `string` |
-| `tokenId` | `BigNumber` |
+> **active**: `boolean`
 
-___
+#### expirationDate
+
+> **expirationDate**: `BigNumber`
+
+#### extension
+
+> **extension**: `string`
+
+#### identityId
+
+> **identityId**: `BigNumber`
+
+#### linked
+
+> **linked**: `boolean`
+
+#### sbtName
+
+> **sbtName**: `string`
+
+#### tokenId
+
+> **tokenId**: `BigNumber`
+
+***
 
 ### tokenUri
 
-• **tokenUri**: `string`
+> **tokenUri**: `string`

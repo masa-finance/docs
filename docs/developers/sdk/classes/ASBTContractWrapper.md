@@ -1,68 +1,32 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / ASBTContractWrapper
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / ASBTContractWrapper
 
 # Class: ASBTContractWrapper\<Contract\>
 
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `ReferenceSBTAuthority` |
-
-## Hierarchy
+## Extends
 
 - [`SBTContractWrapper`](SBTContractWrapper.md)\<`Contract`\>
 
-  ↳ **`ASBTContractWrapper`**
+## Type parameters
 
-## Table of contents
-
-### Constructors
-
-- [constructor](ASBTContractWrapper.md#constructor)
-
-### Properties
-
-- [contract](ASBTContractWrapper.md#contract)
-- [instances](ASBTContractWrapper.md#instances)
-- [masa](ASBTContractWrapper.md#masa)
-
-### Methods
-
-- [bulkMint](ASBTContractWrapper.md#bulkmint)
-- [burn](ASBTContractWrapper.md#burn)
-- [checkOrGiveAllowance](ASBTContractWrapper.md#checkorgiveallowance)
-- [createOverrides](ASBTContractWrapper.md#createoverrides)
-- [estimateGasWithSlippage](ASBTContractWrapper.md#estimategaswithslippage)
-- [formatPrice](ASBTContractWrapper.md#formatprice)
-- [getMintPrice](ASBTContractWrapper.md#getmintprice)
-- [getNetworkFeeInformation](ASBTContractWrapper.md#getnetworkfeeinformation)
-- [getPaymentAddress](ASBTContractWrapper.md#getpaymentaddress)
-- [getPrice](ASBTContractWrapper.md#getprice)
-- [loadSBTContract](ASBTContractWrapper.md#loadsbtcontract)
-- [mint](ASBTContractWrapper.md#mint)
-- [verify](ASBTContractWrapper.md#verify)
-- [addSlippage](ASBTContractWrapper.md#addslippage)
+• **Contract** *extends* `ReferenceSBTAuthority`
 
 ## Constructors
 
-### constructor
+### new ASBTContractWrapper()
 
-• **new ASBTContractWrapper**\<`Contract`\>(`masa`, `instances`, `contract`): [`ASBTContractWrapper`](ASBTContractWrapper.md)\<`Contract`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `ReferenceSBTAuthority` |
+> **new ASBTContractWrapper**\<`Contract`\>(`masa`, `instances`, `contract`): [`ASBTContractWrapper`](ASBTContractWrapper.md)\<`Contract`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
-| `instances` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) |
-| `contract` | `Contract` |
+• **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+
+• **instances**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
+
+• **contract**: `Contract`
 
 #### Returns
 
@@ -70,66 +34,63 @@
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[constructor](SBTContractWrapper.md#constructor)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`constructor`](SBTContractWrapper.md#constructors)
 
 ## Properties
 
 ### contract
 
-• `Readonly` **contract**: `Contract`
+> `readonly` **contract**: `Contract`
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[contract](SBTContractWrapper.md#contract)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`contract`](SBTContractWrapper.md#contract)
 
-___
+***
 
 ### instances
 
-• `Protected` **instances**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
+> `protected` **instances**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[instances](SBTContractWrapper.md#instances)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`instances`](SBTContractWrapper.md#instances)
 
-___
+***
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[masa](SBTContractWrapper.md#masa)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`masa`](SBTContractWrapper.md#masa)
 
 ## Methods
 
-### bulkMint
+### bulkMint()
 
-▸ **bulkMint**(`paymentMethod`, `receivers`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
+> **bulkMint**(`paymentMethod`, `receivers`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-| `receivers` | `string`[] |
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)
+
+• **receivers**: `string`[]
 
 #### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)[]\>
 
-___
+***
 
-### burn
+### burn()
 
-▸ **burn**(`tokenId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+> **burn**(`tokenId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tokenId` | `BigNumber` |
+• **tokenId**: `BigNumber`
 
 #### Returns
 
@@ -137,24 +98,25 @@ ___
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[burn](SBTContractWrapper.md#burn)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`burn`](SBTContractWrapper.md#burn)
 
-___
+***
 
-### checkOrGiveAllowance
+### checkOrGiveAllowance()
 
-▸ **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`\<`undefined` \| `ContractReceipt`\>
+> `private` **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`\<`undefined` \| `ContractReceipt`\>
 
 Checks or gives allowance on ERC20 tokens
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `paymentAddress` | `string` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-| `spenderAddress` | `string` |
-| `price` | `BigNumber` |
+• **paymentAddress**: `string`
+
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)
+
+• **spenderAddress**: `string`
+
+• **price**: `BigNumber`
 
 #### Returns
 
@@ -162,19 +124,17 @@ Checks or gives allowance on ERC20 tokens
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[checkOrGiveAllowance](SBTContractWrapper.md#checkorgiveallowance)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`checkOrGiveAllowance`](SBTContractWrapper.md#checkorgiveallowance)
 
-___
+***
 
-### createOverrides
+### createOverrides()
 
-▸ **createOverrides**(`value?`): `Promise`\<`PayableOverrides`\>
+> `protected` **createOverrides**(`value`?): `Promise`\<`PayableOverrides`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value?` | `BigNumber` |
+• **value?**: `BigNumber`
 
 #### Returns
 
@@ -182,21 +142,21 @@ ___
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[createOverrides](SBTContractWrapper.md#createoverrides)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`createOverrides`](SBTContractWrapper.md#createoverrides)
 
-___
+***
 
-### estimateGasWithSlippage
+### estimateGasWithSlippage()
 
-▸ **estimateGasWithSlippage**(`estimateGas`, `args?`, `overrides?`): `Promise`\<`BigNumber`\>
+> `protected` **estimateGasWithSlippage**(`estimateGas`, `args`?, `overrides`?): `Promise`\<`BigNumber`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `estimateGas` | (...`estimateGasArgAndOverrides`: `never`[]) => `Promise`\<`BigNumber`\> |
-| `args?` | `unknown`[] |
-| `overrides?` | `PayableOverrides` |
+• **estimateGas**
+
+• **args?**: `unknown`[]
+
+• **overrides?**: `PayableOverrides`
 
 #### Returns
 
@@ -204,20 +164,19 @@ ___
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[estimateGasWithSlippage](SBTContractWrapper.md#estimategaswithslippage)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`estimateGasWithSlippage`](SBTContractWrapper.md#estimategaswithslippage)
 
-___
+***
 
-### formatPrice
+### formatPrice()
 
-▸ **formatPrice**(`paymentAddress`, `price`): `Promise`\<`string`\>
+> `protected` **formatPrice**(`paymentAddress`, `price`): `Promise`\<`string`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `paymentAddress` | `string` |
-| `price` | `BigNumber` |
+• **paymentAddress**: `string`
+
+• **price**: `BigNumber`
 
 #### Returns
 
@@ -225,21 +184,21 @@ ___
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[formatPrice](SBTContractWrapper.md#formatprice)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`formatPrice`](SBTContractWrapper.md#formatprice)
 
-___
+***
 
-### getMintPrice
+### getMintPrice()
 
-▸ **getMintPrice**(`paymentMethod`, `contract`, `slippage?`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+> `protected` **getMintPrice**(`paymentMethod`, `contract`, `slippage`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `contract` | `MasaSBT` | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)
+
+• **contract**: `MasaSBT`
+
+• **slippage**: `undefined` \| `number`= `250`
 
 #### Returns
 
@@ -247,13 +206,13 @@ ___
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[getMintPrice](SBTContractWrapper.md#getmintprice)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`getMintPrice`](SBTContractWrapper.md#getmintprice)
 
-___
+***
 
-### getNetworkFeeInformation
+### getNetworkFeeInformation()
 
-▸ **getNetworkFeeInformation**(): `Promise`\<`undefined` \| `FeeData`\>
+> `protected` **getNetworkFeeInformation**(): `Promise`\<`undefined` \| `FeeData`\>
 
 #### Returns
 
@@ -261,21 +220,19 @@ ___
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[getNetworkFeeInformation](SBTContractWrapper.md#getnetworkfeeinformation)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`getNetworkFeeInformation`](SBTContractWrapper.md#getnetworkfeeinformation)
 
-___
+***
 
-### getPaymentAddress
+### getPaymentAddress()
 
-▸ **getPaymentAddress**(`paymentMethod`): `string`
+> `private` **getPaymentAddress**(`paymentMethod`): `string`
 
 Gets the payment address for a given payment method
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)
 
 #### Returns
 
@@ -283,20 +240,19 @@ Gets the payment address for a given payment method
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[getPaymentAddress](SBTContractWrapper.md#getpaymentaddress)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`getPaymentAddress`](SBTContractWrapper.md#getpaymentaddress)
 
-___
+***
 
-### getPrice
+### getPrice()
 
-▸ **getPrice**(`paymentMethod`, `slippage?`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
+> **getPrice**(`paymentMethod`, `slippage`): `Promise`\<[`PriceInformation`](../interfaces/PriceInformation.md)\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `undefined` |
-| `slippage` | `undefined` \| `number` | `250` |
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)
+
+• **slippage**: `undefined` \| `number`= `250`
 
 #### Returns
 
@@ -304,26 +260,23 @@ ___
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[getPrice](SBTContractWrapper.md#getprice)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`getPrice`](SBTContractWrapper.md#getprice)
 
-___
+***
 
-### loadSBTContract
+### loadSBTContract()
 
-▸ **loadSBTContract**\<`Contract`\>(`address`, `factory`): `Promise`\<`Contract`\>
+> `protected` **loadSBTContract**\<`Contract`\>(`address`, `factory`): `Promise`\<`Contract`\>
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `MasaSBT` |
+• **Contract** *extends* `MasaSBT`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `factory` | [`ContractFactory`](ContractFactory.md) |
+• **address**: `string`
+
+• **factory**: [`ContractFactory`](ContractFactory.md)
 
 #### Returns
 
@@ -331,44 +284,47 @@ ___
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[loadSBTContract](SBTContractWrapper.md#loadsbtcontract)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`loadSBTContract`](SBTContractWrapper.md#loadsbtcontract)
 
-___
+***
 
-### mint
+### mint()
 
-▸ **mint**(`paymentMethod`, `receiver`): `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
+> **mint**(`paymentMethod`, `receiver`): `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-| `receiver` | `string` |
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)
+
+• **receiver**: `string`
 
 #### Returns
 
 `Promise`\<[`BaseResultWithTokenId`](../interfaces/BaseResultWithTokenId.md)\>
 
-___
+***
 
-### verify
+### verify()
 
-▸ **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`\<`void`\>
+> `protected` **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`\<`void`\>
 
 verify a signature created during one of the SBT signing flows
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `errorMessage` | `string` |
-| `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
-| `domain` | `TypedDataDomain` |
-| `types` | `Record`\<`string`, `TypedDataField`[]\> |
-| `value` | `Record`\<`string`, `string` \| `number` \| `boolean` \| `BigNumber`\> |
-| `signature` | `string` |
-| `authorityAddress` | `string` |
+• **errorMessage**: `string`
+
+• **contract**: `SoulLinker` \| `SoulStore` \| `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority`
+
+• **domain**: `TypedDataDomain`
+
+• **types**: `Record`\<`string`, `TypedDataField`[]\>
+
+• **value**: `Record`\<`string`, `string` \| `number` \| `boolean` \| `BigNumber`\>
+
+• **signature**: `string`
+
+• **authorityAddress**: `string`
 
 #### Returns
 
@@ -376,22 +332,21 @@ verify a signature created during one of the SBT signing flows
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[verify](SBTContractWrapper.md#verify)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`verify`](SBTContractWrapper.md#verify)
 
-___
+***
 
-### addSlippage
+### addSlippage()
 
-▸ **addSlippage**(`price`, `slippage`): `BigNumber`
+> `static` `protected` **addSlippage**(`price`, `slippage`): `BigNumber`
 
 adds a percentage to the price as slippage
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `price` | `BigNumber` |
-| `slippage` | `number` |
+• **price**: `BigNumber`
+
+• **slippage**: `number`
 
 #### Returns
 
@@ -399,4 +354,4 @@ adds a percentage to the price as slippage
 
 #### Inherited from
 
-[SBTContractWrapper](SBTContractWrapper.md).[addSlippage](SBTContractWrapper.md#addslippage)
+[`SBTContractWrapper`](SBTContractWrapper.md).[`addSlippage`](SBTContractWrapper.md#addslippage)

@@ -1,335 +1,820 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / ERC20
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / ERC20
 
 # Interface: ERC20
 
-## Hierarchy
+## Extends
 
 - `BaseContract`
-
-  ↳ **`ERC20`**
-
-## Table of contents
-
-### Properties
-
-- [\_deployedPromise](ERC20.md#_deployedpromise)
-- [\_runningEvents](ERC20.md#_runningevents)
-- [\_wrappedEmits](ERC20.md#_wrappedemits)
-- [address](ERC20.md#address)
-- [callStatic](ERC20.md#callstatic)
-- [deployTransaction](ERC20.md#deploytransaction)
-- [estimateGas](ERC20.md#estimategas)
-- [filters](ERC20.md#filters)
-- [functions](ERC20.md#functions)
-- [interface](ERC20.md#interface)
-- [off](ERC20.md#off)
-- [on](ERC20.md#on)
-- [once](ERC20.md#once)
-- [populateTransaction](ERC20.md#populatetransaction)
-- [provider](ERC20.md#provider)
-- [removeListener](ERC20.md#removelistener)
-- [resolvedAddress](ERC20.md#resolvedaddress)
-- [signer](ERC20.md#signer)
-
-### Methods
-
-- [\_checkRunningEvents](ERC20.md#_checkrunningevents)
-- [\_deployed](ERC20.md#_deployed)
-- [\_wrapEvent](ERC20.md#_wrapevent)
-- [allowance](ERC20.md#allowance)
-- [approve](ERC20.md#approve)
-- [attach](ERC20.md#attach)
-- [balanceOf](ERC20.md#balanceof)
-- [connect](ERC20.md#connect)
-- [decimals](ERC20.md#decimals)
-- [decreaseAllowance](ERC20.md#decreaseallowance)
-- [deployed](ERC20.md#deployed)
-- [emit](ERC20.md#emit)
-- [fallback](ERC20.md#fallback)
-- [increaseAllowance](ERC20.md#increaseallowance)
-- [listenerCount](ERC20.md#listenercount)
-- [listeners](ERC20.md#listeners)
-- [name](ERC20.md#name)
-- [queryFilter](ERC20.md#queryfilter)
-- [removeAllListeners](ERC20.md#removealllisteners)
-- [symbol](ERC20.md#symbol)
-- [totalSupply](ERC20.md#totalsupply)
-- [transfer](ERC20.md#transfer)
-- [transferFrom](ERC20.md#transferfrom)
 
 ## Properties
 
 ### \_deployedPromise
 
-• **\_deployedPromise**: `Promise`\<`Contract`\>
+> **\_deployedPromise**: `Promise`\<`Contract`\>
 
 #### Inherited from
 
-BaseContract.\_deployedPromise
+`BaseContract._deployedPromise`
 
-___
+***
 
 ### \_runningEvents
 
-• **\_runningEvents**: `Object`
+> **\_runningEvents**: `object`
 
 #### Index signature
 
-▪ [eventTag: `string`]: `RunningEvent`
+ \[`eventTag`: `string`\]: `RunningEvent`
 
 #### Inherited from
 
-BaseContract.\_runningEvents
+`BaseContract._runningEvents`
 
-___
+***
 
 ### \_wrappedEmits
 
-• **\_wrappedEmits**: `Object`
+> **\_wrappedEmits**: `object`
 
 #### Index signature
 
-▪ [eventTag: `string`]: (...`args`: `any`[]) => `void`
+ \[`eventTag`: `string`\]: (...`args`) => `void`
 
 #### Inherited from
 
-BaseContract.\_wrappedEmits
+`BaseContract._wrappedEmits`
 
-___
+***
 
 ### address
 
-• `Readonly` **address**: `string`
+> `readonly` **address**: `string`
 
 #### Inherited from
 
-BaseContract.address
+`BaseContract.address`
 
-___
+***
 
 ### callStatic
 
-• **callStatic**: `Object`
+> **callStatic**: `object`
 
-#### Type declaration
+#### allowance()
 
-| Name | Type |
-| :------ | :------ |
-| `allowance` | (`owner`: `string`, `spender`: `string`, `overrides?`: `CallOverrides`) => `Promise`\<`BigNumber`\> |
-| `approve` | (`spender`: `string`, `amount`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`\<`boolean`\> |
-| `balanceOf` | (`account`: `string`, `overrides?`: `CallOverrides`) => `Promise`\<`BigNumber`\> |
-| `decimals` | (`overrides?`: `CallOverrides`) => `Promise`\<`number`\> |
-| `decreaseAllowance` | (`spender`: `string`, `subtractedValue`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`\<`boolean`\> |
-| `increaseAllowance` | (`spender`: `string`, `addedValue`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`\<`boolean`\> |
-| `name` | (`overrides?`: `CallOverrides`) => `Promise`\<`string`\> |
-| `symbol` | (`overrides?`: `CallOverrides`) => `Promise`\<`string`\> |
-| `totalSupply` | (`overrides?`: `CallOverrides`) => `Promise`\<`BigNumber`\> |
-| `transfer` | (`to`: `string`, `amount`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`\<`boolean`\> |
-| `transferFrom` | (`from`: `string`, `to`: `string`, `amount`: `BigNumberish`, `overrides?`: `CallOverrides`) => `Promise`\<`boolean`\> |
+##### Parameters
+
+• **owner**: `string`
+
+• **spender**: `string`
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### approve()
+
+##### Parameters
+
+• **spender**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`boolean`\>
+
+#### balanceOf()
+
+##### Parameters
+
+• **account**: `string`
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### decimals()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`number`\>
+
+#### decreaseAllowance()
+
+##### Parameters
+
+• **spender**: `string`
+
+• **subtractedValue**: `BigNumberish`
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`boolean`\>
+
+#### increaseAllowance()
+
+##### Parameters
+
+• **spender**: `string`
+
+• **addedValue**: `BigNumberish`
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`boolean`\>
+
+#### name()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`string`\>
+
+#### symbol()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`string`\>
+
+#### totalSupply()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### transfer()
+
+##### Parameters
+
+• **to**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`boolean`\>
+
+#### transferFrom()
+
+##### Parameters
+
+• **from**: `string`
+
+• **to**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`boolean`\>
 
 #### Overrides
 
-BaseContract.callStatic
+`BaseContract.callStatic`
 
-___
+***
 
 ### deployTransaction
 
-• `Readonly` **deployTransaction**: `TransactionResponse`
+> `readonly` **deployTransaction**: `TransactionResponse`
 
 #### Inherited from
 
-BaseContract.deployTransaction
+`BaseContract.deployTransaction`
 
-___
+***
 
 ### estimateGas
 
-• **estimateGas**: `Object`
+> **estimateGas**: `object`
 
-#### Type declaration
+#### allowance()
 
-| Name | Type |
-| :------ | :------ |
-| `allowance` | (`owner`: `string`, `spender`: `string`, `overrides?`: `CallOverrides`) => `Promise`\<`BigNumber`\> |
-| `approve` | (`spender`: `string`, `amount`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`BigNumber`\> |
-| `balanceOf` | (`account`: `string`, `overrides?`: `CallOverrides`) => `Promise`\<`BigNumber`\> |
-| `decimals` | (`overrides?`: `CallOverrides`) => `Promise`\<`BigNumber`\> |
-| `decreaseAllowance` | (`spender`: `string`, `subtractedValue`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`BigNumber`\> |
-| `increaseAllowance` | (`spender`: `string`, `addedValue`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`BigNumber`\> |
-| `name` | (`overrides?`: `CallOverrides`) => `Promise`\<`BigNumber`\> |
-| `symbol` | (`overrides?`: `CallOverrides`) => `Promise`\<`BigNumber`\> |
-| `totalSupply` | (`overrides?`: `CallOverrides`) => `Promise`\<`BigNumber`\> |
-| `transfer` | (`to`: `string`, `amount`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`BigNumber`\> |
-| `transferFrom` | (`from`: `string`, `to`: `string`, `amount`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`BigNumber`\> |
+##### Parameters
+
+• **owner**: `string`
+
+• **spender**: `string`
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### approve()
+
+##### Parameters
+
+• **spender**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### balanceOf()
+
+##### Parameters
+
+• **account**: `string`
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### decimals()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### decreaseAllowance()
+
+##### Parameters
+
+• **spender**: `string`
+
+• **subtractedValue**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### increaseAllowance()
+
+##### Parameters
+
+• **spender**: `string`
+
+• **addedValue**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### name()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### symbol()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### totalSupply()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### transfer()
+
+##### Parameters
+
+• **to**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### transferFrom()
+
+##### Parameters
+
+• **from**: `string`
+
+• **to**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`BigNumber`\>
 
 #### Overrides
 
-BaseContract.estimateGas
+`BaseContract.estimateGas`
 
-___
+***
 
 ### filters
 
-• **filters**: `Object`
+> **filters**: `object`
 
-#### Type declaration
+#### Approval()
 
-| Name | Type |
-| :------ | :------ |
-| `Approval` | (`owner?`: ``null`` \| `string`, `spender?`: ``null`` \| `string`, `value?`: ``null``) => [`ApprovalEventFilter`](../modules.md#approvaleventfilter) |
-| `Approval(address,address,uint256)` | (`owner?`: ``null`` \| `string`, `spender?`: ``null`` \| `string`, `value?`: ``null``) => [`ApprovalEventFilter`](../modules.md#approvaleventfilter) |
-| `Transfer` | (`from?`: ``null`` \| `string`, `to?`: ``null`` \| `string`, `value?`: ``null``) => [`TransferEventFilter`](../modules.md#transfereventfilter) |
-| `Transfer(address,address,uint256)` | (`from?`: ``null`` \| `string`, `to?`: ``null`` \| `string`, `value?`: ``null``) => [`TransferEventFilter`](../modules.md#transfereventfilter) |
+##### Parameters
+
+• **owner?**: `null` \| `string`
+
+• **spender?**: `null` \| `string`
+
+• **value?**: `null`
+
+##### Returns
+
+[`ApprovalEventFilter`](../type-aliases/ApprovalEventFilter.md)
+
+#### Approval(address,address,uint256)()
+
+##### Parameters
+
+• **owner?**: `null` \| `string`
+
+• **spender?**: `null` \| `string`
+
+• **value?**: `null`
+
+##### Returns
+
+[`ApprovalEventFilter`](../type-aliases/ApprovalEventFilter.md)
+
+#### Transfer()
+
+##### Parameters
+
+• **from?**: `null` \| `string`
+
+• **to?**: `null` \| `string`
+
+• **value?**: `null`
+
+##### Returns
+
+[`TransferEventFilter`](../type-aliases/TransferEventFilter.md)
+
+#### Transfer(address,address,uint256)()
+
+##### Parameters
+
+• **from?**: `null` \| `string`
+
+• **to?**: `null` \| `string`
+
+• **value?**: `null`
+
+##### Returns
+
+[`TransferEventFilter`](../type-aliases/TransferEventFilter.md)
 
 #### Overrides
 
-BaseContract.filters
+`BaseContract.filters`
 
-___
+***
 
 ### functions
 
-• **functions**: `Object`
+> **functions**: `object`
 
-#### Type declaration
+#### allowance()
 
-| Name | Type |
-| :------ | :------ |
-| `allowance` | (`owner`: `string`, `spender`: `string`, `overrides?`: `CallOverrides`) => `Promise`\<[`BigNumber`]\> |
-| `approve` | (`spender`: `string`, `amount`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`ContractTransaction`\> |
-| `balanceOf` | (`account`: `string`, `overrides?`: `CallOverrides`) => `Promise`\<[`BigNumber`]\> |
-| `decimals` | (`overrides?`: `CallOverrides`) => `Promise`\<[`number`]\> |
-| `decreaseAllowance` | (`spender`: `string`, `subtractedValue`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`ContractTransaction`\> |
-| `increaseAllowance` | (`spender`: `string`, `addedValue`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`ContractTransaction`\> |
-| `name` | (`overrides?`: `CallOverrides`) => `Promise`\<[`string`]\> |
-| `symbol` | (`overrides?`: `CallOverrides`) => `Promise`\<[`string`]\> |
-| `totalSupply` | (`overrides?`: `CallOverrides`) => `Promise`\<[`BigNumber`]\> |
-| `transfer` | (`to`: `string`, `amount`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`ContractTransaction`\> |
-| `transferFrom` | (`from`: `string`, `to`: `string`, `amount`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`ContractTransaction`\> |
+##### Parameters
+
+• **owner**: `string`
+
+• **spender**: `string`
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<[`BigNumber`]\>
+
+#### approve()
+
+##### Parameters
+
+• **spender**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`ContractTransaction`\>
+
+#### balanceOf()
+
+##### Parameters
+
+• **account**: `string`
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<[`BigNumber`]\>
+
+#### decimals()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<[`number`]\>
+
+#### decreaseAllowance()
+
+##### Parameters
+
+• **spender**: `string`
+
+• **subtractedValue**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`ContractTransaction`\>
+
+#### increaseAllowance()
+
+##### Parameters
+
+• **spender**: `string`
+
+• **addedValue**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`ContractTransaction`\>
+
+#### name()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<[`string`]\>
+
+#### symbol()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<[`string`]\>
+
+#### totalSupply()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<[`BigNumber`]\>
+
+#### transfer()
+
+##### Parameters
+
+• **to**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`ContractTransaction`\>
+
+#### transferFrom()
+
+##### Parameters
+
+• **from**: `string`
+
+• **to**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`ContractTransaction`\>
 
 #### Overrides
 
-BaseContract.functions
+`BaseContract.functions`
 
-___
+***
 
 ### interface
 
-• **interface**: [`ERC20Interface`](ERC20Interface.md)
+> **interface**: [`ERC20Interface`](ERC20Interface.md)
 
 #### Overrides
 
-BaseContract.interface
+`BaseContract.interface`
 
-___
+***
 
 ### off
 
-• **off**: `OnEvent`\<[`ERC20`](ERC20.md)\>
+> **off**: `OnEvent`\<[`ERC20`](ERC20.md)\>
 
 #### Overrides
 
-BaseContract.off
+`BaseContract.off`
 
-___
+***
 
 ### on
 
-• **on**: `OnEvent`\<[`ERC20`](ERC20.md)\>
+> **on**: `OnEvent`\<[`ERC20`](ERC20.md)\>
 
 #### Overrides
 
-BaseContract.on
+`BaseContract.on`
 
-___
+***
 
 ### once
 
-• **once**: `OnEvent`\<[`ERC20`](ERC20.md)\>
+> **once**: `OnEvent`\<[`ERC20`](ERC20.md)\>
 
 #### Overrides
 
-BaseContract.once
+`BaseContract.once`
 
-___
+***
 
 ### populateTransaction
 
-• **populateTransaction**: `Object`
+> **populateTransaction**: `object`
 
-#### Type declaration
+#### allowance()
 
-| Name | Type |
-| :------ | :------ |
-| `allowance` | (`owner`: `string`, `spender`: `string`, `overrides?`: `CallOverrides`) => `Promise`\<`PopulatedTransaction`\> |
-| `approve` | (`spender`: `string`, `amount`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`PopulatedTransaction`\> |
-| `balanceOf` | (`account`: `string`, `overrides?`: `CallOverrides`) => `Promise`\<`PopulatedTransaction`\> |
-| `decimals` | (`overrides?`: `CallOverrides`) => `Promise`\<`PopulatedTransaction`\> |
-| `decreaseAllowance` | (`spender`: `string`, `subtractedValue`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`PopulatedTransaction`\> |
-| `increaseAllowance` | (`spender`: `string`, `addedValue`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`PopulatedTransaction`\> |
-| `name` | (`overrides?`: `CallOverrides`) => `Promise`\<`PopulatedTransaction`\> |
-| `symbol` | (`overrides?`: `CallOverrides`) => `Promise`\<`PopulatedTransaction`\> |
-| `totalSupply` | (`overrides?`: `CallOverrides`) => `Promise`\<`PopulatedTransaction`\> |
-| `transfer` | (`to`: `string`, `amount`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`PopulatedTransaction`\> |
-| `transferFrom` | (`from`: `string`, `to`: `string`, `amount`: `BigNumberish`, `overrides?`: `Overrides` & \{ `from?`: `string`  }) => `Promise`\<`PopulatedTransaction`\> |
+##### Parameters
+
+• **owner**: `string`
+
+• **spender**: `string`
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`PopulatedTransaction`\>
+
+#### approve()
+
+##### Parameters
+
+• **spender**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`PopulatedTransaction`\>
+
+#### balanceOf()
+
+##### Parameters
+
+• **account**: `string`
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`PopulatedTransaction`\>
+
+#### decimals()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`PopulatedTransaction`\>
+
+#### decreaseAllowance()
+
+##### Parameters
+
+• **spender**: `string`
+
+• **subtractedValue**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`PopulatedTransaction`\>
+
+#### increaseAllowance()
+
+##### Parameters
+
+• **spender**: `string`
+
+• **addedValue**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`PopulatedTransaction`\>
+
+#### name()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`PopulatedTransaction`\>
+
+#### symbol()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`PopulatedTransaction`\>
+
+#### totalSupply()
+
+##### Parameters
+
+• **overrides?**: `CallOverrides`
+
+##### Returns
+
+`Promise`\<`PopulatedTransaction`\>
+
+#### transfer()
+
+##### Parameters
+
+• **to**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`PopulatedTransaction`\>
+
+#### transferFrom()
+
+##### Parameters
+
+• **from**: `string`
+
+• **to**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
+
+##### Returns
+
+`Promise`\<`PopulatedTransaction`\>
 
 #### Overrides
 
-BaseContract.populateTransaction
+`BaseContract.populateTransaction`
 
-___
+***
 
 ### provider
 
-• `Readonly` **provider**: `Provider`
+> `readonly` **provider**: `Provider`
 
 #### Inherited from
 
-BaseContract.provider
+`BaseContract.provider`
 
-___
+***
 
 ### removeListener
 
-• **removeListener**: `OnEvent`\<[`ERC20`](ERC20.md)\>
+> **removeListener**: `OnEvent`\<[`ERC20`](ERC20.md)\>
 
 #### Overrides
 
-BaseContract.removeListener
+`BaseContract.removeListener`
 
-___
+***
 
 ### resolvedAddress
 
-• `Readonly` **resolvedAddress**: `Promise`\<`string`\>
+> `readonly` **resolvedAddress**: `Promise`\<`string`\>
 
 #### Inherited from
 
-BaseContract.resolvedAddress
+`BaseContract.resolvedAddress`
 
-___
+***
 
 ### signer
 
-• `Readonly` **signer**: `Signer`
+> `readonly` **signer**: `Signer`
 
 #### Inherited from
 
-BaseContract.signer
+`BaseContract.signer`
 
 ## Methods
 
-### \_checkRunningEvents
+### \_checkRunningEvents()
 
-▸ **_checkRunningEvents**(`runningEvent`): `void`
+> **\_checkRunningEvents**(`runningEvent`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `runningEvent` | `RunningEvent` |
+• **runningEvent**: `RunningEvent`
 
 #### Returns
 
@@ -337,19 +822,17 @@ BaseContract.signer
 
 #### Inherited from
 
-BaseContract.\_checkRunningEvents
+`BaseContract._checkRunningEvents`
 
-___
+***
 
-### \_deployed
+### \_deployed()
 
-▸ **_deployed**(`blockTag?`): `Promise`\<`Contract`\>
+> **\_deployed**(`blockTag`?): `Promise`\<`Contract`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `blockTag?` | `BlockTag` |
+• **blockTag?**: `BlockTag`
 
 #### Returns
 
@@ -357,21 +840,21 @@ ___
 
 #### Inherited from
 
-BaseContract.\_deployed
+`BaseContract._deployed`
 
-___
+***
 
-### \_wrapEvent
+### \_wrapEvent()
 
-▸ **_wrapEvent**(`runningEvent`, `log`, `listener`): `Event`
+> **\_wrapEvent**(`runningEvent`, `log`, `listener`): `Event`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `runningEvent` | `RunningEvent` |
-| `log` | `Log` |
-| `listener` | `Listener` |
+• **runningEvent**: `RunningEvent`
+
+• **log**: `Log`
+
+• **listener**: `Listener`
 
 #### Returns
 
@@ -379,55 +862,53 @@ ___
 
 #### Inherited from
 
-BaseContract.\_wrapEvent
+`BaseContract._wrapEvent`
 
-___
+***
 
-### allowance
+### allowance()
 
-▸ **allowance**(`owner`, `spender`, `overrides?`): `Promise`\<`BigNumber`\>
+> **allowance**(`owner`, `spender`, `overrides`?): `Promise`\<`BigNumber`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `owner` | `string` |
-| `spender` | `string` |
-| `overrides?` | `CallOverrides` |
+• **owner**: `string`
+
+• **spender**: `string`
+
+• **overrides?**: `CallOverrides`
 
 #### Returns
 
 `Promise`\<`BigNumber`\>
 
-___
+***
 
-### approve
+### approve()
 
-▸ **approve**(`spender`, `amount`, `overrides?`): `Promise`\<`ContractTransaction`\>
+> **approve**(`spender`, `amount`, `overrides`?): `Promise`\<`ContractTransaction`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `spender` | `string` |
-| `amount` | `BigNumberish` |
-| `overrides?` | `Overrides` & \{ `from?`: `string`  } |
+• **spender**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
 
 #### Returns
 
 `Promise`\<`ContractTransaction`\>
 
-___
+***
 
-### attach
+### attach()
 
-▸ **attach**(`addressOrName`): `this`
+> **attach**(`addressOrName`): `this`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `addressOrName` | `string` |
+• **addressOrName**: `string`
 
 #### Returns
 
@@ -435,36 +916,33 @@ ___
 
 #### Overrides
 
-BaseContract.attach
+`BaseContract.attach`
 
-___
+***
 
-### balanceOf
+### balanceOf()
 
-▸ **balanceOf**(`account`, `overrides?`): `Promise`\<`BigNumber`\>
+> **balanceOf**(`account`, `overrides`?): `Promise`\<`BigNumber`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `account` | `string` |
-| `overrides?` | `CallOverrides` |
+• **account**: `string`
+
+• **overrides?**: `CallOverrides`
 
 #### Returns
 
 `Promise`\<`BigNumber`\>
 
-___
+***
 
-### connect
+### connect()
 
-▸ **connect**(`signerOrProvider`): `this`
+> **connect**(`signerOrProvider`): `this`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `signerOrProvider` | `string` \| `Signer` \| `Provider` |
+• **signerOrProvider**: `string` \| `Signer` \| `Provider`
 
 #### Returns
 
@@ -472,47 +950,45 @@ ___
 
 #### Overrides
 
-BaseContract.connect
+`BaseContract.connect`
 
-___
+***
 
-### decimals
+### decimals()
 
-▸ **decimals**(`overrides?`): `Promise`\<`number`\>
+> **decimals**(`overrides`?): `Promise`\<`number`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `overrides?` | `CallOverrides` |
+• **overrides?**: `CallOverrides`
 
 #### Returns
 
 `Promise`\<`number`\>
 
-___
+***
 
-### decreaseAllowance
+### decreaseAllowance()
 
-▸ **decreaseAllowance**(`spender`, `subtractedValue`, `overrides?`): `Promise`\<`ContractTransaction`\>
+> **decreaseAllowance**(`spender`, `subtractedValue`, `overrides`?): `Promise`\<`ContractTransaction`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `spender` | `string` |
-| `subtractedValue` | `BigNumberish` |
-| `overrides?` | `Overrides` & \{ `from?`: `string`  } |
+• **spender**: `string`
+
+• **subtractedValue**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
 
 #### Returns
 
 `Promise`\<`ContractTransaction`\>
 
-___
+***
 
-### deployed
+### deployed()
 
-▸ **deployed**(): `Promise`\<[`ERC20`](ERC20.md)\>
+> **deployed**(): `Promise`\<[`ERC20`](ERC20.md)\>
 
 #### Returns
 
@@ -520,20 +996,19 @@ ___
 
 #### Overrides
 
-BaseContract.deployed
+`BaseContract.deployed`
 
-___
+***
 
-### emit
+### emit()
 
-▸ **emit**(`eventName`, `...args`): `boolean`
+> **emit**(`eventName`, ...`args`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `EventFilter` |
-| `...args` | `any`[] |
+• **eventName**: `string` \| `EventFilter`
+
+• ...**args**: `any`[]
 
 #### Returns
 
@@ -541,19 +1016,17 @@ ___
 
 #### Inherited from
 
-BaseContract.emit
+`BaseContract.emit`
 
-___
+***
 
-### fallback
+### fallback()
 
-▸ **fallback**(`overrides?`): `Promise`\<`TransactionResponse`\>
+> **fallback**(`overrides`?): `Promise`\<`TransactionResponse`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `overrides?` | `TransactionRequest` |
+• **overrides?**: `TransactionRequest`
 
 #### Returns
 
@@ -561,37 +1034,35 @@ ___
 
 #### Inherited from
 
-BaseContract.fallback
+`BaseContract.fallback`
 
-___
+***
 
-### increaseAllowance
+### increaseAllowance()
 
-▸ **increaseAllowance**(`spender`, `addedValue`, `overrides?`): `Promise`\<`ContractTransaction`\>
+> **increaseAllowance**(`spender`, `addedValue`, `overrides`?): `Promise`\<`ContractTransaction`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `spender` | `string` |
-| `addedValue` | `BigNumberish` |
-| `overrides?` | `Overrides` & \{ `from?`: `string`  } |
+• **spender**: `string`
+
+• **addedValue**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
 
 #### Returns
 
 `Promise`\<`ContractTransaction`\>
 
-___
+***
 
-### listenerCount
+### listenerCount()
 
-▸ **listenerCount**(`eventName?`): `number`
+> **listenerCount**(`eventName`?): `number`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName?` | `string` \| `EventFilter` |
+• **eventName?**: `string` \| `EventFilter`
 
 #### Returns
 
@@ -599,85 +1070,79 @@ ___
 
 #### Inherited from
 
-BaseContract.listenerCount
+`BaseContract.listenerCount`
 
-___
+***
 
-### listeners
+### listeners()
 
-▸ **listeners**\<`TEvent`\>(`eventFilter?`): `TypedListener`\<`TEvent`\>[]
+#### listeners(eventFilter)
 
-#### Type parameters
+> **listeners**\<`TEvent`\>(`eventFilter`?): `TypedListener`\<`TEvent`\>[]
 
-| Name | Type |
-| :------ | :------ |
-| `TEvent` | extends `TypedEvent`\<`any`, `any`\> |
+##### Type parameters
 
-#### Parameters
+• **TEvent** *extends* `TypedEvent`\<`any`, `any`\>
 
-| Name | Type |
-| :------ | :------ |
-| `eventFilter?` | `TypedEventFilter`\<`TEvent`\> |
+##### Parameters
 
-#### Returns
+• **eventFilter?**: `TypedEventFilter`\<`TEvent`\>
+
+##### Returns
 
 `TypedListener`\<`TEvent`\>[]
 
-#### Overrides
+##### Overrides
 
-BaseContract.listeners
+`BaseContract.listeners`
 
-▸ **listeners**(`eventName?`): `Listener`[]
+#### listeners(eventName)
 
-#### Parameters
+> **listeners**(`eventName`?): `Listener`[]
 
-| Name | Type |
-| :------ | :------ |
-| `eventName?` | `string` |
+##### Parameters
 
-#### Returns
+• **eventName?**: `string`
+
+##### Returns
 
 `Listener`[]
 
-#### Overrides
+##### Overrides
 
-BaseContract.listeners
+`BaseContract.listeners`
 
-___
+***
 
-### name
+### name()
 
-▸ **name**(`overrides?`): `Promise`\<`string`\>
+> **name**(`overrides`?): `Promise`\<`string`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `overrides?` | `CallOverrides` |
+• **overrides?**: `CallOverrides`
 
 #### Returns
 
 `Promise`\<`string`\>
 
-___
+***
 
-### queryFilter
+### queryFilter()
 
-▸ **queryFilter**\<`TEvent`\>(`event`, `fromBlockOrBlockhash?`, `toBlock?`): `Promise`\<`TEvent`[]\>
+> **queryFilter**\<`TEvent`\>(`event`, `fromBlockOrBlockhash`?, `toBlock`?): `Promise`\<`TEvent`[]\>
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `TEvent` | extends `TypedEvent`\<`any`, `any`\> |
+• **TEvent** *extends* `TypedEvent`\<`any`, `any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `TypedEventFilter`\<`TEvent`\> |
-| `fromBlockOrBlockhash?` | `string` \| `number` |
-| `toBlock?` | `string` \| `number` |
+• **event**: `TypedEventFilter`\<`TEvent`\>
+
+• **fromBlockOrBlockhash?**: `string` \| `number`
+
+• **toBlock?**: `string` \| `number`
 
 #### Returns
 
@@ -685,114 +1150,109 @@ ___
 
 #### Overrides
 
-BaseContract.queryFilter
+`BaseContract.queryFilter`
 
-___
+***
 
-### removeAllListeners
+### removeAllListeners()
 
-▸ **removeAllListeners**\<`TEvent`\>(`eventFilter`): `this`
+#### removeAllListeners(eventFilter)
 
-#### Type parameters
+> **removeAllListeners**\<`TEvent`\>(`eventFilter`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `TEvent` | extends `TypedEvent`\<`any`, `any`\> |
+##### Type parameters
 
-#### Parameters
+• **TEvent** *extends* `TypedEvent`\<`any`, `any`\>
 
-| Name | Type |
-| :------ | :------ |
-| `eventFilter` | `TypedEventFilter`\<`TEvent`\> |
+##### Parameters
 
-#### Returns
+• **eventFilter**: `TypedEventFilter`\<`TEvent`\>
+
+##### Returns
 
 `this`
 
-#### Overrides
+##### Overrides
 
-BaseContract.removeAllListeners
+`BaseContract.removeAllListeners`
 
-▸ **removeAllListeners**(`eventName?`): `this`
+#### removeAllListeners(eventName)
 
-#### Parameters
+> **removeAllListeners**(`eventName`?): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `eventName?` | `string` |
+##### Parameters
 
-#### Returns
+• **eventName?**: `string`
+
+##### Returns
 
 `this`
 
-#### Overrides
+##### Overrides
 
-BaseContract.removeAllListeners
+`BaseContract.removeAllListeners`
 
-___
+***
 
-### symbol
+### symbol()
 
-▸ **symbol**(`overrides?`): `Promise`\<`string`\>
+> **symbol**(`overrides`?): `Promise`\<`string`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `overrides?` | `CallOverrides` |
+• **overrides?**: `CallOverrides`
 
 #### Returns
 
 `Promise`\<`string`\>
 
-___
+***
 
-### totalSupply
+### totalSupply()
 
-▸ **totalSupply**(`overrides?`): `Promise`\<`BigNumber`\>
+> **totalSupply**(`overrides`?): `Promise`\<`BigNumber`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `overrides?` | `CallOverrides` |
+• **overrides?**: `CallOverrides`
 
 #### Returns
 
 `Promise`\<`BigNumber`\>
 
-___
+***
 
-### transfer
+### transfer()
 
-▸ **transfer**(`to`, `amount`, `overrides?`): `Promise`\<`ContractTransaction`\>
+> **transfer**(`to`, `amount`, `overrides`?): `Promise`\<`ContractTransaction`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `to` | `string` |
-| `amount` | `BigNumberish` |
-| `overrides?` | `Overrides` & \{ `from?`: `string`  } |
+• **to**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
 
 #### Returns
 
 `Promise`\<`ContractTransaction`\>
 
-___
+***
 
-### transferFrom
+### transferFrom()
 
-▸ **transferFrom**(`from`, `to`, `amount`, `overrides?`): `Promise`\<`ContractTransaction`\>
+> **transferFrom**(`from`, `to`, `amount`, `overrides`?): `Promise`\<`ContractTransaction`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `from` | `string` |
-| `to` | `string` |
-| `amount` | `BigNumberish` |
-| `overrides?` | `Overrides` & \{ `from?`: `string`  } |
+• **from**: `string`
+
+• **to**: `string`
+
+• **amount**: `BigNumberish`
+
+• **overrides?**: `Overrides` & `object`
 
 #### Returns
 

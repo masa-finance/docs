@@ -1,39 +1,24 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaAccount
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaAccount
 
 # Class: MasaAccount
 
-## Hierarchy
+## Extends
 
 - `MasaBase`
 
-  ↳ **`MasaAccount`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MasaAccount.md#constructor)
-
-### Properties
-
-- [masa](MasaAccount.md#masa)
-
-### Methods
-
-- [getBalances](MasaAccount.md#getbalances)
-
 ## Constructors
 
-### constructor
+### new MasaAccount()
 
-• **new MasaAccount**(`masa`): [`MasaAccount`](MasaAccount.md)
+> **new MasaAccount**(`masa`): [`MasaAccount`](MasaAccount.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+• **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Returns
 
@@ -41,30 +26,28 @@
 
 #### Inherited from
 
-MasaBase.constructor
+`MasaBase.constructor`
 
 ## Properties
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-MasaBase.masa
+`MasaBase.masa`
 
 ## Methods
 
-### getBalances
+### getBalances()
 
-▸ **getBalances**(`address?`): `Promise`\<`Partial`\<\{ `BNB`: `undefined` \| `number` ; `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `MATIC`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
+> **getBalances**(`address`?): `Promise`\<`Partial`\<`object`\>\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `address?` | `string` |
+• **address?**: `string`
 
 #### Returns
 
-`Promise`\<`Partial`\<\{ `BNB`: `undefined` \| `number` ; `CELO`: `undefined` \| `number` ; `CreditScore`: `undefined` \| `number` ; `ETH`: `undefined` \| `number` ; `G$`: `undefined` \| `number` ; `Green`: `undefined` \| `number` ; `Identity`: `undefined` \| `number` ; `MASA`: `undefined` \| `number` ; `MATIC`: `undefined` \| `number` ; `Native`: `undefined` \| `number` ; `SoulName`: `undefined` \| `number` ; `USDC`: `undefined` \| `number` ; `WETH`: `undefined` \| `number` ; `cUSD`: `undefined` \| `number`  }\>\>
+`Promise`\<`Partial`\<`object`\>\>

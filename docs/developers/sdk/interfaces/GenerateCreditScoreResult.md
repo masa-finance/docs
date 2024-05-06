@@ -1,58 +1,49 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / GenerateCreditScoreResult
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / GenerateCreditScoreResult
 
 # Interface: GenerateCreditScoreResult
 
-## Hierarchy
+## Extends
 
 - [`BaseResult`](BaseResult.md)
 
-  ↳ **`GenerateCreditScoreResult`**
-
-## Table of contents
-
-### Properties
-
-- [authorityAddress](GenerateCreditScoreResult.md#authorityaddress)
-- [message](GenerateCreditScoreResult.md#message)
-- [signature](GenerateCreditScoreResult.md#signature)
-- [signatureDate](GenerateCreditScoreResult.md#signaturedate)
-- [success](GenerateCreditScoreResult.md#success)
-
 ## Properties
 
-### authorityAddress
+### authorityAddress?
 
-• `Optional` **authorityAddress**: `string`
+> `optional` **authorityAddress**: `string`
 
-___
+***
 
-### message
+### message?
 
-• `Optional` **message**: `string`
+> `optional` **message**: `string`
 
 #### Inherited from
 
-[BaseResult](BaseResult.md).[message](BaseResult.md#message)
+[`BaseResult`](BaseResult.md).[`message`](BaseResult.md#message)
 
-___
+***
 
-### signature
+### signature?
 
-• `Optional` **signature**: `string`
+> `optional` **signature**: `string`
 
-___
+***
 
-### signatureDate
+### signatureDate?
 
-• `Optional` **signatureDate**: `number`
+> `optional` **signatureDate**: `number`
 
-___
+***
 
 ### success
 
-• **success**: `boolean`
+> **success**: `boolean`
 
 #### Inherited from
 
-[BaseResult](BaseResult.md).[success](BaseResult.md#success)
+[`BaseResult`](BaseResult.md).[`success`](BaseResult.md#success)

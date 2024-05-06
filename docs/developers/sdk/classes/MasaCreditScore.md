@@ -1,48 +1,24 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaCreditScore
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaCreditScore
 
 # Class: MasaCreditScore
 
-## Hierarchy
+## Extends
 
 - `MasaLinkable`\<`SoulboundCreditScore`\>
 
-  ↳ **`MasaCreditScore`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MasaCreditScore.md#constructor)
-
-### Properties
-
-- [contract](MasaCreditScore.md#contract)
-- [links](MasaCreditScore.md#links)
-- [masa](MasaCreditScore.md#masa)
-
-### Accessors
-
-- [isContractAvailable](MasaCreditScore.md#iscontractavailable)
-
-### Methods
-
-- [burn](MasaCreditScore.md#burn)
-- [create](MasaCreditScore.md#create)
-- [list](MasaCreditScore.md#list)
-- [load](MasaCreditScore.md#load)
-
 ## Constructors
 
-### constructor
+### new MasaCreditScore()
 
-• **new MasaCreditScore**(`masa`): [`MasaCreditScore`](MasaCreditScore.md)
+> **new MasaCreditScore**(`masa`): [`MasaCreditScore`](MasaCreditScore.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+• **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Returns
 
@@ -50,111 +26,99 @@
 
 #### Overrides
 
-MasaLinkable\&lt;SoulboundCreditScore\&gt;.constructor
+`MasaLinkable<SoulboundCreditScore>.constructor`
 
 ## Properties
 
 ### contract
 
-• `Readonly` **contract**: `SoulboundCreditScore`
+> `readonly` **contract**: `SoulboundCreditScore`
 
 #### Inherited from
 
-MasaLinkable.contract
+`MasaLinkable.contract`
 
-___
+***
 
 ### links
 
-• `Readonly` **links**: [`MasaSoulLinker`](MasaSoulLinker.md)
+> `readonly` **links**: [`MasaSoulLinker`](MasaSoulLinker.md)
 
 #### Inherited from
 
-MasaLinkable.links
+`MasaLinkable.links`
 
-___
+***
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-MasaLinkable.masa
+`MasaLinkable.masa`
 
 ## Accessors
 
 ### isContractAvailable
 
-• `get` **isContractAvailable**(): `boolean`
+> `get` **isContractAvailable**(): `boolean`
 
 #### Returns
 
 `boolean`
 
-#### Inherited from
-
-MasaLinkable.isContractAvailable
-
 ## Methods
 
-### burn
+### burn()
 
-▸ **burn**(`creditScoreId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+> **burn**(`creditScoreId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `creditScoreId` | `BigNumber` |
+• **creditScoreId**: `BigNumber`
 
 #### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
-___
+***
 
-### create
+### create()
 
-▸ **create**(`paymentMethod?`): `Promise`\<[`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\>
+> **create**(`paymentMethod`): `Promise`\<[`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"ETH"` |
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)= `"ETH"`
 
 #### Returns
 
 `Promise`\<[`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\>
 
-___
+***
 
-### list
+### list()
 
-▸ **list**(`address?`): `Promise`\<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
+> **list**(`address`?): `Promise`\<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `address?` | `string` |
+• **address?**: `string`
 
 #### Returns
 
 `Promise`\<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
 
-___
+***
 
-### load
+### load()
 
-▸ **load**(`identityIdOrAddress`): `Promise`\<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
+> **load**(`identityIdOrAddress`): `Promise`\<[`CreditScoreDetails`](../interfaces/CreditScoreDetails.md)[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `identityIdOrAddress` | `string` \| `BigNumber` |
+• **identityIdOrAddress**: `string` \| `BigNumber`
 
 #### Returns
 

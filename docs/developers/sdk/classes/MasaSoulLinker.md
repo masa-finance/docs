@@ -1,46 +1,26 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaSoulLinker
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaSoulLinker
 
 # Class: MasaSoulLinker
 
-## Hierarchy
+## Extends
 
 - `MasaBase`
 
-  ↳ **`MasaSoulLinker`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MasaSoulLinker.md#constructor)
-
-### Properties
-
-- [contract](MasaSoulLinker.md#contract)
-- [masa](MasaSoulLinker.md#masa)
-
-### Methods
-
-- [break](MasaSoulLinker.md#break)
-- [create](MasaSoulLinker.md#create)
-- [establish](MasaSoulLinker.md#establish)
-- [list](MasaSoulLinker.md#list)
-- [query](MasaSoulLinker.md#query)
-- [verify](MasaSoulLinker.md#verify)
-
 ## Constructors
 
-### constructor
+### new MasaSoulLinker()
 
-• **new MasaSoulLinker**(`masa`, `contract`): [`MasaSoulLinker`](MasaSoulLinker.md)
+> **new MasaSoulLinker**(`masa`, `contract`): [`MasaSoulLinker`](MasaSoulLinker.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
-| `contract` | `Contract` |
+• **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+
+• **contract**: `Contract`
 
 #### Returns
 
@@ -48,121 +28,114 @@
 
 #### Overrides
 
-MasaBase.constructor
+`MasaBase.constructor`
 
 ## Properties
 
 ### contract
 
-• `Private` **contract**: `Contract`
+> `private` **contract**: `Contract`
 
-___
+***
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-MasaBase.masa
+`MasaBase.masa`
 
 ## Methods
 
-### break
+### break()
 
-▸ **break**(`tokenId`, `readerIdentityId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+> **break**(`tokenId`, `readerIdentityId`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tokenId` | `BigNumber` |
-| `readerIdentityId` | `BigNumber` |
+• **tokenId**: `BigNumber`
+
+• **readerIdentityId**: `BigNumber`
 
 #### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
-___
+***
 
-### create
+### create()
 
-▸ **create**(`tokenId`, `readerIdentityId`): `Promise`\<[`CreateLinkResult`](../modules.md#createlinkresult)\>
+> **create**(`tokenId`, `readerIdentityId`): `Promise`\<[`CreateLinkResult`](../type-aliases/CreateLinkResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tokenId` | `BigNumber` |
-| `readerIdentityId` | `BigNumber` |
+• **tokenId**: `BigNumber`
+
+• **readerIdentityId**: `BigNumber`
 
 #### Returns
 
-`Promise`\<[`CreateLinkResult`](../modules.md#createlinkresult)\>
+`Promise`\<[`CreateLinkResult`](../type-aliases/CreateLinkResult.md)\>
 
-___
+***
 
-### establish
+### establish()
 
-▸ **establish**(`paymentMethod?`, `passport`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) | `"ETH"` |
-| `passport` | `string` | `undefined` |
-
-#### Returns
-
-`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-___
-
-### list
-
-▸ **list**(`tokenId`): `Promise`\<[`ListLinksResult`](../modules.md#listlinksresult)\>
+> **establish**(`paymentMethod`, `passport`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tokenId` | `BigNumber` |
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)= `"ETH"`
 
-#### Returns
-
-`Promise`\<[`ListLinksResult`](../modules.md#listlinksresult)\>
-
-___
-
-### query
-
-▸ **query**(`paymentMethod`, `passport`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-| `passport` | `string` |
+• **passport**: `string`
 
 #### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
-___
+***
 
-### verify
+### list()
 
-▸ **verify**(`tokenId`, `readerIdentityId?`): `Promise`\<[`VerifyLinkResult`](../modules.md#verifylinkresult)\>
+> **list**(`tokenId`): `Promise`\<[`ListLinksResult`](../type-aliases/ListLinksResult.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tokenId` | `BigNumber` |
-| `readerIdentityId?` | `BigNumber` |
+• **tokenId**: `BigNumber`
 
 #### Returns
 
-`Promise`\<[`VerifyLinkResult`](../modules.md#verifylinkresult)\>
+`Promise`\<[`ListLinksResult`](../type-aliases/ListLinksResult.md)\>
+
+***
+
+### query()
+
+> **query**(`paymentMethod`, `passport`): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+#### Parameters
+
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)
+
+• **passport**: `string`
+
+#### Returns
+
+`Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+
+***
+
+### verify()
+
+> **verify**(`tokenId`, `readerIdentityId`?): `Promise`\<[`VerifyLinkResult`](../type-aliases/VerifyLinkResult.md)\>
+
+#### Parameters
+
+• **tokenId**: `BigNumber`
+
+• **readerIdentityId?**: `BigNumber`
+
+#### Returns
+
+`Promise`\<[`VerifyLinkResult`](../type-aliases/VerifyLinkResult.md)\>

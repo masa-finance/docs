@@ -1,37 +1,27 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / BaseResult
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / BaseResult
 
 # Interface: BaseResult
 
-## Hierarchy
+## Extended by
 
-- **`BaseResult`**
-
-  ↳ [`BaseResultWithTokenId`](BaseResultWithTokenId.md)
-
-  ↳ [`GenerateCreditScoreResult`](GenerateCreditScoreResult.md)
-
-  ↳ [`LoginResult`](LoginResult.md)
-
-  ↳ [`QuoteResult`](QuoteResult.md)
-
-  ↳ [`SwapResult`](SwapResult.md)
-
-## Table of contents
-
-### Properties
-
-- [message](BaseResult.md#message)
-- [success](BaseResult.md#success)
+- [`BaseResultWithTokenId`](BaseResultWithTokenId.md)
+- [`GenerateCreditScoreResult`](GenerateCreditScoreResult.md)
+- [`LoginResult`](LoginResult.md)
+- [`QuoteResult`](QuoteResult.md)
+- [`SendResult`](SendResult.md)
 
 ## Properties
 
-### message
+### message?
 
-• `Optional` **message**: `string`
+> `optional` **message**: `string`
 
-___
+***
 
 ### success
 
-• **success**: `boolean`
+> **success**: `boolean`

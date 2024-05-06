@@ -1,65 +1,105 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / Addresses
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / Addresses
 
 # Interface: Addresses
 
-## Table of contents
-
-### Properties
-
-- [DataPointsMultiAddress](Addresses.md#datapointsmultiaddress)
-- [SoulLinkerAddress](Addresses.md#soullinkeraddress)
-- [SoulNameAddress](Addresses.md#soulnameaddress)
-- [SoulStoreAddress](Addresses.md#soulstoreaddress)
-- [SoulboundCreditScoreAddress](Addresses.md#soulboundcreditscoreaddress)
-- [SoulboundGreenAddress](Addresses.md#soulboundgreenaddress)
-- [SoulboundIdentityAddress](Addresses.md#soulboundidentityaddress)
-- [tokens](Addresses.md#tokens)
-
 ## Properties
 
-### DataPointsMultiAddress
+### DataPointsMultiAddress?
 
-• `Optional` **DataPointsMultiAddress**: `string`
+> `optional` **DataPointsMultiAddress**: `string`
 
-___
+***
 
-### SoulLinkerAddress
+### MasaStakingAddress?
 
-• `Optional` **SoulLinkerAddress**: `string`
+> `optional` **MasaStakingAddress**: `string`
 
-___
+***
 
-### SoulNameAddress
+### ProxyViewAggregatorAddress?
 
-• `Optional` **SoulNameAddress**: `string`
+> `optional` **ProxyViewAggregatorAddress**: `string`
 
-___
+***
 
-### SoulStoreAddress
+### SoulLinkerAddress?
 
-• `Optional` **SoulStoreAddress**: `string`
+> `optional` **SoulLinkerAddress**: `string`
 
-___
+***
 
-### SoulboundCreditScoreAddress
+### SoulNameAddress?
 
-• `Optional` **SoulboundCreditScoreAddress**: `string`
+> `optional` **SoulNameAddress**: `string`
 
-___
+***
 
-### SoulboundGreenAddress
+### SoulStoreAddress?
 
-• `Optional` **SoulboundGreenAddress**: `string`
+> `optional` **SoulStoreAddress**: `string`
 
-___
+***
 
-### SoulboundIdentityAddress
+### SoulboundCreditScoreAddress?
 
-• `Optional` **SoulboundIdentityAddress**: `string`
+> `optional` **SoulboundCreditScoreAddress**: `string`
 
-___
+***
 
-### tokens
+### SoulboundGreenAddress?
 
-• `Optional` **tokens**: `Partial`\<\{ `BNB`: `string` ; `CELO`: `string` ; `ETH`: `string` ; `G$`: `string` ; `MASA`: `string` ; `MATIC`: `string` ; `USDC`: `string` ; `WETH`: `string` ; `cUSD`: `string`  }\>
+> `optional` **SoulboundGreenAddress**: `string`
+
+***
+
+### SoulboundIdentityAddress?
+
+> `optional` **SoulboundIdentityAddress**: `string`
+
+***
+
+### tokens?
+
+> `optional` **tokens**: `Partial`\<`object`\>
+
+#### Type declaration
+
+##### BNB
+
+> **BNB**: `string`
+
+##### CELO
+
+> **CELO**: `string`
+
+##### ETH
+
+> **ETH**: `string`
+
+##### G$
+
+> **G$**: `string`
+
+##### MASA
+
+> **MASA**: `string`
+
+##### MATIC
+
+> **MATIC**: `string`
+
+##### USDC
+
+> **USDC**: `string`
+
+##### WETH
+
+> **WETH**: `string`
+
+##### cUSD
+
+> **cUSD**: `string`

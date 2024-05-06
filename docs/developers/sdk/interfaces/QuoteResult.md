@@ -1,65 +1,55 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / QuoteResult
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / QuoteResult
 
 # Interface: QuoteResult
 
-## Hierarchy
+## Extends
 
 - [`BaseResult`](BaseResult.md)
 
-  ↳ **`QuoteResult`**
-
-## Table of contents
-
-### Properties
-
-- [gasLimit](QuoteResult.md#gaslimit)
-- [lzTokenFee](QuoteResult.md#lztokenfee)
-- [message](QuoteResult.md#message)
-- [nativeFee](QuoteResult.md#nativefee)
-- [success](QuoteResult.md#success)
-- [transactionCost](QuoteResult.md#transactioncost)
-
 ## Properties
 
-### gasLimit
+### gasLimit?
 
-• `Optional` **gasLimit**: `BigNumber`
+> `optional` **gasLimit**: `BigNumber`
 
-___
+***
 
 ### lzTokenFee
 
-• **lzTokenFee**: `BigNumber`
+> **lzTokenFee**: `BigNumber`
 
-___
+***
 
-### message
+### message?
 
-• `Optional` **message**: `string`
+> `optional` **message**: `string`
 
 #### Inherited from
 
-[BaseResult](BaseResult.md).[message](BaseResult.md#message)
+[`BaseResult`](BaseResult.md).[`message`](BaseResult.md#message)
 
-___
+***
 
 ### nativeFee
 
-• **nativeFee**: `BigNumber`
+> **nativeFee**: `BigNumber`
 
-___
+***
 
 ### success
 
-• **success**: `boolean`
+> **success**: `boolean`
 
 #### Inherited from
 
-[BaseResult](BaseResult.md).[success](BaseResult.md#success)
+[`BaseResult`](BaseResult.md).[`success`](BaseResult.md#success)
 
-___
+***
 
-### transactionCost
+### transactionCost?
 
-• `Optional` **transactionCost**: `BigNumber`
+> `optional` **transactionCost**: `BigNumber`

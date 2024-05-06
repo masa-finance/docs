@@ -1,58 +1,49 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / PriceInformation
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / PriceInformation
 
 # Interface: PriceInformation
-
-## Table of contents
-
-### Properties
-
-- [formattedMintFee](PriceInformation.md#formattedmintfee)
-- [formattedPrice](PriceInformation.md#formattedprice)
-- [formattedProtocolFee](PriceInformation.md#formattedprotocolfee)
-- [mintFee](PriceInformation.md#mintfee)
-- [paymentAddress](PriceInformation.md#paymentaddress)
-- [price](PriceInformation.md#price)
-- [protocolFee](PriceInformation.md#protocolfee)
 
 ## Properties
 
 ### formattedMintFee
 
-• **formattedMintFee**: `string`
+> **formattedMintFee**: `string`
 
-___
+***
 
 ### formattedPrice
 
-• **formattedPrice**: `string`
+> **formattedPrice**: `string`
 
-___
+***
 
 ### formattedProtocolFee
 
-• **formattedProtocolFee**: `string`
+> **formattedProtocolFee**: `string`
 
-___
+***
 
 ### mintFee
 
-• **mintFee**: `BigNumber`
+> **mintFee**: `BigNumber`
 
-___
+***
 
 ### paymentAddress
 
-• **paymentAddress**: `string`
+> **paymentAddress**: `string`
 
-___
+***
 
 ### price
 
-• **price**: `BigNumber`
+> **price**: `BigNumber`
 
-___
+***
 
 ### protocolFee
 
-• **protocolFee**: `BigNumber`
+> **protocolFee**: `BigNumber`

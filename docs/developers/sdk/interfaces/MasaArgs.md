@@ -1,72 +1,61 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaArgs
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaArgs
 
 # Interface: MasaArgs
 
-## Table of contents
-
-### Properties
-
-- [apiUrl](MasaArgs.md#apiurl)
-- [arweave](MasaArgs.md#arweave)
-- [contractOverrides](MasaArgs.md#contractoverrides)
-- [cookie](MasaArgs.md#cookie)
-- [environment](MasaArgs.md#environment)
-- [forceTransactions](MasaArgs.md#forcetransactions)
-- [networkName](MasaArgs.md#networkname)
-- [signer](MasaArgs.md#signer)
-- [verbose](MasaArgs.md#verbose)
-
 ## Properties
 
-### apiUrl
+### apiUrl?
 
-• `Optional` `Readonly` **apiUrl**: `string`
+> `optional` `readonly` **apiUrl**: `string`
 
-___
+***
 
-### arweave
+### arweave?
 
-• `Optional` `Readonly` **arweave**: `ApiConfig`
+> `optional` `readonly` **arweave**: `ApiConfig`
 
-___
+***
 
-### contractOverrides
+### contractOverrides?
 
-• `Optional` `Readonly` **contractOverrides**: `Partial`\<[`IIdentityContracts`](IIdentityContracts.md)\>
+> `optional` `readonly` **contractOverrides**: `Partial`\<[`IIdentityContracts`](IIdentityContracts.md)\>
 
-___
+***
 
-### cookie
+### cookie?
 
-• `Optional` `Readonly` **cookie**: `string`
+> `optional` `readonly` **cookie**: `string`
 
-___
+***
 
-### environment
+### environment?
 
-• `Optional` `Readonly` **environment**: [`EnvironmentName`](../modules.md#environmentname)
+> `optional` `readonly` **environment**: [`EnvironmentName`](../type-aliases/EnvironmentName.md)
 
-___
+***
 
-### forceTransactions
+### forceTransactions?
 
-• `Optional` `Readonly` **forceTransactions**: `boolean`
+> `optional` `readonly` **forceTransactions**: `boolean`
 
-___
+***
 
-### networkName
+### networkName?
 
-• `Optional` `Readonly` **networkName**: [`NetworkName`](../modules.md#networkname)
+> `optional` `readonly` **networkName**: [`NetworkName`](../type-aliases/NetworkName.md)
 
-___
+***
 
 ### signer
 
-• `Readonly` **signer**: `Signer`
+> `readonly` **signer**: `Signer`
 
-___
+***
 
-### verbose
+### verbose?
 
-• `Optional` `Readonly` **verbose**: `boolean`
+> `optional` `readonly` **verbose**: `boolean`

@@ -1,50 +1,63 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / ICreditScore
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / ICreditScore
 
 # Interface: ICreditScore
-
-## Table of contents
-
-### Properties
-
-- [description](ICreditScore.md#description)
-- [image](ICreditScore.md#image)
-- [name](ICreditScore.md#name)
-- [properties](ICreditScore.md#properties)
 
 ## Properties
 
 ### description
 
-• **description**: ``"A decentralized credit score"``
+> **description**: `"A decentralized credit score"`
 
-___
+***
 
 ### image
 
-• **image**: ``"https://metadata.masa.finance/v1.0/credit-score/credit-score.png"``
+> **image**: `"https://metadata.masa.finance/v1.0/credit-score/credit-score.png"`
 
-___
+***
 
 ### name
 
-• **name**: ``"Masa Soulbound Credit Score v1.0.0"``
+> **name**: `"Masa Soulbound Credit Score v1.0.0"`
 
-___
+***
 
 ### properties
 
-• **properties**: `Object`
+> **properties**: `object`
 
-#### Type declaration
+#### account?
 
-| Name | Type |
-| :------ | :------ |
-| `account?` | `string` |
-| `decile?` | `string` |
-| `identityId?` | `string` |
-| `lastUpdated?` | `string` |
-| `model_version?` | `string` |
-| `tokenId` | `string` |
-| `value?` | `number` |
-| `value_rating?` | `string` |
+> `optional` **account**: `string`
+
+#### decile?
+
+> `optional` **decile**: `string`
+
+#### identityId?
+
+> `optional` **identityId**: `string`
+
+#### lastUpdated?
+
+> `optional` **lastUpdated**: `string`
+
+#### model\_version?
+
+> `optional` **model\_version**: `string`
+
+#### tokenId
+
+> **tokenId**: `string`
+
+#### value?
+
+> `optional` **value**: `number`
+
+#### value\_rating?
+
+> `optional` **value\_rating**: `string`

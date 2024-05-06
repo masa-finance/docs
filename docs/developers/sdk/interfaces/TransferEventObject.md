@@ -1,30 +1,25 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / TransferEventObject
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / TransferEventObject
 
 # Interface: TransferEventObject
-
-## Table of contents
-
-### Properties
-
-- [from](TransferEventObject.md#from)
-- [to](TransferEventObject.md#to)
-- [value](TransferEventObject.md#value)
 
 ## Properties
 
 ### from
 
-• **from**: `string`
+> **from**: `string`
 
-___
+***
 
 ### to
 
-• **to**: `string`
+> **to**: `string`
 
-___
+***
 
 ### value
 
-• **value**: `BigNumber`
+> **value**: `BigNumber`

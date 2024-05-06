@@ -1,133 +1,131 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / User
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / User
 
 # Interface: User
 
-## Table of contents
-
-### Properties
-
-- [activeRole](User.md#activerole)
-- [availableRoles](User.md#availableroles)
-- [country](User.md#country)
-- [countryId](User.md#countryid)
-- [dataFarmingAllowed](User.md#datafarmingallowed)
-- [dateOfBirth](User.md#dateofbirth)
-- [email](User.md#email)
-- [emailVerified](User.md#emailverified)
-- [firstName](User.md#firstname)
-- [id](User.md#id)
-- [lastLoginDate](User.md#lastlogindate)
-- [lastName](User.md#lastname)
-- [phone](User.md#phone)
-- [pngmeId](User.md#pngmeid)
-- [pngmePermsAllowed](User.md#pngmepermsallowed)
-- [productsOfInterest](User.md#productsofinterest)
-
 ## Properties
 
-### activeRole
+### activeRole?
 
-• `Optional` **activeRole**: `string`
+> `optional` **activeRole**: `string`
 
-___
+***
 
-### availableRoles
+### availableRoles?
 
-• `Optional` **availableRoles**: `string`[]
+> `optional` **availableRoles**: `string`[]
 
-___
+***
 
-### country
+### country?
 
-• `Optional` **country**: `Object`
+> `optional` **country**: `object`
 
-#### Type declaration
+#### abbreviation?
 
-| Name | Type |
-| :------ | :------ |
-| `abbreviation?` | `string` |
-| `bankApproved?` | `boolean` |
-| `iso2?` | `string` |
-| `iso3?` | `string` |
-| `name?` | `string` |
-| `phoneCode?` | `string` |
-| `version?` | `number` |
+> `optional` **abbreviation**: `string`
 
-___
+#### bankApproved?
 
-### countryId
+> `optional` **bankApproved**: `boolean`
 
-• `Optional` **countryId**: `string`
+#### iso2?
 
-___
+> `optional` **iso2**: `string`
 
-### dataFarmingAllowed
+#### iso3?
 
-• `Optional` **dataFarmingAllowed**: `boolean`
+> `optional` **iso3**: `string`
 
-___
+#### name?
 
-### dateOfBirth
+> `optional` **name**: `string`
 
-• `Optional` **dateOfBirth**: `string`
+#### phoneCode?
 
-___
+> `optional` **phoneCode**: `string`
+
+#### version?
+
+> `optional` **version**: `number`
+
+***
+
+### countryId?
+
+> `optional` **countryId**: `string`
+
+***
+
+### dataFarmingAllowed?
+
+> `optional` **dataFarmingAllowed**: `boolean`
+
+***
+
+### dateOfBirth?
+
+> `optional` **dateOfBirth**: `string`
+
+***
 
 ### email
 
-• **email**: `string`
+> **email**: `string`
 
-___
+***
 
-### emailVerified
+### emailVerified?
 
-• `Optional` **emailVerified**: `boolean`
+> `optional` **emailVerified**: `boolean`
 
-___
+***
 
 ### firstName
 
-• **firstName**: `string`
+> **firstName**: `string`
 
-___
+***
 
 ### id
 
-• **id**: `string`
+> **id**: `string`
 
-___
+***
 
-### lastLoginDate
+### lastLoginDate?
 
-• `Optional` **lastLoginDate**: `string`
+> `optional` **lastLoginDate**: `string`
 
-___
+***
 
 ### lastName
 
-• **lastName**: `string`
+> **lastName**: `string`
 
-___
+***
 
-### phone
+### phone?
 
-• `Optional` **phone**: `string`
+> `optional` **phone**: `string`
 
-___
+***
 
-### pngmeId
+### pngmeId?
 
-• `Optional` **pngmeId**: `string`
+> `optional` **pngmeId**: `string`
 
-___
+***
 
-### pngmePermsAllowed
+### pngmePermsAllowed?
 
-• `Optional` **pngmePermsAllowed**: `boolean`
+> `optional` **pngmePermsAllowed**: `boolean`
 
-___
+***
 
-### productsOfInterest
+### productsOfInterest?
 
-• `Optional` **productsOfInterest**: `string`[]
+> `optional` **productsOfInterest**: `string`[]

@@ -1,79 +1,67 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / ISoulName
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / ISoulName
 
 # Interface: ISoulName
-
-## Table of contents
-
-### Properties
-
-- [attributes](ISoulName.md#attributes)
-- [chainId](ISoulName.md#chainid)
-- [description](ISoulName.md#description)
-- [external\_url](ISoulName.md#external_url)
-- [image](ISoulName.md#image)
-- [imageHash](ISoulName.md#imagehash)
-- [imageHashSignature](ISoulName.md#imagehashsignature)
-- [name](ISoulName.md#name)
-- [network](ISoulName.md#network)
-- [signature](ISoulName.md#signature)
 
 ## Properties
 
 ### attributes
 
-• **attributes**: [`Attribute`](Attribute.md)[]
+> **attributes**: [`Attribute`](Attribute.md)[]
 
-___
+***
 
 ### chainId
 
-• **chainId**: `string`
+> **chainId**: `string`
 
-___
+***
 
 ### description
 
-• **description**: ``"This is a soul name!"``
+> **description**: `"This is a soul name!"`
 
-___
+***
 
 ### external\_url
 
-• **external\_url**: ``"https://app.basecamp.global"`` \| ``"https://app.prosperity.global"`` \| ``"https://testnet.app.masa.finance"`` \| ``"https://app.masa.finance"``
+> **external\_url**: `"https://app.basecamp.global"` \| `"https://app.prosperity.global"` \| `"https://testnet.app.masa.finance"` \| `"https://app.masa.finance"`
 
-___
+***
 
 ### image
 
-• **image**: `string`
+> **image**: `string`
 
-___
+***
 
 ### imageHash
 
-• **imageHash**: `string`
+> **imageHash**: `string`
 
-___
+***
 
 ### imageHashSignature
 
-• **imageHashSignature**: `string`
+> **imageHashSignature**: `string`
 
-___
+***
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
 
-___
+***
 
 ### network
 
-• **network**: `string`
+> **network**: `string`
 
-___
+***
 
 ### signature
 
-• **signature**: `string`
+> **signature**: `string`

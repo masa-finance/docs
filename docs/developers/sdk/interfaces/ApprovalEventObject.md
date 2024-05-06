@@ -1,30 +1,25 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / ApprovalEventObject
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / ApprovalEventObject
 
 # Interface: ApprovalEventObject
-
-## Table of contents
-
-### Properties
-
-- [owner](ApprovalEventObject.md#owner)
-- [spender](ApprovalEventObject.md#spender)
-- [value](ApprovalEventObject.md#value)
 
 ## Properties
 
 ### owner
 
-• **owner**: `string`
+> **owner**: `string`
 
-___
+***
 
 ### spender
 
-• **spender**: `string`
+> **spender**: `string`
 
-___
+***
 
 ### value
 
-• **value**: `BigNumber`
+> **value**: `BigNumber`

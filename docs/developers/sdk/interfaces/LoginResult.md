@@ -1,58 +1,49 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / LoginResult
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / LoginResult
 
 # Interface: LoginResult
 
-## Hierarchy
+## Extends
 
 - [`BaseResult`](BaseResult.md)
 
-  ↳ **`LoginResult`**
-
-## Table of contents
-
-### Properties
-
-- [address](LoginResult.md#address)
-- [cookie](LoginResult.md#cookie)
-- [message](LoginResult.md#message)
-- [success](LoginResult.md#success)
-- [userId](LoginResult.md#userid)
-
 ## Properties
 
-### address
+### address?
 
-• `Optional` **address**: `string`
+> `optional` **address**: `string`
 
-___
+***
 
-### cookie
+### cookie?
 
-• `Optional` **cookie**: `string`
+> `optional` **cookie**: `string`
 
-___
+***
 
-### message
+### message?
 
-• `Optional` **message**: `string`
+> `optional` **message**: `string`
 
 #### Inherited from
 
-[BaseResult](BaseResult.md).[message](BaseResult.md#message)
+[`BaseResult`](BaseResult.md).[`message`](BaseResult.md#message)
 
-___
+***
 
 ### success
 
-• **success**: `boolean`
+> **success**: `boolean`
 
 #### Inherited from
 
-[BaseResult](BaseResult.md).[success](BaseResult.md#success)
+[`BaseResult`](BaseResult.md).[`success`](BaseResult.md#success)
 
-___
+***
 
-### userId
+### userId?
 
-• `Optional` **userId**: `string` \| `BigNumber`
+> `optional` **userId**: `string` \| `BigNumber`

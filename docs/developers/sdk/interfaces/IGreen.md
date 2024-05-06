@@ -1,45 +1,43 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / IGreen
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / IGreen
 
 # Interface: IGreen
-
-## Table of contents
-
-### Properties
-
-- [description](IGreen.md#description)
-- [image](IGreen.md#image)
-- [name](IGreen.md#name)
-- [properties](IGreen.md#properties)
 
 ## Properties
 
 ### description
 
-• **description**: ``"Masa Green is a decentralized authentication solution"``
+> **description**: `"Masa Green is a decentralized authentication solution"`
 
-___
+***
 
 ### image
 
-• **image**: ``"https://metadata.masa.finance/v1.0/green/green.png"``
+> **image**: `"https://metadata.masa.finance/v1.0/green/green.png"`
 
-___
+***
 
 ### name
 
-• **name**: ``"Masa Soulbound Green v1.0.0"``
+> **name**: `"Masa Soulbound Green v1.0.0"`
 
-___
+***
 
 ### properties
 
-• **properties**: `Object`
+> **properties**: `object`
 
-#### Type declaration
+#### account?
 
-| Name | Type |
-| :------ | :------ |
-| `account?` | `string` |
-| `identityId?` | `string` |
-| `tokenId` | `string` |
+> `optional` **account**: `string`
+
+#### identityId?
+
+> `optional` **identityId**: `string`
+
+#### tokenId
+
+> **tokenId**: `string`

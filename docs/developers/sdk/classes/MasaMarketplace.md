@@ -1,45 +1,24 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaMarketplace
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaMarketplace
 
 # Class: MasaMarketplace
 
-## Hierarchy
+## Extends
 
 - `MasaModuleBase`
 
-  ↳ **`MasaMarketplace`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MasaMarketplace.md#constructor)
-
-### Properties
-
-- [contract](MasaMarketplace.md#contract)
-- [masa](MasaMarketplace.md#masa)
-
-### Accessors
-
-- [isContractAvailable](MasaMarketplace.md#iscontractavailable)
-
-### Methods
-
-- [claimAllRewards](MasaMarketplace.md#claimallrewards)
-- [stakeAll](MasaMarketplace.md#stakeall)
-
 ## Constructors
 
-### constructor
+### new MasaMarketplace()
 
-• **new MasaMarketplace**(`masa`): [`MasaMarketplace`](MasaMarketplace.md)
+> **new MasaMarketplace**(`masa`): [`MasaMarketplace`](MasaMarketplace.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+• **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Returns
 
@@ -47,57 +26,53 @@
 
 #### Overrides
 
-MasaModuleBase.constructor
+`MasaModuleBase.constructor`
 
 ## Properties
 
 ### contract
 
-• `Readonly` **contract**: `Contract` & [`ContractInfo`](../interfaces/ContractInfo.md)
+> `readonly` **contract**: `Contract` & [`ContractInfo`](../interfaces/ContractInfo.md)
 
 #### Inherited from
 
-MasaModuleBase.contract
+`MasaModuleBase.contract`
 
-___
+***
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-MasaModuleBase.masa
+`MasaModuleBase.masa`
 
 ## Accessors
 
 ### isContractAvailable
 
-• `get` **isContractAvailable**(): `boolean`
+> `get` **isContractAvailable**(): `boolean`
 
 #### Returns
 
 `boolean`
 
-#### Inherited from
-
-MasaModuleBase.isContractAvailable
-
 ## Methods
 
-### claimAllRewards
+### claimAllRewards()
 
-▸ **claimAllRewards**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+> **claimAllRewards**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Returns
 
 `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
-___
+***
 
-### stakeAll
+### stakeAll()
 
-▸ **stakeAll**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
+> **stakeAll**(): `Promise`\<[`BaseResult`](../interfaces/BaseResult.md)\>
 
 #### Returns
 

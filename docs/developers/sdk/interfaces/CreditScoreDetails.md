@@ -1,30 +1,25 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / CreditScoreDetails
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / CreditScoreDetails
 
 # Interface: CreditScoreDetails
 
-## Table of contents
-
-### Properties
-
-- [metadata](CreditScoreDetails.md#metadata)
-- [tokenId](CreditScoreDetails.md#tokenid)
-- [tokenUri](CreditScoreDetails.md#tokenuri)
-
 ## Properties
 
-### metadata
+### metadata?
 
-• `Optional` **metadata**: [`ICreditScore`](ICreditScore.md)
+> `optional` **metadata**: [`ICreditScore`](ICreditScore.md)
 
-___
+***
 
 ### tokenId
 
-• **tokenId**: `BigNumber`
+> **tokenId**: `BigNumber`
 
-___
+***
 
 ### tokenUri
 
-• **tokenUri**: `string`
+> **tokenUri**: `string`

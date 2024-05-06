@@ -1,50 +1,37 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / BaseResultWithTokenId
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / BaseResultWithTokenId
 
 # Interface: BaseResultWithTokenId
 
-## Hierarchy
+## Extends
 
 - [`BaseResult`](BaseResult.md)
 
-  ↳ **`BaseResultWithTokenId`**
-
-  ↳↳ [`UpdateCreditScoreResult`](UpdateCreditScoreResult.md)
-
-  ↳↳ [`GreenBaseResult`](GreenBaseResult.md)
-
-  ↳↳ [`SoulNameResultBase`](SoulNameResultBase.md)
-
-## Table of contents
-
-### Properties
-
-- [message](BaseResultWithTokenId.md#message)
-- [success](BaseResultWithTokenId.md#success)
-- [tokenId](BaseResultWithTokenId.md#tokenid)
-
 ## Properties
 
-### message
+### message?
 
-• `Optional` **message**: `string`
+> `optional` **message**: `string`
 
 #### Inherited from
 
-[BaseResult](BaseResult.md).[message](BaseResult.md#message)
+[`BaseResult`](BaseResult.md).[`message`](BaseResult.md#message)
 
-___
+***
 
 ### success
 
-• **success**: `boolean`
+> **success**: `boolean`
 
 #### Inherited from
 
-[BaseResult](BaseResult.md).[success](BaseResult.md#success)
+[`BaseResult`](BaseResult.md).[`success`](BaseResult.md#success)
 
-___
+***
 
-### tokenId
+### tokenId?
 
-• `Optional` **tokenId**: `string` \| `BigNumber`
+> `optional` **tokenId**: `string` \| `BigNumber`

@@ -1,49 +1,61 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / ISession
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / ISession
 
 # Interface: ISession
-
-## Table of contents
-
-### Properties
-
-- [challenge](ISession.md#challenge)
-- [cookie](ISession.md#cookie)
-- [user](ISession.md#user)
 
 ## Properties
 
 ### challenge
 
-• **challenge**: `string`
+> **challenge**: `string`
 
-___
+***
 
 ### cookie
 
-• **cookie**: `Object`
+> **cookie**: `object`
 
-#### Type declaration
+#### domain
 
-| Name | Type |
-| :------ | :------ |
-| `domain` | `string` |
-| `expires` | `string` |
-| `httpOnly` | `boolean` |
-| `originalMaxAge` | `number` |
-| `path` | `string` |
-| `sameSite` | `string` |
-| `secure` | `boolean` |
+> **domain**: `string`
 
-___
+#### expires
+
+> **expires**: `string`
+
+#### httpOnly
+
+> **httpOnly**: `boolean`
+
+#### originalMaxAge
+
+> **originalMaxAge**: `number`
+
+#### path
+
+> **path**: `string`
+
+#### sameSite
+
+> **sameSite**: `string`
+
+#### secure
+
+> **secure**: `boolean`
+
+***
 
 ### user
 
-• **user**: `Object`
+> **user**: `object`
 
-#### Type declaration
+#### address
 
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `userId` | `string` |
+> **address**: `string`
+
+#### userId
+
+> **userId**: `string`

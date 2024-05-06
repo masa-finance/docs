@@ -1,48 +1,26 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / Marketplace
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / Marketplace
 
 # Class: Marketplace
 
-## Hierarchy
+## Extends
 
 - `MasaContractModuleBase`
 
-  ↳ **`Marketplace`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Marketplace.md#constructor)
-
-### Properties
-
-- [instances](Marketplace.md#instances)
-- [masa](Marketplace.md#masa)
-
-### Methods
-
-- [checkOrGiveAllowance](Marketplace.md#checkorgiveallowance)
-- [createOverrides](Marketplace.md#createoverrides)
-- [estimateGasWithSlippage](Marketplace.md#estimategaswithslippage)
-- [formatPrice](Marketplace.md#formatprice)
-- [getNetworkFeeInformation](Marketplace.md#getnetworkfeeinformation)
-- [getPaymentAddress](Marketplace.md#getpaymentaddress)
-- [verify](Marketplace.md#verify)
-- [addSlippage](Marketplace.md#addslippage)
-
 ## Constructors
 
-### constructor
+### new Marketplace()
 
-• **new Marketplace**(`masa`, `instances`): [`Marketplace`](Marketplace.md)
+> **new Marketplace**(`masa`, `instances`): [`Marketplace`](Marketplace.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
-| `instances` | [`IIdentityContracts`](../interfaces/IIdentityContracts.md) |
+• **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+
+• **instances**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
 
 #### Returns
 
@@ -50,44 +28,45 @@
 
 #### Inherited from
 
-MasaContractModuleBase.constructor
+`MasaContractModuleBase.constructor`
 
 ## Properties
 
 ### instances
 
-• `Protected` **instances**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
+> `protected` **instances**: [`IIdentityContracts`](../interfaces/IIdentityContracts.md)
 
 #### Inherited from
 
-MasaContractModuleBase.instances
+`MasaContractModuleBase.instances`
 
-___
+***
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-MasaContractModuleBase.masa
+`MasaContractModuleBase.masa`
 
 ## Methods
 
-### checkOrGiveAllowance
+### checkOrGiveAllowance()
 
-▸ **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`\<`undefined` \| `ContractReceipt`\>
+> `private` **checkOrGiveAllowance**(`paymentAddress`, `paymentMethod`, `spenderAddress`, `price`): `Promise`\<`undefined` \| `ContractReceipt`\>
 
 Checks or gives allowance on ERC20 tokens
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `paymentAddress` | `string` |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
-| `spenderAddress` | `string` |
-| `price` | `BigNumber` |
+• **paymentAddress**: `string`
+
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)
+
+• **spenderAddress**: `string`
+
+• **price**: `BigNumber`
 
 #### Returns
 
@@ -95,19 +74,17 @@ Checks or gives allowance on ERC20 tokens
 
 #### Inherited from
 
-MasaContractModuleBase.checkOrGiveAllowance
+`MasaContractModuleBase.checkOrGiveAllowance`
 
-___
+***
 
-### createOverrides
+### createOverrides()
 
-▸ **createOverrides**(`value?`): `Promise`\<`PayableOverrides`\>
+> `protected` **createOverrides**(`value`?): `Promise`\<`PayableOverrides`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value?` | `BigNumber` |
+• **value?**: `BigNumber`
 
 #### Returns
 
@@ -115,21 +92,21 @@ ___
 
 #### Inherited from
 
-MasaContractModuleBase.createOverrides
+`MasaContractModuleBase.createOverrides`
 
-___
+***
 
-### estimateGasWithSlippage
+### estimateGasWithSlippage()
 
-▸ **estimateGasWithSlippage**(`estimateGas`, `args?`, `overrides?`): `Promise`\<`BigNumber`\>
+> `protected` **estimateGasWithSlippage**(`estimateGas`, `args`?, `overrides`?): `Promise`\<`BigNumber`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `estimateGas` | (...`estimateGasArgAndOverrides`: `never`[]) => `Promise`\<`BigNumber`\> |
-| `args?` | `unknown`[] |
-| `overrides?` | `PayableOverrides` |
+• **estimateGas**
+
+• **args?**: `unknown`[]
+
+• **overrides?**: `PayableOverrides`
 
 #### Returns
 
@@ -137,20 +114,19 @@ ___
 
 #### Inherited from
 
-MasaContractModuleBase.estimateGasWithSlippage
+`MasaContractModuleBase.estimateGasWithSlippage`
 
-___
+***
 
-### formatPrice
+### formatPrice()
 
-▸ **formatPrice**(`paymentAddress`, `price`): `Promise`\<`string`\>
+> `protected` **formatPrice**(`paymentAddress`, `price`): `Promise`\<`string`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `paymentAddress` | `string` |
-| `price` | `BigNumber` |
+• **paymentAddress**: `string`
+
+• **price**: `BigNumber`
 
 #### Returns
 
@@ -158,13 +134,13 @@ ___
 
 #### Inherited from
 
-MasaContractModuleBase.formatPrice
+`MasaContractModuleBase.formatPrice`
 
-___
+***
 
-### getNetworkFeeInformation
+### getNetworkFeeInformation()
 
-▸ **getNetworkFeeInformation**(): `Promise`\<`undefined` \| `FeeData`\>
+> `protected` **getNetworkFeeInformation**(): `Promise`\<`undefined` \| `FeeData`\>
 
 #### Returns
 
@@ -172,21 +148,19 @@ ___
 
 #### Inherited from
 
-MasaContractModuleBase.getNetworkFeeInformation
+`MasaContractModuleBase.getNetworkFeeInformation`
 
-___
+***
 
-### getPaymentAddress
+### getPaymentAddress()
 
-▸ **getPaymentAddress**(`paymentMethod`): `string`
+> `private` **getPaymentAddress**(`paymentMethod`): `string`
 
 Gets the payment address for a given payment method
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `paymentMethod` | [`PaymentMethod`](../modules.md#paymentmethod) |
+• **paymentMethod**: [`PaymentMethod`](../type-aliases/PaymentMethod.md)
 
 #### Returns
 
@@ -194,27 +168,31 @@ Gets the payment address for a given payment method
 
 #### Inherited from
 
-MasaContractModuleBase.getPaymentAddress
+`MasaContractModuleBase.getPaymentAddress`
 
-___
+***
 
-### verify
+### verify()
 
-▸ **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`\<`void`\>
+> `protected` **verify**(`errorMessage`, `contract`, `domain`, `types`, `value`, `signature`, `authorityAddress`): `Promise`\<`void`\>
 
 verify a signature created during one of the SBT signing flows
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `errorMessage` | `string` |
-| `contract` | `SoulLinker` \| `SoulStore` \| `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority` |
-| `domain` | `TypedDataDomain` |
-| `types` | `Record`\<`string`, `TypedDataField`[]\> |
-| `value` | `Record`\<`string`, `string` \| `number` \| `boolean` \| `BigNumber`\> |
-| `signature` | `string` |
-| `authorityAddress` | `string` |
+• **errorMessage**: `string`
+
+• **contract**: `SoulLinker` \| `SoulStore` \| `MasaSBT` \| `MasaSBTSelfSovereign` \| `MasaSBTAuthority`
+
+• **domain**: `TypedDataDomain`
+
+• **types**: `Record`\<`string`, `TypedDataField`[]\>
+
+• **value**: `Record`\<`string`, `string` \| `number` \| `boolean` \| `BigNumber`\>
+
+• **signature**: `string`
+
+• **authorityAddress**: `string`
 
 #### Returns
 
@@ -222,22 +200,21 @@ verify a signature created during one of the SBT signing flows
 
 #### Inherited from
 
-MasaContractModuleBase.verify
+`MasaContractModuleBase.verify`
 
-___
+***
 
-### addSlippage
+### addSlippage()
 
-▸ **addSlippage**(`price`, `slippage`): `BigNumber`
+> `static` `protected` **addSlippage**(`price`, `slippage`): `BigNumber`
 
 adds a percentage to the price as slippage
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `price` | `BigNumber` |
-| `slippage` | `number` |
+• **price**: `BigNumber`
+
+• **slippage**: `number`
 
 #### Returns
 
@@ -245,4 +222,4 @@ adds a percentage to the price as slippage
 
 #### Inherited from
 
-MasaContractModuleBase.addSlippage
+`MasaContractModuleBase.addSlippage`

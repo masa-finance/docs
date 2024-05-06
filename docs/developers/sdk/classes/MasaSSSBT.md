@@ -1,41 +1,24 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaSSSBT
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaSSSBT
 
 # Class: MasaSSSBT
 
-## Hierarchy
+## Extends
 
 - `MasaBase`
 
-  ↳ **`MasaSSSBT`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MasaSSSBT.md#constructor)
-
-### Properties
-
-- [masa](MasaSSSBT.md#masa)
-
-### Methods
-
-- [attach](MasaSSSBT.md#attach)
-- [connect](MasaSSSBT.md#connect)
-- [deploy](MasaSSSBT.md#deploy)
-
 ## Constructors
 
-### constructor
+### new MasaSSSBT()
 
-• **new MasaSSSBT**(`masa`): [`MasaSSSBT`](MasaSSSBT.md)
+> **new MasaSSSBT**(`masa`): [`MasaSSSBT`](MasaSSSBT.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+• **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Returns
 
@@ -43,80 +26,77 @@
 
 #### Inherited from
 
-MasaBase.constructor
+`MasaBase.constructor`
 
 ## Properties
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-MasaBase.masa
+`MasaBase.masa`
 
 ## Methods
 
-### attach
+### attach()
 
-▸ **attach**\<`Contract`\>(`contract`): [`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)\<`Contract`\>
+> **attach**\<`Contract`\>(`contract`): [`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)\<`Contract`\>
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `ReferenceSBTSelfSovereign` |
+• **Contract** *extends* `ReferenceSBTSelfSovereign`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `contract` | `Contract` |
+• **contract**: `Contract`
 
 #### Returns
 
 [`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)\<`Contract`\>
 
-___
+***
 
-### connect
+### connect()
 
-▸ **connect**\<`Contract`\>(`address`, `factory?`): `Promise`\<[`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)\<`Contract`\>\>
+> **connect**\<`Contract`\>(`address`, `factory`): `Promise`\<[`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)\<`Contract`\>\>
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Contract` | extends `ReferenceSBTSelfSovereign` |
+• **Contract** *extends* `ReferenceSBTSelfSovereign`
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `address` | `string` | `undefined` |
-| `factory` | [`ContractFactory`](ContractFactory.md) | `ReferenceSBTSelfSovereign__factory` |
+• **address**: `string`
+
+• **factory**: [`ContractFactory`](ContractFactory.md)= `ReferenceSBTSelfSovereign__factory`
 
 #### Returns
 
 `Promise`\<[`MasaSSSBTWrapper`](MasaSSSBTWrapper.md)\<`Contract`\>\>
 
-___
+***
 
-### deploy
+### deploy()
 
-▸ **deploy**(`«destructured»`): `Promise`\<`undefined` \| [`DeployResult`](../interfaces/DeployResult.md)\<`PaymentParamsStruct`\>\>
+> **deploy**(`__namedParameters`): `Promise`\<`undefined` \| [`DeployResult`](../interfaces/DeployResult.md)\<`PaymentParamsStruct`\>\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `«destructured»` | `Object` | `undefined` |
-| › `adminAddress?` | `string` | `undefined` |
-| › `authorityAddress` | `string` | `undefined` |
-| › `baseTokenUri` | `string` | `undefined` |
-| › `limit?` | `number` | `1` |
-| › `name` | `string` | `undefined` |
-| › `symbol` | `string` | `undefined` |
+• **\_\_namedParameters**
+
+• **\_\_namedParameters.adminAddress?**: `string`
+
+• **\_\_namedParameters.authorityAddress**: `string`
+
+• **\_\_namedParameters.baseTokenUri**: `string`
+
+• **\_\_namedParameters.limit?**: `number`= `1`
+
+• **\_\_namedParameters.name**: `string`
+
+• **\_\_namedParameters.symbol**: `string`
 
 #### Returns
 

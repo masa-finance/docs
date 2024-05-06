@@ -1,55 +1,30 @@
-[# Masa SDK
- - v3.34.1](../README.md) / [Exports](../modules.md) / MasaClient
+[**# Masa SDK v3.36.1**](../README.md) • **Docs**
+
+***
+
+[# Masa SDK v3.36.1](../globals.md) / MasaClient
 
 # Class: MasaClient
 
-## Hierarchy
+## Extends
 
 - `MasaBase`
 
-  ↳ **`MasaClient`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MasaClient.md#constructor)
-
-### Properties
-
-- [\_cookie](MasaClient.md#_cookie)
-- [\_middlewareClient](MasaClient.md#_middlewareclient)
-- [creditScore](MasaClient.md#creditscore)
-- [green](MasaClient.md#green)
-- [masa](MasaClient.md#masa)
-- [metadata](MasaClient.md#metadata)
-- [session](MasaClient.md#session)
-- [soulName](MasaClient.md#soulname)
-
-### Accessors
-
-- [cookie](MasaClient.md#cookie)
-
-### Methods
-
-- [get](MasaClient.md#get)
-- [patch](MasaClient.md#patch)
-- [post](MasaClient.md#post)
-
 ## Constructors
 
-### constructor
+### new MasaClient()
 
-• **new MasaClient**(`«destructured»`): [`MasaClient`](MasaClient.md)
+> **new MasaClient**(`__namedParameters`): [`MasaClient`](MasaClient.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `apiUrl` | `string` |
-| › `cookie?` | `string` |
-| › `masa` | [`MasaInterface`](../interfaces/MasaInterface.md) |
+• **\_\_namedParameters**
+
+• **\_\_namedParameters.apiUrl**: `string`
+
+• **\_\_namedParameters.cookie?**: `string`
+
+• **\_\_namedParameters.masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Returns
 
@@ -57,100 +32,199 @@
 
 #### Overrides
 
-MasaBase.constructor
+`MasaBase.constructor`
 
 ## Properties
 
-### \_cookie
+### \_cookie?
 
-• `Private` `Optional` **\_cookie**: `string`
+> `private` `optional` **\_cookie**: `string`
 
-___
+***
 
 ### \_middlewareClient
 
-• `Private` **\_middlewareClient**: `AxiosInstance`
+> `private` **\_middlewareClient**: `AxiosInstance`
 
-___
+***
 
 ### creditScore
 
-• **creditScore**: `Object`
+> **creditScore**: `object`
 
-#### Type declaration
+#### generate()
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `generate` | () => `Promise`\<`undefined` \| [`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\> | - |
-| `update` | (`transactionHash`: `string`) => `Promise`\<`undefined` \| [`UpdateCreditScoreResult`](../interfaces/UpdateCreditScoreResult.md)\> | - |
+> **generate**: () => `Promise`\<`undefined` \| [`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\>
 
-___
+Generates a new credit score
+
+##### Returns
+
+`Promise`\<`undefined` \| [`GenerateCreditScoreResult`](../interfaces/GenerateCreditScoreResult.md)\>
+
+#### update()
+
+> **update**: (`transactionHash`) => `Promise`\<`undefined` \| [`UpdateCreditScoreResult`](../interfaces/UpdateCreditScoreResult.md)\>
+
+Update an existing credit score
+
+##### Parameters
+
+• **transactionHash**: `string`
+
+##### Returns
+
+`Promise`\<`undefined` \| [`UpdateCreditScoreResult`](../interfaces/UpdateCreditScoreResult.md)\>
+
+***
 
 ### green
 
-• **green**: `Object`
+> **green**: `object`
 
-#### Type declaration
+#### generate()
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `generate` | (`phoneNumber`: `string`) => `Promise`\<[`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\> | - |
-| `verify` | (`phoneNumber`: `string`, `code`: `string`) => `Promise`\<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\> | - |
+> **generate**: (`phoneNumber`) => `Promise`\<[`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\>
 
-___
+Generates a new masa green request
+
+##### Parameters
+
+• **phoneNumber**: `string`
+
+##### Returns
+
+`Promise`\<[`GenerateGreenResult`](../interfaces/GenerateGreenResult.md)\>
+
+#### verify()
+
+> **verify**: (`phoneNumber`, `code`) => `Promise`\<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\>
+
+##### Parameters
+
+• **phoneNumber**: `string`
+
+• **code**: `string`
+
+##### Returns
+
+`Promise`\<`undefined` \| [`VerifyGreenResult`](../interfaces/VerifyGreenResult.md)\>
+
+***
 
 ### masa
 
-• `Protected` `Readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
+> `protected` `readonly` **masa**: [`MasaInterface`](../interfaces/MasaInterface.md)
 
 #### Inherited from
 
-MasaBase.masa
+`MasaBase.masa`
 
-___
+***
 
 ### metadata
 
-• **metadata**: `Object`
+> **metadata**: `object`
 
-#### Type declaration
+#### get()
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `get` | (`uri`: `string`, `additionalHeaders?`: `Record`\<`string`, `string`\>) => `Promise`\<`undefined` \| [`IIdentity`](../interfaces/IIdentity.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IGreen`](../interfaces/IGreen.md)\> | - |
+> **get**: (`uri`, `additionalHeaders`?) => `Promise`\<`undefined` \| [`IIdentity`](../interfaces/IIdentity.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IGreen`](../interfaces/IGreen.md)\>
 
-___
+Retrieve metadata
+
+##### Parameters
+
+• **uri**: `string`
+
+• **additionalHeaders?**: `Record`\<`string`, `string`\>
+
+##### Returns
+
+`Promise`\<`undefined` \| [`IIdentity`](../interfaces/IIdentity.md) \| [`ICreditScore`](../interfaces/ICreditScore.md) \| [`IGreen`](../interfaces/IGreen.md)\>
+
+***
 
 ### session
 
-• **session**: `Object`
+> **session**: `object`
 
-#### Type declaration
+#### check()
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `check` | () => `Promise`\<`undefined` \| [`ISession`](../interfaces/ISession.md)\> | - |
-| `checkSignature` | (`address`: `string`, `signature`: `string`, `cookie?`: `string`) => `Promise`\<`undefined` \| [`SessionUser`](../interfaces/SessionUser.md)\> | - |
-| `getChallenge` | () => `Promise`\<`undefined` \| [`ChallengeResultWithCookie`](../interfaces/ChallengeResultWithCookie.md)\> | - |
-| `logout` | () => `Promise`\<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\> | - |
+> **check**: () => `Promise`\<`undefined` \| [`ISession`](../interfaces/ISession.md)\>
 
-___
+Check session is still alive
+
+##### Returns
+
+`Promise`\<`undefined` \| [`ISession`](../interfaces/ISession.md)\>
+
+#### checkSignature()
+
+> **checkSignature**: (`address`, `signature`, `cookie`?) => `Promise`\<`undefined` \| [`SessionUser`](../interfaces/SessionUser.md)\>
+
+##### Parameters
+
+• **address**: `string`
+
+• **signature**: `string`
+
+• **cookie?**: `string`
+
+##### Returns
+
+`Promise`\<`undefined` \| [`SessionUser`](../interfaces/SessionUser.md)\>
+
+#### getChallenge()
+
+> **getChallenge**: () => `Promise`\<`undefined` \| [`ChallengeResultWithCookie`](../interfaces/ChallengeResultWithCookie.md)\>
+
+Get challenge
+
+##### Returns
+
+`Promise`\<`undefined` \| [`ChallengeResultWithCookie`](../interfaces/ChallengeResultWithCookie.md)\>
+
+#### logout()
+
+> **logout**: () => `Promise`\<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\>
+
+Logout the current user
+
+##### Returns
+
+`Promise`\<`undefined` \| [`LogoutResult`](../interfaces/LogoutResult.md)\>
+
+***
 
 ### soulName
 
-• **soulName**: `Object`
+> **soulName**: `object`
 
-#### Type declaration
+#### store()
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `store` | (`soulName`: `string`, `receiver`: `string`, `duration`: `number`, `style?`: `string`) => `Promise`\<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md) \| [`SoulNameResultBase`](../interfaces/SoulNameResultBase.md)\> | - |
+> **store**: (`soulName`, `receiver`, `duration`, `style`?) => `Promise`\<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md) \| [`SoulNameResultBase`](../interfaces/SoulNameResultBase.md)\>
+
+Store metadata
+
+##### Parameters
+
+• **soulName**: `string`
+
+• **receiver**: `string`
+
+• **duration**: `number`
+
+• **style?**: `string`
+
+##### Returns
+
+`Promise`\<`undefined` \| [`SoulNameMetadataStoreResult`](../interfaces/SoulNameMetadataStoreResult.md) \| [`SoulNameResultBase`](../interfaces/SoulNameResultBase.md)\>
 
 ## Accessors
 
 ### cookie
 
-• `get` **cookie**(): `undefined` \| `string`
+> `get` **cookie**(): `undefined` \| `string`
 
 #### Returns
 
@@ -158,73 +232,104 @@ ___
 
 ## Methods
 
-### get
+### get()
 
-▸ **get**\<`Result`\>(`endpoint`, `silent?`): `Promise`\<\{ `data`: `undefined` \| `Result` ; `status`: `undefined` \| `number` ; `statusText`: `undefined` \| `string`  }\>
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `Result` |
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `endpoint` | `string` | `undefined` |
-| `silent` | `boolean` | `false` |
-
-#### Returns
-
-`Promise`\<\{ `data`: `undefined` \| `Result` ; `status`: `undefined` \| `number` ; `statusText`: `undefined` \| `string`  }\>
-
-___
-
-### patch
-
-▸ **patch**\<`Request`, `Result`\>(`endpoint`, `data`, `silent?`): `Promise`\<\{ `data`: `undefined` \| `Result` ; `status`: `undefined` \| `number` ; `statusText`: `undefined` \| `string`  }\>
+> **get**\<`Result`\>(`endpoint`, `silent`): `Promise`\<`object`\>
 
 #### Type parameters
 
-| Name |
-| :------ |
-| `Request` |
-| `Result` |
+• **Result**
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `endpoint` | `string` | `undefined` |
-| `data` | `Request` | `undefined` |
-| `silent` | `boolean` | `false` |
+• **endpoint**: `string`
+
+• **silent**: `boolean`= `false`
 
 #### Returns
 
-`Promise`\<\{ `data`: `undefined` \| `Result` ; `status`: `undefined` \| `number` ; `statusText`: `undefined` \| `string`  }\>
+`Promise`\<`object`\>
 
-___
+##### data
 
-### post
+> **data**: `undefined` \| `Result`
 
-▸ **post**\<`Request`, `Result`\>(`endpoint`, `data`, `silent?`): `Promise`\<\{ `data`: `undefined` \| `Result` ; `status`: `undefined` \| `number` ; `statusText`: `undefined` \| `string`  }\>
+##### status
+
+> **status**: `undefined` \| `number`
+
+##### statusText
+
+> **statusText**: `undefined` \| `string`
+
+***
+
+### patch()
+
+> **patch**\<`Request`, `Result`\>(`endpoint`, `data`, `silent`): `Promise`\<`object`\>
 
 #### Type parameters
 
-| Name |
-| :------ |
-| `Request` |
-| `Result` |
+• **Request**
+
+• **Result**
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `endpoint` | `string` | `undefined` |
-| `data` | `Request` | `undefined` |
-| `silent` | `boolean` | `false` |
+• **endpoint**: `string`
+
+• **data**: `Request`
+
+• **silent**: `boolean`= `false`
 
 #### Returns
 
-`Promise`\<\{ `data`: `undefined` \| `Result` ; `status`: `undefined` \| `number` ; `statusText`: `undefined` \| `string`  }\>
+`Promise`\<`object`\>
+
+##### data
+
+> **data**: `undefined` \| `Result`
+
+##### status
+
+> **status**: `undefined` \| `number`
+
+##### statusText
+
+> **statusText**: `undefined` \| `string`
+
+***
+
+### post()
+
+> **post**\<`Request`, `Result`\>(`endpoint`, `data`, `silent`): `Promise`\<`object`\>
+
+#### Type parameters
+
+• **Request**
+
+• **Result**
+
+#### Parameters
+
+• **endpoint**: `string`
+
+• **data**: `Request`
+
+• **silent**: `boolean`= `false`
+
+#### Returns
+
+`Promise`\<`object`\>
+
+##### data
+
+> **data**: `undefined` \| `Result`
+
+##### status
+
+> **status**: `undefined` \| `number`
+
+##### statusText
+
+> **statusText**: `undefined` \| `string`
