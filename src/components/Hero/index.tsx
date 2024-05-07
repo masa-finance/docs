@@ -47,7 +47,7 @@ export default function Hero() {
         <p className={heading2}>
           Build hyper-personalized applications, train AI models and more utilizing the largest zk-data network in the world.
         </p>
-        <Link to="docs/analytics/overview">
+        <Link to="docs/category/masa-oracle">
           <StartNowBtn />
         </Link>
       </div>
