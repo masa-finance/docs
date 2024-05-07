@@ -1,6 +1,6 @@
 ---
 id: staking-guide
-title: Staking Guide for Masa Oracle Node
+title: Staking Guide
 ---
 
 This guide provides a comprehensive guide on how to stake tokens on the Masa Oracle Node. Staking is a crucial process for participating in the network and securing it. Follow the steps below to stake your tokens successfully.
@@ -22,13 +22,13 @@ Staking on the Masa Oracle Node involves specifying the amount of tokens you wis
 2. **Execute the Staking Command:** Use the following command to initiate staking:
 
    ```bash
-   ./masa-oracle-node --stake <amount>
+   ./masa-node --stake <amount>
    ```
 
    Replace `<amount>` with the number of tokens you want to stake. For example, to stake 1000 tokens:
   
    ```bash
-   ./masa-oracle-node --stake 1000
+   ./masa-node --stake 1000
    ```
 
 3. **Verify the Transaction:** After executing the staking command, the node will process the staking transaction. Ensure that the transaction is successfully completed by checking the transaction hash provided in the output.

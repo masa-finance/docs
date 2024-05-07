@@ -23,12 +23,35 @@ const sidebars = {
         title: "AI Oracle Node",
       },
       items: [
-        "ai-oracle-node/README",
-        "ai-oracle-node/LLM",
-        "ai-oracle-node/staking-guide",
+        "ai-oracle-node/quickstart",
         "ai-oracle-node/twitter-data",
-        "ai-oracle-node/twitter-worker",
-        "ai-oracle-node/web-worker",
+        "ai-oracle-node/web-scraper",
+        "ai-oracle-node/data-catalog",
+        "ai-oracle-node/twitter-sentiment",
+      ],
+    },
+    {
+      type: "category",
+      label: "AI Node Operator",
+      link: {
+        type: "generated-index",
+        title: "AI Node Operator",
+      },
+      items: [
+        "ai-node-operator/quickstart",
+        "ai-node-operator/twitter-worker",
+        "ai-node-operator/web-worker",
+      ],
+    },
+    {
+      type: "category",
+      label: "Guides and Tutorials",
+      link: {
+        type: "generated-index",
+        title: "Guides and Tutorials",
+      },
+      items: [
+        "guides-and-tutorials/staking-guide",
       ],
     },
     {
