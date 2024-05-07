@@ -16,6 +16,10 @@ const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   docs: [
     {
+      type: "doc",
+      id: "welcome-to-masa", // Assuming the document ID you want to link to is "welcome",
+    },
+    {
       type: "category",
       label: "Masa Oracle",
       link: {
