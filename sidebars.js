@@ -17,21 +17,6 @@ const sidebars = {
   docs: [
     {
       type: "category",
-      label: "Analytics",
-      link: {
-        type: "generated-index",
-        title: "Analytics overview",
-      },
-      items: [
-        "analytics/overview",
-        "analytics/react-sdk-installation",
-        "analytics/js-script-installation",
-        "analytics/data-journey",
-        // ... and any other pages you want to add in a specific order
-      ],
-    },
-    {
-      type: "category",
       label: "Masa Oracle",
       link: {
         type: "generated-index",

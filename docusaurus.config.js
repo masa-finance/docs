@@ -70,12 +70,12 @@ const config = {
         style: { marginRight: "1rem" },
       },
       items: [
-        {
-          type: "doc",
-          docId: "analytics/overview",
-          position: "left",
-          label: "Docs",
-        },
+        // {
+        //   type: "doc",
+        //   docId: "category/masa-oracle",
+        //   position: "left",
+        //   label: "Docs",
+        // },
         {
           href: "https://github.com/masa-finance/docs",
           label: "GitHub",
@@ -97,7 +97,7 @@ const config = {
           items: [
             {
               label: "Overview",
-              to: "docs/analytics/overview",
+              to: "docs/category/masa-oracle",
             },
           ],
         },
