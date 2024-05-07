@@ -17,6 +17,15 @@ const sidebars = {
   docs: [
     {
       type: "category",
+      label: "Welcome to Masa",
+      link: {
+        type: "generated-index",
+        title: "Welcome to Masa",
+      },
+      items: ["welcome-to-masa/welcome-to-masa"],
+    },
+    {
+      type: "category",
       label: "AI Oracle Node",
       link: {
         type: "generated-index",
@@ -50,9 +59,7 @@ const sidebars = {
         type: "generated-index",
         title: "Guides and Tutorials",
       },
-      items: [
-        "guides-and-tutorials/staking-guide",
-      ],
+      items: ["guides-and-tutorials/staking-guide"],
     },
     {
       type: "category",
