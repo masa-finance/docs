@@ -2,4 +2,4 @@
 title: Welcome to Masa
 ---
 
-Welcome
+Welcome to Masa!
