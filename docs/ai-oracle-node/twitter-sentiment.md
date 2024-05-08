@@ -1,4 +1,9 @@
-# Oracle Twitter Sentiment Analysis Feature
+---
+id: twitter-sentiment
+title: Twitter Sentiment
+---
+
+# Masa Node Twitter Sentiment Analysis Feature
 
 The Masa Node introduces a powerful feature for analyzing the sentiment of tweets. This functionality leverages advanced language models to interpret the sentiment behind a collection of tweets, providing valuable insights into public perception and trends.
 

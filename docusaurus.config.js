@@ -97,7 +97,7 @@ const config = {
           items: [
             {
               label: "Overview",
-              to: "docs/category/masa-oracle",
+              to: "docs/category/welcome-to-masa",
             },
           ],
         },
