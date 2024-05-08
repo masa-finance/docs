@@ -1,6 +1,6 @@
 ---
 id: twitter-data
-title: Accessing Twitter Endpoints in Masa Oracle Node
+title: Twitter Data
 ---
 
 ## Introduction

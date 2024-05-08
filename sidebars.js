@@ -16,13 +16,8 @@ const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   docs: [
     {
-      type: "category",
-      label: "Welcome to Masa",
-      link: {
-        type: "generated-index",
-        title: "Welcome to Masa",
-      },
-      items: ["welcome-to-masa/welcome-to-masa"],
+      type: "doc",
+      id: "welcome-to-masa/welcome-to-masa", // Assuming the document ID you want to link to is structured as `folderName/fileName`.
     },
     {
       type: "category",
