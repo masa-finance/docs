@@ -97,7 +97,7 @@ const config = {
           items: [
             {
               label: "Overview",
-              to: "docs/category/welcome-to-masa",
+              to: "docs/welcome-to-masa",
             },
           ],
         },

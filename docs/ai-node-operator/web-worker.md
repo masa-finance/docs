@@ -1,6 +1,6 @@
 ---
 id: web-worker
-title: Providing Compute for Web Scraping Requests
+title: Web Scraper Worker
 ---
 
 ## Introduction

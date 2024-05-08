@@ -1,6 +1,6 @@
 ---
 id: twitter-worker
-title: Providing Compute for Twitter Requests
+title: Twitter Worker
 ---
 
 ## Introduction
