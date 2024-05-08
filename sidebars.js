@@ -27,11 +27,11 @@ const sidebars = {
         title: "AI Oracle Node",
       },
       items: [
-        "ai-oracle-node/quickstart",
-        "ai-oracle-node/twitter-data",
-        "ai-oracle-node/web-scraper",
-        "ai-oracle-node/data-catalog",
-        "ai-oracle-node/twitter-sentiment",
+        "masa-oracle/ai-oracle-node/quickstart",
+        "masa-oracle/ai-oracle-node/twitter-data",
+        "masa-oracle/ai-oracle-node/web-scraper",
+        "masa-oracle/ai-oracle-node/data-catalog",
+        "masa-oracle/ai-oracle-node/twitter-sentiment",
       ],
     },
     {
@@ -42,9 +42,9 @@ const sidebars = {
         title: "AI Node Operator",
       },
       items: [
-        "ai-node-operator/quickstart",
-        "ai-node-operator/twitter-worker",
-        "ai-node-operator/web-worker",
+        "masa-oracle/ai-node-operator/quickstart",
+        "masa-oracle/ai-node-operator/twitter-worker",
+        "masa-oracle/ai-node-operator/web-worker",
       ],
     },
     {
@@ -54,7 +54,7 @@ const sidebars = {
         type: "generated-index",
         title: "Guides and Tutorials",
       },
-      items: ["guides-and-tutorials/staking-guide"],
+      items: ["masa-oracle/guides-and-tutorials/staking-guide"],
     },
     {
       type: "category",
