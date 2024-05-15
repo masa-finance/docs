@@ -29,7 +29,7 @@ To become a worker focused on web scraping data requests, you need to:
 
 ## Setting Up Your Node for Web Scraping Requests
 
-### Edit .env file 
+### Edit .env file
 
 1. Locate your `.env` file in your Masa Oracle Node's directory.
 2. Add the following entry:

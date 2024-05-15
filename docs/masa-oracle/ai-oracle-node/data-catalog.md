@@ -3,18 +3,18 @@ id: data-catalog
 title: Data Catalog
 ---
 
-# Decentralized AI Data Oracle - Data Product Catalog
+## Decentralized AI Data Oracle - Data Product Catalog
 
 Our Decentralized AI Data Oracle offers a comprehensive suite of high-quality data products to fuel your AI agents and fine-tune large language models for optimal performance and insights. Each of our data scrapers is carefully crafted to extract valuable information from a wide range of sources, empowering you with the data needed to drive innovation and excellence in your AI applications.
 
-# Live
+## Live
 
 1. **Web Scraper**
     - Get real time access to web data with our versatile Web Scraper. Crawl websites effortlessly extracting precise data points that can be used in AI fine tuning. Leverage recursive crawling and URL lists while optimizing concurrency for maximum efficiency.
 2. **Twitter Scraper**
     - Harness the power of Twitter data with our advanced Twitter Scraper. Extract tweets, hashtags, threads, and media-related data from Twitter profiles. Enrich your AI models with this real-time social data, accessible through data export, API integration, and monitoring capabilities.
 
-# By request
+## By request
 
 1. **Telegram Scraper and Adder**
     - Expand your reach and engage with targeted audiences using our Telegram Scraper. Extract member details and profile information from Telegram groups. Leverage competitor audiences to drive growth and enhance your AI-powered marketing strategies.

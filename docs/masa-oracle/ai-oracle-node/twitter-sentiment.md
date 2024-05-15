@@ -3,7 +3,7 @@ id: twitter-sentiment
 title: Twitter Sentiment
 ---
 
-# Masa Node Twitter Sentiment Analysis Feature
+## Masa Node Twitter Sentiment Analysis Feature
 
 The Masa Node introduces a powerful feature for analyzing the sentiment of tweets. This functionality leverages advanced language models to interpret the sentiment behind a collection of tweets, providing valuable insights into public perception and trends.
 
@@ -19,19 +19,32 @@ The sentiment analysis process involves fetching tweets based on specific querie
 
 ```go
 const (
-  ClaudeOpus20240229   ModelType = "claude-3-opus-20240229"
-  ClaudeSonnet20240229 ModelType = "claude-3-sonnet-20240229"
-  ClaudeHaiku20240307  ModelType = "claude-3-haiku-20240307"
-  GPT4                 ModelType = "gpt-4"
-  GPT4TurboPreview     ModelType = "gpt-4-turbo-preview"
-  GPT35Turbo           ModelType = "gpt-3.5-turbo"
-  LLama2               ModelType = "llama2"
-  LLama3               ModelType = "llama3"
-  Mistral              ModelType = "mistral"
-  Gemma                ModelType = "gemma"
-  Mixtral              ModelType = "mixtral"
-  OpenChat             ModelType = "openchat"
-  NeuralChat           ModelType = "neural-chat"
+ ClaudeOpus                                 ModelType = "claude-3-opus"
+ ClaudeOpus20240229                         ModelType = "claude-3-opus-20240229"
+ ClaudeSonnet20240229                       ModelType = "claude-3-sonnet-20240229"
+ ClaudeHaiku20240307                        ModelType = "claude-3-haiku-20240307"
+ GPT4                                       ModelType = "gpt-4"
+ GPT4o                                      ModelType = "gpt-4o"
+ GPT4TurboPreview                           ModelType = "gpt-4-turbo-preview"
+ GPT35Turbo                                 ModelType = "gpt-3.5-turbo"
+ LLama2                                     ModelType = "ollama/llama2"
+ LLama3                                     ModelType = "ollama/llama3"
+ Mistral                                    ModelType = "ollama/mistral"
+ Gemma                                      ModelType = "ollama/gemma"
+ Mixtral                                    ModelType = "ollama/mixtral"
+ OpenChat                                   ModelType = "ollama/openchat"
+ NeuralChat                                 ModelType = "ollama/neural-chat"
+ CloudflareQwen15Chat                       ModelType = "@cf/qwen/qwen1.5-0.5b-chat"
+ CloudflareLlama27bChatFp16                 ModelType = "@cf/meta/llama-2-7b-chat-fp16"
+ CloudflareLlama38bInstruct                 ModelType = "@cf/meta/llama-3-8b-instruct"
+ CloudflareMistral7bInstruct                ModelType = "@cf/mistral/mistral-7b-instruct"
+ CloudflareMistral7bInstructV01             ModelType = "@cf/mistral/mistral-7b-instruct-v0.1"
+ HuggingFaceGoogleGemma7bIt                 ModelType = "@hf/google/gemma-7b-it"
+ HuggingFaceNousresearchHermes2ProMistral7b ModelType = "@hf/nousresearch/hermes-2-pro-mistral-7b"
+ HuggingFaceTheblokeLlama213bChatAwq        ModelType = "@hf/thebloke/llama-2-13b-chat-awq"
+ HuggingFaceTheblokeNeuralChat7bV31Awq      ModelType = "@hf/thebloke/neural-chat-7b-v3-1-awq"
+ CloudflareOpenchat35_0106                  ModelType = "@cf/openchat/openchat-3.5-0106"
+ CloudflareMicrosoftPhi2                    ModelType = "@cf/microsoft/phi-2"
 )
 ```
 
