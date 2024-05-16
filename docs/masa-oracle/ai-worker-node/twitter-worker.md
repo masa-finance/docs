@@ -3,7 +3,7 @@ id: twitter-worker
 title: Twitter Worker
 ---
 
-## Introduction
+## Introduction 
 
 This guide is for oracle node workers who are interested in contributing compute resources to fulfill Twitter data requests within the Masa Oracle Node network. It focuses on the specific requirements, setup, and operational guidelines for workers to efficiently process Twitter data requests. By dedicating your node to handle these requests, you play a crucial role in the decentralized processing of real-time Twitter data, which is vital for applications such as sentiment analysis, trend monitoring, and more.
 
