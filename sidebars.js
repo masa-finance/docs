@@ -36,15 +36,15 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "AI Node Operator",
+      label: "AI Worker Node",
       link: {
         type: "generated-index",
-        title: "AI Node Operator",
+        title: "AI Worker Node",
       },
       items: [
-        "masa-oracle/ai-node-operator/quickstart",
-        "masa-oracle/ai-node-operator/twitter-worker",
-        "masa-oracle/ai-node-operator/web-worker",
+        "masa-oracle/ai-worker-node/quickstart",
+        "masa-oracle/ai-worker-node/twitter-worker",
+        "masa-oracle/ai-worker-node/web-worker",
       ],
     },
     {
