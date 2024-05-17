@@ -1,12 +1,6 @@
 # Ownable
 
-
-
-
-
-
-
-*Contract module which provides a basic access control mechanism, where there is an account (an owner) that can be granted exclusive access to specific functions. By default, the owner account will be the one that deploys the contract. This can later be changed with {transferOwnership}. This module is used through inheritance. It will make available the modifier `onlyOwner`, which can be applied to your functions to restrict their use to the owner.*
+_Contract module which provides a basic access control mechanism, where there is an account (an owner) that can be granted exclusive access to specific functions. By default, the owner account will be the one that deploys the contract. This can later be changed with {transferOwnership}. This module is used through inheritance. It will make available the modifier `onlyOwner`, which can be applied to your functions to restrict their use to the owner._
 
 ## Methods
 
@@ -16,16 +10,13 @@
 function owner() external view returns (address)
 ```
 
-
-
-*Returns the address of the current owner.*
-
+_Returns the address of the current owner._
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | address | undefined   |
 
 ### renounceOwnership
 
@@ -33,10 +24,7 @@ function owner() external view returns (address)
 function renounceOwnership() external nonpayable
 ```
 
-
-
-*Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner.*
-
+_Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner._
 
 ### transferOwnership
 
@@ -44,17 +32,13 @@ function renounceOwnership() external nonpayable
 function transferOwnership(address newOwner) external nonpayable
 ```
 
-
-
-*Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.*
+_Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner._
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| newOwner | address | undefined |
-
-
+| Name     | Type    | Description |
+| -------- | ------- | ----------- |
+| newOwner | address | undefined   |
 
 ## Events
 
@@ -64,16 +48,9 @@ function transferOwnership(address newOwner) external nonpayable
 event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| previousOwner `indexed` | address | undefined |
-| newOwner `indexed` | address | undefined |
-
-
-
+| Name                    | Type    | Description |
+| ----------------------- | ------- | ----------- |
+| previousOwner `indexed` | address | undefined   |
+| newOwner `indexed`      | address | undefined   |

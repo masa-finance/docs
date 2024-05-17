@@ -1,12 +1,6 @@
 # AccessControlEnumerable
 
-
-
-
-
-
-
-*Extension of {AccessControl} that allows enumerating the members of each role.*
+_Extension of {AccessControl} that allows enumerating the members of each role._
 
 ## Methods
 
@@ -16,16 +10,11 @@
 function DEFAULT_ADMIN_ROLE() external view returns (bytes32)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | bytes32 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | bytes32 | undefined   |
 
 ### getRoleAdmin
 
@@ -33,21 +22,19 @@ function DEFAULT_ADMIN_ROLE() external view returns (bytes32)
 function getRoleAdmin(bytes32 role) external view returns (bytes32)
 ```
 
-
-
-*Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role&#39;s admin, use {_setRoleAdmin}.*
+_Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role&#39;s admin, use {\_setRoleAdmin}._
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| role | bytes32 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| role | bytes32 | undefined   |
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | bytes32 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | bytes32 | undefined   |
 
 ### getRoleMember
 
@@ -55,22 +42,20 @@ function getRoleAdmin(bytes32 role) external view returns (bytes32)
 function getRoleMember(bytes32 role, uint256 index) external view returns (address)
 ```
 
-
-
-*Returns one of the accounts that have `role`. `index` must be a value between 0 and {getRoleMemberCount}, non-inclusive. Role bearers are not sorted in any particular way, and their ordering may change at any point. WARNING: When using {getRoleMember} and {getRoleMemberCount}, make sure you perform all queries on the same block. See the following https://forum.openzeppelin.com/t/iterating-over-elements-on-enumerableset-in-openzeppelin-contracts/2296[forum post] for more information.*
+_Returns one of the accounts that have `role`. `index` must be a value between 0 and {getRoleMemberCount}, non-inclusive. Role bearers are not sorted in any particular way, and their ordering may change at any point. WARNING: When using {getRoleMember} and {getRoleMemberCount}, make sure you perform all queries on the same block. See the following https://forum.openzeppelin.com/t/iterating-over-elements-on-enumerableset-in-openzeppelin-contracts/2296[forum post] for more information._
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| role | bytes32 | undefined |
-| index | uint256 | undefined |
+| Name  | Type    | Description |
+| ----- | ------- | ----------- |
+| role  | bytes32 | undefined   |
+| index | uint256 | undefined   |
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | address | undefined   |
 
 ### getRoleMemberCount
 
@@ -78,21 +63,19 @@ function getRoleMember(bytes32 role, uint256 index) external view returns (addre
 function getRoleMemberCount(bytes32 role) external view returns (uint256)
 ```
 
-
-
-*Returns the number of accounts that have `role`. Can be used together with {getRoleMember} to enumerate all bearers of a role.*
+_Returns the number of accounts that have `role`. Can be used together with {getRoleMember} to enumerate all bearers of a role._
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| role | bytes32 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| role | bytes32 | undefined   |
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | uint256 | undefined   |
 
 ### grantRole
 
@@ -100,16 +83,14 @@ function getRoleMemberCount(bytes32 role) external view returns (uint256)
 function grantRole(bytes32 role, address account) external nonpayable
 ```
 
-
-
-*Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``&#39;s admin role. May emit a {RoleGranted} event.*
+_Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have `role`&#39;s admin role. May emit a {RoleGranted} event._
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| role | bytes32 | undefined |
-| account | address | undefined |
+| Name    | Type    | Description |
+| ------- | ------- | ----------- |
+| role    | bytes32 | undefined   |
+| account | address | undefined   |
 
 ### hasRole
 
@@ -117,22 +98,20 @@ function grantRole(bytes32 role, address account) external nonpayable
 function hasRole(bytes32 role, address account) external view returns (bool)
 ```
 
-
-
-*Returns `true` if `account` has been granted `role`.*
+_Returns `true` if `account` has been granted `role`._
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| role | bytes32 | undefined |
-| account | address | undefined |
+| Name    | Type    | Description |
+| ------- | ------- | ----------- |
+| role    | bytes32 | undefined   |
+| account | address | undefined   |
 
 #### Returns
 
 | Name | Type | Description |
-|---|---|---|
-| _0 | bool | undefined |
+| ---- | ---- | ----------- |
+| \_0  | bool | undefined   |
 
 ### renounceRole
 
@@ -140,16 +119,14 @@ function hasRole(bytes32 role, address account) external view returns (bool)
 function renounceRole(bytes32 role, address account) external nonpayable
 ```
 
-
-
-*Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function&#39;s purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`. May emit a {RoleRevoked} event.*
+_Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function&#39;s purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`. May emit a {RoleRevoked} event._
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| role | bytes32 | undefined |
-| account | address | undefined |
+| Name    | Type    | Description |
+| ------- | ------- | ----------- |
+| role    | bytes32 | undefined   |
+| account | address | undefined   |
 
 ### revokeRole
 
@@ -157,16 +134,14 @@ function renounceRole(bytes32 role, address account) external nonpayable
 function revokeRole(bytes32 role, address account) external nonpayable
 ```
 
-
-
-*Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``&#39;s admin role. May emit a {RoleRevoked} event.*
+_Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have `role`&#39;s admin role. May emit a {RoleRevoked} event._
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| role | bytes32 | undefined |
-| account | address | undefined |
+| Name    | Type    | Description |
+| ------- | ------- | ----------- |
+| role    | bytes32 | undefined   |
+| account | address | undefined   |
 
 ### supportsInterface
 
@@ -174,23 +149,19 @@ function revokeRole(bytes32 role, address account) external nonpayable
 function supportsInterface(bytes4 interfaceId) external view returns (bool)
 ```
 
-
-
-*See {IERC165-supportsInterface}.*
+_See {IERC165-supportsInterface}._
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| interfaceId | bytes4 | undefined |
+| Name        | Type   | Description |
+| ----------- | ------ | ----------- |
+| interfaceId | bytes4 | undefined   |
 
 #### Returns
 
 | Name | Type | Description |
-|---|---|---|
-| _0 | bool | undefined |
-
-
+| ---- | ---- | ----------- |
+| \_0  | bool | undefined   |
 
 ## Events
 
@@ -200,17 +171,15 @@ function supportsInterface(bytes4 interfaceId) external view returns (bool)
 event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
 ```
 
-
-
-*Emitted when `newAdminRole` is set as ``role``&#39;s admin role, replacing `previousAdminRole` `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite {RoleAdminChanged} not being emitted signaling this. _Available since v3.1._*
+_Emitted when `newAdminRole` is set as `role`&#39;s admin role, replacing `previousAdminRole` `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite {RoleAdminChanged} not being emitted signaling this. *Available since v3.1.*_
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| role `indexed` | bytes32 | undefined |
-| previousAdminRole `indexed` | bytes32 | undefined |
-| newAdminRole `indexed` | bytes32 | undefined |
+| Name                        | Type    | Description |
+| --------------------------- | ------- | ----------- |
+| role `indexed`              | bytes32 | undefined   |
+| previousAdminRole `indexed` | bytes32 | undefined   |
+| newAdminRole `indexed`      | bytes32 | undefined   |
 
 ### RoleGranted
 
@@ -218,17 +187,15 @@ event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, 
 event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
 ```
 
-
-
-*Emitted when `account` is granted `role`. `sender` is the account that originated the contract call, an admin role bearer except when using {AccessControl-_setupRole}.*
+_Emitted when `account` is granted `role`. `sender` is the account that originated the contract call, an admin role bearer except when using {AccessControl-\_setupRole}._
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| role `indexed` | bytes32 | undefined |
-| account `indexed` | address | undefined |
-| sender `indexed` | address | undefined |
+| Name              | Type    | Description |
+| ----------------- | ------- | ----------- |
+| role `indexed`    | bytes32 | undefined   |
+| account `indexed` | address | undefined   |
+| sender `indexed`  | address | undefined   |
 
 ### RoleRevoked
 
@@ -236,17 +203,12 @@ event RoleGranted(bytes32 indexed role, address indexed account, address indexed
 event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)
 ```
 
-
-
-*Emitted when `account` is revoked `role`. `sender` is the account that originated the contract call:   - if using `revokeRole`, it is the admin role bearer   - if using `renounceRole`, it is the role bearer (i.e. `account`)*
+_Emitted when `account` is revoked `role`. `sender` is the account that originated the contract call: - if using `revokeRole`, it is the admin role bearer - if using `renounceRole`, it is the role bearer (i.e. `account`)_
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| role `indexed` | bytes32 | undefined |
-| account `indexed` | address | undefined |
-| sender `indexed` | address | undefined |
-
-
-
+| Name              | Type    | Description |
+| ----------------- | ------- | ----------- |
+| role `indexed`    | bytes32 | undefined   |
+| account `indexed` | address | undefined   |
+| sender `indexed`  | address | undefined   |
