@@ -10,7 +10,7 @@ _External interface of AccessControlEnumerable declared to support ERC165 detect
 function getRoleAdmin(bytes32 role) external view returns (bytes32)
 ```
 
-_Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role&#39;s admin, use {AccessControl-\_setRoleAdmin}._
+_Returns the admin role that controls `role`. See \{grantRole\} and \{revokeRole\}. To change a role&#39;s admin, use \{AccessControl-\_setRoleAdmin\}._
 
 #### Parameters
 
@@ -30,7 +30,7 @@ _Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. 
 function getRoleMember(bytes32 role, uint256 index) external view returns (address)
 ```
 
-_Returns one of the accounts that have `role`. `index` must be a value between 0 and {getRoleMemberCount}, non-inclusive. Role bearers are not sorted in any particular way, and their ordering may change at any point. WARNING: When using {getRoleMember} and {getRoleMemberCount}, make sure you perform all queries on the same block. See the following https://forum.openzeppelin.com/t/iterating-over-elements-on-enumerableset-in-openzeppelin-contracts/2296[forum post] for more information._
+_Returns one of the accounts that have `role`. `index` must be a value between 0 and \{getRoleMemberCount\}, non-inclusive. Role bearers are not sorted in any particular way, and their ordering may change at any point. WARNING: When using \{getRoleMember\} and \{getRoleMemberCount\}, make sure you perform all queries on the same block. See the following https://forum.openzeppelin.com/t/iterating-over-elements-on-enumerableset-in-openzeppelin-contracts/2296[forum post] for more information._
 
 #### Parameters
 
@@ -51,7 +51,7 @@ _Returns one of the accounts that have `role`. `index` must be a value between 0
 function getRoleMemberCount(bytes32 role) external view returns (uint256)
 ```
 
-_Returns the number of accounts that have `role`. Can be used together with {getRoleMember} to enumerate all bearers of a role._
+_Returns the number of accounts that have `role`. Can be used together with \{getRoleMember\} to enumerate all bearers of a role._
 
 #### Parameters
 
@@ -71,7 +71,7 @@ _Returns the number of accounts that have `role`. Can be used together with {get
 function grantRole(bytes32 role, address account) external nonpayable
 ```
 
-_Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have `role`&#39;s admin role._
+_Grants `role` to `account`. If `account` had not been already granted `role`, emits a \{RoleGranted\} event. Requirements: - the caller must have `role`&#39;s admin role._
 
 #### Parameters
 
@@ -107,7 +107,7 @@ _Returns `true` if `account` has been granted `role`._
 function renounceRole(bytes32 role, address account) external nonpayable
 ```
 
-_Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function&#39;s purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`._
+_Revokes `role` from the calling account. Roles are often managed via \{grantRole\} and \{revokeRole\}: this function&#39;s purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been granted `role`, emits a \{RoleRevoked\} event. Requirements: - the caller must be `account`._
 
 #### Parameters
 
@@ -122,7 +122,7 @@ _Revokes `role` from the calling account. Roles are often managed via {grantRole
 function revokeRole(bytes32 role, address account) external nonpayable
 ```
 
-_Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have `role`&#39;s admin role._
+_Revokes `role` from `account`. If `account` had been granted `role`, emits a \{RoleRevoked\} event. Requirements: - the caller must have `role`&#39;s admin role._
 
 #### Parameters
 
@@ -139,7 +139,7 @@ _Revokes `role` from `account`. If `account` had been granted `role`, emits a {R
 event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
 ```
 
-_Emitted when `newAdminRole` is set as `role`&#39;s admin role, replacing `previousAdminRole` `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite {RoleAdminChanged} not being emitted signaling this. *Available since v3.1.*_
+_Emitted when `newAdminRole` is set as `role`&#39;s admin role, replacing `previousAdminRole` `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite \{RoleAdminChanged\} not being emitted signaling this. *Available since v3.1.*_
 
 #### Parameters
 
@@ -155,7 +155,7 @@ _Emitted when `newAdminRole` is set as `role`&#39;s admin role, replacing `previ
 event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
 ```
 
-_Emitted when `account` is granted `role`. `sender` is the account that originated the contract call, an admin role bearer except when using {AccessControl-\_setupRole}._
+_Emitted when `account` is granted `role`. `sender` is the account that originated the contract call, an admin role bearer except when using \{AccessControl-\_setupRole\}._
 
 #### Parameters
 

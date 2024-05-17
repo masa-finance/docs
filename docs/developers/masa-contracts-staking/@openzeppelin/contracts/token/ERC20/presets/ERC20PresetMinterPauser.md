@@ -1,6 +1,6 @@
 # ERC20PresetMinterPauser
 
-_{ERC20} token, including: - ability for holders to burn (destroy) their tokens - a minter role that allows for token minting (creation) - a pauser role that allows to stop all token transfers This contract uses {AccessControl} to lock permissioned functions using the different roles - head to its documentation for details. The account that deploys the contract will be granted the minter and pauser roles, as well as the default admin role, which will let it grant both minter and pauser roles to other accounts. *Deprecated in favor of https://wizard.openzeppelin.com/[Contracts Wizard].*_
+_\{ERC20\} token, including: - ability for holders to burn (destroy) their tokens - a minter role that allows for token minting (creation) - a pauser role that allows to stop all token transfers This contract uses \{AccessControl\} to lock permissioned functions using the different roles - head to its documentation for details. The account that deploys the contract will be granted the minter and pauser roles, as well as the default admin role, which will let it grant both minter and pauser roles to other accounts. *Deprecated in favor of https://wizard.openzeppelin.com/[Contracts Wizard].*_
 
 ## Methods
 
@@ -46,7 +46,7 @@ function PAUSER_ROLE() external view returns (bytes32)
 function allowance(address owner, address spender) external view returns (uint256)
 ```
 
-_See {IERC20-allowance}._
+_See \{IERC20-allowance\}._
 
 #### Parameters
 
@@ -67,7 +67,7 @@ _See {IERC20-allowance}._
 function approve(address spender, uint256 amount) external nonpayable returns (bool)
 ```
 
-_See {IERC20-approve}. NOTE: If `amount` is the maximum `uint256`, the allowance is not updated on `transferFrom`. This is semantically equivalent to an infinite approval. Requirements: - `spender` cannot be the zero address._
+_See \{IERC20-approve\}. NOTE: If `amount` is the maximum `uint256`, the allowance is not updated on `transferFrom`. This is semantically equivalent to an infinite approval. Requirements: - `spender` cannot be the zero address._
 
 #### Parameters
 
@@ -88,7 +88,7 @@ _See {IERC20-approve}. NOTE: If `amount` is the maximum `uint256`, the allowance
 function balanceOf(address account) external view returns (uint256)
 ```
 
-_See {IERC20-balanceOf}._
+_See \{IERC20-balanceOf\}._
 
 #### Parameters
 
@@ -108,7 +108,7 @@ _See {IERC20-balanceOf}._
 function burn(uint256 amount) external nonpayable
 ```
 
-_Destroys `amount` tokens from the caller. See {ERC20-\_burn}._
+_Destroys `amount` tokens from the caller. See \{ERC20-\_burn\}._
 
 #### Parameters
 
@@ -122,7 +122,7 @@ _Destroys `amount` tokens from the caller. See {ERC20-\_burn}._
 function burnFrom(address account, uint256 amount) external nonpayable
 ```
 
-_Destroys `amount` tokens from `account`, deducting from the caller&#39;s allowance. See {ERC20-\_burn} and {ERC20-allowance}. Requirements: - the caller must have allowance for `accounts`&#39;s tokens of at least `amount`._
+_Destroys `amount` tokens from `account`, deducting from the caller&#39;s allowance. See \{ERC20-\_burn\} and \{ERC20-allowance\}. Requirements: - the caller must have allowance for `accounts`&#39;s tokens of at least `amount`._
 
 #### Parameters
 
@@ -137,7 +137,7 @@ _Destroys `amount` tokens from `account`, deducting from the caller&#39;s allowa
 function decimals() external view returns (uint8)
 ```
 
-_Returns the number of decimals used to get its user representation. For example, if `decimals` equals `2`, a balance of `505` tokens should be displayed to a user as `5.05` (`505 / 10 ** 2`). Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the default value returned by this function, unless it&#39;s overridden. NOTE: This information is only used for *display* purposes: it in no way affects any of the arithmetic of the contract, including {IERC20-balanceOf} and {IERC20-transfer}._
+_Returns the number of decimals used to get its user representation. For example, if `decimals` equals `2`, a balance of `505` tokens should be displayed to a user as `5.05` (`505 / 10 ** 2`). Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the default value returned by this function, unless it&#39;s overridden. NOTE: This information is only used for *display* purposes: it in no way affects any of the arithmetic of the contract, including \{IERC20-balanceOf\} and \{IERC20-transfer\}._
 
 #### Returns
 
@@ -151,7 +151,7 @@ _Returns the number of decimals used to get its user representation. For example
 function decreaseAllowance(address spender, uint256 subtractedValue) external nonpayable returns (bool)
 ```
 
-_Atomically decreases the allowance granted to `spender` by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address. - `spender` must have allowance for the caller of at least `subtractedValue`._
+_Atomically decreases the allowance granted to `spender` by the caller. This is an alternative to \{approve\} that can be used as a mitigation for problems described in \{IERC20-approve\}. Emits an \{Approval\} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address. - `spender` must have allowance for the caller of at least `subtractedValue`._
 
 #### Parameters
 
@@ -172,7 +172,7 @@ _Atomically decreases the allowance granted to `spender` by the caller. This is 
 function getRoleAdmin(bytes32 role) external view returns (bytes32)
 ```
 
-_Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role&#39;s admin, use {\_setRoleAdmin}._
+_Returns the admin role that controls `role`. See \{grantRole\} and \{revokeRole\}. To change a role&#39;s admin, use \{\_setRoleAdmin\}._
 
 #### Parameters
 
@@ -192,7 +192,7 @@ _Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. 
 function getRoleMember(bytes32 role, uint256 index) external view returns (address)
 ```
 
-_Returns one of the accounts that have `role`. `index` must be a value between 0 and {getRoleMemberCount}, non-inclusive. Role bearers are not sorted in any particular way, and their ordering may change at any point. WARNING: When using {getRoleMember} and {getRoleMemberCount}, make sure you perform all queries on the same block. See the following https://forum.openzeppelin.com/t/iterating-over-elements-on-enumerableset-in-openzeppelin-contracts/2296[forum post] for more information._
+_Returns one of the accounts that have `role`. `index` must be a value between 0 and \{getRoleMemberCount\}, non-inclusive. Role bearers are not sorted in any particular way, and their ordering may change at any point. WARNING: When using \{getRoleMember\} and \{getRoleMemberCount\}, make sure you perform all queries on the same block. See the following https://forum.openzeppelin.com/t/iterating-over-elements-on-enumerableset-in-openzeppelin-contracts/2296[forum post] for more information._
 
 #### Parameters
 
@@ -213,7 +213,7 @@ _Returns one of the accounts that have `role`. `index` must be a value between 0
 function getRoleMemberCount(bytes32 role) external view returns (uint256)
 ```
 
-_Returns the number of accounts that have `role`. Can be used together with {getRoleMember} to enumerate all bearers of a role._
+_Returns the number of accounts that have `role`. Can be used together with \{getRoleMember\} to enumerate all bearers of a role._
 
 #### Parameters
 
@@ -233,7 +233,7 @@ _Returns the number of accounts that have `role`. Can be used together with {get
 function grantRole(bytes32 role, address account) external nonpayable
 ```
 
-_Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have `role`&#39;s admin role. May emit a {RoleGranted} event._
+_Grants `role` to `account`. If `account` had not been already granted `role`, emits a \{RoleGranted\} event. Requirements: - the caller must have `role`&#39;s admin role. May emit a \{RoleGranted\} event._
 
 #### Parameters
 
@@ -269,7 +269,7 @@ _Returns `true` if `account` has been granted `role`._
 function increaseAllowance(address spender, uint256 addedValue) external nonpayable returns (bool)
 ```
 
-_Atomically increases the allowance granted to `spender` by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address._
+_Atomically increases the allowance granted to `spender` by the caller. This is an alternative to \{approve\} that can be used as a mitigation for problems described in \{IERC20-approve\}. Emits an \{Approval\} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address._
 
 #### Parameters
 
@@ -290,7 +290,7 @@ _Atomically increases the allowance granted to `spender` by the caller. This is 
 function mint(address to, uint256 amount) external nonpayable
 ```
 
-_Creates `amount` new tokens for `to`. See {ERC20-\_mint}. Requirements: - the caller must have the `MINTER_ROLE`._
+_Creates `amount` new tokens for `to`. See \{ERC20-\_mint\}. Requirements: - the caller must have the `MINTER_ROLE`._
 
 #### Parameters
 
@@ -319,7 +319,7 @@ _Returns the name of the token._
 function pause() external nonpayable
 ```
 
-_Pauses all token transfers. See {ERC20Pausable} and {Pausable-\_pause}. Requirements: - the caller must have the `PAUSER_ROLE`._
+_Pauses all token transfers. See \{ERC20Pausable\} and \{Pausable-\_pause\}. Requirements: - the caller must have the `PAUSER_ROLE`._
 
 ### paused
 
@@ -341,7 +341,7 @@ _Returns true if the contract is paused, and false otherwise._
 function renounceRole(bytes32 role, address account) external nonpayable
 ```
 
-_Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function&#39;s purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`. May emit a {RoleRevoked} event._
+_Revokes `role` from the calling account. Roles are often managed via \{grantRole\} and \{revokeRole\}: this function&#39;s purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a \{RoleRevoked\} event. Requirements: - the caller must be `account`. May emit a \{RoleRevoked\} event._
 
 #### Parameters
 
@@ -356,7 +356,7 @@ _Revokes `role` from the calling account. Roles are often managed via {grantRole
 function revokeRole(bytes32 role, address account) external nonpayable
 ```
 
-_Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have `role`&#39;s admin role. May emit a {RoleRevoked} event._
+_Revokes `role` from `account`. If `account` had been granted `role`, emits a \{RoleRevoked\} event. Requirements: - the caller must have `role`&#39;s admin role. May emit a \{RoleRevoked\} event._
 
 #### Parameters
 
@@ -371,7 +371,7 @@ _Revokes `role` from `account`. If `account` had been granted `role`, emits a {R
 function supportsInterface(bytes4 interfaceId) external view returns (bool)
 ```
 
-_See {IERC165-supportsInterface}._
+_See \{IERC165-supportsInterface\}._
 
 #### Parameters
 
@@ -405,7 +405,7 @@ _Returns the symbol of the token, usually a shorter version of the name._
 function totalSupply() external view returns (uint256)
 ```
 
-_See {IERC20-totalSupply}._
+_See \{IERC20-totalSupply\}._
 
 #### Returns
 
@@ -419,7 +419,7 @@ _See {IERC20-totalSupply}._
 function transfer(address to, uint256 amount) external nonpayable returns (bool)
 ```
 
-_See {IERC20-transfer}. Requirements: - `to` cannot be the zero address. - the caller must have a balance of at least `amount`._
+_See \{IERC20-transfer\}. Requirements: - `to` cannot be the zero address. - the caller must have a balance of at least `amount`._
 
 #### Parameters
 
@@ -440,7 +440,7 @@ _See {IERC20-transfer}. Requirements: - `to` cannot be the zero address. - the c
 function transferFrom(address from, address to, uint256 amount) external nonpayable returns (bool)
 ```
 
-_See {IERC20-transferFrom}. Emits an {Approval} event indicating the updated allowance. This is not required by the EIP. See the note at the beginning of {ERC20}. NOTE: Does not update the allowance if the current allowance is the maximum `uint256`. Requirements: - `from` and `to` cannot be the zero address. - `from` must have a balance of at least `amount`. - the caller must have allowance for `from`&#39;s tokens of at least `amount`._
+_See \{IERC20-transferFrom\}. Emits an \{Approval\} event indicating the updated allowance. This is not required by the EIP. See the note at the beginning of \{ERC20\}. NOTE: Does not update the allowance if the current allowance is the maximum `uint256`. Requirements: - `from` and `to` cannot be the zero address. - `from` must have a balance of at least `amount`. - the caller must have allowance for `from`&#39;s tokens of at least `amount`._
 
 #### Parameters
 
@@ -462,7 +462,7 @@ _See {IERC20-transferFrom}. Emits an {Approval} event indicating the updated all
 function unpause() external nonpayable
 ```
 
-_Unpauses all token transfers. See {ERC20Pausable} and {Pausable-\_unpause}. Requirements: - the caller must have the `PAUSER_ROLE`._
+_Unpauses all token transfers. See \{ERC20Pausable\} and \{Pausable-\_unpause\}. Requirements: - the caller must have the `PAUSER_ROLE`._
 
 ## Events
 
@@ -472,7 +472,7 @@ _Unpauses all token transfers. See {ERC20Pausable} and {Pausable-\_unpause}. Req
 event Approval(address indexed owner, address indexed spender, uint256 value)
 ```
 
-_Emitted when the allowance of a `spender` for an `owner` is set by a call to {approve}. `value` is the new allowance._
+_Emitted when the allowance of a `spender` for an `owner` is set by a call to \{approve\}. `value` is the new allowance._
 
 #### Parameters
 
@@ -502,7 +502,7 @@ _Emitted when the pause is triggered by `account`._
 event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
 ```
 
-_Emitted when `newAdminRole` is set as `role`&#39;s admin role, replacing `previousAdminRole` `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite {RoleAdminChanged} not being emitted signaling this. *Available since v3.1.*_
+_Emitted when `newAdminRole` is set as `role`&#39;s admin role, replacing `previousAdminRole` `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite \{RoleAdminChanged\} not being emitted signaling this. *Available since v3.1.*_
 
 #### Parameters
 
@@ -518,7 +518,7 @@ _Emitted when `newAdminRole` is set as `role`&#39;s admin role, replacing `previ
 event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
 ```
 
-_Emitted when `account` is granted `role`. `sender` is the account that originated the contract call, an admin role bearer except when using {AccessControl-\_setupRole}._
+_Emitted when `account` is granted `role`. `sender` is the account that originated the contract call, an admin role bearer except when using \{AccessControl-\_setupRole\}._
 
 #### Parameters
 
