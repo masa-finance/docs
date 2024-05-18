@@ -58,6 +58,7 @@ TWITTER_2FA_CODE="your2fa"
 
 # Worker node config; default = false
 TWITTER_SCRAPER=true
+DISCORD_SCRAPER=true
 WEB_SCRAPER=true
 
 # PG
