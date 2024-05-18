@@ -84,6 +84,10 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: "doc",
+      id: "masa-oracle/oracle-release-notes/RELEASE_NOTES", // Assuming the document ID you want to link to is structured as `folderName/fileName`.
+    },
   ],
 };
 
