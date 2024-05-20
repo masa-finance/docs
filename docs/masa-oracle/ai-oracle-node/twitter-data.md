@@ -83,6 +83,130 @@ Example response:
 }
 ```
 
+### Retrieve Twitter Followers
+
+The `/data/twitter/followers/{username}` endpoint allows you to retrieve a list of followers for a specified Twitter user. This can be particularly useful for analyzing the audience or reach of a user, understanding community dynamics, or for further analysis in combination with other data points.
+
+- **Endpoint:** `/data/twitter/followers/{username}`
+- **Method:** GET
+- **Description:** Fetches a list of Twitter users who follow the specified user.
+- **URL Parameters:**
+  - `username`: The Twitter username (without @) of the user whose followers you want to retrieve.
+- **Query Parameters:**
+  - `maxUsersNbr`: (Optional) The maximum number of follower profiles to return in one response. Defaults to 20 if not specified. This allows for controlling the size of the data returned.
+
+Example request:
+
+```bash
+curl -X POST http://localhost:8080/data/twitter/followers/brendanplayford?maxUsersNbr=30 \
+-H "Content-Type: application/json" \
+```
+
+Example response:
+
+```json
+{
+  "followers": [
+    {
+      "can_dm": true,
+      "can_media_tag": true,
+      "created_at": "Tue Jul 16 15:37:00 +0000 2019",
+      "default_profile": true,
+      "default_profile_image": false,
+      "description": "#Bitcoin\nChannel: https://t.co/r00P2WS8la\n\nBuild Bots & Gleam with the referral system\nPromote Airdrop/Bounty/Giveaway\n\nContact: https://t.co/iQYq41HDM5",
+      "entities": {
+        "description": {
+          "urls": [
+            {
+              "display_url": "t.me/airdropinspect…",
+              "expanded_url": "https://t.me/airdropinspector",
+              "url": "https://t.co/r00P2WS8la",
+              "indices": [18, 41]
+            },
+            {
+              "display_url": "t.me/Airdropinspect",
+              "expanded_url": "http://t.me/Airdropinspect",
+              "url": "https://t.co/iQYq41HDM5",
+              "indices": [129, 152]
+            }
+          ]
+        },
+        "url": {
+          "urls": [
+            {
+              "display_url": "linktr.ee/airdropinspect…",
+              "expanded_url": "https://linktr.ee/airdropinspector",
+              "url": "https://t.co/QwVQ7gxzGn",
+              "indices": [0, 23]
+            }
+          ]
+        }
+      },
+      "fast_followers_count": 0,
+      "favourites_count": 40,
+      "followers_count": 1743059,
+      "friends_count": 27,
+      "has_custom_timelines": false,
+      "is_translator": false,
+      "listed_count": 1815,
+      "location": "AirdropInspector",
+      "media_count": 944,
+      "name": "Airdrop Inspector",
+      "normal_followers_count": 1743059,
+      "pinned_tweet_ids_str": [],
+      "possibly_sensitive": false,
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/1151153768165076992/1628962665",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1475449705912020996/5szFZs1I_normal.jpg",
+      "screen_name": "airdropinspect",
+      "statuses_count": 3050,
+      "translator_type": "none",
+      "url": "https://t.co/QwVQ7gxzGn",
+      "verified": false,
+      "want_retweets": false,
+      "withheld_in_countries": []
+    },
+    {
+      "can_dm": true,
+      "can_media_tag": true,
+      "created_at": "Tue May 14 13:37:34 +0000 2024",
+      "default_profile": true,
+      "default_profile_image": false,
+      "description": "",
+      "entities": {
+        "description": {
+          "urls": []
+        },
+        "url": {
+          "urls": null
+        }
+      },
+      "fast_followers_count": 0,
+      "favourites_count": 3,
+      "followers_count": 0,
+      "friends_count": 17,
+      "has_custom_timelines": false,
+      "is_translator": false,
+      "listed_count": 0,
+      "location": "",
+      "media_count": 0,
+      "name": "Ameer_Waheed",
+      "normal_followers_count": 0,
+      "pinned_tweet_ids_str": [],
+      "possibly_sensitive": false,
+      "profile_banner_url": "",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1790376558743420928/s4a-Wy6Z_normal.jpg",
+      "screen_name": "ameerwaheed01",
+      "statuses_count": 2,
+      "translator_type": "none",
+      "url": "",
+      "verified": false,
+      "want_retweets": false,
+      "withheld_in_countries": []
+    }
+  ]
+}
+```
+
 ## Use Case: Decentralized AI Agent
 
 Imagine a decentralized AI agent designed to monitor and analyze public sentiment on social media platforms, specifically Twitter, regarding various cryptocurrencies. This agent, let's call it "CryptoSentimentAI," uses the Masa Oracle Node's Twitter data endpoints to gather real-time data on what people are saying about different cryptocurrencies.
@@ -108,6 +232,7 @@ curl -X POST http://localhost:8080/data/tweets \
 ```
 
 Upon collecting the tweets, CryptoSentimentAI processes and analyzes the text content of each tweet using large language models (LLMs) to evaluate sentiment. This approach leverages the advanced capabilities of LLMs to understand context and nuance, providing a more accurate sentiment analysis than traditional methods.
+
 
 ### Conclusion
 
