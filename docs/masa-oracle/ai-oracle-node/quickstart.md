@@ -57,9 +57,9 @@ TWITTER_PASS="yourpassword"
 TWITTER_2FA_CODE="your2fa"
 
 # Worker node config; default = false
-TWITTER_SCRAPER=true
-DISCORD_SCRAPER=true
-WEB_SCRAPER=true
+TWITTER_SCRAPER=false
+DISCORD_SCRAPER=false
+WEB_SCRAPER=false
 
 # PG
 PG_URL=
@@ -151,14 +151,3 @@ INFO[0005] Successfully advertised protocol /masa/oracle_protocol/v0.0.2-beta-de
 ```bash
 http://localhost:8080/swagger/index.html
 ```
-
-### 8. Node Rewards Calculation
-
-Node rewards are determined by:
-**1. Uptime:** Rewards increase with node availability.
-**2. Data Served:** More rewards for serving more data via TwitterScraper and WebScraper.
-**3. Stake Size:** Larger stakes result in higher reward weight and base rewards.
-
-:::important
-Rewards are not currently live on the testnet and are expected to go live in April 2024. This means that while you can stake your node and participate in the network, the rewards system will be activated at a later date. Please stay tuned for updates regarding the rewards launch.
-:::
