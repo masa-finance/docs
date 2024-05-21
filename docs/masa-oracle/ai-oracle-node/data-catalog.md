@@ -18,8 +18,9 @@ Our Decentralized AI Data Oracle offers a comprehensive suite of high-quality da
 
 1. **Telegram Scraper and Adder**
     - Expand your reach and engage with targeted audiences using our Telegram Scraper. Extract member details and profile information from Telegram groups. Leverage competitor audiences to drive growth and enhance your AI-powered marketing strategies.
-2. **Discord Profile and Guild Membership Scraper**
-    - Uncover valuable insights from Discord communities with our Discord Profile and Guild Membership Scraper. Extract comprehensive user profile data, including usernames, roles, and guild memberships. Leverage this data to enhance your AI models, perform user analytics, and gain a deeper understanding of Discord communities.
+2. **Discord Profile Scraper**
+    - Uncover valuable insights from Discord users with our Discord Profile Scraper. Extract comprehensive user profile data, including usernames & roles.
+
 3. **Google Search Results Scraper**
     - Gain a competitive edge by harnessing the power of Google search data. Our Google Search Results Scraper extracts organic and paid listings, ads, and country or language-specific search features from Google SERPs. Enhance your AI models with this valuable data, accessible through API runs, scheduling, and monitoring.
 4. **Google Maps Scraper**
