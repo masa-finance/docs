@@ -1,6 +1,6 @@
 # Masa Oracle Release Notes
 
-## [0.0.3-beta](https://github.com/masa-finance/masa-oracle/releases) (2024)
+## [0.0.4-beta](https://github.com/masa-finance/masa-oracle/releases) (2024)
 
 > Masa Oracle Node Release
 
@@ -34,4 +34,4 @@
 ### ChangeLog
 
 * Updated swagger docs
-* version 0.0.3-beta
+* version 0.0.4-beta
