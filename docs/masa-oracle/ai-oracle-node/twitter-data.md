@@ -233,7 +233,6 @@ curl -X POST http://localhost:8080/data/tweets \
 
 Upon collecting the tweets, CryptoSentimentAI processes and analyzes the text content of each tweet using large language models (LLMs) to evaluate sentiment. This approach leverages the advanced capabilities of LLMs to understand context and nuance, providing a more accurate sentiment analysis than traditional methods.
 
-
 ### Conclusion
 
 The `/data/tweets` endpoint in the Masa Oracle Node API provides a rich foundation for developing decentralized applications that can interact with social media data in real-time. By leveraging this endpoint, developers are empowered to create innovative AI agents capable of analyzing social media trends and sentiments. These agents can uncover deep insights from the vast stream of social media conversations, offering valuable intelligence for a wide range of applications and decision-making processes.
