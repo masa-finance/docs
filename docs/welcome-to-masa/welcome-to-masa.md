@@ -1,9 +1,8 @@
 ---
-id: welcome-to-masa
 title: Welcome to Masa
 ---
 
-# Welcome to Masa
+## Welcome to Masa
 
 ## Introduction
 
@@ -21,7 +20,7 @@ Masa believes that the solution to these challenges lies in a decentralized netw
 
 ## The Masa Solution
 
-Masa has built the leading marketplace for data and compute, connecting data and compute contributors with developers. Our platform incentivizes people to contribute specialized data sets and sell compute resources in an open, permissionless manner. 
+Masa has built the leading marketplace for data and compute, connecting data and compute contributors with developers. Our platform incentivizes people to contribute specialized data sets and sell compute resources in an open, permissionless manner.
 
 Key features of the Masa network include:
 
@@ -31,7 +30,7 @@ Key features of the Masa network include:
 
 - **Open Marketplace**: Our open, permissionless marketplace democratizes access to AI training data and compute resources. Contributors can earn rewards by contributing data and selling compute, while developers can access the resources they need to build innovative applications.
 
-## [AI Worker Nodes Introduction](docs/ai-worker-node/introduction.md)
+## [AI Worker Nodes Introduction](docs/worker-node/introduction.md)
 
 Masa empowers contributors to monetize their data and compute resources by becoming Worker Nodes on the network. As a Worker Node, you can:
 
@@ -42,16 +41,16 @@ Masa empowers contributors to monetize their data and compute resources by becom
 
 By contributing to Masa as a Worker Node, you play a vital role in powering the decentralized AI ecosystem while being rewarded for your efforts.
 
-## [Masa for Developers: AI Oracle Nodes](docs/ai-oracle-node/introduction.md)
+## [Masa for Developers: AI Oracle Nodes](docs/oracle-node/introduction.md)
 
 Masa offers developers a decentralized platform to access diverse data sources and powerful LLM services through Oracle Nodes. By running an Oracle Node, you can:
 
 - Stake tokens to access the network's rich data and powerful open source LLM services, submitting data or LLM requests to Worker Nodes.
 - Submit data or LLM requests to Worker Nodes to power your AI applications.
 - Tap into a wide range of data sources and LLM models to fulfill various data and processing requirements, for example:
-  - **Crypto Sentiment Analysis**: Combine data from our Twitter Scraper and Web Scraper to gather real-time information about cryptocurrency trends, news, and public sentiment. 
-  - **Crypto Community Insights**: Leverage our Discord Profile and Guild Membership Scraper to extract comprehensive data from prominent crypto communities on Discord. 
-  - **Crypto News Aggregation and Summarization**: Utilize our Web Scraper to collect real-time data from leading crypto news websites and blogs. 
+  - **Crypto Sentiment Analysis**: Combine data from our Twitter Scraper and Web Scraper to gather real-time information about cryptocurrency trends, news, and public sentiment.
+  - **Crypto Community Insights**: Leverage our Discord Profile scraper to extract comprehensive data from prominent crypto users on Discord.
+  - **Crypto News Aggregation and Summarization**: Utilize our Web Scraper to collect real-time data from leading crypto news websites and blogs.
 
 By leveraging Masa as a Oracle Node, developers can build innovative AI applications with the power of decentralized data and compute at their fingertips.
 
@@ -65,5 +64,3 @@ We invite you to join us in building a decentralized future for AI. Explore our 
 **Join our Community on Discord!**  
 Ready to dive deeper into the Masa ecosystem? Connect with our vibrant community on Discord for the latest updates, discussions, and support. [Join us here](https://discord.gg/masafinance)
 :::
-
-

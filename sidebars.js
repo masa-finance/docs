@@ -21,30 +21,45 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "AI Oracle Node",
+      label: "Oracle Node",
       link: {
         type: "generated-index",
-        title: "AI Oracle Node",
+        title: "Oracle Node",
       },
       items: [
-        "masa-oracle/ai-oracle-node/quickstart",
-        "masa-oracle/ai-oracle-node/twitter-data",
-        "masa-oracle/ai-oracle-node/web-scraper",
-        "masa-oracle/ai-oracle-node/data-catalog",
-        "masa-oracle/ai-oracle-node/twitter-sentiment",
+        "masa-oracle/oracle-node/introduction",
+        "masa-oracle/oracle-node/quickstart",
+        "masa-oracle/oracle-node/twitter-data",
+        "masa-oracle/oracle-node/discord-data",
+        "masa-oracle/oracle-node/web-scraper",
+        "masa-oracle/oracle-node/data-catalog",
+        "masa-oracle/oracle-node/twitter-sentiment",
       ],
     },
     {
       type: "category",
-      label: "AI Worker Node",
+      label: "Worker Node",
       link: {
         type: "generated-index",
-        title: "AI Worker Node",
+        title: "Worker Node",
       },
       items: [
-        "masa-oracle/ai-worker-node/quickstart",
-        "masa-oracle/ai-worker-node/twitter-worker",
-        "masa-oracle/ai-worker-node/web-worker",
+        "masa-oracle/worker-node/introduction",
+        "masa-oracle/worker-node/quickstart",
+        "masa-oracle/worker-node/twitter-worker",
+        "masa-oracle/worker-node/discord-worker",
+        "masa-oracle/worker-node/web-worker",
+      ],
+    },
+    {
+      type: "category",
+      label: "Validator Node",
+      link: {
+        type: "generated-index",
+        title: "Worker Node",
+      },
+      items: [
+        "masa-oracle/validator-node/introduction",
       ],
     },
     {
