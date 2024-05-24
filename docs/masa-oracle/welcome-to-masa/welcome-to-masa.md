@@ -30,7 +30,7 @@ Key features of the Masa network include:
 
 - **Open Marketplace**: Our open, permissionless marketplace democratizes access to AI training data and compute resources. Contributors can earn rewards by contributing data and selling compute, while developers can access the resources they need to build innovative applications.
 
-## [AI Worker Nodes Introduction](docs/ai-worker-node/introduction.md)
+## [AI Worker Nodes Introduction](docs/worker-node/introduction.md)
 
 Masa empowers contributors to monetize their data and compute resources by becoming Worker Nodes on the network. As a Worker Node, you can:
 
@@ -41,7 +41,7 @@ Masa empowers contributors to monetize their data and compute resources by becom
 
 By contributing to Masa as a Worker Node, you play a vital role in powering the decentralized AI ecosystem while being rewarded for your efforts.
 
-## [Masa for Developers: AI Oracle Nodes](docs/ai-oracle-node/introduction.md)
+## [Masa for Developers: AI Oracle Nodes](docs/oracle-node/introduction.md)
 
 Masa offers developers a decentralized platform to access diverse data sources and powerful LLM services through Oracle Nodes. By running an Oracle Node, you can:
 
