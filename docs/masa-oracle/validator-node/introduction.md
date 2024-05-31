@@ -1,5 +1,5 @@
 ---
-id: introduction
+id: validator-node-introduction
 title: Introduction
 ---
 
