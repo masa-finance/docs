@@ -4,9 +4,9 @@ This guide provides a comprehensive walkthrough for setting up a local miner and
 
 ## Environment Setup
 
-### 1. Clone this repository
+### 1. Clone our repository
 
-Clone this repository to your local machine and `cd` into the root directory:
+Clone **[this repository](https://github.com/masa-finance/bittensor-1)** to your local machine and `cd` into the root directory:
 
 ```bash
 git clone https://github.com/masa-finance/bittensor-1.git
@@ -126,7 +126,7 @@ make boost-root
 
 ### 15. Setup Local Masa Protocol Node
 
-Follow the instructions [here](https://github.com/masa-finance/masa-oracle) to setup a local Masa protocol node. This node is what the miner uses to do its work.
+Follow the instructions **[here](https://github.com/masa-finance/masa-oracle/blob/test/DOCKER.md)** to setup a local Masa protocol node. This node is what the miner uses to do its work.
 
 ## Run Miner and Validator
 
