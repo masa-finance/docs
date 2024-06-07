@@ -1,4 +1,4 @@
-# Running Subnet Locally
+# Run a Local Subtensor
 
 This tutorial will guide you through:
 

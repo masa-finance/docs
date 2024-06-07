@@ -1,13 +1,18 @@
----
-id: devnet-guide
-title: Devnet Guide
----
+# Run on Devnet
 
 This guide provides a comprehensive walkthrough for setting up a local miner and validator on the Masa Devnet.
 
 ## Environment Setup
 
-### 1. Create virtual environment
+### 1. Clone this repository
+
+Clone this repository to your local machine and `cd` into the root directory:
+
+```bash
+git clone https://github.com/masa-finance/bittensor-1.git
+```
+
+### 2. Create virtual environment
 
 If you do not already have a dedicated virtual envionment for Bittensor, you can create one using [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html):
 
@@ -15,7 +20,7 @@ If you do not already have a dedicated virtual envionment for Bittensor, you can
 conda create --name bittensor python
 ```
 
-### 2. Activate virtual environment
+### 3. Activate virtual environment
 
 Activate the environment. Remember this step when opening a new terminal!
 
@@ -23,7 +28,7 @@ Activate the environment. Remember this step when opening a new terminal!
 conda activate bittensor
 ```
 
-### 3. Install packages
+### 4. Install packages
 
 In the root of this repository, run:
 
@@ -31,19 +36,21 @@ In the root of this repository, run:
 pip install -r requirements.txt
 ```
 
-### 4. Set Python Path
+### 5. Set Python Path
 
-```bash
-export PYTHONPATH=$PYTHONPATH:<path_to_this_repo>
+```cmd
+export PYTHONPATH=$PYTHONPATH:$(pwd)
 ```
 
-### 5. Verify Subtensor Environment
+### 6. Verify Subtensor Environment
 
-In the `Makefile`, ensure `SUBTENSOR_ENVIRONMENT` is set to `DEVNET`. If you are interested in running subtensor locally, see [here](./running_on_staging.md). Be sure to set `SUBTENSOR_ENVIRONMENT` to `LOCAL`.
+In the `Makefile`, ensure `SUBTENSOR_ENVIRONMENT` is set to `DEVNET`.
+
+If you are interested in running subtensor locally, see **[here](./running_on_staging.md)**. In the `Makefile`, be sure to set `SUBTENSOR_ENVIRONMENT` to `LOCALNET`.
 
 ## Wallet Setup
 
-### 6. Create cold wallets
+### 7. Create cold wallets
 
 Create cold wallets for a `miner` and `validator`.
 
@@ -52,7 +59,7 @@ btcli wallet new_coldkey --wallet.name miner
 btcli wallet new_coldkey --wallet.name validator
 ```
 
-### 7. Create hot wallets
+### 8. Create hot wallets
 
 Create hot wallets (`default`) for each cold wallet
 
@@ -61,7 +68,7 @@ btcli wallet new_hotkey --wallet.name miner --wallet.hotkey default
 btcli wallet new_hotkey --wallet.name validator --wallet.hotkey default
 ```
 
-### 8. Verify creation of wallets
+### 9. Verify creation of wallets
 
 ```bash
 make list-wallets
@@ -69,7 +76,7 @@ make list-wallets
 
 You should see two wallets listed, each with an associated hotkey (`default`)
 
-### 9. Mint Tokens
+### 10. Mint Tokens
 
 Next, mint tokens for these wallets.
 
@@ -78,7 +85,7 @@ make fund-miner-wallet
 make fund-validator-wallet
 ```
 
-### 10. Register Wallets to Subnet
+### 11. Register Wallets to Subnet
 
 Register your `miner` and `validator` to the default subnet (`1`):
 
@@ -89,7 +96,7 @@ make register-miner
 
 **Note:** You may encounter an error about exceeding blocks. This is normal; wait for one tempo (approximately 1 hour).
 
-### 11. Stake on Validator
+### 12. Stake on Validator
 
 Stake TAO to the `validator`'s hotkey to establish it as a validator:
 
@@ -97,7 +104,7 @@ Stake TAO to the `validator`'s hotkey to establish it as a validator:
 make stake-validator
 ```
 
-### 12. Register Validator on Root Subnet
+### 13. Register Validator on Root Subnet
 
 Register your `validator` on the root subnet:
 
@@ -105,7 +112,7 @@ Register your `validator` on the root subnet:
 make register-validator-root
 ```
 
-### 13. Set Weights
+### 14. Set Weights
 
 Then, set your weights:
 
@@ -117,13 +124,13 @@ make boost-root
 
 ## Run Masa Protocol Node
 
-### 14. Setup Local Masa Protocol Node
+### 15. Setup Local Masa Protocol Node
 
 Follow the instructions [here](https://github.com/masa-finance/masa-oracle) to setup a local Masa protocol node. This node is what the miner uses to do its work.
 
 ## Run Miner and Validator
 
-### 15. Run Miner and Validator
+### 16. Run Miner and Validator
 
 Finally, in two seperate terminals, run the `miner` and `validator`:
 
@@ -137,7 +144,7 @@ and
 make run-validator
 ```
 
-### 16. Interact with Validator API
+### 17. Interact with Validator API
 
 Head to `http://localhost:8000/docs` to interact with the Validator API.
 

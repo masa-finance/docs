@@ -1,6 +1,5 @@
 ---
 id: introduction
-=======
 title: Introduction
 ---
 
