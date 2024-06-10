@@ -2,9 +2,11 @@
 title: Welcome to Masa Bittensor Subnet
 ---
 
+# Welcome to the Masa Bittensor Subnet
+
 The Masa Bittensor Subnet is a specialized subnet where validators reward miners based on their ability to provide Twitter data. Requests made through the Validator API are forwarded to the miners, who use the Masa protocol to execute the work. Work is then scored by the validators, and valid reponses are returned through the API.
 
-To get started, follow **[this walkthrough](./setup/intro.md).**
+To get started, follow [this walkthrough](../guides-and-tutorials/running_on_devnet.md).
 
 ## Features
 
@@ -38,7 +40,7 @@ class ProfileForwarder(Forwarder):
             return await self.forward(request=Request(query=query, type=RequestType.TWITTER_PROFILE.value), get_rewards=get_rewards, parser_object=TwitterProfileObject)
 
         except Exception as e:
-            bt.logging.error(f"Error during the handle responses process: {str(e)}")
+            bt.logging.error(f"Error during the handle responses process: {str(e)}", exc_info=True)
             return []
 ```
 
@@ -71,7 +73,7 @@ Each miner returns a response containing the requested Twitter data. For example
 
 Each miner is scored based on specific criteria defined by the module. Each module has its own `reward.py` file to determine how rewards are distributed. Scoring calculation logic is defined in the `masa/validator/twitter` directory.
 
-### 5. Verified Responses
+### 5. Valid Responses
 
 The API returns a response containing the data from each miner in an array. For example, a response from the `profile` endpoint might look like this:
 
