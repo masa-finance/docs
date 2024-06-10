@@ -11,6 +11,10 @@ Clone **[this repository](https://github.com/masa-finance/bittensor)** to your l
 git clone https://github.com/masa-finance/bittensor.git
 ```
 
+```bash
+cd bittensor
+```
+
 ## Create virtual environment
 
 If you do not already have a dedicated virtual envionment for Bittensor, you can create one using **[conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)**:

@@ -87,9 +87,9 @@ the logs:
 docker-compose logs -f masa-node
 ```
 
-Send 1000 MASA and .01 sepoliaETH to the node's public key / wallet address.
+Head to **[our form](xhttps://docs.google.com/forms/d/e/1FAIpQLSc344bmJfWYcjAEyDdfKTorDsylEyNU-YppmhQNV89f90RK0w/viewform)** to request test Masa tokens on Sepolia. Send 1000 MASA and .01 sepoliaETH to the node's public key / wallet address.
 
-When the transactions have settled, you can stake
+When the transactions have settled, you can stake:
 
 ## Staking the Node
 
