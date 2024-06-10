@@ -109,12 +109,37 @@ const sidebars = {
       label: "Masa Bittensor Subnet",
       link: {
         type: "doc",
-        id: "masa-subnet/welcome-to-masa-bittensor-subnet/welcome-to-masa-bittensor-subnet",
+        id: "masa-subnet/welcome",
       },
       items: [
-        "masa-subnet/guides-and-tutorials/running_on_devnet",
-        "masa-subnet/guides-and-tutorials/running_on_staging",
-        "masa-subnet/known-issues/known-issues",
+        {
+          type: "category",
+          label: "Setup Guide",
+          link: {
+            type: "doc",
+            id: "masa-subnet/setup/intro",
+          },
+          items: [
+            "masa-subnet/setup/1-create-environment",
+            "masa-subnet/setup/2-install-packages",
+            "masa-subnet/setup/3-create-wallets",
+            "masa-subnet/setup/4-fund-wallets",
+            "masa-subnet/setup/5-register-wallets",
+            "masa-subnet/setup/6-stake-validator",
+            "masa-subnet/setup/7-set-weights",
+            "masa-subnet/setup/8-run-protocol",
+            "masa-subnet/setup/9-run-miner-and-validator",
+          ],
+        },
+        {
+          type: "category",
+          label: "Advanced",
+          link: {
+            type: "doc",
+            id: "masa-subnet/advanced/intro",
+          },
+          items: ["masa-subnet/advanced/known-issues", "masa-subnet/advanced/local-subtensor"],
+        },
         {
           type: "doc",
           label: "Release Notes",
