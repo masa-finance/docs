@@ -2,11 +2,12 @@
 title: Welcome to Masa
 ---
 
-## Welcome to Masa
-
 ## Introduction
 
 Welcome to Masa, the network powering Fair AI. We are on a mission to revolutionize the AI landscape by providing an open, permissionless marketplace for specialized AI training data and compute resources. Our vision is to enable any builder, anywhere in the world, to access the tools they need to create innovative and specialized AI applications.
+
+- **[Masa Protocol](docs/protocol/welcome.md):** Learn about the Oracle Nodes, Worker Nodes, and other components that make up the Masa Protocol.
+- **[Masa Bittensor Subnet](docs/masa-subnet/welcome.md):** Discover how the Masa Bittensor Subnet operates, focusing on Twitter data and validator-miner interactions.
 
 ## The Need for Fair AI
 

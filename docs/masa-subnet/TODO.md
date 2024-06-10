@@ -1,0 +1,1 @@
+- [ ] explain how to get tMasa tokens to the protocol node to stake

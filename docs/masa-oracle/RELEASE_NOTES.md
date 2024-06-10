@@ -1,4 +1,4 @@
-# Masa Oracle Release Notes
+# Masa Protocol Release Notes
 
 [All Releases](https://github.com/masa-finance/masa-oracle/releases)
 
@@ -10,18 +10,20 @@ This release of the Masa Oracle Node introduces new features, performance improv
 
 ### Breaking Changes
 
-* None
+- None
 
 ### Bug fixes
 
-* Fixed depth = 0 error in data web scraper
-* Fixed base64 decoding error in node api
+- Fixed depth = 0 error in data web scraper
+- Fixed base64 decoding error in node api
 
 ### New Features
 
-* None
+- None
 
 ### Worker Storage Metrics
+
+- Fixed Worker response issues - note requires ingress 4001 tcp and udp open publicly
 
 * Issue #314: Introduced detailed storage metrics for each worker.
 * Store CID in DHT: Ensures availability by storing
@@ -44,5 +46,5 @@ This release of the Masa Oracle Node introduces new features, performance improv
 
 ## Change Log
 
-* Removed GCP IP address lookup for simpler option
-* Version: 0.0.6-beta
+- Removed GCP IP address lookup for simpler option
+- # Version: 0.0.6-beta
