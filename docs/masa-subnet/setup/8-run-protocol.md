@@ -41,7 +41,7 @@ TWITTER_SCRAPER=True
 
 ```
 
-\*be sure to use ENV=test to join the masa oracle testnet
+**Note:** be sure to update your `TWITTER_USER` and `TWITTER_PASS` to your credentials. Also, be sure to set `ENV` to `test` to join the masa oracle testnet!
 
 ## Building the Docker Image
 
