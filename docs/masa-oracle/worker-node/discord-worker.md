@@ -59,7 +59,7 @@ Multiaddress:           /ip4/172.20.7.45/udp/4001/quic-v1/p2p/16Uiu2HAm28dTN2WVW
 IP Address:             /ip4/127.0.0.1/udp/4001/quic-v1
 Public Key:             0x065728510468A2ef48e6E8a860ff42D68Ca612ee
 Is Staked:              true
-Is Writer:              false
+Is Validator:              false
 Is DiscordScraper:      true
 Is WebScraper:          false
 ```

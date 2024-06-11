@@ -38,7 +38,7 @@ API_KEY=
 RPC_URL=https://ethereum-sepolia.publicnode.com
 ENV=test
 FILE_PATH=.
-WRITER_NODE=false
+VALIDATOR=false
 CACHE_PATH=CACHE
 PORT=8080
 
@@ -86,7 +86,7 @@ Multiaddress:           /ip4/192.168.1.25/udp/4001/quic-v1/p2p/16Uiu2HAm28dTN2WV
 IP Address:             /ip4/127.0.0.1/udp/4001/quic-v1
 Public Key:             0x065728510468A2ef48e6E8a860ff42D68Ca612ee
 Is Staked:              false
-Is Writer:              false
+Is Validator:              false
 Is TwitterScraper:      false
 Is WebScraper:          false
 INFO[0001] Peer added to DHT: 16Uiu2HAmHpx13GPKZAP3WpgpYkZ39M5cwuvmXS5gGvrsa5ofLNoq 
@@ -139,7 +139,7 @@ Multiaddress:           /ip4/192.168.1.25/udp/4001/quic-v1/p2p/16Uiu2HAm28dTN2WV
 IP Address:             /ip4/127.0.0.1/udp/4001/quic-v1
 Public Key:             0x065728510468A2ef48e6E8a860ff42D68Ca612ee
 Is Staked:              true
-Is Writer:              false
+Is Validator:              false
 Is TwitterScraper:      false
 Is WebScraper:          false
 INFO[0001] Peer added to DHT: 16Uiu2HAmHpx13GPKZAP3WpgpYkZ39M5cwuvmXS5gGvrsa5ofLNoq 
