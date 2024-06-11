@@ -17,6 +17,7 @@
 
 * Sepolia test network:
   * MasaToken: [`0xFd36990172dFB44ef0cEa51a9B1159687CfBb4E2`](https://sepolia.etherscan.io/address/0xFd36990172dFB44ef0cEa51a9B1159687CfBb4E2)
+  * MasaFaucet: [`0x0d4eb0fb79c5a2e1a939251ba1645cf8384b5b8c`](https://sepolia.etherscan.io/address/0x0d4eb0fb79c5a2e1a939251ba1645cf8384b5b8c)
   * StakedMasaToken: [`0xb4477Cc67CAFa04e751E3aE0d211e321fcA79046`](https://sepolia.etherscan.io/address/0xb4477Cc67CAFa04e751E3aE0d211e321fcA79046)
   * OracleNodeStaking: [`0xF339e2D564CE47C2FA29b073D6BD7B439e333589`](https://sepolia.etherscan.io/address/0xF339e2D564CE47C2FA29b073D6BD7B439e333589)
   * NodeDataMetrics: [`0x13B9bf9c3914e00e740AAb588Bf4845ED07953f5`](https://sepolia.etherscan.io/address/0x13B9bf9c3914e00e740AAb588Bf4845ED07953f5)
@@ -35,14 +36,10 @@ You can see the deployment address of the smart contracts in the [addresses.json
 
 ### Preparations
 
-* Set `DEPLOYER_PRIVATE_KEY` to the deployers private key in `.env.{network}.secret`
-* Set `COINMARKETCAP_API_KEY` to the CoinMarketCap API key in `.env`, if needed
-* Set `ANKR_API_KEY` to the Ankr API key in `.env`, if needed
+* Set `ANKR_API_KEY` to the Ankr API key in `.env`
+* Set `DEPLOYER_PRIVATE_KEY` to the deployer private key in `.env`
+* Set `DEPLOYER_PRIVATE_KEY_TEST` to the  test deployer private key in `.env`
 * Set `ETHERSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
-* Set `BSCSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
-* Set `POLYGONSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
-* Set `CELOSCAN_API_KEY` to the Etherscan API key in `.env`, if needed
-* Set `BASESCAN_API_KEY` to the Etherscan API key in `.env`, if needed
 
 ### Deploy
 
