@@ -5,14 +5,14 @@ title: 1. Create Environment
 
 ## Clone our repository
 
-Clone **[this repository](https://github.com/masa-finance/bittensor)** to your local machine and `cd` into the root directory:
+Clone **[this repository](https://github.com/masa-finance/masa-bittensor)** to your local machine and `cd` into the root directory:
 
 ```bash
-git clone https://github.com/masa-finance/bittensor.git
+git clone https://github.com/masa-finance/masa-bittensor.git
 ```
 
 ```bash
-cd bittensor
+cd masa-bittensor
 ```
 
 ## Create virtual environment
