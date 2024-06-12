@@ -46,7 +46,7 @@ The `/data/discord/users/{userID}` endpoint retrieves a Discord user's profile. 
 #### Example Request
 
 ```bash
-curl -X POST http://localhost:8080/data/discord/users/123456789012345678 \
+curl -X GET http://localhost:8080/data/discord/users/123456789012345678 \
 -H "Content-Type: application/json" \
 ```
 
@@ -61,18 +61,111 @@ Example response:
 }
 ```
 
+### Retrieve Messages from a Discord Channel
+
+The `/data/discord/channels/{channelID}/messages` endpoint retrieves messages from a specified Discord channel.
+
+- **Endpoint:** `/data/discord/channels/{channelID}/messages`
+- **Method:** GET
+- **Description:** Fetches messages from a Discord channel.
+- **URL Parameters:**
+  - `channelID`: The Discord channel ID from which you want to retrieve messages.
+
+#### Example Request
+
+```bash
+curl -X GET http://localhost:8080/data/discord/channels/123456789012345678/messages \
+-H "Content-Type: application/json" \
+```
+Examples response
+
+```json
+[
+  {
+    "id": "1234456778",
+    "channelID": "829302330",
+    "author": {
+      "id": "10923912",
+      "username": "teslashibe",
+      "discriminator": "string",
+      "avatar": "string"
+    },
+    "content": "hello masa nauts!",
+    "timestamp": "string"
+  }
+]
+```
+
+### Retrieve Channels from a Discord Guild
+
+The `/data/discord/guilds/{guildID}/channels` endpoint retrieves channels from a specified Discord guild.
+
+- **Endpoint:** `/data/discord/guilds/{guildID}/channels`
+- **Method:** GET
+- **Description:** Fetches channels from a Discord guild.
+- **URL Parameters:**
+  - `guildID`: The Discord guild ID from which you want to retrieve channels.
+
+#### Example Request
+
+```bash
+curl -X GET http://localhost:8080/data/discord/guilds/123456789012345678/channels \
+-H "Content-Type: application/json" \
+```
+
+Example response:
+
+```json
+[
+  {
+    "id": "12345678",
+    "guildID": "2342340923",
+    "name": "masa-general",
+    "type": 0
+  }
+]
+```
+
+### Retrieve Guilds from the Discord Network
+
+The `/data/discord/guilds/all` endpoint retrieves all available guilds that the Discord worker network is apart of.
+
+- **Endpoint:** `/data/discord/guilds/all`
+- **Method:** GET
+- **Description:** Fetches guilds for the entire Discord Worker network.
+
+#### Example Request
+
+```bash
+curl -X GET http://localhost:8080/data/discord/guilds/all \
+-H "Content-Type: application/json" \
+```
+Example response:
+
+```json
+[
+  {
+    "id": "1234950",
+    "name": "bobsbot",
+    "icon": "string",
+    "owner": true,
+    "permissions": "string"
+  }
+]
+```
+
 ## Use Case: Decentralized AI Agent
 
 Imagine a decentralized AI agent, "CommunityEngageAI," designed to analyze engagement within Discord communities. This agent uses the API's Discord user data endpoints to gather real-time data on user interactions, preferences, and community roles.
 
 ### How CommunityEngageAI Leverages AI
 
-1. **Data Collection:** CommunityEngageAI sends queries to the `/data/discord/users/{userID}` endpoint to fetch profiles of active community members.
+1. **Data Collection:** CommunityEngageAI sends queries to the various endpoints to fetch profiles of active community members, messages from channels, and other relevant data.
 
-2. **Engagement Analysis:** Upon retrieving user profiles, CommunityEngageAI employs AI models to analyze engagement patterns, identify key influencers, and understand user demographics.
+2. **Engagement Analysis:** Upon retrieving the data, CommunityEngageAI employs AI models to analyze engagement patterns, identify key influencers, and understand user demographics.
 
 3. **Personalized Interactions:** Leveraging the insights gained, CommunityEngageAI customizes interactions with community members, tailoring messages and content to enhance engagement and user satisfaction.
 
 ### Conclusion
 
-The `/data/discord/users/{userID}` endpoint provides a valuable resource for developing applications that interact with Discord user data in real-time. By leveraging this endpoint, developers can create sophisticated AI agents capable of analyzing and enhancing community engagement on Discord. These agents offer deep insights into user behavior and community dynamics, providing valuable intelligence for community managers and content creators.
+The provided endpoints offer valuable resources for developing applications that interact with Discord user data in real-time. By leveraging these endpoints, developers can create sophisticated AI agents capable of analyzing and enhancing community engagement on Discord. These agents offer deep insights into user behavior and community dynamics, providing valuable intelligence for community managers and content creators.
