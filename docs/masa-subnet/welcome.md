@@ -10,17 +10,31 @@ To get started, follow **[this walkthrough](./setup/intro.md).**
 
 ### 1. Validator API Endpoints
 
-1. **Profile Endpoint**
+1. **Twitter Profile Endpoint**
 
-   - `GET /data/twitter/profile/{handle}`
+    - `GET /data/twitter/profile/{handle}`
 
-2. **Followers Endpoint**
 
-   - `GET /data/twitter/followers/{handle}`
+2. **Twitter Followers Endpoint**
+
+    - `GET /data/twitter/followers/{handle}`
+
 
 3. **Recent Tweets Endpoint**
-   - `POST /data/twitter/tweets/recent`
-   - **Body:** `{ "query": "keyword", "count": 10 }`
+   
+    - `POST /data/twitter/tweets/recent`
+    - **Body:** `{ "query": "keyword", "count": 10 }`
+
+
+4. **Web Scraper Endpoint**
+   
+    - `POST /data/web`
+    - **Body:** `{ "url": "https://github.com", "depth": 1 }`
+
+
+5. **Discord Profile Endpoint**
+
+    - `GET /data/discord/profile/{user_id}`
 
 ### 2. Validator Forwarding Functions
 
