@@ -80,16 +80,21 @@ This directory is mapped from `/home/masa/.masa/` inside the Docker container, e
 
 ## Funding the Node (in order to Stake)
 
-Find the public key of your node in the logs:
-the logs:
+The node will need to be funded with `1000` tMASA tokens and `0.01` sepoliaETH. For tMASA tokens, you can use our faucet:
+
+```bash
+docker-compose run --rm masa-node /usr/bin/masa-node --faucet
+```
+
+If the faucet is empty, you can manually request tokens using our form. First, find the public key of your node in the logs:
 
 ```bash
 docker-compose logs -f masa-node
 ```
 
-Head to **[our form](xhttps://docs.google.com/forms/d/e/1FAIpQLSc344bmJfWYcjAEyDdfKTorDsylEyNU-YppmhQNV89f90RK0w/viewform)** to request test Masa tokens on Sepolia. Send 1000 MASA and .01 sepoliaETH to the node's public key / wallet address.
+Then, head to **[our form](https://docs.google.com/forms/d/e/1FAIpQLSc344bmJfWYcjAEyDdfKTorDsylEyNU-YppmhQNV89f90RK0w/viewform)** to request test Masa tokens on Sepolia with your nodes address.
 
-When the transactions have settled, you can stake:
+For sepoliaETH, you can use a faucet **[like this one](https://www.alchemy.com/faucets/ethereum-sepolia).** When both transactions have settled, you can stake:
 
 ## Staking the Node
 

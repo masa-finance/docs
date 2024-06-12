@@ -18,3 +18,5 @@ Set the `PYTHONPATH` environment variable to the root of the repository:
 ```cmd
 export PYTHONPATH=$PYTHONPATH:$(pwd)
 ```
+
+**Note:** Remember to set the `PYTHONPATH` environment variable for each terminal session.
