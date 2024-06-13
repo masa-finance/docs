@@ -37,7 +37,6 @@ const sidebars = {
           },
           items: [
             "masa-oracle/oracle-node/introduction",
-            "masa-oracle/oracle-node/hardware-network-reqs",
             "masa-oracle/oracle-node/quickstart",
             "masa-oracle/oracle-node/twitter-data",
             "masa-oracle/oracle-node/discord-data",
