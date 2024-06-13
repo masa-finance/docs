@@ -30,7 +30,29 @@ function DEFAULT_ADMIN_ROLE() external view returns (bytes32)
 ### calculateUtility
 
 ```solidity
-function calculateUtility(address _oracleAddress) external view returns (uint256)
+function calculateUtility(address) external pure returns (uint256)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### getOracleData
+
+```solidity
+function getOracleData(address _oracleAddress) external view returns (uint256 usedResources)
 ```
 
 
@@ -47,7 +69,7 @@ function calculateUtility(address _oracleAddress) external view returns (uint256
 
 | Name | Type | Description |
 |---|---|---|
-| _0 | uint256 | undefined |
+| usedResources | uint256 | undefined |
 
 ### getRoleAdmin
 
@@ -111,10 +133,27 @@ function hasRole(bytes32 role, address account) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
-### oracleNodes
+### lambda
 
 ```solidity
-function oracleNodes(address) external view returns (uint256 stake, uint256 resourcesUsed)
+function lambda() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### oracles
+
+```solidity
+function oracles(address) external view returns (uint256 usedResources)
 ```
 
 
@@ -131,8 +170,7 @@ function oracleNodes(address) external view returns (uint256 stake, uint256 reso
 
 | Name | Type | Description |
 |---|---|---|
-| stake | uint256 | undefined |
-| resourcesUsed | uint256 | undefined |
+| usedResources | uint256 | undefined |
 
 ### renounceRole
 
@@ -167,6 +205,22 @@ function revokeRole(bytes32 role, address account) external nonpayable
 |---|---|---|
 | role | bytes32 | undefined |
 | account | address | undefined |
+
+### setLambda
+
+```solidity
+function setLambda(uint256 _lambda) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _lambda | uint256 | undefined |
 
 ### supportsInterface
 

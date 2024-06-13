@@ -27,10 +27,44 @@ function DEFAULT_ADMIN_ROLE() external view returns (bytes32)
 |---|---|---|
 | _0 | bytes32 | undefined |
 
+### alpha
+
+```solidity
+function alpha() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### beta
+
+```solidity
+function beta() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
 ### calculateUtility
 
 ```solidity
-function calculateUtility(address _validatorAddress) external view returns (uint256)
+function calculateUtility(address) external pure returns (uint256)
 ```
 
 
@@ -41,7 +75,24 @@ function calculateUtility(address _validatorAddress) external view returns (uint
 
 | Name | Type | Description |
 |---|---|---|
-| _validatorAddress | address | undefined |
+| _0 | address | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### gamma
+
+```solidity
+function gamma() external view returns (uint256)
+```
+
+
+
+
+
 
 #### Returns
 
@@ -70,6 +121,30 @@ function getRoleAdmin(bytes32 role) external view returns (bytes32)
 | Name | Type | Description |
 |---|---|---|
 | _0 | bytes32 | undefined |
+
+### getValidatorData
+
+```solidity
+function getValidatorData(address _validatorAddress) external view returns (uint256 consensusContributions, uint256 dataVerified, uint256 llmQuality)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _validatorAddress | address | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| consensusContributions | uint256 | undefined |
+| dataVerified | uint256 | undefined |
+| llmQuality | uint256 | undefined |
 
 ### grantRole
 
@@ -111,6 +186,23 @@ function hasRole(bytes32 role, address account) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
+### lambda
+
+```solidity
+function lambda() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
 ### renounceRole
 
 ```solidity
@@ -145,6 +237,70 @@ function revokeRole(bytes32 role, address account) external nonpayable
 | role | bytes32 | undefined |
 | account | address | undefined |
 
+### setAlpha
+
+```solidity
+function setAlpha(uint256 _alpha) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _alpha | uint256 | undefined |
+
+### setBeta
+
+```solidity
+function setBeta(uint256 _beta) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _beta | uint256 | undefined |
+
+### setGamma
+
+```solidity
+function setGamma(uint256 _gamma) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _gamma | uint256 | undefined |
+
+### setLambda
+
+```solidity
+function setLambda(uint256 _lambda) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _lambda | uint256 | undefined |
+
 ### supportsInterface
 
 ```solidity
@@ -170,7 +326,7 @@ function supportsInterface(bytes4 interfaceId) external view returns (bool)
 ### updateValidatorActivities
 
 ```solidity
-function updateValidatorActivities(address validatorAddress, uint256 transactions, uint256 verifiedData, uint256 outputsEvaluated) external nonpayable
+function updateValidatorActivities(address validatorAddress, uint256 consensusContributions, uint256 dataVerified, uint256 llmQuality) external nonpayable
 ```
 
 
@@ -182,14 +338,14 @@ function updateValidatorActivities(address validatorAddress, uint256 transaction
 | Name | Type | Description |
 |---|---|---|
 | validatorAddress | address | undefined |
-| transactions | uint256 | undefined |
-| verifiedData | uint256 | undefined |
-| outputsEvaluated | uint256 | undefined |
+| consensusContributions | uint256 | undefined |
+| dataVerified | uint256 | undefined |
+| llmQuality | uint256 | undefined |
 
 ### validators
 
 ```solidity
-function validators(address) external view returns (uint256 stake, uint256 numTransactionsValidated, uint256 dataVerified, uint256 llmOutputsEvaluated)
+function validators(address) external view returns (uint256 consensusContributions, uint256 dataVerified, uint256 llmQuality)
 ```
 
 
@@ -206,10 +362,9 @@ function validators(address) external view returns (uint256 stake, uint256 numTr
 
 | Name | Type | Description |
 |---|---|---|
-| stake | uint256 | undefined |
-| numTransactionsValidated | uint256 | undefined |
+| consensusContributions | uint256 | undefined |
 | dataVerified | uint256 | undefined |
-| llmOutputsEvaluated | uint256 | undefined |
+| llmQuality | uint256 | undefined |
 
 
 

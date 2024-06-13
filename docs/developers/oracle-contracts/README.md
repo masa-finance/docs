@@ -18,10 +18,11 @@
 * Sepolia test network:
   * MasaToken: [`0xFd36990172dFB44ef0cEa51a9B1159687CfBb4E2`](https://sepolia.etherscan.io/address/0xFd36990172dFB44ef0cEa51a9B1159687CfBb4E2)
   * MasaFaucet: [`0x0d4eb0fb79c5a2e1a939251ba1645cf8384b5b8c`](https://sepolia.etherscan.io/address/0x0d4eb0fb79c5a2e1a939251ba1645cf8384b5b8c)
-  * StakedMasaToken: [`0xb4477Cc67CAFa04e751E3aE0d211e321fcA79046`](https://sepolia.etherscan.io/address/0xb4477Cc67CAFa04e751E3aE0d211e321fcA79046)
-  * OracleNodeStaking: [`0xF339e2D564CE47C2FA29b073D6BD7B439e333589`](https://sepolia.etherscan.io/address/0xF339e2D564CE47C2FA29b073D6BD7B439e333589)
-  * NodeDataMetrics: [`0x13B9bf9c3914e00e740AAb588Bf4845ED07953f5`](https://sepolia.etherscan.io/address/0x13B9bf9c3914e00e740AAb588Bf4845ED07953f5)
-  * NodeRewardPool: [`0x56266C75773e82B886B02dC0D137eC005fc2C8e4`](https://sepolia.etherscan.io/address/0x56266C75773e82B886B02dC0D137eC005fc2C8e4)
+  * ProtocolStaking: [`0x161F1775D49Aef9CC4D2f771eA2774555407Ce4e`](https://sepolia.etherscan.io/address/0x161F1775D49Aef9CC4D2f771eA2774555407Ce4e)
+  * ValidatorUtilityTracker: [`0x0BB379Aed7a4aD8Af64664c93dEDBD98b3893103`](https://sepolia.etherscan.io/address/0x0BB379Aed7a4aD8Af64664c93dEDBD98b3893103)
+  * WorkerUtilityTracker: [`0xD441395554dDAbCDf0fEB5991534228aa825b50a`](https://sepolia.etherscan.io/address/0xD441395554dDAbCDf0fEB5991534228aa825b50a)
+  * OracleUtilityTracker: [`0x332aB163a034F912509Cae2F15f91f3263FF6479`](https://sepolia.etherscan.io/address/0x332aB163a034F912509Cae2F15f91f3263FF6479)
+  * EpochRewards: [`0xC6CA7be41Ba10a3645988B77a523231666540b82`](https://sepolia.etherscan.io/address/0xC6CA7be41Ba10a3645988B77a523231666540b82)
 
 You can see the deployment address of the smart contracts in the [addresses.json](addresses.json) file. For every deployed smart contract you will find a `<network>.<contract>` value.
 

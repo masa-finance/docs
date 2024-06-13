@@ -27,10 +27,44 @@ function DEFAULT_ADMIN_ROLE() external view returns (bytes32)
 |---|---|---|
 | _0 | bytes32 | undefined |
 
+### alpha
+
+```solidity
+function alpha() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
+### beta
+
+```solidity
+function beta() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
 ### calculateUtility
 
 ```solidity
-function calculateUtility(address _workerAddress) external view returns (uint256)
+function calculateUtility(address) external pure returns (uint256)
 ```
 
 
@@ -41,7 +75,7 @@ function calculateUtility(address _workerAddress) external view returns (uint256
 
 | Name | Type | Description |
 |---|---|---|
-| _workerAddress | address | undefined |
+| _0 | address | undefined |
 
 #### Returns
 
@@ -70,6 +104,29 @@ function getRoleAdmin(bytes32 role) external view returns (bytes32)
 | Name | Type | Description |
 |---|---|---|
 | _0 | bytes32 | undefined |
+
+### getWorkerData
+
+```solidity
+function getWorkerData(address _workerAddress) external view returns (uint256 computationalPower, uint256 dataQuality)
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _workerAddress | address | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| computationalPower | uint256 | undefined |
+| dataQuality | uint256 | undefined |
 
 ### grantRole
 
@@ -111,6 +168,23 @@ function hasRole(bytes32 role, address account) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
+### lambda
+
+```solidity
+function lambda() external view returns (uint256)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
+
 ### renounceRole
 
 ```solidity
@@ -145,6 +219,54 @@ function revokeRole(bytes32 role, address account) external nonpayable
 | role | bytes32 | undefined |
 | account | address | undefined |
 
+### setAlpha
+
+```solidity
+function setAlpha(uint256 _alpha) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _alpha | uint256 | undefined |
+
+### setBeta
+
+```solidity
+function setBeta(uint256 _beta) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _beta | uint256 | undefined |
+
+### setLambda
+
+```solidity
+function setLambda(uint256 _lambda) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _lambda | uint256 | undefined |
+
 ### supportsInterface
 
 ```solidity
@@ -167,10 +289,10 @@ function supportsInterface(bytes4 interfaceId) external view returns (bool)
 |---|---|---|
 | _0 | bool | undefined |
 
-### updateWorkerNodePerformance
+### updateWorkerPerformance
 
 ```solidity
-function updateWorkerNodePerformance(address workerAddress, uint256 compPower, uint256 dataQual) external nonpayable
+function updateWorkerPerformance(address workerAddress, uint256 computationalPower, uint256 dataQuality) external nonpayable
 ```
 
 
@@ -182,13 +304,13 @@ function updateWorkerNodePerformance(address workerAddress, uint256 compPower, u
 | Name | Type | Description |
 |---|---|---|
 | workerAddress | address | undefined |
-| compPower | uint256 | undefined |
-| dataQual | uint256 | undefined |
+| computationalPower | uint256 | undefined |
+| dataQuality | uint256 | undefined |
 
-### workerNodes
+### workers
 
 ```solidity
-function workerNodes(address) external view returns (uint256 stake, uint256 computationalPower, uint256 dataQuality)
+function workers(address) external view returns (uint256 computationalPower, uint256 dataQuality)
 ```
 
 
@@ -205,7 +327,6 @@ function workerNodes(address) external view returns (uint256 stake, uint256 comp
 
 | Name | Type | Description |
 |---|---|---|
-| stake | uint256 | undefined |
 | computationalPower | uint256 | undefined |
 | dataQuality | uint256 | undefined |
 
