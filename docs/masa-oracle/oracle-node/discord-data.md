@@ -77,6 +77,7 @@ The `/data/discord/channels/{channelID}/messages` endpoint retrieves messages fr
 curl -X GET http://localhost:8080/data/discord/channels/123456789012345678/messages \
 -H "Content-Type: application/json" \
 ```
+
 Examples response
 
 ```json
@@ -140,6 +141,7 @@ The `/data/discord/guilds/all` endpoint retrieves all available guilds that the 
 curl -X GET http://localhost:8080/data/discord/guilds/all \
 -H "Content-Type: application/json" \
 ```
+
 Example response:
 
 ```json

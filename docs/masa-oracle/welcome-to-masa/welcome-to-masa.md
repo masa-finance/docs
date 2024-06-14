@@ -48,9 +48,9 @@ Masa offers developers a decentralized platform to access diverse data sources a
 - Stake tokens to access the network's rich data and powerful open source LLM services, submitting data or LLM requests to Worker Nodes.
 - Submit data or LLM requests to Worker Nodes to power your AI applications.
 - Tap into a wide range of data sources and LLM models to fulfill various data and processing requirements, for example:
-  - **Crypto Sentiment Analysis**: Combine data from our Twitter Scraper and Web Scraper to gather real-time information about cryptocurrency trends, news, and public sentiment. 
-  - **Crypto Community Insights**: Leverage our Discord Profile scraper to extract comprehensive data from prominent crypto users on Discord. 
-  - **Crypto News Aggregation and Summarization**: Utilize our Web Scraper to collect real-time data from leading crypto news websites and blogs. 
+  - **Crypto Sentiment Analysis**: Combine data from our Twitter Scraper and Web Scraper to gather real-time information about cryptocurrency trends, news, and public sentiment.
+  - **Crypto Community Insights**: Leverage our Discord Profile scraper to extract comprehensive data from prominent crypto users on Discord.
+  - **Crypto News Aggregation and Summarization**: Utilize our Web Scraper to collect real-time data from leading crypto news websites and blogs.
 
 By leveraging Masa as a Oracle Node, developers can build innovative AI applications with the power of decentralized data and compute at their fingertips.
 

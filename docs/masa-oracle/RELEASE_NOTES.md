@@ -15,6 +15,8 @@ This release of the Masa Oracle Node introduces new features, masa node will exi
 
 ### Bug fixes
 
+* Fixed the bug that that gave incorrect node data timestamping, replaced with unix timestamps
+
 ### New Features
 
 * Added Discord scrapers
