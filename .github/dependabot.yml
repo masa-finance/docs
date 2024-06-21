@@ -10,4 +10,5 @@ updates:
     schedule:
       interval: "weekly"
     reviewers:
-      - "masa-finance/core-team"
+      - "masa-finance/smart-contracts"
+      - "masa-finance/protocol"
