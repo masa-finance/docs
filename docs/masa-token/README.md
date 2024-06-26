@@ -96,3 +96,15 @@
 - Token Address: [0x784F4d8fB4bf51431e47b014DdA159e31ACC714e](https://amoy.polygonscan.com/address/0x784F4d8fB4bf51431e47b014DdA159e31ACC714e)
 - TimeLock Address: [0x78A660183257C4699a57a2D85a7Cf49b4DA75A6E](https://amoy.polygonscan.com/address/0x78A660183257C4699a57a2D85a7Cf49b4DA75A6E)
 - Admin Address: [0x46c9cdA3F83C5c13C767A07b6E80aEd302E40B28](https://amoy.polygonscan.com/address/0x46c9cdA3F83C5c13C767A07b6E80aEd302E40B28)
+
+## Aurora
+
+- Token Address: []
+- TimeLock Address: []
+- Admin Address: []
+
+## Aurora Testnet
+
+- Token Address: [0x784F4d8fB4bf51431e47b014DdA159e31ACC714e](https://explorer.testnet.aurora.dev/address/0x784F4d8fB4bf51431e47b014DdA159e31ACC714e)
+- TimeLock Address: [0x78A660183257C4699a57a2D85a7Cf49b4DA75A6E](https://explorer.testnet.aurora.dev/address/0x78A660183257C4699a57a2D85a7Cf49b4DA75A6E)
+- Admin Address: [0x46c9cdA3F83C5c13C767A07b6E80aEd302E40B28](https://explorer.testnet.aurora.dev/address/0x46c9cdA3F83C5c13C767A07b6E80aEd302E40B28)
