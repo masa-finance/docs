@@ -2,52 +2,30 @@
 
 [All Releases](https://github.com/masa-finance/masa-oracle/releases)
 
-## [0.0.7-beta](https://github.com/masa-finance/masa-oracle/releases) (2024)
+## [0.0.8-beta](https://github.com/masa-finance/masa-oracle/releases) (2024)
 
 ## Overview
 
-This release of the Masa Oracle Node introduces new features, masa node will exit after running cli commands --stake n and --faucet
+This release of the Masa Oracle Node introduces the following new features and changes.
 
 ### Breaking Changes
 
-* Updated the masa-contracts-oracle to 0.4.5
-  * cd contracts && yarn
+* Protocol verion change to 0.0.8
 
 ### Bug fixes
 
-* Fixed the bug that that gave incorrect node data timestamping, replaced with unix timestamps
+* Webscraper page depth fixed
 
 ### New Features
 
-* Added Discord scrapers
-* Added masa token faucet with cli param --faucet
+* Added claude sonnet 3.5 LLM
+* Discord scraper integrated with workers
 
-> compile and build the masa-node
+### Enhancements
 
-```shell
-make build
-```
-
-> will give 1000 masa tokens to the node and exit
-
-```shell
-make faucet 
-```
-
-> will stake 1000 masa tokens and exit
-
-```shell
-make stake 
-```
-
-> run as normal
-
-```shell
-make run
-```
-
-* None
+* Added dht clustering options for optimization
+* Improved bootnode nodedata handling
 
 ## Change Log
 
-* Version: 0.0.7-beta
+* Version: 0.0.8-beta

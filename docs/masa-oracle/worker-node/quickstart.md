@@ -39,7 +39,6 @@ RPC_URL=https://ethereum-sepolia.publicnode.com
 ENV=test
 FILE_PATH=.
 VALIDATOR=false
-CACHE_PATH=CACHE
 PORT=8080
 
 # AI LLM
@@ -60,9 +59,6 @@ TWITTER_2FA_CODE="your2fa"
 TWITTER_SCRAPER=true
 DISCORD_SCRAPER=true
 WEB_SCRAPER=true
-
-# PG
-PG_URL=
 ```
 
 ### 5. Start the node

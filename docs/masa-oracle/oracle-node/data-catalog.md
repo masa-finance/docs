@@ -20,19 +20,13 @@ Our Decentralized AI Data Oracle offers a comprehensive suite of high-quality da
    - **Estimated dataset size:** Access to Twitter's 368 million monthly active users (as of 2024)
    - **Data volume:** Varies based on the number of accessible tweets and user profiles. The United States alone has 95.4 million Twitter users, with 41.5 million being monetizable daily active users, spending an average of 30.9 minutes per day on the platform.
 3. **Discord Profile Scraper**
-   - Uncover valuable insights from Discord users with our Discord Profile Scraper. Extract comprehensive user profile data, including usernames, roles, and activity data. With enhanced capabilities, you can now access a user's public server memberships, their activity statuses, and even game-related data if publicly shared.
-   - **Features**:
-     - Profile Information: Retrieve usernames, avatars, discriminators, and public flags (such as whether the user is a Discord Nitro subscriber).
-     - Server Memberships: List public servers the user is part of, along with their roles in each server.
-     - Activity Data: Gather information on user's current activities, such as the game they are playing or the music they are listening to.
-     - Interaction Patterns: Analyze user interaction within servers for community engagement insights.
-   - **Estimated dataset size:** Access to Discord's 196.2 million monthly active users and 614 million registered users (as of March 2024).
-   - **Data volume:** Varies based on the number of accessible user profiles, the depth of data extraction, and the amount of publicly scrapable profile data.
-   - **Use Cases**:
-     - Community Management: Understand the composition of your community and tailor engagement strategies accordingly.
-     - Trend Analysis: Identify trending games and topics within communities.
-     - User Behavior Analysis: Gain insights into user behavior patterns for targeted marketing and personalized user experiences.
-   - **Compliance Note**: Ensure compliance with Discord's Terms of Service and applicable data protection laws when using this scraper.
+
+- Access a wealth of Discord data through our API, designed to assist developers in leveraging real-time Discord data for applications such as community analysis, user engagement tracking, and bot personalization.
+  - **Features**:
+    - User Profile: Fetch user profiles including usernames, avatars, discriminators, and public flags.
+    - Messages: Retrieve messages from specified Discord channels to analyze communication patterns.
+    - Channels: Access channel information within Discord guilds to understand community structure.
+    - Guilds: Get a list of all guilds within the Discord network that the bot is a part of.
 
 ## In Development
 

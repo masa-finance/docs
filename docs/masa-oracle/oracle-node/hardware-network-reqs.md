@@ -17,8 +17,8 @@ If your node will participate in the network as a "Worker," doing data scraping,
 - 4001 (TCP; UDP as well if behind NAT)
 - 8080 (TCP)
 
-* port 8080 is only required to provide access to the API, and can be changed with environment configuration.
-* Only 4001 is required to be open publicly for participation in the p2p Masa Protocol network as a Worker node.
-* A basic node will still find the bootnodes and register itself as part of the network without any specific inbound ports open.
+- port 8080 is only required to provide access to the API, and can be changed with environment configuration.
 
+- Only 4001 is required to be open publicly for participation in the p2p Masa Protocol network as a Worker node.
 
+- A basic node will still find the bootnodes and register itself as part of the network without any specific inbound ports open.
