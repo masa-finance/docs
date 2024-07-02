@@ -23,9 +23,6 @@ export default function Hero() {
   const section = "relative bg-black flex-1 h-[calc(100vh-3.5rem)] flex-col";
   const wrapper = "text-center h-[225px] lg:mt-[120px] max-w-[1120px] mx-auto";
 
-  const heading =
-    "text-[15px] sm:text-[30px] lg:text-[55px] leading-[1] font-medium pb-8 ";
-
   return (
     <section className={section}>
       <img
@@ -34,7 +31,13 @@ export default function Hero() {
         alt="saturn-masa"
       />
       <section className={wrapper}>
-        <h1 className={heading}>Fair AI, Powered by the People</h1>
+        <h1
+          className={
+            "font-alumni font-semibold text-[42px] lg:text-[80px] leading-[1] pb-8 mt-16 lg:pt-16 "
+          }
+        >
+          Fair AI, Powered by the People
+        </h1>
         <StartNowBtn />
       </section>
       <img
