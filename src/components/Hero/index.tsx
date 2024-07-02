@@ -31,14 +31,9 @@ export default function Hero() {
   return (
     <section className={section}>
       <img
-        src="img/hero-wave.svg"
-        className="absolute bottom-0 left-0"
-        alt=""
-      />
-      <img
-        src="img/hero-planet.png"
-        className="absolute right-10 bottom-20 max-w-[20vw]"
-        alt=""
+        className="hidden lg:block absolute top-16 right-10"
+        src={"img/saturn.png"}
+        alt="saturn-masa"
       />
       <div className={wrapper}>
         <h1 className={heading1}>
@@ -51,6 +46,11 @@ export default function Hero() {
           <StartNowBtn />
         </Link>
       </div>
+      <img
+        src={"img/homepage-hero-banner-large.png"}
+        alt=""
+        className="flex z-0 lg:mt-[initial] aspect-auto"
+      />
     </section>
   );
 }
