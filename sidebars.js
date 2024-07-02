@@ -41,7 +41,7 @@ const sidebars = {
             "masa-oracle/oracle-node/quickstart",
             "masa-oracle/oracle-node/twitter-data",
             "masa-oracle/oracle-node/discord-data",
-            "masa-oracle/oracle-node/web-scraper",
+            "masa-oracle/oracle-node/web-scraper-data",
             "masa-oracle/oracle-node/data-catalog",
             "masa-oracle/oracle-node/twitter-sentiment",
           ],
