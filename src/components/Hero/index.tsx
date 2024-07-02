@@ -2,55 +2,49 @@ import React from "react";
 import Link from "@docusaurus/Link";
 
 export const StartNowBtn = () => {
-    const strtText = "text-[10px] text-white text-opacity-1 xl:text-sm"
-    const wrapper = "flex flex-row items-center gap-2 cursor-pointer mt-4"
+  const wrapper =
+    "flex lg:flex-row gap-4 lg:gap-6 items-center justify-center mt-7";
+  const strtText = "body_s_bold leading-[1] text-inherit";
+  const button =
+    "button w-fit relative text-center flex items-center justify-center text-white cursor-pointer whitespace-nowrap transition-colors bg-transparent rounded-[4px] active:bg-white active:text-black hover:bg-[rgba(255,255,255,0.2)] px-6 py-4 rounded-lg w-16 h-8 lg:h-[initial]";
 
-    return (
-      <div className={wrapper}>
-        <div className={"bg-[#F3BF6C] rounded-full w-[16px] h-[16px] flex justify-center items-center"}>
-          <img
-            src="img/chevron-right.svg"
-            alt="down-arrow"
-            width="10"
-            height="10"
-          />
+  return (
+    <div className={wrapper}>
+      <Link to="docs/welcome-to-masa" className={"contents"}>
+        <div className={button} style={{ border: "white 2px solid" }}>
+          <p className={strtText}>GET STARTED</p>
         </div>
-        <p className={strtText}>START NOW</p>
-      </div>
-    )
-}
+      </Link>
+    </div>
+  );
+};
 
 export default function Hero() {
-  // calc height based on nav height
-  const section = "relative bg-black flex h-[calc(100vh-3.5rem)]"
-  const wrapper = "relative w-full md:w-2/3 max-w-[750px] px-4 pb-[20vh] mx-auto flex flex-col justify-center items-center text-center"
-  
-  const heading1 = "text-[15px] sm:text-[30px] lg:text-[55px] leading-[1] font-medium pb-8"
-  const heading2 = "text-[12px] sm:text-[16px] lg:text-[20px] leading-[1.8] pb-8"
+  const section = "relative bg-black flex-1 h-[calc(100vh-3.5rem)] flex-col";
+  const wrapper = "text-center h-[225px] lg:mt-[120px] max-w-[1120px] mx-auto";
 
   return (
     <section className={section}>
       <img
-        src="img/hero-wave.svg"
-        className="absolute bottom-0 left-0"
-        alt=""
+        className="hidden lg:block absolute top-16 right-10"
+        src={"img/saturn.png"}
+        alt="saturn-masa"
       />
-      <img
-        src="img/hero-planet.png"
-        className="absolute right-10 bottom-20 max-w-[20vw]"
-        alt=""
-      />
-      <div className={wrapper}>
-        <h1 className={heading1}>
-          Building the leading <span className='text-gold'>zk-data</span> marketplace & network
+      <section className={wrapper}>
+        <h1
+          className={
+            "font-alumni font-semibold text-[42px] lg:text-[80px] leading-[1] pb-8 mt-16 lg:pt-16 "
+          }
+        >
+          Fair AI, Powered by the People
         </h1>
-        <p className={heading2}>
-          Build hyper-personalized applications, train AI models and more utilizing the largest zk-data network in the world.
-        </p>
-        <Link to="docs/welcome-to-masa">
-          <StartNowBtn />
-        </Link>
-      </div>
+        <StartNowBtn />
+      </section>
+      <img
+        src={"img/homepage-hero-banner-large.png"}
+        alt=""
+        className="flex z-0 lg:mt-[initial] aspect-auto"
+      />
     </section>
   );
 }
