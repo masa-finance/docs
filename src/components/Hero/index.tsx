@@ -21,12 +21,11 @@ export const StartNowBtn = () => {
 }
 
 export default function Hero() {
-  // calc height based on nav height
-  const section = "relative bg-black flex h-[calc(100vh-3.5rem)]"
-  const wrapper = "relative w-full md:w-2/3 max-w-[750px] px-4 pb-[20vh] mx-auto flex flex-col justify-center items-center text-center"
-  
-  const heading1 = "text-[15px] sm:text-[30px] lg:text-[55px] leading-[1] font-medium pb-8"
-  const heading2 = "text-[12px] sm:text-[16px] lg:text-[20px] leading-[1.8] pb-8"
+  const section = "relative bg-black flex-1 h-[calc(100vh-3.5rem)] flex-col";
+  const wrapper = "text-center h-[225px] lg:mt-[120px] max-w-[1120px] mx-auto";
+
+  const heading =
+    "text-[15px] sm:text-[30px] lg:text-[55px] leading-[1] font-medium pb-8 ";
 
   return (
     <section className={section}>
@@ -35,17 +34,12 @@ export default function Hero() {
         src={"img/saturn.png"}
         alt="saturn-masa"
       />
-      <div className={wrapper}>
-        <h1 className={heading1}>
-          Building the leading <span className='text-gold'>zk-data</span> marketplace & network
-        </h1>
-        <p className={heading2}>
-          Build hyper-personalized applications, train AI models and more utilizing the largest zk-data network in the world.
-        </p>
+      <section className={wrapper}>
+        <h1 className={heading}>Fair AI, Powered by the People</h1>
         <Link to="docs/welcome-to-masa">
           <StartNowBtn />
         </Link>
-      </div>
+      </section>
       <img
         src={"img/homepage-hero-banner-large.png"}
         alt=""
