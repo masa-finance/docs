@@ -21,6 +21,7 @@ module.exports = {
       fontFamily: {
         ezra: ["Ezra"],
         inter: ["Inter"],
+        alumni: ["Alumni Sans"],
       },
     },
   },
