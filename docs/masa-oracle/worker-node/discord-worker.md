@@ -13,11 +13,11 @@ As a worker in the Masa Oracle Node network, your primary function is to process
 
 ### Worker's Workflow
 
-1. **Initialization**: Your node, acting as a Worker, is part of a pool managed by a Manager actor. This setup ensures efficient distribution and handling of incoming Discord data requests.
+1 . **Initialization**: Your node, acting as a Worker, is part of a pool managed by a Manager actor. This setup ensures efficient distribution and handling of incoming Discord data requests.
 
-2. **Receiving Requests**: When a request for Discord data is received, the Manager actor delegates the task to you, the Worker, based on availability and capability.
+2 . **Receiving Requests**: When a request for Discord data is received, the Manager actor delegates the task to you, the Worker, based on availability and capability.
 
-3. **Processing Requests**: You then fetch the requested data from Discord using the specified criteria and prepare the data for return to the network.
+3 . **Processing Requests**: You then fetch the requested data from Discord using the specified criteria and prepare the data for return to the network.
 
 ## Prerequisites for Workers
 
@@ -31,19 +31,19 @@ To become a worker focused on Discord data requests, you need to:
 
 To start processing Discord data requests, you need to retrieve your Discord bot token, which is essential for authenticating with the Discord API. This token will allow your bot to collect data on your guild. Here's how to get your token:
 
-1. Go to the [Discord Developer Portal](https://discord.com/developers/applications).
-2. Log in with your Discord account credentials.
-3. Click on the "New Application" button. Give your application a name and confirm the creation.
-4. Navigate to the "Bot" tab on the left-hand side and click on "Add Bot".
-5. Confirm the creation of the bot user.
-6. Under the "TOKEN" section, click on "Copy" to get your bot token.
+1 . Go to the [Discord Developer Portal](https://discord.com/developers/applications).
+2 . Log in with your Discord account credentials.
+3 . Click on the "New Application" button. Give your application a name and confirm the creation.
+4 . Navigate to the "Bot" tab on the left-hand side and click on "Add Bot".
+5 . Confirm the creation of the bot user.
+6 . Under the "TOKEN" section, click on "Copy" to get your bot token.
 
 ## 2) Setting Up Your Node for Discord Requests
 
 ### Adding Discord Credentials
 
-1. Locate your `.env` file in your Masa Oracle Node's directory.
-2. Add the following entries, replacing `DISCORD_BOT_TOKEN` with your actual Discord bot token. You must set `DISCORD_WORKER=true` to start your node as a Discord Worker. When you start your node, ensure that it can communicate with the Discord API:
+1 . Locate your `.env` file in your Masa Oracle Node's directory.
+2 . Add the following entries, replacing `DISCORD_BOT_TOKEN` with your actual Discord bot token. You must set `DISCORD_WORKER=true` to start your node as a Discord Worker. When you start your node, ensure that it can communicate with the Discord API:
 
 ```shell
 #env
@@ -51,7 +51,7 @@ DISCORD_BOT_TOKEN='your_discord_bot_token'
 DISCORD_SCRAPER=true
 ```
 
-3.Save the `.env` file and restart your node to apply the changes.
+3 . Save the `.env` file and restart your node to apply the changes.
 
 ### 3) Verifying Node Configuration
 
