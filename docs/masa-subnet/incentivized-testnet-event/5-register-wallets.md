@@ -3,9 +3,16 @@ id: 5-register-wallet
 title: 5. Register Wallet
 ---
 
+In the `Makefile`, ensure `NETUID` is set to `2` and `SUBTENSOR_ENVIRONMENT` is set to `$(DEVNET)`.
+
+```
+NETUID = 2
+SUBTENSOR_ENVIRONMENT = $(DEVNET)
+```
+
 ## Register Wallet to Subnet
 
-Register your `miner` to the default subnet (`1`):
+Register your `miner` to the subnet (`2`):
 
 ```bash
 make register-miner

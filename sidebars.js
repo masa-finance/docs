@@ -107,6 +107,25 @@ const sidebars = {
     },
     {
       type: "category",
+      label: "Masa Bittensor Testnet",
+      link: {
+        type: "doc",
+        id: "masa-subnet/incentivized-testnet-event/intro",
+      },
+      items: [
+        "masa-subnet/incentivized-testnet-event/1-create-environment",
+        "masa-subnet/incentivized-testnet-event/2-install-packages",
+        "masa-subnet/incentivized-testnet-event/3-create-wallet",
+        "masa-subnet/incentivized-testnet-event/4-fund-wallet",
+        "masa-subnet/incentivized-testnet-event/5-register-wallet",
+        "masa-subnet/incentivized-testnet-event/6-run-protocol",
+        "masa-subnet/incentivized-testnet-event/7-run-miner",
+        "masa-subnet/incentivized-testnet-event/8-check-status",
+        "masa-subnet/incentivized-testnet-event/9-register",
+      ],
+    },
+    {
+      type: "category",
       label: "Masa Bittensor Subnet",
       link: {
         type: "doc",

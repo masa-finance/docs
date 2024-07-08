@@ -1,6 +1,6 @@
 ---
-id: 8-run-protocol
-title: 8. Run Protocol
+id: 6-run-protocol
+title: 6. Run Protocol
 ---
 
 Welcome to the MASA Node Docker setup guide. This document will walk you through the process of setting up and running your own MASA node in a Docker environment. Follow these steps to get up and running quickly.
