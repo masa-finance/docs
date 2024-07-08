@@ -3,11 +3,11 @@ id: 5-register-wallet
 title: 5. Register Wallet
 ---
 
-In the `Makefile`, ensure `NETUID` is set to `2` and `SUBTENSOR_ENVIRONMENT` is set to `$(DEVNET)`.
+In the `Makefile`, ensure `NETUID` and `SUBTENSOR_ENVIRONMENT` are set to the correct values.
 
 ```
-NETUID = 2
-SUBTENSOR_ENVIRONMENT = $(DEVNET)
+NETUID = 1
+SUBTENSOR_ENVIRONMENT = chain_endpoint ws://100.28.51.29:9945
 ```
 
 ## Register Wallet to Subnet
