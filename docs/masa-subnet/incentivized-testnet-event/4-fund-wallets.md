@@ -5,4 +5,4 @@ title: 4. Fund Wallet
 
 ## Get Tokens
 
-Head to **[Discord](https://discord.com/channels/848996376896602163/1247449212124401756)** to request tTAO for your miner!
+Head to the **[Masa Discord server](https://discord.gg/HyHGaKhaKs)** and join the **#node-bt** channel to request tTAO for your miner!
