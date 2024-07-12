@@ -122,6 +122,11 @@ const sidebars = {
         "masa-subnet/incentivized-testnet-event/7-run-miner",
         "masa-subnet/incentivized-testnet-event/8-check-status",
         "masa-subnet/incentivized-testnet-event/9-register",
+        {
+          type: "doc",
+          label: "10. Run Miner Remotely",
+          id: "masa-subnet/runpod/miner",
+        },
       ],
     },
     {
