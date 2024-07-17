@@ -38,7 +38,6 @@ To start processing Discord data requests, you need to retrieve your Discord bot
 5 . Confirm the creation of the bot user.
 6 . Under the "TOKEN" section, click on "Copy" to get your bot token.
 
-
 ### Adding Discord Credentials
 
 1 . Locate your `.env` file in your Masa Oracle Node's directory.
