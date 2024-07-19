@@ -78,8 +78,8 @@ Is WebScraper:          false
 As a worker, maintaining optimal performance and reliability is key. Here are some guidelines:
 
 - **Monitor Your Node**: Regularly check your node's health and log files to identify and resolve any issues promptly.
-- **Update Regularly**: Keep your node and its dependencies up to date to ensure compatibility with the latest Twitter changes and network protocols.
-- **Secure Your Credentials**: Protect your Twitter API credentials and node's access keys to prevent unauthorized access.
+- **Update Regularly**: Keep your node and its dependencies up to date to ensure compatibility with the latest Discord changes and network protocols.
+- **Secure Your Credentials**: Protect your Discord API credentials and node's access keys to prevent unauthorized access.
 
 ## Conclusion
 
