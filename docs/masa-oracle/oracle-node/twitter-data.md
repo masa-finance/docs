@@ -207,6 +207,239 @@ Example response:
 }
 ```
 
+## Advanced Search
+
+The Advanced Search feature allows users to perform more complex queries to filter tweets according to various criteria such as date ranges, specific users, hashtags, and more. Below you will find detailed information on how to construct advanced search queries.
+
+
+### Hashtag Search
+Search for tweets containing specific hashtags.
+
+**Syntax:** `#hashtag`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "#MasaNode", "count": 10}'
+```
+
+### Mention Search
+Search for tweets mentioning a specific user.
+
+**Syntax:** `@username`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "@getmasafi", "count": 10}'
+```
+
+### From User Search
+Search for tweets posted by a specific user.
+
+**Syntax:** `from:username`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "from:getmasafi", "count": 10}'
+```
+
+### To User Search
+Search for tweets directed to a specific user.
+
+**Syntax:** `to:username`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "to:getmasafi", "count": 10}'
+```
+
+### Language-Specific Search
+Search for tweets in a specific language.
+
+**Syntax:** `lang:language_code`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "Masa lang:en", "count": 10}'
+```
+
+### Date Range Search
+Search for tweets within a specific date range.
+
+**Syntax:** `since:yyyy-mm-dd until:yyyy-mm-dd`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "Masa since:2021-01-01 until:2021-12-31", "count": 10}'
+```
+
+### Retweets Filtering
+Exclude retweets from your search results.
+
+**Syntax:** `-filter:retweets`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "Masa -filter:retweets", "count": 10}'
+```
+
+### Minimum Likes Filter
+Search for tweets with a minimum number of likes.
+
+**Syntax:** `min_faves:number`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "Masa min_faves:100", "count": 10}'
+```
+
+### Minimum Retweets Filter
+Search for tweets with a minimum number of retweets.
+
+**Syntax:** `min_retweets:number`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "Masa min_retweets:50", "count": 10}'
+```
+
+### Keyword Exclusion
+Exclude tweets with certain keywords.
+
+**Syntax:** `-keyword`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "Masa -moon", "count": 10}'
+```
+
+### OR Operator
+Combine multiple terms, where at least one must be present.
+
+**Syntax:** `term1 OR term2`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "Masa OR Oracle", "count": 10}'
+```
+
+### Geo-location Based Search
+Search for tweets by users located within a certain radius of a given latitude and longitude.
+
+**Syntax:** `geocode:latitude,longitude,radius`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "Masa geocode:37.781157,-122.398720,1mi", "count": 10}'
+```
+
+### URL Inclusion Search
+Search for tweets containing a specific URL.
+
+**Syntax:** `url:"http://example.com"`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "url:\"http://example.com\"", "count": 10}'
+```
+
+### Question Tweets Filter
+Search for tweets asking a question.
+
+**Syntax:** `?`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "Masa ?", "count": 10}'
+```
+
+### Safe Search Mode
+Exclude adult content from your search results.
+
+**Syntax:** `filter:safe`
+
+**Example:**
+
+```bash
+curl -X POST http://localhost:8080/api/v1/data/twitter/tweets/recent \
+-H "Content-Type: application/json" \
+-d '{"query": "Masa filter:safe", "count": 10}'
+```
+
+Each of these search types can be combined to create more complex queries, allowing for highly targeted searches. Remember to test each example to ensure they work as expected and to provide users with accurate and helpful documentation.
+
+## Use Case: Decentralized AI Agent
+
+Imagine a decentralized AI agent designed to monitor and analyze public sentiment on social media platforms, specifically Twitter, regarding various cryptocurrencies. This agent, let's call it "CryptoSentimentAI," uses the Masa Oracle Node's Twitter data endpoints to gather real-time data on what people are saying about different cryptocurrencies.
+
+### How CryptoSentimentAI Leverages LLMs
+
+1. **Data Collection:** CryptoSentimentAI sends queries to the `/data/tweets` endpoint to search for recent tweets mentioning specific cryptocurrencies, such as Bitcoin, Ethereum, or any altcoin of interest. It specifies queries like "Bitcoin," "Ethereum," or the respective cryptocurrency's hashtag.
+
+2. **Sentiment Analysis with LLMs:** Upon retrieving the tweets, CryptoSentimentAI employs large language models (LLMs) to perform sentiment analysis on each tweet. Unlike traditional NLP techniques, LLMs can understand and interpret the context and nuances of language more effectively, allowing for a more accurate categorization of sentiments into positive, neutral, or negative.
+
+3. **Aggregating Insights:** Leveraging the advanced understanding capabilities of LLMs, CryptoSentimentAI aggregates the sentiment data to determine the overall public sentiment towards each cryptocurrency.
+
+4. **Actionable Insights:** The nuanced analysis provided by LLMs enables CryptoSentimentAI to offer more refined actionable insights to its users. For instance, detecting subtle shifts in sentiment or identifying emerging trends before they become mainstream. This could mean advising caution in response to a nuanced negative sentiment trend or recognizing an opportune moment to invest based on a positive sentiment upswing.
+
+### Example Implementation
+
+To implement such a feature, you would start by setting up queries to the `/data/tweets` endpoint. Here's an example request to search for tweets about Bitcoin:
+
+```bash
+curl -X POST http://localhost:8080/data/tweets \
+-H "Content-Type: application/json" \
+-d '{"query": "#Bitcoin", "count": 100}'
+```
+
+Upon collecting the tweets, CryptoSentimentAI processes and analyzes the text content of each tweet using large language models (LLMs) to evaluate sentiment. This approach leverages the advanced capabilities of LLMs to understand context and nuance, providing a more accurate sentiment analysis than traditional methods.
+
+### Conclusion
+
+The `/data/tweets` endpoint in the Masa Oracle Node API provides a rich foundation for developing decentralized applications that can interact with social media data in real-time. By leveraging this endpoint, developers are empowered to create innovative AI agents capable of analyzing social media trends and sentiments. These agents can uncover deep insights from the vast stream of social media conversations, offering valuable intelligence for a wide range of applications and decision-making processes.
+
+
 ## Use Case: Decentralized AI Agent
 
 Imagine a decentralized AI agent designed to monitor and analyze public sentiment on social media platforms, specifically Twitter, regarding various cryptocurrencies. This agent, let's call it "CryptoSentimentAI," uses the Masa Oracle Node's Twitter data endpoints to gather real-time data on what people are saying about different cryptocurrencies.
