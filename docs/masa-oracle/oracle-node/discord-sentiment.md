@@ -70,7 +70,6 @@ Discord messages are retrieved using a custom scraper or the Discord API, as dem
 func AnalyzeSentimentDiscord(messages []string, model string, prompt string) (string, string, error) { ... }
 ```
 
-
 ### Analyzing Sentiment
 
 After the messages are collected, they are processed through the selected language model for sentiment analysis. The system currently accommodates models with "claude-" and "gpt-" prefixes, among others, to suit various analysis requirements.
