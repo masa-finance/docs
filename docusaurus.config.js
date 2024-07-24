@@ -61,9 +61,9 @@ const config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: "Masa Finance",
+      title: "Masa Network",
       logo: {
-        alt: "Masa Finance",
+        alt: "Masa Network",
         src: "img/logo.svg",
         srcDark: "img/logo-darkmode.svg",
         width: 100,
