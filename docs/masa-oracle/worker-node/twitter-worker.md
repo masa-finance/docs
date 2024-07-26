@@ -36,8 +36,8 @@ To become a worker focused on Twitter data requests, you need to:
 
 ```shell
 #env
-TWITTER_USER='your_twitter_username'
-TWITTER_PASS="your_twitter_password"
+TWITTER_USERNAME='your_twitter_username'
+TWITTER_PASSWORD="your_twitter_password"
 TWITTER_2FA_CODE="your_2fa_code"
 TWITTER_SCRAPER=true
 ```
