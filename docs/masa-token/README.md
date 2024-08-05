@@ -18,6 +18,10 @@
     - [Base Sepolia](#base-sepolia)
   - [Polygon](#polygon)
     - [Polygon Amoy](#polygon-amoy)
+  - [Aurora](#aurora)
+    - [Aurora Testnet](#aurora-testnet)
+  - [Solana](#solana)
+    - [Solana Devnet](#solana-devnet)
 
 <!-- TOC -->
 
@@ -103,8 +107,20 @@
 - TimeLock Address: []
 - Admin Address: []
 
-## Aurora Testnet
+### Aurora Testnet
 
 - Token Address: [0x784F4d8fB4bf51431e47b014DdA159e31ACC714e](https://explorer.testnet.aurora.dev/address/0x784F4d8fB4bf51431e47b014DdA159e31ACC714e)
 - TimeLock Address: [0x78A660183257C4699a57a2D85a7Cf49b4DA75A6E](https://explorer.testnet.aurora.dev/address/0x78A660183257C4699a57a2D85a7Cf49b4DA75A6E)
 - Admin Address: [0x46c9cdA3F83C5c13C767A07b6E80aEd302E40B28](https://explorer.testnet.aurora.dev/address/0x46c9cdA3F83C5c13C767A07b6E80aEd302E40B28)
+
+## Solana
+
+- Token Address: []
+- TimeLock Address: []
+- Admin Address: []
+
+### Solana Devnet
+
+- Token Address: []
+- TimeLock Address: []
+- Admin Address: []
