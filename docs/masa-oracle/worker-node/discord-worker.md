@@ -24,18 +24,63 @@ As a worker in the Masa Oracle Node network, your primary function is to process
 To become a worker focused on Discord data requests, you need to:
 
 - Have your Masa Oracle Node staked as outlined in the [Staking Guide for Masa Oracle Node](staking-guide.md).
+- Create a Discord bot as outlined in the [Creating a Discord Bot](#creating-a-discord-bot) section.
 - Add your Discord bot token to your node's `.env` file. This is crucial for authenticating with the Discord API and fetching data.
 - Ensure your Masa Oracle Node is up and running, with network accessibility for receiving and processing requests.
 
-## Retrieving Your Discord Bot Token
+## Creating a Discord Bot
+
+### Create a new Bot Application
 
 To start processing Discord data requests, you need to retrieve your Discord bot token, which is essential for authenticating with the Discord API. This token will allow your bot to collect data on your guild. Here's how to get your token:
 
 1 . Go to the [Discord Developer Portal](https://discord.com/developers/applications).
+
 2 . Log in with your Discord account credentials.
+
 3 . Click on the "New Application" button. Give your application a name and confirm the creation.
-4 . Navigate to the "Bot" tab on the left-hand side and click on "Reset Token".
-5 . Under the "TOKEN" section, click on "Copy" to get your bot token.
+
+> ![Create a New Application](../images/discord-create-a-new-application.png)
+
+### Update Bot permissions and install
+
+1 . Go to the “Guild Install” section
+
+2 . Select on dropdown where is says “applications.commands and select “bot”
+
+> ![Update Bot Permissions](../images/discord-change-bot-permissions.png)
+
+3 . On the added permission dropdown after selecting bot, select “administrator”
+
+4 . Save changes on the bottom floating bar.
+
+> ![Save Bot Permissions](../images/discord-change-bot-permissions-2.png)
+
+5 . Copy the install link
+
+> ![Copy Install Link](../images/discord-install-link.png)
+
+6 . Go to a new tab on your browser and paste the link and then hit enter
+
+7 . You will go to Discord and see a modal click on add to server
+
+8 . Select add to server dropdown and select the guild to add your new bot to your guild.
+
+> <img src="../images/discord-add-bot-to-server.png" alt="Description" width="400"/>
+
+9 . Click “Continue”
+
+10 . Click Authorize to add your bot. Congrats screen and should see Bot on Discord now!
+
+> ![Bot Added](../images/discord-verify-bot.png)
+
+### Retrieving Your Discord Bot Token
+
+1 . Navigate to the "Bot" tab on the left-hand side and click on "Reset Token".
+
+2 . Under the "TOKEN" section, click on "Copy" to get your bot token.
+
+> ![Copy Token](../images/discord-copy-bot-token.png)
 
 ### Adding Discord Credentials
 
@@ -48,7 +93,7 @@ DISCORD_BOT_TOKEN='your_discord_bot_token'
 DISCORD_SCRAPER=true
 ```
 
-3 . Save the `.env` file and restart your node to apply the changes.
+3 . Save the `.env` file and restart your node (`make run`) to apply the changes.
 
 ### 3) Verifying Node Configuration
 

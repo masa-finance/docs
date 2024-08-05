@@ -15,6 +15,10 @@ The Discord sentiment analysis feature extends the Masa Node's capabilities to i
 
 The sentiment analysis process begins by collecting Discord messages based on specific channel IDs, followed by sentiment evaluation using the chosen language models. The system is compatible with a variety of models, such as Claude and GPT variants, ensuring versatile and robust sentiment analysis.
 
+> **Important**: To retrieve message content, you must toggle "Message Content Intent" in the Discord Developer Portal under the `Bot` section.
+>
+> ![Message Content Intent](../images/discord-message-content-intent.png)
+
 ### Models
 
 ```go

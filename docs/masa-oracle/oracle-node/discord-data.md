@@ -31,9 +31,19 @@ The Service Manager assesses the request and delegates the task to the appropria
 
 ## Discord Endpoints
 
-The API provides one endpoint for interacting with Discord user data:
+### Getting Guild and Channel IDs
+
+To get all guilds (and their IDs) you can use the `/data/discord/guilds/all` endpoint.
+
+> ![Get Guilds](../images/discord-get-all-guilds.png)
+
+With the guild ID you can then use the `/data/discord/guilds/{guildID}/channels` endpoint to get all channels for that guild.
+
+> ![Get Channels](../images/discord-get-guild-channels.png)
 
 ### Retrieve User Profile
+
+The API provides one endpoint for interacting with Discord user data:
 
 The `/data/discord/users/{userID}` endpoint retrieves a Discord user's profile. This can be particularly useful for understanding user demographics, personalizing interactions, or for further analysis in combination with other data points.
 
@@ -62,6 +72,10 @@ Example response:
 ```
 
 ### Retrieve Messages from a Discord Channel
+
+> **Important**: To retrieve message content, you must toggle "Message Content Intent" in the Discord Developer Portal under the `Bot` section.
+>
+> ![Message Content Intent](../images/discord-message-content-intent.png)
 
 The `/data/discord/channels/{channelID}/messages` endpoint retrieves messages from a specified Discord channel.
 
@@ -162,11 +176,11 @@ Imagine a decentralized AI agent, "CommunityEngageAI," designed to analyze engag
 
 ### How CommunityEngageAI Leverages AI
 
-1. **Data Collection:** CommunityEngageAI sends queries to the various endpoints to fetch profiles of active community members, messages from channels, and other relevant data.
+1 . **Data Collection:** CommunityEngageAI sends queries to the various endpoints to fetch profiles of active community members, messages from channels, and other relevant data.
 
-2. **Engagement Analysis:** Upon retrieving the data, CommunityEngageAI employs AI models to analyze engagement patterns, identify key influencers, and understand user demographics.
+2 . **Engagement Analysis:** Upon retrieving the data, CommunityEngageAI employs AI models to analyze engagement patterns, identify key influencers, and understand user demographics.
 
-3. **Personalized Interactions:** Leveraging the insights gained, CommunityEngageAI customizes interactions with community members, tailoring messages and content to enhance engagement and user satisfaction.
+3 . **Personalized Interactions:** Leveraging the insights gained, CommunityEngageAI customizes interactions with community members, tailoring messages and content to enhance engagement and user satisfaction.
 
 ### Conclusion
 
