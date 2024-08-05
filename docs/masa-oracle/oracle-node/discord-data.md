@@ -35,11 +35,13 @@ The Service Manager assesses the request and delegates the task to the appropria
 
 To get all guilds (and their IDs) you can use the `/data/discord/guilds/all` endpoint.
 
-> ![Get Guilds](../images/discord-get-all-guilds.png)
+> ![Get Guilds](/docs/images/discord-get-all-guilds.png)
 
 With the guild ID you can then use the `/data/discord/guilds/{guildID}/channels` endpoint to get all channels for that guild.
 
-> ![Get Channels](../images/discord-get-guild-channels.png)
+> ![Get Channels](/docs/images/discord-get-guild-channels.png)
+
+With the guild ID you can then use the `/data/discord/guilds/{guildID}/channels` endpoint to get all channels for that guild.
 
 ### Retrieve User Profile
 
@@ -75,7 +77,7 @@ Example response:
 
 > **Important**: To retrieve message content, you must toggle "Message Content Intent" in the Discord Developer Portal under the `Bot` section.
 >
-> ![Message Content Intent](../images/discord-message-content-intent.png)
+> ![Message Content Intent](/docs/images/discord-message-content-intent.png)
 
 The `/data/discord/channels/{channelID}/messages` endpoint retrieves messages from a specified Discord channel.
 
