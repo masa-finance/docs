@@ -19,6 +19,7 @@ The sentiment analysis process begins by collecting Discord messages based on sp
 >
 > ![Message Content Intent](/img/discord-message-content-intent.png)
 
+
 ### Models
 
 ```go
