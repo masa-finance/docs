@@ -17,7 +17,7 @@ The sentiment analysis process begins by collecting Discord messages based on sp
 
 > **Important**: To retrieve message content, you must toggle "Message Content Intent" in the Discord Developer Portal under the `Bot` section.
 >
-> ![Message Content Intent](../images/discord-message-content-intent.png)
+> ![Message Content Intent](/docs/images/discord-message-content-intent.png)
 
 ### Models
 
