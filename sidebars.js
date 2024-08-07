@@ -47,6 +47,8 @@ const sidebars = {
             "masa-oracle/oracle-node/twitter-sentiment",
             "masa-oracle/oracle-node/telegram-sentiment",
             "masa-oracle/oracle-node/discord-sentiment",
+            "masa-oracle/oracle-node/chat-completion",
+
           ],
         },
         {
