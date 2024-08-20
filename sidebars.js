@@ -112,35 +112,52 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Masa Bittensor Miner",
+      label: "Masa Bittensor Subnet",
       link: {
         type: "doc",
-        id: "masa-subnet/miner/0-intro",
+        id: "masa-subnet/welcome",
       },
       items: [
-        "masa-subnet/miner/1-create-environment",
-
-        // {
-        //   type: "doc",
-        //   label: "10. Run Miner Remotely",
-        //   id: "masa-subnet/runpod/miner",
-        // },
-      ],
-    },
-    {
-      type: "category",
-      label: "Masa Bittensor Validator",
-      link: {
-        type: "doc",
-        id: "masa-subnet/validator/0-intro",
-      },
-      items: [
-        "masa-subnet/miner/0-intro",
-        // {
-        //   type: "doc",
-        //   label: "10. Run Miner Remotely",
-        //   id: "masa-subnet/runpod/miner",
-        // },
+        {
+          type: "category",
+          label: "Masa Bittensor Miner",
+          link: {
+            type: "doc",
+            id: "masa-subnet/miner/intro",
+          },
+          items: [
+            "masa-subnet/miner/1-create-environment",
+            "masa-subnet/miner/2-clone-repository",
+            "masa-subnet/miner/3-create-wallet",
+            "masa-subnet/miner/3-regen-wallet",
+            "masa-subnet/miner/4-fund-wallet",
+            "masa-subnet/miner/5-register-wallet",
+            "masa-subnet/miner/6-run-protocol",
+            "masa-subnet/miner/7-edit-env",
+            "masa-subnet/miner/8-run-miner",
+          ],
+        },
+        {
+          type: "category",
+          label: "Masa Bittensor Validator",
+          link: {
+            type: "doc",
+            id: "masa-subnet/validator/intro",
+          },
+          items: [
+            "masa-subnet/validator/1-create-environment",
+            "masa-subnet/validator/2-clone-repository",
+            "masa-subnet/validator/3-create-wallet",
+            "masa-subnet/validator/3-regen-wallet",
+            "masa-subnet/validator/4-fund-wallet",
+            "masa-subnet/validator/5-register-wallet",
+            "masa-subnet/validator/6-stake-validator",
+            "masa-subnet/validator/7-set-weights",
+            "masa-subnet/validator/8-run-protocol",
+            "masa-subnet/validator/9-edit-env",
+            "masa-subnet/validator/10-run-validator",
+          ],
+        },
       ],
     },
   ],
