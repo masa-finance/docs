@@ -3,7 +3,9 @@ id: 3-create-wallet
 title: 3. Create Wallet
 ---
 
-## Create cold wallets
+If you not created a wallet for your miner, you can create one now. If you have an existing wallet, you can skip this step and move on to the next section.
+
+## Create cold wallet
 
 Create a cold wallet for a `miner`:
 
@@ -25,4 +27,4 @@ btcli wallet new_hotkey --wallet.name miner --wallet.hotkey default
 make list-wallets
 ```
 
-You should see one wallet listed, a `miner` with an associated hotkey (`default`)
+You should see a `miner` wallet, with an associated hotkey (`default`)
