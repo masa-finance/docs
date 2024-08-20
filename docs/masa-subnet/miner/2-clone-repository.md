@@ -1,6 +1,6 @@
 ---
 id: 2-clone-repository
-title: 1. Clone Repository and Install Packages
+title: 2. Clone Repository
 ---
 
 ## Connect to your runpod instance via SSH

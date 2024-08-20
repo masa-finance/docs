@@ -15,4 +15,4 @@ export PYTHONPATH=$PYTHONPATH:$(pwd)
 make run-validator
 ```
 
-Your validator should now be running. You can visit your runpod's public IP address on port 8000 to see the interactive documentation.
+Your validator should now be running. You can visit your runpod's public IP address on port 8000/docs to see the interactive documentation.
