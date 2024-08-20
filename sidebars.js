@@ -158,6 +158,11 @@ const sidebars = {
             "masa-subnet/validator/10-run-validator",
           ],
         },
+        {
+          type: "doc",
+          label: "Latest Release Notes",
+          id: "masa-subnet/RELEASE_NOTES",
+        },
       ],
     },
   ],
