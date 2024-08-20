@@ -48,7 +48,6 @@ const sidebars = {
             "masa-oracle/oracle-node/telegram-sentiment",
             "masa-oracle/oracle-node/discord-sentiment",
             "masa-oracle/oracle-node/chat-completion",
-
           ],
         },
         {
@@ -113,69 +112,35 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Masa Bittensor Testnet",
+      label: "Masa Bittensor Miner",
       link: {
         type: "doc",
-        id: "masa-subnet/incentivized-testnet-event/intro",
+        id: "masa-subnet/miner/0-intro",
       },
       items: [
-        "masa-subnet/incentivized-testnet-event/1-create-environment",
-        "masa-subnet/incentivized-testnet-event/2-install-packages",
-        "masa-subnet/incentivized-testnet-event/3-create-wallet",
-        "masa-subnet/incentivized-testnet-event/4-fund-wallet",
-        "masa-subnet/incentivized-testnet-event/5-register-wallet",
-        "masa-subnet/incentivized-testnet-event/6-run-protocol",
-        "masa-subnet/incentivized-testnet-event/7-run-miner",
-        "masa-subnet/incentivized-testnet-event/8-check-status",
-        "masa-subnet/incentivized-testnet-event/9-register",
-        {
-          type: "doc",
-          label: "10. Run Miner Remotely",
-          id: "masa-subnet/runpod/miner",
-        },
+        "masa-subnet/miner/1-create-environment",
+
+        // {
+        //   type: "doc",
+        //   label: "10. Run Miner Remotely",
+        //   id: "masa-subnet/runpod/miner",
+        // },
       ],
     },
     {
       type: "category",
-      label: "Masa Bittensor Subnet",
+      label: "Masa Bittensor Validator",
       link: {
         type: "doc",
-        id: "masa-subnet/welcome",
+        id: "masa-subnet/validator/0-intro",
       },
       items: [
-        {
-          type: "category",
-          label: "Setup Guide",
-          link: {
-            type: "doc",
-            id: "masa-subnet/setup/intro",
-          },
-          items: [
-            "masa-subnet/setup/1-create-environment",
-            "masa-subnet/setup/2-install-packages",
-            "masa-subnet/setup/3-create-wallets",
-            "masa-subnet/setup/4-fund-wallets",
-            "masa-subnet/setup/5-register-wallets",
-            "masa-subnet/setup/6-stake-validator",
-            "masa-subnet/setup/7-set-weights",
-            "masa-subnet/setup/8-run-protocol",
-            "masa-subnet/setup/9-run-miner-and-validator",
-          ],
-        },
-        {
-          type: "category",
-          label: "Advanced",
-          link: {
-            type: "doc",
-            id: "masa-subnet/advanced/intro",
-          },
-          items: ["masa-subnet/advanced/known-issues", "masa-subnet/advanced/local-subtensor"],
-        },
-        {
-          type: "doc",
-          label: "Release Notes",
-          id: "masa-subnet/RELEASE_NOTES", // Assuming the document ID you want to link to is structured as `folderName/fileName`.
-        },
+        "masa-subnet/miner/0-intro",
+        // {
+        //   type: "doc",
+        //   label: "10. Run Miner Remotely",
+        //   id: "masa-subnet/runpod/miner",
+        // },
       ],
     },
   ],
