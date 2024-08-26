@@ -3,8 +3,6 @@ id: 7-set-weights
 title: 7. Set Weights
 ---
 
-## Register Validator on Root Subnet
-
 Register your `validator` on the root subnet:
 
 ```bash

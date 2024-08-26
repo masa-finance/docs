@@ -7,7 +7,7 @@ title: 2. Clone Repository
 
 Connect to your runpod instance via SSH by clicking "Connect" on the Runpod dashboard and follow the instructions.
 
-![Bittensor Environment Setup](./2-click-connect.png)
+![Click Connect](./click-connect.png)
 
 ## Clone our repository
 

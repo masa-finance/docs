@@ -1,6 +1,6 @@
 ---
 id: 6-run-protocol
-title: 6. Run Protocol
+title: 6. Run Oracle Node
 ---
 
 import Content from '../../masa-oracle/oracle-node/quickstart.md';
