@@ -1,6 +1,6 @@
 ---
-id: 7-edit-env
-title: 7. Edit Env File
+id: 9-edit-env
+title: 9. Edit Env File
 ---
 
 In the masa-bittensor directory, create an .env file
