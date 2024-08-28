@@ -3,34 +3,33 @@ id: protocol-binary-installation
 title: Protocol Binary Installation
 ---
 
-This guide will help you set up and run a Masa Node ready for configuration and deployment.
+This guide will help you set up and run a Masa Node using a Go Binary ready for configuration and deployment.
 
 ### Prerequisites
 
 Before you begin, ensure you have the following installed:
 
-- Go 1.22 (do not use 1.23)
-- Yarn or npm (for installing contracts)
-- Make (for building the binary)
+- [**Go 1.22**](https://golang.org/dl/) (do not use 1.23)
+- [**Yarn**](https://classic.yarnpkg.com/en/docs/install) or [**npm**](https://www.npmjs.com/get-npm) (for installing contracts)
+- [**Make**](https://www.gnu.org/software/make/)
+- **Sepolia ETH** to get Sepolia MASA tokens from the faucet
 
-:::warning
+:::info
 
-You must use Go 1.22 for building the node: `brew install go@1.22`.
+Only **Go 1.22** is supported for building the node: **`brew install go@1.22`**.
 
 :::
 
-### 1. Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/masa-finance/masa-oracle.git
 ```
-
-### 2. Navigate to the project directory
 ```bash
 cd masa-oracle
 ```
 
-### 3. Install contract dependencies
+### Install contracts
 Navigate to the contract directory:
 ```bash
 cd contracts
@@ -50,17 +49,13 @@ Return to the root directory
 cd ..
 ```
 
-### 4. Build the node
+### Environment Configuration
 
-```bash
-make build
-```
-
-### 5. Set up environment variables to connect your node to the Masa Testnet
+Set up environment variables to connect your node to run your node in **Local** configuration
 
 :::info
 
-This guide will configure your node as a **Local Bootnode**, for a list of network bootnodes, please refer to the [Bootnode Configuration](https://docs.masa.finance/masa-node/bootnode-configuration) bootnode configuration documentation.
+This guide will configure your node as a **Local**, for a list of network bootnodes, please refer to the [Bootnode Configuration](https://docs.masa.finance/masa-node/bootnode-configuration) bootnode configuration documentation.
 
 :::
 
@@ -77,15 +72,24 @@ PORT=8080
 
 :::info
 
-This guide will use the default .env configuration. For a comprehensive list of other .env configuration examples, please refer to our [Environment Configuration Guide](https://docs.masa.finance/masa-node/environment-configuration).
+For more .env options, see our [Environment Configuration Guide](https://docs.masa.finance/masa-node/environment-configuration).
 
 :::
 
-### 6. Start the node
+### Build the node
+
+```bash
+make build
+```
+
+### Start the node
 
 ```bash
 make run
 ```
+
+You will see the following output:
+
 ```bash
 #######################################
 #     __  __    _    ____    _        #
@@ -107,11 +111,14 @@ Is TelegramScraper:  false
 ```
 :::tip
 
-You now have a running node in **Local Bootnode** configuration, you can now proceed to setup your node to start scraping data or to start participating in the network.
+You now have a running node in **Local Bootnode** configuration
 
 :::
-## Masa Protocol Configuration
-### Set Up a Data Scraper (Worker Node)
+
+## Configure your node
+You can now configure your node to start scraping data as a worker, to fetch data from the network or to start participating in the network as a validator.
+
+### Set up a scraper: Worker Node
 If you want your node to earn rewards configure it to to scrape data on the Masa Protocol.
 
 - [Twitter Scraper Configuration](./twitter-scraper-setup.md)
@@ -125,7 +132,7 @@ You need to have **setup** your node and **staked** your node first to be able t
 
 :::
 
-### Get data from the Network (Developer Node)
+### Get data from the Network: Developer Node
 AI developers can get data from the Masa Protocol for free by running a Masa node locally or by using our API (**coming soon**).
 
 - [Staking Your Node](./staking-guide.md)
@@ -137,7 +144,7 @@ To get data from the Masa Protocol as a developer you need to stake your node (n
 
 :::
 
-### Secure the Network (Validator Node)
+### Secure the Network: Validator Node
 Earn MASA rewards by securing the network:
 
 - [Validator Configuration](./validator-setup.md)
