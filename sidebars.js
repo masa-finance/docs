@@ -122,7 +122,7 @@ const sidebars = {
         },
         {
           type: "category",
-          label: "Developer Node",
+          label: "Developer Configuration",
           link: {
             type: "generated-index",
             title: "Developer Node",

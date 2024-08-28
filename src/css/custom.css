@@ -126,14 +126,13 @@ li > ul {
   color: gray;
 }
 
-/* New styles for links */
-a {
+a:active {
   color: #3578E5;
   font-weight: 500; 
 }
 
 a:visited {
-  color: #3578E5;
+  color: white;
 }
 
 a:hover {
