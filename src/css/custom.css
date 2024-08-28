@@ -125,3 +125,17 @@ li > ul {
 .button:hover {
   color: gray;
 }
+
+/* New styles for links */
+a {
+  color: #3578E5;
+  font-weight: 500; 
+}
+
+a:visited {
+  color: #3578E5;
+}
+
+a:hover {
+  color: #3578E5;
+}

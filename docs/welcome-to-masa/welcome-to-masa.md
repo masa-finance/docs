@@ -1,67 +1,93 @@
 ---
+id: welcome-to-masa
 title: Welcome to Masa
 ---
 
-## Introduction
+# Welcome to Masa
 
-Welcome to Masa, the network powering Fair AI. We are on a mission to revolutionize the AI landscape by providing an open, permissionless marketplace for specialized AI training data and compute resources. Our vision is to enable any builder, anywhere in the world, to access the tools they need to create innovative and specialized AI applications.
+## Introduction 
+ Whether you're looking to contribute data, process requests, or leverage our datasets, Masa provides data, tools, and infrastructure to support your AI journey.
 
-- **[Masa Protocol](docs/protocol/welcome.md):** Learn about the Oracle Nodes, Worker Nodes, and other components that make up the Masa Protocol.
-- **[Masa Bittensor Subnet](docs/masa-subnet/welcome.md):** Discover how the Masa Bittensor Subnet operates, focusing on Twitter data and validator-miner interactions.
+## Masa Bittensor Subnet
 
-## The Need for Fair AI
+###  Set Up a Subnet Validator
+Earn TAO for securing the Masa Bittensor Subnet (SN42):
+- [Validator Quickstart](/docs/masa-subnet/validator/intro)
+- [Validator Digital Ocean Deployment Guide](coming soon)
 
-The AI industry is at a critical juncture. A few centralized players currently dominate the landscape, controlling access to large language models (LLMs) and compute resources. This centralization has led to several issues:
+### Set Up a Subnet Miner
+Earn TAO by processing requests on the Masa Bittensor Subnet (SN42):
+- [Miner Quickstart](/docs/masa-subnet/miner/intro)
+- [Miner Digital Ocean Deployment Guide](coming soon)
 
-- LLMs are often unfair to people, failing to properly attribute outputs to data sources. This has resulted in lawsuits and risks for companies using these models.
-- As general purpose LLMs become commoditized, the most valuable AI applications will be the most specialized ones. However, building specialized AI requires access to specialized training data, which is not readily available.
-- Leading compute and inference providers charge high prices and can arbitrarily deny service to builders, stifling innovation and limiting access.
+:::info
 
-Masa believes that the solution to these challenges lies in a decentralized network powering Fair AI.
+Masa operates on Bittensors Subnet 42 (SN42). You can view the network statistics and performance at [Taostats Subnet 42](https://x.taostats.io/subnet/42).
 
-## The Masa Solution
+:::
 
-Masa has built the leading marketplace for data and compute, connecting data and compute contributors with developers. Our platform incentivizes people to contribute specialized data sets and sell compute resources in an open, permissionless manner.
+## Masa Protocol
+### Node Setup
+Learn how to set up a Masa node in your environment ready for configuration and deployment:
+- [Binary Installation](/docs/masa-protocol/protocol-binary-installation.md)
+- [Docker Setup](/docs/masa-protocol/protocol-docker-setup.md)
+- [Digital Ocean Setup](/docs/masa-protocol/protocol-digital-ocean-setup.md)
 
-Key features of the Masa network include:
+### Node Staking
+- [Staking Your Node](/docs/masa-protocol/protocol-staking-guide.md)
 
-- **Fair AI**: Masa pioneers the concept of Fair AI, transparently attributing results to contributors and rewarding them whenever their data is used in applications. This solves a major problem for developers and companies, helping them avoid liability from using content without proper licensing.
+:::danger
 
-- **Specialized Data & Open Source LLMs**: Masa enables the contribution of specialized data sets to train AI models and access to open source LLMs provisioned by workers. This empowers builders to create the most valuable and specialized AI applications by leveraging unique data and powerful open source LLMs, all within a decentralized, permissionless ecosystem.
+All protocol nodes need to stake test MASA on Sepolia, this requires **Sepolia ETH**.
 
-- **Open Marketplace**: Our open, permissionless marketplace democratizes access to AI training data and compute resources. Contributors can earn rewards by contributing data and selling compute, while developers can access the resources they need to build innovative applications.
+:::
 
-## [AI Worker Nodes Introduction](docs/worker-node/introduction.md)
+## Node Configuration
+### Set Up a Data Scraper (Worker Node)
+If you want your node to earn rewards configure it to to scrape data on the Masa Protocol.
 
-Masa empowers contributors to monetize their data and compute resources by becoming Worker Nodes on the network. As a Worker Node, you can:
+- [Twitter Scraper](/docs/masa-protocol/protocol-twitter-scraper-config.md)
+- [Web Scraper](/docs/masa-protocol/protocol-web-scraper-config.md)
+- [Discord Scraper](/docs/masa-protocol/protocol-discord-scraper-config.md)
+- [Telegram Scraper](/docs/masa-protocol/protocol-telegram-scraper-setup.md)
 
-- Stake tokens to provide work to the network and earn rewards for your nodes availablity and uptime.
-- Receive and process data requests from Oracle Nodes, servicing data and LLM requests.
-- Earn network emissions and fees for the work you provide, generating a new revenue stream.
-- Access the network's vast dataset and LLM resources to efficiently process requests and deliver accurate results.
+:::info
 
-By contributing to Masa as a Worker Node, you play a vital role in powering the decentralized AI ecosystem while being rewarded for your efforts.
+You need to have **setup** your node and **staked** your node first to be able to scrape data:
 
-## [Masa for Developers: AI Oracle Nodes](docs/oracle-node/introduction.md)
+:::
 
-Masa offers developers a decentralized platform to access diverse data sources and powerful LLM services through Oracle Nodes. By running an Oracle Node, you can:
+### Get data from the Network (Developer Node)
+AI developers can get data from the Masa Protocol for free by running a Masa node locally or by using our API (**coming soon**).
 
-- Stake tokens to access the network's rich data and powerful open source LLM services, submitting data or LLM requests to Worker Nodes.
-- Submit data or LLM requests to Worker Nodes to power your AI applications.
-- Tap into a wide range of data sources and LLM models to fulfill various data and processing requirements, for example:
-  - **Crypto Sentiment Analysis**: Combine data from our Twitter Scraper and Web Scraper to gather real-time information about cryptocurrency trends, news, and public sentiment.
-  - **Crypto Community Insights**: Leverage our Discord Profile scraper to extract comprehensive data from prominent crypto users on Discord.
-  - **Crypto News Aggregation and Summarization**: Utilize our Web Scraper to collect real-time data from leading crypto news websites and blogs.
+- [Staking Your Node](/docs/masa-protocol/protocol-staking-guide.md)
+- [Developer Configuration](/docs/masa-protocol/protocol-developer-config.md)
 
-By leveraging Masa as a Oracle Node, developers can build innovative AI applications with the power of decentralized data and compute at their fingertips.
+:::info
 
-## Join the Fair AI Revolution
+To get data from the Masa Protocol as a developer you need to stake your node (no free leech) - **you need Sepolia ETH** to stake.
 
-Masa is more than just a technology platform - it's a movement to make AI more accessible, equitable, and beneficial for all. By contributing data or compute resources to the Masa network, you can help power the next generation of Fair AI applications and be rewarded for your contributions.
+:::
 
-We invite you to join us in building a decentralized future for AI. Explore our documentation to learn more about how Masa works and how you can get involved. Together, let's unlock the true potential of AI - powered by the people, for the people.
+### Secure the Network (Validator Node)
+Earn MASA rewards by securing the network:
+
+- [Validator Configuration](/docs/masa-protocol/protocol-validator-setup.md)
+
+### Advanced Configuration
+For more detailed setup options:
+- [Environment Configuration Guide](/docs/masa-protocol/protocol-environment-configuration.md)
+- [Network Configuration Guide](/docs/masa-protocol/protocol-network-configuration.md)
+
+### Troubleshooting and Support
+If you encounter any issues:
+- [Common Issues and Solutions](/docs/masa-protocol/protocol-troubleshooting.md)
+- [Community Support](/docs/masa-protocol/protocol-community-support.md)
+
+Choose the path that best fits your needs and follow the respective guide for detailed instructions.
+
 
 :::info
 **Join our Community on Discord!**  
-Ready to dive deeper into the Masa ecosystem? Connect with our vibrant community on Discord for the latest updates, discussions, and support. [Join us here](https://discord.gg/masafinance)
+[**Join**](https://discord.gg/masafinance) our community on Discord for the latest updates, discussions, and support. 
 :::

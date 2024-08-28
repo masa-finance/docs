@@ -2,7 +2,6 @@
 id: 8-run-protocol
 title: 8. Run Protocol Node
 ---
-
-import Content from '../../masa-oracle/oracle-node/quickstart.md';
+// TODO: Add guide for running the protocol node for the validator
 
 <Content />

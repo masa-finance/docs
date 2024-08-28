@@ -3,6 +3,6 @@ id: 6-run-protocol
 title: 6. Run Protocol Node
 ---
 
-import Content from '../../masa-oracle/oracle-node/quickstart.md';
+// TODO: Add guide for running the protocol node for the miner
 
 <Content />
