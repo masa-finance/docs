@@ -17,7 +17,7 @@ const sidebars = {
   docs: [
     {
       type: "doc",
-      id: "welcome-to-masa/welcome-to-masa", 
+      id: "welcome-to-masa/welcome-to-masa",
     },
     {
       type: "category",
@@ -36,16 +36,14 @@ const sidebars = {
           },
           items: [
             "masa-subnet/validator/1-create-environment",
-            "masa-subnet/validator/2-clone-repository",
+            "masa-subnet/validator/2-setup-environment",
             "masa-subnet/validator/3-create-wallet",
             "masa-subnet/validator/3-regen-wallet",
             "masa-subnet/validator/4-fund-wallet",
             "masa-subnet/validator/5-register-wallet",
             "masa-subnet/validator/6-stake-validator",
             "masa-subnet/validator/7-set-weights",
-            "masa-subnet/validator/8-run-protocol",
-            "masa-subnet/validator/9-edit-env",
-            "masa-subnet/validator/10-run-validator",
+            "masa-subnet/validator/8-run-validator",
           ],
         },
         {
@@ -57,7 +55,7 @@ const sidebars = {
           },
           items: [
             "masa-subnet/miner/1-create-environment",
-            "masa-subnet/miner/2-clone-repository",
+            "masa-subnet/miner/2-setup-environment",
             "masa-subnet/miner/3-create-wallet",
             "masa-subnet/miner/3-regen-wallet",
             "masa-subnet/miner/4-fund-wallet",
@@ -102,9 +100,7 @@ const sidebars = {
             type: "generated-index",
             title: "Node Staking",
           },
-          items: [
-            "masa-protocol/protocol-staking-guide",
-          ],
+          items: ["masa-protocol/protocol-staking-guide"],
         },
         {
           type: "category",
