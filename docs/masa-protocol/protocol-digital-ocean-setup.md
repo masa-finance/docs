@@ -31,7 +31,7 @@ Checkout the latest release
 git checkout $latest_tag
 ```
 
-## Install Dependencies
+## Install Project Dependencies
 
 install GO, NPM, and PM2
 
@@ -49,6 +49,8 @@ sudo npm install -g pm2
 
 ## Install Contract Dependencies
 
+Install the contract dependencies
+
 ```bash
 cd contracts
 ```
@@ -63,7 +65,7 @@ Return to the root directory
 cd ..
 ```
 
-## Create a .env file
+## Create .env file
 
 ```bash
 vim .env
@@ -91,11 +93,15 @@ Save and exit
 
 ## Build the node
 
+Build the protocol node
+
 ```bash
 make build
 ```
 
 ## Start the node
+
+Start the protocol node
 
 ```bash
 make run
@@ -123,25 +129,29 @@ Is DiscordScraper:   false
 Is TelegramScraper:  false
 ```
 
-## Send Sepolia ETH to your Node
+## Fund Node with Sepolia ETH
 
-Take note of your Public Key, and send at least 0.01 Sepolia ETH to the address. There are many faucets available for Sepolia ETH, but **[Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)** is a popular option.
+Take note of your _Public Key_ address, and send at least 0.01 Sepolia ETH to this address. There are many faucets available for Sepolia ETH, but **[Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)** is a popular option.
 
-## Close Node
+## Stop the node
+
+Close your node in the terminal with:
 
 ```bash
-cntrl + c
+cmd + c
 ```
 
 ## Get MASA tokens
 
-Use the faucet to obtain Sepolia MASA tokens.
+Use the faucet to obtain Sepolia MASA tokens
 
 ```bash
 make faucet
 ```
 
-## Stake your node
+## Stake MASA tokens
+
+Stake MASA tokens with your node
 
 ```bash
 make stake
@@ -149,11 +159,15 @@ make stake
 
 ## Run the node
 
+Run your node with PM2
+
 ```bash
 pm2 start "make run" --name "protocol"
 ```
 
-## View Logs
+## View logs
+
+View the logs of your node
 
 ```bash
 pm2 logs
@@ -164,5 +178,5 @@ pm2 logs
 Visit the following URL to interact with the node:
 
 ```bash
-http://<digital-ocean-droplet-ip-address>:8080/swagger/#/
+http://<droplet-ip-address>:8080/swagger/#/
 ```
