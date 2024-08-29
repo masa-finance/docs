@@ -104,7 +104,7 @@ const sidebars = {
         },
         {
           type: "category",
-          label: "Scraper Configuration",
+          label: "Scrapers",
           link: {
             type: "generated-index",
             title: "Node Configuration",
