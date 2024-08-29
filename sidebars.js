@@ -61,7 +61,7 @@ const sidebars = {
             "masa-subnet/miner/4-fund-wallet",
             "masa-subnet/miner/5-register-wallet",
             "masa-subnet/miner/6-run-protocol",
-            "masa-subnet/miner/7-edit-env",
+            "masa-subnet/miner/7-create-env",
             "masa-subnet/miner/8-run-miner",
           ],
         },

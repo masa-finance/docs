@@ -27,3 +27,5 @@ Open up a new terminal and connect to your droplet via SSH. Use the IP address o
 ```bash
 ssh -i ~/.ssh/id_rsa root@<droplet-ip-address>
 ```
+
+Type `yes` when prompted, and you're in!
