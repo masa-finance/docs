@@ -22,17 +22,24 @@ A paid X/Twitter Pro Account is absolutely necessary for scraping X/Twitter data
    Create a `twitter_cookies.json` file with your X/Twitter account credentials. To obtain this information:
 
    a. Log in to X/Twitter in your web browser
+
    b. Open the browser's developer tools (usually F12 or right-click > Inspect)
+
    c. Go to the "Application" or "Storage" tab
+
    d. In the left sidebar, expand "Cookies" and click on "https://twitter.com"
+
    e. Look for the following cookie names and copy their values:
       - personalization_id
       - kdt
       - twid
       - ct0
       - auth_token
+
    f. Use the template file `twitter_cookies.json.example` in the root directory as a guide
+
    g. Replace **only the placeholders** in the "Value" field with the actual values
+
    h. Save the file as "twitter_cookies.json" (remove ".example" from the filename)
 
 2. **Place the cookies file**
