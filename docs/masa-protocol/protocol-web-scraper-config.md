@@ -1,6 +1,6 @@
 ---
 id: protocol-web-scraper-config
-title: Web Scraper Configuration
+title: Web Scraper
 ---
 
 This guide will help you configure your Masa Node as a web scraper.

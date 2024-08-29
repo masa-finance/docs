@@ -1,6 +1,6 @@
 ---
 id: protocol-twitter-scraper-config
-title: Twitter Scraper Configuration
+title: Twitter Scraper
 ---
 
 This guide will help you configure your Masa Node as a X/Twitter scraper.
@@ -133,3 +133,4 @@ If you encounter issues:
 For more detailed setup options and advanced configurations, refer to:
 - [Environment Configuration Guide](./environment-configuration.md)
 - [Network Configuration Guide](./network-configuration.md)
+- [Residential Proxy Configuration Guide](./residential-proxy-configuration.md)
