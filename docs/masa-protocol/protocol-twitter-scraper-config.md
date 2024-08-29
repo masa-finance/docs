@@ -73,10 +73,9 @@ A paid X/Twitter Pro Account is absolutely necessary for scraping X/Twitter data
 6. **Test the X/Twitter scraper**
 
    Curl the node in local mode to confirm it returns X/Twitter data:
-
    ```bash
    curl -X 'POST' \
-     'https://test.api.masa.ai/api/v1/data/twitter/tweets/recent' \
+     'http://localhost:8080/api/v1/data/twitter/tweets/recent' \
      -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -d '{
