@@ -1,5 +1,5 @@
 ---
 id: protocol-developer-config   
-title: Developer Configuration
+title: Developer API
 ---
 
