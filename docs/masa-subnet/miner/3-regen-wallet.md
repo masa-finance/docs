@@ -8,7 +8,7 @@ If you have an existing wallet, you can import it like so:
 ### Regen Coldkey
 
 ```bash
-btcli wallet regen_coldkeypub --wallet.name miner
+btcli wallet regen_coldkey --wallet.name miner --mnemonic <mnemonic>
 ```
 
 ### Regen Hotkey

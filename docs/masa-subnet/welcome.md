@@ -6,6 +6,6 @@ The Masa Bittensor Subnet is a specialized subnet where validators reward miners
 
 To get started, follow the below documentation depending on what neuron you intend to run:
 
-## [Miner Documentation](./miner/0-intro.md)
-
 ## [Validator Documentation](./validator/0-intro.md)
+
+## [Miner Documentation](./miner/0-intro.md)

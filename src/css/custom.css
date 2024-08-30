@@ -125,3 +125,67 @@ li > ul {
 .button:hover {
   color: gray;
 }
+
+a:active {
+  color: #3578E5;
+  font-weight: 500; 
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: #3578E5;
+}
+
+/* Lists */
+
+ol {
+  list-style-type: decimal;
+  padding-left: 1.4em;
+  margin-bottom: 1em;
+}
+
+ol li {
+  margin-bottom: 1em;
+  position: relative;
+}
+
+ol li::marker {
+  font-weight: 500;
+}
+
+ol li > p {
+  margin-bottom: 0.5em;
+}
+
+ol li > pre {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ol li:last-child {
+  margin-bottom: 0;
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 1.2em;
+}
+
+ol ol li {
+  margin-bottom: 0.5em;
+}
+
+ol ol li::before {
+  content: counter(list-item, lower-alpha) ". ";
+  position: absolute;
+  left: -1.2em;
+}
+
+ol ol li:last-child {
+  margin-bottom: 0;
+}
