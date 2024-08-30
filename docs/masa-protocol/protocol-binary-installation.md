@@ -121,10 +121,10 @@ You can now configure your node to start scraping data as a worker, to fetch dat
 ### Set up a scraper: Worker Node
 If you want your node to earn rewards configure it to to scrape data on the Masa Protocol.
 
-- [Twitter Scraper Configuration](./twitter-scraper-setup.md)
-- [Web Scraper Configuration](./web-scraper-setup.md)
-- [Discord Scraper Configuration](./discord-scraper-setup.md)
-- [Telegram Scraper Configuration](./telegram-scraper-setup.md)
+- [Twitter Scraper Configuration](/docs/masa-protocol/protocol-twitter-scraper-setup.md)
+- [Web Scraper Configuration](/docs/masa-protocol/protocol-web-scraper-setup.md)
+- [Discord Scraper Configuration](/docs/masa-protocol/protocol-discord-scraper-setup.md)
+- [Telegram Scraper Configuration](/docs/masa-protocol/protocol-telegram-scraper-setup.md)
 
 :::info
 
@@ -135,8 +135,8 @@ You need to have **setup** your node and **staked** your node first to be able t
 ### Get data from the Network: Developer Node
 AI developers can get data from the Masa Protocol for free by running a Masa node locally or by using our API (**coming soon**).
 
-- [Staking Your Node](./staking-guide.md)
-- [Developer Playground](./validator-setup.md)
+- [Staking Your Node](/docs/masa-protocol/protocol-staking-guide.md)
+- [Developer Configuration](/docs/masa-protocol/protocol-developer-config.md)
 
 :::info
 
@@ -147,16 +147,16 @@ To get data from the Masa Protocol as a developer you need to stake your node (n
 ### Secure the Network: Validator Node
 Earn MASA rewards by securing the network:
 
-- [Validator Configuration](./validator-setup.md)
+- [Validator Configuration](/docs/masa-protocol/protocol-validator-setup.md)
 
 ### Advanced Configuration
 For more detailed setup options:
-- [Environment Configuration Guide](./environment-configuration.md)
-- [Network Configuration Guide](./network-configuration.md)
+- [Environment Configuration Guide](/docs/masa-protocol/protocol-environment-configuration.md)
+- [Network Configuration Guide](/docs/masa-protocol/protocol-network-configuration.md)
 
 ### Troubleshooting and Support
 If you encounter any issues:
-- [Common Issues and Solutions](./troubleshooting.md)
-- [Community Support Channels](./community-support.md)
+- [Common Issues and Solutions](/docs/masa-protocol/protocol-troubleshooting.md)
+- [Community Support](/docs/masa-protocol/protocol-community-support.md)
 
 Choose the path that best fits your needs and follow the respective guide for detailed instructions.

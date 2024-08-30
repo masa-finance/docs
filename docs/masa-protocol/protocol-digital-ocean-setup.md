@@ -78,11 +78,6 @@ ENV=test
 FILE_PATH=.
 VALIDATOR=false
 PORT=8080
-
-# Twitter Configuration
-TWITTER_SCRAPER=true
-TWITTER_USERNAME=<your-twitter-username>
-TWITTER_PASSWORD=<your-twitter-password>
 ```
 
 Save and exit
@@ -124,37 +119,9 @@ IP Address:          /ip4/127.0.0.1/udp/4001/quic-v1
 Public Key:          0x5dA36a3eB07fd1624B054b99D6417DdF2904e826
 Is Staked:           false
 Is Validator:        false
-Is TwitterScraper:   true
+Is TwitterScraper:   false
 Is DiscordScraper:   false
 Is TelegramScraper:  false
-```
-
-## Fund Node with Sepolia ETH
-
-Take note of your _Public Key_ address, and send at least 0.01 Sepolia ETH to this address. There are many faucets available for Sepolia ETH, but **[Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)** is a popular option.
-
-## Stop the node
-
-Close your node in the terminal with:
-
-```bash
-cmd + c
-```
-
-## Get MASA tokens
-
-Use the faucet to obtain Sepolia MASA tokens
-
-```bash
-make faucet
-```
-
-## Stake MASA tokens
-
-Stake MASA tokens with your node
-
-```bash
-make stake
 ```
 
 ## Run the node
@@ -180,3 +147,55 @@ Visit the following URL to interact with the node:
 ```bash
 http://<droplet-ip-address>:8080/swagger/#/
 ```
+
+:::tip
+
+You now have a running node in **Local Bootnode** configuration
+
+:::
+
+## Configure your node
+You can now configure your node to start scraping data as a worker, to fetch data from the network or to start participating in the network as a validator.
+
+### Set up a scraper: Worker Node
+If you want your node to earn rewards configure it to to scrape data on the Masa Protocol.
+
+- [Twitter Scraper Configuration](/docs/masa-protocol/protocol-twitter-scraper-setup.md)
+- [Web Scraper Configuration](/docs/masa-protocol/protocol-web-scraper-setup.md)
+- [Discord Scraper Configuration](/docs/masa-protocol/protocol-discord-scraper-setup.md)
+- [Telegram Scraper Configuration](/docs/masa-protocol/protocol-telegram-scraper-setup.md)
+
+:::info
+
+You need to have **setup** your node and **staked** your node first to be able to scrape data:
+
+:::
+
+### Get data from the Network: Developer Node
+AI developers can get data from the Masa Protocol for free by running a Masa node locally or by using our API (**coming soon**).
+
+- [Staking Your Node](/docs/masa-protocol/protocol-staking-guide.md)
+- [Developer Configuration](/docs/masa-protocol/protocol-developer-config.md)
+
+:::info
+
+To get data from the Masa Protocol as a developer you need to stake your node (no free leech) - **you need Sepolia ETH** to stake.
+
+:::
+
+### Secure the Network: Validator Node
+Earn MASA rewards by securing the network:
+
+- [Validator Configuration](/docs/masa-protocol/protocol-validator-setup.md)
+
+### Advanced Configuration
+For more detailed setup options:
+- [Environment Configuration Guide](/docs/masa-protocol/protocol-environment-configuration.md)
+- [Network Configuration Guide](/docs/masa-protocol/protocol-network-configuration.md)
+
+### Troubleshooting and Support
+If you encounter any issues:
+- [Common Issues and Solutions](/docs/masa-protocol/protocol-troubleshooting.md)
+- [Community Support](/docs/masa-protocol/protocol-community-support.md)
+
+Choose the path that best fits your needs and follow the respective guide for detailed instructions.
