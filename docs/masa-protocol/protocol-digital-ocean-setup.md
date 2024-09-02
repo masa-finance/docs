@@ -124,22 +124,6 @@ Is DiscordScraper:   false
 Is TelegramScraper:  false
 ```
 
-## Run the node
-
-Run your node with PM2
-
-```bash
-pm2 start "make run" --name "protocol"
-```
-
-## View logs
-
-View the logs of your node
-
-```bash
-pm2 logs
-```
-
 ## Interact with the node
 
 Visit the following URL to interact with the node:
@@ -155,9 +139,11 @@ You now have a running node in **Local Bootnode** configuration
 :::
 
 ## Configure your node
+
 You can now configure your node to start scraping data as a worker, to fetch data from the network or to start participating in the network as a validator.
 
 ### Set up a scraper: Worker Node
+
 If you want your node to earn rewards configure it to to scrape data on the Masa Protocol.
 
 - [Twitter Scraper Configuration](/docs/masa-protocol/protocol-twitter-scraper-setup.md)
@@ -172,6 +158,7 @@ You need to have **setup** your node and **staked** your node first to be able t
 :::
 
 ### Get data from the Network: Developer Node
+
 AI developers can get data from the Masa Protocol for free by running a Masa node locally or by using our API (**coming soon**).
 
 - [Staking Your Node](/docs/masa-protocol/protocol-staking-guide.md)
@@ -184,17 +171,22 @@ To get data from the Masa Protocol as a developer you need to stake your node (n
 :::
 
 ### Secure the Network: Validator Node
+
 Earn MASA rewards by securing the network:
 
 - [Validator Configuration](/docs/masa-protocol/protocol-validator-setup.md)
 
 ### Advanced Configuration
+
 For more detailed setup options:
+
 - [Environment Configuration Guide](/docs/masa-protocol/protocol-environment-configuration.md)
 - [Network Configuration Guide](/docs/masa-protocol/protocol-network-configuration.md)
 
 ### Troubleshooting and Support
+
 If you encounter any issues:
+
 - [Common Issues and Solutions](/docs/masa-protocol/protocol-troubleshooting.md)
 - [Community Support](/docs/masa-protocol/protocol-community-support.md)
 
