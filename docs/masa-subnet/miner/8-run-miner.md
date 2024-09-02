@@ -3,14 +3,6 @@ id: 8-run-miner
 title: 8. Run Miner
 ---
 
-## Set Python Path
-
-Be sure to set your python path before running the miner, or anytime when you open a new terminal session.
-
-```bash
-export PYTHONPATH=$PYTHONPATH:$(pwd)
-```
-
 ## Run Miner
 
 ```bash
