@@ -3,22 +3,6 @@ id: 8-run-validator
 title: 8. Run Validator
 ---
 
-## Set Python Path
-
-:::warning
-Ensure you set your Python path correctly before running the validator. Failure to do so may result in import errors or unexpected behavior.
-:::
-
-Be sure to set your python path before running the validator, or anytime when you open a new terminal session.
-
-```bash
-export PYTHONPATH=$PYTHONPATH:$(pwd)
-```
-
-:::info
-You may want to add this command to your `.bashrc` or `.zshrc` file to automatically set the Python path when you open a new terminal session.
-:::
-
 ## Run Validator
 
 ```bash

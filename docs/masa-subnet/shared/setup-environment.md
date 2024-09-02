@@ -56,3 +56,9 @@ source bittensor/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+
+## Install Masa Package
+
+```bash
+pip install -e .
+```
