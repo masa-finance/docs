@@ -44,6 +44,7 @@ const sidebars = {
             "masa-subnet/validator/6-stake-validator",
             "masa-subnet/validator/7-set-weights",
             "masa-subnet/validator/8-run-validator",
+            "masa-subnet/validator/9-join-community",
           ],
         },
         {
@@ -63,6 +64,7 @@ const sidebars = {
             "masa-subnet/miner/6-run-protocol",
             "masa-subnet/miner/7-create-env",
             "masa-subnet/miner/8-run-miner",
+            "masa-subnet/miner/9-join-community",
           ],
         },
         {
