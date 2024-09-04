@@ -132,6 +132,17 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: "category",
+      label: "Resources",
+      link: {
+        type: "generated-index",
+        title: "Resources",
+      },
+      items: [
+        "resources/miner-scoring",
+      ],
+    },
   ],
 };
 
