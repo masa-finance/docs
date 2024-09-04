@@ -139,9 +139,7 @@ const sidebars = {
         type: "generated-index",
         title: "Resources",
       },
-      items: [
-        "resources/miner-scoring",
-      ],
+      items: ["resources/miner-scoring", "resources/subnet-walkthrough"],
     },
   ],
 };

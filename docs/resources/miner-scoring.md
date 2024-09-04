@@ -44,7 +44,7 @@ Our scoring system would likely rank them: Carl > Alice > Sam. Carl's consistenc
 - The scoring mechanism naturally discourages extreme fluctuations in tweet volume.
 - The scoring system is designed to be transparent and verifiable, with all scores and calculations being made public.
 - Validators spot check miners tweets using tweet IDs against the Twitter API to ensure the tweets are real and not duplicate tweets.
-- Organic tweets are currently not scored. 
+- Organic tweets are currently not scored.
 
 :::warning
 Attempts to game the system through sporadic bursts of activity are unlikely to result in high scores. Additionaly validators spot check miners tweets using tweet IDs against the Twitter API to ensure the tweets are real and not duplicate tweets.
@@ -59,6 +59,6 @@ By using this approach, the Masa Network aims to create a stable, reliable ecosy
 :::
 
 For more information on miner operations, refer to:
-- [Miner Setup Guide](./miner-setup.md)
-- [Network Performance Metrics](./network-metrics.md)
-- [Reward Distribution](./reward-distribution.md)
+
+- [Miner Setup Guide](../masa-subnet/miner/0-intro.md)
+- [Protocol Setup Guide](../masa-protocol/protocol-digital-ocean-setup.md)
