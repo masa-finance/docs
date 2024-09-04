@@ -44,6 +44,7 @@ Our scoring system would likely rank them: Carl > Alice > Sam. Carl's consistenc
 - The scoring mechanism naturally discourages extreme fluctuations in tweet volume.
 - The scoring system is designed to be transparent and verifiable, with all scores and calculations being made public.
 - Validators spot check miners tweets using tweet IDs against the Twitter API to ensure the tweets are real and not duplicate tweets.
+- Organic tweets are currently not scored. 
 
 :::warning
 Attempts to game the system through sporadic bursts of activity are unlikely to result in high scores. Additionaly validators spot check miners tweets using tweet IDs against the Twitter API to ensure the tweets are real and not duplicate tweets.
