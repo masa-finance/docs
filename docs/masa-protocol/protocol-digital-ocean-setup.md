@@ -146,10 +146,10 @@ You can now configure your node to start scraping data as a worker, to fetch dat
 
 If you want your node to earn rewards configure it to to scrape data on the Masa Protocol.
 
-- [Twitter Scraper Configuration](/docs/masa-protocol/protocol-twitter-scraper-setup.md)
-- [Web Scraper Configuration](/docs/masa-protocol/protocol-web-scraper-setup.md)
-- [Discord Scraper Configuration](/docs/masa-protocol/protocol-discord-scraper-setup.md)
-- [Telegram Scraper Configuration](/docs/masa-protocol/protocol-telegram-scraper-setup.md)
+- [Twitter Scraper Configuration](/docs/masa-protocol/protocol-twitter-scraper-config.md)
+- [Web Scraper Configuration](/docs/masa-protocol/protocol-web-scraper-config.md)
+- [Discord Scraper Configuration](/docs/masa-protocol/protocol-discord-scraper-config.md)
+- [Telegram Scraper Configuration](/docs/masa-protocol/protocol-telegram-scraper-config.md)
 
 :::info
 
@@ -174,20 +174,20 @@ To get data from the Masa Protocol as a developer you need to stake your node (n
 
 Earn MASA rewards by securing the network:
 
-- [Validator Configuration](/docs/masa-protocol/protocol-validator-setup.md)
+- **Validator Configuration** (coming soon!)
 
 ### Advanced Configuration
 
 For more detailed setup options:
 
-- [Environment Configuration Guide](/docs/masa-protocol/protocol-environment-configuration.md)
-- [Network Configuration Guide](/docs/masa-protocol/protocol-network-configuration.md)
+- **Environment Configuration Guide** (coming soon!)
+- **Network Configuration Guide** (coming soon!)
 
 ### Troubleshooting and Support
 
 If you encounter any issues:
 
-- [Common Issues and Solutions](/docs/masa-protocol/protocol-troubleshooting.md)
-- [Community Support](/docs/masa-protocol/protocol-community-support.md)
+- **Common Issues and Solutions** (coming soon!)
+- [**Community Support**](/docs/masa-subnet/validator/9-join-community.md)
 
 Choose the path that best fits your needs and follow the respective guide for detailed instructions.
