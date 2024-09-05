@@ -89,15 +89,15 @@ Earn MASA rewards by securing the network:
 
 For more detailed setup options:
 
-- [**Environment Configuration Guide**](/docs/masa-protocol/protocol-environment-configuration.md)
-- [**Network Configuration Guide**](/docs/masa-protocol/protocol-network-configuration.md)
+- **Environment Configuration Guide** (coming soon!)
+- **Network Configuration Guide** (coming soon!)
 
 ### Troubleshooting and Support
 
 If you encounter any issues:
 
-- [**Common Issues and Solutions**](/docs/masa-protocol/protocol-troubleshooting.md)
-- [**Community Support**](/docs/masa-protocol/protocol-community-support.md)
+- **Common Issues and Solutions** (coming soon!)
+- [**Community Support**](/docs/masa-subnet/validator/9-join-community.md)
 
 Choose the path that best fits your needs and follow the respective guide for detailed instructions.
 
