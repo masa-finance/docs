@@ -28,6 +28,7 @@ If you are running X/Twitter or Web scrapers in a cloud environment, it is stron
 :::
 
 For more information on configuring scrapers and using residential proxies, refer to:
-- [Twitter Scraper Configuration](../masa-protocol/protocol-twitter-scraper-config.md)
-- [Web Scraper Configuration](../masa-protocol/protocol-web-scraper-config.md)
-- [Residential Proxy Configuration Guide](../masa-protocol/residential-proxy-configuration.md)
+
+- [Twitter Scraper Configuration](/docs/masa-protocol/protocol-twitter-scraper-setup.md)
+- [Web Scraper Configuration](/docs/masa-protocol/protocol-web-scraper-setup.md)
+- Residential Proxy Configuration Guide (Coming soon!)
