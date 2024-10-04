@@ -3,13 +3,12 @@ id: protocol-testnet-setup
 title: Testnet Setup
 ---
 
-This guide will help you set up your Masa Node for the testnet, which rewards workers who have configured Twitter and web scrapers.
+This guide will help you set up your Masa Node for the testnet, which rewards workers who have configured Twitter scrapers.
 
 ### Prerequisites
 
 - A running Masa Node (see [Binary Installation](./protocol-binary-installation.md) or [Docker Setup](./protocol-docker-setup.md))
 - Configured Twitter scraper (see [Twitter Scraper Configuration](./protocol-twitter-scraper-config.md))
-- Configured Web scraper (see [Web Scraper Configuration](./protocol-web-scraper-config.md))
 
 :::info
 Ensure all prerequisites are met before proceeding with the testnet setup to avoid connectivity issues.
@@ -39,7 +38,7 @@ Ensure all prerequisites are met before proceeding with the testnet setup to avo
 
 ### Rewards
 
-Participants in the testnet who have properly configured Twitter and web scrapers will be eligible for rewards. Details about the reward structure and distribution will be announced separately.
+Participants in the testnet who have properly configured Twitter scrapers will be eligible for rewards. Details about the reward structure and distribution will be announced separately.
 
 :::note
 Stay tuned to official Masa communication channels for updates on reward distribution and eligibility criteria.
@@ -50,5 +49,5 @@ Stay tuned to official Masa communication channels for updates on reward distrib
 If you encounter issues connecting to the testnet:
 
 - Verify that your `.env` file is correctly updated with the bootnode information
-- Ensure your Twitter and web scrapers are properly configured and functioning
+- Ensure your Twitter scrapers are properly configured and functioning
 - Check your node logs for any error messages related to peer connections
