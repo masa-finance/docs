@@ -3,7 +3,7 @@ id: protocol-twitter-scraper-cookies-config
 title: X/Twitter (Cookies)
 ---
 
-This guide will help you configure your Masa Node as a X/Twitter scraper.
+This guide will help you configure your Masa Node as a X/Twitter scraper using cookies authentication.
 
 ### Prerequisites
 

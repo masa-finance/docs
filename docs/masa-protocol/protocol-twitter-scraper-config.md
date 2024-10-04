@@ -3,18 +3,18 @@ id: protocol-twitter-scraper-config
 title: X/Twitter (User/Pass)
 ---
 
-This guide will help you configure your Masa Node as a X/Twitter scraper.
+This guide will help you configure your Masa Node as a X/Twitter scraper using user/pass authentication.
 
-### Prerequisites
+### 📋 Prerequisites
 
 - A running, staked Masa Node (see [Binary Installation](./protocol-binary-installation.md) or [Docker Setup](./protocol-docker-setup.md))
 - X/Twitter Pro Account: without a Pro account, you will not be able to scrape X/Twitter data. 
 
 :::warning
-A paid X/Twitter Pro Account is absolutely necessary for scraping X/Twitter data. Ensure you have obtained a paid Twitter Pro Account before proceeding with the configuration.
+⚠️ A paid X/Twitter Pro Account is absolutely necessary for scraping X/Twitter data. Ensure you have obtained a paid Twitter Pro Account before proceeding with the configuration.
 :::
 
-### Configuration Process
+### 🛠️ Configuration Process
 
 1. **Set environment variables**
 
@@ -23,25 +23,27 @@ A paid X/Twitter Pro Account is absolutely necessary for scraping X/Twitter data
    ```plaintext
    TWITTER_SCRAPER=true
    TWITTER_ACCOUNTS=username1:password1,username2:password2
-   USER_AGENTS="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+   USER_AGENTS="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36,Mozilla/5.0 (Macintosh; Intel Mac OS X 14.7; rv:131.0) Gecko/20100101 Firefox/131.0"
    ```
 
-   Replace `username1:password1,username2:password2` with your actual X/Twitter account credentials.
+   **Replace** `username1:password1,username2:password2` with your actual X/Twitter account credentials.
 
    :::info
-   You can use multiple accounts by separating them with commas and the node will rotate through them and skip accounts that are banned or rate limited by X/Twitter.
+   💡 You can use multiple accounts by separating them with commas and the node will rotate through them and skip accounts that are banned or rate limited by X/Twitter.
+   :::
+
+   **Add multiple user agents** `USER_AGENTS="user_agent1,user_agent2,user_agent3,user_agent4,user_agent5"`
+
+   :::tip
+   🔄 The USER_AGENTS variable can accept a list of comma-separated user agents. The scraper will randomly select one for each request, helping to mimic different browser behaviors and potentially reduce the risk of being blocked. You can find up-to-date user agent strings at [WhatIsMyBrowser.com](https://www.whatismybrowser.com/guides/the-latest-user-agent/).
    :::
 
 2. **Two-Factor Authentication (2FA)**
 
-   If you have 2FA enabled on your X/Twitter account, you can temporarily add the 2FA code to your `.env` file:
-
-   ```plaintext
-   TWITTER_2FA_CODE="your_2fa_code"
-   ```
+   If you have 2FA enabled on your X/Twitter account, you can temporarily turn it off to allow the scraper to save your cookies locally for the first time it logs into each account:
 
    :::note
-   It's recommended to temporarily disable 2FA when setting up your scraper for the first time. This allows the scraper to save your cookies locally. After successful setup, you can re-enable 2FA.
+   🔒 It's recommended to temporarily disable 2FA when setting up your scraper for the first time. This allows the scraper to save your cookies locally. After successful setup, you can re-enable 2FA.
    :::
 
 3. **Restart your node**
@@ -96,19 +98,19 @@ A paid X/Twitter Pro Account is absolutely necessary for scraping X/Twitter data
 
    Verify that the `workerPeerId` in the response matches your node's peerID.
 
-### Security Considerations
+### 🔐 Security Considerations
 
 - Keep your X/Twitter credentials secure and do not share them.
 - Never commit your `.env` file with X/Twitter credentials to version control.
 - After successful setup and cookie storage, remove the `TWITTER_2FA_CODE` from your `.env` file.
 
-### Warning: Cloud-Based Scraping
+### ⚠️ Warning: Cloud-Based Scraping
 
 :::warning
 If you are running a X/Twitter scraper in the cloud, you must use a residential proxy. Without a residential proxy, your scraper is likely to be blocked by X/Twitter, resulting in invalid credentials errors. Ensure you have a reliable residential proxy service set up before deploying your scraper in a cloud environment.
 :::
 
-### Troubleshooting
+### 🔧 Troubleshooting
 
 If you encounter issues:
 - Ensure your X/Twitter credentials in the `.env` file are correct.
