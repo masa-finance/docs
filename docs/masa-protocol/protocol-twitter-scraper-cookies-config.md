@@ -1,6 +1,6 @@
 ---
-id: protocol-twitter-scraper-config
-title: X/Twitter (User/Pass)
+id: protocol-twitter-scraper-cookies-config
+title: X/Twitter (Cookies)
 ---
 
 This guide will help you configure your Masa Node as a X/Twitter scraper.
@@ -8,6 +8,7 @@ This guide will help you configure your Masa Node as a X/Twitter scraper.
 ### Prerequisites
 
 - A running, staked Masa Node (see [Binary Installation](./protocol-binary-installation.md) or [Docker Setup](./protocol-docker-setup.md))
+- `twitter_cookies.json.example` file in the root directory of your Masa Node renamed to `twitter_cookies.json`
 - X/Twitter Pro Account: without a Pro account, you will not be able to scrape X/Twitter data. 
 
 :::warning
@@ -16,39 +17,52 @@ A paid X/Twitter Pro Account is absolutely necessary for scraping X/Twitter data
 
 ### Configuration Process
 
-1. **Set environment variables**
+1. **Prepare X/Twitter cookies**
+
+   Create a `twitter_cookies.json` file with your X/Twitter account credentials. To obtain this information:
+
+   a. Log in to X/Twitter in your web browser
+
+   b. Open the browser's developer tools (usually F12 or right-click > Inspect)
+
+   c. Go to the "Application" or "Storage" tab
+
+   d. In the left sidebar, expand "Cookies" and click on "https://twitter.com"
+
+   e. Look for the following cookie names and copy their values:
+      - personalization_id
+      - kdt
+      - twid
+      - ct0
+      - auth_token
+
+   f. Use the template file `twitter_cookies.json.example` in the root directory as a guide
+
+   g. Replace **only the placeholders** in the "Value" field with the actual values
+
+   h. Save the file as "twitter_cookies.json" (remove ".example" from the filename)
+
+2. **Place the cookies file**
+
+   Move the file to the appropriate location where your Masa keys are stored:
+
+   ```bash
+   mv twitter_cookies.json ~/.masa/twitter_cookies.json
+   ```
+
+3. **Set environment variable**
 
    Enable X/Twitter scraping in your `.env` file:
 
    ```plaintext
    TWITTER_SCRAPER=true
-   TWITTER_ACCOUNTS=username1:password1,username2:password2
-   USER_AGENTS="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
    ```
 
-   Replace `username1:password1,username2:password2` with your actual X/Twitter account credentials.
-
-   :::info
-   You can use multiple accounts by separating them with commas and the node will rotate through them and skip accounts that are banned or rate limited by X/Twitter.
-   :::
-
-2. **Two-Factor Authentication (2FA)**
-
-   If you have 2FA enabled on your X/Twitter account, you can temporarily add the 2FA code to your `.env` file:
-
-   ```plaintext
-   TWITTER_2FA_CODE="your_2fa_code"
-   ```
-
-   :::note
-   It's recommended to temporarily disable 2FA when setting up your scraper for the first time. This allows the scraper to save your cookies locally. After successful setup, you can re-enable 2FA.
-   :::
-
-3. **Restart your node**
+4. **Restart your node**
 
    Restart the Masa node to apply the changes.
 
-4. **Verify configuration**
+5. **Verify configuration**
 
    Check the logs for confirmation:
 
@@ -56,7 +70,7 @@ A paid X/Twitter Pro Account is absolutely necessary for scraping X/Twitter data
    Is TwitterScraper: true
    ```
 
-5. **Test the X/Twitter scraper**
+6. **Test the X/Twitter scraper**
 
    Curl the node in local mode to confirm it returns X/Twitter data:
    ```bash
@@ -98,9 +112,9 @@ A paid X/Twitter Pro Account is absolutely necessary for scraping X/Twitter data
 
 ### Security Considerations
 
+- Ensure your `twitter_cookies.json` file has appropriate permissions (e.g., `chmod 600`).
 - Keep your X/Twitter credentials secure and do not share them.
-- Never commit your `.env` file with X/Twitter credentials to version control.
-- After successful setup and cookie storage, remove the `TWITTER_2FA_CODE` from your `.env` file.
+- Never commit your `twitter_cookies.json` file to version control.
 
 ### Warning: Cloud-Based Scraping
 
@@ -111,10 +125,10 @@ If you are running a X/Twitter scraper in the cloud, you must use a residential 
 ### Troubleshooting
 
 If you encounter issues:
-- Ensure your X/Twitter credentials in the `.env` file are correct.
+- Verify the format of your `twitter_cookies.json` file.
+- Ensure your X/Twitter credentials are valid and not expired.
 - Check the node logs for any error messages related to X/Twitter scraping.
 - If running in the cloud, confirm your residential proxy is correctly configured and functioning.
-- If you're experiencing frequent login requests or timeouts, try temporarily disabling 2FA, restarting your node to save cookies, and then re-enabling 2FA.
 
 For more detailed setup options and advanced configurations, refer to:
 - [Environment Configuration Guide](./environment-configuration.md)

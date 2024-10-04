@@ -1,6 +1,6 @@
 ---
 id: protocol-discord-scraper-config
-title: Discord Scraper
+title: Discord
 ---
 
 This guide will help you configure your Masa Node as a Discord scraper.

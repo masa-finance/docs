@@ -1,6 +1,6 @@
 ---
 id: protocol-telegram-scraper-config
-title: Telegram Scraper
+title: Telegram
 ---
 
 This guide will help you configure your Masa Node as a Telegram scraper.

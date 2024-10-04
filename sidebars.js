@@ -84,6 +84,17 @@ const sidebars = {
       items: [
         {
           type: "category",
+          label: "Testnet",
+          link: {
+            type: "generated-index",
+            title: "Testnet",
+          },
+          items: [
+            "masa-protocol/protocol-testnet-setup",
+          ],
+        },
+        {
+          type: "category",
           label: "Node Setup",
           link: {
             type: "generated-index",
@@ -113,6 +124,7 @@ const sidebars = {
           },
           items: [
             "masa-protocol/protocol-twitter-scraper-config",
+            "masa-protocol/protocol-twitter-scraper-cookies-config",
             "masa-protocol/protocol-web-scraper-config",
             "masa-protocol/protocol-discord-scraper-config",
             "masa-protocol/protocol-telegram-scraper-config",
