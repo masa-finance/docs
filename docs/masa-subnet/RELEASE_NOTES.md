@@ -1,19 +1,35 @@
 ---
-title: Masa Subnet Release Notes - 0.8.0
+title: Masa Bittensor Release Notes - 1.0.0
 ---
 
-## What's Changed
+<!-- Release notes generated using configuration in .github/release.yml at main -->
 
-- chore: update release notes by @H34D in https://github.com/masa-finance/masa-bittensor/pull/211
-- chore: fixes readme by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/212
-- chore: docs refactor by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/216
-- fix: doc copy by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/217
-- feat: updating readme by @hide-on-bush-x in https://github.com/masa-finance/masa-bittensor/pull/222
-- fix: release notes title by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/219
-- chore: updates docs based on feedback by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/218
-- fix: docs copy by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/224
-- feat: improved reward system by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/227
+### New Features
 
-**Full Changelog**: https://github.com/masa-finance/masa-bittensor/compare/v0.7.0...v0.8.0
+- feat: auto update by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/250
+- feat: miner testing by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/247
+- feat: additional notebooks by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/240
+- feat: hide validators api by default by @hide-on-bush-x in https://github.com/masa-finance/masa-bittensor/pull/252
+- feat: adding two scripts for generating and verifying signatures by @hide-on-bush-x in https://github.com/masa-finance/masa-bittensor/pull/221
+- feat: validator volume increase test by @hide-on-bush-x in https://github.com/masa-finance/masa-bittensor/pull/248
+- feat: adding new wallet config for latests sdk by @hide-on-bush-x in https://github.com/masa-finance/masa-bittensor/pull/260
+- feat: miner spot checking by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/265
+
+### Bug Fixes
+
+- fix: auto-update by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/261
+- fix: update twitter config by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/264
+- fix: setting weights by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/266
+- fix: fine tuning before 1.0.0 release by @grantdfoster in https://github.com/masa-finance/masa-bittensor/pull/267
+
+### Continuous Integration
+
+- ci: remove debug logs from gh workflow by @obasilakis in https://github.com/masa-finance/masa-bittensor/pull/161
+
+### Chores
+
+- chore: adding better contribute.md by @hide-on-bush-x in https://github.com/masa-finance/masa-bittensor/pull/257
+
+**Full Changelog**: https://github.com/masa-finance/masa-bittensor/compare/v0.8.0...v1.0.0
 
 [All Releases](https://github.com/masa-finance/masa-bittensor/releases)
