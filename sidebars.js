@@ -132,6 +132,17 @@ const sidebars = {
         },
         {
           type: "category",
+          label: "Advanced Configuration",
+          link: {
+            type: "generated-index",
+            title: "Advanced Configuration",
+          },
+          items: [
+            "masa-protocol/protocol-api-configuration",
+          ],
+        },
+        {
+          type: "category",
           label: "Developer Configuration",
           link: {
             type: "generated-index",

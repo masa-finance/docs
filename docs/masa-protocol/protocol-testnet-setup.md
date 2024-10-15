@@ -21,7 +21,7 @@ Ensure all prerequisites are met before proceeding with the testnet setup to avo
    Add the following bootnode configuration to your `.env` file:
 
    ```plaintext
-   BOOTNODES=/ip4/52.6.77.89/udp/4001/quic-v1/p2p/16Uiu2HAmBcNRvvXMxyj45fCMAmTKD4bkXu92Wtv4hpzRiTQNLTsL,/ip4/157.230.212.224/udp/4001/quic-v1/p2p/16Uiu2HAkyf2FdEqxLJEuogoVtYDnDEix1ERjsZpKcNtGrFJcFDAC,/ip4/52.20.183.116/udp/4001/quic-v1/p2p/16Uiu2HAm9Nkz9kEMnL1YqPTtXZHQZ1E9rhquwSqKNsUViqTojLZt
+   BOOTNODES=/ip4/52.6.77.89/udp/4001/quic-v1/p2p/16Uiu2HAmBcNRvvXMxyj45fCMAmTKD4bkXu92Wtv4hpzRiTQNLTsL,/ip4/3.213.117.85/udp/4001/quic-v1/p2p/16Uiu2HAm7KfNcv3QBPRjANctYjcDnUvcog26QeJnhDN9nazHz9Wi,/ip4/52.20.183.116/udp/4001/quic-v1/p2p/16Uiu2HAm9Nkz9kEMnL1YqPTtXZHQZ1E9rhquwSqKNsUViqTojLZt
    ```
 
    :::warning
@@ -35,6 +35,22 @@ Ensure all prerequisites are met before proceeding with the testnet setup to avo
 3. **Verify configuration**
 
    Check the logs for confirmation of successful connection to the testnet bootnodes.
+
+## API Configuration
+
+:::warning
+For testnet setup, the API server must be disabled. This is the default configuration, so no additional action is required if you haven't explicitly enabled the API.
+:::
+
+The API server is disabled by default for security reasons. This is the correct configuration for testnet participation. If you have previously enabled the API server, please ensure it is disabled before connecting to the testnet.
+
+To verify that the API is disabled, check that none of the following are set:
+
+1. The environment variable `API_ENABLED` is not set to `true`.
+2. The command-line flag `--api-enabled=true` is not used when starting the application.
+3. You are not using the `make run-api-enabled` command to start your node.
+
+If you need to disable the API server, simply remove any of the above configurations that might be enabling it.
 
 ### Rewards
 
