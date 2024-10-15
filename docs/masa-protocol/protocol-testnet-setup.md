@@ -18,7 +18,7 @@ Ensure all prerequisites are met before proceeding with the testnet setup to avo
 
 1. **Set environment variables**
 
-   Add the following bootnode configuration to your `.env` file:
+   Add the following testnet bootnodes configuration to your `.env` file:
 
    ```plaintext
    BOOTNODES=/ip4/52.6.77.89/udp/4001/quic-v1/p2p/16Uiu2HAmBcNRvvXMxyj45fCMAmTKD4bkXu92Wtv4hpzRiTQNLTsL,/ip4/3.213.117.85/udp/4001/quic-v1/p2p/16Uiu2HAm7KfNcv3QBPRjANctYjcDnUvcog26QeJnhDN9nazHz9Wi,/ip4/52.20.183.116/udp/4001/quic-v1/p2p/16Uiu2HAm9Nkz9kEMnL1YqPTtXZHQZ1E9rhquwSqKNsUViqTojLZt
