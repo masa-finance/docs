@@ -3,8 +3,6 @@ id: protocol-developer-config
 title: Developer Guide
 ---
 
-# Developer Guide: Accessing Masa Network Data
-
 ## Introduction
 
 As a developer, you have two primary options for accessing data from the Masa network:
@@ -29,7 +27,15 @@ Running your own node allows you to access data directly from the Masa network. 
 3. **Connect to the Main Masa Network**
    - Ensure your node is configured to connect to the main Masa network using mainnet bootnodes
 
-4. **Access Data Locally**
+4. **Configure API Access (Optional)**
+   - By default, the API server is disabled for security reasons
+   - If you need to enable the API server, refer to our [API Configuration Guide](/docs/masa-protocol/protocol-api-configuration.md)
+
+   :::warning
+   Enabling the API server may expose sensitive functionality and data. Only enable it if you understand the security implications and have implemented proper security measures.
+   :::
+
+5. **Access Data Locally**
    - Once your node is running and synced, you can access data through the local API endpoints at [http://localhost:8080/swagger/#/](http://localhost:8080/swagger/#/)
 
 ### Example API Request:
