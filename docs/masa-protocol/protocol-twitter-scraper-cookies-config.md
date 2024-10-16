@@ -8,7 +8,7 @@ This guide will help you configure your Masa Node as a X/Twitter scraper using c
 ### Prerequisites
 
 - A running, staked Masa Node (see [Binary Installation](./protocol-binary-installation.md) or [Docker Setup](./protocol-docker-setup.md))
-- `twitter_cookies.json.example` file in the root directory of your Masa Node renamed to `twitter_cookies.json`
+- `twitter_cookies.json.example` file in the root directory of your Masa Node renamed to `[username]_twitter_cookies.json` (you can find the example file [**here**](https://github.com/masa-finance/masa-oracle/blob/main/twitter_cookies.example.json))
 - X/Twitter Pro Account: without a Pro account, you will not be able to scrape X/Twitter data. 
 
 :::warning
@@ -19,7 +19,7 @@ A paid X/Twitter Pro Account is absolutely necessary for scraping X/Twitter data
 
 1. **Prepare X/Twitter cookies**
 
-   Create a `twitter_cookies.json` file with your X/Twitter account credentials. To obtain this information:
+   Create a `[username]_twitter_cookies.json` file with your X/Twitter account credentials. To obtain this information:
 
    a. Log in to X/Twitter in your web browser
 
@@ -35,19 +35,20 @@ A paid X/Twitter Pro Account is absolutely necessary for scraping X/Twitter data
       - twid
       - ct0
       - auth_token
+      - att
 
    f. Use the template file `twitter_cookies.json.example` in the root directory as a guide
 
    g. Replace **only the placeholders** in the "Value" field with the actual values
 
-   h. Save the file as "twitter_cookies.json" (remove ".example" from the filename)
+   h. Save the file as "[username]_twitter_cookies.json" (**add your username to the filename and remove ".example" from the filename**)
 
 2. **Place the cookies file**
 
    Move the file to the appropriate location where your Masa keys are stored:
 
    ```bash
-   mv twitter_cookies.json ~/.masa/twitter_cookies.json
+   mv [username]_twitter_cookies.json ~/.masa/[username]_twitter_cookies.json
    ```
 
 3. **Set environment variable**
@@ -112,9 +113,9 @@ A paid X/Twitter Pro Account is absolutely necessary for scraping X/Twitter data
 
 ### Security Considerations
 
-- Ensure your `twitter_cookies.json` file has appropriate permissions (e.g., `chmod 600`).
+- Ensure your `[username]_twitter_cookies.json` file has appropriate permissions (e.g., `chmod 600`).
 - Keep your X/Twitter credentials secure and do not share them.
-- Never commit your `twitter_cookies.json` file to version control.
+- Never commit your `[username]_twitter_cookies.json` file to version control.
 
 ### Warning: Cloud-Based Scraping
 
@@ -125,7 +126,7 @@ If you are running a X/Twitter scraper in the cloud, you must use a residential 
 ### Troubleshooting
 
 If you encounter issues:
-- Verify the format of your `twitter_cookies.json` file.
+- Verify the format of your `[username]_twitter_cookies.json` file.
 - Ensure your X/Twitter credentials are valid and not expired.
 - Check the node logs for any error messages related to X/Twitter scraping.
 - If running in the cloud, confirm your residential proxy is correctly configured and functioning.
