@@ -51,7 +51,7 @@ All protocol nodes need to stake test MASA on Sepolia, this requires **Sepolia E
 
 ## Node Configuration
 
-### Set Up a Data Scraper (Worker Node)
+### Set Up a Data Scraper (Miner Node)
 
 If you want your node to earn rewards configure it to to scrape data on the Masa Protocol.
 

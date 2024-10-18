@@ -140,9 +140,9 @@ You now have a running node in **Local Bootnode** configuration
 
 ## Configure your node
 
-You can now configure your node to start scraping data as a worker, to fetch data from the network or to start participating in the network as a validator.
+You can now configure your node to start scraping data as a miner, to fetch data from the network or to start participating in the network as a validator.
 
-### Set up a scraper: Worker Node
+### Set up a scraper: Miner Node
 
 If you want your node to earn rewards configure it to to scrape data on the Masa Protocol.
 

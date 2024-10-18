@@ -19,12 +19,12 @@ Docker Desktop for Windows and Mac includes Docker Compose. On Linux, you may ne
 
 :::
 
-
 ### Clone the repository
 
 ```bash
 git clone https://github.com/masa-finance/masa-oracle.git
 ```
+
 ```bash
 cd masa-oracle
 ```
@@ -40,6 +40,7 @@ This guide will configure your node as a **Local Bootnode**, for a list of netwo
 :::
 
 Create a `.env` file in the root directory with these essential variables:
+
 ```plaintext
 # Default .env configuration
 
@@ -93,6 +94,7 @@ Is TwitterScraper:   false
 Is DiscordScraper:   false
 Is TelegramScraper:  false
 ```
+
 :::tip
 
 You now have a running node in **Local Bootnode** configuration
@@ -100,11 +102,13 @@ You now have a running node in **Local Bootnode** configuration
 :::
 
 ## Masa Protocol Configuration
-You can now configure your node to start scraping data as a worker, to fetch data from the network or to start participating in the network as a validator.
+
+You can now configure your node to start scraping data as a miner, to fetch data from the network or to start participating in the network as a validator.
 
 ### Configure your node
 
 #### Stake your node
+
 :::info
 
 The Masa Protocol currently supports staking on **Sepolia only**.
@@ -114,11 +118,13 @@ The Masa Protocol currently supports staking on **Sepolia only**.
 After starting the node, you must stake MASA tokens to participate in the network; the node comes with a faucet to get MASA tokens you need Sepolia ETH in your wallet to get Sepolia MASA tokens from the faucet.
 
 ## Masa Protocol Configuration
-You can now configure your node to start scraping data as a worker, to fetch data from the network or to start participating in the network as a validator.
+
+You can now configure your node to start scraping data as a miner, to fetch data from the network or to start participating in the network as a validator.
 
 ### Configure your node
 
 #### Stake your node
+
 :::info
 
 The Masa Protocol currently supports staking on **Sepolia only**.
@@ -186,16 +192,19 @@ The node generates keys that are stored in the `/home/masa/.masa/` inside the Do
 You can customize your node's configuration by modifying the `.env` file inside the Docker container. Follow these steps to make changes:
 
 1. SSH into the running container:
+
    ```bash
    docker-compose exec masa-node /bin/sh
    ```
 
 2. Navigate to the directory containing the `.env` file:
+
    ```bash
    cd /home/masa
    ```
 
 3. Edit the `.env` file using a text editor like `nano` or `vi`:
+
    ```bash
    nano .env
    ```
@@ -205,6 +214,7 @@ You can customize your node's configuration by modifying the `.env` file inside 
 5. Save the changes and exit the text editor.
 
 6. Exit the container:
+
    ```bash
    exit
    ```
@@ -230,42 +240,50 @@ Follow these steps:
 1. Prepare your `twitter_cookies.json` file on your local machine.
 
 2. Copy the file into the running container:
+
    ```bash
    docker cp /path/to/your/twitter_cookies.json masa-node:/home/masa/.masa/twitter_cookies.json
    ```
 
 3. SSH into the running container:
+
    ```bash
    docker-compose exec masa-node /bin/sh
    ```
 
 4. Verify the file has been copied correctly:
+
    ```bash
    ls -l /home/masa/.masa/twitter_cookies.json
    ```
 
 5. Ensure the file has the correct permissions:
+
    ```bash
    chmod 600 /home/masa/.masa/twitter_cookies.json
    ```
 
 6. Exit the container:
+
    ```bash
    exit
    ```
 
 7. Modify your `.env` file to enable Twitter scraping:
+
    ```bash
    docker-compose exec masa-node /bin/sh -c "echo 'TWITTER_SCRAPER=true' >> /home/masa/.env"
    ```
 
 8. Restart the container to apply the changes:
+
    ```bash
    docker-compose down
    docker-compose up -d
    ```
 
 9. Your node should now be configured as a Twitter scraper. You can verify this by checking the logs:
+
    ```bash
    docker-compose logs -f masa-node
    ```
