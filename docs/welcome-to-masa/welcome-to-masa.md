@@ -23,9 +23,9 @@ Earn TAO by processing requests on the Masa Bittensor Subnet (SN42):
 
 - [**Miner Quickstart**](/docs/masa-subnet/miner/intro)
 
-:::tip
+:::note
 
-Masa operates on Bittensors Subnet 42 (SN42). You can view the network statistics and performance at [Taostats Subnet 42](https://taostats.io/subnets/42/metagraph).
+Masa operates on Bittensors Subnet 42 (SN42). You can view the network statistics and performance at **[Taostats Subnet 42](https://taostats.io/subnets/42/metagraph)**.
 
 :::
 
