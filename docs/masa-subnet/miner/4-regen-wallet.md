@@ -1,6 +1,6 @@
 ---
-id: 3-regen-wallet
-title: 3. Regen Wallet
+id: 4-regen-wallet
+title: 4. Regen Wallet
 ---
 
 If you have an existing wallet, you can import it like so:

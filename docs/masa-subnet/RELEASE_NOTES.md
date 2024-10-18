@@ -1,6 +1,10 @@
 ---
-title: Masa Bittensor Release Notes - 1.0.0
+title: ""
 ---
+
+# Subnet Release Notes
+
+## v1.0.2
 
 <!-- Release notes generated using configuration in .github/release.yml at main -->
 
@@ -30,6 +34,6 @@ title: Masa Bittensor Release Notes - 1.0.0
 
 - chore: adding better contribute.md by @hide-on-bush-x in https://github.com/masa-finance/masa-bittensor/pull/257
 
-**Full Changelog**: https://github.com/masa-finance/masa-bittensor/compare/v0.8.0...v1.0.0
+**Full Changelog**: https://github.com/masa-finance/masa-bittensor/compare/v0.8.0...v1.0.2
 
 [All Releases](https://github.com/masa-finance/masa-bittensor/releases)

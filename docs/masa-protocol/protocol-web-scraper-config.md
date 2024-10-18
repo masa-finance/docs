@@ -57,19 +57,21 @@ This guide will help you configure your Masa Node as a web scraper.
 
 ### Warning: Cloud-Based Scraping
 
-:::warning
+:::caution
 If you are running a web scraper in the cloud, consider using a residential proxy. Some websites may block or limit access from cloud IP ranges. Ensure you have a reliable residential proxy service set up before deploying your scraper in a cloud environment.
 :::
 
 ### Troubleshooting
 
 If you encounter issues:
+
 - Check your node's network connectivity.
 - Verify the target website is accessible and allows scraping.
 - Review node logs for any error messages related to web scraping.
 - If running in the cloud, confirm your proxy (if used) is correctly configured.
 
 For more detailed setup options and advanced configurations, refer to:
+
 - [Environment Configuration Guide](./environment-configuration.md)
 - [Network Configuration Guide](./network-configuration.md)
 - [Residential Proxy Configuration Guide](./residential-proxy-configuration.md)

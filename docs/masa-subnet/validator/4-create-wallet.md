@@ -1,6 +1,6 @@
 ---
-id: 3-create-wallet
-title: 3. Create Wallet
+id: 4-create-wallet
+title: 4. Create Wallet
 ---
 
 If you have not created a wallet for your validator, you can create one now. If you have an existing wallet, you can skip this step and move on to the next section.

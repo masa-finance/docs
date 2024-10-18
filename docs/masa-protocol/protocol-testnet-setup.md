@@ -3,7 +3,7 @@ id: protocol-testnet-setup
 title: Testnet Setup
 ---
 
-This guide will help you set up your Masa Node for the testnet, which rewards workers who have configured Twitter scrapers.
+This guide will help you set up your Masa Node for the testnet, which rewards miners who have configured Twitter scrapers.
 
 ### Prerequisites
 

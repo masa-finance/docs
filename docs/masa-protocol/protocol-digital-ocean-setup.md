@@ -3,7 +3,7 @@ id: protocol-digital-ocean-setup
 title: Digital Ocean Setup
 ---
 
-This walkthrough assumes you have setup a Digital Ocean environment. If you have not, please refer to the **[Setup Guide](../masa-subnet/shared/create-environment.md)**.
+This walkthrough assumes you have setup a Digital Ocean environment. If you have not, please refer to the **[Setup Guide](../masa-subnet/miner/1-create-environment.md)**.
 
 ## Clone our repository
 
@@ -36,7 +36,7 @@ git checkout $latest_tag
 install GO, NPM, and PM2
 
 ```bash
-sudo apt install -y golang
+sudo apt install -y golang-1.22
 ```
 
 ```bash
@@ -78,6 +78,7 @@ ENV=test
 FILE_PATH=.
 VALIDATOR=false
 PORT=8080
+API_ENABLED=true
 ```
 
 Save and exit
@@ -140,9 +141,9 @@ You now have a running node in **Local Bootnode** configuration
 
 ## Configure your node
 
-You can now configure your node to start scraping data as a worker, to fetch data from the network or to start participating in the network as a validator.
+You can now configure your node to start scraping data as a miner, to fetch data from the network or to start participating in the network as a validator.
 
-### Set up a scraper: Worker Node
+### Set up a scraper: Miner Node
 
 If you want your node to earn rewards configure it to to scrape data on the Masa Protocol.
 
@@ -151,9 +152,9 @@ If you want your node to earn rewards configure it to to scrape data on the Masa
 - [Discord Scraper Configuration](/docs/masa-protocol/protocol-discord-scraper-config.md)
 - [Telegram Scraper Configuration](/docs/masa-protocol/protocol-telegram-scraper-config.md)
 
-:::info
+:::tip
 
-You need to have **setup** your node and **staked** your node first to be able to scrape data:
+You need to have **setup** your node and **staked** sepolia MASA to be able to scrape data!
 
 :::
 
@@ -164,9 +165,9 @@ AI developers can get data from the Masa Protocol for free by running a Masa nod
 - [Staking Your Node](/docs/masa-protocol/protocol-staking-guide.md)
 - [Developer Configuration](/docs/masa-protocol/protocol-developer-config.md)
 
-:::info
+:::caution
 
-To get data from the Masa Protocol as a developer you need to stake your node (no free leech) - **you need Sepolia ETH** to stake.
+To get data from the Masa Protocol as a developer, you need to stake sepolia Masa with your node (no free leech) - you need [**0.01Sepolia ETH**](https://www.alchemy.com/faucets/ethereum-sepolia) for the sepolia Masa faucet to function.
 
 :::
 

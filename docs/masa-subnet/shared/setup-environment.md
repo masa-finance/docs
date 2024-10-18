@@ -26,6 +26,10 @@ git checkout $latest_tag
 
 ## Install PM2
 
+:::info
+PM2 is a process manager that helps you manage and keep your node running. For more information on PM2 commands and usage, refer to the **[PM2 Documentation](https://pm2.keymetrics.io/docs/usage/quick-start/)**.
+:::
+
 ```bash
 sudo apt update
 sudo apt install nodejs npm

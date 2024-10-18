@@ -1,6 +1,6 @@
 ---
-id: 6-stake-validator
-title: 6. Stake Validator
+id: 7-stake-validator
+title: 7. Stake Validator
 ---
 
 ## Stake TAO

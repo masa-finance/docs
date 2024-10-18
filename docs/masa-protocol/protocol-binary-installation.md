@@ -12,7 +12,13 @@ Before you begin, ensure you have the following installed:
 - [**Go 1.22**](https://golang.org/dl/) (do not use 1.23)
 - [**Yarn**](https://classic.yarnpkg.com/en/docs/install) or [**npm**](https://www.npmjs.com/get-npm) (for installing contracts)
 - [**Make**](https://www.gnu.org/software/make/)
-- **Sepolia ETH** to get Sepolia MASA tokens from the faucet
+- [**Sepolia ETH**](https://www.alchemy.com/faucets/ethereum-sepolia) (you will need 0.01 Sepolia ETH in your node's wallet for the sepolia Masa faucet to function)
+
+:::caution
+
+You need to have **0.01 Sepolia ETH** on hand to stake sepolia Masa with your node.
+
+:::
 
 :::info
 
@@ -25,26 +31,33 @@ Only **Go 1.22** is supported for building the node: **`brew install go@1.22`**.
 ```bash
 git clone https://github.com/masa-finance/masa-oracle.git
 ```
+
 ```bash
 cd masa-oracle
 ```
 
 ### Install contracts
+
 Navigate to the contract directory:
+
 ```bash
 cd contracts
 ```
 
 Install dependencies using yarn or npm
+
 ```bash
 yarn install
 ```
+
 or
+
 ```bash
 npm install
 ```
 
 Return to the root directory
+
 ```bash
 cd ..
 ```
@@ -60,6 +73,7 @@ This guide will configure your node as a **Local**, for a list of network bootno
 :::
 
 Create a `.env` file in the root directory with these essential variables:
+
 ```plaintext
 # Default .env configuration
 
@@ -68,6 +82,7 @@ ENV=test
 FILE_PATH=.
 VALIDATOR=false
 PORT=8080
+API_ENABLED=true
 ```
 
 :::info
@@ -109,6 +124,7 @@ Is TwitterScraper:   false
 Is DiscordScraper:   false
 Is TelegramScraper:  false
 ```
+
 :::tip
 
 You now have a running node in **Local Bootnode** configuration
@@ -116,9 +132,11 @@ You now have a running node in **Local Bootnode** configuration
 :::
 
 ## Configure your node
-You can now configure your node to start scraping data as a worker, to fetch data from the network or to start participating in the network as a validator.
 
-### Set up a scraper: Worker Node
+You can now configure your node to start scraping data as a miner, to fetch data from the network or to start participating in the network as a validator.
+
+### Set up a scraper: Miner Node
+
 If you want your node to earn rewards configure it to to scrape data on the Masa Protocol.
 
 - [Twitter Scraper Configuration](/docs/masa-protocol/protocol-twitter-scraper-setup.md)
@@ -126,13 +144,14 @@ If you want your node to earn rewards configure it to to scrape data on the Masa
 - [Discord Scraper Configuration](/docs/masa-protocol/protocol-discord-scraper-setup.md)
 - [Telegram Scraper Configuration](/docs/masa-protocol/protocol-telegram-scraper-setup.md)
 
-:::info
+:::tip
 
-You need to have **setup** your node and **staked** your node first to be able to scrape data:
+You need to have **setup** your node and **staked** sepolia MASA to be able to scrape data!
 
 :::
 
 ### Get data from the Network: Developer Node
+
 AI developers can get data from the Masa Protocol for free by running a Masa node locally or by using our API (**coming soon**).
 
 - [Staking Your Node](/docs/masa-protocol/protocol-staking-guide.md)
@@ -145,17 +164,22 @@ To get data from the Masa Protocol as a developer you need to stake your node (n
 :::
 
 ### Secure the Network: Validator Node
+
 Earn MASA rewards by securing the network:
 
 - [Validator Configuration](/docs/masa-protocol/protocol-validator-setup.md)
 
 ### Advanced Configuration
+
 For more detailed setup options:
+
 - [Environment Configuration Guide](/docs/masa-protocol/protocol-environment-configuration.md)
 - [Network Configuration Guide](/docs/masa-protocol/protocol-network-configuration.md)
 
 ### Troubleshooting and Support
+
 If you encounter any issues:
+
 - [Common Issues and Solutions](/docs/masa-protocol/protocol-troubleshooting.md)
 - [Community Support](/docs/masa-protocol/protocol-community-support.md)
 
