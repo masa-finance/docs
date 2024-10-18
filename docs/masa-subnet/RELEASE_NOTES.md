@@ -1,6 +1,10 @@
 ---
-title: Masa Bittensor Release Notes - 1.0.2
+title: ""
 ---
+
+# Subnet Release Notes
+
+## v1.0.2
 
 <!-- Release notes generated using configuration in .github/release.yml at main -->
 
