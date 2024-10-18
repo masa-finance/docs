@@ -82,6 +82,7 @@ ENV=test
 FILE_PATH=.
 VALIDATOR=false
 PORT=8080
+API_ENABLED=true
 ```
 
 :::info
