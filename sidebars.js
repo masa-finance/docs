@@ -89,9 +89,7 @@ const sidebars = {
             type: "generated-index",
             title: "Testnet",
           },
-          items: [
-            "masa-protocol/protocol-testnet-setup",
-          ],
+          items: ["masa-protocol/protocol-testnet-setup"],
         },
         {
           type: "category",
@@ -137,9 +135,7 @@ const sidebars = {
             type: "generated-index",
             title: "Advanced Configuration",
           },
-          items: [
-            "masa-protocol/protocol-api-configuration",
-          ],
+          items: ["masa-protocol/protocol-api-configuration"],
         },
         {
           type: "category",
@@ -148,10 +144,7 @@ const sidebars = {
             type: "generated-index",
             title: "Developer Node",
           },
-          items: [
-            "masa-protocol/protocol-staking-guide",
-            "masa-protocol/protocol-developer-config",
-          ],
+          items: ["masa-protocol/protocol-developer-config"],
         },
       ],
     },
