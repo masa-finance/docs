@@ -28,6 +28,12 @@ This guide will help you configure your Masa Node as a X/Twitter scraper using u
 
    **Replace** `username1:password1,username2:password2` with your actual X/Twitter account credentials.
 
+   :::caution
+
+   Do not use Twitter accounts that you care about, since there is a small risk of them being suspended. In such cases, you will still be able to scrape with those credentials, but posting will be suspended.
+
+   :::
+
    :::info
    💡 You can use multiple accounts by separating them with commas and the node will rotate through them and skip accounts that are banned or rate limited by X/Twitter.
    :::

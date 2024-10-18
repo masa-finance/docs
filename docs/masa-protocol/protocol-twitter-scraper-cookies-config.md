@@ -15,6 +15,12 @@ This guide will help you configure your Masa Node as a X/Twitter scraper using c
 A paid X/Twitter Pro Account is absolutely necessary for scraping X/Twitter data. Ensure you have obtained a paid Twitter Pro Account before proceeding with the configuration.
 :::
 
+:::caution
+
+Do not use Twitter accounts that you care about, since there is a small risk of them being suspended. In such cases, you will still be able to scrape with those credentials, but posting will be suspended.
+
+:::
+
 ### Configuration Process
 
 1. **Prepare X/Twitter cookies**
