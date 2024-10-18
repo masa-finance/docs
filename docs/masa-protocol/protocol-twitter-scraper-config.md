@@ -8,7 +8,7 @@ This guide will help you configure your Masa Node as a X/Twitter scraper using u
 ### 📋 Prerequisites
 
 - A running, staked Masa Node (see [Binary Installation](./protocol-binary-installation.md) or [Docker Setup](./protocol-docker-setup.md))
-- X/Twitter Pro Account: without a Pro account, you will not be able to scrape X/Twitter data. 
+- X/Twitter Pro Account: without a Pro account, you will not be able to scrape X/Twitter data.
 
 :::warning
 ⚠️ A paid X/Twitter Pro Account is absolutely necessary for scraping X/Twitter data. Ensure you have obtained a paid Twitter Pro Account before proceeding with the configuration.
@@ -61,6 +61,7 @@ This guide will help you configure your Masa Node as a X/Twitter scraper using u
 5. **Test the X/Twitter scraper**
 
    Curl the node in local mode to confirm it returns X/Twitter data:
+
    ```bash
    curl -X 'POST' \
      'http://localhost:8080/api/v1/data/twitter/tweets/recent' \
@@ -82,12 +83,9 @@ This guide will help you configure your Masa Node as a X/Twitter scraper using u
          "Tweet": {
            "ConversationID": "1828797710385942907",
            "GIFs": null,
-           "HTML": "<a href=\"https://twitter.com/CryptoGodJohn\">@CryptoGodJohn</a> $MASA the leading token for <a href=\"https://twitter.com/hashtag/AI\">#AI</a> and <a href=\"https://twitter.com/hashtag/Data\">#Data</a> <br><a href=\"https://twitter.com/getmasafi\">@getmasafi</a>",
-           "Hashtags": [
-             "AI",
-             "Data"
-           ],
-           "ID": "1828900558452797478",
+           "HTML": "<a href=\"https://twitter.com/CryptoGodJohn\">@CryptoGodJohn</a> $MASA the leading token for <a href=\"https://twitter.com/hashtag/AI\">#AI</a> and <a href=\"https://twitter.com/hashtag/Data\">#Data</a> <br><a href=\"https://twitter.com/gesepolia Masafi\">@gesepolia Masafi</a>",
+           "Hashtags": ["AI", "Data"],
+           "ID": "1828900558452797478"
            // ... (other Tweet fields)
          }
        }
@@ -113,12 +111,14 @@ If you are running a X/Twitter scraper in the cloud, you must use a residential 
 ### 🔧 Troubleshooting
 
 If you encounter issues:
+
 - Ensure your X/Twitter credentials in the `.env` file are correct.
 - Check the node logs for any error messages related to X/Twitter scraping.
 - If running in the cloud, confirm your residential proxy is correctly configured and functioning.
 - If you're experiencing frequent login requests or timeouts, try temporarily disabling 2FA, restarting your node to save cookies, and then re-enabling 2FA.
 
 For more detailed setup options and advanced configurations, refer to:
+
 - [Environment Configuration Guide](./environment-configuration.md)
 - [Network Configuration Guide](./network-configuration.md)
 - [Residential Proxy Configuration Guide](./residential-proxy-configuration.md)

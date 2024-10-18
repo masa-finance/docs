@@ -11,7 +11,13 @@ Before you begin, ensure you have the following installed:
 
 - [**Docker**](https://www.docker.com/products/docker-desktop)
 - [**Docker Compose**](https://docs.docker.com/compose/install/)
-- **Sepolia ETH** to get Sepolia MASA tokens from the faucet
+- [**Sepolia ETH**](https://www.alchemy.com/faucets/ethereum-sepolia) (you will need 0.01 Sepolia ETH in your node's wallet for the sepolia Masa faucet to function)
+
+:::caution
+
+You need to have **0.01 Sepolia ETH** on hand to stake sepolia Masa with your node.
+
+:::
 
 :::info
 
@@ -115,7 +121,7 @@ The Masa Protocol currently supports staking on **Sepolia only**.
 
 :::
 
-After starting the node, you must stake MASA tokens to participate in the network; the node comes with a faucet to get MASA tokens you need Sepolia ETH in your wallet to get Sepolia MASA tokens from the faucet.
+After starting the node, you must stake sepolia Masa tokens to participate in the network; the node comes with a faucet to get sepolia Masa tokens you need Sepolia ETH in your wallet to get Sepolia MASA tokens from the faucet.
 
 ## Masa Protocol Configuration
 
@@ -131,7 +137,7 @@ The Masa Protocol currently supports staking on **Sepolia only**.
 
 :::
 
-After starting the node, you must stake MASA tokens to participate in the network; the node comes with a faucet to get MASA tokens you need Sepolia ETH in your wallet to get Sepolia MASA tokens from the faucet.
+After starting the node, you must stake sepolia Masa tokens to participate in the network; the node comes with a faucet to get sepolia Masa tokens you need Sepolia ETH in your wallet to get Sepolia MASA tokens from the faucet.
 
 1. Get your node's public key from the logs.
 2. Send Sepolia ETH to your node's public key address.

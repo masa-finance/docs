@@ -43,9 +43,9 @@ Learn how to set up a Masa node in your environment ready for configuration and 
 
 - [**Staking Your Node**](/docs/masa-protocol/protocol-staking-guide.md)
 
-:::danger
+:::caution
 
-All protocol nodes need to stake test MASA on Sepolia, this requires **Sepolia ETH**.
+All protocol nodes need to stake sepolia MASA, this requires **Sepolia ETH**.
 
 :::
 
@@ -73,9 +73,9 @@ AI developers can get data from the Masa Protocol for free by running a Masa nod
 - [**Staking Your Node**](/docs/masa-protocol/protocol-staking-guide.md)
 - [**Developer Configuration**](/docs/masa-protocol/protocol-developer-config.md)
 
-:::info
+:::caution
 
-To get data from the Masa Protocol as a developer you need to stake your node (no free leech) - **you need Sepolia ETH** to stake.
+To get data from the Masa Protocol as a developer, you need to stake sepolia Masa with your node (no free leech) - you need [**0.01Sepolia ETH**](https://www.alchemy.com/faucets/ethereum-sepolia) for the sepolia Masa faucet to function.
 
 :::
 

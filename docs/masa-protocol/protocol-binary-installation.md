@@ -12,7 +12,13 @@ Before you begin, ensure you have the following installed:
 - [**Go 1.22**](https://golang.org/dl/) (do not use 1.23)
 - [**Yarn**](https://classic.yarnpkg.com/en/docs/install) or [**npm**](https://www.npmjs.com/get-npm) (for installing contracts)
 - [**Make**](https://www.gnu.org/software/make/)
-- **Sepolia ETH** to get Sepolia MASA tokens from the faucet
+- [**Sepolia ETH**](https://www.alchemy.com/faucets/ethereum-sepolia) (you will need 0.01 Sepolia ETH in your node's wallet for the sepolia Masa faucet to function)
+
+:::caution
+
+You need to have **0.01 Sepolia ETH** on hand to stake sepolia Masa with your node.
+
+:::
 
 :::info
 

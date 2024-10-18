@@ -164,9 +164,9 @@ AI developers can get data from the Masa Protocol for free by running a Masa nod
 - [Staking Your Node](/docs/masa-protocol/protocol-staking-guide.md)
 - [Developer Configuration](/docs/masa-protocol/protocol-developer-config.md)
 
-:::info
+:::caution
 
-To get data from the Masa Protocol as a developer you need to stake your node (no free leech) - **you need Sepolia ETH** to stake.
+To get data from the Masa Protocol as a developer, you need to stake sepolia Masa with your node (no free leech) - you need [**0.01Sepolia ETH**](https://www.alchemy.com/faucets/ethereum-sepolia) for the sepolia Masa faucet to function.
 
 :::
 

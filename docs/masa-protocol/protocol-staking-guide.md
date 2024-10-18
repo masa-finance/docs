@@ -8,7 +8,7 @@ This guide will help you stake your Masa Node to participate in the network.
 ### Prerequisites
 
 - A running Masa Node (see [Binary Installation](./protocol-binary-installation.md) or [Docker Setup](./protocol-docker-setup.md))
-- Sepolia ETH in your node's wallet
+- [**Sepolia ETH**](https://www.alchemy.com/faucets/ethereum-sepolia) (you will need 0.01 Sepolia ETH in your node's wallet for the sepolia Masa faucet to function)
 
 ### Staking Process
 
@@ -47,5 +47,6 @@ After staking, you can configure your node for various roles:
 - [Validator Configuration](./validator-setup.md)
 
 For more advanced options, refer to:
+
 - [Environment Configuration Guide](./environment-configuration.md)
 - [Network Configuration Guide](./network-configuration.md)
