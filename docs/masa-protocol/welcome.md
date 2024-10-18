@@ -7,8 +7,8 @@ The Masa Protocol is a decentralized protocol that allows AI developers to get d
 
 To get started, follow the below documentation depending on what neuron you intend to run:
 
-## [Scraper Configuration](./protocol-scraper-config.md)
+## [Scraper Configuration](./protocol-twitter-scraper-config.md)
 
 ## [Developer Configuration](./protocol-developer-config.md)
 
-## [Validator Configuration](./protocol-validator-config.md)
+<!-- ## [Validator Configuration](./protocol-validator-config.md) -->
