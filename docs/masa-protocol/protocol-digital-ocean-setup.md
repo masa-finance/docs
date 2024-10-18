@@ -3,7 +3,7 @@ id: protocol-digital-ocean-setup
 title: Digital Ocean Setup
 ---
 
-This walkthrough assumes you have setup a Digital Ocean environment. If you have not, please refer to the **[Setup Guide](../masa-subnet/shared/create-environment.md)**.
+This walkthrough assumes you have setup a Digital Ocean environment. If you have not, please refer to the **[Setup Guide](../masa-subnet/miner/1-create-environment.md)**.
 
 ## Clone our repository
 
@@ -36,7 +36,7 @@ git checkout $latest_tag
 install GO, NPM, and PM2
 
 ```bash
-sudo apt install -y golang
+sudo apt install -y golang-1.22
 ```
 
 ```bash
@@ -152,9 +152,9 @@ If you want your node to earn rewards configure it to to scrape data on the Masa
 - [Discord Scraper Configuration](/docs/masa-protocol/protocol-discord-scraper-config.md)
 - [Telegram Scraper Configuration](/docs/masa-protocol/protocol-telegram-scraper-config.md)
 
-:::info
+:::tip
 
-You need to have **setup** your node and **staked** your node first to be able to scrape data:
+You need to have **setup** your node and **staked** sepolia MASA to be able to scrape data!
 
 :::
 

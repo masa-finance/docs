@@ -144,9 +144,9 @@ If you want your node to earn rewards configure it to to scrape data on the Masa
 - [Discord Scraper Configuration](/docs/masa-protocol/protocol-discord-scraper-setup.md)
 - [Telegram Scraper Configuration](/docs/masa-protocol/protocol-telegram-scraper-setup.md)
 
-:::info
+:::tip
 
-You need to have **setup** your node and **staked** your node first to be able to scrape data:
+You need to have **setup** your node and **staked** sepolia MASA to be able to scrape data!
 
 :::
 
