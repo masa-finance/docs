@@ -23,9 +23,9 @@ Earn TAO by processing requests on the Masa Bittensor Subnet (SN42):
 
 - [**Miner Quickstart**](/docs/masa-subnet/miner/intro)
 
-:::info
+:::tip
 
-Masa operates on Bittensors Subnet 42 (SN42). You can view the network statistics and performance at [Taostats Subnet 42](https://x.taostats.io/subnet/42).
+Masa operates on Bittensors Subnet 42 (SN42). You can view the network statistics and performance at [Taostats Subnet 42](https://taostats.io/subnets/42/metagraph).
 
 :::
 
@@ -45,7 +45,7 @@ Learn how to set up a Masa node in your environment ready for configuration and 
 
 :::caution
 
-All protocol nodes need to stake sepolia MASA, this requires **Sepolia ETH**.
+All protocol nodes need to stake sepolia MASA. We provide a faucet, but this requires [**Sepolia ETH**](https://www.alchemy.com/faucets/ethereum-sepolia).
 
 :::
 
@@ -60,9 +60,9 @@ If you want your node to earn rewards configure it to to scrape data on the Masa
 - [**Discord Scraper**](/docs/masa-protocol/protocol-discord-scraper-config.md)
 - [**Telegram Scraper**](/docs/masa-protocol/protocol-telegram-scraper-config.md)
 
-:::info
+:::tip
 
-You need to have **setup** your node and **staked** your node first to be able to scrape data:
+You need to have **setup** your node and **staked** sepolia MASA to be able to scrape data!
 
 :::
 
@@ -102,6 +102,7 @@ If you encounter any issues:
 Choose the path that best fits your needs and follow the respective guide for detailed instructions.
 
 :::info
-**Join our Community on Discord!**  
-[**Join**](https://discord.gg/masafinance) our community on Discord for the latest updates, discussions, and support.
+[**Join our community on Discord!**](https://discord.gg/masafinance)
+
+Join our community for the latest updates, discussions, and support.
 :::
