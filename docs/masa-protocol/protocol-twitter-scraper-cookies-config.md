@@ -124,8 +124,8 @@ Do not use Twitter accounts that you care about, since there is a small risk of 
 
 ### Warning: Cloud-Based Scraping
 
-:::warning
-If you are running a X/Twitter scraper in the cloud, you must use a residential proxy. Without a residential proxy, your scraper is likely to be blocked by X/Twitter, resulting in invalid credentials errors. Ensure you have a reliable residential proxy service set up before deploying your scraper in a cloud environment.
+:::caution
+If you are running a X/Twitter scraper in the cloud, it's encouraged to use a residential proxy. Without a residential proxy, it's likely your scraper will be blocked by X/Twitter, resulting in invalid credentials errors. Ensure you have a reliable residential proxy service set up before deploying your scraper in a cloud environment.
 :::
 
 ### Troubleshooting
