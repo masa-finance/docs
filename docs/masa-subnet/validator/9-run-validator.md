@@ -27,6 +27,8 @@ There are many configurations that you can adjust, but in most cases, the defaul
 
 - `--neuron.auto_update` - auto update your code when we release a new version!
 
+- `--neuron.axon_off` - do not serve an axon object, and do not expose your IP to the metagraph
+
 :::caution
 Be sure to restart your validator after editing the `Makefile` to apply the changes!
 :::
